@@ -1,57 +1,72 @@
 object FrmVendedorCliente: TFrmVendedorCliente
   Left = 304
   Top = 172
-  Width = 941
-  Height = 496
   ActiveControl = PageControl1
   Caption = 'Consulta Vendedor x Cliente'
+  ClientHeight = 0
+  ClientWidth = 120
   Color = clBackground
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
   FormStyle = fsMDIChild
   Position = poDefault
+  Visible = True
   WindowState = wsMaximized
   OnClose = FormClose
   OnShow = FormShow
-  PixelsPerInch = 96
-  TextHeight = 13
-
+  TextHeight = 15
   object PageControl1: TPageControl
     Left = 0
     Top = 0
-    Width = 941
-    Height = 496
+    Width = 120
+    Height = 0
     ActivePage = Tab_Lista
     Align = alClient
     TabOrder = 0
+    ExplicitWidth = 941
+    ExplicitHeight = 496
     object Tab_Criterio: TTabSheet
       Caption = 'Crit'#233'rio'
+      object Label6: TLabel
+        Left = 316
+        Top = 53
+        Width = 54
+        Height = 15
+        Caption = 'Condi'#231#227'o:'
+      end
+      object Label7: TLabel
+        Left = 308
+        Top = 85
+        Width = 55
+        Height = 15
+        Caption = 'Express'#227'o:'
+      end
       object LCampos: TListBox
         Left = 8
         Top = 20
         Width = 266
         Height = 369
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = 11
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
-
         ParentFont = False
         TabOrder = 0
         OnClick = LCamposClick
-      end
-      object Label6: TLabel
-        Left = 316
-        Top = 53
-        Width = 49
-        Height = 13
-        Caption = 'Condi'#231#227'o:'
       end
       object CBCond: TComboBox
         Left = 383
         Top = 49
         Width = 138
-        Height = 21
-        ItemHeight = 15
+        Height = 23
+        ItemIndex = 0
+        TabOrder = 1
+        Text = 'Igual a'
         Items.Strings = (
           'Igual a'
           'Diferente de'
@@ -59,56 +74,47 @@ object FrmVendedorCliente: TFrmVendedorCliente
           'Maior ou igual a'
           'Menor que'
           'Menor ou igual a')
-        ItemIndex = 0
-        TabOrder = 2
-        Text = 'Igual a'
       end
       object RGeou: TRadioGroup
         Left = 541
         Top = 42
         Width = 105
         Height = 33
-        Items.Strings = (
-          '&e'
-          '&ou')
         Columns = 2
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = 11
         Font.Name = 'helvetica'
         Font.Pitch = fpVariable
         Font.Style = [fsBold]
         ItemIndex = 0
+        Items.Strings = (
+          '&e'
+          '&ou')
         ParentFont = False
-        TabOrder = 3
+        TabOrder = 2
       end
       object EdExpre: TEdit
         Left = 382
         Top = 80
         Width = 265
         Height = 21
-        TabOrder = 4
+        TabOrder = 3
         OnChange = EdExpreChange
-      end
-      object Label7: TLabel
-        Left = 308
-        Top = 85
-        Width = 52
-        Height = 13
-        Caption = 'Express'#227'o:'
       end
       object MResul: TMemo
         Left = 287
         Top = 118
         Width = 482
         Height = 273
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = 12
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
-
         ParentFont = False
-        TabOrder = 6
+        TabOrder = 4
       end
       object BtIncluir: TBitBtn
         Left = 680
@@ -118,10 +124,8 @@ object FrmVendedorCliente: TFrmVendedorCliente
         Caption = '&Incluir'
         Default = True
         Enabled = False
-        TabOrder = 7
-        OnClick = BtIncluirClick
         Glyph.Data = {
-          22060000424D1E0600000000000036000000280000001B000000120000000100
+          1E060000424D1E0600000000000036000000280000001B000000120000000100
           180000000000E8050000120B0000120B00000000000000000000C0C0C0C0C0C0
           C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0000000C0C0C0C0C0C0C0C0
           C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
@@ -171,6 +175,8 @@ object FrmVendedorCliente: TFrmVendedorCliente
           C0C0C0C0C0C0000000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
           C0C0C0C0C0C0C0C0C0C0C0C0C0000000000000C0C0C0C0C0C0C0C0C0C0C0C000
           0000}
+        TabOrder = 6
+        OnClick = BtIncluirClick
       end
       object BtLimpar: TBitBtn
         Left = 680
@@ -178,10 +184,8 @@ object FrmVendedorCliente: TFrmVendedorCliente
         Width = 75
         Height = 23
         Caption = 'Limpar'
-        TabOrder = 8
-        OnClick = BtLimparClick
         Glyph.Data = {
-          2E010000424D2A010000000000007600000028000000110000000F0000000100
+          2A010000424D2A010000000000007600000028000000110000000F0000000100
           040000000000B4000000120B0000120B00001000000010000000000000000000
           8000008000000080800080000000800080008080000080808000C0C0C0000000
           FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FFFFFFFFFFFF
@@ -191,6 +195,8 @@ object FrmVendedorCliente: TFrmVendedorCliente
           FFFFF0000000FFF0F0F0F0F0FFFFF0000000FFF0FFFFFFF0FFFFF0000000FF70
           000000007FFFF0000000FF0FFFFFFFFF0FFFF0000000FF70000000007FFFF000
           0000FFFFF70007FFFFFFF0000000}
+        TabOrder = 8
+        OnClick = BtLimparClick
       end
       object BtAtivar: TBitBtn
         Left = 680
@@ -198,10 +204,8 @@ object FrmVendedorCliente: TFrmVendedorCliente
         Width = 75
         Height = 22
         Caption = '&Ativar'
-        TabOrder = 9
-        OnClick = BtAtivarClick
         Glyph.Data = {
-          3A030000424D3603000000000000360000002800000010000000100000000100
+          36030000424D3603000000000000360000002800000010000000100000000100
           18000000000000030000120B0000120B00000000000000000000FFFFFFFFFFFF
           FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
           FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
@@ -227,17 +231,16 @@ object FrmVendedorCliente: TFrmVendedorCliente
           FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
           FFFFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
           FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+        TabOrder = 5
+        OnClick = BtAtivarClick
       end
       object BPESQ: TBitBtn
         Left = 623
         Top = 80
         Width = 23
         Height = 20
-        TabOrder = 10
-        Visible = False
-        OnClick = BPESQClick
         Glyph.Data = {
-          EA000000424DE6000000000000007600000028000000100000000E0000000100
+          E6000000424DE6000000000000007600000028000000100000000E0000000100
           04000000000070000000120B0000120B00001000000010000000000000000000
           80000080000000808000800000008000800080800000C0C0C000808080000000
           FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
@@ -245,6 +248,9 @@ object FrmVendedorCliente: TFrmVendedorCliente
           3333333300000B1333333330F7F700333333330F7F7F703333333307F7F7F033
           3333330F7F7F703333333307F7F7F033333333307F7F03333333333300003333
           33333333333333333333}
+        TabOrder = 7
+        Visible = False
+        OnClick = BPESQClick
       end
     end
     object Tab_Lista: TTabSheet
@@ -259,13 +265,12 @@ object FrmVendedorCliente: TFrmVendedorCliente
         ButtonHeight = 37
         ButtonWidth = 39
         Caption = 'ToolBar1'
-        Flat = True
-        Font.Color = clText
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
         Font.Height = 11
         Font.Name = 'helvetica'
         Font.Pitch = fpVariable
         Font.Style = []
-
         ParentFont = False
         TabOrder = 0
         object SB_Relatorio: TSpeedButton
@@ -276,7 +281,7 @@ object FrmVendedorCliente: TFrmVendedorCliente
           Hint = 'Imprimir'
           Flat = True
           Glyph.Data = {
-            52010000424D4E01000000000000760000002800000012000000120000000100
+            4E010000424D4E01000000000000760000002800000012000000120000000100
             040000000000D8000000120B0000120B00001000000010000000000000000000
             BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
             FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00DDDDDDDDDDDD
@@ -299,7 +304,7 @@ object FrmVendedorCliente: TFrmVendedorCliente
           Hint = 'Sair'
           Flat = True
           Glyph.Data = {
-            3A160000424D361600000000000036000000280000003A000000200000000100
+            36160000424D361600000000000036000000280000003A000000200000000100
             18000000000000160000120B0000120B00000000000000000000FFFFFFFFFFFF
             FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
             FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
@@ -490,7 +495,7 @@ object FrmVendedorCliente: TFrmVendedorCliente
           Hint = 'Atualizar'
           Flat = True
           Glyph.Data = {
-            3A160000424D361600000000000036000000280000003A000000200000000100
+            36160000424D361600000000000036000000280000003A000000200000000100
             18000000000000160000120B0000120B00000000000000000000FFFFFFFFFFFF
             FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
             FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
@@ -677,19 +682,17 @@ object FrmVendedorCliente: TFrmVendedorCliente
           Left = 40
           Top = 4
           Width = 5
-          Height = 37
-          Style = tbsSeparator
           Caption = 'ToolButton2'
           ImageIndex = 0
+          Style = tbsSeparator
         end
         object ToolButton3: TToolButton
           Left = 85
           Top = 4
           Width = 321
-          Height = 37
-          Style = tbsSeparator
           Caption = 'ToolButton3'
           ImageIndex = 1
+          Style = tbsSeparator
         end
       end
       object DBGrid1: TDBGrid
@@ -703,12 +706,11 @@ object FrmVendedorCliente: TFrmVendedorCliente
         FixedColor = clSilver
         Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
         TabOrder = 1
-        TitleFont.Color = clBlack
-        TitleFont.Height = 11
-        TitleFont.Name = 'helvetica'
-        TitleFont.Pitch = fpVariable
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -12
+        TitleFont.Name = 'Segoe UI'
         TitleFont.Style = []
-        TitleFont.Weight = 40
         OnKeyDown = DBGrid1KeyDown
         Columns = <
           item

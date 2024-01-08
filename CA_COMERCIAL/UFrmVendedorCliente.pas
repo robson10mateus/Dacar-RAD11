@@ -3,9 +3,9 @@ unit UFrmVendedorCliente;
 interface
 
 uses
-  SysUtils, Types, Classes, {$IFNDEF VER130} Variants {$ENDIF}, Types, Graphics, Controls, Forms, 
+  SysUtils, Types, Classes, {$IFNDEF VER130} Variants {$ENDIF}, Graphics, Controls, Forms,
   Dialogs, StdCtrls, Grids, DBGrids, ComCtrls, Buttons, ExtCtrls,
-  DB, Ora, MemDS, DBAccess;
+  DB, Ora, MemDS, DBAccess, Vcl.ToolWin;
 
 type
   TFrmVendedorCliente = class(TForm)
@@ -211,7 +211,7 @@ begin
 
     Vre:=Vre+''')';
 
-    MResul.Append(Vre);
+    MResul.Lines.Add(Vre);
 
     EdExpre.Text :='';
     BtIncluir.Enabled:=false;
