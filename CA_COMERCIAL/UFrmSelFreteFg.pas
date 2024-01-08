@@ -1,0 +1,403 @@
+unit UFrmSelFreteFg;
+
+interface
+
+uses
+  SysUtils, Types, Classes, Variants, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, ExtCtrls, Buttons, DBCtrls, DB, Ora, MemDS,
+  DBAccess, DateUtils, Winapi.Windows;
+
+type
+  TFrmSelFreteFg = class(TForm)
+    pnlFiltros: TPanel;
+    QrFor: TOraQuery;
+    Label3: TLabel;
+    DSFor: TOraDataSource;
+    Label4: TLabel;
+    DcbVei: TDBLookupComboBox;
+    QrVei: TOraQuery;
+    DSVei: TOraDataSource;
+    pnlBotoes: TPanel;
+    SB_Relatorio: TSpeedButton;
+    Sb_Sair: TSpeedButton;
+    GroupBox1: TGroupBox;
+    CBCaixas: TCheckBox;
+    CBAutonomo: TCheckBox;
+    CBEmitente: TCheckBox;
+    GroupBox2: TGroupBox;
+    Label1: TLabel;
+    Label2: TLabel;
+    DTIni: TEdit;
+    DtFim: TEdit;
+    edtTransp: TEdit;
+    btnTransp: TBitBtn;
+    edtTranspDesc: TEdit;
+    procedure FormCreate(Sender: TObject);
+    procedure BitBtn2Click(Sender: TObject);
+    procedure DcbVeiEnter(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    Procedure ConsultaSQLCaixas;
+    procedure SB_RelatorioClick(Sender: TObject);
+    procedure Sb_SairClick(Sender: TObject);
+    procedure FormShortCut(Key: Integer; Shift: TShiftState;
+      var Handled: Boolean);
+    procedure btnTranspClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmSelFreteFg: TFrmSelFreteFg;
+
+implementation
+
+Uses UFrmRelDoa, Global, UFrmRelFreteFg, Principal, ufrmConsultaFornecedores;
+
+{$R *.dfm}
+
+procedure TFrmSelFreteFg.FormCreate(Sender: TObject);
+begin
+  DTIni.Text := DateToStr(StartOfTheMonth(now));
+  DtFim.Text := DateToStr(EndOfTheMonth(now));
+  QrFor.Open;
+  QrVei.Open;
+end;
+
+procedure TFrmSelFreteFg.BitBtn2Click(Sender: TObject);
+begin
+  close;
+end;
+
+procedure TFrmSelFreteFg.DcbVeiEnter(Sender: TObject);
+begin
+  If edtTransp.Text <> '' then
+  begin
+    DcbVei.KeyValue := '';
+    QrVei.close;
+    QrVei.ParamByName('id_fornecedor').AsInteger :=  StrToInt(edtTransp.Text);
+    QrVei.Open;
+  end;
+end;
+
+procedure TFrmSelFreteFg.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+  FrmPrincipal.VEN011.Enabled:= True;
+  Action := Cafree;
+end;
+
+procedure TFrmSelFreteFg.ConsultaSQLCaixas;
+begin
+  FrmRelFreteFg.QrCx.Close;
+  WITH FrmRelFreteFg.QrCx.SQL DO
+  begin
+    Clear;
+
+    Add('SELECT VC.EMPRESA, VC.FILIAL, ');
+    Add('SUM(VC.QTD_DEVOLVIDA),VC.NO_PLACAVEICULO ');
+    Add('FROM VALE_CAIXA VC');
+    Add('INNER JOIN CLIENTE C ON VC.ID_CLIENTE = C.ID_CLIENTE ');
+    Add('LEFT JOIN VENDEDOR V ON VC.ID_VENDEDOR = V.ID_VENDEDOR ');
+    Add('LEFT JOIN SCT_USUARIO U ON VC.ID_USUARIO = U.ID_USUARIO ');
+    Add('LEFT JOIN SCT_USUARIO UD ON VC.ID_USUARIO_DEV = UD.ID_USUARIO ');
+    Add('LEFT JOIN TRANSPORTADOR_MOTORISTA M ON M.ID_MOTOTRAN = VC.ID_MOTORISTA ');
+    Add('WHERE TRUNC(VC.DATA_ENTREGA) = :DT');
+
+    if DcbVei.text <> '' then
+    FrmRelFreteFg.QrCx.SQL.Add(' AND REPLACE(REPLACE( NO_PLACAVEICULO, '' '', '''' ),''-'','''') = '''+ DcbVei.Text +''' ');
+
+    FrmRelFreteFg.QrCx.SQL.Add(' GROUP BY VC.EMPRESA, VC.FILIAL, VC.NO_PLACAVEICULO');
+    FrmRelFreteFg.QrCx.SQL.Add(' ORDER BY VC.EMPRESA, VC.FILIAL, VC.NO_PLACAVEICULO');
+  end;
+end;
+
+procedure TFrmSelFreteFg.SB_RelatorioClick(Sender: TObject);
+begin
+  if edtTransp.Text = '' then
+  begin
+    Application.MessageBox('É necessário informar a Transportadora.', PChar(FrmSelFreteFg.Caption), MB_OK + MB_ICONINFORMATION);
+    edtTransp.SetFocus;
+    Exit;
+  end;
+
+  Screen.Cursor := crSQLWait;
+  FrmRelFreteFg:=TFrmRelFreteFg.Create(Self);
+  FrmRelFreteFg.QrFrete.Close;
+  FrmRelFreteFg.QrFrete.SQL.Clear;
+
+  if CBCaixas.Checked then
+    ConsultaSQLCaixas;
+
+  IF (CBAutonomo.Checked = False) then
+  BEGIN
+    FrmRelFreteFg.QrFrete.SQL.Text :=
+    ' SELECT CLIENTE.ID_CLIENTE, CLIENTE.NM_FANTCLIE, SISTEMA_PARAMETRO.PC_TOLEQUEBPARASIST, EXPEDICAO_CARGA.ID_CARGEXPE, EXPEDICAO_CARGA.DT_CARGEXPE, (PEDIDO_VENDA.VL_PEDIVEND) AS VLPEDIDO, '+
+    ' (PEDIDO_VENDA.QN_PESOPADREXPEPEDIVEND) AS VLEXPEDIDO, (PEDIDO_VENDA.QN_PESOREALEXPEPEDIVEND) AS PESOEXPEDIDO, (PEDIDO_VENDA.VL_FATUPEDIVEND) AS VLFATU, (PEDIDO_VENDA.QN_EMBAEXPEPEDIVEND) AS QN_CAIXA, '+
+    ' (PEDIDO_VENDA.VL_QUEBPEDIVEND) AS VLQUEBRA,                '+
+    ' CASE WHEN PEDIDO_DEVOLUCAO_VENDA.FL_FRETEPG <> ''S'' then '+
+    ' Nvl((CASE WHEN PEDIDO_VENDA.QN_PESOPADRDEVOPEDIVEND=0 then PEDIDO_VENDA.QN_PESOREALDEVOPEDIVEND ELSE PEDIDO_VENDA.QN_PESOPADRDEVOPEDIVEND END),0) '+
+    ' ELSE '+
+    ' 0 '+
+    ' END AS PESODEVOL, '+
+    ' TRANSPORTADOR_VEICULO.GN_PLACVEICTRAN, TRANSPORTADOR_VEICULO.QN_FATOFRETABATVEICTRAN, FORNECEDOR.ID_FORNECEDOR, '+
+    ' FORNECEDOR.NM_FORNECEDOR, EXPEDICAO_CARGA.QT_PESOBALANCAO, '+
+    ' ROUND(('+
+    ' CASE WHEN (TRANSPORTADOR_VEICULO.OP_MODELO = ''TR'') AND ((EXPEDICAO_CARGA.QT_PESOBALANCAO-(SELECT SUM(PVF.QN_PESOPADRDEVOPEDIVEND) FROM PEDIDO_VENDA PVF WHERE PVF.ID_CARGEXPE = PEDIDO_VENDA.ID_CARGEXPE)) >= 7000) then'+
+    ' 0.12 * (logistica_subregiao.qn_fatofretabatsubrlogi-1)'+
+    ' ELSE'+
+    ' 0.163 * (logistica_subregiao.qn_fatofretabatsubrlogi-1)'+
+    ' END'+
+    ' ),2)AS FTFRETE_SUBREGIAO,'+
+    ' ROUND(('+
+    ' CASE WHEN (TRANSPORTADOR_VEICULO.OP_MODELO = ''TR'') AND ((EXPEDICAO_CARGA.QT_PESOBALANCAO-(SELECT SUM(PVF.QN_PESOPADRDEVOPEDIVEND) FROM PEDIDO_VENDA PVF WHERE PVF.ID_CARGEXPE = PEDIDO_VENDA.ID_CARGEXPE)) >= 7000) then'+
+    ' (0.12 * TRANSPORTADOR_VEICULO.QN_FATOFRETABATVEICTRAN)'+
+    ' ELSE'+
+    ' (0.163 * TRANSPORTADOR_VEICULO.QN_FATOFRETABATVEICTRAN)'+
+    ' END'+
+    ' ),2) AS FTFRETE_VEICU,'+
+    ' ROUND(('+
+    ' CASE WHEN (TRANSPORTADOR_VEICULO.OP_MODELO = ''TR'') AND ((EXPEDICAO_CARGA.QT_PESOBALANCAO-(SELECT SUM(PVF.QN_PESOPADRDEVOPEDIVEND) FROM PEDIDO_VENDA PVF WHERE PVF.ID_CARGEXPE = PEDIDO_VENDA.ID_CARGEXPE)) >= 7000) then'+
+    ' 0.12 * (logistica_subregiao.qn_fatofretabatsubrlogi-1) + (TRANSPORTADOR_VEICULO.QN_FATOFRETABATVEICTRAN*0.12)'+
+    ' ELSE'+
+    ' 0.163 * (logistica_subregiao.qn_fatofretabatsubrlogi-1) + (TRANSPORTADOR_VEICULO.QN_FATOFRETABATVEICTRAN*0.163)'+
+    ' END'+
+    ' ),2) AS VLMEDIKG,'+
+    ' ROUND((CASE WHEN (( Nvl(CLIENTE.pc_fretemax,0) * (PEDIDO_VENDA.QN_PESOPADREXPEPEDIVEND -'+
+    ' CASE WHEN PEDIDO_DEVOLUCAO_VENDA.FL_FRETEPG <> ''S'' then'+
+    '    Nvl((CASE WHEN PEDIDO_VENDA.QN_PESOPADRDEVOPEDIVEND=0 then PEDIDO_VENDA.QN_PESOREALDEVOPEDIVEND ELSE PEDIDO_VENDA.QN_PESOPADRDEVOPEDIVEND END),0)'+
+    ' ELSE'+
+    ' 0'+
+    ' END'+
+    ' ) )>0) then'+
+    ' (( Nvl(CLIENTE.pc_fretemax,0) * (PEDIDO_VENDA.QN_PESOPADREXPEPEDIVEND-'+
+    ' CASE WHEN PEDIDO_DEVOLUCAO_VENDA.FL_FRETEPG <> ''S'' then'+
+    '  Nvl((CASE WHEN PEDIDO_VENDA.QN_PESOPADRDEVOPEDIVEND=0 then PEDIDO_VENDA.QN_PESOREALDEVOPEDIVEND ELSE PEDIDO_VENDA.QN_PESOPADRDEVOPEDIVEND END),0)'+
+    ' ELSE'+
+    ' 0'+
+    ' END)))'+
+    ' ELSE    '+
+    ' ((PEDIDO_VENDA.QN_PESOPADREXPEPEDIVEND-'+
+    ' CASE WHEN PEDIDO_DEVOLUCAO_VENDA.FL_FRETEPG <> ''S'' then'+
+    '   Nvl((CASE WHEN PEDIDO_VENDA.QN_PESOPADRDEVOPEDIVEND=0 then PEDIDO_VENDA.QN_PESOREALDEVOPEDIVEND ELSE PEDIDO_VENDA.QN_PESOPADRDEVOPEDIVEND END),0)'+
+    ' ELSE'+
+    '   0'+
+    ' END'+
+    ' ) * ('+
+    ' CASE WHEN (TRANSPORTADOR_VEICULO.OP_MODELO = ''TR'') AND ((EXPEDICAO_CARGA.QT_PESOBALANCAO-'+
+    '     CASE WHEN PEDIDO_DEVOLUCAO_VENDA.FL_FRETEPG <> ''S'' then'+
+    '       (SELECT SUM(PVF.QN_PESOPADRDEVOPEDIVEND) FROM PEDIDO_VENDA PVF WHERE PVF.ID_CARGEXPE = PEDIDO_VENDA.ID_CARGEXPE)'+
+    '     ELSE'+
+    '       0'+
+    '     END) >= 7000) then'+
+    ' 0.12 * (logistica_subregiao.qn_fatofretabatsubrlogi-1) + (TRANSPORTADOR_VEICULO.QN_FATOFRETABATVEICTRAN * 0.12)'+
+    ' ELSE'+
+    ' 0.163 * (logistica_subregiao.qn_fatofretabatsubrlogi-1) + (TRANSPORTADOR_VEICULO.QN_FATOFRETABATVEICTRAN * 0.163)'+
+    ' END'+
+    ' )'+
+    ' ) END),2) AS FRETEBRUTO,'+
+    ' ROUND((CASE WHEN PEDIDO_VENDA_NOTA_FISCAL.ID_NOTAFISC IS NULL then 0 ELSE  '+
+    ' ((CASE WHEN (( Nvl(CLIENTE.pc_fretemax,0) * (PEDIDO_VENDA.QN_PESOPADREXPEPEDIVEND-Nvl((CASE WHEN PEDIDO_VENDA.QN_PESOPADRDEVOPEDIVEND=0 then PEDIDO_VENDA.QN_PESOREALDEVOPEDIVEND ELSE PEDIDO_VENDA.QN_PESOPADRDEVOPEDIVEND END),0)) )>0) then '+
+    ' (( Nvl(CLIENTE.pc_fretemax,0) * (PEDIDO_VENDA.QN_PESOPADREXPEPEDIVEND-Nvl((CASE WHEN PEDIDO_VENDA.QN_PESOPADRDEVOPEDIVEND=0 then PEDIDO_VENDA.QN_PESOREALDEVOPEDIVEND ELSE PEDIDO_VENDA.QN_PESOPADRDEVOPEDIVEND END),0)) )) ELSE '+
+    ' ((PEDIDO_VENDA.QN_PESOPADREXPEPEDIVEND-Nvl((CASE WHEN PEDIDO_VENDA.QN_PESOPADRDEVOPEDIVEND=0 then PEDIDO_VENDA.QN_PESOREALDEVOPEDIVEND ELSE PEDIDO_VENDA.QN_PESOPADRDEVOPEDIVEND END),0)) *'+
+    ' ('+
+    ' (CASE WHEN (TRANSPORTADOR_VEICULO.OP_MODELO = ''TR'') AND ((EXPEDICAO_CARGA.QT_PESOBALANCAO-(SELECT SUM(PVF.QN_PESOPADRDEVOPEDIVEND) FROM PEDIDO_VENDA PVF WHERE PVF.ID_CARGEXPE = PEDIDO_VENDA.ID_CARGEXPE)) >= 7000) then'+
+    ' 0.12 * (logistica_subregiao.qn_fatofretabatsubrlogi-1) + (TRANSPORTADOR_VEICULO.QN_FATOFRETABATVEICTRAN * 0.12)'+
+    ' ELSE'+
+    ' 0.163 * (logistica_subregiao.qn_fatofretabatsubrlogi-1) + (TRANSPORTADOR_VEICULO.QN_FATOFRETABATVEICTRAN * 0.163)'+
+    ' END)'+
+    ' )'+
+    ' ) END) )  END),2) AS FRETE_N,'+
+    ' ROUND((CASE WHEN PEDIDO_VENDA_NOTA_FISCAL.ID_NOTAFISC IS NULL then'+
+    ' ((CASE WHEN (( Nvl(CLIENTE.pc_fretemax,0) * (PEDIDO_VENDA.QN_PESOPADREXPEPEDIVEND-Nvl((CASE WHEN PEDIDO_VENDA.QN_PESOPADRDEVOPEDIVEND=0 then PEDIDO_VENDA.QN_PESOREALDEVOPEDIVEND ELSE PEDIDO_VENDA.QN_PESOPADRDEVOPEDIVEND END),0)) )>0) then '+
+    ' (( Nvl(CLIENTE.pc_fretemax,0) * (PEDIDO_VENDA.QN_PESOPADREXPEPEDIVEND-Nvl((CASE WHEN PEDIDO_VENDA.QN_PESOPADRDEVOPEDIVEND=0 then PEDIDO_VENDA.QN_PESOREALDEVOPEDIVEND ELSE PEDIDO_VENDA.QN_PESOPADRDEVOPEDIVEND END),0)) )) ELSE '+
+    ' ((PEDIDO_VENDA.QN_PESOPADREXPEPEDIVEND-Nvl((CASE WHEN PEDIDO_VENDA.QN_PESOPADRDEVOPEDIVEND=0 then PEDIDO_VENDA.QN_PESOREALDEVOPEDIVEND ELSE PEDIDO_VENDA.QN_PESOPADRDEVOPEDIVEND END),0)) *'+
+    ' ('+
+    ' CASE WHEN (TRANSPORTADOR_VEICULO.OP_MODELO = ''TR'') AND ((EXPEDICAO_CARGA.QT_PESOBALANCAO-(SELECT SUM(PVF.QN_PESOPADRDEVOPEDIVEND) FROM PEDIDO_VENDA PVF WHERE PVF.ID_CARGEXPE = PEDIDO_VENDA.ID_CARGEXPE)) >= 7000) then'+
+    ' 0.12 * (logistica_subregiao.qn_fatofretabatsubrlogi-1) + (TRANSPORTADOR_VEICULO.QN_FATOFRETABATVEICTRAN * 0.12)'+
+    ' ELSE'+
+    ' 0.163 * (logistica_subregiao.qn_fatofretabatsubrlogi-1) + (TRANSPORTADOR_VEICULO.QN_FATOFRETABATVEICTRAN * 0.163)'+
+    ' END'+
+    ' )'+
+    ' ) END) ) ELSE 0 END),2) AS FRETE_S,'+
+    ' (CASE WHEN PEDIDO_VENDA_NOTA_FISCAL.ID_NOTAFISC IS NULL then 0 ELSE (PEDIDO_VENDA.VL_QUEBPEDIVEND) END) AS QUEBRA_N,        '+
+    ' (CASE WHEN PEDIDO_VENDA_NOTA_FISCAL.ID_NOTAFISC IS NULL then (PEDIDO_VENDA.VL_QUEBPEDIVEND) ELSE 0 END) AS QUEBRA_S,        '+
+    ' EXPEDICAO_CARGA.VALOR_PEDAGIO, TRANSPORTADOR_VEICULO.OP_MODELO, TRANSPORTADOR_VEICULO.VL_FRETEFIXADO          '+
+    ' FROM '+
+    ' SISTEMA_PARAMETRO , '+
+    ' EXPEDICAO_CARGA, '+
+    ' PEDIDO_VENDA, '+
+    ' TRANSPORTADOR_VEICULO, '+
+    ' FORNECEDOR, '+
+    ' VEICULO_TIPO, '+
+    ' FRETE_ABATIDO, '+
+    ' CLIENTE, '+
+    ' LOGISTICA_SUBREGIAO, '+
+    ' PEDIDO_VENDA_NOTA_FISCAL, '+
+    ' NOTA_FISCAL, '+
+    ' PEDIDO_DEVOLUCAO_VENDA '+
+    ' WHERE '+
+    ' EXPEDICAO_CARGA.ID_CARGEXPE = PEDIDO_VENDA.ID_CARGEXPE AND       '+
+    ' EXPEDICAO_CARGA.ID_ITEMPROGCAMI = FORNECEDOR.ID_FORNECEDOR AND   '+
+    ' EXPEDICAO_CARGA.GN_PLACVEICTRAN = TRANSPORTADOR_VEICULO.GN_PLACVEICTRAN AND '+
+    ' TRANSPORTADOR_VEICULO.ID_FORNECEDOR_TRANSPORTADOR = FORNECEDOR.ID_FORNECEDOR AND '+
+    ' TRANSPORTADOR_VEICULO.ID_TIPOVEIC = VEICULO_TIPO.ID_TIPOVEIC AND '+
+    ' VEICULO_TIPO.ID_TIPOVEIC = FRETE_ABATIDO.ID_TIPOVEIC AND '+
+    ' PEDIDO_VENDA.ID_CLIENTE = CLIENTE.ID_CLIENTE AND '+
+    ' CLIENTE.ID_SUBRLOGI = LOGISTICA_SUBREGIAO.ID_SUBRLOGI AND '+
+    ' PEDIDO_DEVOLUCAO_VENDA.ID_PEDIVEND (+) = PEDIDO_VENDA.ID_PEDIVEND AND '+
+    ' FORNECEDOR.ID_FORNECEDOR = :VFOR AND '+
+    ' TRUNC(EXPEDICAO_CARGA.DT_CARGEXPE) >= :DTINI AND '+
+    ' TRUNC(EXPEDICAO_CARGA.DT_CARGEXPE) <= :DTFIM AND '+
+    ' PEDIDO_VENDA_NOTA_FISCAL.ID_PEDIVEND (+) = PEDIDO_VENDA.ID_PEDIVEND AND '+
+    ' NOTA_FISCAL.ID_NOTAFISC (+) = PEDIDO_VENDA_NOTA_FISCAL.ID_NOTAFISC AND '+
+    ' NVL(NOTA_FISCAL.FL_CANCNOTAFISC,''N'') = ''N''  AND '+
+    ' EXPEDICAO_CARGA.FL_STATCARGEXPE <>''NF'' ';
+
+    FrmRelFreteFg.QrFrete.ParamByName('VFOR').AsFloat := StrToFloat(edtTransp.Text);
+    FrmRelFreteFg.RLLabel9.Caption := 'Transportadora:';
+
+  END
+  ELSE
+  BEGIN
+    FrmRelFreteFg.QrFrete.SQL.Text :=
+    ' SELECT CLIENTE.ID_CLIENTE, CLIENTE.NM_FANTCLIE, SISTEMA_PARAMETRO.PC_TOLEQUEBPARASIST, EXPEDICAO_CARGA.ID_CARGEXPE, EXPEDICAO_CARGA.DT_CARGEXPE, (PEDIDO_VENDA.VL_PEDIVEND) AS VLPEDIDO, '+
+    ' (PEDIDO_VENDA.QN_PESOPADREXPEPEDIVEND) AS VLEXPEDIDO, (PEDIDO_VENDA.QN_PESOREALEXPEPEDIVEND) AS PESOEXPEDIDO, (PEDIDO_VENDA.VL_FATUPEDIVEND) AS VLFATU, (PEDIDO_VENDA.QN_EMBAEXPEPEDIVEND) AS QN_CAIXA, '+
+    ' (PEDIDO_VENDA.VL_QUEBPEDIVEND) AS VLQUEBRA, TRANSPORTADOR_VEICULO.GN_PLACVEICTRAN, TRANSPORTADOR_VEICULO.QN_FATOFRETABATVEICTRAN, FORNECEDOR.ID_FORNECEDOR, '+
+    ' Nvl((CASE WHEN PEDIDO_VENDA.QN_PESOPADRDEVOPEDIVEND=0 then PEDIDO_VENDA.QN_PESOREALDEVOPEDIVEND ELSE PEDIDO_VENDA.QN_PESOPADRDEVOPEDIVEND END),0) AS PESODEVOL, '+
+    ' FORNECEDOR.NM_FORNECEDOR, FRETE_ABATIDO.VL_QUILFRETABAT * (logistica_subregiao.qn_fatofretabatsubrlogi-1) AS FTFRETE_SUBREGIAO, '+
+    ' (TRANSPORTADOR_VEICULO.QN_FATOFRETABATVEICTRAN*FRETE_ABATIDO.VL_QUILFRETABAT) AS FTFRETE_VEICU, EXPEDICAO_CARGA.VALOR_PEDAGIO, '+
+    ' (FRETE_ABATIDO.VL_QUILFRETABAT * (logistica_subregiao.qn_fatofretabatsubrlogi-1) + (TRANSPORTADOR_VEICULO.QN_FATOFRETABATVEICTRAN*FRETE_ABATIDO.VL_QUILFRETABAT)) AS VLMEDIKG,  '+
+    ' (CASE WHEN (( Nvl(CLIENTE.pc_fretemax,0) * (PEDIDO_VENDA.QN_PESOPADREXPEPEDIVEND-Nvl((CASE WHEN PEDIDO_VENDA.QN_PESOPADRDEVOPEDIVEND=0 then PEDIDO_VENDA.QN_PESOREALDEVOPEDIVEND ELSE PEDIDO_VENDA.QN_PESOPADRDEVOPEDIVEND END),0)) )>0) '+
+    ' then (( Nvl(CLIENTE.pc_fretemax,0) * (PEDIDO_VENDA.QN_PESOPADREXPEPEDIVEND-Nvl((CASE WHEN PEDIDO_VENDA.QN_PESOPADRDEVOPEDIVEND=0 then PEDIDO_VENDA.QN_PESOREALDEVOPEDIVEND ELSE PEDIDO_VENDA.QN_PESOPADRDEVOPEDIVEND END),0)) )) '+
+    ' ELSE ((PEDIDO_VENDA.QN_PESOPADREXPEPEDIVEND-Nvl((CASE WHEN PEDIDO_VENDA.QN_PESOPADRDEVOPEDIVEND=0 then PEDIDO_VENDA.QN_PESOREALDEVOPEDIVEND ELSE PEDIDO_VENDA.QN_PESOPADRDEVOPEDIVEND END),0)) '+
+    ' * (FRETE_ABATIDO.VL_QUILFRETABAT * (logistica_subregiao.qn_fatofretabatsubrlogi-1) + (TRANSPORTADOR_VEICULO.QN_FATOFRETABATVEICTRAN*FRETE_ABATIDO.VL_QUILFRETABAT))) END) AS FreteBruto, '+
+    ' (CASE WHEN PEDIDO_VENDA_NOTA_FISCAL.ID_NOTAFISC IS NULL then 0 ELSE '+
+    ' ( ( PEDIDO_VENDA.QN_PESOPADREXPEPEDIVEND - 	NVL((CASE WHEN PEDIDO_VENDA.QN_PESOPADRDEVOPEDIVEND = 0 then'+
+    ' PEDIDO_VENDA.QN_PESOREALDEVOPEDIVEND ELSE PEDIDO_VENDA.QN_PESOPADRDEVOPEDIVEND END),0)) *'+
+    ' ('+
+    ' CASE WHEN (TRANSPORTADOR_VEICULO.OP_MODELO = ''TR'') AND ((EXPEDICAO_CARGA.QT_PESOBALANCAO-(SELECT SUM(PVF.QN_PESOPADRDEVOPEDIVEND) FROM PEDIDO_VENDA PVF WHERE PVF.ID_CARGEXPE = PEDIDO_VENDA.ID_CARGEXPE)) >= 7000) then'+
+    ' 0.12 * (logistica_subregiao.qn_fatofretabatsubrlogi-1) + (TRANSPORTADOR_VEICULO.QN_FATOFRETABATVEICTRAN * 0.12)'+
+    ' ELSE'+
+    ' 0.163 * (logistica_subregiao.qn_fatofretabatsubrlogi-1) + (TRANSPORTADOR_VEICULO.QN_FATOFRETABATVEICTRAN * 0.163)'+
+    ' END'+
+    ' )'+
+    ' ) END) AS FRETE_N,'+
+    ' (CASE WHEN PEDIDO_VENDA_NOTA_FISCAL.ID_NOTAFISC IS NULL then '+
+    ' ((PEDIDO_VENDA.QN_PESOPADREXPEPEDIVEND - NVL((CASE WHEN PEDIDO_VENDA.QN_PESOPADRDEVOPEDIVEND = 0 then '+
+    ' PEDIDO_VENDA.QN_PESOREALDEVOPEDIVEND ELSE PEDIDO_VENDA.QN_PESOPADRDEVOPEDIVEND END),0)) * '+
+    ' ( '+
+    ' CASE WHEN (TRANSPORTADOR_VEICULO.OP_MODELO = ''TR'') AND ((EXPEDICAO_CARGA.QT_PESOBALANCAO-(SELECT SUM(PVF.QN_PESOPADRDEVOPEDIVEND) FROM PEDIDO_VENDA PVF WHERE PVF.ID_CARGEXPE = PEDIDO_VENDA.ID_CARGEXPE)) >= 7000) then '+
+    ' 0.12 * (logistica_subregiao.qn_fatofretabatsubrlogi-1) + (TRANSPORTADOR_VEICULO.QN_FATOFRETABATVEICTRAN * 0.12) '+
+    ' ELSE '+
+    ' 0.163 * (logistica_subregiao.qn_fatofretabatsubrlogi-1) + (TRANSPORTADOR_VEICULO.QN_FATOFRETABATVEICTRAN * 0.163) '+
+    ' END '+
+    ' ) '+
+    ' )ELSE 0 END) AS FRETE_S, '+
+    ' (CASE WHEN PEDIDO_VENDA_NOTA_FISCAL.ID_NOTAFISC IS NULL then 0 ELSE (PEDIDO_VENDA.VL_QUEBPEDIVEND) END) AS QUEBRA_N, '+
+    ' (CASE WHEN PEDIDO_VENDA_NOTA_FISCAL.ID_NOTAFISC IS NULL then (PEDIDO_VENDA.VL_QUEBPEDIVEND) ELSE 0 END) AS QUEBRA_S, '+
+    ' TRANSPORTADOR_VEICULO.OP_MODELO, TRANSPORTADOR_VEICULO.VL_FRETEFIXADO ' +
+    ' FROM  '+
+    ' SISTEMA_PARAMETRO,'+
+    ' EXPEDICAO_CARGA, '+
+    ' PEDIDO_VENDA, '+
+    ' TRANSPORTADOR_VEICULO, '+
+    ' FORNECEDOR, '+
+    ' VEICULO_TIPO, '+
+    ' FRETE_ABATIDO, '+
+    ' CLIENTE, '+
+    ' LOGISTICA_SUBREGIAO, '+
+    ' PEDIDO_VENDA_NOTA_FISCAL, '+
+    ' NOTA_FISCAL '+
+    ' WHERE '+
+    ' EXPEDICAO_CARGA.ID_CARGEXPE = PEDIDO_VENDA.ID_CARGEXPE AND       '+
+    ' EXPEDICAO_CARGA.ID_ITEMPROGCAMI = FORNECEDOR.ID_FORNECEDOR AND   '+
+    ' EXPEDICAO_CARGA.GN_PLACVEICTRAN = TRANSPORTADOR_VEICULO.GN_PLACVEICTRAN AND '+
+    ' TRANSPORTADOR_VEICULO.ID_FORNECEDOR_TRANSPORTADOR = FORNECEDOR.ID_FORNECEDOR AND '+
+    ' TRANSPORTADOR_VEICULO.ID_TIPOVEIC = VEICULO_TIPO.ID_TIPOVEIC AND '+
+    ' VEICULO_TIPO.ID_TIPOVEIC = FRETE_ABATIDO.ID_TIPOVEIC AND '+
+    ' PEDIDO_VENDA.ID_CLIENTE = CLIENTE.ID_CLIENTE AND '+
+    ' CLIENTE.ID_SUBRLOGI = LOGISTICA_SUBREGIAO.ID_SUBRLOGI AND '+
+    ' FORNECEDOR.FL_TRANAUTOFORN  = ''S'' AND '+
+    ' TRUNC(EXPEDICAO_CARGA.DT_CARGEXPE) >= :DTINI AND '+
+    ' TRUNC(EXPEDICAO_CARGA.DT_CARGEXPE) <= :DTFIM AND '+
+    ' PEDIDO_VENDA_NOTA_FISCAL.ID_PEDIVEND (+) = PEDIDO_VENDA.ID_PEDIVEND AND '+
+    ' NOTA_FISCAL.ID_NOTAFISC (+) = PEDIDO_VENDA_NOTA_FISCAL.ID_NOTAFISC AND'+
+    ' NVL(NOTA_FISCAL.FL_CANCNOTAFISC,''N'') = ''N'' ';
+
+    FrmRelFreteFg.RLLabel9.Caption := 'AUTÔNOMOS';
+  END;
+
+  if CBEmitente.Checked then
+     FrmRelFreteFg.QrFrete.SQL.Add(' AND PEDIDO_VENDA.sg_tipofretpedivend = ''CIF''   ');
+
+  if DcbVei.text <> '' then
+     FrmRelFreteFg.QrFrete.SQL.Add(' AND transportador_veiculo.gn_placveictran = '''+ DcbVei.Text +''' ');
+
+  FrmRelFreteFg.QrFrete.SQL.Add('ORDER BY EXPEDICAO_CARGA.ID_CARGEXPE, PEDIDO_VENDA.QN_EMBAEXPEPEDIVEND ASC, FORNECEDOR.ID_FORNECEDOR, PEDIDO_VENDA.ID_PEDIVEND ');
+
+  FrmRelFreteFg.QrFrete.ParamByName('DTINI').AsDate := StrToDate(DTIni.Text);
+  FrmRelFreteFg.QrFrete.ParamByName('DTFIM').AsDate := StrToDate(DtFim.Text);
+
+  FrmRelFreteFg.QrFrete.Open;
+
+  if FrmRelFreteFg.QrFrete.IsEmpty then
+  begin
+    Application.MessageBox('Não há registros no período.', PChar(FrmSelFreteFg.Caption), MB_OK + MB_ICONINFORMATION);
+    Exit;
+  end;
+
+  FrmRelFreteFg.QrCx.Open;
+  Screen.Cursor := crDefault;
+  FrmRelFreteFg.lblPeriodo.Caption := 'Período de ' + DTIni.Text + ' a ' + DtFim.Text;
+  FrmRelFreteFg.lblTransportadora.Caption := FrmRelFreteFg.QrFreteID_FORNECEDOR.AsString + ' - ' + FrmRelFreteFg.QrFreteNM_FORNECEDOR.AsString;
+
+  if DcbVei.text <> '' then
+  begin
+    if FrmRelFreteFg.QrFreteOP_MODELO.AsString  = 'TR' then
+      FrmRelFreteFg.lblVeiculo.Caption := 'TRUCK: '
+    else if FrmRelFreteFg.QrFreteOP_MODELO.AsString  = 'TC' then
+      FrmRelFreteFg.lblVeiculo.Caption := 'TOCO: '
+    else if FrmRelFreteFg.QrFreteOP_MODELO.AsString  = 'TQ' then
+      FrmRelFreteFg.lblVeiculo.Caption := '3/4: '
+    else
+      FrmRelFreteFg.lblVeiculo.Caption := '';
+
+    FrmRelFreteFg.lblVeiculo.Caption := FrmRelFreteFg.lblVeiculo.Caption  +
+                                        Copy(FrmRelFreteFg.QrFreteGN_PLACVEICTRAN.AsString,1,3) + ' - ' +
+                                        Copy(FrmRelFreteFg.QrFreteGN_PLACVEICTRAN.AsString,4,4);
+  end
+  else
+    FrmRelFreteFg.lblVeiculo.Visible := False;
+
+  FrmRelFreteFg.lblTransportadora.Visible := not(CBAutonomo.Checked);
+  FrmRelFreteFg.lblUsuario.Caption := gs_NomeUsuario;
+//  FrmRelFreteFg.PDSetup.Copies := 1;
+  FrmRelFreteFg.RLReport1.Preview(nil);
+end;
+
+procedure TFrmSelFreteFg.Sb_SairClick(Sender: TObject);
+begin
+  Close;
+end;
+
+procedure TFrmSelFreteFg.FormShortCut(Key: Integer; Shift: TShiftState;
+  var Handled: Boolean);
+begin
+  case Key of
+    4096: Close;          // ESC para sair
+    4152: SB_Relatorio.Click;  // F9 para gerar relatório
+  end;
+end;
+
+procedure TFrmSelFreteFg.btnTranspClick(Sender: TObject);
+begin
+  FrmOriPesq:=1;
+  frmConsultaFornecedores:= TfrmConsultaFornecedores.Create(Self);
+  frmConsultaFornecedores.Show;
+end;
+
+end.
+
+

@@ -1,0 +1,783 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{0DF202DE-726D-482F-A870-4CBDF35DEFAF}</ProjectGuid>
+        <MainSource>Comercial.dpr</MainSource>
+        <Base>True</Base>
+        <Config Condition="'$(Config)'==''">Debug</Config>
+        <TargetedPlatforms>32769</TargetedPlatforms>
+        <AppType>Application</AppType>
+        <FrameworkType>VCL</FrameworkType>
+        <ProjectVersion>19.5</ProjectVersion>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Android64' and '$(Base)'=='true') or '$(Base_Android64)'!=''">
+        <Base_Android64>true</Base_Android64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+        <Base_Win64>true</Base_Win64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+        <Cfg_1_Win32>true</Cfg_1_Win32>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Android64' and '$(Cfg_2)'=='true') or '$(Cfg_2_Android64)'!=''">
+        <Cfg_2_Android64>true</Cfg_2_Android64>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+        <Cfg_2_Win32>true</Cfg_2_Win32>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <DCC_E>false</DCC_E>
+        <DCC_F>false</DCC_F>
+        <DCC_K>false</DCC_K>
+        <DCC_N>true</DCC_N>
+        <DCC_S>false</DCC_S>
+        <DCC_ImageBase>00400000</DCC_ImageBase>
+        <DCC_DebugInformation>1</DCC_DebugInformation>
+        <DCC_SymbolReferenceInfo>1</DCC_SymbolReferenceInfo>
+        <DCC_ExeOutput>C:\PROJETO\EXE</DCC_ExeOutput>
+        <DCC_DcuOutput>C:\PROJETO\UNIT\COMERCIAL</DCC_DcuOutput>
+        <DCC_UnitSearchPath>C:\PROJETO\Fontes\Uteis;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_UsePackage>vcl;rtl;vclx;indy;inet;xmlrtl;vclie;inetdbbde;inetdbxpress;dbrtl;dsnap;dsnapcon;vcldb;soaprtl;VclSmp;dbexpress;dbxcds;inetdb;bdertl;vcldbx;webdsnap;websnap;adortl;ibxpress;teeui;teedb;tee;dss;visualclx;visualdbclx;vclactnband;vclshlctrls;IntrawebDB_50_70;Intraweb_50_70;Rave50CLX;Rave50VCL;dclOfficeXP;CRControls70;dac70;dacvcl70;odacvcl70;odac70;oraprov70;ACBr_CLX;ComDrv32;qrpt;TVidGrab;RLibWinD7clx;$(DCC_UsePackage)</DCC_UsePackage>
+        <SanitizedProjectName>Comercial</SanitizedProjectName>
+        <DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;Winapi;$(DCC_Namespace)</DCC_Namespace>
+        <VerInfo_Locale>1046</VerInfo_Locale>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Android64)'!=''">
+        <Android_LauncherIcon192>$(BDS)\bin\Artwork\Android\FM_LauncherIcon_192x192.png</Android_LauncherIcon192>
+        <EnabledSysJars>annotation-1.2.0.dex.jar;asynclayoutinflater-1.0.0.dex.jar;billing-4.0.0.dex.jar;browser-1.0.0.dex.jar;cloud-messaging.dex.jar;collection-1.0.0.dex.jar;coordinatorlayout-1.0.0.dex.jar;core-1.5.0-rc02.dex.jar;core-common-2.0.1.dex.jar;core-runtime-2.0.1.dex.jar;cursoradapter-1.0.0.dex.jar;customview-1.0.0.dex.jar;documentfile-1.0.0.dex.jar;drawerlayout-1.0.0.dex.jar;firebase-annotations-16.0.0.dex.jar;firebase-common-20.0.0.dex.jar;firebase-components-17.0.0.dex.jar;firebase-datatransport-18.0.0.dex.jar;firebase-encoders-17.0.0.dex.jar;firebase-encoders-json-18.0.0.dex.jar;firebase-iid-interop-17.1.0.dex.jar;firebase-installations-17.0.0.dex.jar;firebase-installations-interop-17.0.0.dex.jar;firebase-measurement-connector-19.0.0.dex.jar;firebase-messaging-22.0.0.dex.jar;fmx.dex.jar;fragment-1.0.0.dex.jar;google-play-licensing.dex.jar;interpolator-1.0.0.dex.jar;javax.inject-1.dex.jar;legacy-support-core-ui-1.0.0.dex.jar;legacy-support-core-utils-1.0.0.dex.jar;lifecycle-common-2.0.0.dex.jar;lifecycle-livedata-2.0.0.dex.jar;lifecycle-livedata-core-2.0.0.dex.jar;lifecycle-runtime-2.0.0.dex.jar;lifecycle-service-2.0.0.dex.jar;lifecycle-viewmodel-2.0.0.dex.jar;listenablefuture-1.0.dex.jar;loader-1.0.0.dex.jar;localbroadcastmanager-1.0.0.dex.jar;play-services-ads-20.1.0.dex.jar;play-services-ads-base-20.1.0.dex.jar;play-services-ads-identifier-17.0.0.dex.jar;play-services-ads-lite-20.1.0.dex.jar;play-services-base-17.5.0.dex.jar;play-services-basement-17.6.0.dex.jar;play-services-cloud-messaging-16.0.0.dex.jar;play-services-drive-17.0.0.dex.jar;play-services-games-21.0.0.dex.jar;play-services-location-18.0.0.dex.jar;play-services-maps-17.0.1.dex.jar;play-services-measurement-base-18.0.0.dex.jar;play-services-measurement-sdk-api-18.0.0.dex.jar;play-services-places-placereport-17.0.0.dex.jar;play-services-stats-17.0.0.dex.jar;play-services-tasks-17.2.0.dex.jar;print-1.0.0.dex.jar;room-common-2.1.0.dex.jar;room-runtime-2.1.0.dex.jar;slidingpanelayout-1.0.0.dex.jar;sqlite-2.0.1.dex.jar;sqlite-framework-2.0.1.dex.jar;swiperefreshlayout-1.0.0.dex.jar;transport-api-3.0.0.dex.jar;transport-backend-cct-3.0.0.dex.jar;transport-runtime-3.0.0.dex.jar;user-messaging-platform-1.0.0.dex.jar;versionedparcelable-1.1.1.dex.jar;viewpager-1.0.0.dex.jar;work-runtime-2.1.0.dex.jar</EnabledSysJars>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <DCC_Namespace>System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <BT_BuildType>Debug</BT_BuildType>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <Icon_MainIcon>Comercial_Icon.ico</Icon_MainIcon>
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <Icon_MainIcon>Comercial_Icon.ico</Icon_MainIcon>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+        <DCC_DebugInformation>0</DCC_DebugInformation>
+        <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+        <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+        <DCC_Optimize>false</DCC_Optimize>
+        <DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+        <DCC_RangeChecking>true</DCC_RangeChecking>
+        <DCC_IntegerOverflowCheck>true</DCC_IntegerOverflowCheck>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Android64)'!=''">
+        <BT_BuildType>Debug</BT_BuildType>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
+        <DCC_DcuOutput>C:\PROJETO DELPHI 11\UNIT\COMERCIAL\</DCC_DcuOutput>
+        <DCC_UnitSearchPath>C:\PROJETO DELPHI 11\Dacar\Uteis;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+    </PropertyGroup>
+    <ItemGroup>
+        <DelphiCompile Include="$(MainSource)">
+            <MainSource>MainSource</MainSource>
+        </DelphiCompile>
+        <DCCReference Include="Principal.pas">
+            <Form>FrmPrincipal</Form>
+        </DCCReference>
+        <DCCReference Include="Sobre.pas">
+            <Form>FrmSobre</Form>
+        </DCCReference>
+        <DCCReference Include="ConfSenha.pas">
+            <Form>FrmConfSenha</Form>
+        </DCCReference>
+        <DCCReference Include="Inst.pas">
+            <Form>FrmInst</Form>
+        </DCCReference>
+        <DCCReference Include="USenha.pas">
+            <Form>Fenha</Form>
+        </DCCReference>
+        <DCCReference Include="Extenso.pas"/>
+        <DCCReference Include="UFrmPesCaminhao.pas">
+            <Form>FrmPesqCaminhao</Form>
+        </DCCReference>
+        <DCCReference Include="UPesquiCliente.pas">
+            <Form>FrmPesqCliente</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmPesqMatEmba.pas">
+            <Form>FrmPesqMatEmba</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmSeldata.pas">
+            <Form>FrmSelData</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmLiberacarga.pas">
+            <Form>FrmLiberacarga</Form>
+        </DCCReference>
+        <DCCReference Include="UFRMUltVend.pas">
+            <Form>FrmUltVend</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmCartorio.pas">
+            <Form>FrmCartorio</Form>
+        </DCCReference>
+        <DCCReference Include="UfrmImpDocPed.pas">
+            <Form>frmImpDocPed</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmRelNFRacao66.pas">
+            <Form>FrmRelNFRacao66</Form>
+        </DCCReference>
+        <DCCReference Include="UfrmQRBoletoPre.pas">
+            <Form>frmQRBoletoPre</Form>
+        </DCCReference>
+        <DCCReference Include="UfrmFeCarManu.pas">
+            <Form>frmFeCarManu</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmNumNota.pas">
+            <Form>FrmNumNota</Form>
+        </DCCReference>
+        <DCCReference Include="UfrmPedVenda.pas">
+            <Form>FrmPedVenda</Form>
+        </DCCReference>
+        <DCCReference Include="UfrmQRBoleto.pas">
+            <Form>frmQRBoleto</Form>
+        </DCCReference>
+        <DCCReference Include="UfrmMontaCarga.pas">
+            <Form>FrmMontaCarga</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmPesqMoto.pas">
+            <Form>FrmPesqMoto</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmRelFreteDevoCol.pas">
+            <Form>FrmRelFreteDevoCol</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmSelFreteDevo.pas">
+            <Form>FrmSelFreteDevo</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmSaldoVendas.pas">
+            <Form>FrmSaldoVendas</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmCargObsCarga.pas">
+            <Form>FrmCargObsCarga</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmItemCarLibCar.pas">
+            <Form>FrmItemCarLibCar</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmItensPedido.pas">
+            <Form>FrmItensPedido</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmAtualVersao.pas">
+            <Form>FrmAtualVersao</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmCargObsPedi.pas">
+            <Form>FrmCargObsPedi</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmCargObsExpe.pas">
+            <Form>FrmCargObsExpe</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmPesqVend.pas">
+            <Form>FrmPesqVend</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmPesqTPV.pas">
+            <Form>FrmPesqTPV</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmPesqSubRegiao.pas">
+            <Form>FrmPesqSubRegiao</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmRelSaidaCarga.pas">
+            <Form>FrmRelSaidaCarga</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmManuComis.pas">
+            <Form>FrmManuComis</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmSelDoa.pas">
+            <Form>FrmSelRelDoa</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmRelSintCarga.pas">
+            <Form>FrmRelSintCarga</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmSelSintCarga.pas">
+            <Form>FrmSelSintCarga</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmRelDoa.pas">
+            <Form>FrmRelDoa</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmSelRelConfVenda.pas">
+            <Form>FrmSelRelConfVenda</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmRelConfVenda.pas">
+            <Form>FrmRelConfVenda</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmSelProdVend.pas">
+            <Form>FrmSelProdVend</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmRelProdVend.pas">
+            <Form>FrmRelProdVend</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmSelVenProd.pas">
+            <Form>FrmSelVenProd</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmRelVendaProd.pas">
+            <Form>FrmRelVendaProd</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmPediDevoVend.pas">
+            <Form>FrmPediDevoVend</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmPesqGrupo.pas">
+            <Form>FrmPesqGrupo</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmBaseTeste.pas">
+            <Form>FrmBaseTeste</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmPesqFor.pas">
+            <Form>FrmPesqFor</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmTotalDevo.pas">
+            <Form>FrmTotalDevo</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmPesqPais.pas">
+            <Form>FrmPesqPais</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmCargaNF.pas">
+            <Form>FrmCargaNF</Form>
+        </DCCReference>
+        <DCCReference Include="UFRMATRA.pas">
+            <Form>FrmATRA</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmParametro.pas">
+            <Form>FrmParametro</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmParamComercial.pas">
+            <Form>FrmParamComercial</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmItensCarga.pas">
+            <Form>FrmItensCarga</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmCorte.pas">
+            <Form>FrmCorte</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmImpNFRacao.pas">
+            <Form>FrmImpNFRacao</Form>
+        </DCCReference>
+        <DCCReference Include="UfrmQRNF5601.pas">
+            <Form>frmQRNF5601</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmPesqGrupoCli.pas">
+            <Form>FrmPesqGrupoCli</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmFaturaMetal.pas">
+            <Form>FrmFaturaMetal</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmFatura.pas">
+            <Form>FrmFatura</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmFreteFixo.pas">
+            <Form>FrmFreteFixo</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmPesqPedagio.pas">
+            <Form>FrmPesqPedagio</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmPesqContas.pas">
+            <Form>FrmPesqConta</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmPedagio.pas">
+            <Form>FrmPedagio</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmSubRegiao.pas">
+            <Form>FrmSubRegiao</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmPesqBairro.pas">
+            <Form>FrmPesqBairro</Form>
+        </DCCReference>
+        <DCCReference Include="UfrmQRMDNotas.pas">
+            <Form>frmQRMDNotas</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmRelNFRacao.pas">
+            <Form>FrmRelNFRacao</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmSelPedagio.pas">
+            <Form>FrmSelPedagio</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmRelPedagio.pas">
+            <Form>FrmRelPedagio</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmGeraVarejo.pas">
+            <Form>FrmGeraVarejo</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmClientes.pas">
+            <Form>FrmClientes</Form>
+        </DCCReference>
+        <DCCReference Include="Global.pas"/>
+        <DCCReference Include="UFrmPesqClie.pas">
+            <Form>FrmPesqClie</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmPesqRegLog.pas">
+            <Form>FrmPesqRegLog</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmConsuObs.pas">
+            <Form>FrmConsuObs</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmTabPreco.pas">
+            <Form>FrmTabPreco</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmCadBairro.pas">
+            <Form>FrmCadBairro</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmCadCidade.pas">
+            <Form>FrmCadCidade</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmCadEstado.pas">
+            <Form>FrmCadEstado</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmCadRegCom.pas">
+            <Form>FrmCadRegCom</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmCadRegGeogr.pas">
+            <Form>FrmCadRegGeog</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmCadRegInt.pas">
+            <Form>FrmCadRegInt</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmCadRegLog.pas">
+            <Form>FrmCadRegLog</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmCadSubLog.pas">
+            <Form>FrmCadSubLog</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmCadRegeSubLog.pas">
+            <Form>FrmCadRegeSubLog</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmPesqRegSubLog.pas">
+            <Form>FrmPesqRegSubLog</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmPesqCid.pas">
+            <Form>FrmPesqCid</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmCadForPag.pas">
+            <Form>FrmCadForPag</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmCadTipoVeic.pas">
+            <Form>FrmCadTipoVeic</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmCadPais.pas">
+            <Form>FrmCadPais</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmCadTpLogr.pas">
+            <Form>FrmCadTpLogr</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmCadTransTipo.pas">
+            <Form>FrmCadTransTipo</Form>
+        </DCCReference>
+        <DCCReference Include="UCadTransport.pas">
+            <Form>FrmCadTransport</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmNFMetal.pas">
+            <Form>FrmNFMetal</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmSelFreteFg.pas">
+            <Form>FrmSelFreteFg</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmRelFreteFg.pas">
+            <Form>FrmRelFreteFg</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmRelFreteDevo.pas">
+            <Form>FrmRelFreteDevo</Form>
+        </DCCReference>
+        <DCCReference Include="UfrmDialNFe.pas">
+            <Form>frmDialNFe</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmSite.pas">
+            <Form>FrmSite</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmGeraTelevendas.pas">
+            <Form>FrmGeraTelevendas</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmSelMotDev.pas">
+            <Form>FrmSelMotDev</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmRelDevQue.pas">
+            <Form>FrmRelDevQue</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmTrocaSenha.pas">
+            <Form>FrmTrocaSenha</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmDesativaPesquisa.pas">
+            <Form>FrmDesativaPesquisa</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmXmlEmail.pas">
+            <Form>FrmXmlEmail</Form>
+        </DCCReference>
+        <DCCReference Include="ACBrNFe.pas"/>
+        <DCCReference Include="UFrmPedVendaCorte.pas">
+            <Form>FrmPedVendaCorte</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmDialBanco.pas">
+            <Form>FrmDialBanco</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmCarregaNFe.pas">
+            <Form>FrmCarregaNFe</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmPedVendaConta.pas">
+            <Form>FrmPedVendaConta</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmHistoricoPrecoTelevendas.pas">
+            <Form>FrmHistoricoPrecoTelevendas</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmCadVendedor.pas">
+            <Form>FrmCadVendedor</Form>
+        </DCCReference>
+        <DCCReference Include="USeleFile.pas">
+            <Form>FrmSeleFile</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmSaldoProdCorte.pas">
+            <Form>FrmSaldoProdCorte</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmDialCupom.pas">
+            <Form>FrmDialCupom</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmTranspChaveNFe.pas">
+            <Form>FrmTranspChaveNFe</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmRelSaidaCargaItens.pas">
+            <Form>FrmRelSaidaCargaItens</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmRelConfVenCarga.pas">
+            <Form>FrmRelConfVenCarga</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmVenProd.pas">
+            <Form>FrmVenProd</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmRelVenProd.pas">
+            <Form>FrmRelVenProd</Form>
+        </DCCReference>
+        <DCCReference Include="UfrmDialCTe.pas">
+            <Form>frmDialCTe</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmInfoCTE.pas">
+            <Form>FrmInfoCTE</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmAlteracaoPlaca.pas">
+            <Form>FrmAlteracaoPlaca</Form>
+        </DCCReference>
+        <DCCReference Include="ACBrCTe.pas"/>
+        <DCCReference Include="ufrmEmissorNFe.pas">
+            <Form>frmEmissorNFe</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmEditaNotaFiscal.pas">
+            <Form>FrmEditaNotaFiscal</Form>
+        </DCCReference>
+        <DCCReference Include="..\Uteis\uFrmAlteraSenha.pas">
+            <Form>FrmAlteraSenha</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmLoteIntegrado.pas">
+            <Form>FrmLoteIntegrado</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmPesqIntegrado.pas">
+            <Form>FrmPesqIntegrado</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmRelLoteAnalitico.pas">
+            <Form>FrmRelLoteAnalitico</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmRelLotePagamento.pas">
+            <Form>FrmRelLotePagamento</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmRelReciboTurmeiro.pas">
+            <Form>FrmRelReciboTurmeiro</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmSelNotaFiscal_E.pas">
+            <Form>FrmSelNotaFiscal_E</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmRelBoletimSan.pas">
+            <Form>FrmRelBoletimSan</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmBoletimSanit.pas">
+            <Form>FrmBoletimSanit</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmProgRacao.pas">
+            <Form>FrmProgRacao</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmRelProgRacao.pas">
+            <Form>FrmRelProgRacao</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmConsApanha.pas">
+            <Form>FrmConsApanha</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmPesqLote.pas">
+            <Form>FrmPesqLote</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmRelResultGranjeiro.pas">
+            <Form>FrmRelResultGranjeiro</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmPesqLinhagem.pas">
+            <Form>FrmPesqLinhagem</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmConsApanhaRel.pas">
+            <Form>FrmConsApanhaRel</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmConsVendaFrangoAbate.pas">
+            <Form>FrmConsVendaFrangoAbate</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmRelVendaFrangoAbate.pas">
+            <Form>FrmRelVendaFrangoAbate</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmParametrosIntegrado.pas">
+            <Form>FrmParametrosIntegrado</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmConsRemessaRacao.pas">
+            <Form>FrmConsRemessaRacao</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmRelRemessaRacao.pas">
+            <Form>FrmRelRemessaRacao</Form>
+        </DCCReference>
+        <DCCReference Include="..\Compras\UFrmVendedorCliente.pas">
+            <Form>FrmVendedorCliente</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmRelVendedorCliente.pas">
+            <Form>FrmRelVendedorCliente</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmRelEstoque.pas">
+            <Form>FrmRelEstoque</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmConsultaEstoque.pas">
+            <Form>FrmConsultaEstoque</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmRelRacaoeAves.pas">
+            <Form>FrmRelRacaoeAves</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmConferenciaCarga.pas">
+            <Form>FrmConferenciaCarga</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmRelConfCarga.pas">
+            <Form>FrmRelConfCarga</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmDiferencaPreco.pas">
+            <Form>FrmDiferencaPreco</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmRelDiferencaPreco.pas">
+            <Form>FrmRelDiferencaPreco</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmConfCargaNovo.pas">
+            <Form>FrmConfCargaNovo</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmRelValeCaixa.pas">
+            <Form>FrmRelValeCaixa</Form>
+        </DCCReference>
+        <DCCReference Include="UfrmControleCaixas.pas">
+            <Form>FrmControleCaixas</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmSaldoCaixas.pas">
+            <Form>FrmSaldoCaixas</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmRelSaldoCaixas.pas">
+            <Form>FrmRelSaldoCaixas</Form>
+        </DCCReference>
+        <DCCReference Include="uFrmVendasDiaria.pas">
+            <Form>frmVendasDiaria</Form>
+        </DCCReference>
+        <DCCReference Include="ufrmRelVendasDiaria.pas">
+            <Form>FrmRelVendasDiaria</Form>
+        </DCCReference>
+        <DCCReference Include="ufrmCanhotosNFe.pas">
+            <Form>frmCanhotosNfe</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmLanctoPesoBalancaoCarga.pas">
+            <Form>frmLanctoPesoBalancaoCarga</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmModelPesqui.pas">
+            <Form>FrmModelPesqui</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmPesquisaCargas.pas">
+            <Form>frmPesquisaCargas</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmRelHistCaixas.pas">
+            <Form>FrmRelHistCaixas</Form>
+        </DCCReference>
+        <DCCReference Include="uFrmPesqMotorista.pas">
+            <Form>FrmPesqMotorista</Form>
+        </DCCReference>
+        <DCCReference Include="ufrmAutoTabPreco.pas">
+            <Form>frmAutoTabPreco</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmRelInventario.pas">
+            <Form>frmRelInventario</Form>
+        </DCCReference>
+        <DCCReference Include="uFrmControleEntregaCargas.pas">
+            <Form>FrmControleEntregaCargas</Form>
+        </DCCReference>
+        <DCCReference Include="uFrmRelControleEntregaCargas.pas">
+            <Form>FrmRelControleEntregaCargas</Form>
+        </DCCReference>
+        <DCCReference Include="uFrmRelControleEntregaCargasPedido.pas">
+            <Form>frmRelControleEntregaCargasPedido</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmOcorrencias.pas">
+            <Form>FrmOcorrencias</Form>
+        </DCCReference>
+        <DCCReference Include="uFrmDocumentacaoNFE.pas">
+            <Form>frmDocumentacaoNFE</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmRelEstoquePeriodo.pas">
+            <Form>FrmRelEstoquePeriodo</Form>
+        </DCCReference>
+        <DCCReference Include="uFrmConsultaFormaPagto.pas">
+            <Form>frmConsultaFormaPagto</Form>
+        </DCCReference>
+        <DCCReference Include="ufrmConsultaContas.pas">
+            <Form>frmConsultaContas</Form>
+        </DCCReference>
+        <DCCReference Include="..\Uteis\ufrmConsultaProdutos.pas">
+            <Form>frmConsultaProdutos</Form>
+        </DCCReference>
+        <DCCReference Include="ufrmRelPedidosPosHorario.pas">
+            <Form>frmRelPedidosPosHorario</Form>
+        </DCCReference>
+        <DCCReference Include="ufrmPedidosPosHorario.pas">
+            <Form>frmPedidosPosHorario</Form>
+        </DCCReference>
+        <DCCReference Include="ufrmAlteraContaPedido.pas">
+            <Form>frmAlteraContaPedido</Form>
+        </DCCReference>
+        <DCCReference Include="uFrmJustificativaPrecoTab.pas">
+            <Form>frmJustificativaPrecoTab</Form>
+        </DCCReference>
+        <DCCReference Include="uFrmAtualizaPedidoTabPreco.pas">
+            <Form>frmAtualizaPedidoTabPreco</Form>
+        </DCCReference>
+        <DCCReference Include="ufrmRelPedidosAbaixoTabela.pas">
+            <Form>frmRelPedidosAbaixoTabela</Form>
+        </DCCReference>
+        <DCCReference Include="ufrmPedidosAbaixoTabela.pas">
+            <Form>frmPedidosAbaixoTabela</Form>
+        </DCCReference>
+        <DCCReference Include="ufrmConsultaUsuarios.pas">
+            <Form>frmConsultaUsuarios</Form>
+        </DCCReference>
+        <DCCReference Include="uFrmRelVendasVendedorPercentual.pas">
+            <Form>frmRelVendasVendedorPercentual</Form>
+        </DCCReference>
+        <DCCReference Include="uFrmRelPercentualVendasVendedor.pas">
+            <Form>frmRelPercentualVendasVendedor</Form>
+        </DCCReference>
+        <DCCReference Include="ufrmConsultaCidades.pas">
+            <Form>frmConsultaCidades</Form>
+        </DCCReference>
+        <DCCReference Include="ufrmConsultaGrupoClientes.pas">
+            <Form>frmConsultaGrupoClientes</Form>
+        </DCCReference>
+        <DCCReference Include="uFrmConsultaTabPreco.pas">
+            <Form>frmConsultaTabPreco</Form>
+        </DCCReference>
+        <DCCReference Include="UFrmConsultaUsuarioSistema.pas"/>
+        <DCCReference Include="uFrmConsultaFornecedores.pas">
+            <Form>frmConsultaFornecedores</Form>
+        </DCCReference>
+        <DCCReference Include="uFrmConsultaSubRegiao.pas">
+            <Form>frmConsultaSubRegiao</Form>
+        </DCCReference>
+        <DCCReference Include="uFrmValidaCadastroExistenteCliente.pas">
+            <Form>frmValidaCadastroExistenteCliente</Form>
+        </DCCReference>
+        <DCCReference Include="uFrmCadRegioes.pas">
+            <Form>FrmCadRegiao</Form>
+        </DCCReference>
+        <DCCReference Include="ufrmVendasVendedorCliente.pas">
+            <Form>frmVendasVendedorCliente</Form>
+        </DCCReference>
+        <DCCReference Include="ufrmRelVendasVendedorCliente.pas">
+            <Form>frmRelVendasVendedorCliente</Form>
+        </DCCReference>
+        <DCCReference Include="ufrmConsultaMotorista.pas">
+            <Form>frmConsultaMotorista</Form>
+        </DCCReference>
+        <DCCReference Include="..\Uteis\uEmail.pas">
+            <Form>frmEnviaEmail</Form>
+        </DCCReference>
+        <DCCReference Include="..\Uteis\ufrmImportacaoDadosXLS.pas">
+            <Form>frmImportacaoDadosXLS</Form>
+        </DCCReference>
+        <DCCReference Include="ufrmConsultaListaInativacao.pas">
+            <Form>frmConsultaListaInativacao</Form>
+        </DCCReference>
+        <DCCReference Include="ufrmReprogramarDevolucao.pas">
+            <Form>frmReprogramarDevolucao</Form>
+        </DCCReference>
+        <DCCReference Include="uFfmFormularioComissao.pas">
+            <Form>frmFormularioComissao</Form>
+        </DCCReference>
+        <None Include="Comercial.todo"/>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Delphi.Personality>
+                <Source>
+                    <Source Name="MainSource">Comercial.dpr</Source>
+                </Source>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k280.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp280.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                </Excluded_Packages>
+            </Delphi.Personality>
+            <Platforms>
+                <Platform value="Android64">True</Platform>
+                <Platform value="Win32">True</Platform>
+                <Platform value="Win64">False</Platform>
+            </Platforms>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+    <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
+</Project>
