@@ -1,0 +1,18 @@
+24/07/2017 14:09:19:ORA-00001: unique constraint (SMART.IDX_PRODUCAO_REGISTRO_2) violated
+
+----------------------------------------------------------------------
+24/07/2017 14:31:55:ORA-00001: unique constraint (SMART.IDX_PRODUCAO_REGISTRO_2) violated
+
+----------------------------------------------------------------------
+24/07/2017 14:41:50:ORA-00001: unique constraint (SMART.IDX_PRODUCAO_REGISTRO_2) violated
+
+----------------------------------------------------------------------
+24/07/2017 14:52:54:attempt to store duplicate value (visible to active transactions) in unique index "@1"Invalid insert or update value(s): object columns are constrained - no 2 table rows can have duplicate column valuesError Code: 29
+----------------------------------------------------------------------
+24/07/2017 14:53:40:ORA-00001: unique constraint (SMART.IDX_PRODUCAO_REGISTRO_2) violated
+
+----------------------------------------------------------------------
+24/07/2017 14:58:31:attempt to store duplicate value (visible to active transactions) in unique index "@1"Invalid insert or update value(s): object columns are constrained - no 2 table rows can have duplicate column valuesError Code: 29
+----------------------------------------------------------------------
+24/07/2017 14:59:14:Expression expected but nothing found
+----------------------------------------------------------------------

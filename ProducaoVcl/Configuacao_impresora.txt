@@ -1,0 +1,18 @@
+Impressora com padrão: Datamax Allegro
+
+configuação da Pagina:
+
+  Papel de etiquetas: USER(101,6 mm x 152,4 mm)
+
+  Direção: Paisagem
+
+Gráficos:
+
+  Pontilhado: Meio-tom
+
+  Cor: Monocromático
+
+Porta:
+
+  USB001
+
