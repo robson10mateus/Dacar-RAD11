@@ -3,10 +3,12 @@ inherited frmPesquisaCargas: TfrmPesquisaCargas
   Top = 445
   VertScrollBar.Range = 165
   Caption = 'Comercial Dacar - Pesquisa de Cargas'
+  Color = clWindow
   TextHeight = 10
   inherited DBGrid1: TDBGrid
     Top = 165
-    Height = 246
+    Width = 688
+    Height = 247
     DataSource = dtsCarga
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect]
     OnTitleClick = DBGrid1TitleClick
@@ -84,7 +86,9 @@ inherited frmPesquisaCargas: TfrmPesquisaCargas
       end>
   end
   inherited pnlBotoes: TPanel
+    Width = 688
     Height = 40
+    ExplicitWidth = 684
     ExplicitHeight = 40
     inherited BitBtn1: TBitBtn
       Top = 2
@@ -320,6 +324,7 @@ inherited frmPesquisaCargas: TfrmPesquisaCargas
   end
   inherited pnlFiltros: TPanel
     Top = 40
+    Width = 688
     ExplicitTop = 40
     inherited EdExpre: TEdit
       OnKeyPress = EdExpreKeyPress

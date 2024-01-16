@@ -302,7 +302,7 @@ begin
        1:Begin
               try
                  FrmPesqVend:=TFrmPesqVend.Create(Self);
-                 FrmPesqVend.Show;
+                 FrmPesqVend.ShowModal;
               except;
                  FrmPesqVend.Free;
                end;

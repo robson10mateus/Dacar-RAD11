@@ -493,7 +493,7 @@ object FrmCadBairro: TFrmCadBairro
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 659
+    Width = 663
     Height = 45
     Align = alTop
     Color = clWindow
@@ -505,7 +505,7 @@ object FrmCadBairro: TFrmCadBairro
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 653
+    ExplicitWidth = 659
     object SB_ULTIMO: TSpeedButton
       Left = 110
       Top = 5
@@ -1812,8 +1812,8 @@ object FrmCadBairro: TFrmCadBairro
   object PageControl1: TPageControl
     Left = 0
     Top = 45
-    Width = 659
-    Height = 346
+    Width = 663
+    Height = 347
     ActivePage = TabDetalhes
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -1824,6 +1824,8 @@ object FrmCadBairro: TFrmCadBairro
     Font.Style = []
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 659
+    ExplicitHeight = 346
     object TabCriterio: TTabSheet
       Caption = 'Criterios'
       OnShow = TabCriterioShow
@@ -2454,127 +2456,6 @@ object FrmCadBairro: TFrmCadBairro
       end
     end
   end
-  object QryCadBairro: TOraQuery
-    KeyFields = 'ID_BAIRRO'
-    KeySequence = 'ID_BAIRRO'
-    SQLInsert.Strings = (
-      'INSERT INTO bairro'
-      '  (EMPRESA, FILIAL, ID_BAIRRO, NM_BAIRRO, ID_CIDADE, FX_BAIRRO)'
-      'VALUES'
-      
-        '  (:EMPRESA, :FILIAL, ID_BAIRRO.nextval, :NM_BAIRRO, :ID_CIDADE,' +
-        ' :FX_BAIRRO)')
-    SQLDelete.Strings = (
-      'DELETE FROM bairro'
-      'WHERE'
-      '  ID_BAIRRO = :ID_BAIRRO')
-    SQLUpdate.Strings = (
-      'UPDATE bairro'
-      'SET'
-      '  EMPRESA = :EMPRESA,'
-      '  FILIAL = :FILIAL,'
-      '  ID_BAIRRO = :ID_BAIRRO,'
-      '  NM_BAIRRO = :NM_BAIRRO,'
-      '  ID_CIDADE = :ID_CIDADE,'
-      '  FX_BAIRRO = :FX_BAIRRO'
-      'WHERE'
-      '  ID_BAIRRO = :OLD_ID_BAIRRO')
-    SQLLock.Strings = (
-      'SELECT * FROM bairro'
-      'WHERE'
-      '  ID_BAIRRO = :ID_BAIRRO'
-      'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  ID_BAIRRO = :ID_BAIRRO')
-    LocalUpdate = True
-    Session = FrmPrincipal.DB
-    SQL.Strings = (
-      'SELECT '
-      ' bairro.empresa,'
-      ' bairro.filial,'
-      ' bairro.nm_bairro,'
-      ' bairro.id_bairro,'
-      ' bairro.id_cidade,'
-      ' bairro.fx_bairro,'
-      ' cidade.nm_cidade,'
-      ' estado.sg_estado,'
-      ' pais.nm_pais,'
-      ' regiao_geografica.id_regigeog,'
-      ' regiao_geografica.nm_regigeog'
-      'FROM'
-      '  bairro,'
-      '  cidade,'
-      '  estado,'
-      '  pais,'
-      '  regiao_geografica,'
-      '  regiao_internacional'
-      'WHERE'
-      '  bairro.id_cidade(+) = cidade.id_cidade AND'
-      '  cidade.id_estado = estado.id_estado AND'
-      '  estado.id_pais = pais.id_pais AND'
-      '  regiao_geografica.id_regigeog(+) = estado.id_regigeog   AND'
-      '  regiao_internacional.id_regiinte = pais.id_regiinte'
-      'ORDER BY bairro.nm_bairro'
-      '')
-    FetchAll = True
-    CachedUpdates = True
-    Left = 410
-    Top = 7
-    object QryCadBairroEMPRESA: TStringField
-      FieldName = 'EMPRESA'
-      Required = True
-      Size = 2
-    end
-    object QryCadBairroFILIAL: TIntegerField
-      FieldName = 'FILIAL'
-      Required = True
-    end
-    object QryCadBairroNM_BAIRRO: TStringField
-      DisplayLabel = 'Nome do Bairro'
-      FieldName = 'NM_BAIRRO'
-      Required = True
-      Size = 30
-    end
-    object QryCadBairroID_BAIRRO: TFloatField
-      AutoGenerateValue = arAutoInc
-      DisplayLabel = 'C'#243'digo'
-      FieldName = 'ID_BAIRRO'
-    end
-    object QryCadBairroID_CIDADE: TFloatField
-      FieldName = 'ID_CIDADE'
-      Required = True
-    end
-    object QryCadBairroFX_BAIRRO: TStringField
-      FieldName = 'FX_BAIRRO'
-      Required = True
-      Size = 1
-    end
-    object QryCadBairroNM_CIDADE: TStringField
-      DisplayLabel = 'Cidade'
-      FieldName = 'NM_CIDADE'
-      Required = True
-      Size = 40
-    end
-    object QryCadBairroSG_ESTADO: TStringField
-      DisplayLabel = 'Estado'
-      FieldName = 'SG_ESTADO'
-      Required = True
-      Size = 10
-    end
-    object QryCadBairroNM_PAIS: TStringField
-      FieldName = 'NM_PAIS'
-      Required = True
-      Size = 40
-    end
-    object QryCadBairroID_REGIGEOG: TFloatField
-      FieldName = 'ID_REGIGEOG'
-    end
-    object QryCadBairroNM_REGIGEOG: TStringField
-      FieldName = 'NM_REGIGEOG'
-      Size = 30
-    end
-  end
   object DtSrcCadBairro: TOraDataSource
     DataSet = QryCadBairro
     Left = 440
@@ -2675,5 +2556,127 @@ object FrmCadBairro: TFrmCadBairro
     DataSet = QryCidade
     Left = 523
     Top = 8
+  end
+  object QryCadBairro: TSmartQuery
+    KeyFields = 'ID_BAIRRO'
+    KeySequence = 'ID_BAIRRO'
+    SQLInsert.Strings = (
+      'INSERT INTO bairro'
+      '  (EMPRESA, FILIAL, ID_BAIRRO, NM_BAIRRO, ID_CIDADE, FX_BAIRRO)'
+      'VALUES'
+      
+        '  (:EMPRESA, :FILIAL, ID_BAIRRO.nextval, :NM_BAIRRO, :ID_CIDADE,' +
+        ' :FX_BAIRRO)')
+    SQLDelete.Strings = (
+      'DELETE FROM bairro'
+      'WHERE'
+      '  ID_BAIRRO = :ID_BAIRRO')
+    SQLUpdate.Strings = (
+      'UPDATE bairro'
+      'SET'
+      '  EMPRESA = :EMPRESA,'
+      '  FILIAL = :FILIAL,'
+      '  ID_BAIRRO = :ID_BAIRRO,'
+      '  NM_BAIRRO = :NM_BAIRRO,'
+      '  ID_CIDADE = :ID_CIDADE,'
+      '  FX_BAIRRO = :FX_BAIRRO'
+      'WHERE'
+      '  ID_BAIRRO = :OLD_ID_BAIRRO')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  ID_BAIRRO = :ID_BAIRRO')
+    SQLLock.Strings = (
+      'SELECT * FROM bairro'
+      'WHERE'
+      '  ID_BAIRRO = :ID_BAIRRO'
+      'FOR UPDATE NOWAIT')
+    Session = FrmPrincipal.DB
+    SQL.Strings = (
+      'SELECT '
+      ' bairro.empresa,'
+      ' bairro.filial,'
+      ' bairro.nm_bairro,'
+      ' bairro.id_bairro,'
+      ' bairro.id_cidade,'
+      ' bairro.fx_bairro,'
+      ' cidade.nm_cidade,'
+      ' estado.sg_estado,'
+      ' pais.nm_pais,'
+      ' regiao_geografica.id_regigeog,'
+      ' regiao_geografica.nm_regigeog'
+      'FROM'
+      '  bairro,'
+      '  cidade,'
+      '  estado,'
+      '  pais,'
+      '  regiao_geografica,'
+      '  regiao_internacional'
+      'WHERE'
+      '  bairro.id_cidade(+) = cidade.id_cidade AND'
+      '  cidade.id_estado = estado.id_estado AND'
+      '  estado.id_pais = pais.id_pais AND'
+      '  regiao_geografica.id_regigeog(+) = estado.id_regigeog   AND'
+      '  regiao_internacional.id_regiinte = pais.id_regiinte'
+      'ORDER BY bairro.nm_bairro'
+      '')
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 408
+    Top = 8
+    object QryCadBairroEMPRESA: TStringField
+      FieldName = 'EMPRESA'
+      Required = True
+      Size = 2
+    end
+    object QryCadBairroFILIAL: TIntegerField
+      FieldName = 'FILIAL'
+      Required = True
+    end
+    object QryCadBairroNM_BAIRRO: TStringField
+      DisplayLabel = 'Nome do Bairro'
+      FieldName = 'NM_BAIRRO'
+      Required = True
+      Size = 30
+    end
+    object QryCadBairroID_BAIRRO: TFloatField
+      AutoGenerateValue = arAutoInc
+      DisplayLabel = 'C'#243'digo'
+      FieldName = 'ID_BAIRRO'
+    end
+    object QryCadBairroID_CIDADE: TFloatField
+      FieldName = 'ID_CIDADE'
+      Required = True
+    end
+    object QryCadBairroFX_BAIRRO: TStringField
+      FieldName = 'FX_BAIRRO'
+      Required = True
+      Size = 1
+    end
+    object QryCadBairroNM_CIDADE: TStringField
+      DisplayLabel = 'Cidade'
+      FieldName = 'NM_CIDADE'
+      Required = True
+      Size = 40
+    end
+    object QryCadBairroSG_ESTADO: TStringField
+      DisplayLabel = 'Estado'
+      FieldName = 'SG_ESTADO'
+      Required = True
+      Size = 10
+    end
+    object QryCadBairroNM_PAIS: TStringField
+      FieldName = 'NM_PAIS'
+      Required = True
+      Size = 40
+    end
+    object QryCadBairroID_REGIGEOG: TFloatField
+      FieldName = 'ID_REGIGEOG'
+    end
+    object QryCadBairroNM_REGIGEOG: TStringField
+      FieldName = 'NM_REGIGEOG'
+      Size = 30
+    end
   end
 end

@@ -6,7 +6,7 @@ object frmVendasVendedorCliente: TfrmVendasVendedorCliente
   VertScrollBar.Range = 45
   ActiveControl = PageControl1
   Caption = 'Comercial Dacar - Relat'#243'rio Vendas de Vendedor por Clientes'
-  Color = clBackground
+  Color = clWindow
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -22,7 +22,7 @@ object frmVendasVendedorCliente: TfrmVendasVendedorCliente
   object pnlBotoes: TPanel
     Left = 0
     Top = 0
-    Width = 1274
+    Width = 1278
     Height = 45
     Align = alTop
     Color = clWindow
@@ -34,6 +34,7 @@ object frmVendasVendedorCliente: TfrmVendasVendedorCliente
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 1274
     object Sb_Sair: TSpeedButton
       Left = 40
       Top = 5
@@ -203,8 +204,8 @@ object frmVendasVendedorCliente: TfrmVendasVendedorCliente
   object PageControl1: TPageControl
     Left = 0
     Top = 45
-    Width = 1274
-    Height = 592
+    Width = 1278
+    Height = 593
     ActivePage = TabSheet1
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -215,17 +216,21 @@ object frmVendasVendedorCliente: TfrmVendasVendedorCliente
     Font.Style = []
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 1274
+    ExplicitHeight = 592
     object TabSheet1: TTabSheet
       Caption = ' Filtros '
       object pnlFiltros: TPanel
         Left = 0
         Top = 0
-        Width = 1266
-        Height = 562
+        Width = 1270
+        Height = 563
         Align = alClient
         Color = clWindow
         ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 1266
+        ExplicitHeight = 562
         object Label2: TLabel
           Left = 270
           Top = 100
@@ -325,10 +330,10 @@ object frmVendasVendedorCliente: TfrmVendasVendedorCliente
           TabOrder = 2
         end
         object BPESQ: TBitBtn
-          Left = 615
+          Left = 612
           Top = 65
           Width = 23
-          Height = 20
+          Height = 23
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = 16
@@ -496,7 +501,7 @@ object frmVendasVendedorCliente: TfrmVendasVendedorCliente
           Columns = 2
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = 15
+          Font.Height = 13
           Font.Name = 'Arial'
           Font.Pitch = fpVariable
           Font.Style = [fsBold]
@@ -584,7 +589,7 @@ object frmVendasVendedorCliente: TfrmVendasVendedorCliente
         Left = 0
         Top = 0
         Width = 300
-        Height = 562
+        Height = 563
         Align = alLeft
         Color = clWindow
         ParentBackground = False
@@ -593,7 +598,7 @@ object frmVendasVendedorCliente: TfrmVendasVendedorCliente
           Left = 1
           Top = 1
           Width = 298
-          Height = 560
+          Height = 561
           Align = alClient
           Indent = 19
           ReadOnly = True
@@ -603,8 +608,8 @@ object frmVendasVendedorCliente: TfrmVendasVendedorCliente
       object Panel2: TPanel
         Left = 300
         Top = 0
-        Width = 966
-        Height = 562
+        Width = 970
+        Height = 563
         Align = alClient
         Alignment = taLeftJustify
         Caption = 'Panel2'
@@ -618,8 +623,6 @@ object frmVendasVendedorCliente: TfrmVendasVendedorCliente
         ParentBackground = False
         ParentFont = False
         TabOrder = 1
-        ExplicitWidth = 970
-        ExplicitHeight = 565
         object Panel3: TPanel
           Left = 1
           Top = 1
@@ -634,7 +637,7 @@ object frmVendasVendedorCliente: TfrmVendasVendedorCliente
           Left = 1
           Top = 31
           Width = 968
-          Height = 533
+          Height = 531
           Align = alClient
           DataSource = dtsTemp
           Font.Charset = DEFAULT_CHARSET

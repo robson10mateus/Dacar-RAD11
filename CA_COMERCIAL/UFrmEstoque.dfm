@@ -613,12 +613,12 @@ object FrmEstoque: TFrmEstoque
     object lbData: TLabel
       Left = 15
       Top = 5
-      Width = 63
-      Height = 13
+      Width = 75
+      Height = 15
       Caption = 'Data Estoque'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
-      Font.Height = 13
+      Font.Height = 15
       Font.Name = 'Arial'
       Font.Pitch = fpVariable
       Font.Style = []
@@ -639,7 +639,7 @@ object FrmEstoque: TFrmEstoque
       Height = 20
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 14
+      Font.Height = 16
       Font.Name = 'Segoe UI'
       Font.Style = []
       Glyph.Data = {
@@ -665,26 +665,24 @@ object FrmEstoque: TFrmEstoque
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
-    Font.Height = 13
+    Font.Height = 15
     Font.Name = 'Arial'
     Font.Pitch = fpVariable
     Font.Style = []
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 1309
-    ExplicitHeight = 584
     object tabEstoque: TTabSheet
       Caption = 'Ajusta Estoque Inicial'
       object DBGrid1: TDBGrid
         Left = 0
         Top = 81
         Width = 1305
-        Height = 476
+        Height = 474
         Align = alClient
         DataSource = dsEstoqueInicial
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 13
+        Font.Height = 15
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
@@ -693,7 +691,7 @@ object FrmEstoque: TFrmEstoque
         TabOrder = 0
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clBlack
-        TitleFont.Height = 14
+        TitleFont.Height = 16
         TitleFont.Name = 'Arial'
         TitleFont.Pitch = fpVariable
         TitleFont.Style = []
@@ -705,7 +703,7 @@ object FrmEstoque: TFrmEstoque
             Title.Caption = 'C'#243'd Prod'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
-            Title.Font.Height = 11
+            Title.Font.Height = 16
             Title.Font.Name = 'Arial'
             Title.Font.Pitch = fpVariable
             Title.Font.Style = [fsBold]
@@ -718,7 +716,7 @@ object FrmEstoque: TFrmEstoque
             Title.Caption = 'Produto'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
-            Title.Font.Height = 11
+            Title.Font.Height = 16
             Title.Font.Name = 'Arial'
             Title.Font.Pitch = fpVariable
             Title.Font.Style = [fsBold]
@@ -731,7 +729,7 @@ object FrmEstoque: TFrmEstoque
             Title.Caption = 'Caixas'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
-            Title.Font.Height = 11
+            Title.Font.Height = 16
             Title.Font.Name = 'Arial'
             Title.Font.Pitch = fpVariable
             Title.Font.Style = [fsBold]
@@ -744,7 +742,7 @@ object FrmEstoque: TFrmEstoque
             Title.Caption = 'Peso'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
-            Title.Font.Height = 11
+            Title.Font.Height = 16
             Title.Font.Name = 'Arial'
             Title.Font.Pitch = fpVariable
             Title.Font.Style = [fsBold]
@@ -757,7 +755,7 @@ object FrmEstoque: TFrmEstoque
             Title.Caption = 'Data'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
-            Title.Font.Height = 11
+            Title.Font.Height = 16
             Title.Font.Name = 'Arial'
             Title.Font.Pitch = fpVariable
             Title.Font.Style = [fsBold]
@@ -770,7 +768,7 @@ object FrmEstoque: TFrmEstoque
             Title.Caption = 'Tipo'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
-            Title.Font.Height = 11
+            Title.Font.Height = 16
             Title.Font.Name = 'Arial'
             Title.Font.Pitch = fpVariable
             Title.Font.Style = [fsBold]
@@ -857,12 +855,12 @@ object FrmEstoque: TFrmEstoque
         object LbJob: TLabel
           Left = 10
           Top = 50
-          Width = 29
-          Height = 13
+          Width = 45
+          Height = 19
           Caption = 'LbJob'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = 13
+          Font.Height = 20
           Font.Name = 'Arial'
           Font.Pitch = fpVariable
           Font.Style = []
@@ -894,7 +892,7 @@ object FrmEstoque: TFrmEstoque
           Enabled = False
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = 13
+          Font.Height = 15
           Font.Name = 'Arial'
           Font.Pitch = fpVariable
           Font.Style = []
@@ -912,7 +910,7 @@ object FrmEstoque: TFrmEstoque
           DataSource = DsAtualiza
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = 13
+          Font.Height = 15
           Font.Name = 'Arial'
           Font.Pitch = fpVariable
           Font.Style = []
@@ -925,7 +923,7 @@ object FrmEstoque: TFrmEstoque
           Left = 610
           Top = 20
           Width = 205
-          Height = 21
+          Height = 23
           DataField = 'NOME_USUARIO'
           DataSource = DsAtualiza
           MaxLength = 7
@@ -933,68 +931,6 @@ object FrmEstoque: TFrmEstoque
           TabOrder = 1
         end
       end
-    end
-  end
-  object QryEstoqueInicial: TOraQuery
-    SQLUpdate.Strings = (
-      'UPDATE POSICAO_ESTOQUE'
-      'SET'
-      '    ESTOQUE_ANT_CX = :ESTOQUE_ANT_CX'
-      'WHERE'
-      '    TIPO = '#39'F'#39' AND'
-      '    DATA = :DATA AND'
-      '    ID_PRODMATEEMBA = :ID_PRODMATEEMBA')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  DATA = :DATA')
-    LocalUpdate = True
-    SQL.Strings = (
-      'SELECT '
-      '    PE.ID_PRODMATEEMBA,'
-      '    ME.NM_PRODMATEEMBA,'
-      '    PE.DATA,  '
-      '    PE.TIPO, '
-      '    PE.ESTOQUE_ANT, '
-      '    PE.ESTOQUE_ANT_CX'
-      'FROM '
-      '    POSICAO_ESTOQUE PE, MATERIAL_EMBALAGEM ME'
-      'WHERE '
-      '    ME.ID_PRODMATEEMBA = PE.ID_PRODMATEEMBA AND'
-      '    PE.TIPO = '#39'F'#39' AND'
-      '    PE.DATA = :DATA'
-      'ORDER BY ID_PRODMATEEMBA ASC ')
-    FetchAll = True
-    CachedUpdates = True
-    Left = 510
-    Top = 6
-    ParamData = <
-      item
-        DataType = ftUnknown
-        Name = 'DATA'
-        Value = nil
-      end>
-    object QryEstoqueInicialID_PRODMATEEMBA: TStringField
-      FieldName = 'ID_PRODMATEEMBA'
-      Required = True
-      Size = 5
-    end
-    object QryEstoqueInicialNM_PRODMATEEMBA: TStringField
-      FieldName = 'NM_PRODMATEEMBA'
-      Size = 40
-    end
-    object QryEstoqueInicialDATA: TDateTimeField
-      FieldName = 'DATA'
-      Required = True
-    end
-    object QryEstoqueInicialTIPO: TStringField
-      FieldName = 'TIPO'
-      Size = 2
-    end
-    object QryEstoqueInicialESTOQUE_ANT: TFloatField
-      FieldName = 'ESTOQUE_ANT'
-    end
-    object QryEstoqueInicialESTOQUE_ANT_CX: TFloatField
-      FieldName = 'ESTOQUE_ANT_CX'
     end
   end
   object dsEstoqueInicial: TOraDataSource
@@ -1196,5 +1132,68 @@ object FrmEstoque: TFrmEstoque
       'ORDER BY LG.DATA DESC')
     Left = 1024
     Top = 24
+  end
+  object QryEstoqueInicial: TSmartQuery
+    SQLUpdate.Strings = (
+      'UPDATE POSICAO_ESTOQUE'
+      'SET'
+      '    ESTOQUE_ANT_CX = :ESTOQUE_ANT_CX'
+      'WHERE'
+      '    TIPO = '#39'F'#39' AND'
+      '    DATA = :DATA AND'
+      '    ID_PRODMATEEMBA = :ID_PRODMATEEMBA')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  DATA = :DATA')
+    SQL.Strings = (
+      'SELECT '
+      '    PE.ID_PRODMATEEMBA,'
+      '    ME.NM_PRODMATEEMBA,'
+      '    PE.DATA,  '
+      '    PE.TIPO, '
+      '    PE.ESTOQUE_ANT, '
+      '    PE.ESTOQUE_ANT_CX'
+      'FROM '
+      '    POSICAO_ESTOQUE PE, MATERIAL_EMBALAGEM ME'
+      'WHERE '
+      '    ME.ID_PRODMATEEMBA = PE.ID_PRODMATEEMBA AND'
+      '    PE.TIPO = '#39'F'#39' AND'
+      '    PE.DATA = :DATA'
+      'ORDER BY ID_PRODMATEEMBA ASC ')
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 512
+    Top = 8
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'DATA'
+        Value = nil
+      end>
+    object QryEstoqueInicialID_PRODMATEEMBA: TStringField
+      FieldName = 'ID_PRODMATEEMBA'
+      Required = True
+      Size = 5
+    end
+    object QryEstoqueInicialNM_PRODMATEEMBA: TStringField
+      FieldName = 'NM_PRODMATEEMBA'
+      Size = 40
+    end
+    object QryEstoqueInicialDATA: TDateTimeField
+      FieldName = 'DATA'
+      Required = True
+    end
+    object QryEstoqueInicialTIPO: TStringField
+      FieldName = 'TIPO'
+      Size = 2
+    end
+    object QryEstoqueInicialESTOQUE_ANT: TFloatField
+      FieldName = 'ESTOQUE_ANT'
+    end
+    object QryEstoqueInicialESTOQUE_ANT_CX: TFloatField
+      FieldName = 'ESTOQUE_ANT_CX'
+    end
   end
 end

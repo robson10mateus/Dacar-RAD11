@@ -26,8 +26,8 @@ object FrmImpNFRacao: TFrmImpNFRacao
   object PageControl1: TPageControl
     Left = 0
     Top = 41
-    Width = 776
-    Height = 446
+    Width = 780
+    Height = 447
     ActivePage = TabCriterio
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -39,6 +39,8 @@ object FrmImpNFRacao: TFrmImpNFRacao
     ParentFont = False
     TabOrder = 0
     OnMouseMove = PageControl1MouseMove
+    ExplicitWidth = 776
+    ExplicitHeight = 446
     object TabCriterio: TTabSheet
       Caption = 'Crit'#233'rio'
       object Label6: TLabel
@@ -366,6 +368,7 @@ object FrmImpNFRacao: TFrmImpNFRacao
             Expanded = False
             FieldName = 'ID_CARGEXPE'
             Title.Caption = 'Carga'
+            Width = 64
             Visible = True
           end
           item
@@ -379,6 +382,7 @@ object FrmImpNFRacao: TFrmImpNFRacao
             Expanded = False
             FieldName = 'ID_CLIENTE'
             Title.Caption = 'C'#243'd. Cliente'
+            Width = 64
             Visible = True
           end
           item
@@ -392,36 +396,42 @@ object FrmImpNFRacao: TFrmImpNFRacao
             Expanded = False
             FieldName = 'NR_NOTAFISC'
             Title.Caption = 'Documento'
+            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'FL_CANCNOTAFISC'
             Title.Caption = 'Cancelado'
+            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'FL_STATCARGEXPE'
             Title.Caption = 'Status da Carga'
+            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'NM_TIPOPEDIVEND'
             Title.Caption = 'Tipo Pedido'
+            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'NM_FORMPAGA'
             Title.Caption = 'Descr. Pagto.'
+            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'ID_FORMPAGA'
             Title.Caption = 'C'#243'd. Pagto.'
+            Width = 64
             Visible = True
           end>
       end
@@ -430,7 +440,7 @@ object FrmImpNFRacao: TFrmImpNFRacao
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 776
+    Width = 780
     Height = 41
     Anchors = []
     ButtonHeight = 35
@@ -445,6 +455,7 @@ object FrmImpNFRacao: TFrmImpNFRacao
     ParentFont = False
     TabOrder = 1
     OnMouseMove = ToolBar1MouseMove
+    ExplicitWidth = 776
     object SB_PRIMEIRO: TSpeedButton
       Left = 0
       Top = 0
@@ -1819,8 +1830,8 @@ object FrmImpNFRacao: TFrmImpNFRacao
   end
   object Panel1: TPanel
     Left = 0
-    Top = 487
-    Width = 776
+    Top = 488
+    Width = 780
     Height = 17
     Align = alBottom
     Color = clWindow
@@ -1833,6 +1844,8 @@ object FrmImpNFRacao: TFrmImpNFRacao
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
+    ExplicitTop = 487
+    ExplicitWidth = 776
   end
   object QrNF: TOraQuery
     Session = FrmPrincipal.DB
@@ -2290,7 +2303,53 @@ object FrmImpNFRacao: TFrmImpNFRacao
     Left = 728
     Top = 8
   end
-  object QImpDocPed: TOraQuery
+  object DSPediVe: TOraDataSource
+    DataSet = QImpDocPed
+    Left = 392
+    Top = 32
+  end
+  object qryTempPediItem: TOraQuery
+    Session = FrmPrincipal.DB
+    Left = 448
+    Top = 8
+  end
+  object qryPediVend: TOraQuery
+    Session = FrmPrincipal.DB
+    Left = 520
+    Top = 32
+  end
+  object qryNotaFisc: TOraQuery
+    Session = FrmPrincipal.DB
+    Left = 600
+    Top = 8
+  end
+  object qryPediVendItem: TOraQuery
+    Session = FrmPrincipal.DB
+    Left = 632
+    Top = 8
+  end
+  object qryNotaFiscItem: TOraQuery
+    Session = FrmPrincipal.DB
+    Left = 664
+    Top = 8
+  end
+  object qryNotaFiscBaseIcms: TOraQuery
+    Session = FrmPrincipal.DB
+    Left = 712
+    Top = 32
+  end
+  object OSQL: TOraSQL
+    Session = FrmPrincipal.DB
+    AutoCommit = True
+    Left = 428
+    Top = 31
+  end
+  object QrytempUpda: TOraQuery
+    Session = FrmPrincipal.DB
+    Left = 744
+    Top = 32
+  end
+  object QImpDocPed: TSmartQuery
     SQLUpdate.Strings = (
       'UPDATE PEDIDO_VENDA'
       'SET'
@@ -2337,15 +2396,14 @@ object FrmImpNFRacao: TFrmImpNFRacao
         '                         '
       'WHERE'
       '  ID_PEDIVEND = :OLD_ID_PEDIVEND')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  Pedido_venda.ID_PEDIVEND = :ID_PEDIVEND')
     SQLLock.Strings = (
       'SELECT * FROM PEDIDO_VENDA'
       'WHERE'
       '   ID_PEDIVEND = :ID_PEDIVEND            '
       'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  Pedido_venda.ID_PEDIVEND = :ID_PEDIVEND')
-    LocalUpdate = True
     Session = FrmPrincipal.DB
     SQL.Strings = (
       'SELECT DISTINCT'
@@ -2428,6 +2486,9 @@ object FrmImpNFRacao: TFrmImpNFRacao
       '  (Pedido_venda.ID_FORMPAGA = Forma_pagamento.ID_FORMPAGA)')
     DetailFields = 'Pedido_venda.ID_CLIENTE'
     CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
     Left = 368
     Top = 32
     object QImpDocPedDT_CARGEXPE: TDateTimeField
@@ -2509,6 +2570,16 @@ object FrmImpNFRacao: TFrmImpNFRacao
     object QImpDocPedPC_IMPOFRETAUTOPEDIVEND: TFloatField
       FieldName = 'PC_IMPOFRETAUTOPEDIVEND'
     end
+    object QImpDocPedFL_BLOQAJUSFINAPEDIVEND: TStringField
+      FieldName = 'FL_BLOQAJUSFINAPEDIVEND'
+      Size = 1
+    end
+    object QImpDocPedVL_OUTRAJUSANTPEDIVEND: TFloatField
+      FieldName = 'VL_OUTRAJUSANTPEDIVEND'
+    end
+    object QImpDocPedVL_OUTRAJUSPEDIVEND: TFloatField
+      FieldName = 'VL_OUTRAJUSPEDIVEND'
+    end
     object QImpDocPedFL_COMIVEND: TStringField
       FieldName = 'FL_COMIVEND'
       Required = True
@@ -2520,8 +2591,7 @@ object FrmImpNFRacao: TFrmImpNFRacao
     end
     object QImpDocPedNM_CLIENTE: TStringField
       FieldName = 'NM_CLIENTE'
-      Required = True
-      Size = 40
+      Size = 60
     end
     object QImpDocPedNR_AGENBANC: TStringField
       FieldName = 'NR_AGENBANC'
@@ -2565,61 +2635,5 @@ object FrmImpNFRacao: TFrmImpNFRacao
       Required = True
       Size = 40
     end
-    object QImpDocPedFL_BLOQAJUSFINAPEDIVEND: TStringField
-      FieldName = 'FL_BLOQAJUSFINAPEDIVEND'
-      Size = 1
-    end
-    object QImpDocPedVL_OUTRAJUSANTPEDIVEND: TFloatField
-      FieldName = 'VL_OUTRAJUSANTPEDIVEND'
-    end
-    object QImpDocPedVL_OUTRAJUSPEDIVEND: TFloatField
-      FieldName = 'VL_OUTRAJUSPEDIVEND'
-    end
-  end
-  object DSPediVe: TOraDataSource
-    DataSet = QImpDocPed
-    Left = 392
-    Top = 32
-  end
-  object qryTempPediItem: TOraQuery
-    Session = FrmPrincipal.DB
-    Left = 448
-    Top = 8
-  end
-  object qryPediVend: TOraQuery
-    Session = FrmPrincipal.DB
-    Left = 520
-    Top = 32
-  end
-  object qryNotaFisc: TOraQuery
-    Session = FrmPrincipal.DB
-    Left = 600
-    Top = 8
-  end
-  object qryPediVendItem: TOraQuery
-    Session = FrmPrincipal.DB
-    Left = 632
-    Top = 8
-  end
-  object qryNotaFiscItem: TOraQuery
-    Session = FrmPrincipal.DB
-    Left = 664
-    Top = 8
-  end
-  object qryNotaFiscBaseIcms: TOraQuery
-    Session = FrmPrincipal.DB
-    Left = 712
-    Top = 32
-  end
-  object OSQL: TOraSQL
-    Session = FrmPrincipal.DB
-    AutoCommit = True
-    Left = 428
-    Top = 31
-  end
-  object QrytempUpda: TOraQuery
-    Session = FrmPrincipal.DB
-    Left = 744
-    Top = 32
   end
 end

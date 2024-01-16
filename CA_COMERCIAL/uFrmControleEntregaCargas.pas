@@ -5,7 +5,7 @@ interface
 uses
   SysUtils, Types, Classes, Variants, Graphics, Controls, Forms,
   Dialogs, StdCtrls, ExtCtrls, Buttons, Grids, DBGrids, ComCtrls,
-  DB, Ora, MemDS, DBAccess, DateUtils, DBCtrls, Mask, Winapi.Windows;
+  DB, Ora, MemDS, DBAccess, DateUtils, DBCtrls, Mask, Winapi.Windows, OraSmart;
 
 type
   TFrmControleEntregaCargas = class(TForm)
@@ -33,31 +33,14 @@ type
     lblPlaca: TLabel;
     edtPlaca: TEdit;
     rgpModeloVeiculo: TRadioGroup;
-    qryCargaPedidos: TOraQuery;
     dtsCargas: TOraDataSource;
     rgpDocumento: TRadioGroup;
     edtDocumento: TEdit;
     lblCarga: TLabel;
     edtCarga: TEdit;
     chkEntregue: TCheckBox;
-    qryCargaPedidosID_CARGEXPE: TFloatField;
-    qryCargaPedidosDT_MONTCARGEXPE: TDateTimeField;
-    qryCargaPedidosGN_PLACVEICTRAN: TStringField;
-    qryCargaPedidosMOTORISTA: TStringField;
-    qryCargaPedidosAJUDANTE: TStringField;
-    qryCargaPedidosDT_ENTRPEDIVEND: TDateTimeField;
-    qryCargaPedidosID_PEDIVEND: TFloatField;
-    qryCargaPedidosNR_NOTAFISC: TFloatField;
-    qryCargaPedidosID_CLIENTE: TFloatField;
-    qryCargaPedidosNM_CLIENTE: TStringField;
-    qryCargaPedidosID_VENDEDOR: TFloatField;
-    qryCargaPedidosNM_VENDEDOR: TStringField;
-    qryCargaPedidosFL_ENTREGUE: TStringField;
-    qryCargaPedidosNO_MOTIVO: TStringField;
     btnPesqCarga: TBitBtn;
     btnPesquisaVeiculo: TBitBtn;
-    qryCargaPedidosOP_MODELO: TStringField;
-    qryCargaPedidosSTATUS: TStringField;
     qryCargas: TOraQuery;
     qryCargasID_CARGEXPE: TFloatField;
     qryCargasDT_MONTCARGEXPE: TDateTimeField;
@@ -101,13 +84,30 @@ type
     qryCargasTT_PEDIDO: TFloatField;
     qryCargasTT_CAIXAS: TFloatField;
     qryCargasPLACA: TStringField;
-    qryCargaPedidosPLACA: TStringField;
-    qryCargaPedidosTT_CAIXAS: TFloatField;
     Label1: TLabel;
     DBEdit1: TDBEdit;
-    qryCargaPedidosQT_PESOBALANCAO: TFloatField;
     Label2: TLabel;
     DBEdit2: TDBEdit;
+    qryCargaPedidos: TSmartQuery;
+    qryCargaPedidosID_CARGEXPE: TFloatField;
+    qryCargaPedidosDT_MONTCARGEXPE: TDateTimeField;
+    qryCargaPedidosGN_PLACVEICTRAN: TStringField;
+    qryCargaPedidosMOTORISTA: TStringField;
+    qryCargaPedidosAJUDANTE: TStringField;
+    qryCargaPedidosDT_ENTRPEDIVEND: TDateTimeField;
+    qryCargaPedidosID_PEDIVEND: TFloatField;
+    qryCargaPedidosNR_NOTAFISC: TFloatField;
+    qryCargaPedidosID_CLIENTE: TFloatField;
+    qryCargaPedidosNM_CLIENTE: TStringField;
+    qryCargaPedidosID_VENDEDOR: TFloatField;
+    qryCargaPedidosNM_VENDEDOR: TStringField;
+    qryCargaPedidosFL_ENTREGUE: TStringField;
+    qryCargaPedidosNO_MOTIVO: TStringField;
+    qryCargaPedidosOP_MODELO: TStringField;
+    qryCargaPedidosSTATUS: TStringField;
+    qryCargaPedidosPLACA: TStringField;
+    qryCargaPedidosTT_CAIXAS: TFloatField;
+    qryCargaPedidosQT_PESOBALANCAO: TFloatField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormShow(Sender: TObject);
     procedure btnSairClick(Sender: TObject);

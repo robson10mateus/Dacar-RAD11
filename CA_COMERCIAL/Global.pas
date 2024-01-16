@@ -6,7 +6,7 @@ uses
   Types, SysUtils, Classes, Variants, Graphics, Controls, Forms,
   Dialogs, StdCtrls, DB, MemDS, DBAccess, Ora, ExtCtrls, Buttons, DBGrids, Grids, DateUtils,
   uDadosCadastraisFilial, Clipbrd, math, Apollo, ufrmAutoTabPreco, ZLib,
-  Winapi.WinSock, StrUtils, TlHelp32, PSAPI, Windows;
+  Winapi.WinSock, StrUtils, TlHelp32, PSAPI, Windows, OraSmart;
 
 const
   TP_PESQUISA_CTE_REMETENTE = 16;
@@ -52,7 +52,7 @@ Var
   Function ProgramaEmExecucao(Nome:String):Boolean;
   Function RemoveCaracteresEspeciais(before : string) : string;
   Function ArredondaDecimal( Valor:Real; Casas :integer):Real;
-  procedure OrdenarGrid ( Grid : TDBGrid ; Query: TOraQuery;Column: TColumn; POrdemColuna , pOrdem : string );
+  procedure OrdenarGrid ( Grid : TDBGrid ; Query: TSmartQuery;Column: TColumn; POrdemColuna , pOrdem : string );
   procedure CTRL_C_Grig ( Grid : TDBGrid {; Query: TOraQuery});
   function fProximoDiaUtil(pDataAtual:TDatetime): TDateTime;
   procedure AceitaSomenteNumeros(Sender: TObject; var Key: Char);
@@ -782,7 +782,7 @@ begin
   Result := after;
 end;
 
-procedure OrdenarGrid ( Grid : TDBGrid ; Query: TOraQuery;Column: TColumn; POrdemColuna , pOrdem : string );
+procedure OrdenarGrid ( Grid: TDBGrid; Query: TSmartQuery; Column: TColumn; POrdemColuna , pOrdem: string );
 Var I : integer ;
 begin
   if ( Query.FieldByName(Column.FieldName).FieldKind in [fkData] ) then

@@ -3,6 +3,7 @@ inherited frmConsultaGrupoClientes: TfrmConsultaGrupoClientes
   Top = 248
   BorderIcons = [biSystemMenu]
   Caption = 'Comercial Dacar - Consulta de Grupo de Clientes'
+  Color = clWindow
   Icon.Data = {
     000001000300101000000100200068040000360000002020000001002000A810
     00009E0400003030000001002000A82500004615000028000000100000002000
@@ -479,6 +480,8 @@ inherited frmConsultaGrupoClientes: TfrmConsultaGrupoClientes
   OnClose = FormClose
   TextHeight = 10
   inherited DBGrid1: TDBGrid
+    Width = 688
+    Height = 242
     DataSource = dtsGrupoCliente
     OnTitleClick = DBGrid1TitleClick
     Columns = <
@@ -498,6 +501,8 @@ inherited frmConsultaGrupoClientes: TfrmConsultaGrupoClientes
       end>
   end
   inherited pnlBotoes: TPanel
+    Width = 688
+    ExplicitWidth = 684
     inherited BitBtn1: TBitBtn
       OnClick = BitBtn1Click
     end
@@ -506,6 +511,7 @@ inherited frmConsultaGrupoClientes: TfrmConsultaGrupoClientes
     end
   end
   inherited pnlFiltros: TPanel
+    Width = 688
     inherited EdExpre: TEdit
       OnKeyPress = EdExpreKeyPress
     end

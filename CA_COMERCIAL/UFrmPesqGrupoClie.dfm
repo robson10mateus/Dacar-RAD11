@@ -3,9 +3,10 @@ inherited FrmPesqGrupoClie: TFrmPesqGrupoClie
   Top = 209
   Caption = 'Comercial Dacar - Pesquisa de Grupo'
   Visible = True
-  PixelsPerInch = 96
   TextHeight = 10
   inherited DBGrid1: TDBGrid
+    Width = 688
+    Height = 242
     DataSource = dtsGrup
     ParentShowHint = False
     TitleFont.Style = []
@@ -16,7 +17,7 @@ inherited FrmPesqGrupoClie: TFrmPesqGrupoClie
         Title.Caption = 'C'#243'd.'
         Title.Font.Charset = DEFAULT_CHARSET
         Title.Font.Color = clBlack
-        Title.Font.Height = 12
+        Title.Font.Height = 16
         Title.Font.Name = 'Arial'
         Title.Font.Pitch = fpVariable
         Title.Font.Style = [fsBold]
@@ -28,7 +29,7 @@ inherited FrmPesqGrupoClie: TFrmPesqGrupoClie
         Title.Caption = 'Descri'#231#227'o do Grupo'
         Title.Font.Charset = DEFAULT_CHARSET
         Title.Font.Color = clBlack
-        Title.Font.Height = 12
+        Title.Font.Height = 16
         Title.Font.Name = 'Arial'
         Title.Font.Pitch = fpVariable
         Title.Font.Style = [fsBold]
@@ -37,6 +38,8 @@ inherited FrmPesqGrupoClie: TFrmPesqGrupoClie
       end>
   end
   inherited pnlBotoes: TPanel
+    Width = 688
+    ExplicitWidth = 684
     inherited BitBtn1: TBitBtn
       Glyph.Data = {
         B60B0000424DB60B00000000000036000000280000002A000000170000000100
@@ -264,6 +267,7 @@ inherited FrmPesqGrupoClie: TFrmPesqGrupoClie
     end
   end
   inherited pnlFiltros: TPanel
+    Width = 688
     inherited ComboBox1: TComboBox
       ItemIndex = 0
       Text = 'Descri'#231#227'o do Grupo'

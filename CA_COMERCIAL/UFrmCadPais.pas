@@ -5,7 +5,7 @@ interface
 uses
   SysUtils, Types, Classes, {$IFNDEF VER130} Variants {$ENDIF, Types}, Graphics, Controls, Forms, 
   Dialogs, StdCtrls, ExtCtrls, DBCtrls, ComCtrls, Buttons, Mask,
-  Grids, DBGrids, DB, Ora, MemDS, DBAccess;
+  Grids, DBGrids, DB, Ora, MemDS, DBAccess, OraSmart;
 
 type
   TFrmCadPais = class(TForm)
@@ -41,17 +41,7 @@ type
     Label6: TLabel;
     DBRegObrig: TDBRadioGroup;
     DBRegInt: TDBLookupComboBox;
-    QryCadPais: TOraQuery;
     DtSrcCadPais: TOraDataSource;
-    QryCadPaisEMPRESA: TStringField;
-    QryCadPaisFILIAL: TIntegerField;
-    QryCadPaisID_PAIS: TFloatField;
-    QryCadPaisNM_PAIS: TStringField;
-    QryCadPaisNR_DDIPAIS: TStringField;
-    QryCadPaisID_REGIINTE: TFloatField;
-    QryCadPaisFL_REGIOBRIPAIS: TStringField;
-    QryCadPaisFX_PAIS: TStringField;
-    QryCadPaisNM_REGIINTE: TStringField;
     QryRegInt: TOraQuery;
     DtSrcRegInt: TOraDataSource;
     QryRegIntID_REGIINTE: TFloatField;
@@ -59,7 +49,6 @@ type
     QrDireitos: TOraQuery;
     DBEdit1: TDBEdit;
     Label5: TLabel;
-    QryCadPaisID_IBGE: TIntegerField;
     pnlBotoes: TPanel;
     SB_PRIMEIRO: TSpeedButton;
     SB_ANTERIOR: TSpeedButton;
@@ -71,6 +60,17 @@ type
     SB_CONFIRMA: TSpeedButton;
     SB_CANCEL: TSpeedButton;
     Sb_Sair: TSpeedButton;
+    QryCadPais: TSmartQuery;
+    QryCadPaisEMPRESA: TStringField;
+    QryCadPaisFILIAL: TIntegerField;
+    QryCadPaisID_PAIS: TFloatField;
+    QryCadPaisNM_PAIS: TStringField;
+    QryCadPaisID_IBGE: TIntegerField;
+    QryCadPaisNR_DDIPAIS: TStringField;
+    QryCadPaisID_REGIINTE: TFloatField;
+    QryCadPaisFL_REGIOBRIPAIS: TStringField;
+    QryCadPaisFX_PAIS: TStringField;
+    QryCadPaisNM_REGIINTE: TStringField;
     Function  Atual_ToolBar(BtOrdem:Integer):string;
     procedure LDcomponentes(LD:boolean);
     procedure Sb_SairClick(Sender: TObject);

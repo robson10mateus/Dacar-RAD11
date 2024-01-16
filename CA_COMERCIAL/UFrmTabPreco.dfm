@@ -497,8 +497,8 @@ object FrmTabPreco: TFrmTabPreco
   object Panel1: TPanel
     Left = 0
     Top = 45
-    Width = 1216
-    Height = 545
+    Width = 1220
+    Height = 546
     Align = alClient
     Color = clWindow
     Font.Charset = DEFAULT_CHARSET
@@ -509,11 +509,13 @@ object FrmTabPreco: TFrmTabPreco
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 1216
+    ExplicitHeight = 545
     object PageControl1: TPageControl
       Left = 1
       Top = 1
-      Width = 1214
-      Height = 543
+      Width = 1218
+      Height = 544
       ActivePage = TabCriterio
       Align = alClient
       Font.Charset = DEFAULT_CHARSET
@@ -524,6 +526,8 @@ object FrmTabPreco: TFrmTabPreco
       Font.Style = []
       ParentFont = False
       TabOrder = 0
+      ExplicitWidth = 1214
+      ExplicitHeight = 543
       object TabCriterio: TTabSheet
         Caption = ' Criterios '
         object Lbl_Filtro: TLabel
@@ -2331,6 +2335,7 @@ object FrmTabPreco: TFrmTabPreco
             item
               Expanded = False
               FieldName = 'NM_PRODMATEEMBA'
+              Width = 64
               Visible = True
             end
             item
@@ -2436,6 +2441,7 @@ object FrmTabPreco: TFrmTabPreco
               Title.Font.Name = 'Arial'
               Title.Font.Pitch = fpVariable
               Title.Font.Style = [fsBold]
+              Width = 64
               Visible = True
             end
             item
@@ -2449,6 +2455,7 @@ object FrmTabPreco: TFrmTabPreco
               Title.Font.Name = 'Arial'
               Title.Font.Pitch = fpVariable
               Title.Font.Style = [fsBold]
+              Width = 64
               Visible = True
             end
             item
@@ -2462,6 +2469,7 @@ object FrmTabPreco: TFrmTabPreco
               Title.Font.Name = 'Arial'
               Title.Font.Pitch = fpVariable
               Title.Font.Style = [fsBold]
+              Width = 64
               Visible = True
             end
             item
@@ -2475,6 +2483,7 @@ object FrmTabPreco: TFrmTabPreco
               Title.Font.Name = 'Arial'
               Title.Font.Pitch = fpVariable
               Title.Font.Style = [fsBold]
+              Width = 64
               Visible = True
             end
             item
@@ -2488,6 +2497,7 @@ object FrmTabPreco: TFrmTabPreco
               Title.Font.Name = 'Arial'
               Title.Font.Pitch = fpVariable
               Title.Font.Style = [fsBold]
+              Width = 64
               Visible = True
             end>
         end
@@ -2497,7 +2507,7 @@ object FrmTabPreco: TFrmTabPreco
   object pnlBotoes: TPanel
     Left = 0
     Top = 0
-    Width = 1216
+    Width = 1220
     Height = 45
     Align = alTop
     Color = clWindow
@@ -2509,6 +2519,7 @@ object FrmTabPreco: TFrmTabPreco
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 1216
     object SB_PRIMEIRO: TSpeedButton
       Left = 1
       Top = 5
@@ -3953,233 +3964,6 @@ object FrmTabPreco: TFrmTabPreco
       OnClick = Sb_SairClick
     end
   end
-  object QryTabPreco: TOraQuery
-    KeyFields = 'ID_ITEMTABEPREC'
-    KeySequence = 'ID_ITEMTABEPREC'
-    SQLInsert.Strings = (
-      'INSERT INTO TABELA_PRECO_ITEM'
-      
-        '  (EMPRESA, FILIAL, ID_ITEMTABEPREC, ID_TABEPREC, ID_MATERIAL, I' +
-        'D_EMBALAGEM, ID_MATEEMBA, VL_ITEMTABEPREC, PC_MAXIDESCITEMTABEPR' +
-        'EC, FX_ITEMTABEPREC, FL_ATIVITEMTABEPREC, ID_USUARIO, DT_ATUALIZ' +
-        'ACAO, VL_0A5CX, VL_10CX, VL_11A30CX, VL_31A50CX, VL_51A100CX, VL' +
-        '_100CX, VL_0A5CX_S, VL_10CX_S, VL_11A30CX_S, VL_31A50CX_S, VL_51' +
-        'A100CX_S, VL_100CX_S)'
-      'VALUES'
-      
-        '  (:EMPRESA, :FILIAL, :ID_ITEMTABEPREC, :ID_TABEPREC, :ID_MATERI' +
-        'AL, :ID_EMBALAGEM, :ID_MATEEMBA, :VL_ITEMTABEPREC, :PC_MAXIDESCI' +
-        'TEMTABEPREC, :FX_ITEMTABEPREC, :FL_ATIVITEMTABEPREC, :ID_USUARIO' +
-        ', : DT_ATUALIZACAO, :VL_0A5CX, :VL_10CX, :VL_11A30CX, :VL_31A50C' +
-        'X, :VL_51A100CX, :VL_100CX, :VL_0A5CX_S, :VL_10CX_S, :VL_11A30CX' +
-        '_S, :VL_31A50CX_S, :VL_51A100CX_S, :VL_100CX_S)')
-    SQLDelete.Strings = (
-      'DELETE FROM TABELA_PRECO_ITEM'
-      'WHERE'
-      '  ID_ITEMTABEPREC = :ID_ITEMTABEPREC')
-    SQLUpdate.Strings = (
-      'UPDATE TABELA_PRECO_ITEM'
-      'SET'
-      '  EMPRESA = :EMPRESA,'
-      '  FILIAL = :FILIAL,'
-      '  ID_ITEMTABEPREC = :ID_ITEMTABEPREC,'
-      '  ID_TABEPREC = :ID_TABEPREC,'
-      '  ID_MATERIAL = :ID_MATERIAL,'
-      '  ID_EMBALAGEM = :ID_EMBALAGEM,'
-      '  ID_MATEEMBA = :ID_MATEEMBA,'
-      '  VL_ITEMTABEPREC = :VL_ITEMTABEPREC,'
-      '  PC_MAXIDESCITEMTABEPREC = :PC_MAXIDESCITEMTABEPREC,'
-      '  FX_ITEMTABEPREC = :FX_ITEMTABEPREC,'
-      '  FL_ATIVITEMTABEPREC = :FL_ATIVITEMTABEPREC,'
-      '  ID_USUARIO = :ID_USUARIO,'
-      '  DT_ATUALIZACAO = :DT_ATUALIZACAO,'
-      '  VL_0A5CX = :VL_0A5CX,'
-      '  VL_10CX = :VL_10CX,'
-      '  VL_11A30CX = :VL_11A30CX,'
-      '  VL_31A50CX = :VL_31A50CX, '
-      '  VL_51A100CX = :VL_51A100CX,'
-      '  VL_100CX = :VL_100CX,'
-      '  VL_0A5CX_S = :VL_0A5CX_S,'
-      '  VL_10CX_S = :VL_10CX_S,'
-      '  VL_11A30CX_S = :VL_11A30CX_S,'
-      '  VL_31A50CX_S = :VL_31A50CX_S, '
-      '  VL_51A100CX_S = :VL_51A100CX_S,'
-      '  VL_100CX_S = :VL_100CX_S'
-      'WHERE'
-      '  ID_ITEMTABEPREC = :OLD_ID_ITEMTABEPREC')
-    SQLLock.Strings = (
-      'SELECT * FROM TABELA_PRECO_ITEM'
-      'WHERE'
-      '  ID_ITEMTABEPREC = :ID_ITEMTABEPREC'
-      'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  Tabela_preco_item.ID_ITEMTABEPREC = :ID_ITEMTABEPREC')
-    LocalUpdate = True
-    Session = FrmPrincipal.DB
-    SQL.Strings = (
-      
-        'SELECT DISTINCT TPI.EMPRESA,TPI.FILIAL,TPI.ID_ITEMTABEPREC,TPI.I' +
-        'D_TABEPREC,TPI.ID_MATERIAL,'
-      
-        'TPI.ID_EMBALAGEM,TPI.ID_MATEEMBA,TPI.VL_ITEMTABEPREC,TPI.PC_MAXI' +
-        'DESCITEMTABEPREC,TPI.FX_ITEMTABEPREC,'
-      
-        'TPI.FL_ATIVITEMTABEPREC,TPI.ID_USUARIO,TPI.DT_ATUALIZACAO,ME.ID_' +
-        'PRODMATEEMBA,ME.NM_PRODMATEEMBA,'
-      
-        'TPI.VL_0A5CX,TPI.VL_10CX,TPI.VL_11A30CX,TPI.VL_31A50CX,TPI.VL_51' +
-        'A100CX,TPI.VL_100CX,'
-      
-        'TPI.VL_0A5CX_S,TPI.VL_10CX_S,TPI.VL_11A30CX_S,TPI.VL_31A50CX_S,T' +
-        'PI.VL_51A100CX_S,TPI.VL_100CX_S'
-      'FROM TABELA_PRECO_ITEM TPI'
-      
-        'INNER JOIN MATERIAL_EMBALAGEM ME ON (TPI.ID_MATERIAL = ME.ID_MAT' +
-        'ERIAL AND TPI.ID_EMBALAGEM = ME.ID_EMBALAGEM) AND'
-      'TPI.ID_TABEPREC = :ID_TABEPREC'
-      'ORDER BY ME.ID_PRODMATEEMBA')
-    MasterSource = DtSrcCadTabPrecos
-    MasterFields = 'ID_TABEPREC'
-    DetailFields = 'ID_TABEPREC'
-    FetchAll = True
-    CachedUpdates = True
-    Left = 574
-    Top = 7
-    ParamData = <
-      item
-        DataType = ftFloat
-        Name = 'ID_TABEPREC'
-        ParamType = ptInput
-        Value = 1.000000000000000000
-      end>
-    object QryTabPrecoEMPRESA: TStringField
-      FieldName = 'EMPRESA'
-      Required = True
-      Size = 2
-    end
-    object QryTabPrecoFILIAL: TIntegerField
-      FieldName = 'FILIAL'
-      Required = True
-    end
-    object QryTabPrecoID_ITEMTABEPREC: TFloatField
-      AutoGenerateValue = arAutoInc
-      FieldName = 'ID_ITEMTABEPREC'
-    end
-    object QryTabPrecoID_TABEPREC: TFloatField
-      FieldName = 'ID_TABEPREC'
-      Required = True
-    end
-    object QryTabPrecoID_MATERIAL: TFloatField
-      FieldName = 'ID_MATERIAL'
-      Required = True
-    end
-    object QryTabPrecoID_EMBALAGEM: TFloatField
-      FieldName = 'ID_EMBALAGEM'
-      Required = True
-    end
-    object QryTabPrecoID_MATEEMBA: TFloatField
-      FieldName = 'ID_MATEEMBA'
-      Required = True
-    end
-    object QryTabPrecoVL_ITEMTABEPREC: TFloatField
-      DisplayLabel = 'Pre'#231'o de Venda'
-      FieldName = 'VL_ITEMTABEPREC'
-      Required = True
-      DisplayFormat = '##0.00'
-    end
-    object QryTabPrecoPC_MAXIDESCITEMTABEPREC: TFloatField
-      DisplayLabel = '% Max. Desc'
-      FieldName = 'PC_MAXIDESCITEMTABEPREC'
-      Required = True
-      DisplayFormat = '##0.00#'
-    end
-    object QryTabPrecoFX_ITEMTABEPREC: TStringField
-      FieldName = 'FX_ITEMTABEPREC'
-      Size = 1
-    end
-    object QryTabPrecoFL_ATIVITEMTABEPREC: TStringField
-      FieldName = 'FL_ATIVITEMTABEPREC'
-      Required = True
-      Size = 1
-    end
-    object QryTabPrecoID_PRODMATEEMBA: TStringField
-      DisplayLabel = 'C'#243'd'
-      FieldName = 'ID_PRODMATEEMBA'
-      Size = 5
-    end
-    object QryTabPrecoNM_PRODMATEEMBA: TStringField
-      DisplayLabel = 'Descri'#231#227'o do Produto'
-      FieldName = 'NM_PRODMATEEMBA'
-      Size = 40
-    end
-    object QryTabPrecoID_USUARIO: TIntegerField
-      FieldName = 'ID_USUARIO'
-    end
-    object QryTabPrecoDT_ATUALIZACAO: TDateTimeField
-      FieldName = 'DT_ATUALIZACAO'
-    end
-    object QryTabPrecoVL_10CX: TFloatField
-      DisplayLabel = 'R$ At'#233' 10 Cx'
-      FieldName = 'VL_10CX'
-      DisplayFormat = '##0.00'
-    end
-    object QryTabPrecoVL_11A30CX: TFloatField
-      DisplayLabel = 'R$ 11 a 30 Cx'
-      FieldName = 'VL_11A30CX'
-      DisplayFormat = '##0.00'
-    end
-    object QryTabPrecoVL_31A50CX: TFloatField
-      DisplayLabel = 'R$ 31 a 50 Cx'
-      FieldName = 'VL_31A50CX'
-      DisplayFormat = '##0.00'
-    end
-    object QryTabPrecoVL_51A100CX: TFloatField
-      DisplayLabel = 'R$ 51 a 100 Cx'
-      FieldName = 'VL_51A100CX'
-      DisplayFormat = '##0.00'
-    end
-    object QryTabPrecoVL_100CX: TFloatField
-      DisplayLabel = 'R$ > 100 Cx'
-      FieldName = 'VL_100CX'
-      DisplayFormat = '##0.00'
-    end
-    object QryTabPrecoVL_0A5CX: TFloatField
-      DisplayLabel = 'R$ At'#233' 5 Cx'
-      FieldName = 'VL_0A5CX'
-      DisplayFormat = '##0.00'
-    end
-    object QryTabPrecoVL_0A5CX_S: TFloatField
-      DisplayLabel = 'R$ At'#233' 5 Cx SPL'
-      FieldName = 'VL_0A5CX_S'
-      DisplayFormat = '##0.00'
-    end
-    object QryTabPrecoVL_10CX_S: TFloatField
-      DisplayLabel = 'R$ At'#233' 10 Cx SPL'
-      FieldName = 'VL_10CX_S'
-      DisplayFormat = '##0.00'
-    end
-    object QryTabPrecoVL_11A30CX_S: TFloatField
-      DisplayLabel = 'R$ 11 a 30 Cx SPL'
-      FieldName = 'VL_11A30CX_S'
-      DisplayFormat = '##0.00'
-    end
-    object QryTabPrecoVL_31A50CX_S: TFloatField
-      DisplayLabel = 'R$ 31 a 50 Cx SPL'
-      FieldName = 'VL_31A50CX_S'
-      DisplayFormat = '##0.00'
-    end
-    object QryTabPrecoVL_51A100CX_S: TFloatField
-      DisplayLabel = 'R$ 51 a 100 Cx SPL'
-      FieldName = 'VL_51A100CX_S'
-      DisplayFormat = '##0.00'
-    end
-    object QryTabPrecoVL_100CX_S: TFloatField
-      DisplayLabel = 'R$ > 100 Cx SPL'
-      FieldName = 'VL_100CX_S'
-      DisplayFormat = '##0.00'
-    end
-  end
   object DtSrcTabPreco: TOraDataSource
     DataSet = QryTabPreco
     OnDataChange = DtSrcTabPrecoDataChange
@@ -4674,5 +4458,233 @@ object FrmTabPreco: TFrmTabPreco
     DataSet = cdsTemp
     Left = 454
     Top = 8
+  end
+  object QryTabPreco: TSmartQuery
+    KeyFields = 'ID_ITEMTABEPREC'
+    KeySequence = 'ID_ITEMTABEPREC'
+    SQLInsert.Strings = (
+      'INSERT INTO TABELA_PRECO_ITEM'
+      
+        '  (EMPRESA, FILIAL, ID_ITEMTABEPREC, ID_TABEPREC, ID_MATERIAL, I' +
+        'D_EMBALAGEM, ID_MATEEMBA, VL_ITEMTABEPREC, PC_MAXIDESCITEMTABEPR' +
+        'EC, FX_ITEMTABEPREC, FL_ATIVITEMTABEPREC, ID_USUARIO, DT_ATUALIZ' +
+        'ACAO, VL_0A5CX, VL_10CX, VL_11A30CX, VL_31A50CX, VL_51A100CX, VL' +
+        '_100CX, VL_0A5CX_S, VL_10CX_S, VL_11A30CX_S, VL_31A50CX_S, VL_51' +
+        'A100CX_S, VL_100CX_S)'
+      'VALUES'
+      
+        '  (:EMPRESA, :FILIAL, :ID_ITEMTABEPREC, :ID_TABEPREC, :ID_MATERI' +
+        'AL, :ID_EMBALAGEM, :ID_MATEEMBA, :VL_ITEMTABEPREC, :PC_MAXIDESCI' +
+        'TEMTABEPREC, :FX_ITEMTABEPREC, :FL_ATIVITEMTABEPREC, :ID_USUARIO' +
+        ', : DT_ATUALIZACAO, :VL_0A5CX, :VL_10CX, :VL_11A30CX, :VL_31A50C' +
+        'X, :VL_51A100CX, :VL_100CX, :VL_0A5CX_S, :VL_10CX_S, :VL_11A30CX' +
+        '_S, :VL_31A50CX_S, :VL_51A100CX_S, :VL_100CX_S)')
+    SQLDelete.Strings = (
+      'DELETE FROM TABELA_PRECO_ITEM'
+      'WHERE'
+      '  ID_ITEMTABEPREC = :ID_ITEMTABEPREC')
+    SQLUpdate.Strings = (
+      'UPDATE TABELA_PRECO_ITEM'
+      'SET'
+      '  EMPRESA = :EMPRESA,'
+      '  FILIAL = :FILIAL,'
+      '  ID_ITEMTABEPREC = :ID_ITEMTABEPREC,'
+      '  ID_TABEPREC = :ID_TABEPREC,'
+      '  ID_MATERIAL = :ID_MATERIAL,'
+      '  ID_EMBALAGEM = :ID_EMBALAGEM,'
+      '  ID_MATEEMBA = :ID_MATEEMBA,'
+      '  VL_ITEMTABEPREC = :VL_ITEMTABEPREC,'
+      '  PC_MAXIDESCITEMTABEPREC = :PC_MAXIDESCITEMTABEPREC,'
+      '  FX_ITEMTABEPREC = :FX_ITEMTABEPREC,'
+      '  FL_ATIVITEMTABEPREC = :FL_ATIVITEMTABEPREC,'
+      '  ID_USUARIO = :ID_USUARIO,'
+      '  DT_ATUALIZACAO = :DT_ATUALIZACAO,'
+      '  VL_0A5CX = :VL_0A5CX,'
+      '  VL_10CX = :VL_10CX,'
+      '  VL_11A30CX = :VL_11A30CX,'
+      '  VL_31A50CX = :VL_31A50CX, '
+      '  VL_51A100CX = :VL_51A100CX,'
+      '  VL_100CX = :VL_100CX,'
+      '  VL_0A5CX_S = :VL_0A5CX_S,'
+      '  VL_10CX_S = :VL_10CX_S,'
+      '  VL_11A30CX_S = :VL_11A30CX_S,'
+      '  VL_31A50CX_S = :VL_31A50CX_S, '
+      '  VL_51A100CX_S = :VL_51A100CX_S,'
+      '  VL_100CX_S = :VL_100CX_S'
+      'WHERE'
+      '  ID_ITEMTABEPREC = :OLD_ID_ITEMTABEPREC')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  Tabela_preco_item.ID_ITEMTABEPREC = :ID_ITEMTABEPREC')
+    SQLLock.Strings = (
+      'SELECT * FROM TABELA_PRECO_ITEM'
+      'WHERE'
+      '  ID_ITEMTABEPREC = :ID_ITEMTABEPREC'
+      'FOR UPDATE NOWAIT')
+    Session = FrmPrincipal.DB
+    SQL.Strings = (
+      
+        'SELECT DISTINCT TPI.EMPRESA,TPI.FILIAL,TPI.ID_ITEMTABEPREC,TPI.I' +
+        'D_TABEPREC,TPI.ID_MATERIAL,'
+      
+        'TPI.ID_EMBALAGEM,TPI.ID_MATEEMBA,TPI.VL_ITEMTABEPREC,TPI.PC_MAXI' +
+        'DESCITEMTABEPREC,TPI.FX_ITEMTABEPREC,'
+      
+        'TPI.FL_ATIVITEMTABEPREC,TPI.ID_USUARIO,TPI.DT_ATUALIZACAO,ME.ID_' +
+        'PRODMATEEMBA,ME.NM_PRODMATEEMBA,'
+      
+        'TPI.VL_0A5CX,TPI.VL_10CX,TPI.VL_11A30CX,TPI.VL_31A50CX,TPI.VL_51' +
+        'A100CX,TPI.VL_100CX,'
+      
+        'TPI.VL_0A5CX_S,TPI.VL_10CX_S,TPI.VL_11A30CX_S,TPI.VL_31A50CX_S,T' +
+        'PI.VL_51A100CX_S,TPI.VL_100CX_S'
+      'FROM TABELA_PRECO_ITEM TPI'
+      
+        'INNER JOIN MATERIAL_EMBALAGEM ME ON (TPI.ID_MATERIAL = ME.ID_MAT' +
+        'ERIAL AND TPI.ID_EMBALAGEM = ME.ID_EMBALAGEM) AND'
+      'TPI.ID_TABEPREC = :ID_TABEPREC'
+      'ORDER BY ME.ID_PRODMATEEMBA')
+    MasterFields = 'ID_TABEPREC'
+    DetailFields = 'ID_TABEPREC'
+    MasterSource = DtSrcCadTabPrecos
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 576
+    Top = 8
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'ID_TABEPREC'
+        ParamType = ptInput
+        Value = 1.000000000000000000
+      end>
+    object QryTabPrecoEMPRESA: TStringField
+      FieldName = 'EMPRESA'
+      Required = True
+      Size = 2
+    end
+    object QryTabPrecoFILIAL: TIntegerField
+      FieldName = 'FILIAL'
+      Required = True
+    end
+    object QryTabPrecoID_ITEMTABEPREC: TFloatField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'ID_ITEMTABEPREC'
+    end
+    object QryTabPrecoID_TABEPREC: TFloatField
+      FieldName = 'ID_TABEPREC'
+      Required = True
+    end
+    object QryTabPrecoID_MATERIAL: TFloatField
+      FieldName = 'ID_MATERIAL'
+      Required = True
+    end
+    object QryTabPrecoID_EMBALAGEM: TFloatField
+      FieldName = 'ID_EMBALAGEM'
+      Required = True
+    end
+    object QryTabPrecoID_MATEEMBA: TFloatField
+      FieldName = 'ID_MATEEMBA'
+      Required = True
+    end
+    object QryTabPrecoVL_ITEMTABEPREC: TFloatField
+      DisplayLabel = 'Pre'#231'o de Venda'
+      FieldName = 'VL_ITEMTABEPREC'
+      Required = True
+      DisplayFormat = '##0.00'
+    end
+    object QryTabPrecoPC_MAXIDESCITEMTABEPREC: TFloatField
+      DisplayLabel = '% Max. Desc'
+      FieldName = 'PC_MAXIDESCITEMTABEPREC'
+      Required = True
+      DisplayFormat = '##0.00#'
+    end
+    object QryTabPrecoFX_ITEMTABEPREC: TStringField
+      FieldName = 'FX_ITEMTABEPREC'
+      Size = 1
+    end
+    object QryTabPrecoFL_ATIVITEMTABEPREC: TStringField
+      FieldName = 'FL_ATIVITEMTABEPREC'
+      Required = True
+      Size = 1
+    end
+    object QryTabPrecoID_PRODMATEEMBA: TStringField
+      DisplayLabel = 'C'#243'd'
+      FieldName = 'ID_PRODMATEEMBA'
+      Size = 5
+    end
+    object QryTabPrecoNM_PRODMATEEMBA: TStringField
+      DisplayLabel = 'Descri'#231#227'o do Produto'
+      FieldName = 'NM_PRODMATEEMBA'
+      Size = 40
+    end
+    object QryTabPrecoID_USUARIO: TIntegerField
+      FieldName = 'ID_USUARIO'
+    end
+    object QryTabPrecoDT_ATUALIZACAO: TDateTimeField
+      FieldName = 'DT_ATUALIZACAO'
+    end
+    object QryTabPrecoVL_10CX: TFloatField
+      DisplayLabel = 'R$ At'#233' 10 Cx'
+      FieldName = 'VL_10CX'
+      DisplayFormat = '##0.00'
+    end
+    object QryTabPrecoVL_11A30CX: TFloatField
+      DisplayLabel = 'R$ 11 a 30 Cx'
+      FieldName = 'VL_11A30CX'
+      DisplayFormat = '##0.00'
+    end
+    object QryTabPrecoVL_31A50CX: TFloatField
+      DisplayLabel = 'R$ 31 a 50 Cx'
+      FieldName = 'VL_31A50CX'
+      DisplayFormat = '##0.00'
+    end
+    object QryTabPrecoVL_51A100CX: TFloatField
+      DisplayLabel = 'R$ 51 a 100 Cx'
+      FieldName = 'VL_51A100CX'
+      DisplayFormat = '##0.00'
+    end
+    object QryTabPrecoVL_100CX: TFloatField
+      DisplayLabel = 'R$ > 100 Cx'
+      FieldName = 'VL_100CX'
+      DisplayFormat = '##0.00'
+    end
+    object QryTabPrecoVL_0A5CX: TFloatField
+      DisplayLabel = 'R$ At'#233' 5 Cx'
+      FieldName = 'VL_0A5CX'
+      DisplayFormat = '##0.00'
+    end
+    object QryTabPrecoVL_0A5CX_S: TFloatField
+      DisplayLabel = 'R$ At'#233' 5 Cx SPL'
+      FieldName = 'VL_0A5CX_S'
+      DisplayFormat = '##0.00'
+    end
+    object QryTabPrecoVL_10CX_S: TFloatField
+      DisplayLabel = 'R$ At'#233' 10 Cx SPL'
+      FieldName = 'VL_10CX_S'
+      DisplayFormat = '##0.00'
+    end
+    object QryTabPrecoVL_11A30CX_S: TFloatField
+      DisplayLabel = 'R$ 11 a 30 Cx SPL'
+      FieldName = 'VL_11A30CX_S'
+      DisplayFormat = '##0.00'
+    end
+    object QryTabPrecoVL_31A50CX_S: TFloatField
+      DisplayLabel = 'R$ 31 a 50 Cx SPL'
+      FieldName = 'VL_31A50CX_S'
+      DisplayFormat = '##0.00'
+    end
+    object QryTabPrecoVL_51A100CX_S: TFloatField
+      DisplayLabel = 'R$ 51 a 100 Cx SPL'
+      FieldName = 'VL_51A100CX_S'
+      DisplayFormat = '##0.00'
+    end
+    object QryTabPrecoVL_100CX_S: TFloatField
+      DisplayLabel = 'R$ > 100 Cx SPL'
+      FieldName = 'VL_100CX_S'
+      DisplayFormat = '##0.00'
+    end
   end
 end

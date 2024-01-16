@@ -319,19 +319,19 @@ begin
   CASE SELPE OF
    1:BEGIN
        FrmPesqCliente:=TFrmPesqCliente.Create(Self);
-       FrmPesqCliente.Show;
+       FrmPesqCliente.ShowModal;
      END;
    2:BEGIN
        FrmPesqVend:=TFrmPesqVend.Create(Self);
-       FrmPesqVend.Show;
+       FrmPesqVend.ShowModal;
      END;
    3:BEGIN
        FrmPesqTPV:=TFrmPesqTPV.Create(Self);
-       FrmPesqTPV.Show;
+       FrmPesqTPV.ShowModal;
      END;
    4:BEGIN
        FrmPesqCaminhao:= TFrmPesqCaminhao.Create(Self);
-       FrmPesqCaminhao.Show;
+       FrmPesqCaminhao.ShowModal;
      END;
   end;
 

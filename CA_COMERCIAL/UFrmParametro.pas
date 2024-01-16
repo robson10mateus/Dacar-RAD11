@@ -14,8 +14,20 @@ type
     PageControl1: TPageControl;
     TabSheet1: TTabSheet;
     DBGrid1: TDBGrid;
-    Qr: TOraQuery;
     DS: TOraDataSource;
+    Tab_Empresa: TTabSheet;
+    Ds_Empresa: TOraDataSource;
+    Panel2: TPanel;
+    btnCancelar: TSpeedButton;
+    btnFechar: TSpeedButton;
+    btnUltimo: TSpeedButton;
+    btnConfirmar: TSpeedButton;
+    btnAnterior: TSpeedButton;
+    edtEditar: TSpeedButton;
+    btnProximo: TSpeedButton;
+    btnPrimeiro: TSpeedButton;
+    grdEmpresa: TDBGrid;
+    Qr: TSmartQuery;
     QrEMPRESA: TStringField;
     QrFILIAL: TIntegerField;
     QrID_PARASIST: TFloatField;
@@ -39,9 +51,7 @@ type
     QrID_USUASIST_MONTCARGPARASIST: TFloatField;
     QrDT_MONTCARGPARASIST: TDateTimeField;
     QrHR_LIMITEPED: TDateTimeField;
-    Tab_Empresa: TTabSheet;
-    Qr_Empresa: TOraQuery;
-    Ds_Empresa: TOraDataSource;
+    Qr_Empresa: TSmartQuery;
     Qr_EmpresaID_EMPRESA: TFloatField;
     Qr_EmpresaNOME_EMPRESA: TStringField;
     Qr_EmpresaNUM_SERIE_CERTIFICADO: TStringField;
@@ -49,16 +59,6 @@ type
     Qr_EmpresaFL_CONTROLECAIXA: TStringField;
     Qr_EmpresaNM_EMAIL_HOST: TStringField;
     Qr_EmpresaNM_EMAIL_PORTA: TStringField;
-    Panel2: TPanel;
-    btnCancelar: TSpeedButton;
-    btnFechar: TSpeedButton;
-    btnUltimo: TSpeedButton;
-    btnConfirmar: TSpeedButton;
-    btnAnterior: TSpeedButton;
-    edtEditar: TSpeedButton;
-    btnProximo: TSpeedButton;
-    btnPrimeiro: TSpeedButton;
-    grdEmpresa: TDBGrid;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormShow(Sender: TObject);
     procedure btnAnteriorClick(Sender: TObject);
@@ -193,7 +193,7 @@ begin
     if Odd( DataSource.DataSet.RecNo) then
       Canvas.Brush.Color := $00FFF2D9
     else
-      Canvas.Brush.Color := clBackground;
+      Canvas.Brush.Color := clWindow;
 
     Canvas.FillRect(Rect);
     DefaultDrawColumnCell(Rect,DataCol,Column,State);

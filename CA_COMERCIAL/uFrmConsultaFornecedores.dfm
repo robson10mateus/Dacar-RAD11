@@ -4,6 +4,7 @@ inherited frmConsultaFornecedores: TfrmConsultaFornecedores
   Width = 623
   Height = 433
   Caption = 'Comercial Dacar - Consulta de Fornecedores'
+  Color = clWindow
   Icon.Data = {
     000001000300101000000100200068040000360000002020000001002000A810
     00009E0400003030000001002000A82500004615000028000000100000002000
@@ -482,8 +483,8 @@ inherited frmConsultaFornecedores: TfrmConsultaFornecedores
   ExplicitHeight = 433
   TextHeight = 10
   inherited DBGrid1: TDBGrid
-    Width = 607
-    Height = 224
+    Width = 611
+    Height = 225
     DataSource = dtsFornecedor
     OnTitleClick = DBGrid1TitleClick
     Columns = <
@@ -517,8 +518,8 @@ inherited frmConsultaFornecedores: TfrmConsultaFornecedores
       end>
   end
   inherited pnlBotoes: TPanel
-    Width = 607
-    ExplicitWidth = 623
+    Width = 611
+    ExplicitWidth = 607
     inherited BitBtn1: TBitBtn
       OnClick = BitBtn1Click
     end
@@ -527,7 +528,7 @@ inherited frmConsultaFornecedores: TfrmConsultaFornecedores
     end
   end
   inherited pnlFiltros: TPanel
-    Width = 607
+    Width = 611
     ExplicitWidth = 607
     inherited EdExpre: TEdit
       OnKeyPress = EdExpreKeyPress

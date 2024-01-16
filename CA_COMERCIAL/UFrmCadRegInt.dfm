@@ -31,6 +31,8 @@ object FrmCadRegInt: TFrmCadRegInt
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 668
+    ExplicitHeight = 362
     object ToolBar1: TToolBar
       Left = 1
       Top = 1
@@ -49,10 +51,10 @@ object FrmCadRegInt: TFrmCadRegInt
       ParentFont = False
       TabOrder = 0
       object SB_PRIMEIRO: TSpeedButton
-        Left = 1
-        Top = 4
+        Left = 0
+        Top = 0
         Width = 35
-        Height = 29
+        Height = 35
         Hint = 'Primeiro'
         Flat = True
         Glyph.Data = {
@@ -240,10 +242,10 @@ object FrmCadRegInt: TFrmCadRegInt
         OnClick = SB_PRIMEIROClick
       end
       object SB_ANTERIOR: TSpeedButton
-        Left = 36
-        Top = 4
+        Left = 35
+        Top = 0
         Width = 35
-        Height = 29
+        Height = 35
         Hint = 'Anterior'
         Flat = True
         Glyph.Data = {
@@ -431,10 +433,10 @@ object FrmCadRegInt: TFrmCadRegInt
         OnClick = SB_ANTERIORClick
       end
       object SB_PROXIMO: TSpeedButton
-        Left = 71
-        Top = 4
+        Left = 70
+        Top = 0
         Width = 35
-        Height = 29
+        Height = 35
         Hint = 'Pr'#243'ximo'
         Flat = True
         Glyph.Data = {
@@ -622,10 +624,10 @@ object FrmCadRegInt: TFrmCadRegInt
         OnClick = SB_PROXIMOClick
       end
       object SB_ULTIMO: TSpeedButton
-        Left = 106
-        Top = 4
+        Left = 105
+        Top = 0
         Width = 35
-        Height = 29
+        Height = 35
         Hint = #218'ltimo'
         Flat = True
         Glyph.Data = {
@@ -813,10 +815,10 @@ object FrmCadRegInt: TFrmCadRegInt
         OnClick = SB_ULTIMOClick
       end
       object SB_NOVO: TSpeedButton
-        Left = 149
-        Top = 4
+        Left = 140
+        Top = 0
         Width = 35
-        Height = 29
+        Height = 35
         Hint = 'Incluir'
         Flat = True
         Glyph.Data = {
@@ -1004,10 +1006,10 @@ object FrmCadRegInt: TFrmCadRegInt
         OnClick = SB_NOVOClick
       end
       object SB_EXCLUI: TSpeedButton
-        Left = 184
-        Top = 4
+        Left = 175
+        Top = 0
         Width = 35
-        Height = 29
+        Height = 35
         Hint = 'Excluir'
         Flat = True
         Glyph.Data = {
@@ -1195,10 +1197,10 @@ object FrmCadRegInt: TFrmCadRegInt
         OnClick = SB_EXCLUIClick
       end
       object SB_CONFIRMA: TSpeedButton
-        Left = 254
-        Top = 4
+        Left = 210
+        Top = 0
         Width = 35
-        Height = 29
+        Height = 35
         Hint = 'Confirmar'
         Enabled = False
         Flat = True
@@ -1387,10 +1389,10 @@ object FrmCadRegInt: TFrmCadRegInt
         OnClick = SB_CONFIRMAClick
       end
       object SB_CANCEL: TSpeedButton
-        Left = 289
-        Top = 4
+        Left = 245
+        Top = 0
         Width = 35
-        Height = 29
+        Height = 35
         Hint = 'Cancelar'
         Enabled = False
         Flat = True
@@ -1579,10 +1581,10 @@ object FrmCadRegInt: TFrmCadRegInt
         OnClick = SB_CANCELClick
       end
       object Sb_Sair: TSpeedButton
-        Left = 561
-        Top = 4
+        Left = 280
+        Top = 0
         Width = 35
-        Height = 28
+        Height = 35
         Hint = 'Sair'
         Flat = True
         Glyph.Data = {
@@ -1770,10 +1772,10 @@ object FrmCadRegInt: TFrmCadRegInt
         OnClick = Sb_SairClick
       end
       object SB_EDIT: TSpeedButton
-        Left = 219
-        Top = 4
+        Left = 315
+        Top = 0
         Width = 35
-        Height = 29
+        Height = 35
         Hint = 'Editar'
         Flat = True
         Glyph.Data = {
@@ -1961,15 +1963,15 @@ object FrmCadRegInt: TFrmCadRegInt
         OnClick = SB_EDITClick
       end
       object ToolButton1: TToolButton
-        Left = 141
-        Top = 4
+        Left = 350
+        Top = 0
         Width = 8
         Caption = 'ToolButton1'
         Style = tbsSeparator
       end
       object ToolButton3: TToolButton
-        Left = 324
-        Top = 4
+        Left = 358
+        Top = 0
         Width = 237
         Caption = 'ToolButton3'
         ImageIndex = 1
@@ -2451,76 +2453,6 @@ object FrmCadRegInt: TFrmCadRegInt
       end
     end
   end
-  object QryCadRegInt: TOraQuery
-    KeyFields = 'ID_REGIINTE'
-    KeySequence = 'ID_REGIINTE'
-    SQLInsert.Strings = (
-      'INSERT INTO regiao_internacional'
-      '  (EMPRESA, FILIAL, ID_REGIINTE, NM_REGIINTE, FX_REGIINTE)'
-      'VALUES'
-      '  (:EMPRESA, :FILIAL, :ID_REGIINTE, :NM_REGIINTE, :FX_REGIINTE)')
-    SQLDelete.Strings = (
-      'DELETE FROM regiao_internacional'
-      'WHERE'
-      '  ID_REGIINTE = :ID_REGIINTE')
-    SQLUpdate.Strings = (
-      'UPDATE regiao_internacional'
-      'SET'
-      '  EMPRESA = :EMPRESA,'
-      '  FILIAL = :FILIAL,'
-      '  ID_REGIINTE = :ID_REGIINTE,'
-      '  NM_REGIINTE = :NM_REGIINTE,'
-      '  FX_REGIINTE = :FX_REGIINTE'
-      'WHERE'
-      '  ID_REGIINTE = :OLD_ID_REGIINTE')
-    SQLLock.Strings = (
-      'SELECT * FROM regiao_internacional'
-      'WHERE'
-      '  ID_REGIINTE = :ID_REGIINTE'
-      'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  ID_REGIINTE = :ID_REGIINTE')
-    LocalUpdate = True
-    SQL.Strings = (
-      'SELECT '
-      '  regiao_internacional.empresa,'
-      '  regiao_internacional.filial,'
-      '  regiao_internacional.id_regiinte,'
-      '  regiao_internacional.nm_regiinte,'
-      '  regiao_internacional.fx_regiinte'
-      'FROM'
-      '  regiao_internacional')
-    FetchAll = True
-    CachedUpdates = True
-    Left = 392
-    Top = 32
-    object QryCadRegIntEMPRESA: TStringField
-      FieldName = 'EMPRESA'
-      Required = True
-      Size = 2
-    end
-    object QryCadRegIntFILIAL: TIntegerField
-      FieldName = 'FILIAL'
-      Required = True
-    end
-    object QryCadRegIntID_REGIINTE: TFloatField
-      AutoGenerateValue = arAutoInc
-      DisplayLabel = 'C'#243'digo'
-      FieldName = 'ID_REGIINTE'
-    end
-    object QryCadRegIntNM_REGIINTE: TStringField
-      DisplayLabel = 'Descri'#231#227'o da Regi'#227'o Internacional'
-      FieldName = 'NM_REGIINTE'
-      Required = True
-      Size = 30
-    end
-    object QryCadRegIntFX_REGIINTE: TStringField
-      FieldName = 'FX_REGIINTE'
-      Required = True
-      Size = 1
-    end
-  end
   object DtSrcCadRegInt: TOraDataSource
     DataSet = QryCadRegInt
     Left = 432
@@ -2577,5 +2509,74 @@ object FrmCadRegInt: TFrmCadRegInt
         Name = 'VUSUARIO'
         Value = nil
       end>
+  end
+  object QryCadRegInt: TSmartQuery
+    KeyFields = 'ID_REGIINTE'
+    KeySequence = 'ID_REGIINTE'
+    SQLInsert.Strings = (
+      'INSERT INTO regiao_internacional'
+      '  (EMPRESA, FILIAL, ID_REGIINTE, NM_REGIINTE, FX_REGIINTE)'
+      'VALUES'
+      '  (:EMPRESA, :FILIAL, :ID_REGIINTE, :NM_REGIINTE, :FX_REGIINTE)')
+    SQLDelete.Strings = (
+      'DELETE FROM regiao_internacional'
+      'WHERE'
+      '  ID_REGIINTE = :ID_REGIINTE')
+    SQLUpdate.Strings = (
+      'UPDATE regiao_internacional'
+      'SET'
+      '  EMPRESA = :EMPRESA,'
+      '  FILIAL = :FILIAL,'
+      '  ID_REGIINTE = :ID_REGIINTE,'
+      '  NM_REGIINTE = :NM_REGIINTE,'
+      '  FX_REGIINTE = :FX_REGIINTE'
+      'WHERE'
+      '  ID_REGIINTE = :OLD_ID_REGIINTE')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  ID_REGIINTE = :ID_REGIINTE')
+    SQLLock.Strings = (
+      'SELECT * FROM regiao_internacional'
+      'WHERE'
+      '  ID_REGIINTE = :ID_REGIINTE'
+      'FOR UPDATE NOWAIT')
+    SQL.Strings = (
+      'SELECT '
+      '  regiao_internacional.empresa,'
+      '  regiao_internacional.filial,'
+      '  regiao_internacional.id_regiinte,'
+      '  regiao_internacional.nm_regiinte,'
+      '  regiao_internacional.fx_regiinte'
+      'FROM'
+      '  regiao_internacional')
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 392
+    Top = 32
+    object QryCadRegIntEMPRESA: TStringField
+      FieldName = 'EMPRESA'
+      Required = True
+      Size = 2
+    end
+    object QryCadRegIntFILIAL: TIntegerField
+      FieldName = 'FILIAL'
+      Required = True
+    end
+    object QryCadRegIntID_REGIINTE: TFloatField
+      FieldName = 'ID_REGIINTE'
+      Required = True
+    end
+    object QryCadRegIntNM_REGIINTE: TStringField
+      FieldName = 'NM_REGIINTE'
+      Required = True
+      Size = 30
+    end
+    object QryCadRegIntFX_REGIINTE: TStringField
+      FieldName = 'FX_REGIINTE'
+      Required = True
+      Size = 1
+    end
   end
 end

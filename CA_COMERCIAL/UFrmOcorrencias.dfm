@@ -496,9 +496,9 @@ object FrmOcorrencias: TFrmOcorrencias
   object PageControl1: TPageControl
     Left = 0
     Top = 45
-    Width = 1024
-    Height = 566
-    ActivePage = Tab_Criterio
+    Width = 1028
+    Height = 567
+    ActivePage = Tab_Detalhe
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
@@ -508,6 +508,8 @@ object FrmOcorrencias: TFrmOcorrencias
     Font.Style = []
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 1024
+    ExplicitHeight = 566
     object Tab_Criterio: TTabSheet
       Caption = ' Crit'#233'rio '
       Font.Charset = DEFAULT_CHARSET
@@ -593,7 +595,7 @@ object FrmOcorrencias: TFrmOcorrencias
         Columns = 2
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 15
+        Font.Height = 13
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = [fsBold]
@@ -804,8 +806,8 @@ object FrmOcorrencias: TFrmOcorrencias
       object DBGrid1: TDBGrid
         Left = 0
         Top = 0
-        Width = 1032
-        Height = 575
+        Width = 1020
+        Height = 537
         Align = alClient
         DataSource = Ds
         Font.Charset = DEFAULT_CHARSET
@@ -1142,7 +1144,7 @@ object FrmOcorrencias: TFrmOcorrencias
   object pnlBotoes: TPanel
     Left = 0
     Top = 0
-    Width = 1024
+    Width = 1028
     Height = 45
     Align = alTop
     Color = clWindow
@@ -1154,6 +1156,7 @@ object FrmOcorrencias: TFrmOcorrencias
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 1024
     object SB_ANTERIOR: TSpeedButton
       Left = 5
       Top = 4
@@ -2203,7 +2206,38 @@ object FrmOcorrencias: TFrmOcorrencias
       OnClick = SpeedButton1Click
     end
   end
-  object Qr: TOraQuery
+  object Ds: TOraDataSource
+    DataSet = Qr
+    OnDataChange = DsDataChange
+    Left = 334
+    Top = 7
+  end
+  object Qr_Direitos: TOraQuery
+    Session = FrmPrincipal.DB
+    SQL.Strings = (
+      'Select MAX(ID_RECURSO) ID_RECURSO'
+      '  From Sct_Direitos_Us'
+      ' Where ID_Modulo = 9 '
+      '   And ID_JANELA = 59'
+      '   And ID_RECURSO in ( 4,5 )'
+      '   AND ID_Usuario = :ID_Usuario')
+    Left = 307
+    Top = 7
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'ID_Usuario'
+        Value = nil
+      end>
+    object Qr_DireitosID_RECURSO: TFloatField
+      FieldName = 'ID_RECURSO'
+    end
+  end
+  object QryTemp: TOraQuery
+    Left = 365
+    Top = 7
+  end
+  object Qr: TSmartQuery
     KeyFields = 'ID_CHAMADOS'
     KeySequence = 'SMART.ID_CHAMADOS_DACAR_CHAMADOS'
     SQLInsert.Strings = (
@@ -2235,15 +2269,14 @@ object FrmOcorrencias: TFrmOcorrencias
       '  FILIAL            = :FILIAL    '
       'WHERE'
       '  ID_CHAMADOS = :OLD_ID_CHAMADOS')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  DC.ID_CHAMADOS = :ID_CHAMADOS')
     SQLLock.Strings = (
       'SELECT * FROM DACAR_CHAMADOS'
       'WHERE'
       '  ID_CHAMADOS = :ID_CHAMADOS'
       'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  DC.ID_CHAMADOS = :ID_CHAMADOS')
-    LocalUpdate = True
     Session = FrmPrincipal.DB
     SQL.Strings = (
       'SELECT DC.EMPRESA,'
@@ -2264,15 +2297,22 @@ object FrmOcorrencias: TFrmOcorrencias
       ''
       'ORDER BY DC.DT_CHAMADOS DESC, DC.ID_CHAMADOS ')
     CachedUpdates = True
-    BeforePost = QrBeforePost
-    AfterCancel = QrAfterCancel
-    AfterScroll = QrAfterScroll
-    Left = 391
-    Top = 6
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 392
+    Top = 8
     MacroData = <
       item
         Name = 'Macro'
       end>
+    object QrEMPRESA: TStringField
+      FieldName = 'EMPRESA'
+      Size = 2
+    end
+    object QrFILIAL: TIntegerField
+      FieldName = 'FILIAL'
+    end
     object QrID_CHAMADOS: TIntegerField
       FieldName = 'ID_CHAMADOS'
       Required = True
@@ -2307,43 +2347,5 @@ object FrmOcorrencias: TFrmOcorrencias
       FieldName = 'NOME_USUARIO'
       Size = 40
     end
-    object QrEMPRESA: TStringField
-      FieldName = 'EMPRESA'
-      Size = 2
-    end
-    object QrFILIAL: TIntegerField
-      FieldName = 'FILIAL'
-    end
-  end
-  object Ds: TOraDataSource
-    DataSet = Qr
-    OnDataChange = DsDataChange
-    Left = 334
-    Top = 7
-  end
-  object Qr_Direitos: TOraQuery
-    Session = FrmPrincipal.DB
-    SQL.Strings = (
-      'Select MAX(ID_RECURSO) ID_RECURSO'
-      '  From Sct_Direitos_Us'
-      ' Where ID_Modulo = 9 '
-      '   And ID_JANELA = 59'
-      '   And ID_RECURSO in ( 4,5 )'
-      '   AND ID_Usuario = :ID_Usuario')
-    Left = 307
-    Top = 7
-    ParamData = <
-      item
-        DataType = ftUnknown
-        Name = 'ID_Usuario'
-        Value = nil
-      end>
-    object Qr_DireitosID_RECURSO: TFloatField
-      FieldName = 'ID_RECURSO'
-    end
-  end
-  object QryTemp: TOraQuery
-    Left = 365
-    Top = 7
   end
 end

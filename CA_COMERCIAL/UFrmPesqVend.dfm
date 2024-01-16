@@ -1,10 +1,11 @@
 inherited FrmPesqVend: TFrmPesqVend
   Left = 601
   Top = 347
-  Width = 744
-  Height = 403
+  Width = 745
+  Height = 405
   BorderIcons = [biSystemMenu]
   Caption = 'Comercial Dacar - Consulta de Vendedores'
+  Color = clWindow
   Icon.Data = {
     000001000300101000000100200068040000360000002020000001002000A810
     00009E0400003030000001002000A82500004615000028000000100000002000
@@ -480,12 +481,12 @@ inherited FrmPesqVend: TFrmPesqVend
     0FE00FFF0000FFE07FF83FFF0000}
   Position = poDesktopCenter
   OnClose = FormClose
-  ExplicitWidth = 744
-  ExplicitHeight = 403
+  ExplicitWidth = 745
+  ExplicitHeight = 405
   TextHeight = 10
   inherited DBGrid1: TDBGrid
-    Width = 728
-    Height = 194
+    Width = 733
+    Height = 197
     DataSource = DSVend
     OnTitleClick = DBGrid1TitleClick
     Columns = <
@@ -526,8 +527,8 @@ inherited FrmPesqVend: TFrmPesqVend
       end>
   end
   inherited pnlBotoes: TPanel
-    Width = 728
-    ExplicitWidth = 744
+    Width = 733
+    ExplicitWidth = 728
     inherited BitBtn1: TBitBtn
       OnClick = BitBtn1Click
     end
@@ -536,7 +537,7 @@ inherited FrmPesqVend: TFrmPesqVend
     end
   end
   inherited pnlFiltros: TPanel
-    Width = 728
+    Width = 733
     ExplicitWidth = 728
     inherited EdExpre: TEdit
       OnKeyPress = EdExpreKeyPress

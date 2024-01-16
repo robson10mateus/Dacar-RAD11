@@ -5,7 +5,7 @@ interface
 uses
   SysUtils, Types, Classes, {$IFNDEF VER130} Variants {$ENDIF, Types}, Graphics, Controls, Forms, 
   Dialogs, StdCtrls, ExtCtrls, DBCtrls, DB, Ora, MemDS, DBAccess,
-  Mask, Grids, DBGrids, Buttons, ComCtrls, Vcl.ToolWin;
+  Mask, Grids, DBGrids, Buttons, ComCtrls, Vcl.ToolWin, OraSmart;
 
 type
   TFrmCadRegLog = class(TForm)
@@ -52,8 +52,10 @@ type
     DBCodInt: TDBEdit;
     Label3: TLabel;
     Label6: TLabel;
-    QryRegLog: TOraQuery;
     DtSrcRegLog: TOraDataSource;
+    DBRadioGroup7: TDBRadioGroup;
+    QrDireitos: TOraQuery;
+    QryRegLog: TSmartQuery;
     QryRegLogEMPRESA: TStringField;
     QryRegLogFILIAL: TIntegerField;
     QryRegLogID_REGILOGI: TFloatField;
@@ -61,8 +63,6 @@ type
     QryRegLogFX_REGILOGI: TStringField;
     QryRegLogID_INTEREGILOGI: TStringField;
     QryRegLogGN_RISCREGILOGI: TIntegerField;
-    DBRadioGroup7: TDBRadioGroup;
-    QrDireitos: TOraQuery;
     Function  Atual_ToolBar(BtOrdem:Integer):string;
     procedure LDcomponentes(LD:boolean);
     procedure SB_PRIMEIROClick(Sender: TObject);

@@ -265,7 +265,7 @@ begin
     if Odd( DataSource.DataSet.RecNo) then
       Canvas.Brush.Color := $00FFF2D9
     else
-      Canvas.Brush.Color := clBackground;
+      Canvas.Brush.Color := clWindow;
 
     Canvas.Font.Color  := clBlack;
     Canvas.FillRect(Rect);

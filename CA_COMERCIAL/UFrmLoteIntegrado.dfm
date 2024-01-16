@@ -25,8 +25,8 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
   object PageControl1: TPageControl
     Left = 0
     Top = 41
-    Width = 965
-    Height = 504
+    Width = 969
+    Height = 505
     ActivePage = TabCriterio
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -38,6 +38,8 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
     ParentFont = False
     TabOrder = 0
     OnChange = PageControl1Change
+    ExplicitWidth = 965
+    ExplicitHeight = 504
     object TabCriterio: TTabSheet
       Caption = 'Crit'#233'rio'
       object Label6: TLabel
@@ -3466,8 +3468,8 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
         object dbg_Galpao: TDBGrid
           Left = 1
           Top = 44
-          Width = 955
-          Height = 182
+          Width = 959
+          Height = 183
           Align = alClient
           DataSource = Ds_LoteGalpao
           Font.Charset = DEFAULT_CHARSET
@@ -5967,7 +5969,7 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 965
+    Width = 969
     Height = 41
     Anchors = []
     ButtonHeight = 37
@@ -5982,10 +5984,10 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
     ParentFont = False
     TabOrder = 1
     OnMouseMove = ToolBar1MouseMove
-    ExplicitWidth = 981
+    ExplicitWidth = 965
     object SB_PRIMEIRO: TSpeedButton
-      Left = 1
-      Top = 4
+      Left = 0
+      Top = 0
       Width = 40
       Height = 37
       Hint = 'Primeiro'
@@ -6177,8 +6179,8 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
       OnMouseMove = SB_PRIMEIROMouseMove
     end
     object SB_ANTERIOR: TSpeedButton
-      Left = 41
-      Top = 4
+      Left = 40
+      Top = 0
       Width = 39
       Height = 37
       Hint = 'Anterior'
@@ -6370,8 +6372,8 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
       OnMouseMove = SB_ANTERIORMouseMove
     end
     object SB_PROXIMO: TSpeedButton
-      Left = 80
-      Top = 4
+      Left = 79
+      Top = 0
       Width = 39
       Height = 37
       Hint = 'Pr'#243'ximo'
@@ -6563,8 +6565,8 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
       OnMouseMove = SB_PROXIMOMouseMove
     end
     object SB_ULTIMO: TSpeedButton
-      Left = 119
-      Top = 4
+      Left = 118
+      Top = 0
       Width = 39
       Height = 37
       Hint = #218'ltimo'
@@ -6756,8 +6758,8 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
       OnMouseMove = SB_ULTIMOMouseMove
     end
     object SB_NOVO: TSpeedButton
-      Left = 166
-      Top = 4
+      Left = 157
+      Top = 0
       Width = 39
       Height = 37
       Hint = 'Incluir Novo Lote'
@@ -6949,8 +6951,8 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
       OnMouseMove = SB_NOVOMouseMove
     end
     object SB_EXCLUI: TSpeedButton
-      Left = 244
-      Top = 4
+      Left = 196
+      Top = 0
       Width = 39
       Height = 37
       Hint = 'Excluir'
@@ -7143,8 +7145,8 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
       OnMouseMove = SB_EXCLUIMouseMove
     end
     object SB_CONFIRMA: TSpeedButton
-      Left = 322
-      Top = 4
+      Left = 235
+      Top = 0
       Width = 40
       Height = 37
       Hint = 'Confirmar'
@@ -7336,8 +7338,8 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
       OnMouseMove = SB_CONFIRMAMouseMove
     end
     object SB_CANCEL: TSpeedButton
-      Left = 362
-      Top = 4
+      Left = 275
+      Top = 0
       Width = 40
       Height = 37
       Hint = 'Cancelar'
@@ -7529,8 +7531,8 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
       OnMouseMove = SB_CANCELMouseMove
     end
     object Sb_Sair: TSpeedButton
-      Left = 322
-      Top = 41
+      Left = 315
+      Top = 0
       Width = 40
       Height = 37
       Hint = 'Sair'
@@ -7721,8 +7723,8 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
       OnMouseMove = Sb_SairMouseMove
     end
     object SB_EDIT: TSpeedButton
-      Left = 205
-      Top = 4
+      Left = 355
+      Top = 0
       Width = 39
       Height = 37
       Hint = 'Editar'
@@ -7914,8 +7916,8 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
       OnMouseMove = SB_EDITMouseMove
     end
     object SB_ATUAL: TSpeedButton
-      Left = 283
-      Top = 4
+      Left = 394
+      Top = 0
       Width = 39
       Height = 37
       Hint = 'Atualizar'
@@ -8107,8 +8109,8 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
       OnMouseMove = SB_ATUALMouseMove
     end
     object btn_RelAnalitico: TSpeedButton
-      Left = 410
-      Top = 4
+      Left = 433
+      Top = 0
       Width = 89
       Height = 37
       Hint = 'Relat'#243'rio Analitico'
@@ -8133,8 +8135,8 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
       OnClick = btn_RelAnaliticoClick
     end
     object btn_Boletim: TSpeedButton
-      Left = 499
-      Top = 4
+      Left = 522
+      Top = 0
       Width = 89
       Height = 37
       Hint = 'Boletim Sanit'#225'rio'
@@ -8159,8 +8161,8 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
       OnClick = btn_BoletimClick
     end
     object btn_RacaAves: TSpeedButton
-      Left = 588
-      Top = 4
+      Left = 611
+      Top = 0
       Width = 89
       Height = 37
       Hint = 'Ra'#231#227'o e Aves'
@@ -8185,16 +8187,16 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
       OnClick = btn_RacaAvesClick
     end
     object ToolButton1: TToolButton
-      Left = 158
-      Top = 4
+      Left = 700
+      Top = 0
       Width = 8
       Caption = 'ToolButton1'
       Style = tbsSeparator
       OnMouseMove = ToolButton1MouseMove
     end
     object ToolButton2: TToolButton
-      Left = 402
-      Top = 4
+      Left = 708
+      Top = 0
       Width = 8
       Caption = 'ToolButton2'
       ImageIndex = 0
@@ -8202,8 +8204,8 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
       OnMouseMove = ToolButton2MouseMove
     end
     object ToolButton3: TToolButton
-      Left = 1
-      Top = 41
+      Left = 716
+      Top = 0
       Width = 321
       Caption = 'ToolButton3'
       ImageIndex = 1
@@ -8213,8 +8215,8 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
   end
   object Panel1: TPanel
     Left = 0
-    Top = 545
-    Width = 965
+    Top = 546
+    Width = 969
     Height = 17
     Align = alBottom
     Color = clWindow
@@ -8227,238 +8229,8 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
-    ExplicitTop = 584
-    ExplicitWidth = 981
-  end
-  object Qr: TOraQuery
-    KeyFields = 'ID_LOTE'
-    KeySequence = 'SMART.SEQ_ID_LOTE'
-    SQLInsert.Strings = (
-      'INSERT INTO INTEGRADO_ALOJAMENTO'
-      
-        '  (EMPRESA, FILIAL, ID_LOTE, DATA_ALOJAMENTO, ID_USUARIO, ID_INT' +
-        'EGRADO,  FL_STATUS, DT_FECHAMENTO, SOBRA_RACAO, MORTALIDADE,  PR' +
-        'ECO_AVE_FINAL, VL_PAGTO_FINAL, MORT_PRIM_SEMANA , '
-      'ID_NUCLEO, DATA_INCLOTE, QTD_ALOJ  )'
-      'VALUES'
-      
-        '  (:EMPRESA, :FILIAL, :ID_LOTE, :DATA_ALOJAMENTO, :ID_USUARIO, :' +
-        'ID_INTEGRADO,  :FL_STATUS, :DT_FECHAMENTO, :SOBRA_RACAO, :MORTAL' +
-        'IDADE, :PRECO_AVE_FINAL, :VL_PAGTO_FINAL, :MORT_PRIM_SEMANA, '
-      ' :ID_NUCLEO, :DATA_INCLOTE,  :QTD_ALOJ )')
-    SQLDelete.Strings = (
-      'DELETE FROM INTEGRADO_ALOJAMENTO'
-      'WHERE'
-      '  ID_LOTE = :ID_LOTE')
-    SQLUpdate.Strings = (
-      'UPDATE INTEGRADO_ALOJAMENTO'
-      'SET'
-      '  DATA_ALOJAMENTO = :DATA_ALOJAMENTO,'
-      '  ID_USUARIO = :ID_USUARIO ,'
-      ' ID_INTEGRADO = :ID_INTEGRADO,'
-      '  FL_STATUS    = :FL_STATUS , '
-      ' DT_FECHAMENTO = :DT_FECHAMENTO,'
-      ' SOBRA_RACAO = :SOBRA_RACAO , '
-      ' MORTALIDADE  = :MORTALIDADE ,'
-      '  PER_MORTALIDADE = :PER_MORTALIDADE  ,'
-      '   CONV_ALIMENTAR  = :CONV_ALIMENTAR ,'
-      '   GANHO_PESO_DIA  = :GANHO_PESO_DIA ,            '
-      '   PESO_MEDIO    = :PESO_MEDIO   ,'
-      '   IEP    = :IEP          ,'
-      '   PRECO_AVE   = :PRECO_AVE     ,'
-      '   DATA_PAGTO  = :DATA_PAGTO     ,'
-      '   VL_PAGTO  = :VL_PAGTO ,'
-      '  AVES_ALOJ = :AVES_ALOJ ,'
-      '  AVES_ABAT = :AVES_ABAT ,'
-      '  TOT_KG      = :TOT_KG ,'
-      '  IDADE        = :IDADE ,'
-      '  TOTAL_RACAO = :TOTAL_RACAO,'
-      '  PRECO_AVE_FINAL = :PRECO_AVE_FINAL,'
-      ' VL_PAGTO_FINAL  = :VL_PAGTO_FINAL,'
-      ' MORT_PRIM_SEMANA = :MORT_PRIM_SEMANA,'
-      'ID_NUCLEO = :ID_NUCLEO,'
-      'DATA_INCLOTE = :DATA_INCLOTE, '
-      'QTD_ALOJ = :QTD_ALOJ'
-      'WHERE'
-      '  ID_LOTE = :OLD_ID_LOTE')
-    SQLLock.Strings = (
-      'SELECT * FROM INTEGRADO_ALOJAMENTO'
-      'WHERE'
-      '  ID_LOTE = :ID_LOTE'
-      'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  A.ID_LOTE = :ID_LOTE')
-    Session = FrmPrincipal.DB
-    SQL.Strings = (
-      
-        'Select Distinct A.EMPRESA , A.FILIAL, A.ID_LOTE, A.DATA_ALOJAMEN' +
-        'TO, A.ID_USUARIO,'
-      
-        '           A.ID_INTEGRADO ,F.ID_FORNECEDOR, F.NM_FORNECEDOR , U.' +
-        'NOME_USUARIO,'
-      
-        '           A.FL_STATUS, A.DT_FECHAMENTO , F.NR_CNPJFORN , A.SOBR' +
-        'A_RACAO ,  A.MORTALIDADE,'
-      
-        '           A.PER_MORTALIDADE   , A.CONV_ALIMENTAR   , A.GANHO_PE' +
-        'SO_DIA,  A.PESO_MEDIO       ,'
-      
-        '           A.IEP, A.PRECO_AVE, A.DATA_PAGTO, A.VL_PAGTO,  A.AVES' +
-        '_ALOJ ,'
-      
-        '          A.AVES_ABAT, A.TOT_KG , A.IDADE ,  A.TOTAL_RACAO,  A.P' +
-        'RECO_AVE_FINAL,'
-      '         A.VL_PAGTO_FINAL, A.MORT_PRIM_SEMANA,'
-      '       CASE WHEN A.FL_STATUS = '#39'AB'#39' THEN '#39'ABERTO'#39' '
-      '                 WHEN A.FL_STATUS =  '#39'PR'#39' THEN '#39'PREVIS'#195'O'#39'  '
-      '                WHEN A.FL_STATUS = '#39'FE'#39' THEN '#39'FECHADO'#39' '
-      '                WHEN A.FL_STATUS = '#39'CN'#39' THEN '#39'CANCELADO'#39' '
-      '           END STATUS, A.ID_NUCLEO, A.DATA_INCLOTE, A.QTD_ALOJ,'
-      
-        '      CASE WHEN A.FL_STATUS in ( '#39'AB'#39') THEN  TRUNC ( TRUNC(sysda' +
-        'te) - TRUNC (A.DATA_ALOJAMENTO)) '
-      '              ELSE A.IDADE END IDADEK , NG.DESC_NUCLEO'
-      '  From INTEGRADO_ALOJAMENTO A'
-      '  Left Join INTEGRADO I'
-      '    On A.ID_INTEGRADO = I.ID_INTEGRADO'
-      '  Left Join FORNECEDOR F'
-      '    On I.ID_FORNECEDOR = F.ID_FORNECEDOR'
-      '  Left Join Sct_Usuario U'
-      '    On A.ID_USUARIO = U.ID_USUARIO'
-      '  Left join NUCLEO_GALPAO NG'
-      '    On A.ID_NUCLEO = NG.ID_NUCLEO'
-      ' left Join Integrado_Alojamento_Fornec AF'
-      '   On A.ID_LOTE = AF.ID_LOTE'
-      ' ')
-    FetchAll = True
-    CachedUpdates = True
-    IndexFieldNames = 'ID_LOTE'
-    AfterOpen = QrAfterOpen
-    BeforePost = QrBeforePost
-    AfterCancel = Qr_AlojamentoFornecAfterCancel
-    AfterScroll = QrAfterScroll
-    Left = 432
-    Top = 8
-    object QrEMPRESA: TStringField
-      FieldName = 'EMPRESA'
-      Required = True
-      Size = 2
-    end
-    object QrFILIAL: TIntegerField
-      FieldName = 'FILIAL'
-      Required = True
-    end
-    object QrID_LOTE: TFloatField
-      FieldName = 'ID_LOTE'
-    end
-    object QrDATA_ALOJAMENTO: TDateTimeField
-      FieldName = 'DATA_ALOJAMENTO'
-    end
-    object QrID_USUARIO: TFloatField
-      FieldName = 'ID_USUARIO'
-    end
-    object QrID_INTEGRADO: TFloatField
-      FieldName = 'ID_INTEGRADO'
-      Required = True
-    end
-    object QrNM_FORNECEDOR: TStringField
-      FieldName = 'NM_FORNECEDOR'
-      Size = 40
-    end
-    object QrID_FORNECEDOR: TFloatField
-      FieldName = 'ID_FORNECEDOR'
-    end
-    object QrNOME_USUARIO: TStringField
-      FieldName = 'NOME_USUARIO'
-      Size = 40
-    end
-    object QrFL_STATUS: TStringField
-      FieldName = 'FL_STATUS'
-      Size = 2
-    end
-    object QrDT_FECHAMENTO: TDateTimeField
-      FieldName = 'DT_FECHAMENTO'
-    end
-    object QrNR_CNPJFORN: TStringField
-      FieldName = 'NR_CNPJFORN'
-      EditMask = '99.999.999/9999-99;0;_'
-      Size = 14
-    end
-    object QrSOBRA_RACAO: TFloatField
-      FieldName = 'SOBRA_RACAO'
-    end
-    object QrMORTALIDADE: TFloatField
-      FieldName = 'MORTALIDADE'
-    end
-    object QrPER_MORTALIDADE: TFloatField
-      FieldName = 'PER_MORTALIDADE'
-    end
-    object QrCONV_ALIMENTAR: TFloatField
-      FieldName = 'CONV_ALIMENTAR'
-    end
-    object QrGANHO_PESO_DIA: TFloatField
-      FieldName = 'GANHO_PESO_DIA'
-    end
-    object QrPESO_MEDIO: TFloatField
-      FieldName = 'PESO_MEDIO'
-    end
-    object QrIEP: TFloatField
-      FieldName = 'IEP'
-    end
-    object QrPRECO_AVE: TFloatField
-      FieldName = 'PRECO_AVE'
-    end
-    object QrDATA_PAGTO: TDateTimeField
-      FieldName = 'DATA_PAGTO'
-    end
-    object QrVL_PAGTO: TFloatField
-      FieldName = 'VL_PAGTO'
-    end
-    object QrAVES_ALOJ: TFloatField
-      FieldName = 'AVES_ALOJ'
-    end
-    object QrAVES_ABAT: TFloatField
-      FieldName = 'AVES_ABAT'
-    end
-    object QrTOT_KG: TFloatField
-      FieldName = 'TOT_KG'
-    end
-    object QrIDADE: TFloatField
-      FieldName = 'IDADE'
-    end
-    object QrTOTAL_RACAO: TFloatField
-      FieldName = 'TOTAL_RACAO'
-    end
-    object QrPRECO_AVE_FINAL: TFloatField
-      FieldName = 'PRECO_AVE_FINAL'
-    end
-    object QrVL_PAGTO_FINAL: TFloatField
-      FieldName = 'VL_PAGTO_FINAL'
-    end
-    object QrMORT_PRIM_SEMANA: TFloatField
-      FieldName = 'MORT_PRIM_SEMANA'
-    end
-    object QrSTATUS: TStringField
-      FieldName = 'STATUS'
-      Size = 9
-    end
-    object QrID_NUCLEO: TFloatField
-      FieldName = 'ID_NUCLEO'
-    end
-    object QrDATA_INCLOTE: TDateTimeField
-      FieldName = 'DATA_INCLOTE'
-    end
-    object QrQTD_ALOJ: TFloatField
-      FieldName = 'QTD_ALOJ'
-    end
-    object QrIDADEK: TFloatField
-      FieldName = 'IDADEK'
-    end
-    object QrDESC_NUCLEO: TStringField
-      FieldName = 'DESC_NUCLEO'
-      Size = 30
-    end
+    ExplicitTop = 545
+    ExplicitWidth = 965
   end
   object Ds: TOraDataSource
     DataSet = Qr
@@ -8532,152 +8304,6 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
     Left = 464
     Top = 38
   end
-  object Qr_AlojamentoFornec: TOraQuery
-    SQLInsert.Strings = (
-      'INSERT INTO INTEGRADO_ALOJAMENTO_FORNEC'
-      
-        '  (EMPRESA, FILIAL, ID_LOTE, ID_FORNECEDOR, NR_NOTA, ID_LINHAGEM' +
-        ', IDADE_MATRIZ, VALOR_PINTAINHO, QUANTIDADE, GTA, DATA_GTA, DATA' +
-        '_RECEB, SEQ_NOTA  )'
-      'VALUES'
-      
-        '  (:EMPRESA, :FILIAL, :ID_LOTE, :ID_FORNECEDOR, :NR_NOTA, :ID_LI' +
-        'NHAGEM, :IDADE_MATRIZ, :VALOR_PINTAINHO, :QUANTIDADE, :GTA, :DAT' +
-        'A_GTA, :DATA_RECEB, :SEQ_NOTA  )')
-    SQLDelete.Strings = (
-      'DELETE FROM INTEGRADO_ALOJAMENTO_FORNEC'
-      'WHERE'
-      '  ID_LOTE = :ID_LOTE and'
-      '  ID_FORNECEDOR = :ID_FORNECEDOR and'
-      '  NR_NOTA = :NR_NOTA and'
-      '  SEQ_NOTA = :SEQ_NOTA')
-    SQLUpdate.Strings = (
-      'UPDATE INTEGRADO_ALOJAMENTO_FORNEC'
-      'SET'
-      '  EMPRESA = :EMPRESA,'
-      '  FILIAL = :FILIAL,'
-      '  ID_LOTE = :ID_LOTE,'
-      '  ID_FORNECEDOR = :ID_FORNECEDOR,'
-      '  NR_NOTA = :NR_NOTA,'
-      '  ID_LINHAGEM = :ID_LINHAGEM,'
-      '  IDADE_MATRIZ = :IDADE_MATRIZ,'
-      '  VALOR_PINTAINHO = :VALOR_PINTAINHO,'
-      '  QUANTIDADE = :QUANTIDADE,'
-      '  GTA                = :GTA , '
-      '  DATA_GTA     = :DATA_GTA ,'
-      '  DATA_RECEB  = :DATA_RECEB,'
-      '  SEQ_NOTA = :SEQ_NOTA'
-      'WHERE'
-      '  ID_LOTE = :OLD_ID_LOTE and'
-      '  ID_FORNECEDOR = :OLD_ID_FORNECEDOR and'
-      '  NR_NOTA = :OLD_NR_NOTA and'
-      ' SEQ_NOTA = :OLD_SEQ_NOTA')
-    SQLLock.Strings = (
-      'SELECT * FROM INTEGRADO_ALOJAMENTO_FORNEC'
-      'WHERE'
-      '  ID_LOTE = :ID_LOTE and'
-      '  ID_FORNECEDOR = :ID_FORNECEDOR and'
-      '  NR_NOTA = :NR_NOTA'
-      'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  AF.ID_LOTE = :ID_LOTE and'
-      '  AF.ID_FORNECEDOR = :ID_FORNECEDOR and'
-      '  AF.NR_NOTA = :NR_NOTA')
-    Session = FrmPrincipal.DB
-    SQL.Strings = (
-      
-        'Select AF.EMPRESA, AF.FILIAL, AF.ID_LOTE, AF.ID_FORNECEDOR, AF.N' +
-        'R_NOTA, '
-      
-        '       AF.ID_LINHAGEM, AF.IDADE_MATRIZ, AF.VALOR_PINTAINHO, F.NM' +
-        '_FORNECEDOR,'
-      
-        '       L.DESC_LINHAGEM, L.PRORIO_COMPRADO, AF.QUANTIDADE, AF.GTA' +
-        ', AF.DATA_GTA, AF.DATA_RECEB,'
-      '      AF.SEQ_NOTA   '
-      '  From INTEGRADO_ALOJAMENTO_FORNEC AF '
-      ' Inner Join FORNECEDOR F '
-      '    On AF.ID_FORNECEDOR = F.ID_FORNECEDOR'
-      ' Inner Join INTEGRADO_LINHAGEM L'
-      '    On L.ID_LINHAGEM = AF.ID_LINHAGEM')
-    MasterSource = Ds
-    MasterFields = 'ID_LOTE'
-    DetailFields = 'ID_LOTE'
-    FetchAll = True
-    CachedUpdates = True
-    AfterOpen = Qr_AlojamentoFornecAfterOpen
-    AfterInsert = Qr_AlojamentoFornecAfterInsert
-    BeforePost = Qr_AlojamentoFornecBeforePost
-    AfterPost = Qr_AlojamentoFornecAfterPost
-    AfterCancel = Qr_AlojamentoFornecAfterCancel
-    Left = 496
-    Top = 8
-    ParamData = <
-      item
-        DataType = ftUnknown
-        Name = 'ID_LOTE'
-        Value = nil
-      end>
-    object Qr_AlojamentoFornecEMPRESA: TStringField
-      FieldName = 'EMPRESA'
-      Required = True
-      Size = 2
-    end
-    object Qr_AlojamentoFornecFILIAL: TIntegerField
-      FieldName = 'FILIAL'
-      Required = True
-    end
-    object Qr_AlojamentoFornecID_LOTE: TFloatField
-      FieldName = 'ID_LOTE'
-      Required = True
-    end
-    object Qr_AlojamentoFornecID_FORNECEDOR: TFloatField
-      FieldName = 'ID_FORNECEDOR'
-    end
-    object Qr_AlojamentoFornecNR_NOTA: TFloatField
-      FieldName = 'NR_NOTA'
-    end
-    object Qr_AlojamentoFornecID_LINHAGEM: TFloatField
-      FieldName = 'ID_LINHAGEM'
-    end
-    object Qr_AlojamentoFornecIDADE_MATRIZ: TIntegerField
-      FieldName = 'IDADE_MATRIZ'
-    end
-    object Qr_AlojamentoFornecVALOR_PINTAINHO: TFloatField
-      FieldName = 'VALOR_PINTAINHO'
-      DisplayFormat = '0.0000'
-    end
-    object Qr_AlojamentoFornecNM_FORNECEDOR: TStringField
-      FieldName = 'NM_FORNECEDOR'
-      Size = 40
-    end
-    object Qr_AlojamentoFornecDESC_LINHAGEM: TStringField
-      FieldName = 'DESC_LINHAGEM'
-      Size = 40
-    end
-    object Qr_AlojamentoFornecPRORIO_COMPRADO: TStringField
-      FieldName = 'PRORIO_COMPRADO'
-      FixedChar = True
-      Size = 1
-    end
-    object Qr_AlojamentoFornecQUANTIDADE: TFloatField
-      FieldName = 'QUANTIDADE'
-    end
-    object Qr_AlojamentoFornecGTA: TFloatField
-      FieldName = 'GTA'
-    end
-    object Qr_AlojamentoFornecDATA_GTA: TDateTimeField
-      FieldName = 'DATA_GTA'
-    end
-    object Qr_AlojamentoFornecDATA_RECEB: TDateTimeField
-      FieldName = 'DATA_RECEB'
-    end
-    object Qr_AlojamentoFornecSEQ_NOTA: TIntegerField
-      FieldName = 'SEQ_NOTA'
-      Required = True
-    end
-  end
   object Ds_AlojamentoFornec: TOraDataSource
     DataSet = Qr_AlojamentoFornec
     OnStateChange = Ds_AlojamentoFornecStateChange
@@ -8750,108 +8376,6 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
     DataSet = Qr_Linhagem
     Left = 536
     Top = 38
-  end
-  object Qr_LoteGalpao: TOraQuery
-    SQLInsert.Strings = (
-      'INSERT INTO INTEGRADO_ALOJAMENTO_GALPAO'
-      '  ( EMPRESA, FILIAL, ID_LOTE, ID_GALPAO, TIPO, QTDE )'
-      'VALUES'
-      '  ( :EMPRESA, :FILIAL, :ID_LOTE, :ID_GALPAO, :TIPO, :QTDE )')
-    SQLDelete.Strings = (
-      'DELETE FROM INTEGRADO_ALOJAMENTO_GALPAO'
-      'WHERE'
-      '  ID_LOTE = :ID_LOTE and'
-      '  ID_GALPAO = :ID_GALPAO')
-    SQLUpdate.Strings = (
-      'UPDATE INTEGRADO_ALOJAMENTO_GALPAO'
-      'SET'
-      '  ID_GALPAO = :ID_GALPAO,'
-      '  TIPO = :TIPO,'
-      '  QTDE = :QTDE'
-      'WHERE'
-      '  ID_LOTE = :OLD_ID_LOTE and'
-      '  ID_GALPAO = :OLD_ID_GALPAO')
-    SQLLock.Strings = (
-      'SELECT * FROM INTEGRADO_ALOJAMENTO_GALPAO'
-      'WHERE'
-      '  ID_LOTE = :ID_LOTE and'
-      '  ID_GALPAO = :ID_GALPAO'
-      'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  LG.ID_LOTE = :ID_LOTE and'
-      '  LG.ID_GALPAO = :ID_GALPAO')
-    Session = FrmPrincipal.DB
-    SQL.Strings = (
-      
-        'Select LG.EMPRESA, LG.FILIAL, LG.ID_LOTE, LG.ID_GALPAO, LG.TIPO,' +
-        ' LG.QTDE , IG.DESC_GALPAO,'
-      'IG.LARG_GALPAO, IG.COMPR_GALPAO, IG.AREA_GALPAO,'
-      'CASE LG.TIPO WHEN '#39'MA'#39' THEN '#39'Macho'#39
-      '                    WHEN '#39'FE'#39' THEN '#39'F'#234'mea'#39
-      '                    WHEN '#39'MI'#39' THEN '#39'Misto'#39' END Desc_Tipo '
-      '  From INTEGRADO_ALOJAMENTO_GALPAO LG '
-      ' Inner Join INTEGRADO_GALPAO IG'
-      '    On LG.ID_GALPAO =  IG.ID_GALPAO')
-    MasterSource = Ds
-    MasterFields = 'ID_LOTE'
-    DetailFields = 'ID_LOTE'
-    FetchAll = True
-    CachedUpdates = True
-    AfterOpen = Qr_LoteGalpaoAfterOpen
-    AfterInsert = Qr_LoteGalpaoAfterInsert
-    BeforePost = Qr_LoteGalpaoBeforePost
-    AfterPost = Qr_LoteGalpaoAfterPost
-    Left = 568
-    Top = 8
-    ParamData = <
-      item
-        DataType = ftUnknown
-        Name = 'ID_LOTE'
-        Value = nil
-      end>
-    object Qr_LoteGalpaoEMPRESA: TStringField
-      FieldName = 'EMPRESA'
-      Required = True
-      Size = 2
-    end
-    object Qr_LoteGalpaoFILIAL: TIntegerField
-      FieldName = 'FILIAL'
-      Required = True
-    end
-    object Qr_LoteGalpaoID_LOTE: TFloatField
-      FieldName = 'ID_LOTE'
-      Required = True
-    end
-    object Qr_LoteGalpaoID_GALPAO: TFloatField
-      FieldName = 'ID_GALPAO'
-      Required = True
-    end
-    object Qr_LoteGalpaoTIPO: TStringField
-      FieldName = 'TIPO'
-      Size = 2
-    end
-    object Qr_LoteGalpaoDESC_GALPAO: TStringField
-      FieldName = 'DESC_GALPAO'
-      Size = 25
-    end
-    object Qr_LoteGalpaoLARG_GALPAO: TFloatField
-      FieldName = 'LARG_GALPAO'
-    end
-    object Qr_LoteGalpaoCOMPR_GALPAO: TFloatField
-      FieldName = 'COMPR_GALPAO'
-    end
-    object Qr_LoteGalpaoAREA_GALPAO: TFloatField
-      FieldName = 'AREA_GALPAO'
-    end
-    object Qr_LoteGalpaoDESC_TIPO: TStringField
-      FieldName = 'DESC_TIPO'
-      FixedChar = True
-      Size = 5
-    end
-    object Qr_LoteGalpaoQTDE: TFloatField
-      FieldName = 'QTDE'
-    end
   end
   object Ds_LoteGalpao: TOraDataSource
     DataSet = Qr_LoteGalpao
@@ -8967,139 +8491,6 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
     DataSet = Qr_Galpao
     Left = 600
     Top = 38
-  end
-  object Qr_Retirada: TOraQuery
-    SQLInsert.Strings = (
-      'INSERT INTO INTEGRADO_RETIRADA'
-      
-        '  (EMPRESA, FILIAL, ID_LOTE, ID_NOTAFISC, QTD_AVESABAT, PESO_AVE' +
-        'S, TURMA, VL_UNIT, GTA , MORTALIDADE )'
-      'VALUES'
-      
-        '  (:EMPRESA, :FILIAL, :ID_LOTE, :ID_NOTAFISC, :QTD_AVESABAT, :PE' +
-        'SO_AVES, :TURMA, :VL_UNIT, :GTA , :MORTALIDADE )')
-    SQLDelete.Strings = (
-      'DELETE FROM INTEGRADO_RETIRADA'
-      'WHERE'
-      '  ID_LOTE = :ID_LOTE and'
-      '  ID_NOTAFISC = :ID_NOTAFISC')
-    SQLUpdate.Strings = (
-      'UPDATE INTEGRADO_RETIRADA'
-      'SET'
-      '  QTD_AVESABAT = :QTD_AVESABAT,'
-      '  PESO_AVES = :PESO_AVES,'
-      '  TURMA = :TURMA ,'
-      ' VL_UNIT = :VL_UNIT,'
-      '    GTA = :GTA , '
-      'MORTALIDADE = :MORTALIDADE'
-      'WHERE'
-      '  ID_LOTE = :OLD_ID_LOTE and'
-      '  ID_NOTAFISC = :OLD_ID_NOTAFISC')
-    SQLLock.Strings = (
-      'SELECT * FROM INTEGRADO_RETIRADA'
-      'WHERE'
-      '  ID_LOTE = :ID_LOTE and'
-      '  ID_NOTAFISC = :ID_NOTAFISC'
-      'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  ID_LOTE = :ID_LOTE and'
-      '  ID_NOTAFISC = :ID_NOTAFISC')
-    Session = FrmPrincipal.DB
-    SQL.Strings = (
-      
-        'Select IR.EMPRESA , IR.FILIAL, IR.ID_LOTE , IR.ID_NOTAFISC, NF.N' +
-        'R_NOTAFISC, '
-      
-        '       NF.DT_SAIDNOTAFISC, IR.QTD_AVESABAT, IR.PESO_AVES, IR.TUR' +
-        'MA,'
-      
-        '       IR.VL_UNIT, NF.GN_PLACVEICNOTAFISC PLACAVEIC , IR.GTA , I' +
-        'R.MORTALIDADE,'
-      '      IR.PER_MORTBOLETIM '
-      '  From INTEGRADO_RETIRADA IR'
-      ' Inner Join NOTA_FISCAL NF '
-      '   On IR.ID_NOTAFISC = NF.ID_NOTAFISC'
-      'Where IR.ID_LOTE =  :ID_LOTE'
-      'ORDER BY NF.NR_NOTAFISC')
-    FetchAll = True
-    CachedUpdates = True
-    AfterOpen = Qr_RetiradaAfterOpen
-    BeforePost = Qr_RetiradaBeforePost
-    AfterPost = Qr_RetiradaAfterPost
-    AfterCancel = Qr_RetiradaAfterCancel
-    OnCalcFields = Qr_RetiradaCalcFields
-    Left = 784
-    Top = 72
-    ParamData = <
-      item
-        DataType = ftUnknown
-        Name = 'ID_LOTE'
-        Value = nil
-      end>
-    object Qr_RetiradaEMPRESA: TStringField
-      FieldName = 'EMPRESA'
-      Required = True
-      Size = 2
-    end
-    object Qr_RetiradaFILIAL: TIntegerField
-      FieldName = 'FILIAL'
-      Required = True
-    end
-    object Qr_RetiradaID_LOTE: TFloatField
-      FieldName = 'ID_LOTE'
-      Required = True
-    end
-    object Qr_RetiradaID_NOTAFISC: TFloatField
-      FieldName = 'ID_NOTAFISC'
-      Required = True
-    end
-    object Qr_RetiradaNR_NOTAFISC: TFloatField
-      FieldName = 'NR_NOTAFISC'
-    end
-    object Qr_RetiradaDT_SAIDNOTAFISC: TDateTimeField
-      FieldName = 'DT_SAIDNOTAFISC'
-    end
-    object Qr_RetiradaQTD_AVESABAT: TFloatField
-      FieldName = 'QTD_AVESABAT'
-    end
-    object Qr_RetiradaPESO_AVES: TFloatField
-      FieldName = 'PESO_AVES'
-    end
-    object Qr_RetiradaTURMA: TIntegerField
-      FieldName = 'TURMA'
-    end
-    object Qr_RetiradaPeso_Medio: TFloatField
-      FieldKind = fkCalculated
-      FieldName = 'Peso_Medio'
-      DisplayFormat = '#,###.000'
-      Calculated = True
-    end
-    object Qr_RetiradaVL_UNIT: TFloatField
-      FieldName = 'VL_UNIT'
-    end
-    object Qr_RetiradaPLACAVEIC: TStringField
-      FieldName = 'PLACAVEIC'
-      Size = 10
-    end
-    object Qr_RetiradaLkp_Turma: TStringField
-      FieldKind = fkLookup
-      FieldName = 'Lkp_Turma'
-      LookupDataSet = Qr_Turma
-      LookupKeyFields = 'TURMA'
-      LookupResultField = 'NM_FORNECEDOR'
-      KeyFields = 'TURMA'
-      Lookup = True
-    end
-    object Qr_RetiradaGTA: TFloatField
-      FieldName = 'GTA'
-    end
-    object Qr_RetiradaMORTALIDADE: TFloatField
-      FieldName = 'MORTALIDADE'
-    end
-    object Qr_RetiradaPER_MORTBOLETIM: TFloatField
-      FieldName = 'PER_MORTBOLETIM'
-    end
   end
   object Ds_Retirada: TOraDataSource
     DataSet = Qr_Retirada
@@ -9692,102 +9083,6 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
     Left = 816
     Top = 134
   end
-  object Qr_Lancto: TOraQuery
-    KeyFields = 'ID_LANCLOTE'
-    KeySequence = 'SEQ_ID_LANCLOTE'
-    SQLInsert.Strings = (
-      'INSERT INTO INTEGRADO_ALOJ_LANCAM'
-      
-        '  (EMPRESA, FILIAL, ID_LOTE, ID_LANCLOTE, TIPO_LANC, DESC_LANC, ' +
-        'VALOR_LANC)'
-      'VALUES'
-      
-        '  (:EMPRESA, :FILIAL, :ID_LOTE, :ID_LANCLOTE, :TIPO_LANC, :DESC_' +
-        'LANC, :VALOR_LANC)')
-    SQLDelete.Strings = (
-      'DELETE FROM INTEGRADO_ALOJ_LANCAM'
-      'WHERE'
-      '  ID_LANCLOTE = :ID_LANCLOTE')
-    SQLUpdate.Strings = (
-      'UPDATE INTEGRADO_ALOJ_LANCAM'
-      'SET'
-      '  TIPO_LANC = :TIPO_LANC,'
-      '  DESC_LANC = :DESC_LANC,'
-      '  VALOR_LANC = :VALOR_LANC'
-      'WHERE'
-      '  ID_LANCLOTE = :OLD_ID_LANCLOTE')
-    SQLLock.Strings = (
-      'SELECT * FROM INTEGRADO_ALOJ_LANCAM'
-      'WHERE'
-      '  ID_LANCLOTE = :ID_LANCLOTE'
-      'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  ID_LANCLOTE = :ID_LANCLOTE')
-    Session = FrmPrincipal.DB
-    SQL.Strings = (
-      
-        'Select EMPRESA, FILIAL, ID_LOTE, ID_LANCLOTE, TIPO_LANC, DESC_LA' +
-        'NC, VALOR_LANC '
-      '  from INTEGRADO_ALOJ_LANCAM')
-    MasterSource = Ds
-    MasterFields = 'ID_LOTE'
-    DetailFields = 'ID_LOTE'
-    FetchAll = True
-    CachedUpdates = True
-    AfterOpen = Qr_LanctoAfterOpen
-    AfterInsert = Qr_LanctoAfterInsert
-    BeforePost = Qr_LanctoBeforePost
-    AfterPost = Qr_LanctoAfterPost
-    AfterCancel = Qr_LanctoAfterCancel
-    Left = 696
-    Top = 8
-    ParamData = <
-      item
-        DataType = ftUnknown
-        Name = 'ID_LOTE'
-        Value = nil
-      end>
-    object Qr_LanctoEMPRESA: TStringField
-      FieldName = 'EMPRESA'
-      Required = True
-      Size = 2
-    end
-    object Qr_LanctoFILIAL: TIntegerField
-      FieldName = 'FILIAL'
-      Required = True
-    end
-    object Qr_LanctoID_LOTE: TFloatField
-      FieldName = 'ID_LOTE'
-      Required = True
-    end
-    object Qr_LanctoID_LANCLOTE: TFloatField
-      FieldName = 'ID_LANCLOTE'
-      Required = True
-    end
-    object Qr_LanctoTIPO_LANC: TStringField
-      FieldName = 'TIPO_LANC'
-      FixedChar = True
-      Size = 1
-    end
-    object Qr_LanctoDESC_LANC: TStringField
-      FieldName = 'DESC_LANC'
-      Size = 50
-    end
-    object Qr_LanctoVALOR_LANC: TFloatField
-      FieldName = 'VALOR_LANC'
-      DisplayFormat = '#,###.00'
-    end
-    object Qr_LanctoLkp_TIPO_LANC: TStringField
-      FieldKind = fkLookup
-      FieldName = 'Lkp_TIPO_LANC'
-      LookupDataSet = VT_TIPOLANC
-      LookupKeyFields = 'TIPO_LANC'
-      LookupResultField = 'DES_LANC'
-      KeyFields = 'TIPO_LANC'
-      Lookup = True
-    end
-  end
   object Ds_Lancto: TOraDataSource
     DataSet = Qr_Lancto
     OnStateChange = Ds_LanctoStateChange
@@ -10285,6 +9580,688 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
       end>
     object Qr_DireitosID_RECURSO: TFloatField
       FieldName = 'ID_RECURSO'
+    end
+  end
+  object Qr: TSmartQuery
+    KeyFields = 'ID_LOTE'
+    KeySequence = 'ID_LOTE'
+    SQLInsert.Strings = (
+      'INSERT INTO INTEGRADO_ALOJAMENTO'
+      
+        '  (EMPRESA, FILIAL, ID_LOTE, DATA_ALOJAMENTO, ID_USUARIO, ID_INT' +
+        'EGRADO,  FL_STATUS, DT_FECHAMENTO, SOBRA_RACAO, MORTALIDADE,  PR' +
+        'ECO_AVE_FINAL, VL_PAGTO_FINAL, MORT_PRIM_SEMANA , '
+      'ID_NUCLEO, DATA_INCLOTE, QTD_ALOJ  )'
+      'VALUES'
+      
+        '  (:EMPRESA, :FILIAL, :ID_LOTE, :DATA_ALOJAMENTO, :ID_USUARIO, :' +
+        'ID_INTEGRADO,  :FL_STATUS, :DT_FECHAMENTO, :SOBRA_RACAO, :MORTAL' +
+        'IDADE, :PRECO_AVE_FINAL, :VL_PAGTO_FINAL, :MORT_PRIM_SEMANA, '
+      ' :ID_NUCLEO, :DATA_INCLOTE,  :QTD_ALOJ )')
+    SQLDelete.Strings = (
+      'DELETE FROM INTEGRADO_ALOJAMENTO'
+      'WHERE'
+      '  ID_LOTE = :ID_LOTE')
+    SQLUpdate.Strings = (
+      'UPDATE INTEGRADO_ALOJAMENTO'
+      'SET'
+      '  DATA_ALOJAMENTO = :DATA_ALOJAMENTO,'
+      '  ID_USUARIO = :ID_USUARIO ,'
+      ' ID_INTEGRADO = :ID_INTEGRADO,'
+      '  FL_STATUS    = :FL_STATUS , '
+      ' DT_FECHAMENTO = :DT_FECHAMENTO,'
+      ' SOBRA_RACAO = :SOBRA_RACAO , '
+      ' MORTALIDADE  = :MORTALIDADE ,'
+      '  PER_MORTALIDADE = :PER_MORTALIDADE  ,'
+      '   CONV_ALIMENTAR  = :CONV_ALIMENTAR ,'
+      '   GANHO_PESO_DIA  = :GANHO_PESO_DIA ,            '
+      '   PESO_MEDIO    = :PESO_MEDIO   ,'
+      '   IEP    = :IEP          ,'
+      '   PRECO_AVE   = :PRECO_AVE     ,'
+      '   DATA_PAGTO  = :DATA_PAGTO     ,'
+      '   VL_PAGTO  = :VL_PAGTO ,'
+      '  AVES_ALOJ = :AVES_ALOJ ,'
+      '  AVES_ABAT = :AVES_ABAT ,'
+      '  TOT_KG      = :TOT_KG ,'
+      '  IDADE        = :IDADE ,'
+      '  TOTAL_RACAO = :TOTAL_RACAO,'
+      '  PRECO_AVE_FINAL = :PRECO_AVE_FINAL,'
+      ' VL_PAGTO_FINAL  = :VL_PAGTO_FINAL,'
+      ' MORT_PRIM_SEMANA = :MORT_PRIM_SEMANA,'
+      'ID_NUCLEO = :ID_NUCLEO,'
+      'DATA_INCLOTE = :DATA_INCLOTE, '
+      'QTD_ALOJ = :QTD_ALOJ'
+      'WHERE'
+      '  ID_LOTE = :OLD_ID_LOTE')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  A.ID_LOTE = :ID_LOTE')
+    SQLLock.Strings = (
+      'SELECT * FROM INTEGRADO_ALOJAMENTO'
+      'WHERE'
+      '  ID_LOTE = :ID_LOTE'
+      'FOR UPDATE NOWAIT')
+    Session = FrmPrincipal.DB
+    SQL.Strings = (
+      
+        'Select Distinct A.EMPRESA , A.FILIAL, A.ID_LOTE, A.DATA_ALOJAMEN' +
+        'TO, A.ID_USUARIO,'
+      
+        '           A.ID_INTEGRADO ,F.ID_FORNECEDOR, F.NM_FORNECEDOR , U.' +
+        'NOME_USUARIO,'
+      
+        '           A.FL_STATUS, A.DT_FECHAMENTO , F.NR_CNPJFORN , A.SOBR' +
+        'A_RACAO ,  A.MORTALIDADE,'
+      
+        '           A.PER_MORTALIDADE   , A.CONV_ALIMENTAR   , A.GANHO_PE' +
+        'SO_DIA,  A.PESO_MEDIO       ,'
+      
+        '           A.IEP, A.PRECO_AVE, A.DATA_PAGTO, A.VL_PAGTO,  A.AVES' +
+        '_ALOJ ,'
+      
+        '          A.AVES_ABAT, A.TOT_KG , A.IDADE ,  A.TOTAL_RACAO,  A.P' +
+        'RECO_AVE_FINAL,'
+      '         A.VL_PAGTO_FINAL, A.MORT_PRIM_SEMANA,'
+      '       CASE WHEN A.FL_STATUS = '#39'AB'#39' THEN '#39'ABERTO'#39' '
+      '                 WHEN A.FL_STATUS =  '#39'PR'#39' THEN '#39'PREVIS'#195'O'#39'  '
+      '                WHEN A.FL_STATUS = '#39'FE'#39' THEN '#39'FECHADO'#39' '
+      '                WHEN A.FL_STATUS = '#39'CN'#39' THEN '#39'CANCELADO'#39' '
+      '           END STATUS, A.ID_NUCLEO, A.DATA_INCLOTE, A.QTD_ALOJ,'
+      
+        '      CASE WHEN A.FL_STATUS in ( '#39'AB'#39') THEN  TRUNC ( TRUNC(sysda' +
+        'te) - TRUNC (A.DATA_ALOJAMENTO)) '
+      '              ELSE A.IDADE END IDADEK , NG.DESC_NUCLEO'
+      '  From INTEGRADO_ALOJAMENTO A'
+      '  Left Join INTEGRADO I'
+      '    On A.ID_INTEGRADO = I.ID_INTEGRADO'
+      '  Left Join FORNECEDOR F'
+      '    On I.ID_FORNECEDOR = F.ID_FORNECEDOR'
+      '  Left Join Sct_Usuario U'
+      '    On A.ID_USUARIO = U.ID_USUARIO'
+      '  Left join NUCLEO_GALPAO NG'
+      '    On A.ID_NUCLEO = NG.ID_NUCLEO'
+      ' left Join Integrado_Alojamento_Fornec AF'
+      '   On A.ID_LOTE = AF.ID_LOTE'
+      ' ')
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 432
+    Top = 8
+    object QrEMPRESA: TStringField
+      FieldName = 'EMPRESA'
+      Required = True
+      Size = 2
+    end
+    object QrFILIAL: TIntegerField
+      FieldName = 'FILIAL'
+      Required = True
+    end
+    object QrID_LOTE: TFloatField
+      FieldName = 'ID_LOTE'
+      Required = True
+    end
+    object QrDATA_ALOJAMENTO: TDateTimeField
+      FieldName = 'DATA_ALOJAMENTO'
+    end
+    object QrID_USUARIO: TFloatField
+      FieldName = 'ID_USUARIO'
+    end
+    object QrID_INTEGRADO: TFloatField
+      FieldName = 'ID_INTEGRADO'
+      Required = True
+    end
+    object QrID_FORNECEDOR: TFloatField
+      FieldName = 'ID_FORNECEDOR'
+    end
+    object QrNM_FORNECEDOR: TStringField
+      FieldName = 'NM_FORNECEDOR'
+      Size = 40
+    end
+    object QrNOME_USUARIO: TStringField
+      FieldName = 'NOME_USUARIO'
+      Size = 40
+    end
+    object QrFL_STATUS: TStringField
+      FieldName = 'FL_STATUS'
+      Size = 2
+    end
+    object QrDT_FECHAMENTO: TDateTimeField
+      FieldName = 'DT_FECHAMENTO'
+    end
+    object QrNR_CNPJFORN: TStringField
+      FieldName = 'NR_CNPJFORN'
+      Size = 14
+    end
+    object QrSOBRA_RACAO: TFloatField
+      FieldName = 'SOBRA_RACAO'
+    end
+    object QrMORTALIDADE: TFloatField
+      FieldName = 'MORTALIDADE'
+    end
+    object QrPER_MORTALIDADE: TFloatField
+      FieldName = 'PER_MORTALIDADE'
+    end
+    object QrCONV_ALIMENTAR: TFloatField
+      FieldName = 'CONV_ALIMENTAR'
+    end
+    object QrGANHO_PESO_DIA: TFloatField
+      FieldName = 'GANHO_PESO_DIA'
+    end
+    object QrPESO_MEDIO: TFloatField
+      FieldName = 'PESO_MEDIO'
+    end
+    object QrIEP: TFloatField
+      FieldName = 'IEP'
+    end
+    object QrPRECO_AVE: TFloatField
+      FieldName = 'PRECO_AVE'
+    end
+    object QrDATA_PAGTO: TDateTimeField
+      FieldName = 'DATA_PAGTO'
+    end
+    object QrVL_PAGTO: TFloatField
+      FieldName = 'VL_PAGTO'
+    end
+    object QrAVES_ALOJ: TFloatField
+      FieldName = 'AVES_ALOJ'
+    end
+    object QrAVES_ABAT: TFloatField
+      FieldName = 'AVES_ABAT'
+    end
+    object QrTOT_KG: TFloatField
+      FieldName = 'TOT_KG'
+    end
+    object QrIDADE: TFloatField
+      FieldName = 'IDADE'
+    end
+    object QrTOTAL_RACAO: TFloatField
+      FieldName = 'TOTAL_RACAO'
+    end
+    object QrPRECO_AVE_FINAL: TFloatField
+      FieldName = 'PRECO_AVE_FINAL'
+    end
+    object QrVL_PAGTO_FINAL: TFloatField
+      FieldName = 'VL_PAGTO_FINAL'
+    end
+    object QrMORT_PRIM_SEMANA: TFloatField
+      FieldName = 'MORT_PRIM_SEMANA'
+    end
+    object QrSTATUS: TStringField
+      FieldName = 'STATUS'
+      Size = 9
+    end
+    object QrID_NUCLEO: TFloatField
+      FieldName = 'ID_NUCLEO'
+    end
+    object QrDATA_INCLOTE: TDateTimeField
+      FieldName = 'DATA_INCLOTE'
+    end
+    object QrQTD_ALOJ: TFloatField
+      FieldName = 'QTD_ALOJ'
+    end
+    object QrIDADEK: TFloatField
+      FieldName = 'IDADEK'
+    end
+    object QrDESC_NUCLEO: TStringField
+      FieldName = 'DESC_NUCLEO'
+      Size = 30
+    end
+  end
+  object Qr_Retirada: TSmartQuery
+    SQLInsert.Strings = (
+      'INSERT INTO INTEGRADO_RETIRADA'
+      
+        '  (EMPRESA, FILIAL, ID_LOTE, ID_NOTAFISC, QTD_AVESABAT, PESO_AVE' +
+        'S, TURMA, VL_UNIT, GTA , MORTALIDADE )'
+      'VALUES'
+      
+        '  (:EMPRESA, :FILIAL, :ID_LOTE, :ID_NOTAFISC, :QTD_AVESABAT, :PE' +
+        'SO_AVES, :TURMA, :VL_UNIT, :GTA , :MORTALIDADE )')
+    SQLDelete.Strings = (
+      'DELETE FROM INTEGRADO_RETIRADA'
+      'WHERE'
+      '  ID_LOTE = :ID_LOTE and'
+      '  ID_NOTAFISC = :ID_NOTAFISC')
+    SQLUpdate.Strings = (
+      'UPDATE INTEGRADO_RETIRADA'
+      'SET'
+      '  QTD_AVESABAT = :QTD_AVESABAT,'
+      '  PESO_AVES = :PESO_AVES,'
+      '  TURMA = :TURMA ,'
+      ' VL_UNIT = :VL_UNIT,'
+      '    GTA = :GTA , '
+      'MORTALIDADE = :MORTALIDADE'
+      'WHERE'
+      '  ID_LOTE = :OLD_ID_LOTE and'
+      '  ID_NOTAFISC = :OLD_ID_NOTAFISC')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  ID_LOTE = :ID_LOTE and'
+      '  ID_NOTAFISC = :ID_NOTAFISC')
+    SQLLock.Strings = (
+      'SELECT * FROM INTEGRADO_RETIRADA'
+      'WHERE'
+      '  ID_LOTE = :ID_LOTE and'
+      '  ID_NOTAFISC = :ID_NOTAFISC'
+      'FOR UPDATE NOWAIT')
+    Session = FrmPrincipal.DB
+    SQL.Strings = (
+      
+        'Select IR.EMPRESA , IR.FILIAL, IR.ID_LOTE , IR.ID_NOTAFISC, NF.N' +
+        'R_NOTAFISC, '
+      
+        '       NF.DT_SAIDNOTAFISC, IR.QTD_AVESABAT, IR.PESO_AVES, IR.TUR' +
+        'MA,'
+      
+        '       IR.VL_UNIT, NF.GN_PLACVEICNOTAFISC PLACAVEIC , IR.GTA , I' +
+        'R.MORTALIDADE,'
+      '      IR.PER_MORTBOLETIM '
+      '  From INTEGRADO_RETIRADA IR'
+      ' Inner Join NOTA_FISCAL NF '
+      '   On IR.ID_NOTAFISC = NF.ID_NOTAFISC'
+      'Where IR.ID_LOTE =  :ID_LOTE'
+      'ORDER BY NF.NR_NOTAFISC')
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 784
+    Top = 72
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'ID_LOTE'
+        Value = nil
+      end>
+    object Qr_RetiradaEMPRESA: TStringField
+      FieldName = 'EMPRESA'
+      Required = True
+      Size = 2
+    end
+    object Qr_RetiradaFILIAL: TIntegerField
+      FieldName = 'FILIAL'
+      Required = True
+    end
+    object Qr_RetiradaID_LOTE: TFloatField
+      FieldName = 'ID_LOTE'
+      Required = True
+    end
+    object Qr_RetiradaID_NOTAFISC: TFloatField
+      FieldName = 'ID_NOTAFISC'
+      Required = True
+    end
+    object Qr_RetiradaNR_NOTAFISC: TFloatField
+      FieldName = 'NR_NOTAFISC'
+    end
+    object Qr_RetiradaDT_SAIDNOTAFISC: TDateTimeField
+      FieldName = 'DT_SAIDNOTAFISC'
+    end
+    object Qr_RetiradaQTD_AVESABAT: TFloatField
+      FieldName = 'QTD_AVESABAT'
+    end
+    object Qr_RetiradaPESO_AVES: TFloatField
+      FieldName = 'PESO_AVES'
+    end
+    object Qr_RetiradaTURMA: TIntegerField
+      FieldName = 'TURMA'
+    end
+    object Qr_RetiradaPeso_Medio: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'Peso_Medio'
+      DisplayFormat = '#,###.000'
+      Calculated = True
+    end
+    object Qr_RetiradaVL_UNIT: TFloatField
+      FieldName = 'VL_UNIT'
+    end
+    object Qr_RetiradaPLACAVEIC: TStringField
+      FieldName = 'PLACAVEIC'
+      Size = 10
+    end
+    object Qr_RetiradaLkp_Turma: TStringField
+      FieldKind = fkLookup
+      FieldName = 'Lkp_Turma'
+      LookupDataSet = Qr_Turma
+      LookupKeyFields = 'TURMA'
+      LookupResultField = 'NM_FORNECEDOR'
+      KeyFields = 'TURMA'
+      Lookup = True
+    end
+    object Qr_RetiradaGTA: TFloatField
+      FieldName = 'GTA'
+    end
+    object Qr_RetiradaMORTALIDADE: TFloatField
+      FieldName = 'MORTALIDADE'
+    end
+    object Qr_RetiradaPER_MORTBOLETIM: TFloatField
+      FieldName = 'PER_MORTBOLETIM'
+    end
+  end
+  object Qr_LoteGalpao: TSmartQuery
+    SQLInsert.Strings = (
+      'INSERT INTO INTEGRADO_ALOJAMENTO_GALPAO'
+      '  ( EMPRESA, FILIAL, ID_LOTE, ID_GALPAO, TIPO, QTDE )'
+      'VALUES'
+      '  ( :EMPRESA, :FILIAL, :ID_LOTE, :ID_GALPAO, :TIPO, :QTDE )')
+    SQLDelete.Strings = (
+      'DELETE FROM INTEGRADO_ALOJAMENTO_GALPAO'
+      'WHERE'
+      '  ID_LOTE = :ID_LOTE and'
+      '  ID_GALPAO = :ID_GALPAO')
+    SQLUpdate.Strings = (
+      'UPDATE INTEGRADO_ALOJAMENTO_GALPAO'
+      'SET'
+      '  ID_GALPAO = :ID_GALPAO,'
+      '  TIPO = :TIPO,'
+      '  QTDE = :QTDE'
+      'WHERE'
+      '  ID_LOTE = :OLD_ID_LOTE and'
+      '  ID_GALPAO = :OLD_ID_GALPAO')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  LG.ID_LOTE = :ID_LOTE and'
+      '  LG.ID_GALPAO = :ID_GALPAO')
+    SQLLock.Strings = (
+      'SELECT * FROM INTEGRADO_ALOJAMENTO_GALPAO'
+      'WHERE'
+      '  ID_LOTE = :ID_LOTE and'
+      '  ID_GALPAO = :ID_GALPAO'
+      'FOR UPDATE NOWAIT')
+    Session = FrmPrincipal.DB
+    SQL.Strings = (
+      
+        'Select LG.EMPRESA, LG.FILIAL, LG.ID_LOTE, LG.ID_GALPAO, LG.TIPO,' +
+        ' LG.QTDE , IG.DESC_GALPAO,'
+      'IG.LARG_GALPAO, IG.COMPR_GALPAO, IG.AREA_GALPAO,'
+      'CASE LG.TIPO WHEN '#39'MA'#39' THEN '#39'Macho'#39
+      '                    WHEN '#39'FE'#39' THEN '#39'F'#234'mea'#39
+      '                    WHEN '#39'MI'#39' THEN '#39'Misto'#39' END Desc_Tipo '
+      '  From INTEGRADO_ALOJAMENTO_GALPAO LG '
+      ' Inner Join INTEGRADO_GALPAO IG'
+      '    On LG.ID_GALPAO =  IG.ID_GALPAO')
+    MasterFields = 'ID_LOTE'
+    DetailFields = 'ID_LOTE'
+    MasterSource = Ds
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 568
+    Top = 8
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'ID_LOTE'
+        Value = nil
+      end>
+    object Qr_LoteGalpaoEMPRESA: TStringField
+      FieldName = 'EMPRESA'
+      Required = True
+      Size = 2
+    end
+    object Qr_LoteGalpaoFILIAL: TIntegerField
+      FieldName = 'FILIAL'
+      Required = True
+    end
+    object Qr_LoteGalpaoID_LOTE: TFloatField
+      FieldName = 'ID_LOTE'
+      Required = True
+    end
+    object Qr_LoteGalpaoID_GALPAO: TFloatField
+      FieldName = 'ID_GALPAO'
+      Required = True
+    end
+    object Qr_LoteGalpaoTIPO: TStringField
+      FieldName = 'TIPO'
+      Size = 2
+    end
+    object Qr_LoteGalpaoQTDE: TFloatField
+      FieldName = 'QTDE'
+    end
+    object Qr_LoteGalpaoDESC_GALPAO: TStringField
+      FieldName = 'DESC_GALPAO'
+      Size = 25
+    end
+    object Qr_LoteGalpaoLARG_GALPAO: TFloatField
+      FieldName = 'LARG_GALPAO'
+    end
+    object Qr_LoteGalpaoCOMPR_GALPAO: TFloatField
+      FieldName = 'COMPR_GALPAO'
+    end
+    object Qr_LoteGalpaoAREA_GALPAO: TFloatField
+      FieldName = 'AREA_GALPAO'
+    end
+    object Qr_LoteGalpaoDESC_TIPO: TStringField
+      FieldName = 'DESC_TIPO'
+      FixedChar = True
+      Size = 5
+    end
+  end
+  object Qr_AlojamentoFornec: TSmartQuery
+    SQLInsert.Strings = (
+      'INSERT INTO INTEGRADO_ALOJAMENTO_FORNEC'
+      
+        '  (EMPRESA, FILIAL, ID_LOTE, ID_FORNECEDOR, NR_NOTA, ID_LINHAGEM' +
+        ', IDADE_MATRIZ, VALOR_PINTAINHO, QUANTIDADE, GTA, DATA_GTA, DATA' +
+        '_RECEB, SEQ_NOTA  )'
+      'VALUES'
+      
+        '  (:EMPRESA, :FILIAL, :ID_LOTE, :ID_FORNECEDOR, :NR_NOTA, :ID_LI' +
+        'NHAGEM, :IDADE_MATRIZ, :VALOR_PINTAINHO, :QUANTIDADE, :GTA, :DAT' +
+        'A_GTA, :DATA_RECEB, :SEQ_NOTA  )')
+    SQLDelete.Strings = (
+      'DELETE FROM INTEGRADO_ALOJAMENTO_FORNEC'
+      'WHERE'
+      '  ID_LOTE = :ID_LOTE and'
+      '  ID_FORNECEDOR = :ID_FORNECEDOR and'
+      '  NR_NOTA = :NR_NOTA and'
+      '  SEQ_NOTA = :SEQ_NOTA')
+    SQLUpdate.Strings = (
+      'UPDATE INTEGRADO_ALOJAMENTO_FORNEC'
+      'SET'
+      '  EMPRESA = :EMPRESA,'
+      '  FILIAL = :FILIAL,'
+      '  ID_LOTE = :ID_LOTE,'
+      '  ID_FORNECEDOR = :ID_FORNECEDOR,'
+      '  NR_NOTA = :NR_NOTA,'
+      '  ID_LINHAGEM = :ID_LINHAGEM,'
+      '  IDADE_MATRIZ = :IDADE_MATRIZ,'
+      '  VALOR_PINTAINHO = :VALOR_PINTAINHO,'
+      '  QUANTIDADE = :QUANTIDADE,'
+      '  GTA                = :GTA , '
+      '  DATA_GTA     = :DATA_GTA ,'
+      '  DATA_RECEB  = :DATA_RECEB,'
+      '  SEQ_NOTA = :SEQ_NOTA'
+      'WHERE'
+      '  ID_LOTE = :OLD_ID_LOTE and'
+      '  ID_FORNECEDOR = :OLD_ID_FORNECEDOR and'
+      '  NR_NOTA = :OLD_NR_NOTA and'
+      ' SEQ_NOTA = :OLD_SEQ_NOTA')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  AF.ID_LOTE = :ID_LOTE and'
+      '  AF.ID_FORNECEDOR = :ID_FORNECEDOR and'
+      '  AF.NR_NOTA = :NR_NOTA')
+    SQLLock.Strings = (
+      'SELECT * FROM INTEGRADO_ALOJAMENTO_FORNEC'
+      'WHERE'
+      '  ID_LOTE = :ID_LOTE and'
+      '  ID_FORNECEDOR = :ID_FORNECEDOR and'
+      '  NR_NOTA = :NR_NOTA'
+      'FOR UPDATE NOWAIT')
+    Session = FrmPrincipal.DB
+    SQL.Strings = (
+      
+        'Select AF.EMPRESA, AF.FILIAL, AF.ID_LOTE, AF.ID_FORNECEDOR, AF.N' +
+        'R_NOTA, '
+      
+        '       AF.ID_LINHAGEM, AF.IDADE_MATRIZ, AF.VALOR_PINTAINHO, F.NM' +
+        '_FORNECEDOR,'
+      
+        '       L.DESC_LINHAGEM, L.PRORIO_COMPRADO, AF.QUANTIDADE, AF.GTA' +
+        ', AF.DATA_GTA, AF.DATA_RECEB,'
+      '      AF.SEQ_NOTA   '
+      '  From INTEGRADO_ALOJAMENTO_FORNEC AF '
+      ' Inner Join FORNECEDOR F '
+      '    On AF.ID_FORNECEDOR = F.ID_FORNECEDOR'
+      ' Inner Join INTEGRADO_LINHAGEM L'
+      '    On L.ID_LINHAGEM = AF.ID_LINHAGEM')
+    MasterFields = 'ID_LOTE'
+    DetailFields = 'ID_LOTE'
+    MasterSource = Ds
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 496
+    Top = 8
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'ID_LOTE'
+        Value = nil
+      end>
+    object Qr_AlojamentoFornecEMPRESA: TStringField
+      FieldName = 'EMPRESA'
+      Required = True
+      Size = 2
+    end
+    object Qr_AlojamentoFornecFILIAL: TIntegerField
+      FieldName = 'FILIAL'
+      Required = True
+    end
+    object Qr_AlojamentoFornecID_LOTE: TFloatField
+      FieldName = 'ID_LOTE'
+      Required = True
+    end
+    object Qr_AlojamentoFornecID_FORNECEDOR: TFloatField
+      FieldName = 'ID_FORNECEDOR'
+    end
+    object Qr_AlojamentoFornecNR_NOTA: TFloatField
+      FieldName = 'NR_NOTA'
+    end
+    object Qr_AlojamentoFornecID_LINHAGEM: TFloatField
+      FieldName = 'ID_LINHAGEM'
+    end
+    object Qr_AlojamentoFornecIDADE_MATRIZ: TIntegerField
+      FieldName = 'IDADE_MATRIZ'
+    end
+    object Qr_AlojamentoFornecVALOR_PINTAINHO: TFloatField
+      FieldName = 'VALOR_PINTAINHO'
+      DisplayFormat = '0.0000'
+    end
+    object Qr_AlojamentoFornecNM_FORNECEDOR: TStringField
+      FieldName = 'NM_FORNECEDOR'
+      Size = 40
+    end
+    object Qr_AlojamentoFornecDESC_LINHAGEM: TStringField
+      FieldName = 'DESC_LINHAGEM'
+      Size = 40
+    end
+    object Qr_AlojamentoFornecPRORIO_COMPRADO: TStringField
+      FieldName = 'PRORIO_COMPRADO'
+      FixedChar = True
+      Size = 1
+    end
+    object Qr_AlojamentoFornecQUANTIDADE: TFloatField
+      FieldName = 'QUANTIDADE'
+    end
+    object Qr_AlojamentoFornecGTA: TFloatField
+      FieldName = 'GTA'
+    end
+    object Qr_AlojamentoFornecDATA_GTA: TDateTimeField
+      FieldName = 'DATA_GTA'
+    end
+    object Qr_AlojamentoFornecDATA_RECEB: TDateTimeField
+      FieldName = 'DATA_RECEB'
+    end
+    object Qr_AlojamentoFornecSEQ_NOTA: TIntegerField
+      FieldName = 'SEQ_NOTA'
+      Required = True
+    end
+  end
+  object Qr_Lancto: TSmartQuery
+    KeyFields = 'ID_LANCLOTE'
+    SQLInsert.Strings = (
+      'INSERT INTO INTEGRADO_ALOJ_LANCAM'
+      
+        '  (EMPRESA, FILIAL, ID_LOTE, ID_LANCLOTE, TIPO_LANC, DESC_LANC, ' +
+        'VALOR_LANC)'
+      'VALUES'
+      
+        '  (:EMPRESA, :FILIAL, :ID_LOTE, :ID_LANCLOTE, :TIPO_LANC, :DESC_' +
+        'LANC, :VALOR_LANC)')
+    SQLDelete.Strings = (
+      'DELETE FROM INTEGRADO_ALOJ_LANCAM'
+      'WHERE'
+      '  ID_LANCLOTE = :ID_LANCLOTE')
+    SQLUpdate.Strings = (
+      'UPDATE INTEGRADO_ALOJ_LANCAM'
+      'SET'
+      '  TIPO_LANC = :TIPO_LANC,'
+      '  DESC_LANC = :DESC_LANC,'
+      '  VALOR_LANC = :VALOR_LANC'
+      'WHERE'
+      '  ID_LANCLOTE = :OLD_ID_LANCLOTE')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  ID_LANCLOTE = :ID_LANCLOTE')
+    SQLLock.Strings = (
+      'SELECT * FROM INTEGRADO_ALOJ_LANCAM'
+      'WHERE'
+      '  ID_LANCLOTE = :ID_LANCLOTE'
+      'FOR UPDATE NOWAIT')
+    Session = FrmPrincipal.DB
+    SQL.Strings = (
+      
+        'Select EMPRESA, FILIAL, ID_LOTE, ID_LANCLOTE, TIPO_LANC, DESC_LA' +
+        'NC, VALOR_LANC '
+      '  from INTEGRADO_ALOJ_LANCAM')
+    MasterFields = 'ID_LOTE'
+    DetailFields = 'ID_LOTE'
+    MasterSource = Ds
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 696
+    Top = 8
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'ID_LOTE'
+        Value = nil
+      end>
+    object Qr_LanctoEMPRESA: TStringField
+      FieldName = 'EMPRESA'
+      Required = True
+      Size = 2
+    end
+    object Qr_LanctoFILIAL: TIntegerField
+      FieldName = 'FILIAL'
+      Required = True
+    end
+    object Qr_LanctoID_LOTE: TFloatField
+      FieldName = 'ID_LOTE'
+      Required = True
+    end
+    object Qr_LanctoID_LANCLOTE: TFloatField
+      FieldName = 'ID_LANCLOTE'
+      Required = True
+    end
+    object Qr_LanctoTIPO_LANC: TStringField
+      FieldName = 'TIPO_LANC'
+      FixedChar = True
+      Size = 1
+    end
+    object Qr_LanctoDESC_LANC: TStringField
+      FieldName = 'DESC_LANC'
+      Size = 50
+    end
+    object Qr_LanctoVALOR_LANC: TFloatField
+      FieldName = 'VALOR_LANC'
     end
   end
 end

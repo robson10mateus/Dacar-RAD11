@@ -5,7 +5,7 @@ interface
 uses
   SysUtils, Types, Classes, {$IFNDEF VER130} Variants {$ENDIF, Types}, Graphics, Controls, Forms, 
   Dialogs, StdCtrls, ExtCtrls, DBCtrls, ComCtrls, Buttons, Mask,
-  Grids, DBGrids, DB, Ora, MemDS, DBAccess, Vcl.ToolWin;
+  Grids, DBGrids, DB, Ora, MemDS, DBAccess, Vcl.ToolWin, OraSmart;
 
 type
   TFrmCadTipoVeic = class(TForm)
@@ -50,16 +50,8 @@ type
     SB_EDIT: TSpeedButton;
     ToolButton1: TToolButton;
     ToolButton3: TToolButton;
-    QryCadTpVeic: TOraQuery;
     DtSrcCadTpVeic: TOraDataSource;
     QrDireitos: TOraQuery;
-    QryCadTpVeicEMPRESA: TStringField;
-    QryCadTpVeicFILIAL: TIntegerField;
-    QryCadTpVeicID_TIPOVEIC: TFloatField;
-    QryCadTpVeicNM_TIPOVEIC: TStringField;
-    QryCadTpVeicQN_CAPATIPOVEIC: TFloatField;
-    QryCadTpVeicID_UNIDMEDI: TFloatField;
-    QryCadTpVeicFX_TIPOVEIC: TStringField;
     QryUniMed: TOraQuery;
     QryUniMedID_UNIDMEDI: TFloatField;
     QryUniMedSG_UNIDMEDI: TStringField;
@@ -68,6 +60,14 @@ type
     Label4: TLabel;
     DBLookupComboBox1: TDBLookupComboBox;
     Label5: TLabel;
+    QryCadTpVeic: TSmartQuery;
+    QryCadTpVeicEMPRESA: TStringField;
+    QryCadTpVeicFILIAL: TIntegerField;
+    QryCadTpVeicID_TIPOVEIC: TFloatField;
+    QryCadTpVeicNM_TIPOVEIC: TStringField;
+    QryCadTpVeicQN_CAPATIPOVEIC: TFloatField;
+    QryCadTpVeicID_UNIDMEDI: TFloatField;
+    QryCadTpVeicFX_TIPOVEIC: TStringField;
     Function  Atual_ToolBar(BtOrdem:Integer):string;
     procedure LDcomponentes(LD:boolean);
     procedure Sb_SairClick(Sender: TObject);

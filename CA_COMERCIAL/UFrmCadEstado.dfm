@@ -31,6 +31,8 @@ object FrmCadEstado: TFrmCadEstado
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 643
+    ExplicitHeight = 387
     object ToolBar1: TToolBar
       Left = 1
       Top = 1
@@ -47,7 +49,7 @@ object FrmCadEstado: TFrmCadEstado
       Font.Style = []
       ParentFont = False
       TabOrder = 0
-      ExplicitWidth = 639
+      ExplicitWidth = 641
       object SB_PRIMEIRO: TSpeedButton
         Left = 0
         Top = 0
@@ -1356,7 +1358,7 @@ object FrmCadEstado: TFrmCadEstado
       Top = 46
       Width = 645
       Height = 341
-      ActivePage = TabCriterio
+      ActivePage = TabLista
       Align = alClient
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
@@ -1365,6 +1367,8 @@ object FrmCadEstado: TFrmCadEstado
       Font.Style = []
       ParentFont = False
       TabOrder = 1
+      ExplicitWidth = 641
+      ExplicitHeight = 340
       object TabCriterio: TTabSheet
         Caption = 'Criterios'
         OnShow = TabCriterioShow
@@ -2071,136 +2075,6 @@ object FrmCadEstado: TFrmCadEstado
       end
     end
   end
-  object QryCadEstado: TOraQuery
-    KeyFields = 'ID_ESTADO'
-    KeySequence = 'SMART.ID_ESTADO'
-    SQLInsert.Strings = (
-      'INSERT INTO estado'
-      
-        '  (EMPRESA, FILIAL, ID_ESTADO, ID_IBGE, NM_ESTADO, SG_ESTADO, PC' +
-        '_ICMSCONTESTA, PC_ICMSNAOCONTESTA, ID_PAIS, ID_REGIGEOG, FX_ESTA' +
-        'DO)'
-      'VALUES'
-      
-        '  (:EMPRESA, :FILIAL, :ID_ESTADO, :ID_IBGE, :NM_ESTADO, :SG_ESTA' +
-        'DO, :PC_ICMSCONTESTA, :PC_ICMSNAOCONTESTA, :ID_PAIS, :ID_REGIGEO' +
-        'G, :FX_ESTADO)')
-    SQLDelete.Strings = (
-      'DELETE FROM estado'
-      'WHERE'
-      '  ID_ESTADO = :ID_ESTADO')
-    SQLUpdate.Strings = (
-      'UPDATE estado'
-      'SET'
-      '  EMPRESA = :EMPRESA,'
-      '  FILIAL = :FILIAL,'
-      '  ID_ESTADO = :ID_ESTADO,'
-      '  NM_ESTADO = :NM_ESTADO,'
-      '  ID_IBGE = :ID_IBGE,'
-      '  SG_ESTADO = :SG_ESTADO,'
-      '  PC_ICMSCONTESTA = :PC_ICMSCONTESTA,'
-      '  PC_ICMSNAOCONTESTA = :PC_ICMSNAOCONTESTA,'
-      '  ID_PAIS = :ID_PAIS,'
-      '  ID_REGIGEOG = :ID_REGIGEOG,'
-      '  FX_ESTADO = :FX_ESTADO'
-      'WHERE'
-      '  ID_ESTADO = :OLD_ID_ESTADO')
-    SQLLock.Strings = (
-      'SELECT * FROM estado'
-      'WHERE'
-      '  ID_ESTADO = :ID_ESTADO'
-      'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  ID_ESTADO = :ID_ESTADO')
-    LocalUpdate = True
-    SQL.Strings = (
-      'SELECT '
-      '    estado.empresa,'
-      '    estado.filial,'
-      '    estado.id_estado,'
-      '    estado.nm_estado,'
-      '    estado.id_ibge,'
-      '    estado.sg_estado,'
-      '    estado.pc_icmscontesta,'
-      '    estado.pc_icmsnaocontesta,'
-      '    estado.id_pais,'
-      '    estado.id_regigeog,'
-      '    estado.fx_estado,'
-      '    regiao_geografica.nm_regigeog,'
-      '    pais.nm_pais'
-      'FROM'
-      ' estado,'
-      ' pais,'
-      ' regiao_geografica'
-      'WHERE'
-      '   pais.id_pais(+) = estado.id_pais AND'
-      '   regiao_geografica.id_regigeog(+) = estado.id_regigeog')
-    FetchAll = True
-    CachedUpdates = True
-    Left = 555
-    Top = 57
-    object QryCadEstadoEMPRESA: TStringField
-      FieldName = 'EMPRESA'
-      Required = True
-      Size = 2
-    end
-    object QryCadEstadoFILIAL: TIntegerField
-      FieldName = 'FILIAL'
-      Required = True
-    end
-    object QryCadEstadoID_ESTADO: TFloatField
-      AutoGenerateValue = arAutoInc
-      FieldName = 'ID_ESTADO'
-      Required = True
-    end
-    object QryCadEstadoNM_ESTADO: TStringField
-      DisplayLabel = 'Nome Estado'
-      FieldName = 'NM_ESTADO'
-      Required = True
-      Size = 40
-    end
-    object QryCadEstadoSG_ESTADO: TStringField
-      DisplayLabel = 'Estado'
-      DisplayWidth = 10
-      FieldName = 'SG_ESTADO'
-      Required = True
-      Size = 10
-    end
-    object QryCadEstadoPC_ICMSCONTESTA: TFloatField
-      FieldName = 'PC_ICMSCONTESTA'
-      DisplayFormat = '#,##0.00'
-    end
-    object QryCadEstadoPC_ICMSNAOCONTESTA: TFloatField
-      FieldName = 'PC_ICMSNAOCONTESTA'
-      DisplayFormat = '#,##0.00'
-    end
-    object QryCadEstadoID_PAIS: TFloatField
-      FieldName = 'ID_PAIS'
-      Required = True
-    end
-    object QryCadEstadoID_REGIGEOG: TFloatField
-      FieldName = 'ID_REGIGEOG'
-    end
-    object QryCadEstadoFX_ESTADO: TStringField
-      FieldName = 'FX_ESTADO'
-      Required = True
-      Size = 1
-    end
-    object QryCadEstadoNM_REGIGEOG: TStringField
-      DisplayLabel = 'Nome Regi'#227'o Geografica'
-      FieldName = 'NM_REGIGEOG'
-      Size = 30
-    end
-    object QryCadEstadoNM_PAIS: TStringField
-      DisplayLabel = 'Nome Pa'#237's'
-      FieldName = 'NM_PAIS'
-      Size = 40
-    end
-    object QryCadEstadoID_IBGE: TIntegerField
-      FieldName = 'ID_IBGE'
-    end
-  end
   object DtSrcCadEstado: TOraDataSource
     DataSet = QryCadEstado
     Left = 554
@@ -2300,5 +2174,128 @@ object FrmCadEstado: TFrmCadEstado
     DataSet = QryPais
     Left = 353
     Top = 92
+  end
+  object QryCadEstado: TSmartQuery
+    KeyFields = 'ID_ESTADO'
+    KeySequence = 'ID_ESTADO'
+    SQLInsert.Strings = (
+      'INSERT INTO estado'
+      
+        '  (EMPRESA, FILIAL, ID_ESTADO, ID_IBGE, NM_ESTADO, SG_ESTADO, PC' +
+        '_ICMSCONTESTA, PC_ICMSNAOCONTESTA, ID_PAIS, ID_REGIGEOG, FX_ESTA' +
+        'DO)'
+      'VALUES'
+      
+        '  (:EMPRESA, :FILIAL, :ID_ESTADO, :ID_IBGE, :NM_ESTADO, :SG_ESTA' +
+        'DO, :PC_ICMSCONTESTA, :PC_ICMSNAOCONTESTA, :ID_PAIS, :ID_REGIGEO' +
+        'G, :FX_ESTADO)')
+    SQLDelete.Strings = (
+      'DELETE FROM estado'
+      'WHERE'
+      '  ID_ESTADO = :ID_ESTADO')
+    SQLUpdate.Strings = (
+      'UPDATE estado'
+      'SET'
+      '  EMPRESA = :EMPRESA,'
+      '  FILIAL = :FILIAL,'
+      '  ID_ESTADO = :ID_ESTADO,'
+      '  NM_ESTADO = :NM_ESTADO,'
+      '  ID_IBGE = :ID_IBGE,'
+      '  SG_ESTADO = :SG_ESTADO,'
+      '  PC_ICMSCONTESTA = :PC_ICMSCONTESTA,'
+      '  PC_ICMSNAOCONTESTA = :PC_ICMSNAOCONTESTA,'
+      '  ID_PAIS = :ID_PAIS,'
+      '  ID_REGIGEOG = :ID_REGIGEOG,'
+      '  FX_ESTADO = :FX_ESTADO'
+      'WHERE'
+      '  ID_ESTADO = :OLD_ID_ESTADO')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  ID_ESTADO = :ID_ESTADO')
+    SQLLock.Strings = (
+      'SELECT * FROM estado'
+      'WHERE'
+      '  ID_ESTADO = :ID_ESTADO'
+      'FOR UPDATE NOWAIT')
+    SQL.Strings = (
+      'SELECT '
+      '    estado.empresa,'
+      '    estado.filial,'
+      '    estado.id_estado,'
+      '    estado.nm_estado,'
+      '    estado.id_ibge,'
+      '    estado.sg_estado,'
+      '    estado.pc_icmscontesta,'
+      '    estado.pc_icmsnaocontesta,'
+      '    estado.id_pais,'
+      '    estado.id_regigeog,'
+      '    estado.fx_estado,'
+      '    regiao_geografica.nm_regigeog,'
+      '    pais.nm_pais'
+      'FROM'
+      ' estado,'
+      ' pais,'
+      ' regiao_geografica'
+      'WHERE'
+      '   pais.id_pais(+) = estado.id_pais AND'
+      '   regiao_geografica.id_regigeog(+) = estado.id_regigeog')
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 552
+    Top = 56
+    object QryCadEstadoEMPRESA: TStringField
+      FieldName = 'EMPRESA'
+      Required = True
+      Size = 2
+    end
+    object QryCadEstadoFILIAL: TIntegerField
+      FieldName = 'FILIAL'
+      Required = True
+    end
+    object QryCadEstadoID_ESTADO: TFloatField
+      FieldName = 'ID_ESTADO'
+      Required = True
+    end
+    object QryCadEstadoNM_ESTADO: TStringField
+      FieldName = 'NM_ESTADO'
+      Required = True
+      Size = 40
+    end
+    object QryCadEstadoID_IBGE: TIntegerField
+      FieldName = 'ID_IBGE'
+    end
+    object QryCadEstadoSG_ESTADO: TStringField
+      FieldName = 'SG_ESTADO'
+      Required = True
+      Size = 10
+    end
+    object QryCadEstadoPC_ICMSCONTESTA: TFloatField
+      FieldName = 'PC_ICMSCONTESTA'
+    end
+    object QryCadEstadoPC_ICMSNAOCONTESTA: TFloatField
+      FieldName = 'PC_ICMSNAOCONTESTA'
+    end
+    object QryCadEstadoID_PAIS: TFloatField
+      FieldName = 'ID_PAIS'
+      Required = True
+    end
+    object QryCadEstadoID_REGIGEOG: TFloatField
+      FieldName = 'ID_REGIGEOG'
+    end
+    object QryCadEstadoFX_ESTADO: TStringField
+      FieldName = 'FX_ESTADO'
+      Required = True
+      Size = 1
+    end
+    object QryCadEstadoNM_REGIGEOG: TStringField
+      FieldName = 'NM_REGIGEOG'
+      Size = 30
+    end
+    object QryCadEstadoNM_PAIS: TStringField
+      FieldName = 'NM_PAIS'
+      Size = 40
+    end
   end
 end

@@ -25,8 +25,8 @@ object FrmLiberacarga: TFrmLiberacarga
   object PageControl1: TPageControl
     Left = 0
     Top = 82
-    Width = 1063
-    Height = 327
+    Width = 1067
+    Height = 328
     ActivePage = TabSheet2
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -37,6 +37,8 @@ object FrmLiberacarga: TFrmLiberacarga
     Font.Style = []
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 1063
+    ExplicitHeight = 327
     object TabSheet2: TTabSheet
       Caption = 'Detalhe'
       Font.Charset = DEFAULT_CHARSET
@@ -51,7 +53,7 @@ object FrmLiberacarga: TFrmLiberacarga
         Left = 0
         Top = 0
         Width = 1059
-        Height = 300
+        Height = 298
         Align = alClient
         DataSource = DSFORM
         Font.Charset = DEFAULT_CHARSET
@@ -89,12 +91,14 @@ object FrmLiberacarga: TFrmLiberacarga
             Expanded = False
             FieldName = 'NM_FORNECEDOR'
             Title.Caption = 'Transportador'
+            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'NR_ORDEENTRCARGEXPE'
             Title.Caption = 'Ordem Carga'
+            Width = 64
             Visible = True
           end
           item
@@ -108,12 +112,14 @@ object FrmLiberacarga: TFrmLiberacarga
             Expanded = False
             FieldName = 'DT_DESBCARGEXPE'
             Title.Caption = 'Data de Desbloqueio'
+            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'NOME_USUARIO'
             Title.Caption = 'Usu'#225'rio Desbloqueio'
+            Width = 64
             Visible = True
           end>
       end
@@ -122,7 +128,7 @@ object FrmLiberacarga: TFrmLiberacarga
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 1063
+    Width = 1067
     Height = 82
     Align = alTop
     BorderStyle = bsSingle
@@ -136,6 +142,7 @@ object FrmLiberacarga: TFrmLiberacarga
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 1063
     object SB_ATIVA: TSpeedButton
       Left = 140
       Top = 29
@@ -1249,137 +1256,6 @@ object FrmLiberacarga: TFrmLiberacarga
       OnClick = BPesqDtClick
     end
   end
-  object QryForm: TOraQuery
-    KeyFields = 'ID_CARGEXPE'
-    KeySequence = 'ID_CARGEXPE'
-    SQLInsert.Strings = (
-      'INSERT INTO EXPEDICAO_CARGA'
-      
-        '  (ID_CARGEXPE, GN_PLACVEICTRAN,  NR_ORDEENTRCARGEXPE, FL_STATCA' +
-        'RGEXPE, DT_DESBCARGEXPE,FL_IMPRCARGEXPE, DT_CARGEXPE, ID_USR_VOL' +
-        'T_AB)'
-      'VALUES'
-      
-        '  (:ID_CARGEXPE, :GN_PLACVEICTRAN, :NR_ORDEENTRCARGEXPE, :FL_STA' +
-        'TCARGEXPE,:DT_DESBCARGEXPE,:FL_IMPRCARGEXPE, :DT_CARGEXPE, :ID_U' +
-        'SR_VOLT_AB)')
-    SQLDelete.Strings = (
-      'DELETE FROM EXPEDICAO_CARGA'
-      'WHERE'
-      '  ID_CARGEXPE = :ID_CARGEXPE')
-    SQLUpdate.Strings = (
-      'UPDATE EXPEDICAO_CARGA'
-      'SET'
-      '  ID_CARGEXPE = :ID_CARGEXPE,'
-      '  GN_PLACVEICTRAN = :GN_PLACVEICTRAN,'
-      '  NR_ORDEENTRCARGEXPE = :NR_ORDEENTRCARGEXPE,'
-      '  FL_STATCARGEXPE = :FL_STATCARGEXPE,'
-      '  DT_DESBCARGEXPE = :DT_DESBCARGEXPE,'
-      '  FL_IMPRCARGEXPE = :FL_IMPRCARGEXPE,'
-      '  DT_CARGEXPE = :DT_CARGEXPE,'
-      '  ID_USR_VOLT_AB = :ID_USR_VOLT_AB'
-      'WHERE'
-      '  ID_CARGEXPE = :OLD_ID_CARGEXPE')
-    SQLLock.Strings = (
-      'SELECT * FROM EXPEDICAO_CARGA'
-      'WHERE'
-      '  ID_CARGEXPE = :ID_CARGEXPE'
-      'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  Expedicao_carga.ID_CARGEXPE = :ID_CARGEXPE')
-    Session = FrmPrincipal.DB
-    SQL.Strings = (
-      'SELECT'
-      '  Expedicao_carga.ID_CARGEXPE,'
-      '  Expedicao_carga.GN_PLACVEICTRAN,'
-      '  Fornecedor.NM_FORNECEDOR,'
-      '  Fornecedor.NM_REDUFORN,'
-      '  Expedicao_carga.NR_ORDEENTRCARGEXPE,'
-      '  Expedicao_carga.FL_STATCARGEXPE,'
-      '  Expedicao_carga.DT_DESBCARGEXPE,'
-      '  Expedicao_carga.FL_IMPRCARGEXPE,'
-      '  Expedicao_carga.DT_CARGEXPE,'
-      '  Expedicao_carga.ID_USR_VOLT_AB,'
-      ' sct_usuario.NOME_USUARIO'
-      'FROM'
-      '  EXPEDICAO_CARGA Expedicao_carga,'
-      '  FORNECEDOR Fornecedor,'
-      '  sct_usuario'
-      'WHERE'
-      
-        '  ( Expedicao_carga.ID_ITEMPROGCAMI = Fornecedor.ID_FORNECEDOR) ' +
-        'AND'
-      
-        '  ( Expedicao_carga.ID_USR_VOLT_AB = sct_usuario.id_usuario (+) ' +
-        ' ) AND'
-      '  Expedicao_carga.DT_CARGEXPE = :DtCarg AND'
-      '  Expedicao_carga.FILIAL = :FILIAL'
-      ''
-      'ORDER BY'
-      '  Expedicao_carga.NR_ORDEENTRCARGEXPE')
-    BeforeOpen = QryFormBeforeOpen
-    AfterOpen = QryFormAfterOpen
-    Left = 851
-    Top = 14
-    ParamData = <
-      item
-        DataType = ftUnknown
-        Name = 'DtCarg'
-        Value = nil
-      end
-      item
-        DataType = ftUnknown
-        Name = 'FILIAL'
-        Value = nil
-      end>
-    object QryFormID_CARGEXPE: TFloatField
-      FieldName = 'ID_CARGEXPE'
-      Required = True
-    end
-    object QryFormGN_PLACVEICTRAN: TStringField
-      FieldName = 'GN_PLACVEICTRAN'
-      Size = 7
-    end
-    object QryFormNM_FORNECEDOR: TStringField
-      FieldName = 'NM_FORNECEDOR'
-      Required = True
-      Size = 40
-    end
-    object QryFormNM_REDUFORN: TStringField
-      FieldName = 'NM_REDUFORN'
-      Required = True
-      Size = 15
-    end
-    object QryFormNR_ORDEENTRCARGEXPE: TFloatField
-      FieldName = 'NR_ORDEENTRCARGEXPE'
-      Required = True
-    end
-    object QryFormFL_STATCARGEXPE: TStringField
-      FieldName = 'FL_STATCARGEXPE'
-      Required = True
-      Size = 2
-    end
-    object QryFormDT_DESBCARGEXPE: TDateTimeField
-      FieldName = 'DT_DESBCARGEXPE'
-    end
-    object QryFormFL_IMPRCARGEXPE: TStringField
-      FieldName = 'FL_IMPRCARGEXPE'
-      Required = True
-      Size = 2
-    end
-    object QryFormDT_CARGEXPE: TDateTimeField
-      FieldName = 'DT_CARGEXPE'
-      Required = True
-    end
-    object QryFormID_USR_VOLT_AB: TIntegerField
-      FieldName = 'ID_USR_VOLT_AB'
-    end
-    object QryFormNOME_USUARIO: TStringField
-      FieldName = 'NOME_USUARIO'
-      Size = 40
-    end
-  end
   object DSFORM: TOraDataSource
     DataSet = QryForm
     Left = 853
@@ -1474,5 +1350,137 @@ object FrmLiberacarga: TFrmLiberacarga
         Name = 'ID_CARGEXPE'
         Value = nil
       end>
+  end
+  object QryForm: TSmartQuery
+    KeyFields = 'ID_CARGEXPE'
+    KeySequence = 'ID_CARGEXPE'
+    SQLInsert.Strings = (
+      'INSERT INTO EXPEDICAO_CARGA'
+      
+        '  (ID_CARGEXPE, GN_PLACVEICTRAN,  NR_ORDEENTRCARGEXPE, FL_STATCA' +
+        'RGEXPE, DT_DESBCARGEXPE,FL_IMPRCARGEXPE, DT_CARGEXPE, ID_USR_VOL' +
+        'T_AB)'
+      'VALUES'
+      
+        '  (:ID_CARGEXPE, :GN_PLACVEICTRAN, :NR_ORDEENTRCARGEXPE, :FL_STA' +
+        'TCARGEXPE,:DT_DESBCARGEXPE,:FL_IMPRCARGEXPE, :DT_CARGEXPE, :ID_U' +
+        'SR_VOLT_AB)')
+    SQLDelete.Strings = (
+      'DELETE FROM EXPEDICAO_CARGA'
+      'WHERE'
+      '  ID_CARGEXPE = :ID_CARGEXPE')
+    SQLUpdate.Strings = (
+      'UPDATE EXPEDICAO_CARGA'
+      'SET'
+      '  ID_CARGEXPE = :ID_CARGEXPE,'
+      '  GN_PLACVEICTRAN = :GN_PLACVEICTRAN,'
+      '  NR_ORDEENTRCARGEXPE = :NR_ORDEENTRCARGEXPE,'
+      '  FL_STATCARGEXPE = :FL_STATCARGEXPE,'
+      '  DT_DESBCARGEXPE = :DT_DESBCARGEXPE,'
+      '  FL_IMPRCARGEXPE = :FL_IMPRCARGEXPE,'
+      '  DT_CARGEXPE = :DT_CARGEXPE,'
+      '  ID_USR_VOLT_AB = :ID_USR_VOLT_AB'
+      'WHERE'
+      '  ID_CARGEXPE = :OLD_ID_CARGEXPE')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  Expedicao_carga.ID_CARGEXPE = :ID_CARGEXPE')
+    SQLLock.Strings = (
+      'SELECT * FROM EXPEDICAO_CARGA'
+      'WHERE'
+      '  ID_CARGEXPE = :ID_CARGEXPE'
+      'FOR UPDATE NOWAIT')
+    Session = FrmPrincipal.DB
+    SQL.Strings = (
+      'SELECT'
+      '  Expedicao_carga.ID_CARGEXPE,'
+      '  Expedicao_carga.GN_PLACVEICTRAN,'
+      '  Fornecedor.NM_FORNECEDOR,'
+      '  Fornecedor.NM_REDUFORN,'
+      '  Expedicao_carga.NR_ORDEENTRCARGEXPE,'
+      '  Expedicao_carga.FL_STATCARGEXPE,'
+      '  Expedicao_carga.DT_DESBCARGEXPE,'
+      '  Expedicao_carga.FL_IMPRCARGEXPE,'
+      '  Expedicao_carga.DT_CARGEXPE,'
+      '  Expedicao_carga.ID_USR_VOLT_AB,'
+      ' sct_usuario.NOME_USUARIO'
+      'FROM'
+      '  EXPEDICAO_CARGA Expedicao_carga,'
+      '  FORNECEDOR Fornecedor,'
+      '  sct_usuario'
+      'WHERE'
+      
+        '  ( Expedicao_carga.ID_ITEMPROGCAMI = Fornecedor.ID_FORNECEDOR) ' +
+        'AND'
+      
+        '  ( Expedicao_carga.ID_USR_VOLT_AB = sct_usuario.id_usuario (+) ' +
+        ' ) AND'
+      '  Expedicao_carga.DT_CARGEXPE = :DtCarg AND'
+      '  Expedicao_carga.FILIAL = :FILIAL'
+      ''
+      'ORDER BY'
+      '  Expedicao_carga.NR_ORDEENTRCARGEXPE')
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 848
+    Top = 16
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'DtCarg'
+        Value = nil
+      end
+      item
+        DataType = ftUnknown
+        Name = 'FILIAL'
+        Value = nil
+      end>
+    object QryFormID_CARGEXPE: TFloatField
+      FieldName = 'ID_CARGEXPE'
+      Required = True
+    end
+    object QryFormGN_PLACVEICTRAN: TStringField
+      FieldName = 'GN_PLACVEICTRAN'
+      Size = 7
+    end
+    object QryFormNM_FORNECEDOR: TStringField
+      FieldName = 'NM_FORNECEDOR'
+      Required = True
+      Size = 40
+    end
+    object QryFormNM_REDUFORN: TStringField
+      FieldName = 'NM_REDUFORN'
+      Required = True
+      Size = 15
+    end
+    object QryFormNR_ORDEENTRCARGEXPE: TFloatField
+      FieldName = 'NR_ORDEENTRCARGEXPE'
+      Required = True
+    end
+    object QryFormFL_STATCARGEXPE: TStringField
+      FieldName = 'FL_STATCARGEXPE'
+      Required = True
+      Size = 2
+    end
+    object QryFormDT_DESBCARGEXPE: TDateTimeField
+      FieldName = 'DT_DESBCARGEXPE'
+    end
+    object QryFormFL_IMPRCARGEXPE: TStringField
+      FieldName = 'FL_IMPRCARGEXPE'
+      Required = True
+      Size = 2
+    end
+    object QryFormDT_CARGEXPE: TDateTimeField
+      FieldName = 'DT_CARGEXPE'
+      Required = True
+    end
+    object QryFormID_USR_VOLT_AB: TIntegerField
+      FieldName = 'ID_USR_VOLT_AB'
+    end
+    object QryFormNOME_USUARIO: TStringField
+      FieldName = 'NOME_USUARIO'
+      Size = 40
+    end
   end
 end

@@ -5,7 +5,7 @@ interface
 uses
   SysUtils, Types, Classes, Variants, Graphics, Controls, Forms,
   Dialogs, StdCtrls, ExtCtrls, DB, Ora, MemDS, DBAccess, Mask,
-  DBCtrls, Grids, DBGrids, Buttons, ComCtrls, Winapi.Windows;
+  DBCtrls, Grids, DBGrids, Buttons, ComCtrls, Winapi.Windows, OraSmart;
 
 type
   TFrmCadBairro = class(TForm)
@@ -26,19 +26,7 @@ type
     TabLista: TTabSheet;
     DBGrid1: TDBGrid;
     TabDetalhes: TTabSheet;
-    QryCadBairro: TOraQuery;
     DtSrcCadBairro: TOraDataSource;
-    QryCadBairroEMPRESA: TStringField;
-    QryCadBairroFILIAL: TIntegerField;
-    QryCadBairroNM_BAIRRO: TStringField;
-    QryCadBairroID_BAIRRO: TFloatField;
-    QryCadBairroID_CIDADE: TFloatField;
-    QryCadBairroFX_BAIRRO: TStringField;
-    QryCadBairroNM_CIDADE: TStringField;
-    QryCadBairroSG_ESTADO: TStringField;
-    QryCadBairroNM_PAIS: TStringField;
-    QryCadBairroID_REGIGEOG: TFloatField;
-    QryCadBairroNM_REGIGEOG: TStringField;
     QrDireitos: TOraQuery;
     QryCidade: TOraQuery;
     DtSrcCidade: TOraDataSource;
@@ -76,6 +64,18 @@ type
     DBEdit9: TDBEdit;
     DBCodCid: TDBEdit;
     BtCenCus: TBitBtn;
+    QryCadBairro: TSmartQuery;
+    QryCadBairroEMPRESA: TStringField;
+    QryCadBairroFILIAL: TIntegerField;
+    QryCadBairroNM_BAIRRO: TStringField;
+    QryCadBairroID_BAIRRO: TFloatField;
+    QryCadBairroID_CIDADE: TFloatField;
+    QryCadBairroFX_BAIRRO: TStringField;
+    QryCadBairroNM_CIDADE: TStringField;
+    QryCadBairroSG_ESTADO: TStringField;
+    QryCadBairroNM_PAIS: TStringField;
+    QryCadBairroID_REGIGEOG: TFloatField;
+    QryCadBairroNM_REGIGEOG: TStringField;
     Function  Atual_ToolBar(BtOrdem:Integer):string;
     procedure LDcomponentes(LD:boolean);
     procedure BtAtivarClick(Sender: TObject);

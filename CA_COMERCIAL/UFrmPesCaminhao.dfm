@@ -7,7 +7,7 @@ object FrmPesqCaminhao: TFrmPesqCaminhao
   ActiveControl = DBGrid1
   BorderStyle = bsSingle
   Caption = 'Comercial Dacar - Consulta de Ve'#237'culos'
-  Color = clBackground
+  Color = clWindow
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
   Font.Height = 11
@@ -496,7 +496,7 @@ object FrmPesqCaminhao: TFrmPesqCaminhao
   object pnlFiltros: TPanel
     Left = 0
     Top = 45
-    Width = 796
+    Width = 800
     Height = 125
     Align = alTop
     Color = clWindow
@@ -509,6 +509,7 @@ object FrmPesqCaminhao: TFrmPesqCaminhao
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
+    ExplicitWidth = 796
     object Label2: TLabel
       Left = 10
       Top = 15
@@ -610,7 +611,7 @@ object FrmPesqCaminhao: TFrmPesqCaminhao
   object pnlBotoes: TPanel
     Left = 0
     Top = 0
-    Width = 796
+    Width = 800
     Height = 45
     Align = alTop
     Color = clWindow
@@ -623,7 +624,7 @@ object FrmPesqCaminhao: TFrmPesqCaminhao
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 812
+    ExplicitWidth = 796
     object BitBtn1: TBitBtn
       Left = 5
       Top = 5
@@ -1064,8 +1065,8 @@ object FrmPesqCaminhao: TFrmPesqCaminhao
   object DBGrid1: TDBGrid
     Left = 0
     Top = 170
-    Width = 796
-    Height = 241
+    Width = 800
+    Height = 242
     Align = alClient
     DataSource = DSCam
     Font.Charset = DEFAULT_CHARSET
@@ -1092,7 +1093,7 @@ object FrmPesqCaminhao: TFrmPesqCaminhao
         Title.Caption = 'C'#243'digo'
         Title.Font.Charset = DEFAULT_CHARSET
         Title.Font.Color = clBlack
-        Title.Font.Height = 11
+        Title.Font.Height = 16
         Title.Font.Name = 'Arial'
         Title.Font.Pitch = fpVariable
         Title.Font.Style = [fsBold]
@@ -1105,7 +1106,7 @@ object FrmPesqCaminhao: TFrmPesqCaminhao
         Title.Caption = 'Raz'#227'o Social do Fornecedor / Transportador'
         Title.Font.Charset = DEFAULT_CHARSET
         Title.Font.Color = clBlack
-        Title.Font.Height = 11
+        Title.Font.Height = 16
         Title.Font.Name = 'Arial'
         Title.Font.Pitch = fpVariable
         Title.Font.Style = [fsBold]
@@ -1118,7 +1119,7 @@ object FrmPesqCaminhao: TFrmPesqCaminhao
         Title.Caption = 'Placa'
         Title.Font.Charset = DEFAULT_CHARSET
         Title.Font.Color = clBlack
-        Title.Font.Height = 11
+        Title.Font.Height = 16
         Title.Font.Name = 'Arial'
         Title.Font.Pitch = fpVariable
         Title.Font.Style = [fsBold]
@@ -1131,7 +1132,7 @@ object FrmPesqCaminhao: TFrmPesqCaminhao
         Title.Caption = 'Modelo'
         Title.Font.Charset = DEFAULT_CHARSET
         Title.Font.Color = clBlack
-        Title.Font.Height = 11
+        Title.Font.Height = 16
         Title.Font.Name = 'Arial'
         Title.Font.Pitch = fpVariable
         Title.Font.Style = [fsBold]
@@ -1144,7 +1145,7 @@ object FrmPesqCaminhao: TFrmPesqCaminhao
         Title.Alignment = taRightJustify
         Title.Font.Charset = DEFAULT_CHARSET
         Title.Font.Color = clBlack
-        Title.Font.Height = 11
+        Title.Font.Height = 16
         Title.Font.Name = 'Arial'
         Title.Font.Pitch = fpVariable
         Title.Font.Style = [fsBold]
@@ -1157,7 +1158,7 @@ object FrmPesqCaminhao: TFrmPesqCaminhao
         Title.Alignment = taRightJustify
         Title.Font.Charset = DEFAULT_CHARSET
         Title.Font.Color = clBlack
-        Title.Font.Height = 11
+        Title.Font.Height = 16
         Title.Font.Name = 'Arial'
         Title.Font.Pitch = fpVariable
         Title.Font.Style = [fsBold]

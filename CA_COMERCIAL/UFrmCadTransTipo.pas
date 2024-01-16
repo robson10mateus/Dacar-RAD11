@@ -5,7 +5,7 @@ interface
 uses
   SysUtils, Types, Classes, {$IFNDEF VER130} Variants {$ENDIF, Types}, Graphics, Controls, Forms, 
   Dialogs, StdCtrls, ExtCtrls, DBCtrls, ComCtrls, Buttons, Mask,
-  Grids, DBGrids, DB, Ora, MemDS, DBAccess, Vcl.ToolWin;
+  Grids, DBGrids, DB, Ora, MemDS, DBAccess, Vcl.ToolWin, OraSmart;
 
 type
   TFrmCadTransTipo = class(TForm)
@@ -50,9 +50,9 @@ type
     SB_EDIT: TSpeedButton;
     ToolButton1: TToolButton;
     ToolButton3: TToolButton;
-    QryCadTpTrans: TOraQuery;
     DtSrcCadTpTrans: TOraDataSource;
     QrDireitos: TOraQuery;
+    QryCadTpTrans: TSmartQuery;
     QryCadTpTransEMPRESA: TStringField;
     QryCadTpTransFILIAL: TIntegerField;
     QryCadTpTransID_TIPOTRAN: TFloatField;

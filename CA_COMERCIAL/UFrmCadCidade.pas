@@ -5,7 +5,7 @@ interface
 uses
   SysUtils, Types, Classes, Variants, Graphics, Controls, Forms,
   Dialogs, StdCtrls, ExtCtrls, DB, Ora, MemDS, DBAccess, DBCtrls,
-  Mask, Grids, DBGrids, Buttons, ComCtrls, Winapi.Windows;
+  Mask, Grids, DBGrids, Buttons, ComCtrls, Winapi.Windows, OraSmart;
 
 type
   TFrmCadCidade = class(TForm)
@@ -31,22 +31,7 @@ type
     Label1: TLabel;
     Label2: TLabel;
     TabDetalhes: TTabSheet;
-    QryCadCidade: TOraQuery;
     DtSrcCadCidade: TOraDataSource;
-    QryCadCidadeEMPRESA: TStringField;
-    QryCadCidadeFILIAL: TIntegerField;
-    QryCadCidadeID_CIDADE: TFloatField;
-    QryCadCidadeNM_CIDADE: TStringField;
-    QryCadCidadeID_ESTADO: TFloatField;
-    QryCadCidadeNR_DDDCIDA: TStringField;
-    QryCadCidadeFL_ZONAFRAN: TStringField;
-    QryCadCidadeNR_DIPAM: TIntegerField;
-    QryCadCidadeFX_CIDADE: TStringField;
-    QryCadCidadeNM_PAIS: TStringField;
-    QryCadCidadeSG_ESTADO: TStringField;
-    QryCadCidadeID_REGIGEOG: TFloatField;
-    QryCadCidadeNM_REGIGEOG: TStringField;
-    QryCadCidadeID_PAIS: TFloatField;
     QryEstado: TOraQuery;
     DtSrcEstado: TOraDataSource;
     QryPais: TOraQuery;
@@ -59,7 +44,6 @@ type
     QryPaisNM_PAIS: TStringField;
     QryEstadoID_PAIS: TFloatField;
     QrDireitos: TOraQuery;
-    QryCadCidadeID_IBGE: TIntegerField;
     Panel1: TPanel;
     SB_ULTIMO: TSpeedButton;
     Sb_Sair: TSpeedButton;
@@ -88,6 +72,22 @@ type
     DBEdit2: TDBEdit;
     DBEdit1: TDBEdit;
     DBCodIBGE: TDBEdit;
+    QryCadCidade: TSmartQuery;
+    QryCadCidadeEMPRESA: TStringField;
+    QryCadCidadeFILIAL: TIntegerField;
+    QryCadCidadeID_CIDADE: TFloatField;
+    QryCadCidadeNM_CIDADE: TStringField;
+    QryCadCidadeID_ESTADO: TFloatField;
+    QryCadCidadeNR_DDDCIDA: TStringField;
+    QryCadCidadeFL_ZONAFRAN: TStringField;
+    QryCadCidadeNR_DIPAM: TIntegerField;
+    QryCadCidadeFX_CIDADE: TStringField;
+    QryCadCidadeNM_PAIS: TStringField;
+    QryCadCidadeSG_ESTADO: TStringField;
+    QryCadCidadeID_REGIGEOG: TFloatField;
+    QryCadCidadeNM_REGIGEOG: TStringField;
+    QryCadCidadeID_PAIS: TFloatField;
+    QryCadCidadeID_IBGE: TIntegerField;
     Function  Atual_ToolBar(BtOrdem:Integer):string;
     procedure LDcomponentes(LD:boolean);
     procedure FormCreate(Sender: TObject);

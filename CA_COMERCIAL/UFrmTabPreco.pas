@@ -6,7 +6,7 @@ uses
   SysUtils, Types, Classes, Variants, Graphics, Controls, Forms,
   Dialogs, StdCtrls, ExtCtrls, ComCtrls, Buttons, DBCtrls, Mask,
   Grids, DBGrids, DB, Ora, MemDS, DBAccess, DBClient, OraCall,
-  Winapi.Windows;
+  Winapi.Windows, OraSmart;
 
 type
   TFrmTabPreco = class(TForm)
@@ -29,7 +29,6 @@ type
     BPESQ: TBitBtn;
     EdExpr: TEdit;
     DBGrid1: TDBGrid;
-    QryTabPreco: TOraQuery;
     DtSrcTabPreco: TOraDataSource;
     QryCadTabPreco: TOraQuery;
     DtSrcCadTabPrecos: TOraDataSource;
@@ -40,19 +39,6 @@ type
     QryCadTabPrecoID_TABEPREC: TFloatField;
     QryCadTabPrecoNM_TABEPREC: TStringField;
     QryCadTabPrecoID_MOEDA: TFloatField;
-    QryTabPrecoEMPRESA: TStringField;
-    QryTabPrecoFILIAL: TIntegerField;
-    QryTabPrecoID_ITEMTABEPREC: TFloatField;
-    QryTabPrecoID_TABEPREC: TFloatField;
-    QryTabPrecoID_MATERIAL: TFloatField;
-    QryTabPrecoID_EMBALAGEM: TFloatField;
-    QryTabPrecoID_MATEEMBA: TFloatField;
-    QryTabPrecoVL_ITEMTABEPREC: TFloatField;
-    QryTabPrecoPC_MAXIDESCITEMTABEPREC: TFloatField;
-    QryTabPrecoFX_ITEMTABEPREC: TStringField;
-    QryTabPrecoFL_ATIVITEMTABEPREC: TStringField;
-    QryTabPrecoID_PRODMATEEMBA: TStringField;
-    QryTabPrecoNM_PRODMATEEMBA: TStringField;
     Panel3: TPanel;
     DBLookupComboBox1: TDBLookupComboBox;
     Label13: TLabel;
@@ -84,7 +70,6 @@ type
     DtSrcEmba: TOraDataSource;
     Tab_REPL: TOraSQL;
     DB_CON: TOraSession;
-    QryTabPrecoID_USUARIO: TIntegerField;
     Panel4: TPanel;
     GroupBox1: TGroupBox;
     Label4: TLabel;
@@ -118,7 +103,6 @@ type
     Label8: TLabel;
     EdtVlMaxDesc: TEdit;
     Btn_HistoricoPreco: TButton;
-    QryTabPrecoDT_ATUALIZACAO: TDateTimeField;
     Label1: TLabel;
     DBEdit1: TDBEdit;
     qryTemp: TOraQuery;
@@ -150,11 +134,6 @@ type
     sqlTabelaOrigemCopia: TOraSQL;
     dlgSaveArquivo: TSaveDialog;
     DBGrid3: TDBGrid;
-    QryTabPrecoVL_10CX: TFloatField;
-    QryTabPrecoVL_11A30CX: TFloatField;
-    QryTabPrecoVL_31A50CX: TFloatField;
-    QryTabPrecoVL_51A100CX: TFloatField;
-    QryTabPrecoVL_100CX: TFloatField;
     pnlBotoes: TPanel;
     SB_PRIMEIRO: TSpeedButton;
     SB_ANTERIOR: TSpeedButton;
@@ -167,7 +146,6 @@ type
     SB_CANCEL: TSpeedButton;
     btnExcel: TSpeedButton;
     Sb_Sair: TSpeedButton;
-    QryTabPrecoVL_0A5CX: TFloatField;
     Label2: TLabel;
     DBEdit2: TDBEdit;
     qryEditor: TOraQuery;
@@ -176,12 +154,6 @@ type
     qryEditorID_PRODMATEEMBA: TStringField;
     qryEditorID_USUARIO_NEW: TIntegerField;
     qryEditorNM_REDUUSUASIST: TStringField;
-    QryTabPrecoVL_0A5CX_S: TFloatField;
-    QryTabPrecoVL_10CX_S: TFloatField;
-    QryTabPrecoVL_11A30CX_S: TFloatField;
-    QryTabPrecoVL_31A50CX_S: TFloatField;
-    QryTabPrecoVL_51A100CX_S: TFloatField;
-    QryTabPrecoVL_100CX_S: TFloatField;
     GroupBox3: TGroupBox;
     chkSimples: TDBCheckBox;
     edtVL_SIMPLES: TDBEdit;
@@ -199,6 +171,34 @@ type
     DBCheckBox2: TDBCheckBox;
     QryCadTabPrecoFL_ATUALIZA: TStringField;
     QryCadTabPrecoVL_SIMPLES: TFloatField;
+    QryTabPreco: TSmartQuery;
+    QryTabPrecoEMPRESA: TStringField;
+    QryTabPrecoFILIAL: TIntegerField;
+    QryTabPrecoID_ITEMTABEPREC: TFloatField;
+    QryTabPrecoID_TABEPREC: TFloatField;
+    QryTabPrecoID_MATERIAL: TFloatField;
+    QryTabPrecoID_EMBALAGEM: TFloatField;
+    QryTabPrecoID_MATEEMBA: TFloatField;
+    QryTabPrecoVL_ITEMTABEPREC: TFloatField;
+    QryTabPrecoPC_MAXIDESCITEMTABEPREC: TFloatField;
+    QryTabPrecoFX_ITEMTABEPREC: TStringField;
+    QryTabPrecoFL_ATIVITEMTABEPREC: TStringField;
+    QryTabPrecoID_PRODMATEEMBA: TStringField;
+    QryTabPrecoNM_PRODMATEEMBA: TStringField;
+    QryTabPrecoID_USUARIO: TIntegerField;
+    QryTabPrecoDT_ATUALIZACAO: TDateTimeField;
+    QryTabPrecoVL_10CX: TFloatField;
+    QryTabPrecoVL_11A30CX: TFloatField;
+    QryTabPrecoVL_31A50CX: TFloatField;
+    QryTabPrecoVL_51A100CX: TFloatField;
+    QryTabPrecoVL_100CX: TFloatField;
+    QryTabPrecoVL_0A5CX: TFloatField;
+    QryTabPrecoVL_0A5CX_S: TFloatField;
+    QryTabPrecoVL_10CX_S: TFloatField;
+    QryTabPrecoVL_11A30CX_S: TFloatField;
+    QryTabPrecoVL_31A50CX_S: TFloatField;
+    QryTabPrecoVL_51A100CX_S: TFloatField;
+    QryTabPrecoVL_100CX_S: TFloatField;
     Function  Atual_ToolBar(BtOrdem:Integer):string;
     procedure LDcomponentes(LD:boolean);
     procedure BtIncluirClick(Sender: TObject);

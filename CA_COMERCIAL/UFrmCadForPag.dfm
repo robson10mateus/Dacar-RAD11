@@ -31,12 +31,14 @@ object FrmCadForPag: TFrmCadForPag
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 643
+    ExplicitHeight = 387
     object PageControl1: TPageControl
       Left = 1
       Top = 41
       Width = 645
       Height = 346
-      ActivePage = TabCriterio
+      ActivePage = TabParcela
       Align = alClient
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
@@ -45,6 +47,8 @@ object FrmCadForPag: TFrmCadForPag
       Font.Style = []
       ParentFont = False
       TabOrder = 0
+      ExplicitWidth = 641
+      ExplicitHeight = 345
       object TabCriterio: TTabSheet
         Caption = 'Criterios'
         OnShow = TabCriterioShow
@@ -987,7 +991,7 @@ object FrmCadForPag: TFrmCadForPag
       Font.Style = []
       ParentFont = False
       TabOrder = 1
-      ExplicitWidth = 659
+      ExplicitWidth = 641
       object SB_PRIMEIRO: TSpeedButton
         Left = 0
         Top = 0
@@ -3025,9 +3029,41 @@ object FrmCadForPag: TFrmCadForPag
     Left = 584
     Top = 32
   end
-  object QryCadForPag: TOraQuery
+  object DtSrcCadForPag: TOraDataSource
+    DataSet = QryCadForPag
+    Left = 262
+    Top = 34
+  end
+  object QrDireitos: TOraQuery
+    Session = FrmPrincipal.DB
+    SQL.Strings = (
+      'SELECT '
+      '  id_modulo,'
+      '  id_janela,'
+      '  id_recurso,'
+      '  id_usuario'
+      ' FROM sct_direitos_us'
+      'WHERE id_modulo=9'
+      '  AND id_recurso=:VRECUR'
+      '  AND id_janela = 32'
+      '  AND id_usuario=:VUSUARIO')
+    Left = 382
+    Top = 26
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'VRECUR'
+        Value = nil
+      end
+      item
+        DataType = ftUnknown
+        Name = 'VUSUARIO'
+        Value = nil
+      end>
+  end
+  object QryCadForPag: TSmartQuery
     KeyFields = 'ID_FORMPAGA'
-    KeySequence = 'SMART.ID_FORMPAGA'
+    KeySequence = 'ID_FORMPAGA'
     SQLInsert.Strings = (
       'INSERT INTO forma_pagamento'
       
@@ -3060,15 +3096,14 @@ object FrmCadForPag: TFrmCadForPag
       '  NU_FORMA_PAGTO_NFE = :NU_FORMA_PAGTO_NFE'
       'WHERE'
       '  ID_FORMPAGA = :OLD_ID_FORMPAGA')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  ID_FORMPAGA = :ID_FORMPAGA')
     SQLLock.Strings = (
       'SELECT * FROM forma_pagamento'
       'WHERE'
       '  ID_FORMPAGA = :ID_FORMPAGA'
       'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  ID_FORMPAGA = :ID_FORMPAGA')
-    LocalUpdate = True
     Session = FrmPrincipal.DB
     SQL.Strings = (
       'SELECT '
@@ -3087,8 +3122,11 @@ object FrmCadForPag: TFrmCadForPag
       'FROM '
       '   forma_pagamento')
     CachedUpdates = True
-    Left = 214
-    Top = 34
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 216
+    Top = 32
     object QryCadForPagEMPRESA: TStringField
       FieldName = 'EMPRESA'
       Required = True
@@ -3099,34 +3137,34 @@ object FrmCadForPag: TFrmCadForPag
       Required = True
     end
     object QryCadForPagID_FORMPAGA: TFloatField
-      AutoGenerateValue = arAutoInc
-      DisplayLabel = 'Codigo'
       FieldName = 'ID_FORMPAGA'
+      Required = True
     end
     object QryCadForPagNM_FORMPAGA: TStringField
-      DisplayLabel = 'Descr. Forma Pagamento'
       FieldName = 'NM_FORMPAGA'
       Required = True
       Size = 40
     end
     object QryCadForPagQN_PARCFORMPAGA: TIntegerField
-      DisplayLabel = 'N'#186' Parcelas'
       FieldName = 'QN_PARCFORMPAGA'
+      Required = True
     end
     object QryCadForPagQN_DIASTOLEFORMPAGA: TIntegerField
       FieldName = 'QN_DIASTOLEFORMPAGA'
       Required = True
     end
     object QryCadForPagPC_TOLEVALOFORMPAGA: TFloatField
-      DisplayLabel = 'Valor Parcelas (%)'
       FieldName = 'PC_TOLEVALOFORMPAGA'
+      Required = True
     end
     object QryCadForPagFL_CENTPRIMFORMPAGA: TStringField
       FieldName = 'FL_CENTPRIMFORMPAGA'
+      Required = True
       Size = 2
     end
     object QryCadForPagFL_FORMPAGA: TStringField
       FieldName = 'FL_FORMPAGA'
+      Required = True
       Size = 2
     end
     object QryCadForPagFX_FORMPAGA: TStringField
@@ -3139,39 +3177,7 @@ object FrmCadForPag: TFrmCadForPag
     end
     object QryCadForPagNU_FORMA_PAGTO_NFE: TStringField
       FieldName = 'NU_FORMA_PAGTO_NFE'
-      Size = 2
+      Size = 25
     end
-  end
-  object DtSrcCadForPag: TOraDataSource
-    DataSet = QryCadForPag
-    Left = 262
-    Top = 34
-  end
-  object QrDireitos: TOraQuery
-    Session = FrmPrincipal.DB
-    SQL.Strings = (
-      'SELECT '
-      '  id_modulo,'
-      '  id_janela,'
-      '  id_recurso,'
-      '  id_usuario'
-      ' FROM sct_direitos_us'
-      'WHERE id_modulo=9'
-      '  AND id_recurso=:VRECUR'
-      '  AND id_janela = 32'
-      '  AND id_usuario=:VUSUARIO')
-    Left = 382
-    Top = 26
-    ParamData = <
-      item
-        DataType = ftUnknown
-        Name = 'VRECUR'
-        Value = nil
-      end
-      item
-        DataType = ftUnknown
-        Name = 'VUSUARIO'
-        Value = nil
-      end>
   end
 end

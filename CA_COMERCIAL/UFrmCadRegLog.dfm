@@ -30,6 +30,8 @@ object FrmCadRegLog: TFrmCadRegLog
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 643
+    ExplicitHeight = 387
     object ToolBar1: TToolBar
       Left = 1
       Top = 1
@@ -46,7 +48,7 @@ object FrmCadRegLog: TFrmCadRegLog
       Font.Style = []
       ParentFont = False
       TabOrder = 0
-      ExplicitWidth = 657
+      ExplicitWidth = 641
       object SB_PRIMEIRO: TSpeedButton
         Left = 0
         Top = 0
@@ -1989,6 +1991,8 @@ object FrmCadRegLog: TFrmCadRegLog
       Font.Style = []
       ParentFont = False
       TabOrder = 1
+      ExplicitWidth = 641
+      ExplicitHeight = 345
       object TabCriterio: TTabSheet
         Caption = 'Criterios'
         OnShow = TabCriterioShow
@@ -2514,93 +2518,6 @@ object FrmCadRegLog: TFrmCadRegLog
       end
     end
   end
-  object QryRegLog: TOraQuery
-    KeyFields = 'ID_REGILOGI'
-    KeySequence = 'ID_REGILOGI'
-    SQLInsert.Strings = (
-      'INSERT INTO logistica_regiao'
-      
-        '  (EMPRESA, FILIAL, ID_REGILOGI, NM_REGILOGI, FX_REGILOGI, ID_IN' +
-        'TEREGILOGI, GN_RISCREGILOGI)'
-      'VALUES'
-      
-        '  (:EMPRESA, :FILIAL, :ID_REGILOGI, :NM_REGILOGI, :FX_REGILOGI, ' +
-        ':ID_INTEREGILOGI, :GN_RISCREGILOGI)')
-    SQLDelete.Strings = (
-      'DELETE FROM logistica_regiao'
-      'WHERE'
-      '  ID_REGILOGI = :ID_REGILOGI')
-    SQLUpdate.Strings = (
-      'UPDATE logistica_regiao'
-      'SET'
-      '  EMPRESA = :EMPRESA,'
-      '  FILIAL = :FILIAL,'
-      '  ID_REGILOGI = :ID_REGILOGI,'
-      '  NM_REGILOGI = :NM_REGILOGI,'
-      '  FX_REGILOGI = :FX_REGILOGI,'
-      '  ID_INTEREGILOGI = :ID_INTEREGILOGI,'
-      '  GN_RISCREGILOGI = :GN_RISCREGILOGI'
-      'WHERE'
-      '  ID_REGILOGI = :OLD_ID_REGILOGI')
-    SQLLock.Strings = (
-      'SELECT * FROM logistica_regiao'
-      'WHERE'
-      '  ID_REGILOGI = :ID_REGILOGI'
-      'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  ID_REGILOGI = :ID_REGILOGI')
-    LocalUpdate = True
-    SQL.Strings = (
-      'SELECT '
-      '  logistica_regiao.empresa,'
-      '  logistica_regiao.filial,'
-      '  logistica_regiao.id_regilogi,'
-      '  logistica_regiao.nm_regilogi,'
-      '  logistica_regiao.fx_regilogi,'
-      '  logistica_regiao.id_interegilogi,'
-      '  logistica_regiao.gn_riscregilogi'
-      'FROM  logistica_regiao')
-    FetchAll = True
-    CachedUpdates = True
-    Left = 220
-    Top = 62
-    object QryRegLogEMPRESA: TStringField
-      FieldName = 'EMPRESA'
-      Required = True
-      Size = 2
-    end
-    object QryRegLogFILIAL: TIntegerField
-      FieldName = 'FILIAL'
-      Required = True
-    end
-    object QryRegLogID_REGILOGI: TFloatField
-      AutoGenerateValue = arAutoInc
-      DisplayLabel = 'C'#243'digo'
-      FieldName = 'ID_REGILOGI'
-    end
-    object QryRegLogNM_REGILOGI: TStringField
-      DisplayLabel = 'Descri'#231#227'o da Regi'#227'o Log'#237'stica'
-      FieldName = 'NM_REGILOGI'
-      Required = True
-      Size = 40
-    end
-    object QryRegLogFX_REGILOGI: TStringField
-      FieldName = 'FX_REGILOGI'
-      Required = True
-      Size = 1
-    end
-    object QryRegLogID_INTEREGILOGI: TStringField
-      Alignment = taRightJustify
-      DisplayLabel = 'C'#243'd. Interno'
-      FieldName = 'ID_INTEREGILOGI'
-      Size = 10
-    end
-    object QryRegLogGN_RISCREGILOGI: TIntegerField
-      FieldName = 'GN_RISCREGILOGI'
-      Required = True
-    end
-  end
   object DtSrcRegLog: TOraDataSource
     DataSet = QryRegLog
     Left = 296
@@ -2631,5 +2548,89 @@ object FrmCadRegLog: TFrmCadRegLog
         Name = 'VUSUARIO'
         Value = nil
       end>
+  end
+  object QryRegLog: TSmartQuery
+    KeyFields = 'ID_REGILOGI'
+    KeySequence = 'ID_REGILOGI'
+    SQLInsert.Strings = (
+      'INSERT INTO logistica_regiao'
+      
+        '  (EMPRESA, FILIAL, ID_REGILOGI, NM_REGILOGI, FX_REGILOGI, ID_IN' +
+        'TEREGILOGI, GN_RISCREGILOGI)'
+      'VALUES'
+      
+        '  (:EMPRESA, :FILIAL, :ID_REGILOGI, :NM_REGILOGI, :FX_REGILOGI, ' +
+        ':ID_INTEREGILOGI, :GN_RISCREGILOGI)')
+    SQLDelete.Strings = (
+      'DELETE FROM logistica_regiao'
+      'WHERE'
+      '  ID_REGILOGI = :ID_REGILOGI')
+    SQLUpdate.Strings = (
+      'UPDATE logistica_regiao'
+      'SET'
+      '  EMPRESA = :EMPRESA,'
+      '  FILIAL = :FILIAL,'
+      '  ID_REGILOGI = :ID_REGILOGI,'
+      '  NM_REGILOGI = :NM_REGILOGI,'
+      '  FX_REGILOGI = :FX_REGILOGI,'
+      '  ID_INTEREGILOGI = :ID_INTEREGILOGI,'
+      '  GN_RISCREGILOGI = :GN_RISCREGILOGI'
+      'WHERE'
+      '  ID_REGILOGI = :OLD_ID_REGILOGI')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  ID_REGILOGI = :ID_REGILOGI')
+    SQLLock.Strings = (
+      'SELECT * FROM logistica_regiao'
+      'WHERE'
+      '  ID_REGILOGI = :ID_REGILOGI'
+      'FOR UPDATE NOWAIT')
+    SQL.Strings = (
+      'SELECT '
+      '  logistica_regiao.empresa,'
+      '  logistica_regiao.filial,'
+      '  logistica_regiao.id_regilogi,'
+      '  logistica_regiao.nm_regilogi,'
+      '  logistica_regiao.fx_regilogi,'
+      '  logistica_regiao.id_interegilogi,'
+      '  logistica_regiao.gn_riscregilogi'
+      'FROM  logistica_regiao')
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 224
+    Top = 64
+    object QryRegLogEMPRESA: TStringField
+      FieldName = 'EMPRESA'
+      Required = True
+      Size = 2
+    end
+    object QryRegLogFILIAL: TIntegerField
+      FieldName = 'FILIAL'
+      Required = True
+    end
+    object QryRegLogID_REGILOGI: TFloatField
+      FieldName = 'ID_REGILOGI'
+      Required = True
+    end
+    object QryRegLogNM_REGILOGI: TStringField
+      FieldName = 'NM_REGILOGI'
+      Required = True
+      Size = 40
+    end
+    object QryRegLogFX_REGILOGI: TStringField
+      FieldName = 'FX_REGILOGI'
+      Required = True
+      Size = 1
+    end
+    object QryRegLogID_INTEREGILOGI: TStringField
+      FieldName = 'ID_INTEREGILOGI'
+      Size = 10
+    end
+    object QryRegLogGN_RISCREGILOGI: TIntegerField
+      FieldName = 'GN_RISCREGILOGI'
+      Required = True
+    end
   end
 end

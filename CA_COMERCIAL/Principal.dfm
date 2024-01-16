@@ -1246,4 +1246,8 @@ object FrmPrincipal: TFrmPrincipal
     Left = 8
     Top = 75
   end
+  object OraSQLMonitor1: TOraSQLMonitor
+    Left = 8
+    Top = 144
+  end
 end

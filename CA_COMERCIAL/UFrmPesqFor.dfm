@@ -1,15 +1,15 @@
 object FrmPesqFor: TFrmPesqFor
   Left = 921
   Top = 349
-  Width = 418
-  Height = 396
+  Width = 429
+  Height = 455
   HorzScrollBar.Range = 401
   VertScrollBar.Range = 386
   ActiveControl = EdExpre
   BorderIcons = [biHelp]
   BorderStyle = bsSingle
   Caption = 'Pesquisa de Fornecedor'
-  Color = clBackground
+  Color = clWindow
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
   Font.Height = 11

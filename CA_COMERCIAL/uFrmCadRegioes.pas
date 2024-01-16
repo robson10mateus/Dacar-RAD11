@@ -5,7 +5,7 @@ interface
 uses
   SysUtils, Types, Classes, Variants, Graphics, Controls, Forms,
   Dialogs, StdCtrls, DB, Ora, MemDS, DBAccess, Grids, DBGrids, Mask,
-  DBCtrls, Buttons, ExtCtrls, ComCtrls, Winapi.Windows;
+  DBCtrls, Buttons, ExtCtrls, ComCtrls, Winapi.Windows, OraSmart;
 
 type
   TFrmCadRegiao = class(TForm)
@@ -37,21 +37,15 @@ type
     TabDetalhe: TTabSheet;
     DBidRegiao: TDBEdit;
     gridRegiao: TDBGrid;
-    QryRegiao: TOraQuery;
     dtsRegiao: TOraDataSource;
-    QryRegiaoID_REGIAO: TFloatField;
     DBNmRegiao: TDBEdit;
     SB_EXCLUI: TSpeedButton;
-    QryRegiaoNM_REGIAO: TStringField;
     Label1: TLabel;
     Label2: TLabel;
     BtIncluir: TBitBtn;
     TabCidade: TTabSheet;
     btnPesqCid: TBitBtn;
-    QryCidade: TOraQuery;
     dtsCidade: TOraDataSource;
-    QryCidadeID_REGIAO: TFloatField;
-    QryCidadeID_CIDADE: TFloatField;
     edtPesqCid: TEdit;
     gridCidade: TDBGrid;
     GroupBox1: TGroupBox;
@@ -59,9 +53,15 @@ type
     qryConsultaID_REGIAO: TFloatField;
     qryConsultaNM_REGIAO: TStringField;
     qryConsultaID_CIDADE: TFloatField;
-    QryCidadeNM_CIDADE: TStringField;
     qryTemp: TOraQuery;
+    QryRegiao: TSmartQuery;
+    QryRegiaoID_REGIAO: TFloatField;
+    QryRegiaoNM_REGIAO: TStringField;
+    QryCidade: TSmartQuery;
     QryCidadeID_CID_REG: TIntegerField;
+    QryCidadeID_REGIAO: TFloatField;
+    QryCidadeID_CIDADE: TFloatField;
+    QryCidadeNM_CIDADE: TStringField;
     procedure LDcomponentes(LD:boolean);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Sb_SairClick(Sender: TObject);

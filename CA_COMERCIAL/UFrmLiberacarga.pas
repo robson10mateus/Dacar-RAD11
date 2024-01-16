@@ -14,22 +14,10 @@ type
     PageControl1: TPageControl;
     TabSheet2: TTabSheet;
     grdCargas: TDBGrid;
-    QryForm: TOraQuery;
     DSFORM: TOraDataSource;
-    QryFormID_CARGEXPE: TFloatField;
-    QryFormGN_PLACVEICTRAN: TStringField;
-    QryFormNM_FORNECEDOR: TStringField;
-    QryFormNM_REDUFORN: TStringField;
-    QryFormNR_ORDEENTRCARGEXPE: TFloatField;
-    QryFormFL_STATCARGEXPE: TStringField;
-    QryFormDT_DESBCARGEXPE: TDateTimeField;
-    QryFormFL_IMPRCARGEXPE: TStringField;
     qryTemp: TOraQuery;
-    QryFormDT_CARGEXPE: TDateTimeField;
     QryPedItem: TOraQuery;
     QrPedCarga: TOraQuery;
-    QryFormID_USR_VOLT_AB: TIntegerField;
-    QryFormNOME_USUARIO: TStringField;
     Panel2: TPanel;
     SB_ATIVA: TSpeedButton;
     SB_ALTERA: TSpeedButton;
@@ -44,6 +32,18 @@ type
     Label2: TLabel;
     Shape1: TShape;
     Label1: TLabel;
+    QryForm: TSmartQuery;
+    QryFormID_CARGEXPE: TFloatField;
+    QryFormGN_PLACVEICTRAN: TStringField;
+    QryFormNM_FORNECEDOR: TStringField;
+    QryFormNM_REDUFORN: TStringField;
+    QryFormNR_ORDEENTRCARGEXPE: TFloatField;
+    QryFormFL_STATCARGEXPE: TStringField;
+    QryFormDT_DESBCARGEXPE: TDateTimeField;
+    QryFormFL_IMPRCARGEXPE: TStringField;
+    QryFormDT_CARGEXPE: TDateTimeField;
+    QryFormID_USR_VOLT_AB: TIntegerField;
+    QryFormNOME_USUARIO: TStringField;
     procedure FormCreate(Sender: TObject);
     procedure Sb_SairClick(Sender: TObject);
     procedure SB_ATIVAClick(Sender: TObject);
@@ -56,10 +56,10 @@ type
     procedure FormDestroy(Sender: TObject);
     procedure grdCargasDrawColumnCell(Sender: TObject; const Rect: TRect;
       DataCol: Integer; Column: TColumn; State: TGridDrawState);
-    procedure QryFormAfterOpen(DataSet: TDataSet);
+    procedure CRTemp_QryFormAfterOpen(DataSet: TDataSet);
     procedure SpeedButton1Click(Sender: TObject);
     procedure SpeedButton2Click(Sender: TObject);
-    procedure QryFormBeforeOpen(DataSet: TDataSet);
+    procedure CRTemp_QryFormBeforeOpen(DataSet: TDataSet);
     procedure grdCargasTitleClick(Column: TColumn);
 
   private
@@ -336,7 +336,7 @@ begin
 
 end;
 
-procedure TFrmLiberacarga.QryFormAfterOpen(DataSet: TDataSet);
+procedure TFrmLiberacarga.CRTemp_QryFormAfterOpen(DataSet: TDataSet);
 var
   li_Orde: Integer;
 begin
@@ -455,7 +455,7 @@ begin
 
 end;
 
-procedure TFrmLiberacarga.QryFormBeforeOpen(DataSet: TDataSet);
+procedure TFrmLiberacarga.CRTemp_QryFormBeforeOpen(DataSet: TDataSet);
 begin
   QryForm.ParamByName('FILIAL').Value := gi_Filial;
 end;

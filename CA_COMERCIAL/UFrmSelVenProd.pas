@@ -483,28 +483,28 @@ begin
   CASE SELPE OF
     1:BEGIN
         FrmPesqTPV:=TFrmPesqTPV.Create(Self);
-        FrmPesqTPV.Show;
+        FrmPesqTPV.ShowModal;
       END;
     2:BEGIN
         FrmPesqVend:=TFrmPesqVend.Create(Self);
-        FrmPesqVend.Show;
+        FrmPesqVend.ShowModal;
       END;
     3:BEGIN
         FrmPesqCliente:=TFrmPesqCliente.Create(Self);
-        FrmPesqCliente.Show;
+        FrmPesqCliente.ShowModal;
       END;
     8:BEGIN
         FrmPesqGrupo:=TFrmPesqGrupo.Create(Self);
-        FrmPesqGrupo.Show;
+        FrmPesqGrupo.ShowModal;
       END;
     9:BEGIN
         FrmPesqGrupoCli:=TFrmPesqGrupoCli.Create(Self);
-        FrmPesqGrupoCli.Show;
+        FrmPesqGrupoCli.ShowModal;
       END;
    10:BEGIN
         FrmPesqCaminhao:=TFrmPesqCaminhao.Create(Self);
         FrmPesqCaminhao.VORIGEM:=14;
-        FrmPesqCaminhao.Show;
+        FrmPesqCaminhao.ShowModal;
       END;
    11:BEGIN
         Cria_FrmPesqCid(VCid, NCid, NEst, NPais, NReg);
@@ -523,7 +523,7 @@ begin
       END;
    14:BEGIN
         frmConsultaUsuarios:=TfrmConsultaUsuarios.Create(Self);
-        frmConsultaUsuarios.Show;
+        frmConsultaUsuarios.ShowModal;
       END;
   end;
   

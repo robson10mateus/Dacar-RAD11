@@ -1,15 +1,15 @@
 object FrmPesqGrupo: TFrmPesqGrupo
   Left = 235
   Top = 114
-  Width = 412
-  Height = 396
+  Width = 430
+  Height = 445
   HorzScrollBar.Range = 401
   VertScrollBar.Range = 387
   ActiveControl = EdExpre
   BorderIcons = [biHelp]
   BorderStyle = bsSingle
   Caption = 'Pesquisa Grupo de Produtos'
-  Color = clBackground
+  Color = clWindow
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
   Font.Height = 11

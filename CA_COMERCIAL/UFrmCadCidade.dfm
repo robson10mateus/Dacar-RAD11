@@ -494,8 +494,8 @@ object FrmCadCidade: TFrmCadCidade
   object PageControl1: TPageControl
     Left = 0
     Top = 45
-    Width = 659
-    Height = 346
+    Width = 663
+    Height = 347
     ActivePage = TabLista
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -506,6 +506,8 @@ object FrmCadCidade: TFrmCadCidade
     Font.Style = []
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 659
+    ExplicitHeight = 346
     object TabCriterio: TTabSheet
       Caption = 'Criterios'
       OnShow = TabCriterioShow
@@ -811,7 +813,7 @@ object FrmCadCidade: TFrmCadCidade
         Left = 0
         Top = 0
         Width = 655
-        Height = 319
+        Height = 317
         Align = alClient
         DataSource = DtSrcCadCidade
         Font.Charset = DEFAULT_CHARSET
@@ -838,7 +840,7 @@ object FrmCadCidade: TFrmCadCidade
             Title.Caption = 'C'#243'd'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
-            Title.Font.Height = 11
+            Title.Font.Height = 16
             Title.Font.Name = 'Arial'
             Title.Font.Pitch = fpVariable
             Title.Font.Style = [fsBold]
@@ -850,7 +852,7 @@ object FrmCadCidade: TFrmCadCidade
             FieldName = 'NM_CIDADE'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
-            Title.Font.Height = 11
+            Title.Font.Height = 16
             Title.Font.Name = 'Arial'
             Title.Font.Pitch = fpVariable
             Title.Font.Style = [fsBold]
@@ -863,7 +865,7 @@ object FrmCadCidade: TFrmCadCidade
             Title.Caption = 'UF'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
-            Title.Font.Height = 11
+            Title.Font.Height = 16
             Title.Font.Name = 'Arial'
             Title.Font.Pitch = fpVariable
             Title.Font.Style = [fsBold]
@@ -876,7 +878,7 @@ object FrmCadCidade: TFrmCadCidade
             Title.Caption = 'Regi'#227'o'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
-            Title.Font.Height = 11
+            Title.Font.Height = 16
             Title.Font.Name = 'Arial'
             Title.Font.Pitch = fpVariable
             Title.Font.Style = [fsBold]
@@ -889,7 +891,7 @@ object FrmCadCidade: TFrmCadCidade
             Title.Caption = 'Pa'#237's'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
-            Title.Font.Height = 11
+            Title.Font.Height = 16
             Title.Font.Name = 'Arial'
             Title.Font.Pitch = fpVariable
             Title.Font.Style = [fsBold]
@@ -1256,7 +1258,7 @@ object FrmCadCidade: TFrmCadCidade
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 659
+    Width = 663
     Height = 45
     Align = alTop
     Color = clWindow
@@ -1268,7 +1270,7 @@ object FrmCadCidade: TFrmCadCidade
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 651
+    ExplicitWidth = 659
     object SB_ULTIMO: TSpeedButton
       Left = 110
       Top = 5
@@ -2572,146 +2574,6 @@ object FrmCadCidade: TFrmCadCidade
       OnClick = SB_ANTERIORClick
     end
   end
-  object QryCadCidade: TOraQuery
-    KeyFields = 'ID_CIDADE'
-    KeySequence = 'ID_CIDADE'
-    SQLInsert.Strings = (
-      'INSERT INTO cidade'
-      
-        '  (EMPRESA, FILIAL, ID_CIDADE, NM_CIDADE, ID_ESTADO, NR_DDDCIDA,' +
-        ' FL_ZONAFRAN, NR_DIPAM, FX_CIDADE, ID_IBGE)'
-      'VALUES'
-      
-        '  (:EMPRESA, :FILIAL, :ID_CIDADE, :NM_CIDADE, :ID_ESTADO, :NR_DD' +
-        'DCIDA, :FL_ZONAFRAN, :NR_DIPAM, :FX_CIDADE, :ID_IBGE)')
-    SQLDelete.Strings = (
-      'DELETE FROM cidade'
-      'WHERE'
-      '  ID_CIDADE = :ID_CIDADE')
-    SQLUpdate.Strings = (
-      'UPDATE cidade'
-      'SET'
-      '  EMPRESA = :EMPRESA,'
-      '  FILIAL = :FILIAL,'
-      '  ID_CIDADE = :ID_CIDADE,'
-      '  NM_CIDADE = :NM_CIDADE,'
-      '  ID_ESTADO = :ID_ESTADO,'
-      '  NR_DDDCIDA = :NR_DDDCIDA,'
-      '  FL_ZONAFRAN = :FL_ZONAFRAN,'
-      '  NR_DIPAM = :NR_DIPAM,'
-      '  FX_CIDADE = :FX_CIDADE,'
-      '  ID_IBGE = :ID_IBGE'
-      'WHERE'
-      '  ID_CIDADE = :OLD_ID_CIDADE')
-    SQLLock.Strings = (
-      'SELECT * FROM cidade'
-      'WHERE'
-      '  ID_CIDADE = :ID_CIDADE'
-      'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  ID_CIDADE = :ID_CIDADE')
-    LocalUpdate = True
-    SQL.Strings = (
-      'SELECT '
-      '  cidade.empresa,'
-      '  cidade.filial,'
-      '  cidade.id_cidade,'
-      '  cidade.nm_cidade,'
-      '  cidade.id_ibge,'
-      '  cidade.id_estado,'
-      '  cidade.nr_dddcida,'
-      '  cidade.fl_zonafran,'
-      '  cidade.nr_dipam,'
-      '  cidade.fx_cidade,'
-      '  pais.id_pais,'
-      '  pais.nm_pais,'
-      '  estado.sg_estado,'
-      '  regiao_geografica.id_regigeog,'
-      '  regiao_geografica.nm_regigeog'
-      '  FROM'
-      '  cidade,'
-      '  estado,'
-      '  pais,'
-      '  regiao_geografica,'
-      '  regiao_internacional'
-      'WHERE'
-      '  cidade.id_estado = estado.id_estado AND'
-      '  estado.id_pais = pais.id_pais AND'
-      '  regiao_geografica.id_regigeog = estado.id_regigeog   AND'
-      '   regiao_internacional.id_regiinte = pais.id_regiinte '
-      'ORDER BY cidade.nm_cidade')
-    FetchAll = True
-    CachedUpdates = True
-    Left = 432
-    Top = 9
-    object QryCadCidadeEMPRESA: TStringField
-      FieldName = 'EMPRESA'
-      Required = True
-      Size = 2
-    end
-    object QryCadCidadeFILIAL: TIntegerField
-      FieldName = 'FILIAL'
-      Required = True
-    end
-    object QryCadCidadeID_CIDADE: TFloatField
-      AutoGenerateValue = arAutoInc
-      DisplayLabel = 'C'#243'digo'
-      FieldName = 'ID_CIDADE'
-    end
-    object QryCadCidadeNM_CIDADE: TStringField
-      DisplayLabel = 'Nome da Cidade'
-      FieldName = 'NM_CIDADE'
-      Required = True
-      Size = 40
-    end
-    object QryCadCidadeID_ESTADO: TFloatField
-      FieldName = 'ID_ESTADO'
-      Required = True
-    end
-    object QryCadCidadeNR_DDDCIDA: TStringField
-      DisplayLabel = 'DDD'
-      FieldName = 'NR_DDDCIDA'
-      Size = 3
-    end
-    object QryCadCidadeFL_ZONAFRAN: TStringField
-      FieldName = 'FL_ZONAFRAN'
-      Required = True
-      Size = 1
-    end
-    object QryCadCidadeNR_DIPAM: TIntegerField
-      FieldName = 'NR_DIPAM'
-    end
-    object QryCadCidadeFX_CIDADE: TStringField
-      FieldName = 'FX_CIDADE'
-      Required = True
-      Size = 1
-    end
-    object QryCadCidadeNM_PAIS: TStringField
-      DisplayLabel = 'Nome do Pa'#237's'
-      FieldName = 'NM_PAIS'
-      Size = 40
-    end
-    object QryCadCidadeSG_ESTADO: TStringField
-      DisplayLabel = 'Estado'
-      FieldName = 'SG_ESTADO'
-      Size = 10
-    end
-    object QryCadCidadeID_REGIGEOG: TFloatField
-      FieldName = 'ID_REGIGEOG'
-    end
-    object QryCadCidadeNM_REGIGEOG: TStringField
-      DisplayLabel = 'Nome da Regi'#227'o'
-      FieldName = 'NM_REGIGEOG'
-      Size = 30
-    end
-    object QryCadCidadeID_PAIS: TFloatField
-      FieldName = 'ID_PAIS'
-    end
-    object QryCadCidadeID_IBGE: TIntegerField
-      FieldName = 'ID_IBGE'
-    end
-  end
   object DtSrcCadCidade: TOraDataSource
     DataSet = QryCadCidade
     Left = 463
@@ -2825,5 +2687,146 @@ object FrmCadCidade: TFrmCadCidade
         Name = 'VUSUARIO'
         Value = nil
       end>
+  end
+  object QryCadCidade: TSmartQuery
+    KeyFields = 'ID_CIDADE'
+    KeySequence = 'ID_CIDADE'
+    SQLInsert.Strings = (
+      'INSERT INTO cidade'
+      
+        '  (EMPRESA, FILIAL, ID_CIDADE, NM_CIDADE, ID_ESTADO, NR_DDDCIDA,' +
+        ' FL_ZONAFRAN, NR_DIPAM, FX_CIDADE, ID_IBGE)'
+      'VALUES'
+      
+        '  (:EMPRESA, :FILIAL, :ID_CIDADE, :NM_CIDADE, :ID_ESTADO, :NR_DD' +
+        'DCIDA, :FL_ZONAFRAN, :NR_DIPAM, :FX_CIDADE, :ID_IBGE)')
+    SQLDelete.Strings = (
+      'DELETE FROM cidade'
+      'WHERE'
+      '  ID_CIDADE = :ID_CIDADE')
+    SQLUpdate.Strings = (
+      'UPDATE cidade'
+      'SET'
+      '  EMPRESA = :EMPRESA,'
+      '  FILIAL = :FILIAL,'
+      '  ID_CIDADE = :ID_CIDADE,'
+      '  NM_CIDADE = :NM_CIDADE,'
+      '  ID_ESTADO = :ID_ESTADO,'
+      '  NR_DDDCIDA = :NR_DDDCIDA,'
+      '  FL_ZONAFRAN = :FL_ZONAFRAN,'
+      '  NR_DIPAM = :NR_DIPAM,'
+      '  FX_CIDADE = :FX_CIDADE,'
+      '  ID_IBGE = :ID_IBGE'
+      'WHERE'
+      '  ID_CIDADE = :OLD_ID_CIDADE')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  ID_CIDADE = :ID_CIDADE')
+    SQLLock.Strings = (
+      'SELECT * FROM cidade'
+      'WHERE'
+      '  ID_CIDADE = :ID_CIDADE'
+      'FOR UPDATE NOWAIT')
+    SQL.Strings = (
+      'SELECT '
+      '  cidade.empresa,'
+      '  cidade.filial,'
+      '  cidade.id_cidade,'
+      '  cidade.nm_cidade,'
+      '  cidade.id_ibge,'
+      '  cidade.id_estado,'
+      '  cidade.nr_dddcida,'
+      '  cidade.fl_zonafran,'
+      '  cidade.nr_dipam,'
+      '  cidade.fx_cidade,'
+      '  pais.id_pais,'
+      '  pais.nm_pais,'
+      '  estado.sg_estado,'
+      '  regiao_geografica.id_regigeog,'
+      '  regiao_geografica.nm_regigeog'
+      '  FROM'
+      '  cidade,'
+      '  estado,'
+      '  pais,'
+      '  regiao_geografica,'
+      '  regiao_internacional'
+      'WHERE'
+      '  cidade.id_estado = estado.id_estado AND'
+      '  estado.id_pais = pais.id_pais AND'
+      '  regiao_geografica.id_regigeog = estado.id_regigeog   AND'
+      '   regiao_internacional.id_regiinte = pais.id_regiinte '
+      'ORDER BY cidade.nm_cidade')
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 432
+    Top = 8
+    object QryCadCidadeEMPRESA: TStringField
+      FieldName = 'EMPRESA'
+      Required = True
+      Size = 2
+    end
+    object QryCadCidadeFILIAL: TIntegerField
+      FieldName = 'FILIAL'
+      Required = True
+    end
+    object QryCadCidadeID_CIDADE: TFloatField
+      AutoGenerateValue = arAutoInc
+      DisplayLabel = 'C'#243'digo'
+      FieldName = 'ID_CIDADE'
+    end
+    object QryCadCidadeNM_CIDADE: TStringField
+      DisplayLabel = 'Nome da Cidade'
+      FieldName = 'NM_CIDADE'
+      Required = True
+      Size = 40
+    end
+    object QryCadCidadeID_ESTADO: TFloatField
+      FieldName = 'ID_ESTADO'
+      Required = True
+    end
+    object QryCadCidadeNR_DDDCIDA: TStringField
+      DisplayLabel = 'DDD'
+      FieldName = 'NR_DDDCIDA'
+      Size = 3
+    end
+    object QryCadCidadeFL_ZONAFRAN: TStringField
+      FieldName = 'FL_ZONAFRAN'
+      Required = True
+      Size = 1
+    end
+    object QryCadCidadeNR_DIPAM: TIntegerField
+      FieldName = 'NR_DIPAM'
+    end
+    object QryCadCidadeFX_CIDADE: TStringField
+      FieldName = 'FX_CIDADE'
+      Required = True
+      Size = 1
+    end
+    object QryCadCidadeNM_PAIS: TStringField
+      DisplayLabel = 'Nome do Pa'#237's'
+      FieldName = 'NM_PAIS'
+      Size = 40
+    end
+    object QryCadCidadeSG_ESTADO: TStringField
+      DisplayLabel = 'Estado'
+      FieldName = 'SG_ESTADO'
+      Size = 10
+    end
+    object QryCadCidadeID_REGIGEOG: TFloatField
+      FieldName = 'ID_REGIGEOG'
+    end
+    object QryCadCidadeNM_REGIGEOG: TStringField
+      DisplayLabel = 'Nome da Regi'#227'o'
+      FieldName = 'NM_REGIGEOG'
+      Size = 30
+    end
+    object QryCadCidadeID_PAIS: TFloatField
+      FieldName = 'ID_PAIS'
+    end
+    object QryCadCidadeID_IBGE: TIntegerField
+      FieldName = 'ID_IBGE'
+    end
   end
 end

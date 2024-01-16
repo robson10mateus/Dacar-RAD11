@@ -5,7 +5,7 @@ interface
 uses
   SysUtils, Types, Classes, Variants, Graphics, Controls, Forms,
   Dialogs, StdCtrls, DB, Ora, MemDS, DBAccess, Mask, ExtCtrls, Grids,
-  DBGrids, ComCtrls, Buttons, DBCtrls, Vcl.ToolWin, Winapi.Windows;
+  DBGrids, ComCtrls, Buttons, DBCtrls, Vcl.ToolWin, Winapi.Windows, OraSmart;
 
 type
   TPageControl = class(ComCtrls.TPageControl)
@@ -33,23 +33,7 @@ type
     ToolBar1: TToolBar;
     DBGrid1: TDBGrid;
     Tab_Detalhe: TTabSheet;
-    Qr: TOraQuery;
     Ds: TOraDataSource;
-    QrEMPRESA: TStringField;
-    QrFILIAL: TIntegerField;
-    QrID_VALE: TFloatField;
-    QrID_CLIENTE: TFloatField;
-    QrID_VENDEDOR: TFloatField;
-    QrDATA_ENTREGA: TDateTimeField;
-    QrID_PEDIDO: TFloatField;
-    QrSALDO_ANTERIOR: TFloatField;
-    QrQTD_ENTREGUE: TFloatField;
-    QrQTD_DEVOLVIDA: TFloatField;
-    QrDATA_DEVOLUCAO: TDateTimeField;
-    QrFL_IMPRESSO: TStringField;
-    QrOBS: TStringField;
-    QrNM_CLIENTE: TStringField;
-    QrNM_VENDEDOR: TStringField;
     SB_PRIMEIRO: TSpeedButton;
     SB_ANTERIOR: TSpeedButton;
     SB_PROXIMO: TSpeedButton;
@@ -86,18 +70,11 @@ type
     Qr_Direitos: TOraQuery;
     Qr_DireitosID_RECURSO: TFloatField;
     chk_Impresso: TDBCheckBox;
-    QrID_USUARIO: TFloatField;
-    QrNOME_USUARIO: TStringField;
-    QrSALDO: TFloatField;
     DBEdit3: TDBEdit;
     Label4: TLabel;
     Label16: TLabel;
     DBEdit4: TDBEdit;
     SB_Imprime: TSpeedButton;
-    QrID_USUARIO_DEV: TFloatField;
-    QrOBS_DEV: TStringField;
-    QrFL_STATUS: TStringField;
-    QrUSUARIO_DEV: TStringField;
     Label1: TLabel;
     Edt_ObsDev: TDBEdit;
     Label17: TLabel;
@@ -116,20 +93,43 @@ type
     edtCodMotorista: TDBEdit;
     btnPesqMotorista: TBitBtn;
     edtNomeMotorista: TDBEdit;
+    pnlImpHistorico: TPanel;
+    SB_Historico: TSpeedButton;
+    rgpTotalHistorico: TRadioGroup;
+    qryTemp: TOraQuery;
+    edt_nmTransp: TDBEdit;
+    Sb_Sair: TSpeedButton;
+    Qr: TSmartQuery;
+    QrEMPRESA: TStringField;
+    QrFILIAL: TIntegerField;
+    QrID_VALE: TFloatField;
+    QrID_CLIENTE: TFloatField;
+    QrID_VENDEDOR: TFloatField;
+    QrDATA_ENTREGA: TDateTimeField;
+    QrID_PEDIDO: TFloatField;
+    QrSALDO_ANTERIOR: TFloatField;
+    QrQTD_ENTREGUE: TFloatField;
+    QrQTD_DEVOLVIDA: TFloatField;
+    QrDATA_DEVOLUCAO: TDateTimeField;
+    QrFL_IMPRESSO: TStringField;
+    QrOBS: TStringField;
+    QrNM_CLIENTE: TStringField;
+    QrNM_VENDEDOR: TStringField;
+    QrID_USUARIO: TFloatField;
+    QrNOME_USUARIO: TStringField;
+    QrSALDO: TFloatField;
+    QrID_USUARIO_DEV: TFloatField;
+    QrOBS_DEV: TStringField;
+    QrFL_STATUS: TStringField;
+    QrUSUARIO_DEV: TStringField;
     QrID_MOTORISTA: TIntegerField;
     QrNM_MOTOTRAN: TStringField;
     QrNO_PLACAVEICULO: TStringField;
     QrUSUARIO_ENTR: TStringField;
     QrUSUARIO_DEVOL: TStringField;
-    pnlImpHistorico: TPanel;
-    SB_Historico: TSpeedButton;
-    rgpTotalHistorico: TRadioGroup;
     QrCLIENTE_REL: TStringField;
-    qryTemp: TOraQuery;
-    edt_nmTransp: TDBEdit;
     QrID_TRANSPORTADOR: TFloatField;
     QrNM_FORNECEDOR: TStringField;
-    Sb_Sair: TSpeedButton;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Sb_SairClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -156,11 +156,11 @@ type
     procedure DBGrid1DrawColumnCell(Sender: TObject; const Rect: TRect;
       DataCol: Integer; Column: TColumn; State: TGridDrawState);
     procedure DsStateChange(Sender: TObject);
-    procedure QrAfterCancel(DataSet: TDataSet);
-    procedure QrAfterScroll(DataSet: TDataSet);
-    procedure QrBeforePost(DataSet: TDataSet);
+    procedure CRTemp_QrAfterCancel(DataSet: TDataSet);
+    procedure CRTemp_QrAfterScroll(DataSet: TDataSet);
+    procedure CRTemp_QrBeforePost(DataSet: TDataSet);
     procedure SB_ImprimeClick(Sender: TObject);
-    procedure QrBeforeOpen(DataSet: TDataSet);
+    procedure CRTemp_QrBeforeOpen(DataSet: TDataSet);
     procedure DBGrid1KeyDown(Sender: TObject; var Key: Word;
       Shift: TShiftState);
     procedure SB_CancelaValeClick(Sender: TObject);
@@ -728,12 +728,12 @@ begin
      AtualizaBotoes;
 end;
 
-procedure TFrmControleCaixas.QrAfterCancel(DataSet: TDataSet);
+procedure TFrmControleCaixas.CRTemp_QrAfterCancel(DataSet: TDataSet);
 begin
      Qr.CancelUpdates;
 end;
 
-procedure TFrmControleCaixas.QrAfterScroll(DataSet: TDataSet);
+procedure TFrmControleCaixas.CRTemp_QrAfterScroll(DataSet: TDataSet);
 begin
   if ( PageControl1.ActivePage =  Tab_Detalhe ) OR ( PageControl1.ActivePage =  Tab_Lista  )  then
   begin
@@ -742,7 +742,7 @@ begin
     DesabilitaCampos();
 end;
 
-procedure TFrmControleCaixas.QrBeforePost(DataSet: TDataSet);
+procedure TFrmControleCaixas.CRTemp_QrBeforePost(DataSet: TDataSet);
 begin
   if   (ds.State in [dsedit, dsinsert ]) AND ( Edt_DtDevolucao.Text <> '' ) AND (QrFL_STATUS.Value <> 'CN')  then
   begin
@@ -887,7 +887,7 @@ begin
 
 end;
 
-procedure TFrmControleCaixas.QrBeforeOpen(DataSet: TDataSet);
+procedure TFrmControleCaixas.CRTemp_QrBeforeOpen(DataSet: TDataSet);
 begin
      DesabilitaCampos();
 end;

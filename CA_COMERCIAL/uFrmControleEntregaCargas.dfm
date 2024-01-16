@@ -1654,7 +1654,7 @@ object FrmControleEntregaCargas: TFrmControleEntregaCargas
       object pnlDetalhesCarga: TPanel
         Left = 0
         Top = 0
-        Width = 1145
+        Width = 1149
         Height = 120
         Align = alTop
         BevelOuter = bvNone
@@ -1880,7 +1880,7 @@ object FrmControleEntregaCargas: TFrmControleEntregaCargas
       object pnlDetalhesPedido: TPanel
         Left = 0
         Top = 120
-        Width = 1145
+        Width = 1149
         Height = 165
         Align = alTop
         BevelOuter = bvNone
@@ -2145,8 +2145,8 @@ object FrmControleEntregaCargas: TFrmControleEntregaCargas
       object grpGridDetalhesPedido: TGroupBox
         Left = 0
         Top = 285
-        Width = 1145
-        Height = 265
+        Width = 1149
+        Height = 266
         Align = alClient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
@@ -2156,13 +2156,11 @@ object FrmControleEntregaCargas: TFrmControleEntregaCargas
         Font.Style = []
         ParentFont = False
         TabOrder = 2
-        ExplicitWidth = 1149
-        ExplicitHeight = 271
         object grdDetalhesPedido: TDBGrid
           Left = 2
-          Top = 15
+          Top = 17
           Width = 1145
-          Height = 251
+          Height = 247
           Align = alClient
           DataSource = dtsCargaPedidos
           Font.Charset = DEFAULT_CHARSET
@@ -2191,11 +2189,13 @@ object FrmControleEntregaCargas: TFrmControleEntregaCargas
             item
               Expanded = False
               FieldName = 'ID_PEDIVEND'
+              Width = 64
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'NR_NOTAFISC'
+              Width = 64
               Visible = True
             end
             item
@@ -2229,19 +2229,106 @@ object FrmControleEntregaCargas: TFrmControleEntregaCargas
             item
               Expanded = False
               FieldName = 'NM_VENDEDOR'
+              Width = 64
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'NO_MOTIVO'
+              Width = 64
               Visible = True
             end>
         end
       end
     end
   end
-  object qryCargaPedidos: TOraQuery
-    LocalUpdate = True
+  object dtsCargas: TOraDataSource
+    DataSet = qryCargas
+    Left = 396
+    Top = 6
+  end
+  object qryCargas: TOraQuery
+    Session = FrmPrincipal.DB
+    SQL.Strings = (
+      
+        'SELECT DISTINCT CA.ID_CARGEXPE, CA.DT_MONTCARGEXPE, CA.GN_PLACVE' +
+        'ICTRAN, SUBSTR(CA.GN_PLACVEICTRAN,1,3)||'#39' - '#39'||SUBSTR(CA.GN_PLAC' +
+        'VEICTRAN,4,4) AS PLACA, TV.OP_MODELO, CA.MOTORISTA, CA.AJUDANTE,' +
+        ' PV.DT_ENTRPEDIVEND, CA.QT_PESOBALANCAO, COUNT(DISTINCT PV.ID_PE' +
+        'DIVEND) AS TT_PEDIDO, SUM(CI.QN_EMBAEXPEITEMCARGEXPE) AS TT_CAIX' +
+        'AS'
+      'FROM EXPEDICAO_CARGA_ITEM CI'
+      
+        'INNER JOIN EXPEDICAO_CARGA CA ON (CA.ID_CARGEXPE = CI.ID_CARGEXP' +
+        'E)'
+      'INNER JOIN PEDIDO_VENDA PV ON (PV.ID_PEDIVEND = CI.ID_PEDIVEND)'
+      
+        'INNER JOIN PEDIDO_VENDA_NOTA_FISCAL PVN ON (PVN.ID_PEDIVEND = PV' +
+        '.ID_PEDIVEND)'
+      'INNER JOIN NOTA_FISCAL NF ON (NF.ID_NOTAFISC = PVN.ID_NOTAFISC)'
+      
+        'INNER JOIN TRANSPORTADOR_VEICULO TV ON (TV.GN_PLACVEICTRAN = CA.' +
+        'GN_PLACVEICTRAN)'
+      
+        'GROUP BY CA.ID_CARGEXPE, CA.DT_MONTCARGEXPE, CA.GN_PLACVEICTRAN,' +
+        ' TV.OP_MODELO, CA.MOTORISTA, CA.AJUDANTE, PV.DT_ENTRPEDIVEND, CA' +
+        '.QT_PESOBALANCAO')
+    Left = 366
+    Top = 4
+    object qryCargasID_CARGEXPE: TFloatField
+      FieldName = 'ID_CARGEXPE'
+      Required = True
+    end
+    object qryCargasDT_MONTCARGEXPE: TDateTimeField
+      FieldName = 'DT_MONTCARGEXPE'
+      Required = True
+    end
+    object qryCargasGN_PLACVEICTRAN: TStringField
+      FieldName = 'GN_PLACVEICTRAN'
+      Size = 7
+    end
+    object qryCargasOP_MODELO: TStringField
+      FieldName = 'OP_MODELO'
+      Size = 2
+    end
+    object qryCargasMOTORISTA: TStringField
+      FieldName = 'MOTORISTA'
+      Size = 30
+    end
+    object qryCargasAJUDANTE: TStringField
+      FieldName = 'AJUDANTE'
+      Size = 30
+    end
+    object qryCargasDT_ENTRPEDIVEND: TDateTimeField
+      FieldName = 'DT_ENTRPEDIVEND'
+      Required = True
+    end
+    object qryCargasQT_PESOBALANCAO: TFloatField
+      FieldName = 'QT_PESOBALANCAO'
+      DisplayFormat = '#,##0.000'
+    end
+    object qryCargasTT_PEDIDO: TFloatField
+      FieldName = 'TT_PEDIDO'
+    end
+    object qryCargasTT_CAIXAS: TFloatField
+      FieldName = 'TT_CAIXAS'
+    end
+    object qryCargasPLACA: TStringField
+      FieldName = 'PLACA'
+      Size = 10
+    end
+  end
+  object dtsCargaPedidos: TOraDataSource
+    DataSet = qryCargaPedidos
+    Left = 525
+    Top = 4
+  end
+  object sqlAtualizaEntregas: TOraSQL
+    Session = FrmPrincipal.DB
+    Left = 441
+    Top = 5
+  end
+  object qryCargaPedidos: TSmartQuery
     Session = FrmPrincipal.DB
     SQL.Strings = (
       
@@ -2290,10 +2377,12 @@ object FrmControleEntregaCargas: TFrmControleEntregaCargas
         'ORDER BY PV.DT_ENTRPEDIVEND, C.ID_CARGEXPE, PV.ID_PEDIVEND      ' +
         '          ')
     MasterSource = dtsCargas
-    FetchAll = True
     CachedUpdates = True
-    Left = 495
-    Top = 4
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 496
+    Top = 8
     object qryCargaPedidosID_CARGEXPE: TFloatField
       Alignment = taLeftJustify
       DisplayLabel = 'N'#186' Carga'
@@ -2416,91 +2505,5 @@ object FrmControleEntregaCargas: TFrmControleEntregaCargas
       FieldName = 'QT_PESOBALANCAO'
       DisplayFormat = '#,##0.000'
     end
-  end
-  object dtsCargas: TOraDataSource
-    DataSet = qryCargas
-    Left = 396
-    Top = 6
-  end
-  object qryCargas: TOraQuery
-    Session = FrmPrincipal.DB
-    SQL.Strings = (
-      
-        'SELECT DISTINCT CA.ID_CARGEXPE, CA.DT_MONTCARGEXPE, CA.GN_PLACVE' +
-        'ICTRAN, SUBSTR(CA.GN_PLACVEICTRAN,1,3)||'#39' - '#39'||SUBSTR(CA.GN_PLAC' +
-        'VEICTRAN,4,4) AS PLACA, TV.OP_MODELO, CA.MOTORISTA, CA.AJUDANTE,' +
-        ' PV.DT_ENTRPEDIVEND, CA.QT_PESOBALANCAO, COUNT(DISTINCT PV.ID_PE' +
-        'DIVEND) AS TT_PEDIDO, SUM(CI.QN_EMBAEXPEITEMCARGEXPE) AS TT_CAIX' +
-        'AS'
-      'FROM EXPEDICAO_CARGA_ITEM CI'
-      
-        'INNER JOIN EXPEDICAO_CARGA CA ON (CA.ID_CARGEXPE = CI.ID_CARGEXP' +
-        'E)'
-      'INNER JOIN PEDIDO_VENDA PV ON (PV.ID_PEDIVEND = CI.ID_PEDIVEND)'
-      
-        'INNER JOIN PEDIDO_VENDA_NOTA_FISCAL PVN ON (PVN.ID_PEDIVEND = PV' +
-        '.ID_PEDIVEND)'
-      'INNER JOIN NOTA_FISCAL NF ON (NF.ID_NOTAFISC = PVN.ID_NOTAFISC)'
-      
-        'INNER JOIN TRANSPORTADOR_VEICULO TV ON (TV.GN_PLACVEICTRAN = CA.' +
-        'GN_PLACVEICTRAN)'
-      
-        'GROUP BY CA.ID_CARGEXPE, CA.DT_MONTCARGEXPE, CA.GN_PLACVEICTRAN,' +
-        ' TV.OP_MODELO, CA.MOTORISTA, CA.AJUDANTE, PV.DT_ENTRPEDIVEND, CA' +
-        '.QT_PESOBALANCAO')
-    Left = 366
-    Top = 4
-    object qryCargasID_CARGEXPE: TFloatField
-      FieldName = 'ID_CARGEXPE'
-      Required = True
-    end
-    object qryCargasDT_MONTCARGEXPE: TDateTimeField
-      FieldName = 'DT_MONTCARGEXPE'
-      Required = True
-    end
-    object qryCargasGN_PLACVEICTRAN: TStringField
-      FieldName = 'GN_PLACVEICTRAN'
-      Size = 7
-    end
-    object qryCargasOP_MODELO: TStringField
-      FieldName = 'OP_MODELO'
-      Size = 2
-    end
-    object qryCargasMOTORISTA: TStringField
-      FieldName = 'MOTORISTA'
-      Size = 30
-    end
-    object qryCargasAJUDANTE: TStringField
-      FieldName = 'AJUDANTE'
-      Size = 30
-    end
-    object qryCargasDT_ENTRPEDIVEND: TDateTimeField
-      FieldName = 'DT_ENTRPEDIVEND'
-      Required = True
-    end
-    object qryCargasQT_PESOBALANCAO: TFloatField
-      FieldName = 'QT_PESOBALANCAO'
-      DisplayFormat = '#,##0.000'
-    end
-    object qryCargasTT_PEDIDO: TFloatField
-      FieldName = 'TT_PEDIDO'
-    end
-    object qryCargasTT_CAIXAS: TFloatField
-      FieldName = 'TT_CAIXAS'
-    end
-    object qryCargasPLACA: TStringField
-      FieldName = 'PLACA'
-      Size = 10
-    end
-  end
-  object dtsCargaPedidos: TOraDataSource
-    DataSet = qryCargaPedidos
-    Left = 525
-    Top = 4
-  end
-  object sqlAtualizaEntregas: TOraSQL
-    Session = FrmPrincipal.DB
-    Left = 441
-    Top = 5
   end
 end

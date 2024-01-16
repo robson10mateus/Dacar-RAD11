@@ -1,14 +1,14 @@
 object FrmPesqCid: TFrmPesqCid
   Left = 705
   Top = 270
-  Width = 628
-  Height = 355
+  Width = 745
+  Height = 405
   VertScrollBar.Range = 170
   ActiveControl = DBGrid1
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Cadastro de Cliente - Consulta Cidade'
-  Color = clBackground
+  Color = clWindow
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -494,8 +494,8 @@ object FrmPesqCid: TFrmPesqCid
   object DBGrid1: TDBGrid
     Left = 0
     Top = 170
-    Width = 612
-    Height = 146
+    Width = 733
+    Height = 197
     Align = alClient
     DataSource = DtSrcPesqCid
     Font.Charset = DEFAULT_CHARSET
@@ -554,7 +554,7 @@ object FrmPesqCid: TFrmPesqCid
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 612
+    Width = 733
     Height = 45
     Align = alTop
     Color = clWindow
@@ -566,7 +566,7 @@ object FrmPesqCid: TFrmPesqCid
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 628
+    ExplicitWidth = 729
     object BitBtn4: TBitBtn
       Left = 40
       Top = 5
@@ -994,7 +994,7 @@ object FrmPesqCid: TFrmPesqCid
   object Panel2: TPanel
     Left = 0
     Top = 45
-    Width = 612
+    Width = 733
     Height = 125
     Align = alTop
     Color = clWindow
@@ -1006,6 +1006,7 @@ object FrmPesqCid: TFrmPesqCid
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
+    ExplicitWidth = 729
     object Lbl_Expr: TLabel
       Left = 10
       Top = 70

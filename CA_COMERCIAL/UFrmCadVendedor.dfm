@@ -1,8 +1,8 @@
 object FrmCadVendedor: TFrmCadVendedor
   Left = 396
   Top = 315
-  Width = 948
-  Height = 490
+  Width = 1026
+  Height = 609
   VertScrollBar.Range = 45
   BorderStyle = bsSingle
   Caption = 'Comercial Dacar - Cadastro de Vendedor'
@@ -22,9 +22,9 @@ object FrmCadVendedor: TFrmCadVendedor
   object PageControl: TPageControl
     Left = 0
     Top = 45
-    Width = 932
-    Height = 406
-    ActivePage = TabCriterio
+    Width = 1014
+    Height = 526
+    ActivePage = TabDetalhes
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
@@ -35,6 +35,8 @@ object FrmCadVendedor: TFrmCadVendedor
     ParentFont = False
     TabOrder = 0
     OnChange = PageControlChange
+    ExplicitWidth = 1010
+    ExplicitHeight = 525
     object TabCriterio: TTabSheet
       Caption = ' Crit'#233'rios '
       object Lbl_Filtro: TLabel
@@ -333,8 +335,8 @@ object FrmCadVendedor: TFrmCadVendedor
       object DBGrid1: TDBGrid
         Left = 0
         Top = 0
-        Width = 940
-        Height = 415
+        Width = 1006
+        Height = 496
         Align = alClient
         Color = clWhite
         DataSource = DtSrcVendedor
@@ -549,12 +551,13 @@ object FrmCadVendedor: TFrmCadVendedor
       object Panel3: TPanel
         Left = 0
         Top = 0
-        Width = 924
-        Height = 376
+        Width = 1006
+        Height = 496
         Align = alClient
         Color = clWindow
         ParentBackground = False
         TabOrder = 0
+        ExplicitLeft = 1
         object Label15: TLabel
           Left = 10
           Top = 130
@@ -632,7 +635,7 @@ object FrmCadVendedor: TFrmCadVendedor
         end
         object Label6: TLabel
           Left = 630
-          Top = 10
+          Top = 16
           Width = 79
           Height = 15
           Caption = 'Tipo Vendedor'
@@ -1097,7 +1100,7 @@ object FrmCadVendedor: TFrmCadVendedor
         end
         object BtnDataNascimento: TBitBtn
           Left = 600
-          Top = 35
+          Top = 36
           Width = 21
           Height = 21
           Font.Charset = DEFAULT_CHARSET
@@ -1203,7 +1206,7 @@ object FrmCadVendedor: TFrmCadVendedor
         end
         object dblkcbbTipoVendedor: TDBLookupComboBox
           Left = 630
-          Top = 30
+          Top = 35
           Width = 300
           Height = 23
           DataField = 'ID_TIPOVENDEDOR'
@@ -1281,6 +1284,7 @@ object FrmCadVendedor: TFrmCadVendedor
           Values.Strings = (
             'F'
             'J')
+          OnChange = DBRPessoaChange
           OnExit = DBRPessoaExit
         end
         object dblkcbbUsuario: TDBLookupComboBox
@@ -1391,7 +1395,6 @@ object FrmCadVendedor: TFrmCadVendedor
             Font.Name = 'Arial'
             Font.Pitch = fpVariable
             Font.Style = []
-            MaxLength = 4
             ParentFont = False
             TabOrder = 0
           end
@@ -1472,8 +1475,8 @@ object FrmCadVendedor: TFrmCadVendedor
       object dbgrdClientes: TDBGrid
         Left = 0
         Top = 0
-        Width = 928
-        Height = 379
+        Width = 1006
+        Height = 496
         Align = alClient
         DataSource = DtSrcVendedorCliente
         Font.Charset = DEFAULT_CHARSET
@@ -1499,14 +1502,14 @@ object FrmCadVendedor: TFrmCadVendedor
             FieldName = 'ID_CLIENTE'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
-            Font.Height = 12
+            Font.Height = 15
             Font.Name = 'Arial'
             Font.Pitch = fpVariable
             Font.Style = []
             Title.Caption = 'C'#243'd'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
-            Title.Font.Height = 11
+            Title.Font.Height = 16
             Title.Font.Name = 'Arial'
             Title.Font.Pitch = fpVariable
             Title.Font.Style = [fsBold]
@@ -1518,14 +1521,14 @@ object FrmCadVendedor: TFrmCadVendedor
             FieldName = 'CLIENTE'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
-            Font.Height = 12
+            Font.Height = 15
             Font.Name = 'Arial'
             Font.Pitch = fpVariable
             Font.Style = []
             Title.Caption = 'Raz'#227'o Social'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
-            Title.Font.Height = 11
+            Title.Font.Height = 16
             Title.Font.Name = 'Arial'
             Title.Font.Pitch = fpVariable
             Title.Font.Style = [fsBold]
@@ -1537,13 +1540,14 @@ object FrmCadVendedor: TFrmCadVendedor
             FieldName = 'VENDEDORPADRAO'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
-            Font.Height = 12
+            Font.Height = 15
             Font.Name = 'Arial'
             Font.Pitch = fpVariable
             Font.Style = []
+            Title.Caption = 'Vendedor Padr'#227'o'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
-            Title.Font.Height = 11
+            Title.Font.Height = 16
             Title.Font.Name = 'Arial'
             Title.Font.Pitch = fpVariable
             Title.Font.Style = [fsBold]
@@ -1555,13 +1559,14 @@ object FrmCadVendedor: TFrmCadVendedor
             FieldName = 'COMISSIONADO'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
-            Font.Height = 12
+            Font.Height = 15
             Font.Name = 'Arial'
             Font.Pitch = fpVariable
             Font.Style = []
+            Title.Caption = 'Comissionado'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
-            Title.Font.Height = 11
+            Title.Font.Height = 16
             Title.Font.Name = 'Arial'
             Title.Font.Pitch = fpVariable
             Title.Font.Style = [fsBold]
@@ -1573,13 +1578,14 @@ object FrmCadVendedor: TFrmCadVendedor
             FieldName = 'COMISSAO'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
-            Font.Height = 12
+            Font.Height = 15
             Font.Name = 'Arial'
             Font.Pitch = fpVariable
             Font.Style = []
+            Title.Caption = '% Comiss'#227'o'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
-            Title.Font.Height = 11
+            Title.Font.Height = 16
             Title.Font.Name = 'Arial'
             Title.Font.Pitch = fpVariable
             Title.Font.Style = [fsBold]
@@ -1592,7 +1598,7 @@ object FrmCadVendedor: TFrmCadVendedor
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 932
+    Width = 1014
     Height = 45
     Align = alTop
     Color = clWindow
@@ -1604,6 +1610,7 @@ object FrmCadVendedor: TFrmCadVendedor
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 1010
     object SB_ULTIMO: TSpeedButton
       Left = 110
       Top = 5
@@ -2988,336 +2995,6 @@ object FrmCadVendedor: TFrmCadVendedor
       OnClick = btnExcelClick
     end
   end
-  object qryVendedores: TOraQuery
-    KeyFields = 'ID_VENDEDOR'
-    KeySequence = 'ID_VENDEDOR'
-    SQLInsert.Strings = (
-      'INSERT INTO VENDEDOR'
-      
-        '  (EMPRESA, FILIAL, ID_VENDEDOR, IE_VENDEDOR, ID_INTEVEND, NM_VE' +
-        'NDEDOR, NM_FANTVEND, NM_REDUVEND, ID_TIPOVENDEDOR, ID_TIPOLOGR, ' +
-        'IE_CONTCONT, NM_LOGRVEND, NR_LOGRVEND, GN_COMPENDEVEND, NM_BAIRV' +
-        'END, ID_CIDADE, NR_CEPVEND, NR_CAIXPOSTVEND, NR_CEPCAIXPOSTVEND,' +
-        ' NR_FONEVEND, NR_FAXVEND, NR_FONECOMPVEND, GN_URLVEND, GN_EMAIVE' +
-        'ND, DT_NASCVEND, DT_CADAVEND, DT_ALTEVEND, FL_BLOQADMIVEND, FL_A' +
-        'TIVVEND, FL_COMIVEND, FL_PESSVEND, NR_CNPJVEND, NR_INSCESTAVEND,' +
-        ' NR_RGVEND, GN_ORGAEXPERGVEND, NR_CPFVEND, PC_COMIVEND, GN_MENSV' +
-        'ENDVEND, GN_OBSEVEND, FX_VENDEDOR, FL_PARTCORTE, ID_FORNECEDOR, ' +
-        'ID_USUARIO)'
-      'VALUES'
-      
-        '  (:EMPRESA, :FILIAL, :ID_VENDEDOR, :IE_VENDEDOR, :ID_INTEVEND, ' +
-        ':NM_VENDEDOR, :NM_FANTVEND, :NM_REDUVEND, :ID_TIPOVENDEDOR, :ID_' +
-        'TIPOLOGR, :IE_CONTCONT, :NM_LOGRVEND, :NR_LOGRVEND, :GN_COMPENDE' +
-        'VEND, :NM_BAIRVEND, :ID_CIDADE, :NR_CEPVEND, :NR_CAIXPOSTVEND, :' +
-        'NR_CEPCAIXPOSTVEND, :NR_FONEVEND, :NR_FAXVEND, :NR_FONECOMPVEND,' +
-        ' :GN_URLVEND, :GN_EMAIVEND, :DT_NASCVEND, :DT_CADAVEND, :DT_ALTE' +
-        'VEND, :FL_BLOQADMIVEND, :FL_ATIVVEND, :FL_COMIVEND, :FL_PESSVEND' +
-        ', :NR_CNPJVEND, :NR_INSCESTAVEND, :NR_RGVEND, :GN_ORGAEXPERGVEND' +
-        ', :NR_CPFVEND, :PC_COMIVEND, :GN_MENSVENDVEND, :GN_OBSEVEND, :FX' +
-        '_VENDEDOR, :FL_PARTCORTE, :ID_FORNECEDOR, :ID_USUARIO)')
-    SQLDelete.Strings = (
-      'DELETE FROM VENDEDOR'
-      'WHERE'
-      '  ID_VENDEDOR = :ID_VENDEDOR')
-    SQLUpdate.Strings = (
-      'UPDATE VENDEDOR'
-      'SET'
-      '  NM_VENDEDOR = :NM_VENDEDOR,'
-      '  NM_FANTVEND = :NM_FANTVEND,'
-      '  NM_REDUVEND = :NM_REDUVEND,'
-      '  ID_TIPOVENDEDOR = :ID_TIPOVENDEDOR,'
-      '  ID_TIPOLOGR = :ID_TIPOLOGR,'
-      '  NM_LOGRVEND = :NM_LOGRVEND,'
-      '  NR_LOGRVEND = :NR_LOGRVEND,'
-      '  GN_COMPENDEVEND = :GN_COMPENDEVEND,'
-      '  NM_BAIRVEND = :NM_BAIRVEND,'
-      '  ID_CIDADE = :ID_CIDADE,'
-      '  NR_CEPVEND = :NR_CEPVEND,'
-      '  NR_CAIXPOSTVEND = :NR_CAIXPOSTVEND,'
-      '  NR_CEPCAIXPOSTVEND = :NR_CEPCAIXPOSTVEND,'
-      '  NR_FONEVEND = :NR_FONEVEND,'
-      '  NR_FAXVEND = :NR_FAXVEND,'
-      '  NR_FONECOMPVEND = :NR_FONECOMPVEND,'
-      '  GN_URLVEND = :GN_URLVEND,'
-      '  GN_EMAIVEND = :GN_EMAIVEND,'
-      '  DT_NASCVEND = :DT_NASCVEND,'
-      '  DT_ALTEVEND = :DT_ALTEVEND, '
-      '  FL_BLOQADMIVEND = :FL_BLOQADMIVEND,'
-      '  FL_ATIVVEND = :FL_ATIVVEND,'
-      '  FL_COMIVEND = :FL_COMIVEND,'
-      '  FL_PESSVEND = :FL_PESSVEND,'
-      '  NR_CNPJVEND = :NR_CNPJVEND,'
-      '  NR_INSCESTAVEND = :NR_INSCESTAVEND,'
-      '  NR_RGVEND = :NR_RGVEND,'
-      '  GN_ORGAEXPERGVEND = :GN_ORGAEXPERGVEND,'
-      '  NR_CPFVEND = :NR_CPFVEND,'
-      '  PC_COMIVEND = :PC_COMIVEND,'
-      '  GN_OBSEVEND = :GN_OBSEVEND,'
-      '  FL_PARTCORTE = :FL_PARTCORTE,'
-      '  ID_FORNECEDOR = :ID_FORNECEDOR,'
-      '  ID_USUARIO = :ID_USUARIO'
-      'WHERE'
-      '  ID_VENDEDOR = :ID_VENDEDOR')
-    SQLLock.Strings = (
-      'SELECT * FROM VENDEDOR'
-      'WHERE'
-      '  EMPRESA = :EMPRESA'
-      'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  V.EMPRESA = :EMPRESA')
-    Session = FrmPrincipal.DB
-    SQL.Strings = (
-      'SELECT V.ID_VENDEDOR ,'
-      '  V.NM_VENDEDOR ,'
-      '  V.NM_FANTVEND ,'
-      '  V.NM_REDUVEND ,'
-      '  vt.nm_tipovendedor ,'
-      '  lt.nm_tipologr ,'
-      '  V.NM_LOGRVEND ,'
-      '  V.NR_LOGRVEND ,'
-      '  V.GN_COMPENDEVEND ,'
-      '  V.NM_BAIRVEND ,'
-      '  c.nm_cidade ,'
-      '  V.NR_CEPVEND ,'
-      '  V.NR_FONEVEND ,'
-      '  V.NR_FAXVEND ,'
-      '  V.NR_FONECOMPVEND ,'
-      '  V.GN_URLVEND ,'
-      '  V.GN_EMAIVEND ,'
-      '  V.DT_NASCVEND ,'
-      '  V.DT_CADAVEND ,'
-      '  V.DT_ALTEVEND ,'
-      '  V.FL_BLOQADMIVEND ,'
-      '  V.FL_ATIVVEND ,'
-      '  V.FL_COMIVEND ,'
-      '  V.FL_PESSVEND ,'
-      '  V.NR_CNPJVEND ,'
-      '  V.NR_INSCESTAVEND ,'
-      '  V.NR_RGVEND ,'
-      '  V.GN_ORGAEXPERGVEND ,'
-      '  V.NR_CPFVEND ,'
-      '  V.PC_COMIVEND ,'
-      '  V.GN_OBSEVEND ,'
-      '  V.FL_PARTCORTE ,'
-      '  f.nm_fornecedor ,'
-      '  v.id_tipovendedor,'
-      '  v.id_cidade,'
-      '  v.id_tipologr,'
-      '  v.id_fornecedor,'
-      '  v.id_usuario'
-      'FROM VENDEDOR V,'
-      '  VENDEDOR_TIPO VT,'
-      '  LOGRADOURO_TIPO LT,'
-      '  CIDADE C,'
-      '  FORNECEDOR F'
-      'WHERE vt.id_tipovendedor = v.id_tipovendedor'
-      'AND v.id_tipologr        = lt.id_tipologr'
-      'AND v.id_cidade          = c.id_cidade'
-      'AND v.id_fornecedor      = f.id_fornecedor')
-    CachedUpdates = True
-    Left = 474
-    Top = 8
-    object QryVendedoresID_VENDEDOR: TFloatField
-      DisplayLabel = 'Codigo'
-      FieldName = 'ID_VENDEDOR'
-      Required = True
-    end
-    object QryVendedoresNM_VENDEDOR: TStringField
-      DisplayLabel = 'Nome Vendedor'
-      FieldName = 'NM_VENDEDOR'
-      Required = True
-      Size = 40
-    end
-    object strngfldVendedoresNM_FANTVEND: TStringField
-      DisplayLabel = 'Nome Fantasia'
-      FieldName = 'NM_FANTVEND'
-      Required = True
-      Size = 40
-    end
-    object QryVendedoresNM_REDUVEND: TStringField
-      DisplayLabel = 'Nome Reduzido'
-      FieldName = 'NM_REDUVEND'
-      Required = True
-      Size = 15
-    end
-    object strngfldVendedoresNM_LOGRVEND: TStringField
-      DisplayLabel = 'Logradouro'
-      FieldName = 'NM_LOGRVEND'
-      Required = True
-      Size = 40
-    end
-    object strngfldVendedoresNR_LOGRVEND: TStringField
-      DisplayLabel = 'Numero Logradouro'
-      FieldName = 'NR_LOGRVEND'
-      Required = True
-      Size = 8
-    end
-    object strngfldVendedoresGN_COMPENDEVEND: TStringField
-      DisplayLabel = 'Complemento'
-      FieldName = 'GN_COMPENDEVEND'
-    end
-    object strngfldVendedoresNM_BAIRVEND: TStringField
-      DisplayLabel = 'Bairro'
-      FieldName = 'NM_BAIRVEND'
-      Required = True
-      Size = 30
-    end
-    object strngfldVendedoresNR_CEPVEND: TStringField
-      DisplayLabel = 'Cep'
-      FieldName = 'NR_CEPVEND'
-      Required = True
-      Size = 8
-    end
-    object strngfldVendedoresNR_FONEVEND: TStringField
-      DisplayLabel = 'Telefone'
-      FieldName = 'NR_FONEVEND'
-      Size = 9
-    end
-    object strngfldVendedoresNR_FONECOMPVEND: TStringField
-      FieldName = 'NR_FONECOMPVEND'
-      Size = 9
-    end
-    object strngfldVendedoresNR_FAXVEND: TStringField
-      DisplayLabel = 'Fax'
-      FieldName = 'NR_FAXVEND'
-      Size = 9
-    end
-    object strngfldVendedoresGN_URLVEND: TStringField
-      DisplayLabel = 'Site'
-      FieldName = 'GN_URLVEND'
-      Size = 200
-    end
-    object strngfldVendedoresGN_EMAIVEND: TStringField
-      DisplayLabel = 'e-Mail'
-      FieldName = 'GN_EMAIVEND'
-      Size = 200
-    end
-    object dtmfldVendedoresDT_NASCVEND: TDateTimeField
-      DisplayLabel = 'Data Nascimento'
-      FieldName = 'DT_NASCVEND'
-    end
-    object QryVendedoresFL_BLOQADMIVEND: TStringField
-      DisplayLabel = 'Bloqueio Administrativo'
-      FieldName = 'FL_BLOQADMIVEND'
-      Size = 1
-    end
-    object QryVendedoresFL_ATIVVEND: TStringField
-      DisplayLabel = 'Ativo'
-      FieldName = 'FL_ATIVVEND'
-      Size = 1
-    end
-    object QryVendedoresFL_COMIVEND: TStringField
-      DisplayLabel = 'Comissionado'
-      FieldName = 'FL_COMIVEND'
-      Size = 1
-    end
-    object QryVendedoresFL_PESSVEND: TStringField
-      DisplayLabel = 'Fisica/Juridica'
-      FieldName = 'FL_PESSVEND'
-      Size = 1
-    end
-    object strngfldVendedoresNR_CNPJVEND: TStringField
-      DisplayLabel = 'CNPJ'
-      FieldName = 'NR_CNPJVEND'
-      Size = 14
-    end
-    object strngfldVendedoresNR_INSCESTAVEND: TStringField
-      DisplayLabel = 'Inscri'#231#227'o Estadual'
-      FieldName = 'NR_INSCESTAVEND'
-    end
-    object strngfldVendedoresNR_RGVEND: TStringField
-      DisplayLabel = 'RG'
-      FieldName = 'NR_RGVEND'
-    end
-    object strngfldVendedoresGN_ORGAEXPERGVEND: TStringField
-      DisplayLabel = 'Org'#227'o Expedidor'
-      FieldName = 'GN_ORGAEXPERGVEND'
-      Size = 10
-    end
-    object strngfldVendedoresNR_CPFVEND: TStringField
-      DisplayLabel = 'CPF'
-      FieldName = 'NR_CPFVEND'
-      Size = 11
-    end
-    object QryVendedoresPC_COMIVEND: TFloatField
-      DisplayLabel = '% Comiss'#227'o'
-      FieldName = 'PC_COMIVEND'
-    end
-    object strngfldVendedoresGN_OBSEVEND: TStringField
-      DisplayLabel = 'Observa'#231#227'o'
-      FieldName = 'GN_OBSEVEND'
-      Size = 2000
-    end
-    object QryVendedoresFL_PARTCORTE: TStringField
-      DisplayLabel = 'Participa'#231#227'o Corte'
-      FieldName = 'FL_PARTCORTE'
-      Size = 1
-    end
-    object fltfldVendedoresID_TIPOVENDEDOR: TFloatField
-      FieldName = 'ID_TIPOVENDEDOR'
-      KeyFields = 'ID_TIPOVENDEDOR'
-      Required = True
-    end
-    object fltfldVendedoresID_CIDADE: TFloatField
-      FieldName = 'ID_CIDADE'
-      Required = True
-    end
-    object fltfldVendedoresID_TIPOLOGR: TFloatField
-      FieldName = 'ID_TIPOLOGR'
-      Required = True
-    end
-    object fltfldVendedoresID_FORNECEDOR: TFloatField
-      FieldName = 'ID_FORNECEDOR'
-    end
-    object qryVendedoresEMPRESA: TStringField
-      FieldName = 'EMPRESA'
-      Required = True
-      Size = 2
-    end
-    object qryVendedoresFILIAL: TIntegerField
-      FieldName = 'FILIAL'
-      Required = True
-    end
-    object qryVendedoresIE_VENDEDOR: TStringField
-      FieldName = 'IE_VENDEDOR'
-      Size = 15
-    end
-    object qryVendedoresID_INTEVEND: TStringField
-      FieldName = 'ID_INTEVEND'
-      Size = 25
-    end
-    object qryVendedoresIE_CONTCONT: TStringField
-      FieldName = 'IE_CONTCONT'
-    end
-    object qryVendedoresNR_CAIXPOSTVEND: TStringField
-      FieldName = 'NR_CAIXPOSTVEND'
-      Size = 10
-    end
-    object qryVendedoresNR_CEPCAIXPOSTVEND: TStringField
-      FieldName = 'NR_CEPCAIXPOSTVEND'
-      Size = 8
-    end
-    object qryVendedoresGN_MENSVENDVEND: TStringField
-      FieldName = 'GN_MENSVENDVEND'
-      Size = 2000
-    end
-    object qryVendedoresFX_VENDEDOR: TStringField
-      FieldName = 'FX_VENDEDOR'
-      Size = 1
-    end
-    object qryVendedoresDT_CADAVEND: TDateTimeField
-      FieldName = 'DT_CADAVEND'
-      Required = True
-    end
-    object qryVendedoresDT_ALTEVEND: TDateTimeField
-      FieldName = 'DT_ALTEVEND'
-    end
-    object qryVendedoresID_USUARIO: TIntegerField
-      FieldName = 'ID_USUARIO'
-    end
-  end
   object DtSrcVendedor: TOraDataSource
     DataSet = qryVendedores
     Left = 500
@@ -3350,59 +3027,6 @@ object FrmCadVendedor: TFrmCadVendedor
         Name = 'VUSUARIO'
         Value = nil
       end>
-  end
-  object qryVendedorCliente: TOraQuery
-    KeySequence = 'ID_VENDCLIE'
-    Session = FrmPrincipal.DB
-    SQL.Strings = (
-      'SELECT'
-      '  cv.id_cliente,'
-      '  c.nm_cliente as Cliente,'
-      '  cv.fl_padrvendclie as VendedorPadrao,'
-      '  cv.fl_comivendclie as Comissionado,'
-      '  cv.pc_comivendclie as Comissao'
-      'FROM cliente_vendedor cv,'
-      '  cliente c,'
-      '  vendedor v'
-      'WHERE cv.id_cliente = c.id_cliente'
-      'AND cv.id_vendedor  = v.id_vendedor'
-      'AND cv.ID_Vendedor = :ID_Vendedor'
-      'ORDER BY cv.id_cliente, c.nm_cliente')
-    Left = 420
-    Top = 9
-    ParamData = <
-      item
-        DataType = ftUnknown
-        Name = 'ID_Vendedor'
-        Value = nil
-      end>
-    object qryVendedorClienteID_CLIENTE: TFloatField
-      DisplayLabel = 'C'#243'digo Cliente'
-      FieldName = 'ID_CLIENTE'
-      Required = True
-    end
-    object qryVendedorClienteCLIENTE: TStringField
-      DisplayLabel = 'Nome Cliente'
-      FieldName = 'CLIENTE'
-      Required = True
-      Size = 40
-    end
-    object qryVendedorClienteVENDEDORPADRAO: TStringField
-      DisplayLabel = 'Vendedor Padr'#227'o'
-      FieldName = 'VENDEDORPADRAO'
-      Required = True
-      Size = 1
-    end
-    object qryVendedorClienteCOMISSIONADO: TStringField
-      DisplayLabel = 'Comissionado'
-      FieldName = 'COMISSIONADO'
-      Required = True
-      Size = 1
-    end
-    object QryVendedorClienteCOMISSAO: TFloatField
-      DisplayLabel = '% Comiss'#227'o'
-      FieldName = 'COMISSAO'
-    end
   end
   object DtSrcVendedorCliente: TOraDataSource
     DataSet = qryVendedorCliente
@@ -3523,5 +3147,388 @@ object FrmCadVendedor: TFrmCadVendedor
     Title = 'Salvar Rela'#231#227'o de Clientes em...'
     Left = 394
     Top = 8
+  end
+  object qryVendedores: TSmartQuery
+    KeyFields = 'ID_VENDEDOR'
+    KeySequence = 'ID_VENDEDOR'
+    SQLInsert.Strings = (
+      'INSERT INTO VENDEDOR'
+      
+        '  (EMPRESA, FILIAL, ID_VENDEDOR, IE_VENDEDOR, ID_INTEVEND, NM_VE' +
+        'NDEDOR, NM_FANTVEND, NM_REDUVEND, ID_TIPOVENDEDOR, ID_TIPOLOGR, ' +
+        'IE_CONTCONT, NM_LOGRVEND, NR_LOGRVEND, GN_COMPENDEVEND, NM_BAIRV' +
+        'END, ID_CIDADE, NR_CEPVEND, NR_CAIXPOSTVEND, NR_CEPCAIXPOSTVEND,' +
+        ' NR_FONEVEND, NR_FAXVEND, NR_FONECOMPVEND, GN_URLVEND, GN_EMAIVE' +
+        'ND, DT_NASCVEND, DT_CADAVEND, DT_ALTEVEND, FL_BLOQADMIVEND, FL_A' +
+        'TIVVEND, FL_COMIVEND, FL_PESSVEND, NR_CNPJVEND, NR_INSCESTAVEND,' +
+        ' NR_RGVEND, GN_ORGAEXPERGVEND, NR_CPFVEND, PC_COMIVEND, GN_MENSV' +
+        'ENDVEND, GN_OBSEVEND, FX_VENDEDOR, FL_PARTCORTE, ID_FORNECEDOR, ' +
+        'ID_USUARIO)'
+      'VALUES'
+      
+        '  (:EMPRESA, :FILIAL, :ID_VENDEDOR, :IE_VENDEDOR, :ID_INTEVEND, ' +
+        ':NM_VENDEDOR, :NM_FANTVEND, :NM_REDUVEND, :ID_TIPOVENDEDOR, :ID_' +
+        'TIPOLOGR, :IE_CONTCONT, :NM_LOGRVEND, :NR_LOGRVEND, :GN_COMPENDE' +
+        'VEND, :NM_BAIRVEND, :ID_CIDADE, :NR_CEPVEND, :NR_CAIXPOSTVEND, :' +
+        'NR_CEPCAIXPOSTVEND, :NR_FONEVEND, :NR_FAXVEND, :NR_FONECOMPVEND,' +
+        ' :GN_URLVEND, :GN_EMAIVEND, :DT_NASCVEND, :DT_CADAVEND, :DT_ALTE' +
+        'VEND, :FL_BLOQADMIVEND, :FL_ATIVVEND, :FL_COMIVEND, :FL_PESSVEND' +
+        ', :NR_CNPJVEND, :NR_INSCESTAVEND, :NR_RGVEND, :GN_ORGAEXPERGVEND' +
+        ', :NR_CPFVEND, :PC_COMIVEND, :GN_MENSVENDVEND, :GN_OBSEVEND, :FX' +
+        '_VENDEDOR, :FL_PARTCORTE, :ID_FORNECEDOR, :ID_USUARIO)')
+    SQLDelete.Strings = (
+      'DELETE FROM VENDEDOR'
+      'WHERE'
+      '  ID_VENDEDOR = :ID_VENDEDOR')
+    SQLUpdate.Strings = (
+      'UPDATE VENDEDOR'
+      'SET'
+      '  NM_VENDEDOR = :NM_VENDEDOR,'
+      '  NM_FANTVEND = :NM_FANTVEND,'
+      '  NM_REDUVEND = :NM_REDUVEND,'
+      '  ID_TIPOVENDEDOR = :ID_TIPOVENDEDOR,'
+      '  ID_TIPOLOGR = :ID_TIPOLOGR,'
+      '  NM_LOGRVEND = :NM_LOGRVEND,'
+      '  NR_LOGRVEND = :NR_LOGRVEND,'
+      '  GN_COMPENDEVEND = :GN_COMPENDEVEND,'
+      '  NM_BAIRVEND = :NM_BAIRVEND,'
+      '  ID_CIDADE = :ID_CIDADE,'
+      '  NR_CEPVEND = :NR_CEPVEND,'
+      '  NR_CAIXPOSTVEND = :NR_CAIXPOSTVEND,'
+      '  NR_CEPCAIXPOSTVEND = :NR_CEPCAIXPOSTVEND,'
+      '  NR_FONEVEND = :NR_FONEVEND,'
+      '  NR_FAXVEND = :NR_FAXVEND,'
+      '  NR_FONECOMPVEND = :NR_FONECOMPVEND,'
+      '  GN_URLVEND = :GN_URLVEND,'
+      '  GN_EMAIVEND = :GN_EMAIVEND,'
+      '  DT_NASCVEND = :DT_NASCVEND,'
+      '  DT_ALTEVEND = :DT_ALTEVEND, '
+      '  FL_BLOQADMIVEND = :FL_BLOQADMIVEND,'
+      '  FL_ATIVVEND = :FL_ATIVVEND,'
+      '  FL_COMIVEND = :FL_COMIVEND,'
+      '  FL_PESSVEND = :FL_PESSVEND,'
+      '  NR_CNPJVEND = :NR_CNPJVEND,'
+      '  NR_INSCESTAVEND = :NR_INSCESTAVEND,'
+      '  NR_RGVEND = :NR_RGVEND,'
+      '  GN_ORGAEXPERGVEND = :GN_ORGAEXPERGVEND,'
+      '  NR_CPFVEND = :NR_CPFVEND,'
+      '  PC_COMIVEND = :PC_COMIVEND,'
+      '  GN_OBSEVEND = :GN_OBSEVEND,'
+      '  FL_PARTCORTE = :FL_PARTCORTE,'
+      '  ID_FORNECEDOR = :ID_FORNECEDOR,'
+      '  ID_USUARIO = :ID_USUARIO'
+      'WHERE'
+      '  ID_VENDEDOR = :ID_VENDEDOR')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  V.EMPRESA = :EMPRESA')
+    SQLLock.Strings = (
+      'SELECT * FROM VENDEDOR'
+      'WHERE'
+      '  EMPRESA = :EMPRESA'
+      'FOR UPDATE NOWAIT')
+    Session = FrmPrincipal.DB
+    SQL.Strings = (
+      'SELECT V.ID_VENDEDOR ,'
+      '  V.NM_VENDEDOR ,'
+      '  V.NM_FANTVEND ,'
+      '  V.NM_REDUVEND ,'
+      '  vt.nm_tipovendedor ,'
+      '  lt.nm_tipologr ,'
+      '  V.NM_LOGRVEND ,'
+      '  V.NR_LOGRVEND ,'
+      '  V.GN_COMPENDEVEND ,'
+      '  V.NM_BAIRVEND ,'
+      '  c.nm_cidade ,'
+      '  V.NR_CEPVEND ,'
+      '  V.NR_FONEVEND ,'
+      '  V.NR_FAXVEND ,'
+      '  V.NR_FONECOMPVEND ,'
+      '  V.GN_URLVEND ,'
+      '  V.GN_EMAIVEND ,'
+      '  V.DT_NASCVEND ,'
+      '  V.DT_CADAVEND ,'
+      '  V.DT_ALTEVEND ,'
+      '  V.FL_BLOQADMIVEND ,'
+      '  V.FL_ATIVVEND ,'
+      '  V.FL_COMIVEND ,'
+      '  V.FL_PESSVEND ,'
+      '  V.NR_CNPJVEND ,'
+      '  V.NR_INSCESTAVEND ,'
+      '  V.NR_RGVEND ,'
+      '  V.GN_ORGAEXPERGVEND ,'
+      '  V.NR_CPFVEND ,'
+      '  V.PC_COMIVEND ,'
+      '  V.GN_OBSEVEND ,'
+      '  V.FL_PARTCORTE ,'
+      '  f.nm_fornecedor ,'
+      '  v.id_tipovendedor,'
+      '  v.id_cidade,'
+      '  v.id_tipologr,'
+      '  v.id_fornecedor,'
+      '  v.id_usuario'
+      'FROM VENDEDOR V,'
+      '  VENDEDOR_TIPO VT,'
+      '  LOGRADOURO_TIPO LT,'
+      '  CIDADE C,'
+      '  FORNECEDOR F'
+      'WHERE vt.id_tipovendedor = v.id_tipovendedor'
+      'AND v.id_tipologr        = lt.id_tipologr'
+      'AND v.id_cidade          = c.id_cidade'
+      'AND v.id_fornecedor      = f.id_fornecedor')
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 472
+    Top = 8
+    object qryVendedoresID_VENDEDOR: TFloatField
+      DisplayLabel = 'Codigo'
+      FieldName = 'ID_VENDEDOR'
+      Required = True
+    end
+    object qryVendedoresNM_VENDEDOR: TStringField
+      DisplayLabel = 'Nome Vendedor'
+      FieldName = 'NM_VENDEDOR'
+      Required = True
+      Size = 40
+    end
+    object qryVendedoresNM_FANTVEND: TStringField
+      DisplayLabel = 'Nome Fantasia'
+      FieldName = 'NM_FANTVEND'
+      Required = True
+      Size = 40
+    end
+    object qryVendedoresNM_REDUVEND: TStringField
+      DisplayLabel = 'Nome Reduzido'
+      FieldName = 'NM_REDUVEND'
+      Required = True
+      Size = 15
+    end
+    object qryVendedoresNM_LOGRVEND: TStringField
+      DisplayLabel = 'Logradouro'
+      FieldName = 'NM_LOGRVEND'
+      Required = True
+      Size = 40
+    end
+    object qryVendedoresNR_LOGRVEND: TStringField
+      DisplayLabel = 'Numero Logradouro'
+      FieldName = 'NR_LOGRVEND'
+      Required = True
+      Size = 8
+    end
+    object qryVendedoresGN_COMPENDEVEND: TStringField
+      DisplayLabel = 'Complemento'
+      FieldName = 'GN_COMPENDEVEND'
+    end
+    object qryVendedoresNM_BAIRVEND: TStringField
+      DisplayLabel = 'Bairro'
+      FieldName = 'NM_BAIRVEND'
+      Required = True
+      Size = 30
+    end
+    object qryVendedoresNR_CEPVEND: TStringField
+      DisplayLabel = 'Cep'
+      FieldName = 'NR_CEPVEND'
+      Required = True
+      Size = 8
+    end
+    object qryVendedoresNR_FONEVEND: TStringField
+      DisplayLabel = 'Telefone'
+      FieldName = 'NR_FONEVEND'
+      Size = 9
+    end
+    object qryVendedoresNR_FONECOMPVEND: TStringField
+      FieldName = 'NR_FONECOMPVEND'
+      Size = 9
+    end
+    object qryVendedoresNR_FAXVEND: TStringField
+      DisplayLabel = 'Fax'
+      FieldName = 'NR_FAXVEND'
+      Size = 9
+    end
+    object qryVendedoresGN_URLVEND: TStringField
+      DisplayLabel = 'Site'
+      FieldName = 'GN_URLVEND'
+      Size = 200
+    end
+    object qryVendedoresGN_EMAIVEND: TStringField
+      DisplayLabel = 'e-Mail'
+      FieldName = 'GN_EMAIVEND'
+      Size = 200
+    end
+    object qryVendedoresDT_NASCVEND: TDateTimeField
+      DisplayLabel = 'Data Nascimento'
+      FieldName = 'DT_NASCVEND'
+    end
+    object qryVendedoresFL_BLOQADMIVEND: TStringField
+      DisplayLabel = 'Bloqueio Administrativo'
+      FieldName = 'FL_BLOQADMIVEND'
+      Size = 1
+    end
+    object qryVendedoresFL_ATIVVEND: TStringField
+      DisplayLabel = 'Ativo'
+      FieldName = 'FL_ATIVVEND'
+      Size = 1
+    end
+    object qryVendedoresFL_COMIVEND: TStringField
+      DisplayLabel = 'Comissionado'
+      FieldName = 'FL_COMIVEND'
+      Size = 1
+    end
+    object qryVendedoresFL_PESSVEND: TStringField
+      DisplayLabel = 'Fisica/Juridica'
+      FieldName = 'FL_PESSVEND'
+      Size = 1
+    end
+    object qryVendedoresNR_CNPJVEND: TStringField
+      DisplayLabel = 'CNPJ'
+      FieldName = 'NR_CNPJVEND'
+      Size = 14
+    end
+    object qryVendedoresNR_INSCESTAVEND: TStringField
+      DisplayLabel = 'Inscri'#231#227'o Estadual'
+      FieldName = 'NR_INSCESTAVEND'
+    end
+    object qryVendedoresNR_RGVEND: TStringField
+      DisplayLabel = 'RG'
+      FieldName = 'NR_RGVEND'
+    end
+    object qryVendedoresGN_ORGAEXPERGVEND: TStringField
+      DisplayLabel = 'Org'#227'o Expedidor'
+      FieldName = 'GN_ORGAEXPERGVEND'
+      Size = 10
+    end
+    object qryVendedoresNR_CPFVEND: TStringField
+      DisplayLabel = 'CPF'
+      FieldName = 'NR_CPFVEND'
+      Size = 11
+    end
+    object qryVendedoresPC_COMIVEND: TFloatField
+      DisplayLabel = '% Comiss'#227'o'
+      FieldName = 'PC_COMIVEND'
+    end
+    object qryVendedoresGN_OBSEVEND: TStringField
+      DisplayLabel = 'Observa'#231#227'o'
+      FieldName = 'GN_OBSEVEND'
+      Size = 2000
+    end
+    object qryVendedoresFL_PARTCORTE: TStringField
+      DisplayLabel = 'Participa'#231#227'o Corte'
+      FieldName = 'FL_PARTCORTE'
+      Size = 1
+    end
+    object qryVendedoresID_TIPOVENDEDOR: TFloatField
+      FieldName = 'ID_TIPOVENDEDOR'
+      KeyFields = 'ID_TIPOVENDEDOR'
+      Required = True
+    end
+    object qryVendedoresID_CIDADE: TFloatField
+      FieldName = 'ID_CIDADE'
+      Required = True
+    end
+    object qryVendedoresID_TIPOLOGR: TFloatField
+      FieldName = 'ID_TIPOLOGR'
+      Required = True
+    end
+    object qryVendedoresID_FORNECEDOR: TFloatField
+      FieldName = 'ID_FORNECEDOR'
+    end
+    object qryVendedoresEMPRESA: TStringField
+      FieldName = 'EMPRESA'
+      Required = True
+      Size = 2
+    end
+    object qryVendedoresFILIAL: TIntegerField
+      FieldName = 'FILIAL'
+      Required = True
+    end
+    object qryVendedoresIE_VENDEDOR: TStringField
+      FieldName = 'IE_VENDEDOR'
+      Size = 15
+    end
+    object qryVendedoresID_INTEVEND: TStringField
+      FieldName = 'ID_INTEVEND'
+      Size = 25
+    end
+    object qryVendedoresIE_CONTCONT: TStringField
+      FieldName = 'IE_CONTCONT'
+    end
+    object qryVendedoresNR_CAIXPOSTVEND: TStringField
+      FieldName = 'NR_CAIXPOSTVEND'
+      Size = 10
+    end
+    object qryVendedoresNR_CEPCAIXPOSTVEND: TStringField
+      FieldName = 'NR_CEPCAIXPOSTVEND'
+      Size = 8
+    end
+    object qryVendedoresGN_MENSVENDVEND: TStringField
+      FieldName = 'GN_MENSVENDVEND'
+      Size = 2000
+    end
+    object qryVendedoresFX_VENDEDOR: TStringField
+      FieldName = 'FX_VENDEDOR'
+      Size = 1
+    end
+    object qryVendedoresDT_CADAVEND: TDateTimeField
+      FieldName = 'DT_CADAVEND'
+      Required = True
+    end
+    object qryVendedoresDT_ALTEVEND: TDateTimeField
+      FieldName = 'DT_ALTEVEND'
+    end
+    object qryVendedoresID_USUARIO: TIntegerField
+      FieldName = 'ID_USUARIO'
+    end
+  end
+  object qryVendedorCliente: TSmartQuery
+    KeySequence = 'ID_VENDCLIE'
+    Session = FrmPrincipal.DB
+    SQL.Strings = (
+      'SELECT'
+      '  cv.id_cliente,'
+      '  c.nm_cliente as Cliente,'
+      '  cv.fl_padrvendclie as VendedorPadrao,'
+      '  cv.fl_comivendclie as Comissionado,'
+      '  cv.pc_comivendclie as Comissao'
+      'FROM cliente_vendedor cv,'
+      '  cliente c,'
+      '  vendedor v'
+      'WHERE cv.id_cliente = c.id_cliente'
+      'AND cv.id_vendedor  = v.id_vendedor'
+      'AND cv.ID_Vendedor = :ID_Vendedor'
+      'ORDER BY cv.id_cliente, c.nm_cliente')
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 424
+    Top = 8
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'ID_Vendedor'
+        Value = nil
+      end>
+    object qryVendedorClienteID_CLIENTE: TFloatField
+      FieldName = 'ID_CLIENTE'
+      Required = True
+    end
+    object qryVendedorClienteCLIENTE: TStringField
+      FieldName = 'CLIENTE'
+      Size = 60
+    end
+    object qryVendedorClienteVENDEDORPADRAO: TStringField
+      FieldName = 'VENDEDORPADRAO'
+      Required = True
+      Size = 1
+    end
+    object qryVendedorClienteCOMISSIONADO: TStringField
+      FieldName = 'COMISSIONADO'
+      Required = True
+      Size = 1
+    end
+    object qryVendedorClienteCOMISSAO: TFloatField
+      FieldName = 'COMISSAO'
+    end
   end
 end

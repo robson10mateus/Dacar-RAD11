@@ -555,11 +555,11 @@ begin
    CASE SELPE OF
      1:BEGIN
         FrmPesqCliente:=TFrmPesqCliente.Create(Self);
-        FrmPesqCliente.Show;
+        FrmPesqCliente.ShowModal;
        END;
      3:BEGIN
         FrmPesqVend:=TFrmPesqVend.Create(Self);
-        FrmPesqVend.Show;
+        FrmPesqVend.ShowModal;
        END;
   4..6:BEGIN
         Cria_FrmSelData(Vdtstr);

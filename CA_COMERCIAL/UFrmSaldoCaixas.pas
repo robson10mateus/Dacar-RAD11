@@ -5,7 +5,7 @@ interface
 uses
   SysUtils, Types, Classes, Variants, Graphics, Controls, Forms,
   Dialogs, StdCtrls, DB, Ora, MemDS, DBAccess, Grids, DBGrids,
-  ComCtrls, Buttons, ExtCtrls;
+  ComCtrls, Buttons, ExtCtrls, OraSmart;
 
 type
   TFrmSaldoCaixas = class(TForm)
@@ -24,24 +24,24 @@ type
     BPESQ: TBitBtn;
     Tab_Lista: TTabSheet;
     DBGrid1: TDBGrid;
-    Qr: TOraQuery;
     Ds: TOraDataSource;
-    QrID_CLIENTE: TFloatField;
-    QrNM_CLIENTE: TStringField;
-    QrID_CIDADE: TFloatField;
-    QrNM_CIDADE: TStringField;
-    QrID_VALE: TFloatField;
-    QrSALDO: TFloatField;
-    QrFL_PESSCLIE: TStringField;
-    QrFL_ATIVCLIE: TStringField;
-    QrID_VENDEDOR: TFloatField;
-    QrNM_VENDEDOR: TStringField;
-    QrID_GRUPCLIE: TFloatField;
-    QrNM_GRUPCLIE: TStringField;
     Panel1: TPanel;
     SB_ATUAL: TSpeedButton;
     SB_Relatorio: TSpeedButton;
     Sb_Sair: TSpeedButton;
+    Qr: TSmartQuery;
+    QrID_CLIENTE: TFloatField;
+    QrNM_CLIENTE: TStringField;
+    QrFL_PESSCLIE: TStringField;
+    QrFL_ATIVCLIE: TStringField;
+    QrID_CIDADE: TFloatField;
+    QrNM_CIDADE: TStringField;
+    QrID_VENDEDOR: TFloatField;
+    QrNM_VENDEDOR: TStringField;
+    QrID_VALE: TFloatField;
+    QrSALDO: TFloatField;
+    QrID_GRUPCLIE: TFloatField;
+    QrNM_GRUPCLIE: TStringField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormShow(Sender: TObject);
     procedure Sb_SairClick(Sender: TObject);

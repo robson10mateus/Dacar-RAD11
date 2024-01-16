@@ -5,7 +5,7 @@ interface
 uses
   SysUtils, Types, Classes, {$IFNDEF VER130} Variants {$ENDIF, Types}, Graphics, Controls, Forms, 
   Dialogs, StdCtrls, Grids, DBGrids, ExtCtrls, ComCtrls, Buttons,
-  Mask, DBCtrls, DB, Ora, MemDS, DBAccess, Vcl.ToolWin;
+  Mask, DBCtrls, DB, Ora, MemDS, DBAccess, Vcl.ToolWin, OraSmart;
 
 type
   TFrmProgRacao = class(TForm)
@@ -18,7 +18,6 @@ type
     Panel1: TPanel;
     DBGrid1: TDBGrid;
     Label49: TLabel;
-    Qr: TOraQuery;
     Ds: TOraDataSource;
     edtDataIni: TMaskEdit;
     edtDataFim: TMaskEdit;
@@ -26,6 +25,8 @@ type
     bt_PesqDTI: TBitBtn;
     bt_PesqDTF: TBitBtn;
     BitBtn1: TBitBtn;
+    Label1: TLabel;
+    Qr: TSmartQuery;
     QrPREV: TDateTimeField;
     QrID_LOTE: TFloatField;
     QrDATA_ALOJAMENTO: TDateTimeField;
@@ -45,13 +46,12 @@ type
     QrINIC_SEM_SEG: TDateTimeField;
     QrDIAS_RAC: TFloatField;
     QrDIAS_RAC2: TFloatField;
-    Label1: TLabel;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure bt_PesqDTIClick(Sender: TObject);
     procedure bt_PesqDTFClick(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
     procedure SB_ATUALClick(Sender: TObject);
-    procedure QrBeforeOpen(DataSet: TDataSet);
+    procedure CRTemp_QrBeforeOpen(DataSet: TDataSet);
     procedure FormShow(Sender: TObject);
     procedure SB_RelatorioClick(Sender: TObject);
     procedure Sb_SairClick(Sender: TObject);
@@ -139,7 +139,7 @@ begin
 
 end;
 
-procedure TFrmProgRacao.QrBeforeOpen(DataSet: TDataSet);
+procedure TFrmProgRacao.CRTemp_QrBeforeOpen(DataSet: TDataSet);
 begin
      Qr.ParamByName('DataTeste').Value := edt_Teste.Text;
 end;

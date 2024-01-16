@@ -496,7 +496,7 @@ object FrmConferenciaCarga: TFrmConferenciaCarga
     Top = 0
     Width = 896
     Height = 401
-    ActivePage = Tab_Lista
+    ActivePage = Tab_Criterio
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
@@ -506,6 +506,8 @@ object FrmConferenciaCarga: TFrmConferenciaCarga
     Font.Style = []
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 892
+    ExplicitHeight = 400
     object Tab_Criterio: TTabSheet
       Caption = 'Crit'#233'rio'
       object Label6: TLabel
@@ -764,9 +766,9 @@ object FrmConferenciaCarga: TFrmConferenciaCarga
       end
       object BPESQ: TBitBtn
         Left = 592
-        Top = 67
+        Top = 65
         Width = 23
-        Height = 20
+        Height = 23
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = 16
@@ -794,8 +796,8 @@ object FrmConferenciaCarga: TFrmConferenciaCarga
       object DBGrid1: TDBGrid
         Left = 0
         Top = 45
-        Width = 904
-        Height = 332
+        Width = 888
+        Height = 326
         Align = alClient
         Color = clWhite
         DataSource = Ds
@@ -866,13 +868,13 @@ object FrmConferenciaCarga: TFrmConferenciaCarga
       object Panel1: TPanel
         Left = 0
         Top = 0
-        Width = 904
+        Width = 888
         Height = 45
         Align = alTop
         Color = clWindow
         ParentBackground = False
         TabOrder = 1
-        ExplicitWidth = 900
+        ExplicitWidth = 884
         object btnAtualizar: TSpeedButton
           Left = 5
           Top = 5

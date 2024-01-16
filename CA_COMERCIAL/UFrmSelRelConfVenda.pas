@@ -360,39 +360,39 @@ begin
     1:
     BEGIN
       FrmPesqTPV:=TFrmPesqTPV.Create(Self);
-      FrmPesqTPV.Show;
+      FrmPesqTPV.ShowModal;
     END;
     2,8:
     BEGIN
       FrmPesqVend:=TFrmPesqVend.Create(Self);
-      FrmPesqVend.Show;
+      FrmPesqVend.ShowModal;
     END;
     3:
     BEGIN
       FrmPesqCliente:=TFrmPesqCliente.Create(Self);
-      FrmPesqCliente.Show;
+      FrmPesqCliente.ShowModal;
     END;
     4:
     BEGIN
       FrmOriPesq:= 131;
       frmConsultaProdutos:=TfrmConsultaProdutos.Create(Self);
-      frmConsultaProdutos.Show;
+      frmConsultaProdutos.ShowModal;
     END;
     5:
     BEGIN
       FrmConsultaUsuarioSistema:=TFrmConsultaUsuarioSistema.Create(Self);
-      FrmConsultaUsuarioSistema.Show;
+      FrmConsultaUsuarioSistema.ShowModal;
     end;
     6:
     BEGIN
       frmConsultaGrupoClientes:=TfrmConsultaGrupoClientes.Create(Self);
-      frmConsultaGrupoClientes.Show;
+      frmConsultaGrupoClientes.ShowModal;
     end;
     7:
     BEGIN
       FrmPesqCaminhao:=TFrmPesqCaminhao.Create(Self);
       FrmPesqCaminhao.VORIGEM:=13;
-      FrmPesqCaminhao.Show;
+      FrmPesqCaminhao.ShowModal;
     END;
   end;
 

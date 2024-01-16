@@ -5,7 +5,7 @@ interface
 uses
   SysUtils, Types, Classes, {$IFNDEF VER130} Variants {$ENDIF, Types}, Graphics, Controls, Forms, 
   Dialogs, StdCtrls, Mask, DBCtrls, Grids, DBGrids, Buttons,
-  ExtCtrls, ComCtrls, DB, Ora, MemDS, DBAccess, Winapi.Windows;
+  ExtCtrls, ComCtrls, DB, Ora, MemDS, DBAccess, Winapi.Windows, OraSmart;
 
 type
   TFrmOcorrencias = class(TForm)
@@ -32,20 +32,10 @@ type
     Edt_DtOcorrencia: TDBEdit;
     Label4: TLabel;
     btn_DtEntrega: TBitBtn;
-    Qr: TOraQuery;
     Ds: TOraDataSource;
     Qr_Direitos: TOraQuery;
     edtNomeUsuario: TDBEdit;
     Label5: TLabel;
-    QrID_CHAMADOS: TIntegerField;
-    QrDT_CHAMADOS: TDateTimeField;
-    QrOCORRENCIA: TStringField;
-    QrMED_CHAMADOS: TStringField;
-    QrOBS_CHAMADOS: TStringField;
-    QrOBS_CHAMADOS2: TStringField;
-    QrFL_CHAMADOS: TStringField;
-    QrID_USUARIO: TIntegerField;
-    QrNOME_USUARIO: TStringField;
     Qr_DireitosID_RECURSO: TFloatField;
     DBEdit1: TDBEdit;
     Label8: TLabel;
@@ -54,8 +44,6 @@ type
     MemObs: TDBMemo;
     MemObs2: TDBMemo;
     QryTemp: TOraQuery;
-    QrEMPRESA: TStringField;
-    QrFILIAL: TIntegerField;
     rgpFlag: TDBRadioGroup;
     pnlBotoes: TPanel;
     SB_ANTERIOR: TSpeedButton;
@@ -67,6 +55,18 @@ type
     SBCancel: TSpeedButton;
     Sb_Sair: TSpeedButton;
     SpeedButton1: TSpeedButton;
+    Qr: TSmartQuery;
+    QrEMPRESA: TStringField;
+    QrFILIAL: TIntegerField;
+    QrID_CHAMADOS: TIntegerField;
+    QrDT_CHAMADOS: TDateTimeField;
+    QrOCORRENCIA: TStringField;
+    QrMED_CHAMADOS: TStringField;
+    QrOBS_CHAMADOS: TStringField;
+    QrOBS_CHAMADOS2: TStringField;
+    QrFL_CHAMADOS: TStringField;
+    QrID_USUARIO: TIntegerField;
+    QrNOME_USUARIO: TStringField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Sb_SairClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -86,9 +86,9 @@ type
     procedure SBSalvaClick(Sender: TObject);
     procedure SBCancelClick(Sender: TObject);
     procedure DsDataChange(Sender: TObject; Field: TField);
-    procedure QrAfterCancel(DataSet: TDataSet);
-    procedure QrAfterScroll(DataSet: TDataSet);
-    procedure QrBeforePost(DataSet: TDataSet);
+    procedure CRTemp_QrAfterCancel(DataSet: TDataSet);
+    procedure CRTemp_QrAfterScroll(DataSet: TDataSet);
+    procedure CRTemp_QrBeforePost(DataSet: TDataSet);
     procedure MemOcorrenciaKeyPress(Sender: TObject; var Key: Char);
     procedure MemMedidaKeyPress(Sender: TObject; var Key: Char);
     procedure MemObsKeyPress(Sender: TObject; var Key: Char);
@@ -479,12 +479,12 @@ begin
   AtualizaBotoes;
 end;
 
-procedure TFrmOcorrencias.QrAfterCancel(DataSet: TDataSet);
+procedure TFrmOcorrencias.CRTemp_QrAfterCancel(DataSet: TDataSet);
 begin
   Qr.CancelUpdates;
 end;
 
-procedure TFrmOcorrencias.QrAfterScroll(DataSet: TDataSet);
+procedure TFrmOcorrencias.CRTemp_QrAfterScroll(DataSet: TDataSet);
 begin
   if ( PageControl1.ActivePage =  Tab_Detalhe ) OR ( PageControl1.ActivePage =  Tab_Lista  )  then
   begin
@@ -493,7 +493,7 @@ begin
     DesabilitaCampos();
 end;
 
-procedure TFrmOcorrencias.QrBeforePost(DataSet: TDataSet);
+procedure TFrmOcorrencias.CRTemp_QrBeforePost(DataSet: TDataSet);
 begin
   if   (ds.State in [dsedit, dsinsert ]) then
   begin

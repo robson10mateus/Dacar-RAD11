@@ -248,7 +248,7 @@ begin
      CASE SELPE OF
        1:BEGIN
            FrmPesqCliente:=TFrmPesqCliente.Create(Self);
-           FrmPesqCliente.Show;
+           FrmPesqCliente.ShowModal;
          END;
        2:BEGIN
            Cria_FrmPesqCid(VCid, NCid, NEst, NPais, NReg );
@@ -263,7 +263,7 @@ begin
        5:BEGIN
            //FrmOriPesq:=14;
            FrmPesqVend:=TFrmPesqVend.Create(Self);
-           FrmPesqVend.Show;
+           FrmPesqVend.ShowModal;
            //Cria_FrmPesqFor(VFor,NFor,NEND,NCEP,NFONE );
          END;
          end;

@@ -25,8 +25,8 @@ object frmReprogramarDevolucao: TfrmReprogramarDevolucao
   object PageControl1: TPageControl
     Left = 0
     Top = 45
-    Width = 1397
-    Height = 601
+    Width = 1401
+    Height = 602
     ActivePage = Lista
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -39,6 +39,8 @@ object frmReprogramarDevolucao: TfrmReprogramarDevolucao
     ParentShowHint = False
     ShowHint = False
     TabOrder = 0
+    ExplicitWidth = 1397
+    ExplicitHeight = 601
     object Lista: TTabSheet
       Caption = 'Lista'
       Font.Charset = DEFAULT_CHARSET
@@ -52,8 +54,8 @@ object frmReprogramarDevolucao: TfrmReprogramarDevolucao
       object Panel3: TPanel
         Left = 0
         Top = 0
-        Width = 1389
-        Height = 574
+        Width = 1393
+        Height = 572
         Align = alClient
         Caption = 'Panel3'
         Color = clWindow
@@ -66,15 +68,13 @@ object frmReprogramarDevolucao: TfrmReprogramarDevolucao
         ParentBackground = False
         ParentFont = False
         TabOrder = 0
-        ExplicitLeft = 52
-        ExplicitTop = 152
-        ExplicitWidth = 944
-        ExplicitHeight = 283
+        ExplicitWidth = 1389
+        ExplicitHeight = 571
         object DBGrid3: TDBGrid
           Left = 1
           Top = 1
-          Width = 1387
-          Height = 572
+          Width = 1391
+          Height = 570
           Align = alClient
           Color = clWhite
           DataSource = DtsDevolucao
@@ -177,13 +177,13 @@ object frmReprogramarDevolucao: TfrmReprogramarDevolucao
         ParentBackground = False
         ParentFont = False
         TabOrder = 0
-        ExplicitWidth = 1152
-        ExplicitHeight = 475
+        ExplicitWidth = 1393
+        ExplicitHeight = 372
         object DBGrid2: TDBGrid
           Left = 1
           Top = 1
-          Width = 1387
-          Height = 372
+          Width = 1391
+          Height = 370
           Align = alClient
           DataSource = DtsDevolucaoItem
           Font.Charset = DEFAULT_CHARSET
@@ -251,6 +251,7 @@ object frmReprogramarDevolucao: TfrmReprogramarDevolucao
         ParentBackground = False
         ParentFont = False
         TabOrder = 1
+        ExplicitWidth = 1393
         object Label1: TLabel
           Left = 105
           Top = 9
@@ -507,7 +508,7 @@ object frmReprogramarDevolucao: TfrmReprogramarDevolucao
   object pnlBotoes: TPanel
     Left = 0
     Top = 0
-    Width = 1397
+    Width = 1401
     Height = 45
     Align = alTop
     Color = clWindow
@@ -520,7 +521,7 @@ object frmReprogramarDevolucao: TfrmReprogramarDevolucao
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 1160
+    ExplicitWidth = 1397
     object SB_CONFIRMA: TSpeedButton
       Left = 75
       Top = 5
@@ -1254,398 +1255,6 @@ object frmReprogramarDevolucao: TfrmReprogramarDevolucao
     Left = 321
     Top = 8
   end
-  object qryPedidoVendaBase: TOraQuery
-    SQLUpdate.Strings = (
-      'UPDATE PEDIDO_VENDA'
-      'SET'
-      '  FL_REPROGRAMADO = :FL_REPROGRAMADO,'
-      '  ID_PEDIREPROGRAMADO = :ID_PEDIREPROGRAMADO'
-      'WHERE'
-      '  ID_PEDIVEND = :OLD_ID_PEDIVEND')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  Pedido_venda.ID_PEDIVEND = :ID_PEDIVEND')
-    LocalUpdate = True
-    Session = FrmPrincipal.DB
-    SQL.Strings = (
-      'SELECT * FROM PEDIDO_VENDA WHERE ID_PEDIVEND = :ID_PEDIVEND'
-      '')
-    MasterSource = DtsDevolucao
-    MasterFields = 'ID_PEDIVEND'
-    DetailFields = 'ID_PEDIVEND'
-    FetchAll = True
-    CachedUpdates = True
-    Left = 349
-    Top = 8
-    ParamData = <
-      item
-        DataType = ftUnknown
-        Name = 'ID_PEDIVEND'
-        Value = nil
-      end>
-    object qryPedidoVendaBaseEMPRESA: TStringField
-      FieldName = 'EMPRESA'
-      Required = True
-      Size = 2
-    end
-    object qryPedidoVendaBaseFILIAL: TIntegerField
-      FieldName = 'FILIAL'
-      Required = True
-    end
-    object qryPedidoVendaBaseID_PEDIVEND: TFloatField
-      FieldName = 'ID_PEDIVEND'
-      Required = True
-    end
-    object qryPedidoVendaBaseID_CLIENTE: TFloatField
-      FieldName = 'ID_CLIENTE'
-      Required = True
-    end
-    object qryPedidoVendaBaseID_VENDEDOR: TFloatField
-      FieldName = 'ID_VENDEDOR'
-      Required = True
-    end
-    object qryPedidoVendaBaseDT_PEDIVEND: TDateTimeField
-      FieldName = 'DT_PEDIVEND'
-      Required = True
-    end
-    object qryPedidoVendaBaseDT_ENTRPEDIVEND: TDateTimeField
-      FieldName = 'DT_ENTRPEDIVEND'
-      Required = True
-    end
-    object qryPedidoVendaBaseDT_DIGIPEDIVEND: TDateTimeField
-      FieldName = 'DT_DIGIPEDIVEND'
-      Required = True
-    end
-    object qryPedidoVendaBaseDT_FATUPEDIVEND: TDateTimeField
-      FieldName = 'DT_FATUPEDIVEND'
-    end
-    object qryPedidoVendaBaseID_TIPOPEDIVEND: TFloatField
-      FieldName = 'ID_TIPOPEDIVEND'
-      Required = True
-    end
-    object qryPedidoVendaBaseID_FORMPAGA: TFloatField
-      FieldName = 'ID_FORMPAGA'
-      Required = True
-    end
-    object qryPedidoVendaBaseID_SITUCOBR: TFloatField
-      FieldName = 'ID_SITUCOBR'
-      Required = True
-    end
-    object qryPedidoVendaBaseID_INSTCOBR: TFloatField
-      FieldName = 'ID_INSTCOBR'
-      Required = True
-    end
-    object qryPedidoVendaBaseID_ENDECLIE_COBRANCA: TFloatField
-      FieldName = 'ID_ENDECLIE_COBRANCA'
-    end
-    object qryPedidoVendaBaseID_ENDECLIE_ENTREGA: TFloatField
-      FieldName = 'ID_ENDECLIE_ENTREGA'
-      Required = True
-    end
-    object qryPedidoVendaBaseID_CARGEXPE: TFloatField
-      FieldName = 'ID_CARGEXPE'
-    end
-    object qryPedidoVendaBaseID_CONTA: TFloatField
-      FieldName = 'ID_CONTA'
-      Required = True
-    end
-    object qryPedidoVendaBaseID_TIPOCOBR: TFloatField
-      FieldName = 'ID_TIPOCOBR'
-      Required = True
-    end
-    object qryPedidoVendaBaseID_LOTEEDIPEDIVEND: TFloatField
-      FieldName = 'ID_LOTEEDIPEDIVEND'
-    end
-    object qryPedidoVendaBaseID_USUASIST_DIGIPEDIVEND: TIntegerField
-      FieldName = 'ID_USUASIST_DIGIPEDIVEND'
-      Required = True
-    end
-    object qryPedidoVendaBaseID_USUASIST_AUTOPEDIVEND: TIntegerField
-      FieldName = 'ID_USUASIST_AUTOPEDIVEND'
-    end
-    object qryPedidoVendaBaseID_TIPOLOGI: TFloatField
-      FieldName = 'ID_TIPOLOGI'
-    end
-    object qryPedidoVendaBaseSG_TIPOFRETPEDIVEND: TStringField
-      FieldName = 'SG_TIPOFRETPEDIVEND'
-      Required = True
-      Size = 3
-    end
-    object qryPedidoVendaBaseVL_SEGUPEDIVEND: TFloatField
-      FieldName = 'VL_SEGUPEDIVEND'
-    end
-    object qryPedidoVendaBaseVL_DESPPEDIVEND: TFloatField
-      FieldName = 'VL_DESPPEDIVEND'
-    end
-    object qryPedidoVendaBaseVL_FRETPEDIVEND: TFloatField
-      FieldName = 'VL_FRETPEDIVEND'
-    end
-    object qryPedidoVendaBaseVL_DESCPEDIVEND: TFloatField
-      FieldName = 'VL_DESCPEDIVEND'
-    end
-    object qryPedidoVendaBaseVL_PEDIVEND: TFloatField
-      FieldName = 'VL_PEDIVEND'
-    end
-    object qryPedidoVendaBaseGN_ESPEPEDIVEND: TStringField
-      FieldName = 'GN_ESPEPEDIVEND'
-    end
-    object qryPedidoVendaBaseGN_MARCPEDIVEND: TStringField
-      FieldName = 'GN_MARCPEDIVEND'
-    end
-    object qryPedidoVendaBaseQN_VOLUPEDIVEND: TIntegerField
-      FieldName = 'QN_VOLUPEDIVEND'
-    end
-    object qryPedidoVendaBaseQN_EMBAPEDIVEND: TIntegerField
-      FieldName = 'QN_EMBAPEDIVEND'
-    end
-    object qryPedidoVendaBaseQN_PESOPEDIVEND: TFloatField
-      FieldName = 'QN_PESOPEDIVEND'
-    end
-    object qryPedidoVendaBaseQN_TARAPEDIVEND: TFloatField
-      FieldName = 'QN_TARAPEDIVEND'
-    end
-    object qryPedidoVendaBaseQN_EMBAEXPEPEDIVEND: TIntegerField
-      FieldName = 'QN_EMBAEXPEPEDIVEND'
-    end
-    object qryPedidoVendaBaseQN_PESOPADREXPEPEDIVEND: TFloatField
-      FieldName = 'QN_PESOPADREXPEPEDIVEND'
-    end
-    object qryPedidoVendaBaseQN_TARAREALEXPEPEDIVEND: TFloatField
-      FieldName = 'QN_TARAREALEXPEPEDIVEND'
-    end
-    object qryPedidoVendaBaseQN_PESOREALEXPEPEDIVEND: TFloatField
-      FieldName = 'QN_PESOREALEXPEPEDIVEND'
-    end
-    object qryPedidoVendaBaseQN_FATOFRETABAT_PEDIVEND: TFloatField
-      FieldName = 'QN_FATOFRETABAT_PEDIVEND'
-    end
-    object qryPedidoVendaBaseFL_ESPEPEDIVEND: TStringField
-      FieldName = 'FL_ESPEPEDIVEND'
-      Required = True
-      Size = 2
-    end
-    object qryPedidoVendaBaseFL_STATPEDIVEND: TStringField
-      FieldName = 'FL_STATPEDIVEND'
-      Required = True
-      Size = 2
-    end
-    object qryPedidoVendaBaseFL_EXPOFINAPEDIVEND: TStringField
-      FieldName = 'FL_EXPOFINAPEDIVEND'
-      Size = 1
-    end
-    object qryPedidoVendaBaseFL_CREDUSADPEDIVEND: TStringField
-      FieldName = 'FL_CREDUSADPEDIVEND'
-      Size = 1
-    end
-    object qryPedidoVendaBaseNR_ORDEPEDIVEND: TFloatField
-      FieldName = 'NR_ORDEPEDIVEND'
-    end
-    object qryPedidoVendaBaseGN_OBSEPADR_PEDIVEND: TStringField
-      FieldName = 'GN_OBSEPADR_PEDIVEND'
-      Size = 250
-    end
-    object qryPedidoVendaBaseGN_OBSEEXPEPEDIVEND: TStringField
-      FieldName = 'GN_OBSEEXPEPEDIVEND'
-      Size = 2000
-    end
-    object qryPedidoVendaBaseGN_OBSEPEDIVEND: TStringField
-      FieldName = 'GN_OBSEPEDIVEND'
-      Size = 2000
-    end
-    object qryPedidoVendaBaseVL_FATUPEDIVEND: TFloatField
-      FieldName = 'VL_FATUPEDIVEND'
-    end
-    object qryPedidoVendaBaseFX_PEDIVEND: TStringField
-      FieldName = 'FX_PEDIVEND'
-      Required = True
-      Size = 1
-    end
-    object qryPedidoVendaBaseNR_PEDIVEND: TIntegerField
-      FieldName = 'NR_PEDIVEND'
-    end
-    object qryPedidoVendaBaseVL_QUEBPEDIVEND: TFloatField
-      FieldName = 'VL_QUEBPEDIVEND'
-    end
-    object qryPedidoVendaBaseVL_OUTRAJUSPEDIVEND: TFloatField
-      FieldName = 'VL_OUTRAJUSPEDIVEND'
-    end
-    object qryPedidoVendaBaseVL_DEVOPEDIVEND: TFloatField
-      FieldName = 'VL_DEVOPEDIVEND'
-    end
-    object qryPedidoVendaBaseQN_PESOPADRDEVOPEDIVEND: TFloatField
-      FieldName = 'QN_PESOPADRDEVOPEDIVEND'
-    end
-    object qryPedidoVendaBaseQN_PESOREALDEVOPEDIVEND: TFloatField
-      FieldName = 'QN_PESOREALDEVOPEDIVEND'
-    end
-    object qryPedidoVendaBaseQN_TARAREALDEVOPEDIVEND: TFloatField
-      FieldName = 'QN_TARAREALDEVOPEDIVEND'
-    end
-    object qryPedidoVendaBaseQN_EMBADEVOPEDIVEND: TIntegerField
-      FieldName = 'QN_EMBADEVOPEDIVEND'
-    end
-    object qryPedidoVendaBaseVL_OUTRAJUSANTPEDIVEND: TFloatField
-      FieldName = 'VL_OUTRAJUSANTPEDIVEND'
-    end
-    object qryPedidoVendaBaseFL_AJUSPEDIDEVOVEND_PEDIVEND: TStringField
-      FieldName = 'FL_AJUSPEDIDEVOVEND_PEDIVEND'
-      Size = 1
-    end
-    object qryPedidoVendaBaseFL_CONFPEDIDEVOVEND_PEDIVEND: TStringField
-      FieldName = 'FL_CONFPEDIDEVOVEND_PEDIVEND'
-      Size = 1
-    end
-    object qryPedidoVendaBaseIE_PEDIVEND: TStringField
-      FieldName = 'IE_PEDIVEND'
-    end
-    object qryPedidoVendaBasePC_DESCPEDIVEND: TFloatField
-      FieldName = 'PC_DESCPEDIVEND'
-    end
-    object qryPedidoVendaBasePC_BONIPEDIVEND: TFloatField
-      FieldName = 'PC_BONIPEDIVEND'
-    end
-    object qryPedidoVendaBaseVL_TRANAUTOPEDIVEND: TFloatField
-      FieldName = 'VL_TRANAUTOPEDIVEND'
-    end
-    object qryPedidoVendaBasePC_IMPOFRETAUTOPEDIVEND: TFloatField
-      FieldName = 'PC_IMPOFRETAUTOPEDIVEND'
-    end
-    object qryPedidoVendaBaseFL_BLOQAJUSFINAPEDIVEND: TStringField
-      FieldName = 'FL_BLOQAJUSFINAPEDIVEND'
-      Size = 1
-    end
-    object qryPedidoVendaBaseDT_BLOQAJUSFINAPEDIVEND: TDateTimeField
-      FieldName = 'DT_BLOQAJUSFINAPEDIVEND'
-    end
-    object qryPedidoVendaBaseCPORCOMIS: TFloatField
-      FieldName = 'CPORCOMIS'
-    end
-    object qryPedidoVendaBaseFL_COMIS: TStringField
-      FieldName = 'FL_COMIS'
-      Size = 1
-    end
-    object qryPedidoVendaBaseID_CIDADE_ENTREGA: TFloatField
-      FieldName = 'ID_CIDADE_ENTREGA'
-    end
-    object qryPedidoVendaBaseID_PAIS_ENTREGA: TFloatField
-      FieldName = 'ID_PAIS_ENTREGA'
-    end
-    object qryPedidoVendaBaseID_FORNECEDOR: TFloatField
-      FieldName = 'ID_FORNECEDOR'
-    end
-    object qryPedidoVendaBaseGN_PLACVEICTRAN: TStringField
-      FieldName = 'GN_PLACVEICTRAN'
-      Size = 7
-    end
-    object qryPedidoVendaBaseID_PRODMATEEMBA: TStringField
-      FieldName = 'ID_PRODMATEEMBA'
-      Size = 5
-    end
-    object qryPedidoVendaBaseID_PEDREMESSA: TFloatField
-      FieldName = 'ID_PEDREMESSA'
-    end
-    object qryPedidoVendaBaseDTHORA_GERADOC: TDateTimeField
-      FieldName = 'DTHORA_GERADOC'
-    end
-    object qryPedidoVendaBaseFL_PNF: TStringField
-      FieldName = 'FL_PNF'
-      Size = 1
-    end
-    object qryPedidoVendaBaseDESCR_EMBALAGEM: TStringField
-      FieldName = 'DESCR_EMBALAGEM'
-    end
-    object qryPedidoVendaBaseID_USUASIST_AUTAJUST: TIntegerField
-      FieldName = 'ID_USUASIST_AUTAJUST'
-    end
-    object qryPedidoVendaBaseDT_AUTAJUST: TDateTimeField
-      FieldName = 'DT_AUTAJUST'
-    end
-    object qryPedidoVendaBaseDT_CONSULTA_IE: TDateTimeField
-      FieldName = 'DT_CONSULTA_IE'
-    end
-    object qryPedidoVendaBasePR_CONSULTA_IE: TStringField
-      FieldName = 'PR_CONSULTA_IE'
-    end
-    object qryPedidoVendaBaseFL_CORTE: TStringField
-      FieldName = 'FL_CORTE'
-      Size = 1
-    end
-    object qryPedidoVendaBaseDTHORA_CORTE: TDateTimeField
-      FieldName = 'DTHORA_CORTE'
-    end
-    object qryPedidoVendaBaseID_TOMADOR: TFloatField
-      FieldName = 'ID_TOMADOR'
-    end
-    object qryPedidoVendaBaseID_EMITENTE: TFloatField
-      FieldName = 'ID_EMITENTE'
-    end
-    object qryPedidoVendaBaseID_REMETENTE: TFloatField
-      FieldName = 'ID_REMETENTE'
-    end
-    object qryPedidoVendaBaseID_DESTINATARIO: TFloatField
-      FieldName = 'ID_DESTINATARIO'
-    end
-    object qryPedidoVendaBaseID_PRODUTO_PREDOMINANTE: TFloatField
-      FieldName = 'ID_PRODUTO_PREDOMINANTE'
-    end
-    object qryPedidoVendaBaseGN_OUTRAS_CARACTERISTICAS: TStringField
-      FieldName = 'GN_OUTRAS_CARACTERISTICAS'
-      Size = 50
-    end
-    object qryPedidoVendaBaseVL_TOTAL_MERCADORIA: TFloatField
-      FieldName = 'VL_TOTAL_MERCADORIA'
-    end
-    object qryPedidoVendaBaseID_UNIDMEDI: TFloatField
-      FieldName = 'ID_UNIDMEDI'
-    end
-    object qryPedidoVendaBaseNM_TIPO_MEDIDA: TStringField
-      FieldName = 'NM_TIPO_MEDIDA'
-    end
-    object qryPedidoVendaBaseQN_QUANTIDADE_CTE: TFloatField
-      FieldName = 'QN_QUANTIDADE_CTE'
-    end
-    object qryPedidoVendaBaseFL_SEMTRANSP: TStringField
-      FieldName = 'FL_SEMTRANSP'
-      Size = 1
-    end
-    object qryPedidoVendaBaseFL_NFCOMPLEMENTAR: TStringField
-      FieldName = 'FL_NFCOMPLEMENTAR'
-      Size = 1
-    end
-    object qryPedidoVendaBaseID_LOTE: TFloatField
-      FieldName = 'ID_LOTE'
-    end
-    object qryPedidoVendaBaseID_VENDEDORCOMIS: TFloatField
-      FieldName = 'ID_VENDEDORCOMIS'
-    end
-    object qryPedidoVendaBaseNM_LANCTO_POS_HORARIO: TStringField
-      FieldName = 'NM_LANCTO_POS_HORARIO'
-      Size = 100
-    end
-    object qryPedidoVendaBaseNM_JUSTIFICATIVA_PRECO: TStringField
-      FieldName = 'NM_JUSTIFICATIVA_PRECO'
-      Size = 100
-    end
-    object qryPedidoVendaBaseID_USUARIO_AUTO_PRECO: TIntegerField
-      FieldName = 'ID_USUARIO_AUTO_PRECO'
-    end
-    object qryPedidoVendaBaseFL_VALIDA_TABPRECO: TStringField
-      FieldName = 'FL_VALIDA_TABPRECO'
-      Size = 1
-    end
-    object qryPedidoVendaBaseFL_VENDA_FUNC: TStringField
-      FieldName = 'FL_VENDA_FUNC'
-      Size = 1
-    end
-    object qryPedidoVendaBaseFL_REPROGRAMADO: TStringField
-      FieldName = 'FL_REPROGRAMADO'
-      Required = True
-      Size = 1
-    end
-    object qryPedidoVendaBaseID_PEDIREPROGRAMADO: TFloatField
-      FieldName = 'ID_PEDIREPROGRAMADO'
-    end
-  end
   object dtsPedidoVendaBase: TOraDataSource
     DataSet = qryPedidoVendaBase
     Left = 376
@@ -1804,7 +1413,79 @@ object frmReprogramarDevolucao: TfrmReprogramarDevolucao
     Left = 434
     Top = 7
   end
-  object qryPedidoVendaNovo: TOraQuery
+  object dtsPedidoVendaNovo: TOraDataSource
+    DataSet = qryPedidoVendaNovo
+    Left = 624
+    Top = 8
+  end
+  object dtsPedidoVendaItemNovo: TOraDataSource
+    DataSet = qryPedidoVendaItemNovo
+    Left = 688
+    Top = 8
+  end
+  object qryTemp: TOraQuery
+    Session = FrmPrincipal.DB
+    Left = 776
+    Top = 8
+  end
+  object qryPedidoVendaItemNovo: TSmartQuery
+    KeyFields = 'ID_ITEMPEDIVEND'
+    KeySequence = 'SMART.ID_ITEMPEDIVEND'
+    SQLInsert.Strings = (
+      'INSERT INTO PEDIDO_VENDA_ITEM'
+      
+        '  (EMPRESA, FILIAL, ID_ITEMPEDIVEND, ID_PEDIVEND, ID_MATERIAL, Q' +
+        'N_CAIXCORTITEMPEDIVEND,QN_EMBAEXPEITEMPEDIVEND,QN_PESOPADREXPEIT' +
+        'EMPEDIVEND,QN_TARAREALEXPEITEMPEDIVEND,QN_PESOREALEXPEITEMPEDIVE' +
+        'ND,ID_EMBALAGEM, ID_MATEEMBA, ID_TIPOOPER, VL_UNITITEMPEDIVEND, '
+      
+        '   QN_EMBAITEMPEDIVEND, QN_PESOITEMPEDIVEND, QN_TARAITEMPEDIVEND' +
+        ', VL_UNITBRUTITEMPEDIVEND, PC_DESCITEMPEDIVEND,FX_ITEMPEDIVEND,V' +
+        'L_UNITIPI,FL_IPIBASEICMS, VL_ITEMTABEPREC, VL_DIFERENCA, SG_ORDE' +
+        'MCOMPRA, QN_ITEMORDEMCOMPRA, VL_UNITICMS,VL_DESCITEM, VL_OUTRASD' +
+        'ESP, VL_BASEICMS, '
+      '   VL_ITEMBKP, BKP_VALOR )'
+      'VALUES'
+      
+        '  (:EMPRESA, :FILIAL, :ID_ITEMPEDIVEND, :ID_PEDIVEND, :ID_MATERI' +
+        'AL, :QN_CAIXCORTITEMPEDIVEND,'
+      
+        '   :QN_EMBAEXPEITEMPEDIVEND,:QN_PESOPADREXPEITEMPEDIVEND,:QN_TAR' +
+        'AREALEXPEITEMPEDIVEND,:QN_PESOREALEXPEITEMPEDIVEND,'
+      
+        '   :ID_EMBALAGEM, :ID_MATEEMBA, :ID_TIPOOPER, :VL_UNITITEMPEDIVE' +
+        'ND, :QN_EMBAITEMPEDIVEND, :QN_PESOITEMPEDIVEND, :QN_TARAITEMPEDI' +
+        'VEND, '
+      
+        '   :VL_UNITBRUTITEMPEDIVEND, :PC_DESCITEMPEDIVEND,:FX_ITEMPEDIVE' +
+        'ND,:VL_UNITIPI,:FL_IPIBASEICMS, :VL_ITEMTABEPREC, :VL_DIFERENCA,' +
+        ' :SG_ORDEMCOMPRA, '
+      
+        '   :QN_ITEMORDEMCOMPRA, :VL_UNITICMS, :VL_DESCITEM, :VL_OUTRASDE' +
+        'SP, :VL_BASEICMS, :VL_ITEMBKP, :BKP_VALOR )')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  PEDIDO_VENDA_ITEM.ID_ITEMPEDIVEND = :ID_ITEMPEDIVEND')
+    Session = FrmPrincipal.DB
+    SQL.Strings = (
+      'SELECT * FROM PEDIDO_VENDA_ITEM WHERE ID_PEDIVEND = :ID_PEDIVEND')
+    MasterFields = 'ID_PEDIVEND'
+    DetailFields = 'ID_PEDIVEND'
+    MasterSource = dtsPedidoVendaNovo
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 656
+    Top = 8
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'ID_PEDIVEND'
+        Value = nil
+      end>
+  end
+  object qryPedidoVendaNovo: TSmartQuery
     KeyFields = 'ID_PEDIVEND'
     KeySequence = 'SEQPEDIDO_VENDA'
     SQLInsert.Strings = (
@@ -1898,12 +1579,14 @@ object frmReprogramarDevolucao: TfrmReprogramarDevolucao
     SQLRefresh.Strings = (
       'WHERE'
       '  Pedido_venda.ID_PEDIVEND = :ID_PEDIVEND')
-    LocalUpdate = True
     Session = FrmPrincipal.DB
     SQL.Strings = (
       'SELECT * FROM PEDIDO_VENDA WHERE ID_PEDIVEND = :ID_PEDIVEND'
       '')
     CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
     Left = 592
     Top = 8
     ParamData = <
@@ -2274,59 +1957,29 @@ object frmReprogramarDevolucao: TfrmReprogramarDevolucao
       FieldName = 'ID_PEDIREPROGRAMADO'
     end
   end
-  object dtsPedidoVendaNovo: TOraDataSource
-    DataSet = qryPedidoVendaNovo
-    Left = 624
-    Top = 8
-  end
-  object qryPedidoVendaItemNovo: TOraQuery
-    KeyFields = 'ID_ITEMPEDIVEND'
-    KeySequence = 'SMART.ID_ITEMPEDIVEND'
-    SQLInsert.Strings = (
-      'INSERT INTO PEDIDO_VENDA_ITEM'
-      
-        '  (EMPRESA, FILIAL, ID_ITEMPEDIVEND, ID_PEDIVEND, ID_MATERIAL, Q' +
-        'N_CAIXCORTITEMPEDIVEND,QN_EMBAEXPEITEMPEDIVEND,QN_PESOPADREXPEIT' +
-        'EMPEDIVEND,QN_TARAREALEXPEITEMPEDIVEND,QN_PESOREALEXPEITEMPEDIVE' +
-        'ND,ID_EMBALAGEM, ID_MATEEMBA, ID_TIPOOPER, VL_UNITITEMPEDIVEND, '
-      
-        '   QN_EMBAITEMPEDIVEND, QN_PESOITEMPEDIVEND, QN_TARAITEMPEDIVEND' +
-        ', VL_UNITBRUTITEMPEDIVEND, PC_DESCITEMPEDIVEND,FX_ITEMPEDIVEND,V' +
-        'L_UNITIPI,FL_IPIBASEICMS, VL_ITEMTABEPREC, VL_DIFERENCA, SG_ORDE' +
-        'MCOMPRA, QN_ITEMORDEMCOMPRA, VL_UNITICMS,VL_DESCITEM, VL_OUTRASD' +
-        'ESP, VL_BASEICMS, '
-      '   VL_ITEMBKP, BKP_VALOR )'
-      'VALUES'
-      
-        '  (:EMPRESA, :FILIAL, :ID_ITEMPEDIVEND, :ID_PEDIVEND, :ID_MATERI' +
-        'AL, :QN_CAIXCORTITEMPEDIVEND,'
-      
-        '   :QN_EMBAEXPEITEMPEDIVEND,:QN_PESOPADREXPEITEMPEDIVEND,:QN_TAR' +
-        'AREALEXPEITEMPEDIVEND,:QN_PESOREALEXPEITEMPEDIVEND,'
-      
-        '   :ID_EMBALAGEM, :ID_MATEEMBA, :ID_TIPOOPER, :VL_UNITITEMPEDIVE' +
-        'ND, :QN_EMBAITEMPEDIVEND, :QN_PESOITEMPEDIVEND, :QN_TARAITEMPEDI' +
-        'VEND, '
-      
-        '   :VL_UNITBRUTITEMPEDIVEND, :PC_DESCITEMPEDIVEND,:FX_ITEMPEDIVE' +
-        'ND,:VL_UNITIPI,:FL_IPIBASEICMS, :VL_ITEMTABEPREC, :VL_DIFERENCA,' +
-        ' :SG_ORDEMCOMPRA, '
-      
-        '   :QN_ITEMORDEMCOMPRA, :VL_UNITICMS, :VL_DESCITEM, :VL_OUTRASDE' +
-        'SP, :VL_BASEICMS, :VL_ITEMBKP, :BKP_VALOR )')
+  object qryPedidoVendaBase: TSmartQuery
+    SQLUpdate.Strings = (
+      'UPDATE PEDIDO_VENDA'
+      'SET'
+      '  FL_REPROGRAMADO = :FL_REPROGRAMADO,'
+      '  ID_PEDIREPROGRAMADO = :ID_PEDIREPROGRAMADO'
+      'WHERE'
+      '  ID_PEDIVEND = :OLD_ID_PEDIVEND')
     SQLRefresh.Strings = (
       'WHERE'
-      '  PEDIDO_VENDA_ITEM.ID_ITEMPEDIVEND = :ID_ITEMPEDIVEND')
-    LocalUpdate = True
+      '  Pedido_venda.ID_PEDIVEND = :ID_PEDIVEND')
     Session = FrmPrincipal.DB
     SQL.Strings = (
-      'SELECT * FROM PEDIDO_VENDA_ITEM WHERE ID_PEDIVEND = :ID_PEDIVEND')
-    MasterSource = dtsPedidoVendaNovo
+      'SELECT * FROM PEDIDO_VENDA WHERE ID_PEDIVEND = :ID_PEDIVEND'
+      '')
     MasterFields = 'ID_PEDIVEND'
     DetailFields = 'ID_PEDIVEND'
-    FetchAll = True
+    MasterSource = DtsDevolucao
     CachedUpdates = True
-    Left = 656
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 352
     Top = 8
     ParamData = <
       item
@@ -2334,144 +1987,367 @@ object frmReprogramarDevolucao: TfrmReprogramarDevolucao
         Name = 'ID_PEDIVEND'
         Value = nil
       end>
-    object qryPedidoVendaItemNovoEMPRESA: TStringField
+    object qryPedidoVendaBaseEMPRESA: TStringField
       FieldName = 'EMPRESA'
       Required = True
       Size = 2
     end
-    object qryPedidoVendaItemNovoFILIAL: TIntegerField
+    object qryPedidoVendaBaseFILIAL: TIntegerField
       FieldName = 'FILIAL'
       Required = True
     end
-    object qryPedidoVendaItemNovoID_ITEMPEDIVEND: TFloatField
-      FieldName = 'ID_ITEMPEDIVEND'
-      Required = True
-    end
-    object qryPedidoVendaItemNovoID_PEDIVEND: TFloatField
+    object qryPedidoVendaBaseID_PEDIVEND: TFloatField
       FieldName = 'ID_PEDIVEND'
       Required = True
     end
-    object qryPedidoVendaItemNovoID_MATERIAL: TFloatField
-      FieldName = 'ID_MATERIAL'
-    end
-    object qryPedidoVendaItemNovoID_EMBALAGEM: TFloatField
-      FieldName = 'ID_EMBALAGEM'
-    end
-    object qryPedidoVendaItemNovoID_MATEEMBA: TFloatField
-      FieldName = 'ID_MATEEMBA'
-    end
-    object qryPedidoVendaItemNovoID_TIPOOPER: TFloatField
-      FieldName = 'ID_TIPOOPER'
+    object qryPedidoVendaBaseID_CLIENTE: TFloatField
+      FieldName = 'ID_CLIENTE'
       Required = True
     end
-    object qryPedidoVendaItemNovoVL_UNITITEMPEDIVEND: TFloatField
-      FieldName = 'VL_UNITITEMPEDIVEND'
+    object qryPedidoVendaBaseID_VENDEDOR: TFloatField
+      FieldName = 'ID_VENDEDOR'
       Required = True
     end
-    object qryPedidoVendaItemNovoQN_EMBAITEMPEDIVEND: TFloatField
-      FieldName = 'QN_EMBAITEMPEDIVEND'
+    object qryPedidoVendaBaseDT_PEDIVEND: TDateTimeField
+      FieldName = 'DT_PEDIVEND'
       Required = True
     end
-    object qryPedidoVendaItemNovoQN_PESOITEMPEDIVEND: TFloatField
-      FieldName = 'QN_PESOITEMPEDIVEND'
+    object qryPedidoVendaBaseDT_ENTRPEDIVEND: TDateTimeField
+      FieldName = 'DT_ENTRPEDIVEND'
       Required = True
     end
-    object qryPedidoVendaItemNovoQN_TARAITEMPEDIVEND: TFloatField
-      FieldName = 'QN_TARAITEMPEDIVEND'
+    object qryPedidoVendaBaseDT_DIGIPEDIVEND: TDateTimeField
+      FieldName = 'DT_DIGIPEDIVEND'
       Required = True
     end
-    object qryPedidoVendaItemNovoQN_EMBAEXPEITEMPEDIVEND: TFloatField
-      FieldName = 'QN_EMBAEXPEITEMPEDIVEND'
+    object qryPedidoVendaBaseDT_FATUPEDIVEND: TDateTimeField
+      FieldName = 'DT_FATUPEDIVEND'
+    end
+    object qryPedidoVendaBaseID_TIPOPEDIVEND: TFloatField
+      FieldName = 'ID_TIPOPEDIVEND'
       Required = True
     end
-    object qryPedidoVendaItemNovoQN_PESOPADREXPEITEMPEDIVEND: TFloatField
-      FieldName = 'QN_PESOPADREXPEITEMPEDIVEND'
+    object qryPedidoVendaBaseID_FORMPAGA: TFloatField
+      FieldName = 'ID_FORMPAGA'
       Required = True
     end
-    object qryPedidoVendaItemNovoQN_TARAREALEXPEITEMPEDIVEND: TFloatField
-      FieldName = 'QN_TARAREALEXPEITEMPEDIVEND'
+    object qryPedidoVendaBaseID_SITUCOBR: TFloatField
+      FieldName = 'ID_SITUCOBR'
       Required = True
     end
-    object qryPedidoVendaItemNovoQN_PESOREALEXPEITEMPEDIVEND: TFloatField
-      FieldName = 'QN_PESOREALEXPEITEMPEDIVEND'
+    object qryPedidoVendaBaseID_INSTCOBR: TFloatField
+      FieldName = 'ID_INSTCOBR'
       Required = True
     end
-    object qryPedidoVendaItemNovoQN_CAIXCORTITEMPEDIVEND: TFloatField
-      FieldName = 'QN_CAIXCORTITEMPEDIVEND'
+    object qryPedidoVendaBaseID_ENDECLIE_COBRANCA: TFloatField
+      FieldName = 'ID_ENDECLIE_COBRANCA'
+    end
+    object qryPedidoVendaBaseID_ENDECLIE_ENTREGA: TFloatField
+      FieldName = 'ID_ENDECLIE_ENTREGA'
       Required = True
     end
-    object qryPedidoVendaItemNovoFX_ITEMPEDIVEND: TStringField
-      FieldName = 'FX_ITEMPEDIVEND'
+    object qryPedidoVendaBaseID_CARGEXPE: TFloatField
+      FieldName = 'ID_CARGEXPE'
+    end
+    object qryPedidoVendaBaseID_CONTA: TFloatField
+      FieldName = 'ID_CONTA'
+      Required = True
+    end
+    object qryPedidoVendaBaseID_TIPOCOBR: TFloatField
+      FieldName = 'ID_TIPOCOBR'
+      Required = True
+    end
+    object qryPedidoVendaBaseID_LOTEEDIPEDIVEND: TFloatField
+      FieldName = 'ID_LOTEEDIPEDIVEND'
+    end
+    object qryPedidoVendaBaseID_USUASIST_DIGIPEDIVEND: TIntegerField
+      FieldName = 'ID_USUASIST_DIGIPEDIVEND'
+      Required = True
+    end
+    object qryPedidoVendaBaseID_USUASIST_AUTOPEDIVEND: TIntegerField
+      FieldName = 'ID_USUASIST_AUTOPEDIVEND'
+    end
+    object qryPedidoVendaBaseID_TIPOLOGI: TFloatField
+      FieldName = 'ID_TIPOLOGI'
+    end
+    object qryPedidoVendaBaseSG_TIPOFRETPEDIVEND: TStringField
+      FieldName = 'SG_TIPOFRETPEDIVEND'
+      Required = True
+      Size = 3
+    end
+    object qryPedidoVendaBaseVL_SEGUPEDIVEND: TFloatField
+      FieldName = 'VL_SEGUPEDIVEND'
+    end
+    object qryPedidoVendaBaseVL_DESPPEDIVEND: TFloatField
+      FieldName = 'VL_DESPPEDIVEND'
+    end
+    object qryPedidoVendaBaseVL_FRETPEDIVEND: TFloatField
+      FieldName = 'VL_FRETPEDIVEND'
+    end
+    object qryPedidoVendaBaseVL_DESCPEDIVEND: TFloatField
+      FieldName = 'VL_DESCPEDIVEND'
+    end
+    object qryPedidoVendaBaseVL_PEDIVEND: TFloatField
+      FieldName = 'VL_PEDIVEND'
+    end
+    object qryPedidoVendaBaseGN_ESPEPEDIVEND: TStringField
+      FieldName = 'GN_ESPEPEDIVEND'
+    end
+    object qryPedidoVendaBaseGN_MARCPEDIVEND: TStringField
+      FieldName = 'GN_MARCPEDIVEND'
+    end
+    object qryPedidoVendaBaseQN_VOLUPEDIVEND: TIntegerField
+      FieldName = 'QN_VOLUPEDIVEND'
+    end
+    object qryPedidoVendaBaseQN_EMBAPEDIVEND: TIntegerField
+      FieldName = 'QN_EMBAPEDIVEND'
+    end
+    object qryPedidoVendaBaseQN_PESOPEDIVEND: TFloatField
+      FieldName = 'QN_PESOPEDIVEND'
+    end
+    object qryPedidoVendaBaseQN_TARAPEDIVEND: TFloatField
+      FieldName = 'QN_TARAPEDIVEND'
+    end
+    object qryPedidoVendaBaseQN_EMBAEXPEPEDIVEND: TIntegerField
+      FieldName = 'QN_EMBAEXPEPEDIVEND'
+    end
+    object qryPedidoVendaBaseQN_PESOPADREXPEPEDIVEND: TFloatField
+      FieldName = 'QN_PESOPADREXPEPEDIVEND'
+    end
+    object qryPedidoVendaBaseQN_TARAREALEXPEPEDIVEND: TFloatField
+      FieldName = 'QN_TARAREALEXPEPEDIVEND'
+    end
+    object qryPedidoVendaBaseQN_PESOREALEXPEPEDIVEND: TFloatField
+      FieldName = 'QN_PESOREALEXPEPEDIVEND'
+    end
+    object qryPedidoVendaBaseQN_FATOFRETABAT_PEDIVEND: TFloatField
+      FieldName = 'QN_FATOFRETABAT_PEDIVEND'
+    end
+    object qryPedidoVendaBaseFL_ESPEPEDIVEND: TStringField
+      FieldName = 'FL_ESPEPEDIVEND'
+      Required = True
+      Size = 2
+    end
+    object qryPedidoVendaBaseFL_STATPEDIVEND: TStringField
+      FieldName = 'FL_STATPEDIVEND'
+      Required = True
+      Size = 2
+    end
+    object qryPedidoVendaBaseFL_EXPOFINAPEDIVEND: TStringField
+      FieldName = 'FL_EXPOFINAPEDIVEND'
+      Size = 1
+    end
+    object qryPedidoVendaBaseFL_CREDUSADPEDIVEND: TStringField
+      FieldName = 'FL_CREDUSADPEDIVEND'
+      Size = 1
+    end
+    object qryPedidoVendaBaseNR_ORDEPEDIVEND: TFloatField
+      FieldName = 'NR_ORDEPEDIVEND'
+    end
+    object qryPedidoVendaBaseGN_OBSEPADR_PEDIVEND: TStringField
+      FieldName = 'GN_OBSEPADR_PEDIVEND'
+      Size = 250
+    end
+    object qryPedidoVendaBaseGN_OBSEEXPEPEDIVEND: TStringField
+      FieldName = 'GN_OBSEEXPEPEDIVEND'
+      Size = 2000
+    end
+    object qryPedidoVendaBaseGN_OBSEPEDIVEND: TStringField
+      FieldName = 'GN_OBSEPEDIVEND'
+      Size = 2000
+    end
+    object qryPedidoVendaBaseVL_FATUPEDIVEND: TFloatField
+      FieldName = 'VL_FATUPEDIVEND'
+    end
+    object qryPedidoVendaBaseFX_PEDIVEND: TStringField
+      FieldName = 'FX_PEDIVEND'
       Required = True
       Size = 1
     end
-    object qryPedidoVendaItemNovoVL_UNITBRUTITEMPEDIVEND: TFloatField
-      FieldName = 'VL_UNITBRUTITEMPEDIVEND'
+    object qryPedidoVendaBaseNR_PEDIVEND: TIntegerField
+      FieldName = 'NR_PEDIVEND'
     end
-    object qryPedidoVendaItemNovoPC_DESCITEMPEDIVEND: TFloatField
-      FieldName = 'PC_DESCITEMPEDIVEND'
+    object qryPedidoVendaBaseVL_QUEBPEDIVEND: TFloatField
+      FieldName = 'VL_QUEBPEDIVEND'
     end
-    object qryPedidoVendaItemNovoVL_UNITOUTROSAJUSTE: TFloatField
-      FieldName = 'VL_UNITOUTROSAJUSTE'
+    object qryPedidoVendaBaseVL_OUTRAJUSPEDIVEND: TFloatField
+      FieldName = 'VL_OUTRAJUSPEDIVEND'
     end
-    object qryPedidoVendaItemNovoMOTIVO_AJUSTE: TStringField
-      FieldName = 'MOTIVO_AJUSTE'
+    object qryPedidoVendaBaseVL_DEVOPEDIVEND: TFloatField
+      FieldName = 'VL_DEVOPEDIVEND'
+    end
+    object qryPedidoVendaBaseQN_PESOPADRDEVOPEDIVEND: TFloatField
+      FieldName = 'QN_PESOPADRDEVOPEDIVEND'
+    end
+    object qryPedidoVendaBaseQN_PESOREALDEVOPEDIVEND: TFloatField
+      FieldName = 'QN_PESOREALDEVOPEDIVEND'
+    end
+    object qryPedidoVendaBaseQN_TARAREALDEVOPEDIVEND: TFloatField
+      FieldName = 'QN_TARAREALDEVOPEDIVEND'
+    end
+    object qryPedidoVendaBaseQN_EMBADEVOPEDIVEND: TIntegerField
+      FieldName = 'QN_EMBADEVOPEDIVEND'
+    end
+    object qryPedidoVendaBaseVL_OUTRAJUSANTPEDIVEND: TFloatField
+      FieldName = 'VL_OUTRAJUSANTPEDIVEND'
+    end
+    object qryPedidoVendaBaseFL_AJUSPEDIDEVOVEND_PEDIVEND: TStringField
+      FieldName = 'FL_AJUSPEDIDEVOVEND_PEDIVEND'
+      Size = 1
+    end
+    object qryPedidoVendaBaseFL_CONFPEDIDEVOVEND_PEDIVEND: TStringField
+      FieldName = 'FL_CONFPEDIDEVOVEND_PEDIVEND'
+      Size = 1
+    end
+    object qryPedidoVendaBaseIE_PEDIVEND: TStringField
+      FieldName = 'IE_PEDIVEND'
+    end
+    object qryPedidoVendaBasePC_DESCPEDIVEND: TFloatField
+      FieldName = 'PC_DESCPEDIVEND'
+    end
+    object qryPedidoVendaBasePC_BONIPEDIVEND: TFloatField
+      FieldName = 'PC_BONIPEDIVEND'
+    end
+    object qryPedidoVendaBaseVL_TRANAUTOPEDIVEND: TFloatField
+      FieldName = 'VL_TRANAUTOPEDIVEND'
+    end
+    object qryPedidoVendaBasePC_IMPOFRETAUTOPEDIVEND: TFloatField
+      FieldName = 'PC_IMPOFRETAUTOPEDIVEND'
+    end
+    object qryPedidoVendaBaseFL_BLOQAJUSFINAPEDIVEND: TStringField
+      FieldName = 'FL_BLOQAJUSFINAPEDIVEND'
+      Size = 1
+    end
+    object qryPedidoVendaBaseDT_BLOQAJUSFINAPEDIVEND: TDateTimeField
+      FieldName = 'DT_BLOQAJUSFINAPEDIVEND'
+    end
+    object qryPedidoVendaBaseCPORCOMIS: TFloatField
+      FieldName = 'CPORCOMIS'
+    end
+    object qryPedidoVendaBaseFL_COMIS: TStringField
+      FieldName = 'FL_COMIS'
+      Size = 1
+    end
+    object qryPedidoVendaBaseID_CIDADE_ENTREGA: TFloatField
+      FieldName = 'ID_CIDADE_ENTREGA'
+    end
+    object qryPedidoVendaBaseID_PAIS_ENTREGA: TFloatField
+      FieldName = 'ID_PAIS_ENTREGA'
+    end
+    object qryPedidoVendaBaseID_FORNECEDOR: TFloatField
+      FieldName = 'ID_FORNECEDOR'
+    end
+    object qryPedidoVendaBaseGN_PLACVEICTRAN: TStringField
+      FieldName = 'GN_PLACVEICTRAN'
+      Size = 7
+    end
+    object qryPedidoVendaBaseID_PRODMATEEMBA: TStringField
+      FieldName = 'ID_PRODMATEEMBA'
+      Size = 5
+    end
+    object qryPedidoVendaBaseID_PEDREMESSA: TFloatField
+      FieldName = 'ID_PEDREMESSA'
+    end
+    object qryPedidoVendaBaseDTHORA_GERADOC: TDateTimeField
+      FieldName = 'DTHORA_GERADOC'
+    end
+    object qryPedidoVendaBaseFL_PNF: TStringField
+      FieldName = 'FL_PNF'
+      Size = 1
+    end
+    object qryPedidoVendaBaseDESCR_EMBALAGEM: TStringField
+      FieldName = 'DESCR_EMBALAGEM'
+    end
+    object qryPedidoVendaBaseID_USUASIST_AUTAJUST: TIntegerField
+      FieldName = 'ID_USUASIST_AUTAJUST'
+    end
+    object qryPedidoVendaBaseDT_AUTAJUST: TDateTimeField
+      FieldName = 'DT_AUTAJUST'
+    end
+    object qryPedidoVendaBaseDT_CONSULTA_IE: TDateTimeField
+      FieldName = 'DT_CONSULTA_IE'
+    end
+    object qryPedidoVendaBasePR_CONSULTA_IE: TStringField
+      FieldName = 'PR_CONSULTA_IE'
+    end
+    object qryPedidoVendaBaseFL_CORTE: TStringField
+      FieldName = 'FL_CORTE'
+      Size = 1
+    end
+    object qryPedidoVendaBaseDTHORA_CORTE: TDateTimeField
+      FieldName = 'DTHORA_CORTE'
+    end
+    object qryPedidoVendaBaseID_TOMADOR: TFloatField
+      FieldName = 'ID_TOMADOR'
+    end
+    object qryPedidoVendaBaseID_EMITENTE: TFloatField
+      FieldName = 'ID_EMITENTE'
+    end
+    object qryPedidoVendaBaseID_REMETENTE: TFloatField
+      FieldName = 'ID_REMETENTE'
+    end
+    object qryPedidoVendaBaseID_DESTINATARIO: TFloatField
+      FieldName = 'ID_DESTINATARIO'
+    end
+    object qryPedidoVendaBaseID_PRODUTO_PREDOMINANTE: TFloatField
+      FieldName = 'ID_PRODUTO_PREDOMINANTE'
+    end
+    object qryPedidoVendaBaseGN_OUTRAS_CARACTERISTICAS: TStringField
+      FieldName = 'GN_OUTRAS_CARACTERISTICAS'
+      Size = 50
+    end
+    object qryPedidoVendaBaseVL_TOTAL_MERCADORIA: TFloatField
+      FieldName = 'VL_TOTAL_MERCADORIA'
+    end
+    object qryPedidoVendaBaseID_UNIDMEDI: TFloatField
+      FieldName = 'ID_UNIDMEDI'
+    end
+    object qryPedidoVendaBaseNM_TIPO_MEDIDA: TStringField
+      FieldName = 'NM_TIPO_MEDIDA'
+    end
+    object qryPedidoVendaBaseQN_QUANTIDADE_CTE: TFloatField
+      FieldName = 'QN_QUANTIDADE_CTE'
+    end
+    object qryPedidoVendaBaseFL_SEMTRANSP: TStringField
+      FieldName = 'FL_SEMTRANSP'
+      Size = 1
+    end
+    object qryPedidoVendaBaseFL_NFCOMPLEMENTAR: TStringField
+      FieldName = 'FL_NFCOMPLEMENTAR'
+      Size = 1
+    end
+    object qryPedidoVendaBaseID_LOTE: TFloatField
+      FieldName = 'ID_LOTE'
+    end
+    object qryPedidoVendaBaseID_VENDEDORCOMIS: TFloatField
+      FieldName = 'ID_VENDEDORCOMIS'
+    end
+    object qryPedidoVendaBaseNM_LANCTO_POS_HORARIO: TStringField
+      FieldName = 'NM_LANCTO_POS_HORARIO'
       Size = 100
     end
-    object qryPedidoVendaItemNovoVL_UNITIPI: TFloatField
-      FieldName = 'VL_UNITIPI'
+    object qryPedidoVendaBaseNM_JUSTIFICATIVA_PRECO: TStringField
+      FieldName = 'NM_JUSTIFICATIVA_PRECO'
+      Size = 100
     end
-    object qryPedidoVendaItemNovoFL_IPIBASEICMS: TStringField
-      FieldName = 'FL_IPIBASEICMS'
+    object qryPedidoVendaBaseID_USUARIO_AUTO_PRECO: TIntegerField
+      FieldName = 'ID_USUARIO_AUTO_PRECO'
+    end
+    object qryPedidoVendaBaseFL_VALIDA_TABPRECO: TStringField
+      FieldName = 'FL_VALIDA_TABPRECO'
       Size = 1
     end
-    object qryPedidoVendaItemNovoFL_DELETE: TStringField
-      FieldName = 'FL_DELETE'
+    object qryPedidoVendaBaseFL_VENDA_FUNC: TStringField
+      FieldName = 'FL_VENDA_FUNC'
       Size = 1
     end
-    object qryPedidoVendaItemNovoQN_PACOTESITEMPEDIVEND: TIntegerField
-      FieldName = 'QN_PACOTESITEMPEDIVEND'
+    object qryPedidoVendaBaseFL_REPROGRAMADO: TStringField
+      FieldName = 'FL_REPROGRAMADO'
+      Required = True
+      Size = 1
     end
-    object qryPedidoVendaItemNovoVL_ITEMTABEPREC: TFloatField
-      FieldName = 'VL_ITEMTABEPREC'
+    object qryPedidoVendaBaseID_PEDIREPROGRAMADO: TFloatField
+      FieldName = 'ID_PEDIREPROGRAMADO'
     end
-    object qryPedidoVendaItemNovoVL_DIFERENCA: TFloatField
-      FieldName = 'VL_DIFERENCA'
-    end
-    object qryPedidoVendaItemNovoSG_ORDEMCOMPRA: TStringField
-      FieldName = 'SG_ORDEMCOMPRA'
-      Size = 15
-    end
-    object qryPedidoVendaItemNovoQN_ITEMORDEMCOMPRA: TIntegerField
-      FieldName = 'QN_ITEMORDEMCOMPRA'
-    end
-    object qryPedidoVendaItemNovoVL_UNITICMS: TFloatField
-      FieldName = 'VL_UNITICMS'
-    end
-    object qryPedidoVendaItemNovoVL_DESCITEM: TFloatField
-      FieldName = 'VL_DESCITEM'
-    end
-    object qryPedidoVendaItemNovoVL_OUTRASDESP: TFloatField
-      FieldName = 'VL_OUTRASDESP'
-    end
-    object qryPedidoVendaItemNovoVL_BASEICMS: TFloatField
-      FieldName = 'VL_BASEICMS'
-    end
-    object qryPedidoVendaItemNovoVL_ITEMBKP: TFloatField
-      FieldName = 'VL_ITEMBKP'
-    end
-    object qryPedidoVendaItemNovoBKP_VALOR: TFloatField
-      FieldName = 'BKP_VALOR'
-    end
-  end
-  object dtsPedidoVendaItemNovo: TOraDataSource
-    DataSet = qryPedidoVendaItemNovo
-    Left = 688
-    Top = 8
-  end
-  object qryTemp: TOraQuery
-    Session = FrmPrincipal.DB
-    Left = 776
-    Top = 8
   end
 end

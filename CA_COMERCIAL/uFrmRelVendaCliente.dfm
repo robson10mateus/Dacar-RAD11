@@ -275,25 +275,23 @@ object FrmRelVendaCliente: TFrmRelVendaCliente
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
-    Font.Height = 13
+    Font.Height = 15
     Font.Name = 'Arial'
     Font.Pitch = fpVariable
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 1289
-    ExplicitHeight = 591
     object TabCriterio: TTabSheet
       Caption = 'Crit'#233'rio'
       object Label6: TLabel
         Left = 270
         Top = 20
-        Width = 48
-        Height = 13
+        Width = 56
+        Height = 15
         Caption = 'Condi'#231#227'o:'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 13
+        Font.Height = 15
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
@@ -302,12 +300,12 @@ object FrmRelVendaCliente: TFrmRelVendaCliente
       object Label7: TLabel
         Left = 270
         Top = 55
-        Width = 50
-        Height = 13
+        Width = 62
+        Height = 15
         Caption = 'Express'#227'o:'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 13
+        Font.Height = 15
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
@@ -316,19 +314,19 @@ object FrmRelVendaCliente: TFrmRelVendaCliente
       object Label1: TLabel
         Left = 460
         Top = 87
-        Width = 6
-        Height = 12
+        Width = 7
+        Height = 15
         Caption = 'a'
       end
       object Label2: TLabel
         Left = 270
         Top = 90
-        Width = 56
-        Height = 13
+        Width = 64
+        Height = 15
         Caption = 'Dt. Entrega:'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 13
+        Font.Height = 15
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
@@ -337,12 +335,12 @@ object FrmRelVendaCliente: TFrmRelVendaCliente
       object Label3: TLabel
         Left = 270
         Top = 125
-        Width = 60
-        Height = 13
+        Width = 67
+        Height = 15
         Caption = 'Qtd. Cliente:'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 13
+        Font.Height = 15
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
@@ -355,11 +353,11 @@ object FrmRelVendaCliente: TFrmRelVendaCliente
         Height = 390
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 13
+        Font.Height = 15
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
-        ItemHeight = 13
+        ItemHeight = 15
         ParentFont = False
         TabOrder = 0
         OnClick = LCamposClick
@@ -371,7 +369,7 @@ object FrmRelVendaCliente: TFrmRelVendaCliente
         Height = 235
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 13
+        Font.Height = 15
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
@@ -382,10 +380,10 @@ object FrmRelVendaCliente: TFrmRelVendaCliente
         Left = 350
         Top = 18
         Width = 129
-        Height = 21
+        Height = 23
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 13
+        Font.Height = 15
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
@@ -405,10 +403,10 @@ object FrmRelVendaCliente: TFrmRelVendaCliente
         Left = 350
         Top = 52
         Width = 260
-        Height = 21
+        Height = 23
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 13
+        Font.Height = 15
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
@@ -424,7 +422,7 @@ object FrmRelVendaCliente: TFrmRelVendaCliente
         Columns = 2
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 13
+        Font.Height = 15
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = [fsBold]
@@ -445,7 +443,7 @@ object FrmRelVendaCliente: TFrmRelVendaCliente
         Enabled = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 14
+        Font.Height = 16
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = [fsBold]
@@ -512,7 +510,7 @@ object FrmRelVendaCliente: TFrmRelVendaCliente
         Caption = 'Limpar'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 14
+        Font.Height = 16
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = [fsBold]
@@ -539,7 +537,7 @@ object FrmRelVendaCliente: TFrmRelVendaCliente
         Caption = '&Ativar'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 14
+        Font.Height = 16
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = [fsBold]
@@ -575,13 +573,13 @@ object FrmRelVendaCliente: TFrmRelVendaCliente
         OnClick = BtAtivarClick
       end
       object BPESQ: TBitBtn
-        Left = 615
+        Left = 610
         Top = 52
         Width = 23
-        Height = 20
+        Height = 23
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 14
+        Font.Height = 16
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = [fsBold]
@@ -603,10 +601,10 @@ object FrmRelVendaCliente: TFrmRelVendaCliente
         Left = 350
         Top = 87
         Width = 101
-        Height = 21
+        Height = 23
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 13
+        Font.Height = 15
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
@@ -617,10 +615,10 @@ object FrmRelVendaCliente: TFrmRelVendaCliente
         Left = 480
         Top = 87
         Width = 101
-        Height = 21
+        Height = 23
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 13
+        Font.Height = 15
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
@@ -631,10 +629,10 @@ object FrmRelVendaCliente: TFrmRelVendaCliente
         Left = 350
         Top = 120
         Width = 101
-        Height = 21
+        Height = 23
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 13
+        Font.Height = 15
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
@@ -649,7 +647,7 @@ object FrmRelVendaCliente: TFrmRelVendaCliente
         Left = 0
         Top = 0
         Width = 1285
-        Height = 565
+        Height = 562
         Align = alClient
         Color = clWindow
         ParentBackground = False
@@ -658,12 +656,12 @@ object FrmRelVendaCliente: TFrmRelVendaCliente
           Left = 1
           Top = 1
           Width = 1283
-          Height = 563
+          Height = 560
           Align = alClient
           DataSource = DS
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = 13
+          Font.Height = 15
           Font.Name = 'Arial'
           Font.Pitch = fpVariable
           Font.Style = []
@@ -671,7 +669,7 @@ object FrmRelVendaCliente: TFrmRelVendaCliente
           TabOrder = 0
           TitleFont.Charset = DEFAULT_CHARSET
           TitleFont.Color = clBlack
-          TitleFont.Height = 14
+          TitleFont.Height = 16
           TitleFont.Name = 'Arial'
           TitleFont.Pitch = fpVariable
           TitleFont.Style = [fsBold]

@@ -5,7 +5,7 @@ interface
 uses
   SysUtils, Types, Classes, {$IFNDEF VER130} Variants {$ENDIF, Types}, Graphics, Controls, Forms, 
   Dialogs, StdCtrls, DB, Ora, MemDS, DBAccess, Mask, DBCtrls, Grids,
-  DBGrids, Buttons, ExtCtrls, ComCtrls, Vcl.ToolWin;
+  DBGrids, Buttons, ExtCtrls, ComCtrls, Vcl.ToolWin, OraSmart;
 
 type
   TFrmCadRegGeog = class(TForm)
@@ -56,7 +56,13 @@ type
     BtCenCus: TBitBtn;
     Label6: TLabel;
     DBNmPais: TDBEdit;
-    QryRegGeogr: TOraQuery;
+    DtSrcRegGeog: TOraDataSource;
+    QrDireitos: TOraQuery;
+    QryPais: TOraQuery;
+    DtSrcPais: TOraDataSource;
+    QryPaisID_PAIS: TFloatField;
+    QryPaisNM_PAIS: TStringField;
+    QryRegGeogr: TSmartQuery;
     QryRegGeogrEMPRESA: TStringField;
     QryRegGeogrFILIAL: TIntegerField;
     QryRegGeogrID_REGIGEOG: TFloatField;
@@ -65,12 +71,6 @@ type
     QryRegGeogrID_PAIS: TFloatField;
     QryRegGeogrFX_REGIGEOG: TStringField;
     QryRegGeogrNM_PAIS: TStringField;
-    DtSrcRegGeog: TOraDataSource;
-    QrDireitos: TOraQuery;
-    QryPais: TOraQuery;
-    DtSrcPais: TOraDataSource;
-    QryPaisID_PAIS: TFloatField;
-    QryPaisNM_PAIS: TStringField;
     Function  Atual_ToolBar(BtOrdem:Integer):string;
     procedure LDcomponentes(LD:boolean);
     procedure SB_PRIMEIROClick(Sender: TObject);

@@ -1,15 +1,15 @@
 object FrmPesqConta: TFrmPesqConta
   Left = 199
   Top = 118
-  Width = 420
-  Height = 396
+  Width = 430
+  Height = 437
   HorzScrollBar.Range = 401
   VertScrollBar.Range = 385
   ActiveControl = EdExpre
   BorderIcons = [biHelp]
   BorderStyle = bsSingle
   Caption = 'Pesquisa de Contas'
-  Color = clBackground
+  Color = clWindow
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
   Font.Height = 11
@@ -105,7 +105,7 @@ object FrmPesqConta: TFrmPesqConta
     Left = 16
     Top = 80
     Width = 140
-    Height = 21
+    Height = 23
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = 15
@@ -124,7 +124,7 @@ object FrmPesqConta: TFrmPesqConta
     Left = 172
     Top = 80
     Width = 140
-    Height = 21
+    Height = 23
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = 15

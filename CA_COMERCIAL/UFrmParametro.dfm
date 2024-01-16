@@ -7,7 +7,7 @@ object FrmParametro: TFrmParametro
   ActiveControl = PageControl1
   BorderStyle = bsSingle
   Caption = 'Comercial Dacar - Configura'#231#245'es de Par'#226'metros e Dados do Sistema'
-  Color = clBackground
+  Color = clWindow
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -21,8 +21,8 @@ object FrmParametro: TFrmParametro
   object PageControl1: TPageControl
     Left = 0
     Top = 45
-    Width = 1139
-    Height = 468
+    Width = 1143
+    Height = 469
     ActivePage = Tab_Empresa
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -33,8 +33,8 @@ object FrmParametro: TFrmParametro
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 1143
-    ExplicitHeight = 469
+    ExplicitWidth = 1139
+    ExplicitHeight = 468
     object Tab_Empresa: TTabSheet
       Caption = ' Dados da Empresa '
       Font.Charset = DEFAULT_CHARSET
@@ -49,7 +49,7 @@ object FrmParametro: TFrmParametro
         Left = 0
         Top = 0
         Width = 1135
-        Height = 442
+        Height = 439
         Align = alClient
         DataSource = Ds_Empresa
         Font.Charset = DEFAULT_CHARSET
@@ -127,7 +127,7 @@ object FrmParametro: TFrmParametro
         Left = 0
         Top = 0
         Width = 1135
-        Height = 442
+        Height = 439
         Align = alClient
         Color = clWhite
         DataSource = DS
@@ -253,7 +253,7 @@ object FrmParametro: TFrmParametro
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 1139
+    Width = 1143
     Height = 45
     Align = alTop
     Color = clWindow
@@ -265,6 +265,7 @@ object FrmParametro: TFrmParametro
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 1139
     object btnCancelar: TSpeedButton
       Left = 215
       Top = 5
@@ -1275,7 +1276,17 @@ object FrmParametro: TFrmParametro
       OnClick = SpeedButton1Click
     end
   end
-  object Qr: TOraQuery
+  object DS: TOraDataSource
+    DataSet = Qr
+    Left = 334
+    Top = 9
+  end
+  object Ds_Empresa: TOraDataSource
+    DataSet = Qr_Empresa
+    Left = 407
+    Top = 8
+  end
+  object Qr: TSmartQuery
     SQLInsert.Strings = (
       'INSERT INTO SISTEMA_PARAMETRO'
       
@@ -1327,15 +1338,14 @@ object FrmParametro: TFrmParametro
       '  DT_MONTCARGPARASIST = :DT_MONTCARGPARASIST'
       'WHERE'
       '  ID_PARASIST = :OLD_ID_PARASIST')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  ID_PARASIST = :ID_PARASIST')
     SQLLock.Strings = (
       'SELECT * FROM SISTEMA_PARAMETRO'
       'WHERE'
       '  ID_PARASIST = :ID_PARASIST'
       'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  ID_PARASIST = :ID_PARASIST')
-    LocalUpdate = True
     Session = FrmPrincipal.DB
     SQL.Strings = (
       'SELECT'
@@ -1365,8 +1375,11 @@ object FrmParametro: TFrmParametro
       'FROM'
       '  SISTEMA_PARAMETRO')
     CachedUpdates = True
-    Left = 306
-    Top = 9
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 304
+    Top = 8
     object QrEMPRESA: TStringField
       FieldName = 'EMPRESA'
       Required = True
@@ -1381,11 +1394,9 @@ object FrmParametro: TFrmParametro
       Required = True
     end
     object QrQN_PESOCAIXPADR: TFloatField
-      DisplayLabel = 'PESO CX. PADR.'
       FieldName = 'QN_PESOCAIXPADR'
     end
     object QrQN_DIFIENTRCLIE: TIntegerField
-      DisplayLabel = 'DIF. ENTR. CLIE.'
       FieldName = 'QN_DIFIENTRCLIE'
     end
     object QrFX_PARASIST: TStringField
@@ -1393,81 +1404,60 @@ object FrmParametro: TFrmParametro
       Size = 1
     end
     object QrPC_MAXIPRECVENDPARASIST: TFloatField
-      DisplayLabel = 'PC. MAX. PREC. '
       FieldName = 'PC_MAXIPRECVENDPARASIST'
     end
     object QrQN_TOLEATRATITURECEPARASIST: TIntegerField
-      DisplayLabel = 'TOL. ATRAT. '
       FieldName = 'QN_TOLEATRATITURECEPARASIST'
     end
     object QrID_TIPODOCU_NOTAFISC: TFloatField
-      DisplayLabel = 'TIPO DOCU. NF'
       FieldName = 'ID_TIPODOCU_NOTAFISC'
     end
     object QrID_TIPODOCU_BOLETO: TFloatField
-      DisplayLabel = 'TIPO DOCU. BOLETO'
       FieldName = 'ID_TIPODOCU_BOLETO'
     end
     object QrDT_FATUDOCU: TDateTimeField
-      DisplayLabel = 'DT. FATU. DOCU.'
       FieldName = 'DT_FATUDOCU'
     end
     object QrID_UNIDMEDI_FRANGO: TFloatField
-      DisplayLabel = 'UNID. MEDI. FRANGO'
       FieldName = 'ID_UNIDMEDI_FRANGO'
     end
     object QrID_UNIDMEDI_RACAO: TFloatField
-      DisplayLabel = 'UNID.MEDI. RACAO'
       FieldName = 'ID_UNIDMEDI_RACAO'
     end
     object QrID_FORMPAGA: TFloatField
-      DisplayLabel = 'FORM. PAGA'
       FieldName = 'ID_FORMPAGA'
     end
     object QrPC_TOLEQUEBPARASIST: TFloatField
-      DisplayLabel = 'PC. TOL. QUEB.'
       FieldName = 'PC_TOLEQUEBPARASIST'
     end
     object QrPC_TOLEQUEBVENDPARASIST: TFloatField
-      DisplayLabel = 'PC. TOL. QUEB. VENDA'
       FieldName = 'PC_TOLEQUEBVENDPARASIST'
     end
     object QrFL_FATUANTEEXPEPARASIST: TStringField
-      DisplayLabel = 'FL. FATU.ANTE. EXPE.'
       FieldName = 'FL_FATUANTEEXPEPARASIST'
       Size = 1
     end
     object QrVL_PRECPADRTRANPARASIST: TFloatField
-      DisplayLabel = 'VL. PREC. PADR. TRANP.'
       FieldName = 'VL_PRECPADRTRANPARASIST'
     end
     object QrPC_IMPOFRETAUTOPARASIST: TFloatField
-      DisplayLabel = 'PC. IMPO. FRET.AUTO.'
       FieldName = 'PC_IMPOFRETAUTOPARASIST'
     end
     object QrFL_MONTCARGMULTUSUAPARASIST: TStringField
-      DisplayLabel = 'FL. MONT. CARG. MULT. USUA.'
       FieldName = 'FL_MONTCARGMULTUSUAPARASIST'
       Size = 1
     end
     object QrID_USUASIST_MONTCARGPARASIST: TFloatField
-      DisplayLabel = 'ID.USUA.MONT.CARGA'
       FieldName = 'ID_USUASIST_MONTCARGPARASIST'
     end
     object QrDT_MONTCARGPARASIST: TDateTimeField
-      DisplayLabel = 'DT. MONT.CARGA'
       FieldName = 'DT_MONTCARGPARASIST'
     end
     object QrHR_LIMITEPED: TDateTimeField
       FieldName = 'HR_LIMITEPED'
     end
   end
-  object DS: TOraDataSource
-    DataSet = Qr
-    Left = 334
-    Top = 9
-  end
-  object Qr_Empresa: TOraQuery
+  object Qr_Empresa: TSmartQuery
     SQLUpdate.Strings = (
       'UPDATE Empresa'
       'SET'
@@ -1479,15 +1469,14 @@ object FrmParametro: TFrmParametro
       '  NM_EMAIL_PORTA = :NM_EMAIL_PORTA'
       'WHERE'
       '  ID_EMPRESA = :OLD_ID_EMPRESA')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  ID_EMPRESA = :ID_EMPRESA')
     SQLLock.Strings = (
       'SELECT * FROM Empresa'
       'WHERE'
       '  ID_EMPRESA = :ID_EMPRESA'
       'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  ID_EMPRESA = :ID_EMPRESA')
-    LocalUpdate = True
     Session = FrmPrincipal.DB
     SQL.Strings = (
       
@@ -1497,14 +1486,18 @@ object FrmParametro: TFrmParametro
       ' Order By ID_EMPRESA'
       '  ')
     CachedUpdates = True
-    Left = 380
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 384
     Top = 8
     object Qr_EmpresaID_EMPRESA: TFloatField
       FieldName = 'ID_EMPRESA'
-      ReadOnly = True
+      Required = True
     end
     object Qr_EmpresaNOME_EMPRESA: TStringField
       FieldName = 'NOME_EMPRESA'
+      Required = True
       Size = 200
     end
     object Qr_EmpresaNUM_SERIE_CERTIFICADO: TStringField
@@ -1526,10 +1519,5 @@ object FrmParametro: TFrmParametro
       FieldName = 'NM_EMAIL_PORTA'
       Size = 10
     end
-  end
-  object Ds_Empresa: TOraDataSource
-    DataSet = Qr_Empresa
-    Left = 407
-    Top = 8
   end
 end

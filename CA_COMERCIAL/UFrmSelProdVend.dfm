@@ -7,7 +7,7 @@ object FrmSelProdVend: TFrmSelProdVend
   ActiveControl = PageControl1
   BorderStyle = bsSingle
   Caption = 'Comercial Dacar - Relat'#243'rio de Produtos por Vendedor'
-  Color = clBackground
+  Color = clWindow
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = 11
@@ -498,8 +498,8 @@ object FrmSelProdVend: TFrmSelProdVend
   object PageControl1: TPageControl
     Left = 0
     Top = 45
-    Width = 773
-    Height = 409
+    Width = 777
+    Height = 410
     ActivePage = TabCriterio
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -510,6 +510,8 @@ object FrmSelProdVend: TFrmSelProdVend
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 773
+    ExplicitHeight = 409
     object TabCriterio: TTabSheet
       Caption = 'Crit'#233'rio'
       object Label6: TLabel
@@ -644,7 +646,7 @@ object FrmSelProdVend: TFrmSelProdVend
         Columns = 2
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 15
+        Font.Height = 13
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = [fsBold]
@@ -795,10 +797,10 @@ object FrmSelProdVend: TFrmSelProdVend
         OnClick = BtAtivarClick
       end
       object BPESQ: TBitBtn
-        Left = 615
+        Left = 610
         Top = 52
         Width = 23
-        Height = 20
+        Height = 23
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = 16
@@ -851,8 +853,8 @@ object FrmSelProdVend: TFrmSelProdVend
   end
   object Panel1: TPanel
     Left = 0
-    Top = 454
-    Width = 773
+    Top = 455
+    Width = 777
     Height = 17
     Align = alBottom
     Color = clWindow
@@ -865,11 +867,13 @@ object FrmSelProdVend: TFrmSelProdVend
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
+    ExplicitTop = 454
+    ExplicitWidth = 773
   end
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 773
+    Width = 777
     Height = 45
     Align = alTop
     Color = clWindow
@@ -882,6 +886,7 @@ object FrmSelProdVend: TFrmSelProdVend
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
+    ExplicitWidth = 773
     object Sb_Sair: TSpeedButton
       Left = 5
       Top = 5

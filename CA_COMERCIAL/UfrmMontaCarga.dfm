@@ -499,9 +499,9 @@ object FrmMontaCarga: TFrmMontaCarga
   object PageControl1: TPageControl
     Left = 0
     Top = 45
-    Width = 1184
-    Height = 675
-    ActivePage = TsDetalhe
+    Width = 1188
+    Height = 676
+    ActivePage = TabSheet1
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
@@ -514,6 +514,8 @@ object FrmMontaCarga: TFrmMontaCarga
     TabOrder = 0
     TabStop = False
     OnChange = PageControl1Change
+    ExplicitWidth = 1184
+    ExplicitHeight = 675
     object TabSheet1: TTabSheet
       Caption = 'Crit'#233'rio'
       ImageIndex = 2
@@ -768,7 +770,7 @@ object FrmMontaCarga: TFrmMontaCarga
           Left = 575
           Top = 85
           Width = 22
-          Height = 20
+          Height = 23
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = 16
@@ -798,7 +800,7 @@ object FrmMontaCarga: TFrmMontaCarga
         Left = 0
         Top = 0
         Width = 1180
-        Height = 648
+        Height = 646
         Align = alClient
         DataSource = DSForm
         Font.Charset = DEFAULT_CHARSET
@@ -913,18 +915,20 @@ object FrmMontaCarga: TFrmMontaCarga
       object Area3: TPanel
         Left = 0
         Top = 205
-        Width = 1176
-        Height = 440
+        Width = 1180
+        Height = 441
         Align = alClient
         BevelWidth = 2
         BorderWidth = 1
         Color = clWindow
         ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 1176
+        ExplicitHeight = 440
         object grdSelePedi: TDBGrid
           Left = 3
           Top = 3
-          Width = 1170
+          Width = 1174
           Height = 200
           Align = alTop
           DataSource = dtsSelePedi
@@ -1041,12 +1045,13 @@ object FrmMontaCarga: TFrmMontaCarga
         object Panel1: TPanel
           Left = 3
           Top = 203
-          Width = 1170
+          Width = 1174
           Height = 40
           Align = alTop
           Color = clWindow
           ParentBackground = False
           TabOrder = 1
+          ExplicitWidth = 1170
           object btnInclPedi: TSpeedButton
             Left = 220
             Top = 2
@@ -1912,19 +1917,20 @@ object FrmMontaCarga: TFrmMontaCarga
         object Panel2: TPanel
           Left = 58
           Top = 243
-          Width = 1115
-          Height = 194
+          Width = 1119
+          Height = 195
           Align = alClient
           BevelOuter = bvNone
           Color = clWindow
           ParentBackground = False
           TabOrder = 2
-          ExplicitHeight = 199
+          ExplicitWidth = 1115
+          ExplicitHeight = 194
           object grdSelecionado: TDBGrid
             Left = 0
             Top = 0
             Width = 1119
-            Height = 197
+            Height = 195
             Align = alClient
             DataSource = dtsPediCarg
             Font.Charset = DEFAULT_CHARSET
@@ -2050,11 +2056,12 @@ object FrmMontaCarga: TFrmMontaCarga
           Left = 3
           Top = 243
           Width = 55
-          Height = 194
+          Height = 195
           Align = alLeft
           Color = clWindow
           ParentBackground = False
           TabOrder = 3
+          ExplicitHeight = 194
           object Panel4: TPanel
             Left = 1
             Top = 101
@@ -2151,7 +2158,7 @@ object FrmMontaCarga: TFrmMontaCarga
       object Area1: TPanel
         Left = 0
         Top = 0
-        Width = 1176
+        Width = 1180
         Height = 75
         Align = alTop
         Color = clWindow
@@ -2164,6 +2171,7 @@ object FrmMontaCarga: TFrmMontaCarga
         ParentBackground = False
         ParentFont = False
         TabOrder = 1
+        ExplicitWidth = 1176
         object Label3: TLabel
           Left = 10
           Top = 20
@@ -2611,12 +2619,13 @@ object FrmMontaCarga: TFrmMontaCarga
       object Area2: TPanel
         Left = 0
         Top = 75
-        Width = 1176
+        Width = 1180
         Height = 130
         Align = alTop
         Color = clWindow
         ParentBackground = False
         TabOrder = 2
+        ExplicitWidth = 1176
         object rgpCriterios: TRadioGroup
           Left = 5
           Top = 5
@@ -3267,7 +3276,7 @@ object FrmMontaCarga: TFrmMontaCarga
   object pnlBotoes: TPanel
     Left = 0
     Top = 0
-    Width = 1184
+    Width = 1188
     Height = 45
     Align = alTop
     Color = clWindow
@@ -3279,6 +3288,7 @@ object FrmMontaCarga: TFrmMontaCarga
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 1184
     object SB_PRIMEIRO: TSpeedButton
       Left = 5
       Top = 5
@@ -4824,790 +4834,15 @@ object FrmMontaCarga: TFrmMontaCarga
       Caption = 'Action1'
     end
   end
-  object qrySelePedi: TOraQuery
-    SQLInsert.Strings = (
-      'INSERT INTO PEDIDO_VENDA'
-      
-        '  ( EMPRESA, FILIAL, ID_PEDIVEND, DT_ENTRPEDIVEND, ID_CARGEXPE, ' +
-        'QN_PESOPEDIVEND, QN_EMBAPEDIVEND, QN_FATOFRETABAT_PEDIVEND, ID_C' +
-        'LIENTE, ID_VENDEDOR, NR_ORDEPEDIVEND, GN_OBSEPEDIVEND, FL_STATPE' +
-        'DIVEND, QN_TARAPEDIVEND,VL_PEDIVEND,GN_PLACVEICTRAN)'
-      'VALUES'
-      
-        '  ( :EMPRESA, :FILIAL, :ID_PEDIVEND, :DT_ENTRPEDIVEND, :ID_CARGE' +
-        'XPE, :QN_PESOPEDIVEND, :QN_EMBAPEDIVEND, :QN_FATOFRETABAT_PEDIVE' +
-        'ND, :ID_CLIENTE, :ID_VENDEDOR, :NR_ORDEPEDIVEND, :GN_OBSEPEDIVEN' +
-        'D, :FL_STATPEDIVEND,:QN_TARAPEDIVEND,:VL_PEDIVEND,:GN_PLACVEICTR' +
-        'AN)')
-    SQLDelete.Strings = (
-      'DELETE FROM PEDIDO_VENDA'
-      'WHERE'
-      '  ID_PEDIVEND = :ID_PEDIVEND')
-    SQLUpdate.Strings = (
-      'UPDATE PEDIDO_VENDA'
-      'SET'
-      '  EMPRESA = :EMPRESA,'
-      '  FILIAL = :FILIAL,'
-      '  ID_PEDIVEND = :ID_PEDIVEND,'
-      '  DT_ENTRPEDIVEND = :DT_ENTRPEDIVEND,'
-      '  ID_CARGEXPE = :ID_CARGEXPE,'
-      '  QN_PESOPEDIVEND = :QN_PESOPEDIVEND,'
-      '  QN_EMBAPEDIVEND = :QN_EMBAPEDIVEND,'
-      '  QN_FATOFRETABAT_PEDIVEND = :QN_FATOFRETABAT_PEDIVEND,'
-      '  ID_CLIENTE = :ID_CLIENTE, '
-      '  ID_VENDEDOR = :ID_VENDEDOR,'
-      '  NR_ORDEPEDIVEND = :NR_ORDEPEDIVEND, '
-      '  GN_OBSEPEDIVEND = :GN_OBSEPEDIVEND,'
-      '  FL_STATPEDIVEND = :FL_STATPEDIVEND,'
-      '  QN_TARAPEDIVEND = :QN_TARAPEDIVEND,'
-      '  VL_PEDIVEND     = :VL_PEDIVEND,'
-      '  GN_PLACVEICTRAN = :GN_PLACVEICTRAN'
-      'WHERE'
-      '  ID_PEDIVEND = :OLD_ID_PEDIVEND')
-    SQLLock.Strings = (
-      'SELECT * FROM PEDIDO_VENDA'
-      'WHERE'
-      '  ID_PEDIVEND = :ID_PEDIVEND'
-      'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  Pedido_venda.ID_PEDIVEND = :ID_PEDIVEND')
-    LocalUpdate = True
-    Session = FrmPrincipal.DB
-    SQL.Strings = (
-      'SELECT'
-      '  Pedido_venda.EMPRESA,'
-      '  Pedido_venda.FILIAL,'
-      '  Pedido_venda.ID_PEDIVEND,'
-      '  Pedido_venda.DT_ENTRPEDIVEND,'
-      '  Pedido_venda.ID_CARGEXPE,'
-      '  Pedido_venda.QN_PESOPEDIVEND,'
-      
-        '  (Pedido_venda.QN_PESOPEDIVEND + Pedido_venda.QN_TARAPEDIVEND) ' +
-        'AS QN_PESOBRUTPEDIVEND,'
-      '  Pedido_venda.QN_EMBAPEDIVEND,'
-      '  Pedido_venda.QN_TARAPEDIVEND,'
-      '  Pedido_venda.VL_PEDIVEND,'
-      '  Pedido_venda.QN_FATOFRETABAT_PEDIVEND,'
-      '  Pedido_venda.ID_CLIENTE,'
-      '  Pedido_venda.ID_VENDEDOR,'
-      '  Vendedor.NM_VENDEDOR,'
-      '  Cliente.NM_FANTCLIE,'
-      '  Cliente.NM_REDUCLIE,'
-      '  Cliente.NM_CLIENTE,'
-      '  Cliente.QN_DIFIENTRCLIE,'
-      '  Cliente.ID_REGILOGI,'
-      '  Cliente.ID_SUBRLOGI,'
-      '  Logistica_regiao.NM_REGILOGI,'
-      '  Logistica_subregiao.NM_SUBRLOGI,'
-      
-        '  DECODE(Logistica_regiao.GN_RISCREGILOGI, 3, '#39'Alto'#39', DECODE(Log' +
-        'istica_regiao.GN_RISCREGILOGI, 2, '#39'M'#233'dio'#39', '#39'Baixo'#39')) AS GN_RISCR' +
-        'EGILOGI,'
-      '  Logistica_regiao_subregiao.FL_RELAREGISUBRLOGI,'
-      '  Pedido_venda.NR_ORDEPEDIVEND,'
-      '  Pedido_venda.GN_OBSEPEDIVEND,'
-      '  Pedido_venda.FL_STATPEDIVEND,'
-      '  Bairro.NM_BAIRRO,'
-      '  Cliente_endereco.NR_CEPENDECLIE,'
-      '  Cidade.NM_CIDADE,'
-      '  Estado.SG_ESTADO,'
-      '  Pedido_venda.GN_PLACVEICTRAN,'
-      '  Cliente.NR_CAIXPOSTENDECLIE'
-      'FROM'
-      '  PEDIDO_VENDA Pedido_venda,'
-      '  CLIENTE Cliente,'
-      '  CLIENTE_ENDERECO Cliente_endereco,'
-      '  LOGISTICA_REGIAO Logistica_regiao,'
-      '  LOGISTICA_SUBREGIAO Logistica_subregiao,'
-      '  LOGISTICA_REGIAO_SUBREGIAO Logistica_regiao_subregiao,'
-      '  BAIRRO Bairro,'
-      '  CIDADE Cidade,'
-      '  ESTADO Estado,'
-      '  VENDEDOR Vendedor'
-      'WHERE'
-      '  (Pedido_venda.ID_CLIENTE = Cliente.ID_CLIENTE) AND'
-      '  (Pedido_venda.ID_VENDEDOR = Vendedor.ID_VENDEDOR) AND'
-      
-        '  (Pedido_venda.ID_ENDECLIE_ENTREGA = Cliente_endereco.ID_ENDECL' +
-        'IE) AND'
-      '  (Cliente_endereco.ID_BAIRRO = Bairro.ID_BAIRRO) AND'
-      '  (Bairro.ID_CIDADE = Cidade.ID_CIDADE) AND'
-      '  (Cidade.ID_ESTADO = Estado.ID_ESTADO) AND'
-      '  (Cliente.ID_REGILOGI = Logistica_regiao.ID_REGILOGI) AND'
-      '  (Cliente.ID_SUBRLOGI = Logistica_subregiao.ID_SUBRLOGI) AND'
-      
-        '  (Logistica_regiao.ID_REGILOGI = Logistica_regiao_subregiao.ID_' +
-        'REGILOGI) AND'
-      
-        '  (Logistica_subregiao.ID_SUBRLOGI = Logistica_regiao_subregiao.' +
-        'ID_SUBRLOGI)')
-    FetchAll = True
-    CachedUpdates = True
-    Left = 424
-    Top = 4
-    object qrySelePediEMPRESA: TStringField
-      FieldName = 'EMPRESA'
-      Required = True
-      Size = 2
-    end
-    object qrySelePediDT_ENTRPEDIVEND: TDateTimeField
-      DisplayLabel = 'Entrega'
-      FieldName = 'DT_ENTRPEDIVEND'
-      Required = True
-    end
-    object qrySelePediFILIAL: TIntegerField
-      FieldName = 'FILIAL'
-      Required = True
-    end
-    object qrySelePediID_PEDIVEND: TFloatField
-      DisplayLabel = 'N'#186' Pedido'
-      FieldName = 'ID_PEDIVEND'
-      Required = True
-    end
-    object qrySelePediID_CARGEXPE: TFloatField
-      DisplayLabel = 'Carga'
-      FieldName = 'ID_CARGEXPE'
-    end
-    object qrySelePediQN_PESOPEDIVEND: TFloatField
-      DisplayLabel = 'Peso Pedido'
-      FieldName = 'QN_PESOPEDIVEND'
-    end
-    object qrySelePediQN_PESOBRUTPEDIVEND: TFloatField
-      FieldName = 'QN_PESOBRUTPEDIVEND'
-    end
-    object qrySelePediQN_EMBAPEDIVEND: TIntegerField
-      FieldName = 'QN_EMBAPEDIVEND'
-    end
-    object qrySelePediQN_FATOFRETABAT_PEDIVEND: TFloatField
-      FieldName = 'QN_FATOFRETABAT_PEDIVEND'
-    end
-    object qrySelePediID_CLIENTE: TFloatField
-      FieldName = 'ID_CLIENTE'
-      Required = True
-    end
-    object qrySelePediID_VENDEDOR: TFloatField
-      FieldName = 'ID_VENDEDOR'
-      Required = True
-    end
-    object qrySelePediNM_VENDEDOR: TStringField
-      FieldName = 'NM_VENDEDOR'
-      Required = True
-      Size = 40
-    end
-    object qrySelePediNM_FANTCLIE: TStringField
-      FieldName = 'NM_FANTCLIE'
-      Required = True
-      Size = 40
-    end
-    object qrySelePediNM_REDUCLIE: TStringField
-      FieldName = 'NM_REDUCLIE'
-      Required = True
-      Size = 15
-    end
-    object qrySelePediQN_DIFIENTRCLIE: TIntegerField
-      FieldName = 'QN_DIFIENTRCLIE'
-    end
-    object qrySelePediID_REGILOGI: TFloatField
-      FieldName = 'ID_REGILOGI'
-      Required = True
-    end
-    object qrySelePediID_SUBRLOGI: TFloatField
-      FieldName = 'ID_SUBRLOGI'
-      Required = True
-    end
-    object qrySelePediNM_REGILOGI: TStringField
-      FieldName = 'NM_REGILOGI'
-      Required = True
-      Size = 40
-    end
-    object qrySelePediNM_SUBRLOGI: TStringField
-      FieldName = 'NM_SUBRLOGI'
-      Required = True
-      Size = 40
-    end
-    object qrySelePediGN_RISCREGILOGI: TStringField
-      FieldName = 'GN_RISCREGILOGI'
-      Size = 5
-    end
-    object qrySelePediFL_RELAREGISUBRLOGI: TStringField
-      FieldName = 'FL_RELAREGISUBRLOGI'
-      Required = True
-      Size = 1
-    end
-    object qrySelePediNR_ORDEPEDIVEND: TFloatField
-      FieldName = 'NR_ORDEPEDIVEND'
-    end
-    object qrySelePediGN_OBSEPEDIVEND: TStringField
-      FieldName = 'GN_OBSEPEDIVEND'
-      Size = 2000
-    end
-    object qrySelePediFL_STATPEDIVEND: TStringField
-      FieldName = 'FL_STATPEDIVEND'
-      Required = True
-      Size = 2
-    end
-    object qrySelePediNM_BAIRRO: TStringField
-      FieldName = 'NM_BAIRRO'
-      Required = True
-      Size = 30
-    end
-    object qrySelePediNR_CEPENDECLIE: TStringField
-      FieldName = 'NR_CEPENDECLIE'
-      Required = True
-      Size = 8
-    end
-    object qrySelePediNM_CIDADE: TStringField
-      FieldName = 'NM_CIDADE'
-      Required = True
-      Size = 40
-    end
-    object qrySelePediSG_ESTADO: TStringField
-      FieldName = 'SG_ESTADO'
-      Required = True
-      Size = 10
-    end
-    object qrySelePediNM_CLIENTE: TStringField
-      FieldName = 'NM_CLIENTE'
-      Required = True
-      Size = 40
-    end
-    object qrySelePediQN_TARAPEDIVEND: TFloatField
-      FieldName = 'QN_TARAPEDIVEND'
-    end
-    object qrySelePediVL_PEDIVEND: TFloatField
-      FieldName = 'VL_PEDIVEND'
-    end
-    object qrySelePediGN_PLACVEICTRAN: TStringField
-      FieldName = 'GN_PLACVEICTRAN'
-      Size = 7
-    end
-    object qrySelePediNR_CAIXPOSTENDECLIE: TStringField
-      FieldName = 'NR_CAIXPOSTENDECLIE'
-      Size = 10
-    end
-  end
   object dtsSelePedi: TOraDataSource
     DataSet = qrySelePedi
     Left = 424
     Top = 32
   end
-  object qryPediCarg: TOraQuery
-    SQLInsert.Strings = (
-      'INSERT INTO PEDIDO_VENDA'
-      
-        '  ( EMPRESA, FILIAL, ID_PEDIVEND, DT_ENTRPEDIVEND, ID_CARGEXPE, ' +
-        'QN_PESOPEDIVEND, QN_EMBAPEDIVEND, QN_FATOFRETABAT_PEDIVEND, ID_C' +
-        'LIENTE, ID_VENDEDOR, NR_ORDEPEDIVEND, GN_OBSEPEDIVEND, FL_STATPE' +
-        'DIVEND, GN_PLACVEICTRAN)'
-      'VALUES'
-      
-        '  ( :EMPRESA, :FILIAL, :ID_PEDIVEND, :DT_ENTRPEDIVEND, :ID_CARGE' +
-        'XPE, :QN_PESOPEDIVEND, :QN_EMBAPEDIVEND, :QN_FATOFRETABAT_PEDIVE' +
-        'ND, :ID_CLIENTE, :ID_VENDEDOR, :NR_ORDEPEDIVEND, :GN_OBSEPEDIVEN' +
-        'D, :FL_STATPEDIVEND, :GN_PLACVEICTRAN)')
-    SQLDelete.Strings = (
-      'DELETE FROM PEDIDO_VENDA'
-      'WHERE'
-      '  ID_PEDIVEND = :ID_PEDIVEND')
-    SQLUpdate.Strings = (
-      'UPDATE PEDIDO_VENDA'
-      'SET'
-      '  EMPRESA = :EMPRESA,'
-      '  FILIAL = :FILIAL,'
-      '  ID_PEDIVEND = :ID_PEDIVEND,'
-      '  DT_ENTRPEDIVEND = :DT_ENTRPEDIVEND,'
-      '  ID_CARGEXPE = :ID_CARGEXPE,'
-      '  QN_PESOPEDIVEND = :QN_PESOPEDIVEND,'
-      '  QN_EMBAPEDIVEND = :QN_EMBAPEDIVEND,'
-      '  QN_FATOFRETABAT_PEDIVEND = :QN_FATOFRETABAT_PEDIVEND,'
-      '  ID_CLIENTE = :ID_CLIENTE, '
-      '  ID_VENDEDOR = :ID_VENDEDOR,'
-      '  NR_ORDEPEDIVEND = :NR_ORDEPEDIVEND, '
-      '  GN_OBSEPEDIVEND = :GN_OBSEPEDIVEND,'
-      '  FL_STATPEDIVEND = :FL_STATPEDIVEND'
-      'WHERE'
-      '  ID_PEDIVEND = :OLD_ID_PEDIVEND')
-    SQLLock.Strings = (
-      'SELECT * FROM PEDIDO_VENDA'
-      'WHERE'
-      '  ID_PEDIVEND = :ID_PEDIVEND'
-      'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  Pedido_venda.ID_PEDIVEND = :ID_PEDIVEND')
-    LocalUpdate = True
-    Session = FrmPrincipal.DB
-    SQL.Strings = (
-      'SELECT'
-      '  PV.EMPRESA,'
-      '  PV.FILIAL,'
-      '  PV.ID_PEDIVEND,'
-      '  PV.DT_ENTRPEDIVEND,'
-      '  PV.ID_CARGEXPE,'
-      '  PV.QN_PESOPEDIVEND,'
-      
-        '  (PV.QN_PESOPEDIVEND + PV.QN_TARAPEDIVEND) AS QN_PESOBRUTPEDIVE' +
-        'ND,'
-      '  PV.QN_EMBAPEDIVEND,'
-      '  PV.QN_FATOFRETABAT_PEDIVEND,'
-      '  PV.ID_CLIENTE,'
-      '  PV.ID_VENDEDOR,'
-      '  PV.DT_FATUPEDIVEND,'
-      '  Vendedor.NM_VENDEDOR,'
-      '  Cliente.NM_FANTCLIE,'
-      '  Cliente.NM_REDUCLIE,'
-      '  Cliente.NM_CLIENTE,'
-      '  Cliente.QN_DIFIENTRCLIE,'
-      '  Cliente.ID_REGILOGI,'
-      '  Cliente.ID_SUBRLOGI,'
-      '  Logistica_subregiao.NM_SUBRLOGI,'
-      
-        '  DECODE(Logistica_regiao.GN_RISCREGILOGI, 3, '#39'Alto'#39', DECODE(Log' +
-        'istica_regiao.GN_RISCREGILOGI, 2, '#39'M'#233'dio'#39', '#39'Baixo'#39')) AS GN_RISCR' +
-        'EGILOGI,'
-      '  Logistica_regiao_subregiao.FL_RELAREGISUBRLOGI,'
-      '  PV.NR_ORDEPEDIVEND,'
-      '  PV.GN_OBSEPEDIVEND,'
-      '  PV.FL_STATPEDIVEND,'
-      '  Bairro.NM_BAIRRO,'
-      '  Cliente_endereco.NR_CEPENDECLIE,'
-      '  Cidade.NM_CIDADE,'
-      '  Estado.SG_ESTADO,'
-      '  PV.GN_PLACVEICTRAN,'
-      '  Cliente.NR_CAIXPOSTENDECLIE'
-      'FROM'
-      '  PEDIDO_VENDA PV,'
-      '  CLIENTE Cliente,'
-      '  CLIENTE_ENDERECO Cliente_endereco,'
-      '  LOGISTICA_REGIAO Logistica_regiao,'
-      '  LOGISTICA_SUBREGIAO Logistica_subregiao,'
-      '  LOGISTICA_REGIAO_SUBREGIAO Logistica_regiao_subregiao,'
-      '  BAIRRO Bairro,'
-      '  CIDADE Cidade,'
-      '  ESTADO Estado,'
-      '  VENDEDOR Vendedor'
-      'WHERE'
-      '  (PV.ID_CLIENTE = Cliente.ID_CLIENTE) AND'
-      '  (PV.ID_VENDEDOR = Vendedor.ID_VENDEDOR) AND'
-      '  (PV.ID_ENDECLIE_ENTREGA = Cliente_endereco.ID_ENDECLIE) AND'
-      '  (Cliente_endereco.ID_BAIRRO = Bairro.ID_BAIRRO) AND'
-      '  (Bairro.ID_CIDADE = Cidade.ID_CIDADE) AND'
-      '  (Cidade.ID_ESTADO = Estado.ID_ESTADO) AND'
-      '  (Cliente.ID_REGILOGI = Logistica_regiao.ID_REGILOGI) AND'
-      '  (Cliente.ID_SUBRLOGI = Logistica_subregiao.ID_SUBRLOGI) AND'
-      
-        '  (Logistica_regiao.ID_REGILOGI = Logistica_regiao_subregiao.ID_' +
-        'REGILOGI) AND'
-      
-        '  (Logistica_subregiao.ID_SUBRLOGI = Logistica_regiao_subregiao.' +
-        'ID_SUBRLOGI)')
-    FetchAll = True
-    CachedUpdates = True
-    Left = 455
-    Top = 4
-    object qryPediCargEMPRESA: TStringField
-      FieldName = 'EMPRESA'
-      Required = True
-      Size = 2
-    end
-    object qryPediCargFILIAL: TIntegerField
-      FieldName = 'FILIAL'
-      Required = True
-    end
-    object qryPediCargID_PEDIVEND: TFloatField
-      FieldName = 'ID_PEDIVEND'
-      Required = True
-    end
-    object qryPediCargDT_ENTRPEDIVEND: TDateTimeField
-      FieldName = 'DT_ENTRPEDIVEND'
-      Required = True
-    end
-    object qryPediCargID_CARGEXPE: TFloatField
-      FieldName = 'ID_CARGEXPE'
-    end
-    object qryPediCargQN_PESOPEDIVEND: TFloatField
-      FieldName = 'QN_PESOPEDIVEND'
-    end
-    object qryPediCargQN_PESOBRUTPEDIVEND: TFloatField
-      FieldName = 'QN_PESOBRUTPEDIVEND'
-    end
-    object qryPediCargQN_EMBAPEDIVEND: TIntegerField
-      FieldName = 'QN_EMBAPEDIVEND'
-    end
-    object qryPediCargQN_FATOFRETABAT_PEDIVEND: TFloatField
-      FieldName = 'QN_FATOFRETABAT_PEDIVEND'
-    end
-    object qryPediCargID_CLIENTE: TFloatField
-      FieldName = 'ID_CLIENTE'
-      Required = True
-    end
-    object qryPediCargID_VENDEDOR: TFloatField
-      FieldName = 'ID_VENDEDOR'
-      Required = True
-    end
-    object qryPediCargDT_FATUPEDIVEND: TDateTimeField
-      FieldName = 'DT_FATUPEDIVEND'
-    end
-    object qryPediCargNM_VENDEDOR: TStringField
-      FieldName = 'NM_VENDEDOR'
-      Size = 40
-    end
-    object qryPediCargNM_FANTCLIE: TStringField
-      FieldName = 'NM_FANTCLIE'
-      Size = 40
-    end
-    object qryPediCargNM_REDUCLIE: TStringField
-      FieldName = 'NM_REDUCLIE'
-      Size = 15
-    end
-    object qryPediCargQN_DIFIENTRCLIE: TIntegerField
-      FieldName = 'QN_DIFIENTRCLIE'
-    end
-    object qryPediCargID_REGILOGI: TFloatField
-      FieldName = 'ID_REGILOGI'
-      Required = True
-    end
-    object qryPediCargID_SUBRLOGI: TFloatField
-      FieldName = 'ID_SUBRLOGI'
-      Required = True
-    end
-    object qryPediCargNM_SUBRLOGI: TStringField
-      FieldName = 'NM_SUBRLOGI'
-      Size = 40
-    end
-    object qryPediCargNR_ORDEPEDIVEND: TFloatField
-      FieldName = 'NR_ORDEPEDIVEND'
-    end
-    object qryPediCargFL_STATPEDIVEND: TStringField
-      FieldName = 'FL_STATPEDIVEND'
-      Size = 2
-    end
-    object qryPediCargGN_OBSEPEDIVEND: TStringField
-      FieldName = 'GN_OBSEPEDIVEND'
-      Size = 2000
-    end
-    object qryPediCargNM_CLIENTE: TStringField
-      FieldName = 'NM_CLIENTE'
-      Required = True
-      Size = 40
-    end
-    object qryPediCargNM_BAIRRO: TStringField
-      FieldName = 'NM_BAIRRO'
-      Required = True
-      Size = 30
-    end
-    object qryPediCargNR_CEPENDECLIE: TStringField
-      FieldName = 'NR_CEPENDECLIE'
-      Required = True
-      Size = 8
-    end
-    object qryPediCargNM_CIDADE: TStringField
-      FieldName = 'NM_CIDADE'
-      Required = True
-      Size = 40
-    end
-    object qryPediCargSG_ESTADO: TStringField
-      FieldName = 'SG_ESTADO'
-      Required = True
-      Size = 10
-    end
-    object qryPediCargGN_PLACVEICTRAN: TStringField
-      FieldName = 'GN_PLACVEICTRAN'
-      Size = 7
-    end
-    object qryPediCargNR_CAIXPOSTENDECLIE: TStringField
-      FieldName = 'NR_CAIXPOSTENDECLIE'
-      Size = 10
-    end
-  end
   object dtsPediCarg: TOraDataSource
     DataSet = qryPediCarg
     Left = 455
     Top = 32
-  end
-  object QryForm: TOraQuery
-    KeyFields = 'ID_CARGEXPE'
-    KeySequence = 'ID_CARGEXPE'
-    SQLInsert.Strings = (
-      'INSERT INTO EXPEDICAO_CARGA'
-      
-        '  (EMPRESA, FILIAL, ID_CARGEXPE, DT_CARGEXPE, DT_MONTCARGEXPE, D' +
-        'T_ABERCARGEXPE, DT_FECHCARGEXPE, DT_LIMIPEDICARGEXPE, ID_USUASIS' +
-        'T_MONTAGEM, ID_USUASIST_ABERTURA, ID_USUASIST_FECHAMENTO, ID_CLA' +
-        'SCARGEXPE, ID_ITEMPROGCAMI, NR_ORDEENTRCARGEXPE, VL_UNITFRETCARG' +
-        'EXPE, VL_FRETCARGEXPE, FL_IMPRCARGEXPE, FL_STATCARGEXPE, FX_CARG' +
-        'EXPE, GN_PLACVEICTRAN, HORASAIDA, VALEPEDAGIO, VALOR_PEDAGIO, LO' +
-        'TEEXPO, MOTORISTA, AJUDANTE, NM_CHAPA, VL_PAGO_CHAPA, VL_PAGO_AJ' +
-        'UDANTE, VL_PAGO_MOTORISTA, ID_MOTORISTA)'
-      'VALUES'
-      
-        '  (:EMPRESA, :FILIAL, :ID_CARGEXPE, :DT_CARGEXPE, :DT_MONTCARGEX' +
-        'PE, :DT_ABERCARGEXPE, :DT_FECHCARGEXPE, :DT_LIMIPEDICARGEXPE, :I' +
-        'D_USUASIST_MONTAGEM, :ID_USUASIST_ABERTURA, :ID_USUASIST_FECHAME' +
-        'NTO, :ID_CLASCARGEXPE, :ID_ITEMPROGCAMI, :NR_ORDEENTRCARGEXPE, :' +
-        'VL_UNITFRETCARGEXPE, :VL_FRETCARGEXPE, :FL_IMPRCARGEXPE, :FL_STA' +
-        'TCARGEXPE, :FX_CARGEXPE, :GN_PLACVEICTRAN, :HORASAIDA, :VALEPEDA' +
-        'GIO, :VALOR_PEDAGIO, :LOTEEXPO, :MOTORISTA, :AJUDANTE, :NM_CHAPA' +
-        ', :VL_PAGO_CHAPA, :VL_PAGO_AJUDANTE, :VL_PAGO_MOTORISTA, :ID_MOT' +
-        'ORISTA)')
-    SQLDelete.Strings = (
-      'DELETE FROM EXPEDICAO_CARGA'
-      'WHERE'
-      '  ID_CARGEXPE = :ID_CARGEXPE')
-    SQLUpdate.Strings = (
-      'UPDATE EXPEDICAO_CARGA'
-      'SET'
-      '  EMPRESA = :EMPRESA,'
-      '  FILIAL = :FILIAL,'
-      '  ID_CARGEXPE = :ID_CARGEXPE,'
-      '  DT_CARGEXPE = :DT_CARGEXPE,'
-      '  DT_MONTCARGEXPE = :DT_MONTCARGEXPE,'
-      '  DT_ABERCARGEXPE = :DT_ABERCARGEXPE,'
-      '  DT_FECHCARGEXPE = :DT_FECHCARGEXPE,'
-      '  DT_LIMIPEDICARGEXPE = :DT_LIMIPEDICARGEXPE,'
-      '  ID_USUASIST_MONTAGEM = :ID_USUASIST_MONTAGEM,'
-      '  ID_USUASIST_ABERTURA = :ID_USUASIST_ABERTURA,'
-      '  ID_USUASIST_FECHAMENTO = :ID_USUASIST_FECHAMENTO,'
-      '  ID_CLASCARGEXPE = :ID_CLASCARGEXPE,'
-      '  ID_ITEMPROGCAMI = :ID_ITEMPROGCAMI,'
-      '  NR_ORDEENTRCARGEXPE = :NR_ORDEENTRCARGEXPE,'
-      '  VL_UNITFRETCARGEXPE = :VL_UNITFRETCARGEXPE,'
-      '  VL_FRETCARGEXPE = :VL_FRETCARGEXPE,'
-      '  FL_IMPRCARGEXPE = :FL_IMPRCARGEXPE,'
-      '  FL_STATCARGEXPE = :FL_STATCARGEXPE,'
-      '  FX_CARGEXPE = :FX_CARGEXPE,'
-      '  GN_PLACVEICTRAN = :GN_PLACVEICTRAN,'
-      '  HORASAIDA = :HORASAIDA,'
-      '  VALEPEDAGIO = :VALEPEDAGIO,'
-      '  VALOR_PEDAGIO = :VALOR_PEDAGIO,'
-      '  LOTEEXPO = :LOTEEXPO,'
-      '  MOTORISTA = :MOTORISTA,'
-      '  AJUDANTE =  :AJUDANTE,'
-      '  NM_CHAPA = :NM_CHAPA,'
-      '  VL_PAGO_CHAPA = :VL_PAGO_CHAPA,'
-      '  VL_PAGO_AJUDANTE = :VL_PAGO_AJUDANTE,'
-      '  VL_PAGO_MOTORISTA = :VL_PAGO_MOTORISTA,'
-      '  ID_MOTORISTA = :ID_MOTORISTA'
-      'WHERE'
-      '  ID_CARGEXPE = :OLD_ID_CARGEXPE')
-    SQLLock.Strings = (
-      'SELECT * FROM EXPEDICAO_CARGA'
-      'WHERE'
-      '  ID_CARGEXPE = :ID_CARGEXPE'
-      'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  Expedicao_carga.ID_CARGEXPE = :ID_CARGEXPE')
-    LocalUpdate = True
-    Session = FrmPrincipal.DB
-    SQL.Strings = (
-      
-        'SELECT DISTINCT EC.EMPRESA, EC.FILIAL, EC.ID_CARGEXPE, EC.DT_CAR' +
-        'GEXPE, EC.GN_PLACVEICTRAN,'
-      '  EC.DT_MONTCARGEXPE, EC.FL_STATCARGEXPE, '
-      '   CASE WHEN EC.FL_STATCARGEXPE = '#39'BQ'#39' THEN'
-      '    '#39'BLOQUEADA'#39
-      '    WHEN EC.FL_STATCARGEXPE = '#39'MT'#39' THEN'
-      '        '#39'EM MONTAGEM'#39
-      '    WHEN EC.FL_STATCARGEXPE = '#39'FE'#39' THEN'
-      '        '#39'FECHADA'#39
-      '    WHEN EC.FL_STATCARGEXPE = '#39'AB'#39' THEN'
-      '        '#39'ABERTA'#39
-      '    WHEN EC.FL_STATCARGEXPE = '#39'NF'#39' THEN'
-      '        '#39'NF DIRETA'#39
-      '    WHEN EC.FL_STATCARGEXPE = '#39'CR'#39' THEN'
-      '        '#39'EM CARREGAMENTO'#39
-      '    WHEN EC.FL_STATCARGEXPE = '#39'SP'#39' THEN'
-      '        '#39'CARREGAMENTO SUSPENSO'#39
-      '    ELSE '
-      '        '#39#39
-      '    END AS SIT_CARGA,    '
-      '  EC.DT_FECHCARGEXPE, EC.ID_USUASIST_MONTAGEM,'
-      
-        '  EC.ID_USUASIST_FECHAMENTO, EC.ID_USUASIST_ABERTURA, EC.DT_ABER' +
-        'CARGEXPE, EC.ID_CLASCARGEXPE,'
-      
-        '  EC.ID_ITEMPROGCAMI, EC.DT_LIMIPEDICARGEXPE, EC.FL_IMPRCARGEXPE' +
-        ', FORN.NM_FORNECEDOR,'
-      
-        '  ECC.NM_CLASCARGEXPE, EC.VL_UNITFRETCARGEXPE, EC.NR_ORDEENTRCAR' +
-        'GEXPE,'
-      
-        '  EC.VL_FRETCARGEXPE, EC.FX_CARGEXPE, UM.NM_USUASIST AS NM_USUAS' +
-        'IST_MONTAGEM,'
-      
-        '  UA.NM_USUASIST AS NM_USUASIST_ABERTURA, UF.NM_USUASIST AS NM_U' +
-        'SUASIST_FECHAMENT0,'
-      
-        '  EC.HORASAIDA, EC.VALEPEDAGIO, EC.VALOR_PEDAGIO, EC.LOTEEXPO, E' +
-        'C.MOTORISTA, EC.AJUDANTE, EC.NM_CHAPA, '
-      
-        '  EC.VL_PAGO_CHAPA, EC.VL_PAGO_AJUDANTE, EC.VL_PAGO_MOTORISTA, E' +
-        'C.ID_MOTORISTA'
-      'FROM'
-      
-        '  EXPEDICAO_CARGA EC, PEDIDO_VENDA PV, FORNECEDOR FORN, EXPEDICA' +
-        'O_CARGA_CLASSIFICACAO ECC,'
-      '  SISTEMA_USUARIO UM,'
-      '  SISTEMA_USUARIO UA,'
-      '  SISTEMA_USUARIO UF'
-      'WHERE'
-      '  (EC.ID_CARGEXPE = PV.ID_CARGEXPE) AND'
-      '  (EC.ID_ITEMPROGCAMI = FORN.ID_FORNECEDOR) AND'
-      '  (EC.ID_CLASCARGEXPE = ECC.ID_CLASCARGEXPE) AND'
-      '  (EC.ID_USUASIST_MONTAGEM = UM.ID_USUASIST) AND'
-      '  (EC.ID_USUASIST_ABERTURA = UA.ID_USUASIST) AND'
-      '  (EC.ID_USUASIST_FECHAMENTO = UF.ID_USUASIST)')
-    FetchAll = True
-    CachedUpdates = True
-    AfterOpen = QryFormAfterOpen
-    Left = 396
-    Top = 4
-    object QryFormEMPRESA: TStringField
-      FieldName = 'EMPRESA'
-      Required = True
-      Size = 2
-    end
-    object QryFormMOTORISTA: TStringField
-      FieldName = 'MOTORISTA'
-      Required = True
-      Size = 10
-    end
-    object QryFormFILIAL: TIntegerField
-      FieldName = 'FILIAL'
-      Required = True
-    end
-    object QryFormID_CARGEXPE: TFloatField
-      FieldName = 'ID_CARGEXPE'
-    end
-    object QryFormDT_CARGEXPE: TDateTimeField
-      FieldName = 'DT_CARGEXPE'
-      Required = True
-    end
-    object QryFormGN_PLACVEICTRAN: TStringField
-      FieldName = 'GN_PLACVEICTRAN'
-      Size = 7
-    end
-    object QryFormDT_MONTCARGEXPE: TDateTimeField
-      FieldName = 'DT_MONTCARGEXPE'
-      Required = True
-    end
-    object QryFormFL_STATCARGEXPE: TStringField
-      FieldName = 'FL_STATCARGEXPE'
-      Required = True
-      Size = 2
-    end
-    object QryFormDT_FECHCARGEXPE: TDateTimeField
-      FieldName = 'DT_FECHCARGEXPE'
-    end
-    object QryFormID_USUASIST_MONTAGEM: TFloatField
-      FieldName = 'ID_USUASIST_MONTAGEM'
-      Required = True
-    end
-    object QryFormID_USUASIST_FECHAMENTO: TFloatField
-      FieldName = 'ID_USUASIST_FECHAMENTO'
-    end
-    object QryFormAJUDANTE: TStringField
-      FieldName = 'AJUDANTE'
-      Size = 10
-    end
-    object QryFormID_USUASIST_ABERTURA: TFloatField
-      FieldName = 'ID_USUASIST_ABERTURA'
-    end
-    object QryFormDT_ABERCARGEXPE: TDateTimeField
-      FieldName = 'DT_ABERCARGEXPE'
-    end
-    object QryFormID_CLASCARGEXPE: TFloatField
-      FieldName = 'ID_CLASCARGEXPE'
-      Required = True
-    end
-    object QryFormID_ITEMPROGCAMI: TFloatField
-      FieldName = 'ID_ITEMPROGCAMI'
-      Required = True
-    end
-    object QryFormDT_LIMIPEDICARGEXPE: TDateTimeField
-      FieldName = 'DT_LIMIPEDICARGEXPE'
-      Required = True
-    end
-    object QryFormFL_IMPRCARGEXPE: TStringField
-      FieldName = 'FL_IMPRCARGEXPE'
-      Required = True
-      Size = 2
-    end
-    object QryFormNM_FORNECEDOR: TStringField
-      FieldName = 'NM_FORNECEDOR'
-      Size = 40
-    end
-    object QryFormNM_CLASCARGEXPE: TStringField
-      FieldName = 'NM_CLASCARGEXPE'
-      Size = 40
-    end
-    object QryFormVL_UNITFRETCARGEXPE: TFloatField
-      FieldName = 'VL_UNITFRETCARGEXPE'
-      Required = True
-    end
-    object QryFormNR_ORDEENTRCARGEXPE: TFloatField
-      FieldName = 'NR_ORDEENTRCARGEXPE'
-      Required = True
-    end
-    object QryFormVL_FRETCARGEXPE: TFloatField
-      FieldName = 'VL_FRETCARGEXPE'
-      Required = True
-    end
-    object QryFormFX_CARGEXPE: TStringField
-      FieldName = 'FX_CARGEXPE'
-      Required = True
-      Size = 1
-    end
-    object QryFormNM_USUASIST_MONTAGEM: TStringField
-      FieldName = 'NM_USUASIST_MONTAGEM'
-      Size = 40
-    end
-    object QryFormNM_USUASIST_ABERTURA: TStringField
-      FieldName = 'NM_USUASIST_ABERTURA'
-      Size = 40
-    end
-    object QryFormNM_USUASIST_FECHAMENT0: TStringField
-      FieldName = 'NM_USUASIST_FECHAMENT0'
-      Size = 40
-    end
-    object QryFormHORASAIDA: TStringField
-      Alignment = taRightJustify
-      FieldName = 'HORASAIDA'
-      EditMask = '!90:00;1;_'
-    end
-    object QryFormVALEPEDAGIO: TStringField
-      Alignment = taRightJustify
-      FieldName = 'VALEPEDAGIO'
-    end
-    object QryFormVALOR_PEDAGIO: TFloatField
-      FieldName = 'VALOR_PEDAGIO'
-    end
-    object QryFormLOTEEXPO: TStringField
-      FieldName = 'LOTEEXPO'
-      Size = 15
-    end
-    object QryFormNM_CHAPA: TStringField
-      FieldName = 'NM_CHAPA'
-      Size = 30
-    end
-    object QryFormVL_PAGO_CHAPA: TFloatField
-      FieldName = 'VL_PAGO_CHAPA'
-    end
-    object QryFormVL_PAGO_AJUDANTE: TFloatField
-      FieldName = 'VL_PAGO_AJUDANTE'
-    end
-    object QryFormVL_PAGO_MOTORISTA: TFloatField
-      FieldName = 'VL_PAGO_MOTORISTA'
-    end
-    object QryFormSIT_CARGA: TStringField
-      FieldName = 'SIT_CARGA'
-      Size = 15
-    end
-    object QryFormID_MOTORISTA: TIntegerField
-      FieldName = 'ID_MOTORISTA'
-    end
   end
   object qryTempSubrLogi: TOraQuery
     Session = FrmPrincipal.DB
@@ -5617,55 +4852,6 @@ object FrmMontaCarga: TFrmMontaCarga
   object qryTempFatoVeic: TOraQuery
     Session = FrmPrincipal.DB
     Left = 740
-    Top = 4
-  end
-  object QrAcesso: TOraQuery
-    SQLInsert.Strings = (
-      'INSERT INTO SISTEMA_PARAMETRO'
-      
-        '  (EMPRESA, FILIAL, ID_PARASIST, FL_MONTCARGMULTUSUAPARASIST, ID' +
-        '_USUASIST_MONTCARGPARASIST, DT_MONTCARGPARASIST)'
-      'VALUES'
-      
-        '  (:EMPRESA, :FILIAL, :ID_PARASIST, :FL_MONTCARGMULTUSUAPARASIST' +
-        ', :ID_USUASIST_MONTCARGPARASIST, :DT_MONTCARGPARASIST)')
-    SQLDelete.Strings = (
-      'DELETE FROM SISTEMA_PARAMETRO'
-      'WHERE'
-      '  ID_PARASIST = :ID_PARASIST')
-    SQLUpdate.Strings = (
-      'UPDATE SISTEMA_PARAMETRO'
-      'SET'
-      '  EMPRESA = :EMPRESA,'
-      '  FILIAL = :FILIAL,'
-      '  ID_PARASIST = :ID_PARASIST,'
-      '  FL_MONTCARGMULTUSUAPARASIST = :FL_MONTCARGMULTUSUAPARASIST,'
-      '  ID_USUASIST_MONTCARGPARASIST = :ID_USUASIST_MONTCARGPARASIST,'
-      '  DT_MONTCARGPARASIST = :DT_MONTCARGPARASIST'
-      'WHERE'
-      '  ID_PARASIST = :OLD_ID_PARASIST')
-    SQLLock.Strings = (
-      'SELECT * FROM SISTEMA_PARAMETRO'
-      'WHERE'
-      '  ID_PARASIST = :ID_PARASIST'
-      'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  ID_PARASIST = :ID_PARASIST')
-    LocalUpdate = True
-    Session = FrmPrincipal.DB
-    SQL.Strings = (
-      'SELECT'
-      '  SISTEMA_PARAMETRO.FL_MONTCARGMULTUSUAPARASIST,'
-      '  SISTEMA_PARAMETRO.ID_USUASIST_MONTCARGPARASIST,'
-      '  SISTEMA_PARAMETRO.DT_MONTCARGPARASIST,'
-      '  SISTEMA_PARAMETRO.EMPRESA,'
-      '  SISTEMA_PARAMETRO.FILIAL,'
-      '  SISTEMA_PARAMETRO.ID_PARASIST'
-      'FROM'
-      '  SISTEMA_PARAMETRO')
-    CachedUpdates = True
-    Left = 628
     Top = 4
   end
   object QryTemp2: TOraQuery
@@ -5987,5 +5173,824 @@ object FrmMontaCarga: TFrmMontaCarga
     AutoCommit = True
     Left = 801
     Top = 5
+  end
+  object QryForm: TSmartQuery
+    KeyFields = 'ID_CARGEXPE'
+    KeySequence = 'ID_CARGEXPE'
+    SQLInsert.Strings = (
+      'INSERT INTO EXPEDICAO_CARGA'
+      
+        '  (EMPRESA, FILIAL, ID_CARGEXPE, DT_CARGEXPE, DT_MONTCARGEXPE, D' +
+        'T_ABERCARGEXPE, DT_FECHCARGEXPE, DT_LIMIPEDICARGEXPE, ID_USUASIS' +
+        'T_MONTAGEM, ID_USUASIST_ABERTURA, ID_USUASIST_FECHAMENTO, ID_CLA' +
+        'SCARGEXPE, ID_ITEMPROGCAMI, NR_ORDEENTRCARGEXPE, VL_UNITFRETCARG' +
+        'EXPE, VL_FRETCARGEXPE, FL_IMPRCARGEXPE, FL_STATCARGEXPE, FX_CARG' +
+        'EXPE, GN_PLACVEICTRAN, HORASAIDA, VALEPEDAGIO, VALOR_PEDAGIO, LO' +
+        'TEEXPO, MOTORISTA, AJUDANTE, NM_CHAPA, VL_PAGO_CHAPA, VL_PAGO_AJ' +
+        'UDANTE, VL_PAGO_MOTORISTA, ID_MOTORISTA)'
+      'VALUES'
+      
+        '  (:EMPRESA, :FILIAL, :ID_CARGEXPE, :DT_CARGEXPE, :DT_MONTCARGEX' +
+        'PE, :DT_ABERCARGEXPE, :DT_FECHCARGEXPE, :DT_LIMIPEDICARGEXPE, :I' +
+        'D_USUASIST_MONTAGEM, :ID_USUASIST_ABERTURA, :ID_USUASIST_FECHAME' +
+        'NTO, :ID_CLASCARGEXPE, :ID_ITEMPROGCAMI, :NR_ORDEENTRCARGEXPE, :' +
+        'VL_UNITFRETCARGEXPE, :VL_FRETCARGEXPE, :FL_IMPRCARGEXPE, :FL_STA' +
+        'TCARGEXPE, :FX_CARGEXPE, :GN_PLACVEICTRAN, :HORASAIDA, :VALEPEDA' +
+        'GIO, :VALOR_PEDAGIO, :LOTEEXPO, :MOTORISTA, :AJUDANTE, :NM_CHAPA' +
+        ', :VL_PAGO_CHAPA, :VL_PAGO_AJUDANTE, :VL_PAGO_MOTORISTA, :ID_MOT' +
+        'ORISTA)')
+    SQLDelete.Strings = (
+      'DELETE FROM EXPEDICAO_CARGA'
+      'WHERE'
+      '  ID_CARGEXPE = :ID_CARGEXPE')
+    SQLUpdate.Strings = (
+      'UPDATE EXPEDICAO_CARGA'
+      'SET'
+      '  EMPRESA = :EMPRESA,'
+      '  FILIAL = :FILIAL,'
+      '  ID_CARGEXPE = :ID_CARGEXPE,'
+      '  DT_CARGEXPE = :DT_CARGEXPE,'
+      '  DT_MONTCARGEXPE = :DT_MONTCARGEXPE,'
+      '  DT_ABERCARGEXPE = :DT_ABERCARGEXPE,'
+      '  DT_FECHCARGEXPE = :DT_FECHCARGEXPE,'
+      '  DT_LIMIPEDICARGEXPE = :DT_LIMIPEDICARGEXPE,'
+      '  ID_USUASIST_MONTAGEM = :ID_USUASIST_MONTAGEM,'
+      '  ID_USUASIST_ABERTURA = :ID_USUASIST_ABERTURA,'
+      '  ID_USUASIST_FECHAMENTO = :ID_USUASIST_FECHAMENTO,'
+      '  ID_CLASCARGEXPE = :ID_CLASCARGEXPE,'
+      '  ID_ITEMPROGCAMI = :ID_ITEMPROGCAMI,'
+      '  NR_ORDEENTRCARGEXPE = :NR_ORDEENTRCARGEXPE,'
+      '  VL_UNITFRETCARGEXPE = :VL_UNITFRETCARGEXPE,'
+      '  VL_FRETCARGEXPE = :VL_FRETCARGEXPE,'
+      '  FL_IMPRCARGEXPE = :FL_IMPRCARGEXPE,'
+      '  FL_STATCARGEXPE = :FL_STATCARGEXPE,'
+      '  FX_CARGEXPE = :FX_CARGEXPE,'
+      '  GN_PLACVEICTRAN = :GN_PLACVEICTRAN,'
+      '  HORASAIDA = :HORASAIDA,'
+      '  VALEPEDAGIO = :VALEPEDAGIO,'
+      '  VALOR_PEDAGIO = :VALOR_PEDAGIO,'
+      '  LOTEEXPO = :LOTEEXPO,'
+      '  MOTORISTA = :MOTORISTA,'
+      '  AJUDANTE =  :AJUDANTE,'
+      '  NM_CHAPA = :NM_CHAPA,'
+      '  VL_PAGO_CHAPA = :VL_PAGO_CHAPA,'
+      '  VL_PAGO_AJUDANTE = :VL_PAGO_AJUDANTE,'
+      '  VL_PAGO_MOTORISTA = :VL_PAGO_MOTORISTA,'
+      '  ID_MOTORISTA = :ID_MOTORISTA'
+      'WHERE'
+      '  ID_CARGEXPE = :OLD_ID_CARGEXPE')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  Expedicao_carga.ID_CARGEXPE = :ID_CARGEXPE')
+    SQLLock.Strings = (
+      'SELECT * FROM EXPEDICAO_CARGA'
+      'WHERE'
+      '  ID_CARGEXPE = :ID_CARGEXPE'
+      'FOR UPDATE NOWAIT')
+    Session = FrmPrincipal.DB
+    SQL.Strings = (
+      
+        'SELECT DISTINCT EC.EMPRESA, EC.FILIAL, EC.ID_CARGEXPE, EC.DT_CAR' +
+        'GEXPE, EC.GN_PLACVEICTRAN,'
+      '  EC.DT_MONTCARGEXPE, EC.FL_STATCARGEXPE, '
+      '   CASE WHEN EC.FL_STATCARGEXPE = '#39'BQ'#39' THEN'
+      '    '#39'BLOQUEADA'#39
+      '    WHEN EC.FL_STATCARGEXPE = '#39'MT'#39' THEN'
+      '        '#39'EM MONTAGEM'#39
+      '    WHEN EC.FL_STATCARGEXPE = '#39'FE'#39' THEN'
+      '        '#39'FECHADA'#39
+      '    WHEN EC.FL_STATCARGEXPE = '#39'AB'#39' THEN'
+      '        '#39'ABERTA'#39
+      '    WHEN EC.FL_STATCARGEXPE = '#39'NF'#39' THEN'
+      '        '#39'NF DIRETA'#39
+      '    WHEN EC.FL_STATCARGEXPE = '#39'CR'#39' THEN'
+      '        '#39'EM CARREGAMENTO'#39
+      '    WHEN EC.FL_STATCARGEXPE = '#39'SP'#39' THEN'
+      '        '#39'CARREGAMENTO SUSPENSO'#39
+      '    ELSE '
+      '        '#39#39
+      '    END AS SIT_CARGA,    '
+      '  EC.DT_FECHCARGEXPE, EC.ID_USUASIST_MONTAGEM,'
+      
+        '  EC.ID_USUASIST_FECHAMENTO, EC.ID_USUASIST_ABERTURA, EC.DT_ABER' +
+        'CARGEXPE, EC.ID_CLASCARGEXPE,'
+      
+        '  EC.ID_ITEMPROGCAMI, EC.DT_LIMIPEDICARGEXPE, EC.FL_IMPRCARGEXPE' +
+        ', FORN.NM_FORNECEDOR,'
+      
+        '  ECC.NM_CLASCARGEXPE, EC.VL_UNITFRETCARGEXPE, EC.NR_ORDEENTRCAR' +
+        'GEXPE,'
+      
+        '  EC.VL_FRETCARGEXPE, EC.FX_CARGEXPE, UM.NM_USUASIST AS NM_USUAS' +
+        'IST_MONTAGEM,'
+      
+        '  UA.NM_USUASIST AS NM_USUASIST_ABERTURA, UF.NM_USUASIST AS NM_U' +
+        'SUASIST_FECHAMENT0,'
+      
+        '  EC.HORASAIDA, EC.VALEPEDAGIO, EC.VALOR_PEDAGIO, EC.LOTEEXPO, E' +
+        'C.MOTORISTA, EC.AJUDANTE, EC.NM_CHAPA, '
+      
+        '  EC.VL_PAGO_CHAPA, EC.VL_PAGO_AJUDANTE, EC.VL_PAGO_MOTORISTA, E' +
+        'C.ID_MOTORISTA'
+      'FROM'
+      
+        '  EXPEDICAO_CARGA EC, PEDIDO_VENDA PV, FORNECEDOR FORN, EXPEDICA' +
+        'O_CARGA_CLASSIFICACAO ECC,'
+      '  SISTEMA_USUARIO UM,'
+      '  SISTEMA_USUARIO UA,'
+      '  SISTEMA_USUARIO UF'
+      'WHERE'
+      '  (EC.ID_CARGEXPE = PV.ID_CARGEXPE) AND'
+      '  (EC.ID_ITEMPROGCAMI = FORN.ID_FORNECEDOR) AND'
+      '  (EC.ID_CLASCARGEXPE = ECC.ID_CLASCARGEXPE) AND'
+      '  (EC.ID_USUASIST_MONTAGEM = UM.ID_USUASIST) AND'
+      '  (EC.ID_USUASIST_ABERTURA = UA.ID_USUASIST) AND'
+      '  (EC.ID_USUASIST_FECHAMENTO = UF.ID_USUASIST)')
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 400
+    Top = 8
+    object QryFormEMPRESA: TStringField
+      FieldName = 'EMPRESA'
+      Required = True
+      Size = 2
+    end
+    object QryFormFILIAL: TIntegerField
+      FieldName = 'FILIAL'
+      Required = True
+    end
+    object QryFormID_CARGEXPE: TFloatField
+      FieldName = 'ID_CARGEXPE'
+      Required = True
+    end
+    object QryFormDT_CARGEXPE: TDateTimeField
+      FieldName = 'DT_CARGEXPE'
+      Required = True
+    end
+    object QryFormGN_PLACVEICTRAN: TStringField
+      FieldName = 'GN_PLACVEICTRAN'
+      Size = 7
+    end
+    object QryFormDT_MONTCARGEXPE: TDateTimeField
+      FieldName = 'DT_MONTCARGEXPE'
+      Required = True
+    end
+    object QryFormFL_STATCARGEXPE: TStringField
+      FieldName = 'FL_STATCARGEXPE'
+      Required = True
+      Size = 2
+    end
+    object QryFormSIT_CARGA: TStringField
+      FieldName = 'SIT_CARGA'
+      Size = 21
+    end
+    object QryFormDT_FECHCARGEXPE: TDateTimeField
+      FieldName = 'DT_FECHCARGEXPE'
+    end
+    object QryFormID_USUASIST_MONTAGEM: TFloatField
+      FieldName = 'ID_USUASIST_MONTAGEM'
+      Required = True
+    end
+    object QryFormID_USUASIST_FECHAMENTO: TFloatField
+      FieldName = 'ID_USUASIST_FECHAMENTO'
+    end
+    object QryFormID_USUASIST_ABERTURA: TFloatField
+      FieldName = 'ID_USUASIST_ABERTURA'
+    end
+    object QryFormDT_ABERCARGEXPE: TDateTimeField
+      FieldName = 'DT_ABERCARGEXPE'
+    end
+    object QryFormID_CLASCARGEXPE: TFloatField
+      FieldName = 'ID_CLASCARGEXPE'
+      Required = True
+    end
+    object QryFormID_ITEMPROGCAMI: TFloatField
+      FieldName = 'ID_ITEMPROGCAMI'
+      Required = True
+    end
+    object QryFormDT_LIMIPEDICARGEXPE: TDateTimeField
+      FieldName = 'DT_LIMIPEDICARGEXPE'
+      Required = True
+    end
+    object QryFormFL_IMPRCARGEXPE: TStringField
+      FieldName = 'FL_IMPRCARGEXPE'
+      Required = True
+      Size = 2
+    end
+    object QryFormNM_FORNECEDOR: TStringField
+      FieldName = 'NM_FORNECEDOR'
+      Size = 40
+    end
+    object QryFormNM_CLASCARGEXPE: TStringField
+      FieldName = 'NM_CLASCARGEXPE'
+      Size = 40
+    end
+    object QryFormVL_UNITFRETCARGEXPE: TFloatField
+      FieldName = 'VL_UNITFRETCARGEXPE'
+      Required = True
+    end
+    object QryFormNR_ORDEENTRCARGEXPE: TFloatField
+      FieldName = 'NR_ORDEENTRCARGEXPE'
+      Required = True
+    end
+    object QryFormVL_FRETCARGEXPE: TFloatField
+      FieldName = 'VL_FRETCARGEXPE'
+      Required = True
+    end
+    object QryFormFX_CARGEXPE: TStringField
+      FieldName = 'FX_CARGEXPE'
+      Required = True
+      Size = 1
+    end
+    object QryFormNM_USUASIST_MONTAGEM: TStringField
+      FieldName = 'NM_USUASIST_MONTAGEM'
+      Size = 40
+    end
+    object QryFormNM_USUASIST_ABERTURA: TStringField
+      FieldName = 'NM_USUASIST_ABERTURA'
+      Size = 40
+    end
+    object QryFormNM_USUASIST_FECHAMENT0: TStringField
+      FieldName = 'NM_USUASIST_FECHAMENT0'
+      Size = 40
+    end
+    object QryFormHORASAIDA: TStringField
+      FieldName = 'HORASAIDA'
+    end
+    object QryFormVALEPEDAGIO: TStringField
+      FieldName = 'VALEPEDAGIO'
+    end
+    object QryFormVALOR_PEDAGIO: TFloatField
+      FieldName = 'VALOR_PEDAGIO'
+    end
+    object QryFormLOTEEXPO: TStringField
+      FieldName = 'LOTEEXPO'
+      Size = 15
+    end
+    object QryFormMOTORISTA: TStringField
+      FieldName = 'MOTORISTA'
+      Size = 30
+    end
+    object QryFormAJUDANTE: TStringField
+      FieldName = 'AJUDANTE'
+      Size = 30
+    end
+    object QryFormNM_CHAPA: TStringField
+      FieldName = 'NM_CHAPA'
+      Size = 30
+    end
+    object QryFormVL_PAGO_CHAPA: TFloatField
+      FieldName = 'VL_PAGO_CHAPA'
+    end
+    object QryFormVL_PAGO_AJUDANTE: TFloatField
+      FieldName = 'VL_PAGO_AJUDANTE'
+    end
+    object QryFormVL_PAGO_MOTORISTA: TFloatField
+      FieldName = 'VL_PAGO_MOTORISTA'
+    end
+    object QryFormID_MOTORISTA: TIntegerField
+      FieldName = 'ID_MOTORISTA'
+    end
+  end
+  object QrAcesso: TSmartQuery
+    SQLInsert.Strings = (
+      'INSERT INTO SISTEMA_PARAMETRO'
+      
+        '  (EMPRESA, FILIAL, ID_PARASIST, FL_MONTCARGMULTUSUAPARASIST, ID' +
+        '_USUASIST_MONTCARGPARASIST, DT_MONTCARGPARASIST)'
+      'VALUES'
+      
+        '  (:EMPRESA, :FILIAL, :ID_PARASIST, :FL_MONTCARGMULTUSUAPARASIST' +
+        ', :ID_USUASIST_MONTCARGPARASIST, :DT_MONTCARGPARASIST)')
+    SQLDelete.Strings = (
+      'DELETE FROM SISTEMA_PARAMETRO'
+      'WHERE'
+      '  ID_PARASIST = :ID_PARASIST')
+    SQLUpdate.Strings = (
+      'UPDATE SISTEMA_PARAMETRO'
+      'SET'
+      '  EMPRESA = :EMPRESA,'
+      '  FILIAL = :FILIAL,'
+      '  ID_PARASIST = :ID_PARASIST,'
+      '  FL_MONTCARGMULTUSUAPARASIST = :FL_MONTCARGMULTUSUAPARASIST,'
+      '  ID_USUASIST_MONTCARGPARASIST = :ID_USUASIST_MONTCARGPARASIST,'
+      '  DT_MONTCARGPARASIST = :DT_MONTCARGPARASIST'
+      'WHERE'
+      '  ID_PARASIST = :OLD_ID_PARASIST')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  ID_PARASIST = :ID_PARASIST')
+    SQLLock.Strings = (
+      'SELECT * FROM SISTEMA_PARAMETRO'
+      'WHERE'
+      '  ID_PARASIST = :ID_PARASIST'
+      'FOR UPDATE NOWAIT')
+    Session = FrmPrincipal.DB
+    SQL.Strings = (
+      'SELECT'
+      '  SISTEMA_PARAMETRO.FL_MONTCARGMULTUSUAPARASIST,'
+      '  SISTEMA_PARAMETRO.ID_USUASIST_MONTCARGPARASIST,'
+      '  SISTEMA_PARAMETRO.DT_MONTCARGPARASIST,'
+      '  SISTEMA_PARAMETRO.EMPRESA,'
+      '  SISTEMA_PARAMETRO.FILIAL,'
+      '  SISTEMA_PARAMETRO.ID_PARASIST'
+      'FROM'
+      '  SISTEMA_PARAMETRO')
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 632
+    Top = 8
+  end
+  object qrySelePedi: TSmartQuery
+    SQLInsert.Strings = (
+      'INSERT INTO PEDIDO_VENDA'
+      
+        '  ( EMPRESA, FILIAL, ID_PEDIVEND, DT_ENTRPEDIVEND, ID_CARGEXPE, ' +
+        'QN_PESOPEDIVEND, QN_EMBAPEDIVEND, QN_FATOFRETABAT_PEDIVEND, ID_C' +
+        'LIENTE, ID_VENDEDOR, NR_ORDEPEDIVEND, GN_OBSEPEDIVEND, FL_STATPE' +
+        'DIVEND, QN_TARAPEDIVEND,VL_PEDIVEND,GN_PLACVEICTRAN)'
+      'VALUES'
+      
+        '  ( :EMPRESA, :FILIAL, :ID_PEDIVEND, :DT_ENTRPEDIVEND, :ID_CARGE' +
+        'XPE, :QN_PESOPEDIVEND, :QN_EMBAPEDIVEND, :QN_FATOFRETABAT_PEDIVE' +
+        'ND, :ID_CLIENTE, :ID_VENDEDOR, :NR_ORDEPEDIVEND, :GN_OBSEPEDIVEN' +
+        'D, :FL_STATPEDIVEND,:QN_TARAPEDIVEND,:VL_PEDIVEND,:GN_PLACVEICTR' +
+        'AN)')
+    SQLDelete.Strings = (
+      'DELETE FROM PEDIDO_VENDA'
+      'WHERE'
+      '  ID_PEDIVEND = :ID_PEDIVEND')
+    SQLUpdate.Strings = (
+      'UPDATE PEDIDO_VENDA'
+      'SET'
+      '  EMPRESA = :EMPRESA,'
+      '  FILIAL = :FILIAL,'
+      '  ID_PEDIVEND = :ID_PEDIVEND,'
+      '  DT_ENTRPEDIVEND = :DT_ENTRPEDIVEND,'
+      '  ID_CARGEXPE = :ID_CARGEXPE,'
+      '  QN_PESOPEDIVEND = :QN_PESOPEDIVEND,'
+      '  QN_EMBAPEDIVEND = :QN_EMBAPEDIVEND,'
+      '  QN_FATOFRETABAT_PEDIVEND = :QN_FATOFRETABAT_PEDIVEND,'
+      '  ID_CLIENTE = :ID_CLIENTE, '
+      '  ID_VENDEDOR = :ID_VENDEDOR,'
+      '  NR_ORDEPEDIVEND = :NR_ORDEPEDIVEND, '
+      '  GN_OBSEPEDIVEND = :GN_OBSEPEDIVEND,'
+      '  FL_STATPEDIVEND = :FL_STATPEDIVEND,'
+      '  QN_TARAPEDIVEND = :QN_TARAPEDIVEND,'
+      '  VL_PEDIVEND     = :VL_PEDIVEND,'
+      '  GN_PLACVEICTRAN = :GN_PLACVEICTRAN'
+      'WHERE'
+      '  ID_PEDIVEND = :OLD_ID_PEDIVEND')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  Pedido_venda.ID_PEDIVEND = :ID_PEDIVEND')
+    SQLLock.Strings = (
+      'SELECT * FROM PEDIDO_VENDA'
+      'WHERE'
+      '  ID_PEDIVEND = :ID_PEDIVEND'
+      'FOR UPDATE NOWAIT')
+    Session = FrmPrincipal.DB
+    SQL.Strings = (
+      'SELECT'
+      '  Pedido_venda.EMPRESA,'
+      '  Pedido_venda.FILIAL,'
+      '  Pedido_venda.ID_PEDIVEND,'
+      '  Pedido_venda.DT_ENTRPEDIVEND,'
+      '  Pedido_venda.ID_CARGEXPE,'
+      '  Pedido_venda.QN_PESOPEDIVEND,'
+      
+        '  (Pedido_venda.QN_PESOPEDIVEND + Pedido_venda.QN_TARAPEDIVEND) ' +
+        'AS QN_PESOBRUTPEDIVEND,'
+      '  Pedido_venda.QN_EMBAPEDIVEND,'
+      '  Pedido_venda.QN_TARAPEDIVEND,'
+      '  Pedido_venda.VL_PEDIVEND,'
+      '  Pedido_venda.QN_FATOFRETABAT_PEDIVEND,'
+      '  Pedido_venda.ID_CLIENTE,'
+      '  Pedido_venda.ID_VENDEDOR,'
+      '  Vendedor.NM_VENDEDOR,'
+      '  Cliente.NM_FANTCLIE,'
+      '  Cliente.NM_REDUCLIE,'
+      '  Cliente.NM_CLIENTE,'
+      '  Cliente.QN_DIFIENTRCLIE,'
+      '  Cliente.ID_REGILOGI,'
+      '  Cliente.ID_SUBRLOGI,'
+      '  Logistica_regiao.NM_REGILOGI,'
+      '  Logistica_subregiao.NM_SUBRLOGI,'
+      
+        '  DECODE(Logistica_regiao.GN_RISCREGILOGI, 3, '#39'Alto'#39', DECODE(Log' +
+        'istica_regiao.GN_RISCREGILOGI, 2, '#39'M'#233'dio'#39', '#39'Baixo'#39')) AS GN_RISCR' +
+        'EGILOGI,'
+      '  Logistica_regiao_subregiao.FL_RELAREGISUBRLOGI,'
+      '  Pedido_venda.NR_ORDEPEDIVEND,'
+      '  Pedido_venda.GN_OBSEPEDIVEND,'
+      '  Pedido_venda.FL_STATPEDIVEND,'
+      '  Bairro.NM_BAIRRO,'
+      '  Cliente_endereco.NR_CEPENDECLIE,'
+      '  Cidade.NM_CIDADE,'
+      '  Estado.SG_ESTADO,'
+      '  Pedido_venda.GN_PLACVEICTRAN,'
+      '  Cliente.NR_CAIXPOSTENDECLIE'
+      'FROM'
+      '  PEDIDO_VENDA Pedido_venda,'
+      '  CLIENTE Cliente,'
+      '  CLIENTE_ENDERECO Cliente_endereco,'
+      '  LOGISTICA_REGIAO Logistica_regiao,'
+      '  LOGISTICA_SUBREGIAO Logistica_subregiao,'
+      '  LOGISTICA_REGIAO_SUBREGIAO Logistica_regiao_subregiao,'
+      '  BAIRRO Bairro,'
+      '  CIDADE Cidade,'
+      '  ESTADO Estado,'
+      '  VENDEDOR Vendedor'
+      'WHERE'
+      '  (Pedido_venda.ID_CLIENTE = Cliente.ID_CLIENTE) AND'
+      '  (Pedido_venda.ID_VENDEDOR = Vendedor.ID_VENDEDOR) AND'
+      
+        '  (Pedido_venda.ID_ENDECLIE_ENTREGA = Cliente_endereco.ID_ENDECL' +
+        'IE) AND'
+      '  (Cliente_endereco.ID_BAIRRO = Bairro.ID_BAIRRO) AND'
+      '  (Bairro.ID_CIDADE = Cidade.ID_CIDADE) AND'
+      '  (Cidade.ID_ESTADO = Estado.ID_ESTADO) AND'
+      '  (Cliente.ID_REGILOGI = Logistica_regiao.ID_REGILOGI) AND'
+      '  (Cliente.ID_SUBRLOGI = Logistica_subregiao.ID_SUBRLOGI) AND'
+      
+        '  (Logistica_regiao.ID_REGILOGI = Logistica_regiao_subregiao.ID_' +
+        'REGILOGI) AND'
+      
+        '  (Logistica_subregiao.ID_SUBRLOGI = Logistica_regiao_subregiao.' +
+        'ID_SUBRLOGI)')
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 424
+    Top = 8
+    object qrySelePediEMPRESA: TStringField
+      FieldName = 'EMPRESA'
+      Required = True
+      Size = 2
+    end
+    object qrySelePediFILIAL: TIntegerField
+      FieldName = 'FILIAL'
+      Required = True
+    end
+    object qrySelePediID_PEDIVEND: TFloatField
+      FieldName = 'ID_PEDIVEND'
+      Required = True
+    end
+    object qrySelePediDT_ENTRPEDIVEND: TDateTimeField
+      FieldName = 'DT_ENTRPEDIVEND'
+      Required = True
+    end
+    object qrySelePediID_CARGEXPE: TFloatField
+      FieldName = 'ID_CARGEXPE'
+    end
+    object qrySelePediQN_PESOPEDIVEND: TFloatField
+      FieldName = 'QN_PESOPEDIVEND'
+    end
+    object qrySelePediQN_PESOBRUTPEDIVEND: TFloatField
+      FieldName = 'QN_PESOBRUTPEDIVEND'
+    end
+    object qrySelePediQN_EMBAPEDIVEND: TIntegerField
+      FieldName = 'QN_EMBAPEDIVEND'
+    end
+    object qrySelePediQN_TARAPEDIVEND: TFloatField
+      FieldName = 'QN_TARAPEDIVEND'
+    end
+    object qrySelePediVL_PEDIVEND: TFloatField
+      FieldName = 'VL_PEDIVEND'
+    end
+    object qrySelePediQN_FATOFRETABAT_PEDIVEND: TFloatField
+      FieldName = 'QN_FATOFRETABAT_PEDIVEND'
+    end
+    object qrySelePediID_CLIENTE: TFloatField
+      FieldName = 'ID_CLIENTE'
+      Required = True
+    end
+    object qrySelePediID_VENDEDOR: TFloatField
+      FieldName = 'ID_VENDEDOR'
+      Required = True
+    end
+    object qrySelePediNM_VENDEDOR: TStringField
+      FieldName = 'NM_VENDEDOR'
+      Required = True
+      Size = 40
+    end
+    object qrySelePediNM_FANTCLIE: TStringField
+      FieldName = 'NM_FANTCLIE'
+      Size = 60
+    end
+    object qrySelePediNM_REDUCLIE: TStringField
+      FieldName = 'NM_REDUCLIE'
+      Required = True
+      Size = 15
+    end
+    object qrySelePediNM_CLIENTE: TStringField
+      FieldName = 'NM_CLIENTE'
+      Size = 60
+    end
+    object qrySelePediQN_DIFIENTRCLIE: TIntegerField
+      FieldName = 'QN_DIFIENTRCLIE'
+    end
+    object qrySelePediID_REGILOGI: TFloatField
+      FieldName = 'ID_REGILOGI'
+      Required = True
+    end
+    object qrySelePediID_SUBRLOGI: TFloatField
+      FieldName = 'ID_SUBRLOGI'
+      Required = True
+    end
+    object qrySelePediNM_REGILOGI: TStringField
+      FieldName = 'NM_REGILOGI'
+      Required = True
+      Size = 40
+    end
+    object qrySelePediNM_SUBRLOGI: TStringField
+      FieldName = 'NM_SUBRLOGI'
+      Required = True
+      Size = 40
+    end
+    object qrySelePediGN_RISCREGILOGI: TStringField
+      FieldName = 'GN_RISCREGILOGI'
+      Size = 5
+    end
+    object qrySelePediFL_RELAREGISUBRLOGI: TStringField
+      FieldName = 'FL_RELAREGISUBRLOGI'
+      Required = True
+      Size = 1
+    end
+    object qrySelePediNR_ORDEPEDIVEND: TFloatField
+      FieldName = 'NR_ORDEPEDIVEND'
+    end
+    object qrySelePediGN_OBSEPEDIVEND: TStringField
+      FieldName = 'GN_OBSEPEDIVEND'
+      Size = 2000
+    end
+    object qrySelePediFL_STATPEDIVEND: TStringField
+      FieldName = 'FL_STATPEDIVEND'
+      Required = True
+      Size = 2
+    end
+    object qrySelePediNM_BAIRRO: TStringField
+      FieldName = 'NM_BAIRRO'
+      Required = True
+      Size = 30
+    end
+    object qrySelePediNR_CEPENDECLIE: TStringField
+      FieldName = 'NR_CEPENDECLIE'
+      Required = True
+      Size = 8
+    end
+    object qrySelePediNM_CIDADE: TStringField
+      FieldName = 'NM_CIDADE'
+      Required = True
+      Size = 40
+    end
+    object qrySelePediSG_ESTADO: TStringField
+      FieldName = 'SG_ESTADO'
+      Required = True
+      Size = 10
+    end
+    object qrySelePediGN_PLACVEICTRAN: TStringField
+      FieldName = 'GN_PLACVEICTRAN'
+      Size = 7
+    end
+    object qrySelePediNR_CAIXPOSTENDECLIE: TStringField
+      FieldName = 'NR_CAIXPOSTENDECLIE'
+      Size = 10
+    end
+  end
+  object qryPediCarg: TSmartQuery
+    SQLInsert.Strings = (
+      'INSERT INTO PEDIDO_VENDA'
+      
+        '  ( EMPRESA, FILIAL, ID_PEDIVEND, DT_ENTRPEDIVEND, ID_CARGEXPE, ' +
+        'QN_PESOPEDIVEND, QN_EMBAPEDIVEND, QN_FATOFRETABAT_PEDIVEND, ID_C' +
+        'LIENTE, ID_VENDEDOR, NR_ORDEPEDIVEND, GN_OBSEPEDIVEND, FL_STATPE' +
+        'DIVEND, GN_PLACVEICTRAN)'
+      'VALUES'
+      
+        '  ( :EMPRESA, :FILIAL, :ID_PEDIVEND, :DT_ENTRPEDIVEND, :ID_CARGE' +
+        'XPE, :QN_PESOPEDIVEND, :QN_EMBAPEDIVEND, :QN_FATOFRETABAT_PEDIVE' +
+        'ND, :ID_CLIENTE, :ID_VENDEDOR, :NR_ORDEPEDIVEND, :GN_OBSEPEDIVEN' +
+        'D, :FL_STATPEDIVEND, :GN_PLACVEICTRAN)')
+    SQLDelete.Strings = (
+      'DELETE FROM PEDIDO_VENDA'
+      'WHERE'
+      '  ID_PEDIVEND = :ID_PEDIVEND')
+    SQLUpdate.Strings = (
+      'UPDATE PEDIDO_VENDA'
+      'SET'
+      '  EMPRESA = :EMPRESA,'
+      '  FILIAL = :FILIAL,'
+      '  ID_PEDIVEND = :ID_PEDIVEND,'
+      '  DT_ENTRPEDIVEND = :DT_ENTRPEDIVEND,'
+      '  ID_CARGEXPE = :ID_CARGEXPE,'
+      '  QN_PESOPEDIVEND = :QN_PESOPEDIVEND,'
+      '  QN_EMBAPEDIVEND = :QN_EMBAPEDIVEND,'
+      '  QN_FATOFRETABAT_PEDIVEND = :QN_FATOFRETABAT_PEDIVEND,'
+      '  ID_CLIENTE = :ID_CLIENTE, '
+      '  ID_VENDEDOR = :ID_VENDEDOR,'
+      '  NR_ORDEPEDIVEND = :NR_ORDEPEDIVEND, '
+      '  GN_OBSEPEDIVEND = :GN_OBSEPEDIVEND,'
+      '  FL_STATPEDIVEND = :FL_STATPEDIVEND'
+      'WHERE'
+      '  ID_PEDIVEND = :OLD_ID_PEDIVEND')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  Pedido_venda.ID_PEDIVEND = :ID_PEDIVEND')
+    SQLLock.Strings = (
+      'SELECT * FROM PEDIDO_VENDA'
+      'WHERE'
+      '  ID_PEDIVEND = :ID_PEDIVEND'
+      'FOR UPDATE NOWAIT')
+    Session = FrmPrincipal.DB
+    SQL.Strings = (
+      'SELECT'
+      '  PV.EMPRESA,'
+      '  PV.FILIAL,'
+      '  PV.ID_PEDIVEND,'
+      '  PV.DT_ENTRPEDIVEND,'
+      '  PV.ID_CARGEXPE,'
+      '  PV.QN_PESOPEDIVEND,'
+      
+        '  (PV.QN_PESOPEDIVEND + PV.QN_TARAPEDIVEND) AS QN_PESOBRUTPEDIVE' +
+        'ND,'
+      '  PV.QN_EMBAPEDIVEND,'
+      '  PV.QN_FATOFRETABAT_PEDIVEND,'
+      '  PV.ID_CLIENTE,'
+      '  PV.ID_VENDEDOR,'
+      '  PV.DT_FATUPEDIVEND,'
+      '  Vendedor.NM_VENDEDOR,'
+      '  Cliente.NM_FANTCLIE,'
+      '  Cliente.NM_REDUCLIE,'
+      '  Cliente.NM_CLIENTE,'
+      '  Cliente.QN_DIFIENTRCLIE,'
+      '  Cliente.ID_REGILOGI,'
+      '  Cliente.ID_SUBRLOGI,'
+      '  Logistica_subregiao.NM_SUBRLOGI,'
+      
+        '  DECODE(Logistica_regiao.GN_RISCREGILOGI, 3, '#39'Alto'#39', DECODE(Log' +
+        'istica_regiao.GN_RISCREGILOGI, 2, '#39'M'#233'dio'#39', '#39'Baixo'#39')) AS GN_RISCR' +
+        'EGILOGI,'
+      '  Logistica_regiao_subregiao.FL_RELAREGISUBRLOGI,'
+      '  PV.NR_ORDEPEDIVEND,'
+      '  PV.GN_OBSEPEDIVEND,'
+      '  PV.FL_STATPEDIVEND,'
+      '  Bairro.NM_BAIRRO,'
+      '  Cliente_endereco.NR_CEPENDECLIE,'
+      '  Cidade.NM_CIDADE,'
+      '  Estado.SG_ESTADO,'
+      '  PV.GN_PLACVEICTRAN,'
+      '  Cliente.NR_CAIXPOSTENDECLIE'
+      'FROM'
+      '  PEDIDO_VENDA PV,'
+      '  CLIENTE Cliente,'
+      '  CLIENTE_ENDERECO Cliente_endereco,'
+      '  LOGISTICA_REGIAO Logistica_regiao,'
+      '  LOGISTICA_SUBREGIAO Logistica_subregiao,'
+      '  LOGISTICA_REGIAO_SUBREGIAO Logistica_regiao_subregiao,'
+      '  BAIRRO Bairro,'
+      '  CIDADE Cidade,'
+      '  ESTADO Estado,'
+      '  VENDEDOR Vendedor'
+      'WHERE'
+      '  (PV.ID_CLIENTE = Cliente.ID_CLIENTE) AND'
+      '  (PV.ID_VENDEDOR = Vendedor.ID_VENDEDOR) AND'
+      '  (PV.ID_ENDECLIE_ENTREGA = Cliente_endereco.ID_ENDECLIE) AND'
+      '  (Cliente_endereco.ID_BAIRRO = Bairro.ID_BAIRRO) AND'
+      '  (Bairro.ID_CIDADE = Cidade.ID_CIDADE) AND'
+      '  (Cidade.ID_ESTADO = Estado.ID_ESTADO) AND'
+      '  (Cliente.ID_REGILOGI = Logistica_regiao.ID_REGILOGI) AND'
+      '  (Cliente.ID_SUBRLOGI = Logistica_subregiao.ID_SUBRLOGI) AND'
+      
+        '  (Logistica_regiao.ID_REGILOGI = Logistica_regiao_subregiao.ID_' +
+        'REGILOGI) AND'
+      
+        '  (Logistica_subregiao.ID_SUBRLOGI = Logistica_regiao_subregiao.' +
+        'ID_SUBRLOGI)')
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 456
+    Top = 8
+    object qryPediCargEMPRESA: TStringField
+      FieldName = 'EMPRESA'
+      Required = True
+      Size = 2
+    end
+    object qryPediCargFILIAL: TIntegerField
+      FieldName = 'FILIAL'
+      Required = True
+    end
+    object qryPediCargID_PEDIVEND: TFloatField
+      FieldName = 'ID_PEDIVEND'
+      Required = True
+    end
+    object qryPediCargDT_ENTRPEDIVEND: TDateTimeField
+      FieldName = 'DT_ENTRPEDIVEND'
+      Required = True
+    end
+    object qryPediCargID_CARGEXPE: TFloatField
+      FieldName = 'ID_CARGEXPE'
+    end
+    object qryPediCargQN_PESOPEDIVEND: TFloatField
+      FieldName = 'QN_PESOPEDIVEND'
+    end
+    object qryPediCargQN_PESOBRUTPEDIVEND: TFloatField
+      FieldName = 'QN_PESOBRUTPEDIVEND'
+    end
+    object qryPediCargQN_EMBAPEDIVEND: TIntegerField
+      FieldName = 'QN_EMBAPEDIVEND'
+    end
+    object qryPediCargQN_FATOFRETABAT_PEDIVEND: TFloatField
+      FieldName = 'QN_FATOFRETABAT_PEDIVEND'
+    end
+    object qryPediCargID_CLIENTE: TFloatField
+      FieldName = 'ID_CLIENTE'
+      Required = True
+    end
+    object qryPediCargID_VENDEDOR: TFloatField
+      FieldName = 'ID_VENDEDOR'
+      Required = True
+    end
+    object qryPediCargDT_FATUPEDIVEND: TDateTimeField
+      FieldName = 'DT_FATUPEDIVEND'
+    end
+    object qryPediCargNM_VENDEDOR: TStringField
+      FieldName = 'NM_VENDEDOR'
+      Size = 40
+    end
+    object qryPediCargNM_FANTCLIE: TStringField
+      FieldName = 'NM_FANTCLIE'
+      Size = 40
+    end
+    object qryPediCargNM_REDUCLIE: TStringField
+      FieldName = 'NM_REDUCLIE'
+      Size = 15
+    end
+    object qryPediCargQN_DIFIENTRCLIE: TIntegerField
+      FieldName = 'QN_DIFIENTRCLIE'
+    end
+    object qryPediCargID_REGILOGI: TFloatField
+      FieldName = 'ID_REGILOGI'
+      Required = True
+    end
+    object qryPediCargID_SUBRLOGI: TFloatField
+      FieldName = 'ID_SUBRLOGI'
+      Required = True
+    end
+    object qryPediCargNM_SUBRLOGI: TStringField
+      FieldName = 'NM_SUBRLOGI'
+      Size = 40
+    end
+    object qryPediCargNR_ORDEPEDIVEND: TFloatField
+      FieldName = 'NR_ORDEPEDIVEND'
+    end
+    object qryPediCargFL_STATPEDIVEND: TStringField
+      FieldName = 'FL_STATPEDIVEND'
+      Size = 2
+    end
+    object qryPediCargGN_OBSEPEDIVEND: TStringField
+      FieldName = 'GN_OBSEPEDIVEND'
+      Size = 2000
+    end
+    object qryPediCargNM_CLIENTE: TStringField
+      FieldName = 'NM_CLIENTE'
+      Required = True
+      Size = 40
+    end
+    object qryPediCargNM_BAIRRO: TStringField
+      FieldName = 'NM_BAIRRO'
+      Required = True
+      Size = 30
+    end
+    object qryPediCargNR_CEPENDECLIE: TStringField
+      FieldName = 'NR_CEPENDECLIE'
+      Required = True
+      Size = 8
+    end
+    object qryPediCargNM_CIDADE: TStringField
+      FieldName = 'NM_CIDADE'
+      Required = True
+      Size = 40
+    end
+    object qryPediCargSG_ESTADO: TStringField
+      FieldName = 'SG_ESTADO'
+      Required = True
+      Size = 10
+    end
+    object qryPediCargGN_PLACVEICTRAN: TStringField
+      FieldName = 'GN_PLACVEICTRAN'
+      Size = 7
+    end
+    object qryPediCargNR_CAIXPOSTENDECLIE: TStringField
+      FieldName = 'NR_CAIXPOSTENDECLIE'
+      Size = 10
+    end
   end
 end

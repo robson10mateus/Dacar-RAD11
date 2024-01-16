@@ -5,7 +5,7 @@ interface
 uses
   SysUtils, Types, Classes, Variants, Graphics, Controls, Forms,
   Dialogs, StdCtrls, Mask, DBCtrls, Grids, DBGrids, Buttons,
-  ExtCtrls, ComCtrls, DB, Ora, MemDS, DBAccess, Vcl.ToolWin;
+  ExtCtrls, ComCtrls, DB, Ora, MemDS, DBAccess, Vcl.ToolWin, OraSmart;
 
 type
   TFrmCadEstado = class(TForm)
@@ -60,20 +60,7 @@ type
     Label7: TLabel;
     Label8: TLabel;
     DBAliqN: TDBEdit;
-    QryCadEstado: TOraQuery;
     DtSrcCadEstado: TOraDataSource;
-    QryCadEstadoEMPRESA: TStringField;
-    QryCadEstadoFILIAL: TIntegerField;
-    QryCadEstadoID_ESTADO: TFloatField;
-    QryCadEstadoNM_ESTADO: TStringField;
-    QryCadEstadoSG_ESTADO: TStringField;
-    QryCadEstadoPC_ICMSCONTESTA: TFloatField;
-    QryCadEstadoPC_ICMSNAOCONTESTA: TFloatField;
-    QryCadEstadoID_PAIS: TFloatField;
-    QryCadEstadoID_REGIGEOG: TFloatField;
-    QryCadEstadoFX_ESTADO: TStringField;
-    QryCadEstadoNM_REGIGEOG: TStringField;
-    QryCadEstadoNM_PAIS: TStringField;
     DBReg: TDBLookupComboBox;
     QryRegiaoGeog: TOraQuery;
     DtSrcRegiaoGeog: TOraDataSource;
@@ -86,7 +73,20 @@ type
     QryPaisNM_PAIS: TStringField;
     DBEdit1: TDBEdit;
     Label5: TLabel;
+    QryCadEstado: TSmartQuery;
+    QryCadEstadoEMPRESA: TStringField;
+    QryCadEstadoFILIAL: TIntegerField;
+    QryCadEstadoID_ESTADO: TFloatField;
+    QryCadEstadoNM_ESTADO: TStringField;
     QryCadEstadoID_IBGE: TIntegerField;
+    QryCadEstadoSG_ESTADO: TStringField;
+    QryCadEstadoPC_ICMSCONTESTA: TFloatField;
+    QryCadEstadoPC_ICMSNAOCONTESTA: TFloatField;
+    QryCadEstadoID_PAIS: TFloatField;
+    QryCadEstadoID_REGIGEOG: TFloatField;
+    QryCadEstadoFX_ESTADO: TStringField;
+    QryCadEstadoNM_REGIGEOG: TStringField;
+    QryCadEstadoNM_PAIS: TStringField;
     Function  Atual_ToolBar(BtOrdem:Integer):string;
     procedure LDcomponentes(LD:boolean);
     procedure BtCenCusClick(Sender: TObject);

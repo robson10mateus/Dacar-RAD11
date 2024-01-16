@@ -490,6 +490,7 @@ object frmPedidosPosHorario: TfrmPedidosPosHorario
     0000000000000000000000000000}
   Position = poDefault
   Visible = True
+  WindowState = wsMaximized
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
@@ -497,7 +498,7 @@ object frmPedidosPosHorario: TfrmPedidosPosHorario
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 1158
+    Width = 1162
     Height = 60
     Align = alTop
     Color = clWindow
@@ -509,6 +510,7 @@ object frmPedidosPosHorario: TfrmPedidosPosHorario
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 1158
     object SB_Relatorio: TSpeedButton
       Left = 295
       Top = 15
@@ -923,10 +925,10 @@ object frmPedidosPosHorario: TfrmPedidosPosHorario
       Left = 9
       Top = 30
       Width = 91
-      Height = 18
+      Height = 23
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
-      Font.Height = 11
+      Font.Height = 15
       Font.Name = 'Arial'
       Font.Pitch = fpVariable
       Font.Style = []
@@ -938,7 +940,7 @@ object frmPedidosPosHorario: TfrmPedidosPosHorario
       Left = 99
       Top = 30
       Width = 21
-      Height = 20
+      Height = 23
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = 16
@@ -959,12 +961,12 @@ object frmPedidosPosHorario: TfrmPedidosPosHorario
     end
     object edtDataFinal: TMaskEdit
       Left = 135
-      Top = 29
+      Top = 30
       Width = 91
-      Height = 18
+      Height = 23
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
-      Font.Height = 11
+      Font.Height = 15
       Font.Name = 'Arial'
       Font.Pitch = fpVariable
       Font.Style = []
@@ -976,7 +978,7 @@ object frmPedidosPosHorario: TfrmPedidosPosHorario
       Left = 225
       Top = 30
       Width = 21
-      Height = 20
+      Height = 23
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = 16
@@ -999,8 +1001,8 @@ object frmPedidosPosHorario: TfrmPedidosPosHorario
   object GroupBox1: TGroupBox
     Left = 0
     Top = 65
-    Width = 1158
-    Height = 511
+    Width = 1162
+    Height = 512
     Align = alClient
     Caption = ' Rela'#231#227'o dos Pedidos Digitados ap'#243's Hor'#225'rio Permitido '
     Font.Charset = DEFAULT_CHARSET
@@ -1011,11 +1013,13 @@ object frmPedidosPosHorario: TfrmPedidosPosHorario
     Font.Style = []
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 1158
+    ExplicitHeight = 511
     object DBGrid1: TDBGrid
       Left = 2
-      Top = 20
+      Top = 22
       Width = 1158
-      Height = 490
+      Height = 488
       Align = alClient
       DataSource = dtsPedidos
       Font.Charset = DEFAULT_CHARSET
@@ -1072,7 +1076,7 @@ object frmPedidosPosHorario: TfrmPedidosPosHorario
     end
     object Panel3: TPanel
       Left = 2
-      Top = 15
+      Top = 17
       Width = 1158
       Height = 5
       Align = alTop
@@ -1086,7 +1090,7 @@ object frmPedidosPosHorario: TfrmPedidosPosHorario
   object Panel2: TPanel
     Left = 0
     Top = 60
-    Width = 1158
+    Width = 1162
     Height = 5
     Align = alTop
     BevelOuter = bvNone
@@ -1099,6 +1103,7 @@ object frmPedidosPosHorario: TfrmPedidosPosHorario
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
+    ExplicitWidth = 1158
   end
   object qryPedidos: TOraQuery
     SQL.Strings = (

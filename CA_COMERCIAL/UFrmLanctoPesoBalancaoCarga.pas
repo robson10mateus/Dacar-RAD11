@@ -5,7 +5,7 @@ interface
 uses
   SysUtils, Types, Classes, Variants, Graphics, Controls, Forms,
   Dialogs, StdCtrls, Buttons, ExtCtrls, Mask, DBCtrls, DB, Ora,
-  MemDS, DBAccess, Winapi.Windows;
+  MemDS, DBAccess, Winapi.Windows, OraSmart;
 
 type
   TfrmLanctoPesoBalancaoCarga = class(TForm)
@@ -20,7 +20,6 @@ type
     lblPlacaVeiculo: TLabel;
     btnPesqCarga: TBitBtn;
     lblStatusCarga: TLabel;
-    qryCarga: TOraQuery;
     dtsCarga: TOraDataSource;
     lblPesoExpedido: TLabel;
     lblQtdeCaixas: TLabel;
@@ -32,6 +31,8 @@ type
     edtStatusCarga: TEdit;
     edtPlacaVeiculo: TEdit;
     edtTransportador: TEdit;
+    edtPesoBalancao: TDBEdit;
+    qryCarga: TSmartQuery;
     qryCargaEMPRESA: TStringField;
     qryCargaFILIAL: TIntegerField;
     qryCargaID_CARGEXPE: TFloatField;
@@ -65,13 +66,12 @@ type
     qryCargaID_USUASIST_VISTO: TIntegerField;
     qryCargaDT_VISTO: TDateTimeField;
     qryCargaGN_MOTIVO_VISTO: TStringField;
-    edtPesoBalancao: TDBEdit;
     qryCargaQT_PESOBALANCAO: TFloatField;
     procedure btnPesqCargaClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnEditarClick(Sender: TObject);
-    procedure qryCargaAfterCancel(DataSet: TDataSet);
+    procedure CRTemp_qryCargaAfterCancel(DataSet: TDataSet);
     procedure btnConfimarClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
   private
@@ -132,7 +132,7 @@ begin
   end;
 end;
 
-procedure TfrmLanctoPesoBalancaoCarga.qryCargaAfterCancel(
+procedure TfrmLanctoPesoBalancaoCarga.CRTemp_qryCargaAfterCancel(
   DataSet: TDataSet);
 begin
   qryCarga.CancelUpdates;

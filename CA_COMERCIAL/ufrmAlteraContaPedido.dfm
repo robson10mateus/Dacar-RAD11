@@ -495,7 +495,7 @@ object frmAlteraContaPedido: TfrmAlteraContaPedido
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 755
+    Width = 759
     Height = 250
     Align = alTop
     Color = clWindow
@@ -507,10 +507,11 @@ object frmAlteraContaPedido: TfrmAlteraContaPedido
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 755
     object grpFiltro: TGroupBox
       Left = 1
       Top = 46
-      Width = 753
+      Width = 757
       Height = 140
       Align = alTop
       Caption = ' Filtros '
@@ -522,6 +523,7 @@ object frmAlteraContaPedido: TfrmAlteraContaPedido
       Font.Style = []
       ParentFont = False
       TabOrder = 0
+      ExplicitWidth = 753
       object Label3: TLabel
         Left = 250
         Top = 37
@@ -572,7 +574,7 @@ object frmAlteraContaPedido: TfrmAlteraContaPedido
         Caption = ' Data '
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 15
+        Font.Height = 13
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
@@ -648,9 +650,9 @@ object frmAlteraContaPedido: TfrmAlteraContaPedido
       end
       object btnVendedor: TBitBtn
         Left = 729
-        Top = 109
+        Top = 107
         Width = 23
-        Height = 21
+        Height = 23
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clMaroon
         Font.Height = 16
@@ -672,9 +674,9 @@ object frmAlteraContaPedido: TfrmAlteraContaPedido
       end
       object btnConta: TBitBtn
         Left = 729
-        Top = 69
+        Top = 67
         Width = 23
-        Height = 21
+        Height = 23
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clMaroon
         Font.Height = 16
@@ -696,9 +698,9 @@ object frmAlteraContaPedido: TfrmAlteraContaPedido
       end
       object btnData: TBitBtn
         Left = 209
-        Top = 86
+        Top = 85
         Width = 23
-        Height = 21
+        Height = 23
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clMaroon
         Font.Height = 16
@@ -754,7 +756,7 @@ object frmAlteraContaPedido: TfrmAlteraContaPedido
     object GroupBox1: TGroupBox
       Left = 1
       Top = 186
-      Width = 753
+      Width = 757
       Height = 60
       Align = alTop
       Caption = ' Alterar Para Conta '
@@ -766,6 +768,7 @@ object frmAlteraContaPedido: TfrmAlteraContaPedido
       Font.Style = []
       ParentFont = False
       TabOrder = 1
+      ExplicitWidth = 753
       object Label4: TLabel
         Left = 15
         Top = 28
@@ -800,7 +803,7 @@ object frmAlteraContaPedido: TfrmAlteraContaPedido
         Left = 464
         Top = 25
         Width = 23
-        Height = 21
+        Height = 23
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clMaroon
         Font.Height = 16
@@ -993,12 +996,13 @@ object frmAlteraContaPedido: TfrmAlteraContaPedido
     object Panel3: TPanel
       Left = 1
       Top = 1
-      Width = 753
+      Width = 757
       Height = 45
       Align = alTop
       Color = clWindow
       ParentBackground = False
       TabOrder = 2
+      ExplicitWidth = 753
       object Sb_Sair: TSpeedButton
         Left = 40
         Top = 5
@@ -1237,8 +1241,8 @@ object frmAlteraContaPedido: TfrmAlteraContaPedido
   object GroupBox2: TGroupBox
     Left = 0
     Top = 250
-    Width = 755
-    Height = 245
+    Width = 759
+    Height = 246
     Align = alClient
     Caption = ' Listagem '
     Font.Charset = DEFAULT_CHARSET
@@ -1249,9 +1253,11 @@ object frmAlteraContaPedido: TfrmAlteraContaPedido
     Font.Style = []
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 755
+    ExplicitHeight = 245
     object Panel2: TPanel
       Left = 2
-      Top = 15
+      Top = 17
       Width = 755
       Height = 5
       Align = alTop
@@ -1263,9 +1269,9 @@ object frmAlteraContaPedido: TfrmAlteraContaPedido
     end
     object DBGrid1: TDBGrid
       Left = 2
-      Top = 20
+      Top = 22
       Width = 755
-      Height = 224
+      Height = 222
       Align = alClient
       DataSource = dtsPedidosTroca
       Font.Charset = DEFAULT_CHARSET

@@ -22,7 +22,7 @@ object FrmCadRegiao: TFrmCadRegiao
   object Panel25: TPanel
     Left = 0
     Top = 0
-    Width = 1070
+    Width = 1074
     Height = 45
     Align = alTop
     Color = clWindow
@@ -34,6 +34,7 @@ object FrmCadRegiao: TFrmCadRegiao
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 1070
     object SB_ULTIMO: TSpeedButton
       Left = 106
       Top = 4
@@ -1340,8 +1341,8 @@ object FrmCadRegiao: TFrmCadRegiao
   object PageControl2: TPageControl
     Left = 0
     Top = 45
-    Width = 1070
-    Height = 387
+    Width = 1074
+    Height = 388
     ActivePage = TabCriterio
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -1352,6 +1353,8 @@ object FrmCadRegiao: TFrmCadRegiao
     Font.Style = []
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 1070
+    ExplicitHeight = 387
     object TabCriterio: TTabSheet
       Caption = ' Filtros '
       object Lbl_Cond: TLabel
@@ -1557,10 +1560,10 @@ object FrmCadRegiao: TFrmCadRegiao
         OnClick = BtAtivarClick
       end
       object BPESQ: TBitBtn
-        Left = 670
-        Top = 87
+        Left = 665
+        Top = 85
         Width = 20
-        Height = 19
+        Height = 23
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = 16
@@ -1583,14 +1586,15 @@ object FrmCadRegiao: TFrmCadRegiao
       end
       object Panel1: TPanel
         Left = 0
-        Top = 338
-        Width = 1062
+        Top = 339
+        Width = 1066
         Height = 19
         Align = alBottom
         Color = clWindow
         ParentBackground = False
         TabOrder = 6
-        ExplicitTop = 340
+        ExplicitTop = 338
+        ExplicitWidth = 1062
         object LRodape: TLabel
           Left = 80
           Top = 2
@@ -1872,127 +1876,11 @@ object FrmCadRegiao: TFrmCadRegiao
       end
     end
   end
-  object QryRegiao: TOraQuery
-    KeyFields = 'ID_REGIAO'
-    KeySequence = 'SMART.ID_REGIAO'
-    SQLInsert.Strings = (
-      'INSERT INTO DACAR_REGIAO_LOGISTICA'
-      '  (ID_REGIAO, NM_REGIAO )'
-      'VALUES'
-      '  (:ID_REGIAO, :NM_REGIAO )')
-    SQLDelete.Strings = (
-      'DELETE FROM DACAR_REGIAO_LOGISTICA'
-      'WHERE'
-      '  ID_REGIAO = :ID_REGIAO')
-    SQLUpdate.Strings = (
-      'UPDATE DACAR_REGIAO_LOGISTICA'
-      'SET'
-      '  ID_REGIAO = :ID_REGIAO,'
-      '  NM_REGIAO = :NM_REGIAO'
-      'WHERE'
-      '  ID_REGIAO = :ID_REGIAO')
-    SQLLock.Strings = (
-      'SELECT * FROM DACAR_REGIAO_LOGISTICA'
-      'WHERE'
-      '  ID_REGIAO = :ID_REGIAO'
-      'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  ID_REGIAO = :ID_REGIAO')
-    Session = FrmPrincipal.DB
-    SQL.Strings = (
-      'SELECT DISTINCT ID_REGIAO, NM_REGIAO'
-      'FROM DACAR_REGIAO_LOGISTICA '
-      '&Macro'
-      'ORDER BY ID_REGIAO ')
-    CachedUpdates = True
-    IndexFieldNames = 'ID_REGIAO'
-    Left = 388
-    Top = 7
-    MacroData = <
-      item
-        Name = 'Macro'
-      end>
-    object QryRegiaoID_REGIAO: TFloatField
-      FieldName = 'ID_REGIAO'
-    end
-    object QryRegiaoNM_REGIAO: TStringField
-      FieldName = 'NM_REGIAO'
-      Size = 100
-    end
-  end
   object dtsRegiao: TOraDataSource
     DataSet = QryRegiao
     OnStateChange = dtsRegiaoStateChange
     Left = 413
     Top = 7
-  end
-  object QryCidade: TOraQuery
-    KeyFields = 'ID_CID_REG'
-    KeySequence = 'SMART.ID_CID_REG'
-    SQLInsert.Strings = (
-      'INSERT INTO DACAR_CIDADE_REG'
-      '  (ID_CID_REG, ID_REGIAO, ID_CIDADE, NM_CIDADE)'
-      'VALUES'
-      '  (:ID_CID_REG, :ID_REGIAO, :ID_CIDADE, :NM_CIDADE)')
-    SQLDelete.Strings = (
-      'DELETE FROM DACAR_CIDADE_REG'
-      'WHERE'
-      '  ID_CID_REG = :ID_CID_REG')
-    SQLUpdate.Strings = (
-      'UPDATE DACAR_CIDADE_REG'
-      'SET'
-      '  ID_CID_REG = :ID_CID_REG,'
-      '  ID_REGIAO = :ID_REGIAO,'
-      '  ID_CIDADE = :ID_CIDADE,'
-      '  NM_CIDADE = :NM_CIDADE'
-      'WHERE'
-      '  ID_CID_REG = :ID_CID_REG')
-    SQLLock.Strings = (
-      'SELECT * FROM DACAR_CIDADE_REG'
-      'WHERE'
-      '  ID_CID_REG = :ID_CID_REG,'
-      'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  ID_CID_REG = :ID_CID_REG')
-    Session = FrmPrincipal.DB
-    SQL.Strings = (
-      'SELECT ID_CID_REG, ID_REGIAO, ID_CIDADE, NM_CIDADE'
-      'FROM DACAR_CIDADE_REG '
-      '&Macro'
-      'ORDER BY ID_CIDADE')
-    MasterSource = dtsRegiao
-    MasterFields = 'ID_REGIAO'
-    DetailFields = 'ID_REGIAO'
-    FetchAll = True
-    CachedUpdates = True
-    IndexFieldNames = 'ID_CID_REG'
-    Left = 483
-    Top = 8
-    ParamData = <
-      item
-        DataType = ftUnknown
-        Name = 'ID_REGIAO'
-        Value = nil
-      end>
-    MacroData = <
-      item
-        Name = 'Macro'
-      end>
-    object QryCidadeID_REGIAO: TFloatField
-      FieldName = 'ID_REGIAO'
-    end
-    object QryCidadeID_CIDADE: TFloatField
-      FieldName = 'ID_CIDADE'
-    end
-    object QryCidadeNM_CIDADE: TStringField
-      FieldName = 'NM_CIDADE'
-      Size = 100
-    end
-    object QryCidadeID_CID_REG: TIntegerField
-      FieldName = 'ID_CID_REG'
-    end
   end
   object dtsCidade: TOraDataSource
     DataSet = QryCidade
@@ -2025,5 +1913,127 @@ object FrmCadRegiao: TFrmCadRegiao
     Session = FrmPrincipal.DB
     Left = 612
     Top = 6
+  end
+  object QryRegiao: TSmartQuery
+    KeyFields = 'ID_REGIAO'
+    KeySequence = 'ID_REGIAO'
+    SQLInsert.Strings = (
+      'INSERT INTO DACAR_REGIAO_LOGISTICA'
+      '  (ID_REGIAO, NM_REGIAO )'
+      'VALUES'
+      '  (:ID_REGIAO, :NM_REGIAO )')
+    SQLDelete.Strings = (
+      'DELETE FROM DACAR_REGIAO_LOGISTICA'
+      'WHERE'
+      '  ID_REGIAO = :ID_REGIAO')
+    SQLUpdate.Strings = (
+      'UPDATE DACAR_REGIAO_LOGISTICA'
+      'SET'
+      '  ID_REGIAO = :ID_REGIAO,'
+      '  NM_REGIAO = :NM_REGIAO'
+      'WHERE'
+      '  ID_REGIAO = :ID_REGIAO')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  ID_REGIAO = :ID_REGIAO')
+    SQLLock.Strings = (
+      'SELECT * FROM DACAR_REGIAO_LOGISTICA'
+      'WHERE'
+      '  ID_REGIAO = :ID_REGIAO'
+      'FOR UPDATE NOWAIT')
+    Session = FrmPrincipal.DB
+    SQL.Strings = (
+      'SELECT DISTINCT ID_REGIAO, NM_REGIAO'
+      'FROM DACAR_REGIAO_LOGISTICA '
+      '&Macro'
+      'ORDER BY ID_REGIAO ')
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 392
+    Top = 8
+    MacroData = <
+      item
+        Name = 'Macro'
+      end>
+    object QryRegiaoID_REGIAO: TFloatField
+      FieldName = 'ID_REGIAO'
+      Required = True
+    end
+    object QryRegiaoNM_REGIAO: TStringField
+      FieldName = 'NM_REGIAO'
+      Size = 100
+    end
+  end
+  object QryCidade: TSmartQuery
+    KeyFields = 'ID_CID_REG'
+    KeySequence = 'ID_CID_REG'
+    SQLInsert.Strings = (
+      'INSERT INTO DACAR_CIDADE_REG'
+      '  (ID_CID_REG, ID_REGIAO, ID_CIDADE, NM_CIDADE)'
+      'VALUES'
+      '  (:ID_CID_REG, :ID_REGIAO, :ID_CIDADE, :NM_CIDADE)')
+    SQLDelete.Strings = (
+      'DELETE FROM DACAR_CIDADE_REG'
+      'WHERE'
+      '  ID_CID_REG = :ID_CID_REG')
+    SQLUpdate.Strings = (
+      'UPDATE DACAR_CIDADE_REG'
+      'SET'
+      '  ID_CID_REG = :ID_CID_REG,'
+      '  ID_REGIAO = :ID_REGIAO,'
+      '  ID_CIDADE = :ID_CIDADE,'
+      '  NM_CIDADE = :NM_CIDADE'
+      'WHERE'
+      '  ID_CID_REG = :ID_CID_REG')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  ID_CID_REG = :ID_CID_REG')
+    SQLLock.Strings = (
+      'SELECT * FROM DACAR_CIDADE_REG'
+      'WHERE'
+      '  ID_CID_REG = :ID_CID_REG,'
+      'FOR UPDATE NOWAIT')
+    Session = FrmPrincipal.DB
+    SQL.Strings = (
+      'SELECT ID_CID_REG, ID_REGIAO, ID_CIDADE, NM_CIDADE'
+      'FROM DACAR_CIDADE_REG '
+      '&Macro'
+      'ORDER BY ID_CIDADE')
+    MasterFields = 'ID_REGIAO'
+    DetailFields = 'ID_REGIAO'
+    MasterSource = dtsRegiao
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 480
+    Top = 8
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'ID_REGIAO'
+        Value = nil
+      end>
+    MacroData = <
+      item
+        Name = 'Macro'
+      end>
+    object QryCidadeID_CID_REG: TIntegerField
+      FieldName = 'ID_CID_REG'
+    end
+    object QryCidadeID_REGIAO: TFloatField
+      FieldName = 'ID_REGIAO'
+      Required = True
+    end
+    object QryCidadeID_CIDADE: TFloatField
+      FieldName = 'ID_CIDADE'
+      Required = True
+    end
+    object QryCidadeNM_CIDADE: TStringField
+      FieldName = 'NM_CIDADE'
+      Size = 100
+    end
   end
 end

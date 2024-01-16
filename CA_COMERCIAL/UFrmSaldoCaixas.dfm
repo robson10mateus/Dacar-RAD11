@@ -496,8 +496,8 @@ object FrmSaldoCaixas: TFrmSaldoCaixas
   object PageControl1: TPageControl
     Left = 0
     Top = 45
-    Width = 1210
-    Height = 617
+    Width = 1214
+    Height = 618
     ActivePage = Tab_Criterio
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -508,6 +508,8 @@ object FrmSaldoCaixas: TFrmSaldoCaixas
     Font.Style = []
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 1210
+    ExplicitHeight = 617
     object Tab_Criterio: TTabSheet
       Caption = 'Crit'#233'rio'
       object Label6: TLabel
@@ -585,7 +587,7 @@ object FrmSaldoCaixas: TFrmSaldoCaixas
         Columns = 2
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 15
+        Font.Height = 13
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = [fsBold]
@@ -766,9 +768,9 @@ object FrmSaldoCaixas: TFrmSaldoCaixas
       end
       object BPESQ: TBitBtn
         Left = 640
-        Top = 66
+        Top = 65
         Width = 23
-        Height = 20
+        Height = 23
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = 16
@@ -796,8 +798,8 @@ object FrmSaldoCaixas: TFrmSaldoCaixas
       object DBGrid1: TDBGrid
         Left = 0
         Top = 0
-        Width = 1202
-        Height = 590
+        Width = 1206
+        Height = 588
         Hint = 'Atualiza Dados'
         Align = alClient
         DataSource = Ds
@@ -862,7 +864,7 @@ object FrmSaldoCaixas: TFrmSaldoCaixas
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 1210
+    Width = 1214
     Height = 45
     Align = alTop
     Color = clWindow
@@ -875,6 +877,7 @@ object FrmSaldoCaixas: TFrmSaldoCaixas
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 1210
     object SB_ATUAL: TSpeedButton
       Left = 5
       Top = 5
@@ -1254,7 +1257,12 @@ object FrmSaldoCaixas: TFrmSaldoCaixas
       OnClick = Sb_SairClick
     end
   end
-  object Qr: TOraQuery
+  object Ds: TOraDataSource
+    DataSet = Qr
+    Left = 156
+    Top = 10
+  end
+  object Qr: TSmartQuery
     SQLDelete.Strings = (
       'DELETE FROM INTEGRADO_ALOJAMENTO'
       'WHERE'
@@ -1266,14 +1274,14 @@ object FrmSaldoCaixas: TFrmSaldoCaixas
       '       '
       'WHERE'
       '  ID_LOTE = :OLD_ID_LOTE')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  ID_LOTE = :ID_LOTE')
     SQLLock.Strings = (
       'SELECT * FROM INTEGRADO_ALOJAMENTO'
       'WHERE'
       '  ID_LOTE = :ID_LOTE'
       'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  ID_LOTE = :ID_LOTE')
     Session = FrmPrincipal.DB
     SQL.Strings = (
       'SELECT distinct C.ID_CLIENTE,'
@@ -1331,10 +1339,12 @@ object FrmSaldoCaixas: TFrmSaldoCaixas
       '&Macro'
       ''
       'ORDER BY VEN.ID_VENDEDOR, VEN.NM_VENDEDOR, C.NM_CLIENTE')
-    FetchAll = True
     CachedUpdates = True
-    Left = 124
-    Top = 9
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 128
+    Top = 8
     MacroData = <
       item
         Name = 'Macro'
@@ -1345,23 +1355,7 @@ object FrmSaldoCaixas: TFrmSaldoCaixas
     end
     object QrNM_CLIENTE: TStringField
       FieldName = 'NM_CLIENTE'
-      Required = True
-      Size = 40
-    end
-    object QrID_CIDADE: TFloatField
-      FieldName = 'ID_CIDADE'
-      Required = True
-    end
-    object QrNM_CIDADE: TStringField
-      FieldName = 'NM_CIDADE'
-      Required = True
-      Size = 40
-    end
-    object QrID_VALE: TFloatField
-      FieldName = 'ID_VALE'
-    end
-    object QrSALDO: TFloatField
-      FieldName = 'SALDO'
+      Size = 60
     end
     object QrFL_PESSCLIE: TStringField
       FieldName = 'FL_PESSCLIE'
@@ -1373,6 +1367,15 @@ object FrmSaldoCaixas: TFrmSaldoCaixas
       Required = True
       Size = 1
     end
+    object QrID_CIDADE: TFloatField
+      FieldName = 'ID_CIDADE'
+      Required = True
+    end
+    object QrNM_CIDADE: TStringField
+      FieldName = 'NM_CIDADE'
+      Required = True
+      Size = 40
+    end
     object QrID_VENDEDOR: TFloatField
       FieldName = 'ID_VENDEDOR'
       Required = True
@@ -1382,6 +1385,12 @@ object FrmSaldoCaixas: TFrmSaldoCaixas
       Required = True
       Size = 40
     end
+    object QrID_VALE: TFloatField
+      FieldName = 'ID_VALE'
+    end
+    object QrSALDO: TFloatField
+      FieldName = 'SALDO'
+    end
     object QrID_GRUPCLIE: TFloatField
       FieldName = 'ID_GRUPCLIE'
     end
@@ -1389,10 +1398,5 @@ object FrmSaldoCaixas: TFrmSaldoCaixas
       FieldName = 'NM_GRUPCLIE'
       Size = 40
     end
-  end
-  object Ds: TOraDataSource
-    DataSet = Qr
-    Left = 156
-    Top = 10
   end
 end

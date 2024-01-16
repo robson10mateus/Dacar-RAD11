@@ -39,7 +39,6 @@ type
     BtLimpar: TBitBtn;
     BtAtivar: TBitBtn;
     BPESQ: TBitBtn;
-    Qr: TOraQuery;
     SB_ATUAL: TSpeedButton;
     Panel2: TPanel;
     Label1: TLabel;
@@ -95,6 +94,9 @@ type
     DBEdit13: TDBEdit;
     DS: TOraDataSource;
     QryTemp: TOraQuery;
+    QryClie: TOraQuery;
+    OSQL: TOraSQL;
+    Qr: TSmartQuery;
     QrID_ITEMPEDIVEND: TFloatField;
     QrID_MATEEMBA: TFloatField;
     QrNM_PRODMATEEMBA: TStringField;
@@ -122,8 +124,6 @@ type
     QrNM_CIDADE: TStringField;
     QrDT_PEDIVEND: TDateTimeField;
     QrDT_ENTRPEDIVEND: TDateTimeField;
-    QryClie: TOraQuery;
-    OSQL: TOraSQL;
     QrFL_CREDUSADPEDIVEND: TStringField;
     procedure FormCreate(Sender: TObject);
     procedure Sb_SairClick(Sender: TObject);
@@ -1178,11 +1178,11 @@ begin
    CASE SELPE OF
      5:BEGIN
         FrmPesqCliente:=TFrmPesqCliente.Create(Self);
-        FrmPesqCliente.Show;
+        FrmPesqCliente.ShowModal;
        END;
      7:BEGIN
         FrmPesqVend:=TFrmPesqVend.Create(Self);
-        FrmPesqVend.Show;
+        FrmPesqVend.ShowModal;
        END;
     18:BEGIN
         Cria_FrmSelData(Vdtstr);

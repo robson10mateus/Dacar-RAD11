@@ -22,7 +22,7 @@ object FrmProgRacao: TFrmProgRacao
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 923
+    Width = 927
     Height = 41
     Anchors = []
     ButtonHeight = 37
@@ -36,10 +36,10 @@ object FrmProgRacao: TFrmProgRacao
     Font.Style = []
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 939
+    ExplicitWidth = 923
     object SB_Relatorio: TSpeedButton
-      Left = 48
-      Top = 4
+      Left = 0
+      Top = 0
       Width = 40
       Height = 37
       Hint = 'Imprimir'
@@ -61,8 +61,8 @@ object FrmProgRacao: TFrmProgRacao
       OnClick = SB_RelatorioClick
     end
     object Sb_Sair: TSpeedButton
-      Left = 409
-      Top = 4
+      Left = 40
+      Top = 0
       Width = 40
       Height = 37
       Hint = 'Sair'
@@ -252,8 +252,8 @@ object FrmProgRacao: TFrmProgRacao
       OnClick = Sb_SairClick
     end
     object SB_ATUAL: TSpeedButton
-      Left = 1
-      Top = 4
+      Left = 80
+      Top = 0
       Width = 39
       Height = 37
       Hint = 'Atualizar'
@@ -443,16 +443,16 @@ object FrmProgRacao: TFrmProgRacao
       OnClick = SB_ATUALClick
     end
     object ToolButton2: TToolButton
-      Left = 40
-      Top = 4
+      Left = 119
+      Top = 0
       Width = 8
       Caption = 'ToolButton2'
       ImageIndex = 0
       Style = tbsSeparator
     end
     object ToolButton3: TToolButton
-      Left = 88
-      Top = 4
+      Left = 127
+      Top = 0
       Width = 321
       Caption = 'ToolButton3'
       ImageIndex = 1
@@ -462,7 +462,7 @@ object FrmProgRacao: TFrmProgRacao
   object Panel1: TPanel
     Left = 0
     Top = 41
-    Width = 923
+    Width = 927
     Height = 54
     Align = alTop
     Color = clWindow
@@ -474,7 +474,7 @@ object FrmProgRacao: TFrmProgRacao
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 939
+    ExplicitWidth = 923
     object Label49: TLabel
       Left = 24
       Top = 9
@@ -602,8 +602,8 @@ object FrmProgRacao: TFrmProgRacao
   object DBGrid1: TDBGrid
     Left = 0
     Top = 95
-    Width = 923
-    Height = 403
+    Width = 927
+    Height = 404
     Align = alClient
     Color = clWhite
     DataSource = Ds
@@ -666,82 +666,100 @@ object FrmProgRacao: TFrmProgRacao
         Expanded = False
         FieldName = 'AVES'
         Title.Caption = 'Aves'
+        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'RACAO'
         Title.Caption = 'Ra'#231#227'o Env'
+        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'RP_SEM'
         Title.Caption = 'Prev Sem'
+        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'RP_DIA'
         Title.Caption = 'Prev Dia'
+        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'RP_DIA_SEMSEG'
         Title.Caption = 'Prev Sem Seg'
+        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'RP_ACUM_ANT'
         Title.Caption = 'Acum Sem Ant'
+        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'RP_ACUM'
         Title.Caption = 'Acum Sem'
+        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'RAC_SOBRA'
         Title.Caption = 'Sobra'
+        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'RAC_SOBRA2'
         Title.Caption = 'Sobra Sem At'
+        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'INIC_SEM'
         Title.Caption = 'Ini Sem'
+        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'INIC_SEM_SEG'
         Title.Caption = 'Ini Sem Seg'
+        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'DIAS_RAC'
         Title.Caption = 'Dias Rac'
+        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'DIAS_RAC2'
         Title.Caption = 'Dias Rac 2'
+        Width = 64
         Visible = True
       end>
   end
-  object Qr: TOraQuery
+  object Ds: TOraDataSource
+    DataSet = Qr
+    Left = 464
+    Top = 6
+  end
+  object Qr: TSmartQuery
     SQLDelete.Strings = (
       'DELETE FROM INTEGRADO_ALOJAMENTO'
       'WHERE'
@@ -753,14 +771,14 @@ object FrmProgRacao: TFrmProgRacao
       '       '
       'WHERE'
       '  ID_LOTE = :OLD_ID_LOTE')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  ID_LOTE = :ID_LOTE')
     SQLLock.Strings = (
       'SELECT * FROM INTEGRADO_ALOJAMENTO'
       'WHERE'
       '  ID_LOTE = :ID_LOTE'
       'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  ID_LOTE = :ID_LOTE')
     Session = FrmPrincipal.DB
     SQL.Strings = (
       'SELECT TRUNC(CASE WHEN NVL(TRUNC(RAC_SOBRA / RP_DIA),0) <= 7'
@@ -859,9 +877,10 @@ object FrmProgRacao: TFrmProgRacao
       ''
       ' '
       ' ')
-    FetchAll = True
     CachedUpdates = True
-    BeforeOpen = QrBeforeOpen
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
     Left = 432
     Top = 8
     ParamData = <
@@ -932,10 +951,5 @@ object FrmProgRacao: TFrmProgRacao
     object QrDIAS_RAC2: TFloatField
       FieldName = 'DIAS_RAC2'
     end
-  end
-  object Ds: TOraDataSource
-    DataSet = Qr
-    Left = 464
-    Top = 6
   end
 end

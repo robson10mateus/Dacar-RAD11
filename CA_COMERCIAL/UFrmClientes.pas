@@ -4,7 +4,7 @@ interface
 
 uses
   Controls, Buttons, DBCtrls, Mask, Grids, TYPES, DBGrids,
-  Classes, SysUtils, {$IFNDEF VER130} Variants {$ENDIF}, Graphics, Forms,
+  Classes, SysUtils, Variants, Graphics, Forms,
   Dialogs, toolWin, OraSmart, OraError, Menus, UrlMon, ShellAPI, Data.DB, MemDS,
   DBAccess, Ora, Vcl.StdCtrls, Vcl.ExtCtrls, ComCtrls, Winapi.Windows;
 
@@ -175,19 +175,7 @@ type
     DtSrcSubRegLog: TOraDataSource;
     TabVendedores: TTabSheet;
     DBGrid1: TDBGrid;
-    QryVendedor: TOraQuery;
     DtSrcVendedor: TOraDataSource;
-    QryVendedorID_CLIENTE: TFloatField;
-    QryVendedorID_VENDEDOR: TFloatField;
-    QryVendedorFL_PADRVENDCLIE: TStringField;
-    QryVendedorFL_COMIVENDCLIE: TStringField;
-    QryVendedorPC_COMIVENDCLIE: TFloatField;
-    QryVendedorFX_VENDCLIE: TStringField;
-    QryVendedorNM_VENDEDOR: TStringField;
-    QryVendedorNM_FANTVEND: TStringField;
-    QryVendedorNM_REDUVEND: TStringField;
-    QryVendedorFL_COMIVEND: TStringField;
-    QryVendedorPC_COMIVEND: TFloatField;
     TabLimite: TTabSheet;
     QryGrpCliente: TOraQuery;
     QryGrpClienteID_GRUPCLIE: TFloatField;
@@ -236,54 +224,11 @@ type
     DtSrcTransp: TOraDataSource;
     QryMotBloq: TOraQuery;
     DtSrcMotBloq: TOraDataSource;
-    QryClieBloq: TOraQuery;
     DtSrcClieBloq: TOraDataSource;
-    QryClieBloqEMPRESA: TStringField;
-    QryClieBloqFILIAL: TIntegerField;
-    QryClieBloqID_BLOQCLIE: TFloatField;
-    QryClieBloqID_CLIENTE: TFloatField;
-    QryClieBloqID_MOTIBLOQ: TFloatField;
-    QryClieBloqID_USUASIST: TFloatField;
-    QryClieBloqDT_BLOQCLIE: TDateTimeField;
-    QryClieBloqFL_TIPOBLOQCLIE: TStringField;
-    QryClieBloqFX_BLOQCLIE: TStringField;
     TabEnde: TTabSheet;
     DBGrid2: TDBGrid;
-    QryCliEnd: TOraQuery;
     DtSrcCliEnd: TOraDataSource;
-    QryCliEndEMPRESA: TStringField;
-    QryCliEndFILIAL: TIntegerField;
-    QryCliEndID_ENDECLIE: TFloatField;
-    QryCliEndID_CLIENTE: TFloatField;
-    QryCliEndID_TIPOLOGR: TFloatField;
-    QryCliEndNM_LOGRENDECLIE: TStringField;
-    QryCliEndNR_LOGRENDECLIE: TStringField;
-    QryCliEndGN_COMPENDECLIE: TStringField;
-    QryCliEndID_BAIRRO: TFloatField;
-    QryCliEndNR_CEPENDECLIE: TStringField;
-    QryCliEndNR_CAIXPOSTENDECLIE: TStringField;
-    QryCliEndNR_CEPCAIXPOSTENDECLIE: TStringField;
-    QryCliEndFL_ENTRENDECLIE: TStringField;
-    QryCliEndFL_COBRENDECLIE: TStringField;
-    QryCliEndFL_ENTRPADRENDECLIE: TStringField;
-    QryCliEndFL_COBRPADRENDECLIE: TStringField;
-    QryCliEndFL_LOCAPADRENDECLIE: TStringField;
-    QryCliEndID_REGILOGI: TFloatField;
-    QryCliEndID_SUBRLOGI: TFloatField;
-    QryCliEndID_FORNECEDOR_TRANSPORTADOR: TFloatField;
-    QryCliEndFX_ENDECLIE: TStringField;
-    QryCliEndID_REGISUBRLOGI: TFloatField;
-    QryCliEndNM_REGILOGI: TStringField;
-    QryCliEndNM_BAIRRO: TStringField;
-    QryCliEndNM_CIDADE: TStringField;
-    QryCliEndID_CIDADE: TFloatField;
-    QryCliEndNM_PAIS: TStringField;
-    QryCliEndNM_SUBRLOGI: TStringField;
-    QryCliEndSG_ESTADO: TStringField;
-    QryCliEndNM_REGIGEOG: TStringField;
     Label21: TLabel;
-    QryVendedorFILIAL: TIntegerField;
-    QryVendedorEMPRESA: TStringField;
     QryTranspNM_FORNECEDOR: TStringField;
     QryTranspID_FORNECEDOR: TFloatField;
     Label10: TLabel;
@@ -335,7 +280,6 @@ type
     QrySubRegLogQN_FATOFRETABATSUBRLOGI: TFloatField;
     QryCargoID_CARGO: TFloatField;
     QryCargoNM_CARGO: TStringField;
-    QryCliEndSG_TIPOLOGR: TStringField;
     OQry_Clie1IE_CLIENTE: TStringField;
     OQry_Clie1NM_CLIENTE: TStringField;
     OQry_Clie1GN_ORGAEXPERGCLIE: TStringField;
@@ -431,7 +375,6 @@ type
     Label63: TLabel;
     DBRG: TDBEdit;
     Label58: TLabel;
-    QryVendedorID_VENDCLIE: TFloatField;
     DBBairro: TDBEdit;
     DBCodBairro: TDBEdit;
     Label66: TLabel;
@@ -439,8 +382,6 @@ type
     DtSrcTabPreco: TOraDataSource;
     TabBloqueio: TTabSheet;
     DBGrid3: TDBGrid;
-    QryClieBloqNM_MOTIBLOQ: TStringField;
-    QryClieBloqNOME_USUARIO: TStringField;
     SpeedButton1: TSpeedButton;
     SpeedButton2: TSpeedButton;
     OQry_Clie1FL_EXIBDESCNF: TStringField;
@@ -749,9 +690,6 @@ type
     btnConsultaVendRel: TBitBtn;
     edtNomeVendedorRelacionado: TDBEdit;
     chkVendedorRelacionado: TDBCheckBox;
-    QryVendedorFL_RELACIONADO: TStringField;
-    QryVendedorID_VENDEDOR_REL: TFloatField;
-    QryVendedorNM_VENREL: TStringField;
     DBCheckBox2: TDBCheckBox;
     OQry_Clie1FL_PRIORIDADE: TStringField;
     DBLMotInativacao: TDBLookupComboBox;
@@ -766,8 +704,6 @@ type
     qryVendedorResgNM_REDUVEND: TStringField;
     qryVendedorResgNM_VENDEDOR: TStringField;
     OQry_Clie1NM_FORMPAGA: TStringField;
-    QryCliEndLATITUDE: TStringField;
-    QryCliEndLONGITUDE: TStringField;
     BtnTxt: TSpeedButton;
     dlgSaveArquivoTxt: TSaveDialog;
     DbLatitude: TDBEdit;
@@ -891,6 +827,70 @@ type
     OQry_ClieFL_PRIORIDADE: TStringField;
     OQry_ClieLONGITUDE: TStringField;
     OQry_ClieLATITUDE: TStringField;
+    QryCliEnd: TSmartQuery;
+    QryCliEndEMPRESA: TStringField;
+    QryCliEndFILIAL: TIntegerField;
+    QryCliEndID_ENDECLIE: TFloatField;
+    QryCliEndID_CLIENTE: TFloatField;
+    QryCliEndID_TIPOLOGR: TFloatField;
+    QryCliEndNM_LOGRENDECLIE: TStringField;
+    QryCliEndNR_LOGRENDECLIE: TStringField;
+    QryCliEndGN_COMPENDECLIE: TStringField;
+    QryCliEndID_BAIRRO: TFloatField;
+    QryCliEndNR_CEPENDECLIE: TStringField;
+    QryCliEndNR_CAIXPOSTENDECLIE: TStringField;
+    QryCliEndNR_CEPCAIXPOSTENDECLIE: TStringField;
+    QryCliEndFL_ENTRENDECLIE: TStringField;
+    QryCliEndFL_COBRENDECLIE: TStringField;
+    QryCliEndFL_ENTRPADRENDECLIE: TStringField;
+    QryCliEndFL_COBRPADRENDECLIE: TStringField;
+    QryCliEndFL_LOCAPADRENDECLIE: TStringField;
+    QryCliEndID_REGILOGI: TFloatField;
+    QryCliEndID_SUBRLOGI: TFloatField;
+    QryCliEndID_FORNECEDOR_TRANSPORTADOR: TFloatField;
+    QryCliEndFX_ENDECLIE: TStringField;
+    QryCliEndID_REGISUBRLOGI: TFloatField;
+    QryCliEndNM_REGILOGI: TStringField;
+    QryCliEndNM_BAIRRO: TStringField;
+    QryCliEndNM_CIDADE: TStringField;
+    QryCliEndID_CIDADE: TFloatField;
+    QryCliEndNM_PAIS: TStringField;
+    QryCliEndNM_SUBRLOGI: TStringField;
+    QryCliEndSG_ESTADO: TStringField;
+    QryCliEndNM_REGIGEOG: TStringField;
+    QryCliEndSG_TIPOLOGR: TStringField;
+    QryCliEndLATITUDE: TStringField;
+    QryCliEndLONGITUDE: TStringField;
+    QryClieBloq: TSmartQuery;
+    QryClieBloqEMPRESA: TStringField;
+    QryClieBloqFILIAL: TIntegerField;
+    QryClieBloqID_BLOQCLIE: TFloatField;
+    QryClieBloqID_CLIENTE: TFloatField;
+    QryClieBloqID_MOTIBLOQ: TFloatField;
+    QryClieBloqID_USUASIST: TFloatField;
+    QryClieBloqDT_BLOQCLIE: TDateTimeField;
+    QryClieBloqFL_TIPOBLOQCLIE: TStringField;
+    QryClieBloqFX_BLOQCLIE: TStringField;
+    QryClieBloqNM_MOTIBLOQ: TStringField;
+    QryClieBloqNOME_USUARIO: TStringField;
+    QryVendedor: TSmartQuery;
+    QryVendedorID_CLIENTE: TFloatField;
+    QryVendedorID_VENDEDOR: TFloatField;
+    QryVendedorFL_PADRVENDCLIE: TStringField;
+    QryVendedorFL_COMIVENDCLIE: TStringField;
+    QryVendedorPC_COMIVENDCLIE: TFloatField;
+    QryVendedorFX_VENDCLIE: TStringField;
+    QryVendedorNM_VENDEDOR: TStringField;
+    QryVendedorNM_FANTVEND: TStringField;
+    QryVendedorNM_REDUVEND: TStringField;
+    QryVendedorFL_COMIVEND: TStringField;
+    QryVendedorPC_COMIVEND: TFloatField;
+    QryVendedorFILIAL: TIntegerField;
+    QryVendedorEMPRESA: TStringField;
+    QryVendedorID_VENDCLIE: TFloatField;
+    QryVendedorFL_RELACIONADO: TStringField;
+    QryVendedorID_VENDEDOR_REL: TFloatField;
+    QryVendedorNM_VENREL: TStringField;
     procedure SB_PRIMEIROClick(Sender: TObject);
     procedure SB_ANTERIORClick(Sender: TObject);
     procedure SB_PROXIMOClick(Sender: TObject);
@@ -1219,18 +1219,18 @@ begin
   else
   begin
 
-//    Try
-//      frmValidaCadastroExistenteCliente:=TfrmValidaCadastroExistenteCliente.Create(nil);
-//      frmValidaCadastroExistenteCliente.ShowModal;
-//
-//      if frmValidaCadastroExistenteCliente.bExiste then
-//      begin
-//        SB_CANCELClick(Sender);
-//        Exit;
-//      end;
-//    Except;
-//      frmValidaCadastroExistenteCliente.Free;
-//    End;
+    Try
+      frmValidaCadastroExistenteCliente:=TfrmValidaCadastroExistenteCliente.Create(nil);
+      frmValidaCadastroExistenteCliente.ShowModal;
+
+      if frmValidaCadastroExistenteCliente.bExiste then
+      begin
+        SB_CANCELClick(Sender);
+        Exit;
+      end;
+    Except;
+      frmValidaCadastroExistenteCliente.Free;
+    End;
 
     PageControl2.Pages[01].TabVisible := False;
     PageControl2.Pages[00].TabVisible := False;
@@ -2273,7 +2273,7 @@ begin
       1:
       BEGIN
         FrmPesqCliente:=TFrmPesqCliente.Create(Self);
-        FrmPesqCliente.Show;
+        FrmPesqCliente.ShowModal;
       END;
       2:
       BEGIN
@@ -2288,7 +2288,7 @@ begin
       4:
       BEGIN
         frmConsultaGrupoClientes:=TfrmConsultaGrupoClientes.Create(Self);
-        frmConsultaGrupoClientes.Show;
+        frmConsultaGrupoClientes.ShowModal;
       END;
       5..6:
       BEGIN
@@ -2299,7 +2299,7 @@ begin
       7:
       begin
         frmConsultaListaInativacao:=TfrmConsultaListaInativacao.Create(Self);
-        frmConsultaListaInativacao.Show;
+        frmConsultaListaInativacao.ShowModal;
       end;
     end;
 

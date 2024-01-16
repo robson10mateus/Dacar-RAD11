@@ -2,7 +2,7 @@ object FrmClientes: TFrmClientes
   Left = 393
   Top = 192
   Width = 1353
-  Height = 767
+  Height = 965
   VertScrollBar.Range = 172
   ActiveControl = PageControl2
   Caption = 'Comercial Dacar - Cadastro de Clientes'
@@ -500,8 +500,8 @@ object FrmClientes: TFrmClientes
     Left = 0
     Top = 172
     Width = 1341
-    Height = 557
-    ActivePage = TabDetalhe
+    Height = 755
+    ActivePage = TabCriterio
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
@@ -816,13 +816,14 @@ object FrmClientes: TFrmClientes
       end
       object Panel1: TPanel
         Left = 0
-        Top = 508
+        Top = 706
         Width = 1333
         Height = 19
         Align = alBottom
         Color = clWindow
         ParentBackground = False
         TabOrder = 8
+        ExplicitTop = 508
         object LRodape: TLabel
           Left = 80
           Top = 2
@@ -852,7 +853,7 @@ object FrmClientes: TFrmClientes
         Left = 0
         Top = 0
         Width = 1333
-        Height = 501
+        Height = 699
         Align = alClient
         Color = clWhite
         DataSource = ODtS_Clie
@@ -915,7 +916,7 @@ object FrmClientes: TFrmClientes
       end
       object Panel4: TPanel
         Left = 0
-        Top = 501
+        Top = 699
         Width = 1333
         Height = 13
         Align = alBottom
@@ -929,10 +930,11 @@ object FrmClientes: TFrmClientes
         ParentBackground = False
         ParentFont = False
         TabOrder = 1
+        ExplicitTop = 501
       end
       object Panel2: TPanel
         Left = 0
-        Top = 514
+        Top = 712
         Width = 1333
         Height = 13
         Align = alBottom
@@ -946,6 +948,7 @@ object FrmClientes: TFrmClientes
         ParentBackground = False
         ParentFont = False
         TabOrder = 2
+        ExplicitTop = 514
       end
     end
     object TabDetalhe: TTabSheet
@@ -1825,7 +1828,6 @@ object FrmClientes: TFrmClientes
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
-        MaxLength = 5
         ParentFont = False
         TabOrder = 8
         OnKeyPress = DBNumKeyPress
@@ -1844,7 +1846,6 @@ object FrmClientes: TFrmClientes
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
-        MaxLength = 7
         ParentFont = False
         TabOrder = 9
         OnKeyPress = DBComplKeyPress
@@ -1934,7 +1935,6 @@ object FrmClientes: TFrmClientes
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
-        MaxLength = 9
         ParentFont = False
         TabOrder = 16
         OnKeyPress = DBHorarioKeyPress
@@ -1953,7 +1953,6 @@ object FrmClientes: TFrmClientes
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
-        MaxLength = 8
         ParentFont = False
         TabOrder = 17
         OnKeyPress = DBCeppstKeyPress
@@ -1971,7 +1970,6 @@ object FrmClientes: TFrmClientes
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
-        MaxLength = 6
         ParentFont = False
         TabOrder = 18
       end
@@ -1989,7 +1987,6 @@ object FrmClientes: TFrmClientes
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
-        MaxLength = 7
         ParentFont = False
         TabOrder = 26
         OnKeyPress = DBHPageKeyPress
@@ -2008,7 +2005,6 @@ object FrmClientes: TFrmClientes
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
-        MaxLength = 7
         ParentFont = False
         TabOrder = 27
         OnExit = DBEmailExit
@@ -2087,7 +2083,6 @@ object FrmClientes: TFrmClientes
           Font.Name = 'Arial'
           Font.Pitch = fpVariable
           Font.Style = []
-          MaxLength = 6
           ParentFont = False
           TabOrder = 0
           OnExit = DBCNPJExit
@@ -2106,7 +2101,6 @@ object FrmClientes: TFrmClientes
           Font.Name = 'Arial'
           Font.Pitch = fpVariable
           Font.Style = []
-          MaxLength = 7
           ParentFont = False
           TabOrder = 1
           OnKeyPress = DBInsesKeyPress
@@ -2593,8 +2587,8 @@ object FrmClientes: TFrmClientes
           TabOrder = 0
         end
         object DBExp: TDBEdit
-          Left = 115
-          Top = 40
+          Left = 114
+          Top = 41
           Width = 70
           Height = 23
           DataField = 'GN_ORGAEXPERGCLIE'
@@ -2605,7 +2599,6 @@ object FrmClientes: TFrmClientes
           Font.Name = 'Arial'
           Font.Pitch = fpVariable
           Font.Style = []
-          MaxLength = 5
           ParentFont = False
           TabOrder = 1
           OnKeyPress = DBExpKeyPress
@@ -2623,7 +2616,6 @@ object FrmClientes: TFrmClientes
           Font.Name = 'Arial'
           Font.Pitch = fpVariable
           Font.Style = []
-          MaxLength = 9
           ParentFont = False
           TabOrder = 2
           OnKeyPress = DBRGKeyPress
@@ -2641,7 +2633,6 @@ object FrmClientes: TFrmClientes
           Font.Name = 'Arial'
           Font.Pitch = fpVariable
           Font.Style = []
-          MaxLength = 8
           ParentFont = False
           TabOrder = 3
           OnKeyPress = DBHPageKeyPress
@@ -2659,7 +2650,6 @@ object FrmClientes: TFrmClientes
           Font.Name = 'Arial'
           Font.Pitch = fpVariable
           Font.Style = []
-          MaxLength = 8
           ParentFont = False
           TabOrder = 4
           OnKeyPress = DBHPageKeyPress
@@ -3077,7 +3067,6 @@ object FrmClientes: TFrmClientes
           Font.Name = 'Arial'
           Font.Pitch = fpVariable
           Font.Style = []
-          MaxLength = 5
           ParentFont = False
           TabOrder = 1
         end
@@ -3095,7 +3084,6 @@ object FrmClientes: TFrmClientes
           Font.Name = 'Arial'
           Font.Pitch = fpVariable
           Font.Style = []
-          MaxLength = 5
           ParentFont = False
           TabOrder = 3
         end
@@ -3113,7 +3101,6 @@ object FrmClientes: TFrmClientes
           Font.Name = 'Arial'
           Font.Pitch = fpVariable
           Font.Style = []
-          MaxLength = 5
           ParentFont = False
           TabOrder = 0
           OnKeyPress = DBTELKeyPress
@@ -3132,7 +3119,6 @@ object FrmClientes: TFrmClientes
           Font.Name = 'Arial'
           Font.Pitch = fpVariable
           Font.Style = []
-          MaxLength = 7
           ParentFont = False
           TabOrder = 2
           OnKeyPress = DBEdit5KeyPress
@@ -3152,7 +3138,6 @@ object FrmClientes: TFrmClientes
           Font.Name = 'Arial'
           Font.Pitch = fpVariable
           Font.Style = []
-          MaxLength = 5
           ParentFont = False
           ParentShowHint = False
           ShowHint = True
@@ -3192,7 +3177,6 @@ object FrmClientes: TFrmClientes
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
-        MaxLength = 8
         ParentFont = False
         TabOrder = 38
         OnEnter = DbLatitudeEnter
@@ -3211,7 +3195,6 @@ object FrmClientes: TFrmClientes
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
-        MaxLength = 8
         ParentFont = False
         TabOrder = 39
         OnEnter = DbLongitudeEnter
@@ -8992,8 +8975,8 @@ object FrmClientes: TFrmClientes
       'ORDER BY CLIENTE.ID_CLIENTE')
     FetchAll = True
     CachedUpdates = True
-    Left = 70
-    Top = 39
+    Left = 526
+    Top = 103
     ParamData = <
       item
         DataType = ftUnknown
@@ -10223,167 +10206,6 @@ object FrmClientes: TFrmClientes
     Left = 1082
     Top = 7
   end
-  object QryVendedor: TOraQuery
-    KeyFields = 'ID_VENDCLIE'
-    KeySequence = 'ID_VENDCLIE'
-    SQLInsert.Strings = (
-      'INSERT INTO cliente_vendedor'
-      
-        '  (EMPRESA, FILIAL, ID_VENDCLIE, ID_CLIENTE, ID_VENDEDOR, FL_PAD' +
-        'RVENDCLIE, FL_COMIVENDCLIE, PC_COMIVENDCLIE, FX_VENDCLIE, FL_REL' +
-        'ACIONADO, ID_VENDEDOR_REL)'
-      'VALUES'
-      
-        '  (:EMPRESA, :FILIAL, :ID_VENDCLIE, :ID_CLIENTE, :ID_VENDEDOR, :' +
-        'FL_PADRVENDCLIE, :FL_COMIVENDCLIE, :PC_COMIVENDCLIE, :FX_VENDCLI' +
-        'E, :FL_RELACIONADO, :ID_VENDEDOR_REL)')
-    SQLDelete.Strings = (
-      'DELETE FROM cliente_vendedor'
-      'WHERE'
-      '  ID_VENDCLIE = :ID_VENDCLIE')
-    SQLUpdate.Strings = (
-      'UPDATE cliente_vendedor'
-      'SET'
-      '  EMPRESA = :EMPRESA,'
-      '  FILIAL = :FILIAL,'
-      '  ID_VENDCLIE = :ID_VENDCLIE,'
-      '  ID_CLIENTE = :ID_CLIENTE,'
-      '  ID_VENDEDOR = :ID_VENDEDOR,'
-      '  FL_PADRVENDCLIE = :FL_PADRVENDCLIE,'
-      '  FL_COMIVENDCLIE = :FL_COMIVENDCLIE,'
-      '  PC_COMIVENDCLIE = :PC_COMIVENDCLIE,'
-      '  FX_VENDCLIE = :FX_VENDCLIE,'
-      '  FL_RELACIONADO = :FL_RELACIONADO,'
-      '  ID_VENDEDOR_REL = :ID_VENDEDOR_REL'
-      'WHERE'
-      '  ID_VENDCLIE = :OLD_ID_VENDCLIE')
-    SQLLock.Strings = (
-      'SELECT * FROM cliente_vendedor'
-      'WHERE'
-      '  ID_VENDCLIE = :ID_VENDCLIE'
-      'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  ID_VENDCLIE = :ID_VENDCLIE')
-    LocalUpdate = True
-    Session = FrmPrincipal.DB
-    SQL.Strings = (
-      'select '
-      '  cliente_vendedor.filial,'
-      '  cliente_vendedor.empresa,'
-      '  cliente_vendedor.id_vendclie,'
-      '  cliente_vendedor.id_cliente,'
-      '  cliente_vendedor.id_vendedor,'
-      '  cliente_vendedor.fl_padrvendclie,'
-      '  cliente_vendedor.fl_comivendclie,'
-      '  cliente_vendedor.pc_comivendclie,'
-      '  cliente_vendedor.fx_vendclie,'
-      '  vendedor.nm_vendedor,'
-      '  vendedor.nm_fantvend,'
-      '  vendedor.nm_reduvend,'
-      '  vendedor.fl_comivend,'
-      '  vendedor.pc_comivend,'
-      '  cliente_vendedor.FL_RELACIONADO,'
-      '  cliente_vendedor.ID_VENDEDOR_REL,'
-      '  venrel.nm_vendedor as nm_venrel'
-      'from'
-      '  cliente_vendedor,'
-      '  vendedor,'
-      '  vendedor venrel,'
-      '  cliente '
-      'WHERE'
-      '   cliente_vendedor.id_vendedor = vendedor.id_vendedor and'
-      '   cliente_vendedor.id_cliente = cliente.id_cliente and'
-      '   venrel.id_vendedor(+) = cliente_vendedor.id_vendedor_rel and'
-      '   cliente_vendedor.id_cliente =:id_cliente '
-      '  '
-      ' ORDER BY cliente_vendedor.id_vendedor')
-    MasterSource = ODtS_Clie
-    MasterFields = 'ID_CLIENTE'
-    CachedUpdates = True
-    Left = 736
-    Top = 40
-    ParamData = <
-      item
-        DataType = ftUnknown
-        Name = 'id_cliente'
-        Value = nil
-      end>
-    object QryVendedorID_CLIENTE: TFloatField
-      FieldName = 'ID_CLIENTE'
-      Required = True
-    end
-    object QryVendedorID_VENDEDOR: TFloatField
-      AutoGenerateValue = arAutoInc
-      DisplayLabel = 'Cod. Vendedor'
-      FieldName = 'ID_VENDEDOR'
-      Required = True
-    end
-    object QryVendedorFL_PADRVENDCLIE: TStringField
-      FieldName = 'FL_PADRVENDCLIE'
-      Size = 1
-    end
-    object QryVendedorFL_COMIVENDCLIE: TStringField
-      FieldName = 'FL_COMIVENDCLIE'
-      Size = 1
-    end
-    object QryVendedorPC_COMIVENDCLIE: TFloatField
-      FieldName = 'PC_COMIVENDCLIE'
-      DisplayFormat = '#,##0.00'
-    end
-    object QryVendedorFX_VENDCLIE: TStringField
-      FieldName = 'FX_VENDCLIE'
-      Required = True
-      Size = 1
-    end
-    object QryVendedorNM_VENDEDOR: TStringField
-      DisplayLabel = 'Nome Vendedor'
-      FieldName = 'NM_VENDEDOR'
-      Size = 40
-    end
-    object QryVendedorNM_FANTVEND: TStringField
-      DisplayLabel = 'Nome Fantasia'
-      FieldName = 'NM_FANTVEND'
-      Size = 40
-    end
-    object QryVendedorNM_REDUVEND: TStringField
-      DisplayLabel = 'Nome Reduzido'
-      FieldName = 'NM_REDUVEND'
-      Size = 15
-    end
-    object QryVendedorFL_COMIVEND: TStringField
-      FieldName = 'FL_COMIVEND'
-      Size = 1
-    end
-    object QryVendedorPC_COMIVEND: TFloatField
-      FieldName = 'PC_COMIVEND'
-    end
-    object QryVendedorFILIAL: TIntegerField
-      FieldName = 'FILIAL'
-      Required = True
-    end
-    object QryVendedorEMPRESA: TStringField
-      FieldName = 'EMPRESA'
-      Required = True
-      Size = 2
-    end
-    object QryVendedorID_VENDCLIE: TFloatField
-      AutoGenerateValue = arAutoInc
-      FieldName = 'ID_VENDCLIE'
-      Required = True
-    end
-    object QryVendedorFL_RELACIONADO: TStringField
-      FieldName = 'FL_RELACIONADO'
-      Size = 1
-    end
-    object QryVendedorID_VENDEDOR_REL: TFloatField
-      FieldName = 'ID_VENDEDOR_REL'
-    end
-    object QryVendedorNM_VENREL: TStringField
-      FieldName = 'NM_VENREL'
-      Size = 40
-    end
-  end
   object DtSrcVendedor: TOraDataSource
     DataSet = QryVendedor
     Left = 735
@@ -10764,412 +10586,10 @@ object FrmClientes: TFrmClientes
     Left = 506
     Top = 8
   end
-  object QryClieBloq: TOraQuery
-    KeyFields = 'ID_BLOQCLIE'
-    KeySequence = 'ID_BLOQCLIE'
-    SQLInsert.Strings = (
-      'INSERT INTO cliente_bloqueio'
-      
-        '  (EMPRESA, FILIAL, ID_BLOQCLIE, ID_CLIENTE, ID_MOTIBLOQ, ID_USU' +
-        'ASIST, DT_BLOQCLIE, FL_TIPOBLOQCLIE, FX_BLOQCLIE)'
-      'VALUES'
-      
-        '  (:EMPRESA, :FILIAL, :ID_BLOQCLIE, :ID_CLIENTE, :ID_MOTIBLOQ, :' +
-        'ID_USUASIST, :DT_BLOQCLIE, :FL_TIPOBLOQCLIE, :FX_BLOQCLIE)')
-    SQLDelete.Strings = (
-      'DELETE FROM cliente_bloqueio'
-      'WHERE'
-      '  ID_BLOQCLIE = :ID_BLOQCLIE')
-    SQLUpdate.Strings = (
-      'UPDATE cliente_bloqueio'
-      'SET'
-      '  EMPRESA = :EMPRESA,'
-      '  FILIAL = :FILIAL,'
-      '  ID_BLOQCLIE = :ID_BLOQCLIE,'
-      '  ID_CLIENTE = :ID_CLIENTE,'
-      '  ID_MOTIBLOQ = :ID_MOTIBLOQ,'
-      '  ID_USUASIST = :ID_USUASIST,'
-      '  DT_BLOQCLIE = :DT_BLOQCLIE,'
-      '  FL_TIPOBLOQCLIE = :FL_TIPOBLOQCLIE,'
-      '  FX_BLOQCLIE = :FX_BLOQCLIE'
-      'WHERE'
-      '  ID_BLOQCLIE = :OLD_ID_BLOQCLIE')
-    SQLLock.Strings = (
-      'SELECT * FROM cliente_bloqueio'
-      'WHERE'
-      '  ID_BLOQCLIE = :ID_BLOQCLIE'
-      'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  ID_BLOQCLIE = :ID_BLOQCLIE')
-    LocalUpdate = True
-    Session = FrmPrincipal.DB
-    SQL.Strings = (
-      'select '
-      '  cliente_bloqueio.empresa,'
-      '  cliente_bloqueio.filial,'
-      '  cliente_bloqueio.id_bloqclie,'
-      '  cliente_bloqueio.id_cliente,'
-      '  cliente_bloqueio.id_motibloq,'
-      '  cliente_bloqueio.id_usuasist,'
-      '  cliente_bloqueio.dt_bloqclie,'
-      '  cliente_bloqueio.fl_tipobloqclie,'
-      '  bloqueio_motivo.nm_motibloq,'
-      '  cliente_bloqueio.fx_bloqclie,'
-      '  sct_usuario.nome_usuario  '
-      'from'
-      '  cliente_bloqueio,bloqueio_motivo,sct_usuario  '
-      'where'
-      
-        '   bloqueio_motivo.id_motibloq(+) =cliente_bloqueio.id_motibloq ' +
-        'and'
-      '   sct_usuario.id_usuario = cliente_bloqueio.id_usuasist and'
-      '   cliente_bloqueio.id_cliente= :id_cliente'
-      '')
-    MasterSource = ODtS_Clie
-    MasterFields = 'ID_CLIENTE'
-    DetailFields = 'ID_CLIENTE'
-    CachedUpdates = True
-    Left = 352
-    Top = 40
-    ParamData = <
-      item
-        DataType = ftUnknown
-        Name = 'id_cliente'
-        Value = nil
-      end>
-    object QryClieBloqEMPRESA: TStringField
-      FieldName = 'EMPRESA'
-      Required = True
-      Size = 2
-    end
-    object QryClieBloqFILIAL: TIntegerField
-      FieldName = 'FILIAL'
-      Required = True
-    end
-    object QryClieBloqID_BLOQCLIE: TFloatField
-      AutoGenerateValue = arAutoInc
-      DisplayLabel = 'Cod. Bloqueio'
-      FieldName = 'ID_BLOQCLIE'
-      Required = True
-    end
-    object QryClieBloqID_CLIENTE: TFloatField
-      FieldName = 'ID_CLIENTE'
-      Required = True
-    end
-    object QryClieBloqID_MOTIBLOQ: TFloatField
-      FieldName = 'ID_MOTIBLOQ'
-    end
-    object QryClieBloqID_USUASIST: TFloatField
-      FieldName = 'ID_USUASIST'
-      Required = True
-      DisplayFormat = 'Usu'#225'rio'
-    end
-    object QryClieBloqDT_BLOQCLIE: TDateTimeField
-      DisplayLabel = 'Data do Bloqueio'
-      FieldName = 'DT_BLOQCLIE'
-      Required = True
-    end
-    object QryClieBloqFL_TIPOBLOQCLIE: TStringField
-      DisplayLabel = 'Tipo'
-      FieldName = 'FL_TIPOBLOQCLIE'
-      Required = True
-      Size = 1
-    end
-    object QryClieBloqFX_BLOQCLIE: TStringField
-      FieldName = 'FX_BLOQCLIE'
-      Required = True
-      Size = 1
-    end
-    object QryClieBloqNM_MOTIBLOQ: TStringField
-      DisplayLabel = 'Motivo'
-      FieldName = 'NM_MOTIBLOQ'
-      Size = 40
-    end
-    object QryClieBloqNOME_USUARIO: TStringField
-      DisplayLabel = 'Usuario'
-      FieldName = 'NOME_USUARIO'
-      Size = 40
-    end
-  end
   object DtSrcClieBloq: TOraDataSource
     DataSet = QryClieBloq
     Left = 352
     Top = 8
-  end
-  object QryCliEnd: TOraQuery
-    KeyFields = 'id_endeclie'
-    KeySequence = 'ID_ENDECLIE'
-    SQLInsert.Strings = (
-      'INSERT INTO cliente_endereco'
-      
-        '  (EMPRESA, FILIAL, ID_ENDECLIE, ID_CLIENTE, ID_TIPOLOGR, NM_LOG' +
-        'RENDECLIE, NR_LOGRENDECLIE, GN_COMPENDECLIE, ID_BAIRRO, NR_CEPEN' +
-        'DECLIE, NR_CAIXPOSTENDECLIE, NR_CEPCAIXPOSTENDECLIE, FL_ENTRENDE' +
-        'CLIE, FL_COBRENDECLIE, FL_ENTRPADRENDECLIE, FL_COBRPADRENDECLIE,' +
-        ' FL_LOCAPADRENDECLIE, ID_REGILOGI, ID_SUBRLOGI, ID_FORNECEDOR_TR' +
-        'ANSPORTADOR, FX_ENDECLIE, ID_REGISUBRLOGI, LATITUDE, LONGITUDE)'
-      'VALUES'
-      
-        '  (:EMPRESA, :FILIAL, :ID_ENDECLIE, :ID_CLIENTE, :ID_TIPOLOGR, :' +
-        'NM_LOGRENDECLIE, :NR_LOGRENDECLIE, :GN_COMPENDECLIE, :ID_BAIRRO,' +
-        ' :NR_CEPENDECLIE, :NR_CAIXPOSTENDECLIE, :NR_CEPCAIXPOSTENDECLIE,' +
-        ' :FL_ENTRENDECLIE, :FL_COBRENDECLIE, :FL_ENTRPADRENDECLIE, :FL_C' +
-        'OBRPADRENDECLIE, :FL_LOCAPADRENDECLIE, :ID_REGILOGI, :ID_SUBRLOG' +
-        'I, :ID_FORNECEDOR_TRANSPORTADOR, :FX_ENDECLIE, :ID_REGISUBRLOGI,' +
-        ' :LATITUDE, :LONGITUDE)')
-    SQLDelete.Strings = (
-      'DELETE FROM cliente_endereco'
-      'WHERE'
-      '  ID_ENDECLIE = :ID_ENDECLIE')
-    SQLUpdate.Strings = (
-      'UPDATE cliente_endereco'
-      'SET'
-      '  EMPRESA = :EMPRESA,'
-      '  FILIAL = :FILIAL,'
-      '  ID_ENDECLIE = :ID_ENDECLIE,'
-      '  ID_CLIENTE = :ID_CLIENTE,'
-      '  ID_TIPOLOGR = :ID_TIPOLOGR,'
-      '  NM_LOGRENDECLIE = :NM_LOGRENDECLIE,'
-      '  NR_LOGRENDECLIE = :NR_LOGRENDECLIE,'
-      '  GN_COMPENDECLIE = :GN_COMPENDECLIE,'
-      '  ID_BAIRRO = :ID_BAIRRO,'
-      '  NR_CEPENDECLIE = :NR_CEPENDECLIE,'
-      '  NR_CAIXPOSTENDECLIE = :NR_CAIXPOSTENDECLIE,'
-      '  NR_CEPCAIXPOSTENDECLIE = :NR_CEPCAIXPOSTENDECLIE,'
-      '  FL_ENTRENDECLIE = :FL_ENTRENDECLIE,'
-      '  FL_COBRENDECLIE = :FL_COBRENDECLIE,'
-      '  FL_ENTRPADRENDECLIE = :FL_ENTRPADRENDECLIE,'
-      '  FL_COBRPADRENDECLIE = :FL_COBRPADRENDECLIE,'
-      '  FL_LOCAPADRENDECLIE = :FL_LOCAPADRENDECLIE,'
-      '  ID_REGILOGI = :ID_REGILOGI,'
-      '  ID_SUBRLOGI = :ID_SUBRLOGI,'
-      '  ID_FORNECEDOR_TRANSPORTADOR = :ID_FORNECEDOR_TRANSPORTADOR,'
-      '  FX_ENDECLIE = :FX_ENDECLIE,'
-      '  ID_REGISUBRLOGI = :ID_REGISUBRLOGI,'
-      '  LATITUDE = :LATITUDE,'
-      '  LONGITUDE = :LONGITUDE'
-      'WHERE'
-      '  ID_ENDECLIE = :OLD_ID_ENDECLIE')
-    SQLLock.Strings = (
-      'SELECT * FROM cliente_endereco'
-      'WHERE'
-      '  ID_ENDECLIE = :ID_ENDECLIE'
-      'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  ID_ENDECLIE = :ID_ENDECLIE')
-    LocalUpdate = True
-    Session = FrmPrincipal.DB
-    SQL.Strings = (
-      'SELECT   distinct'
-      '  cliente_endereco.empresa,'
-      '  cliente_endereco.filial,'
-      '  cliente_endereco.id_endeclie,'
-      '  cliente_endereco.id_cliente,'
-      '  cliente_endereco.id_tipologr,'
-      '  cliente_endereco.nm_logrendeclie,'
-      '  cliente_endereco.nr_logrendeclie,'
-      '  cliente_endereco.gn_compendeclie,'
-      '  cliente_endereco.id_bairro,'
-      '  cliente_endereco.nr_cependeclie,'
-      '  cliente_endereco.nr_caixpostendeclie,'
-      '  cliente_endereco.nr_cepcaixpostendeclie,'
-      '  cliente_endereco.fl_entrendeclie,'
-      '  cliente_endereco.fl_cobrendeclie,'
-      '  cliente_endereco.fl_entrpadrendeclie,'
-      '  cliente_endereco.fl_cobrpadrendeclie,'
-      '  cliente_endereco.fl_locapadrendeclie,'
-      '  cliente_endereco.id_regilogi,'
-      '  cliente_endereco.id_subrlogi,'
-      '  cliente_endereco.id_fornecedor_transportador,'
-      '  cliente_endereco.fx_endeclie,'
-      '  cliente_endereco.id_regisubrlogi,'
-      '  logistica_regiao.nm_regilogi,'
-      '  logistica_subregiao.nm_subrlogi,'
-      '  bairro.nm_bairro,'
-      '  cidade.nm_cidade,'
-      '  cidade.id_cidade,'
-      '  pais.nm_pais,'
-      '  estado.sg_estado,'
-      '  regiao_geografica.nm_regigeog,'
-      '  logradouro_tipo.sg_tipologr,'
-      '  cliente_endereco.LATITUDE,'
-      '  cliente_endereco.LONGITUDE'
-      'FROM'
-      '  cliente_endereco,'
-      '  logistica_regiao,'
-      '  logistica_subregiao, '
-      '  bairro,'
-      '  cidade,'
-      '  pais,'
-      '  estado,'
-      '  regiao_geografica,'
-      '  logradouro_tipo'
-      'WHERE'
-      '  bairro.id_bairro = cliente_endereco.id_bairro    And'
-      
-        '  logradouro_tipo.ID_tipologr = cliente_endereco.ID_tipologr AND' +
-        ' '
-      '  estado.id_regigeog  =  regiao_geografica.id_regigeog(+) and'
-      '  ESTADO.ID_PAIS = PAIS.ID_PAIS AND'
-      '  CIDADE.ID_ESTADO = ESTADO.ID_ESTADO  AND'
-      '  bairro.id_cidade = cidade.id_cidade and'
-      
-        '  logistica_regiao.id_regilogi(+) = cliente_endereco.id_regilogi' +
-        '   AND'
-      
-        '  logistica_subregiao.id_subrlogi(+) = cliente_endereco.id_subrl' +
-        'ogi  AND'
-      '  cliente_endereco.id_cliente = :id_cliente '
-      ''
-      ''
-      ''
-      ''
-      ''
-      '')
-    MasterSource = ODtS_Clie
-    MasterFields = 'ID_CLIENTE'
-    CachedUpdates = True
-    Left = 237
-    Top = 40
-    ParamData = <
-      item
-        DataType = ftUnknown
-        Name = 'id_cliente'
-        Value = nil
-      end>
-    object QryCliEndEMPRESA: TStringField
-      FieldName = 'EMPRESA'
-      Size = 2
-    end
-    object QryCliEndFILIAL: TIntegerField
-      FieldName = 'FILIAL'
-    end
-    object QryCliEndID_ENDECLIE: TFloatField
-      AutoGenerateValue = arAutoInc
-      FieldName = 'ID_ENDECLIE'
-    end
-    object QryCliEndID_CLIENTE: TFloatField
-      FieldName = 'ID_CLIENTE'
-    end
-    object QryCliEndID_TIPOLOGR: TFloatField
-      DisplayLabel = 'Tipo Logr.'
-      FieldName = 'ID_TIPOLOGR'
-    end
-    object QryCliEndNM_LOGRENDECLIE: TStringField
-      DisplayLabel = 'Nome do Logradouro'
-      FieldName = 'NM_LOGRENDECLIE'
-      Size = 40
-    end
-    object QryCliEndNR_LOGRENDECLIE: TStringField
-      DisplayLabel = 'Numero'
-      FieldName = 'NR_LOGRENDECLIE'
-      Size = 8
-    end
-    object QryCliEndGN_COMPENDECLIE: TStringField
-      DisplayLabel = 'Complemento'
-      FieldName = 'GN_COMPENDECLIE'
-    end
-    object QryCliEndID_BAIRRO: TFloatField
-      FieldName = 'ID_BAIRRO'
-    end
-    object QryCliEndNR_CEPENDECLIE: TStringField
-      FieldName = 'NR_CEPENDECLIE'
-      Size = 8
-    end
-    object QryCliEndNR_CAIXPOSTENDECLIE: TStringField
-      FieldName = 'NR_CAIXPOSTENDECLIE'
-      Size = 10
-    end
-    object QryCliEndNR_CEPCAIXPOSTENDECLIE: TStringField
-      FieldName = 'NR_CEPCAIXPOSTENDECLIE'
-      Size = 8
-    end
-    object QryCliEndFL_ENTRENDECLIE: TStringField
-      DisplayLabel = 'Entr.'
-      FieldName = 'FL_ENTRENDECLIE'
-      Size = 1
-    end
-    object QryCliEndFL_COBRENDECLIE: TStringField
-      DisplayLabel = 'Cobr.'
-      FieldName = 'FL_COBRENDECLIE'
-      Size = 1
-    end
-    object QryCliEndFL_ENTRPADRENDECLIE: TStringField
-      FieldName = 'FL_ENTRPADRENDECLIE'
-      Size = 1
-    end
-    object QryCliEndFL_COBRPADRENDECLIE: TStringField
-      FieldName = 'FL_COBRPADRENDECLIE'
-      Size = 1
-    end
-    object QryCliEndFL_LOCAPADRENDECLIE: TStringField
-      DisplayLabel = 'Local'
-      FieldName = 'FL_LOCAPADRENDECLIE'
-      Size = 1
-    end
-    object QryCliEndID_REGILOGI: TFloatField
-      FieldName = 'ID_REGILOGI'
-    end
-    object QryCliEndID_SUBRLOGI: TFloatField
-      FieldName = 'ID_SUBRLOGI'
-    end
-    object QryCliEndID_FORNECEDOR_TRANSPORTADOR: TFloatField
-      FieldName = 'ID_FORNECEDOR_TRANSPORTADOR'
-    end
-    object QryCliEndFX_ENDECLIE: TStringField
-      FieldName = 'FX_ENDECLIE'
-      Size = 1
-    end
-    object QryCliEndID_REGISUBRLOGI: TFloatField
-      FieldName = 'ID_REGISUBRLOGI'
-    end
-    object QryCliEndNM_REGILOGI: TStringField
-      FieldName = 'NM_REGILOGI'
-      Size = 40
-    end
-    object QryCliEndNM_BAIRRO: TStringField
-      DisplayLabel = 'Bairro'
-      FieldName = 'NM_BAIRRO'
-      Size = 30
-    end
-    object QryCliEndNM_CIDADE: TStringField
-      FieldName = 'NM_CIDADE'
-      Size = 40
-    end
-    object QryCliEndID_CIDADE: TFloatField
-      FieldName = 'ID_CIDADE'
-    end
-    object QryCliEndNM_PAIS: TStringField
-      FieldName = 'NM_PAIS'
-      Size = 40
-    end
-    object QryCliEndNM_SUBRLOGI: TStringField
-      FieldName = 'NM_SUBRLOGI'
-      Size = 40
-    end
-    object QryCliEndSG_ESTADO: TStringField
-      FieldName = 'SG_ESTADO'
-      Size = 10
-    end
-    object QryCliEndNM_REGIGEOG: TStringField
-      FieldName = 'NM_REGIGEOG'
-      Size = 30
-    end
-    object QryCliEndSG_TIPOLOGR: TStringField
-      DisplayLabel = 'Tipo Logr.'
-      FieldName = 'SG_TIPOLOGR'
-      Size = 10
-    end
-    object QryCliEndLATITUDE: TStringField
-      FieldName = 'LATITUDE'
-      Size = 80
-    end
-    object QryCliEndLONGITUDE: TStringField
-      FieldName = 'LONGITUDE'
-      Size = 80
-    end
   end
   object DtSrcCliEnd: TOraDataSource
     DataSet = QryCliEnd
@@ -11564,7 +10984,7 @@ object FrmClientes: TFrmClientes
     Top = 77
   end
   object OQry_Clie: TSmartQuery
-    KeyFields = 'ID_CLIENTE'
+    KeyFields = 'id_cliente'
     KeySequence = 'ID_CLIENTE'
     SQLInsert.Strings = (
       'INSERT INTO cliente'
@@ -11585,13 +11005,13 @@ object FrmClientes: TFrmClientes
         ' QN_PONTLOGICLIE, GN_MENSVENDCLIE, GN_OBSECLIE, QN_DIFIENTRCLIE,' +
         ' VL_CREDESPECLIE, VL_CREDESPEUSADCLIE, QN_TITUVENCCLIE, '
       
-        'VL_TITUVENCCLIE, VL_CREDUSADCLIE, ID_TABEPREC, FX_CLIENTE, ID_US' +
-        'UASIST_BLOQ, ID_FORMPAGA_LIMITE, FL_CONTICMSCLIE, PC_DESCPADRCLI' +
-        'E, PC_BONIPADRCLIE, FL_NF_POSTERIOR, FL_ARMAZENA, PC_FRETEMAX, F' +
-        'L_EXIBDESCNF ,  SIGLA_SERVINSPEC, NUM_SERVINSPEC, CTB, NR_FONECE' +
-        'LULAR, ID_USU_SOLICITANTE, FL_RESGATADO, ID_USUARIO_RESG, OP_SIM' +
-        'PLES_NACIONAL, FL_FUNCIONARIO, FL_PRIORIDADE, CO_MOTIVOINATIVACA' +
-        'O, LONGITUDE, LATITUDE, ID_USUASIST )'
+        ' VL_TITUVENCCLIE, VL_CREDUSADCLIE, ID_TABEPREC, FX_CLIENTE, ID_U' +
+        'SUASIST_BLOQ, ID_FORMPAGA_LIMITE, FL_CONTICMSCLIE, PC_DESCPADRCL' +
+        'IE, PC_BONIPADRCLIE, FL_NF_POSTERIOR, FL_ARMAZENA, PC_FRETEMAX, ' +
+        'FL_EXIBDESCNF ,  SIGLA_SERVINSPEC, NUM_SERVINSPEC, CTB, NR_FONEC' +
+        'ELULAR, ID_USU_SOLICITANTE, FL_RESGATADO, ID_USUARIO_RESG, OP_SI' +
+        'MPLES_NACIONAL, FL_FUNCIONARIO, FL_PRIORIDADE, CO_MOTIVOINATIVAC' +
+        'AO, LONGITUDE, LATITUDE, ID_USUASIST )'
       'VALUES'
       
         '  (:EMPRESA, :FILIAL, :ID_CLIENTE, :IE_CLIENTE, :ID_INTECLIE, :N' +
@@ -11618,9 +11038,115 @@ object FrmClientes: TFrmClientes
         'CTB, :NR_FONECELULAR, :ID_USU_SOLICITANTE, :FL_RESGATADO, :ID_US' +
         'UARIO_RESG, :OP_SIMPLES_NACIONAL, :FL_FUNCIONARIO, :FL_PRIORIDAD' +
         'E, :CO_MOTIVOINATIVACAO, :LONGITUDE, :LATITUDE, :ID_USUASIST )')
+    SQLDelete.Strings = (
+      'DELETE FROM cliente'
+      'WHERE'
+      '  ID_CLIENTE = :ID_CLIENTE')
+    SQLUpdate.Strings = (
+      'UPDATE cliente'
+      'SET'
+      '  EMPRESA = :EMPRESA,'
+      '  FILIAL = :FILIAL,'
+      '  ID_CLIENTE = :ID_CLIENTE,'
+      '  IE_CLIENTE = :IE_CLIENTE,'
+      '  ID_INTECLIE = :ID_INTECLIE,'
+      '  NM_CLIENTE = :NM_CLIENTE,'
+      '  NM_FANTCLIE = :NM_FANTCLIE,'
+      '  NM_REDUCLIE = :NM_REDUCLIE,'
+      '  ID_TRATCLIE = :ID_TRATCLIE,'
+      '  ID_GRUPCLIE = :ID_GRUPCLIE,'
+      '  ID_TIPOESTA = :ID_TIPOESTA,'
+      '  ID_ATIVECON = :ID_ATIVECON,'
+      '  ID_TIPOVEND = :ID_TIPOVEND,'
+      '  ID_REGICOME = :ID_REGICOME,'
+      '  ID_REGILOGI = :ID_REGILOGI,'
+      '  ID_SUBRLOGI = :ID_SUBRLOGI,'
+      '  ID_REGISUBRLOGI = :ID_REGISUBRLOGI,'
+      '  ID_FORNECEDOR_TRANSPORTADOR = :ID_FORNECEDOR_TRANSPORTADOR,'
+      '  ID_TIPOPEDIVEND = :ID_TIPOPEDIVEND,'
+      '  ID_FORMPAGA = :ID_FORMPAGA,'
+      '  ID_SITUCOBR = :ID_SITUCOBR,'
+      '  ID_TIPOCOBR = :ID_TIPOCOBR,'
+      '  ID_INSTCOBR = :ID_INSTCOBR,'
+      '  ID_CONTA = :ID_CONTA,'
+      '  IE_CONTCONT = :IE_CONTCONT,'
+      '  ID_TIPOLOGR = :ID_TIPOLOGR,'
+      '  NM_LOGRENDECLIE = :NM_LOGRENDECLIE,'
+      '  NR_LOGRENDECLIE = :NR_LOGRENDECLIE,'
+      '  GN_COMPENDECLIE = :GN_COMPENDECLIE,'
+      '  ID_BAIRRO = :ID_BAIRRO,'
+      '  NR_CEPENDECLIE = :NR_CEPENDECLIE,'
+      '  NR_CAIXPOSTENDECLIE = :NR_CAIXPOSTENDECLIE,'
+      '  NR_CEPCAIXPOSTENDECLIE = :NR_CEPCAIXPOSTENDECLIE,'
+      '  NR_FONECLIE = :NR_FONECLIE,'
+      '  NR_FAXCLIE = :NR_FAXCLIE,'
+      '  NR_FONECOMPCLIE = :NR_FONECOMPCLIE,'
+      '  GN_URLCLIE = :GN_URLCLIE,'
+      '  GN_EMAICLIE = :GN_EMAICLIE,'
+      '  DT_NASCCLIE = :DT_NASCCLIE,'
+      '  DT_CADACLIE = :DT_CADACLIE,'
+      '  DT_PRIMCOMPCLIE = :DT_PRIMCOMPCLIE,'
+      '  DT_ALTECLIE = :DT_ALTECLIE,'
+      '  FL_PESSCLIE = :FL_PESSCLIE,'
+      '  FL_PRIOCLIE = :FL_PRIOCLIE,'
+      '  FL_TIPOBLOQCLIE = :FL_TIPOBLOQCLIE,'
+      '  FL_BLOQADMICLIE = :FL_BLOQADMICLIE,'
+      '  FL_ATIVCLIE = :FL_ATIVCLIE,'
+      '  NR_CNPJCLIE = :NR_CNPJCLIE,'
+      '  NR_INSCESTACLIE = :NR_INSCESTACLIE,'
+      '  NR_INSCPRODCLIE = :NR_INSCPRODCLIE,'
+      '  NR_RGCLIE = :NR_RGCLIE,'
+      '  GN_ORGAEXPERGCLIE = :GN_ORGAEXPERGCLIE,'
+      '  NR_CPFCLIE = :NR_CPFCLIE,'
+      '  NM_PAICLIE = :NM_PAICLIE,'
+      '  NM_MAECLIE = :NM_MAECLIE,'
+      '  QN_DIASVISICLIE = :QN_DIASVISICLIE,'
+      '  VL_LIMICREDCLIE = :VL_LIMICREDCLIE,'
+      '  VL_CREDATUACLIE = :VL_CREDATUACLIE,'
+      '  QN_PONTLOGICLIE = :QN_PONTLOGICLIE,'
+      '  GN_MENSVENDCLIE = :GN_MENSVENDCLIE,'
+      '  GN_OBSECLIE = :GN_OBSECLIE,'
+      '  QN_DIFIENTRCLIE = :QN_DIFIENTRCLIE,'
+      '  VL_CREDESPECLIE = :VL_CREDESPECLIE,'
+      '  VL_CREDESPEUSADCLIE = :VL_CREDESPEUSADCLIE,'
+      '  QN_TITUVENCCLIE = :QN_TITUVENCCLIE,'
+      '  VL_TITUVENCCLIE = :VL_TITUVENCCLIE,'
+      '  VL_CREDUSADCLIE = :VL_CREDUSADCLIE,'
+      '  ID_TABEPREC = :ID_TABEPREC,'
+      '  FX_CLIENTE = :FX_CLIENTE,'
+      '  ID_USUASIST_BLOQ = :ID_USUASIST_BLOQ,'
+      '  ID_FORMPAGA_LIMITE = :ID_FORMPAGA_LIMITE,'
+      '  FL_CONTICMSCLIE = :FL_CONTICMSCLIE,'
+      '  PC_DESCPADRCLIE = :PC_DESCPADRCLIE,'
+      '  PC_BONIPADRCLIE = :PC_BONIPADRCLIE,'
+      '  FL_NF_POSTERIOR = :FL_NF_POSTERIOR,'
+      '  FL_ARMAZENA = :FL_ARMAZENA,'
+      '  PC_FRETEMAX = :PC_FRETEMAX,'
+      '  FL_EXIBDESCNF = :FL_EXIBDESCNF,'
+      '  SIGLA_SERVINSPEC = :SIGLA_SERVINSPEC, '
+      '  NUM_SERVINSPEC = :NUM_SERVINSPEC,'
+      '  CTB = :CTB,'
+      '  NR_FONECELULAR = :NR_FONECELULAR,'
+      '  ID_USU_SOLICITANTE = :ID_USU_SOLICITANTE,'
+      '  FL_RESGATADO = :FL_RESGATADO, '
+      '  ID_USUARIO_RESG = :ID_USUARIO_RESG,'
+      '  OP_SIMPLES_NACIONAL = :OP_SIMPLES_NACIONAL,'
+      '  FL_FUNCIONARIO = :FL_FUNCIONARIO,'
+      '  FL_PRIORIDADE = :FL_PRIORIDADE,'
+      '  CO_MOTIVOINATIVACAO = :CO_MOTIVOINATIVACAO,'
+      '  LONGITUDE = :LONGITUDE,'
+      '  LATITUDE = :LATITUDE,'
+      '  ID_USUASIST = :ID_USUASIST'
+      'WHERE'
+      '  ID_CLIENTE = :OLD_ID_CLIENTE')
     SQLRefresh.Strings = (
       'WHERE'
       '  ID_CLIENTE = :ID_CLIENTE')
+    SQLLock.Strings = (
+      'SELECT * FROM cliente'
+      'WHERE'
+      '  ID_CLIENTE = :ID_CLIENTE'
+      'FOR UPDATE NOWAIT')
     Session = FrmPrincipal.DB
     SQL.Strings = (
       
@@ -11743,8 +11269,8 @@ object FrmClientes: TFrmClientes
       'ORDER BY CLIENTE.ID_CLIENTE')
     FetchAll = True
     CachedUpdates = True
-    Left = 680
-    Top = 112
+    Left = 72
+    Top = 40
     ParamData = <
       item
         DataType = ftUnknown
@@ -12159,6 +11685,575 @@ object FrmClientes: TFrmClientes
     object OQry_ClieLATITUDE: TStringField
       FieldName = 'LATITUDE'
       Size = 80
+    end
+  end
+  object QryCliEnd: TSmartQuery
+    KeyFields = 'id_endeclie'
+    KeySequence = 'ID_ENDECLIE'
+    SQLInsert.Strings = (
+      'INSERT INTO cliente_endereco'
+      
+        '  (EMPRESA, FILIAL, ID_ENDECLIE, ID_CLIENTE, ID_TIPOLOGR, NM_LOG' +
+        'RENDECLIE, NR_LOGRENDECLIE, GN_COMPENDECLIE, ID_BAIRRO, NR_CEPEN' +
+        'DECLIE, NR_CAIXPOSTENDECLIE, NR_CEPCAIXPOSTENDECLIE, FL_ENTRENDE' +
+        'CLIE, FL_COBRENDECLIE, FL_ENTRPADRENDECLIE, FL_COBRPADRENDECLIE,' +
+        ' FL_LOCAPADRENDECLIE, ID_REGILOGI, ID_SUBRLOGI, ID_FORNECEDOR_TR' +
+        'ANSPORTADOR, FX_ENDECLIE, ID_REGISUBRLOGI, LATITUDE, LONGITUDE)'
+      'VALUES'
+      
+        '  (:EMPRESA, :FILIAL, :ID_ENDECLIE, :ID_CLIENTE, :ID_TIPOLOGR, :' +
+        'NM_LOGRENDECLIE, :NR_LOGRENDECLIE, :GN_COMPENDECLIE, :ID_BAIRRO,' +
+        ' :NR_CEPENDECLIE, :NR_CAIXPOSTENDECLIE, :NR_CEPCAIXPOSTENDECLIE,' +
+        ' :FL_ENTRENDECLIE, :FL_COBRENDECLIE, :FL_ENTRPADRENDECLIE, :FL_C' +
+        'OBRPADRENDECLIE, :FL_LOCAPADRENDECLIE, :ID_REGILOGI, :ID_SUBRLOG' +
+        'I, :ID_FORNECEDOR_TRANSPORTADOR, :FX_ENDECLIE, :ID_REGISUBRLOGI,' +
+        ' :LATITUDE, :LONGITUDE)')
+    SQLDelete.Strings = (
+      'DELETE FROM cliente_endereco'
+      'WHERE'
+      '  ID_ENDECLIE = :ID_ENDECLIE')
+    SQLUpdate.Strings = (
+      'UPDATE cliente_endereco'
+      'SET'
+      '  EMPRESA = :EMPRESA,'
+      '  FILIAL = :FILIAL,'
+      '  ID_ENDECLIE = :ID_ENDECLIE,'
+      '  ID_CLIENTE = :ID_CLIENTE,'
+      '  ID_TIPOLOGR = :ID_TIPOLOGR,'
+      '  NM_LOGRENDECLIE = :NM_LOGRENDECLIE,'
+      '  NR_LOGRENDECLIE = :NR_LOGRENDECLIE,'
+      '  GN_COMPENDECLIE = :GN_COMPENDECLIE,'
+      '  ID_BAIRRO = :ID_BAIRRO,'
+      '  NR_CEPENDECLIE = :NR_CEPENDECLIE,'
+      '  NR_CAIXPOSTENDECLIE = :NR_CAIXPOSTENDECLIE,'
+      '  NR_CEPCAIXPOSTENDECLIE = :NR_CEPCAIXPOSTENDECLIE,'
+      '  FL_ENTRENDECLIE = :FL_ENTRENDECLIE,'
+      '  FL_COBRENDECLIE = :FL_COBRENDECLIE,'
+      '  FL_ENTRPADRENDECLIE = :FL_ENTRPADRENDECLIE,'
+      '  FL_COBRPADRENDECLIE = :FL_COBRPADRENDECLIE,'
+      '  FL_LOCAPADRENDECLIE = :FL_LOCAPADRENDECLIE,'
+      '  ID_REGILOGI = :ID_REGILOGI,'
+      '  ID_SUBRLOGI = :ID_SUBRLOGI,'
+      '  ID_FORNECEDOR_TRANSPORTADOR = :ID_FORNECEDOR_TRANSPORTADOR,'
+      '  FX_ENDECLIE = :FX_ENDECLIE,'
+      '  ID_REGISUBRLOGI = :ID_REGISUBRLOGI,'
+      '  LATITUDE = :LATITUDE,'
+      '  LONGITUDE = :LONGITUDE'
+      'WHERE'
+      '  ID_ENDECLIE = :OLD_ID_ENDECLIE')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  ID_ENDECLIE = :ID_ENDECLIE')
+    SQLLock.Strings = (
+      'SELECT * FROM cliente_endereco'
+      'WHERE'
+      '  ID_ENDECLIE = :ID_ENDECLIE'
+      'FOR UPDATE NOWAIT')
+    Session = FrmPrincipal.DB
+    SQL.Strings = (
+      'SELECT   distinct'
+      '  cliente_endereco.empresa,'
+      '  cliente_endereco.filial,'
+      '  cliente_endereco.id_endeclie,'
+      '  cliente_endereco.id_cliente,'
+      '  cliente_endereco.id_tipologr,'
+      '  cliente_endereco.nm_logrendeclie,'
+      '  cliente_endereco.nr_logrendeclie,'
+      '  cliente_endereco.gn_compendeclie,'
+      '  cliente_endereco.id_bairro,'
+      '  cliente_endereco.nr_cependeclie,'
+      '  cliente_endereco.nr_caixpostendeclie,'
+      '  cliente_endereco.nr_cepcaixpostendeclie,'
+      '  cliente_endereco.fl_entrendeclie,'
+      '  cliente_endereco.fl_cobrendeclie,'
+      '  cliente_endereco.fl_entrpadrendeclie,'
+      '  cliente_endereco.fl_cobrpadrendeclie,'
+      '  cliente_endereco.fl_locapadrendeclie,'
+      '  cliente_endereco.id_regilogi,'
+      '  cliente_endereco.id_subrlogi,'
+      '  cliente_endereco.id_fornecedor_transportador,'
+      '  cliente_endereco.fx_endeclie,'
+      '  cliente_endereco.id_regisubrlogi,'
+      '  logistica_regiao.nm_regilogi,'
+      '  logistica_subregiao.nm_subrlogi,'
+      '  bairro.nm_bairro,'
+      '  cidade.nm_cidade,'
+      '  cidade.id_cidade,'
+      '  pais.nm_pais,'
+      '  estado.sg_estado,'
+      '  regiao_geografica.nm_regigeog,'
+      '  logradouro_tipo.sg_tipologr,'
+      '  cliente_endereco.LATITUDE,'
+      '  cliente_endereco.LONGITUDE'
+      'FROM'
+      '  cliente_endereco,'
+      '  logistica_regiao,'
+      '  logistica_subregiao, '
+      '  bairro,'
+      '  cidade,'
+      '  pais,'
+      '  estado,'
+      '  regiao_geografica,'
+      '  logradouro_tipo'
+      'WHERE'
+      '  bairro.id_bairro = cliente_endereco.id_bairro    And'
+      
+        '  logradouro_tipo.ID_tipologr = cliente_endereco.ID_tipologr AND' +
+        ' '
+      '  estado.id_regigeog  =  regiao_geografica.id_regigeog(+) and'
+      '  ESTADO.ID_PAIS = PAIS.ID_PAIS AND'
+      '  CIDADE.ID_ESTADO = ESTADO.ID_ESTADO  AND'
+      '  bairro.id_cidade = cidade.id_cidade and'
+      
+        '  logistica_regiao.id_regilogi(+) = cliente_endereco.id_regilogi' +
+        '   AND'
+      
+        '  logistica_subregiao.id_subrlogi(+) = cliente_endereco.id_subrl' +
+        'ogi  AND'
+      '  cliente_endereco.id_cliente = :id_cliente '
+      ''
+      ''
+      ''
+      ''
+      ''
+      '')
+    MasterFields = 'ID_CLIENTE'
+    MasterSource = ODtS_Clie
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 240
+    Top = 40
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'id_cliente'
+        Value = nil
+      end>
+    object QryCliEndEMPRESA: TStringField
+      FieldName = 'EMPRESA'
+      Size = 2
+    end
+    object QryCliEndFILIAL: TIntegerField
+      FieldName = 'FILIAL'
+    end
+    object QryCliEndID_ENDECLIE: TFloatField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'ID_ENDECLIE'
+    end
+    object QryCliEndID_CLIENTE: TFloatField
+      FieldName = 'ID_CLIENTE'
+    end
+    object QryCliEndID_TIPOLOGR: TFloatField
+      DisplayLabel = 'Tipo Logr.'
+      FieldName = 'ID_TIPOLOGR'
+    end
+    object QryCliEndNM_LOGRENDECLIE: TStringField
+      DisplayLabel = 'Nome do Logradouro'
+      FieldName = 'NM_LOGRENDECLIE'
+      Size = 40
+    end
+    object QryCliEndNR_LOGRENDECLIE: TStringField
+      DisplayLabel = 'Numero'
+      FieldName = 'NR_LOGRENDECLIE'
+      Size = 8
+    end
+    object QryCliEndGN_COMPENDECLIE: TStringField
+      DisplayLabel = 'Complemento'
+      FieldName = 'GN_COMPENDECLIE'
+    end
+    object QryCliEndID_BAIRRO: TFloatField
+      FieldName = 'ID_BAIRRO'
+    end
+    object QryCliEndNR_CEPENDECLIE: TStringField
+      FieldName = 'NR_CEPENDECLIE'
+      Size = 8
+    end
+    object QryCliEndNR_CAIXPOSTENDECLIE: TStringField
+      FieldName = 'NR_CAIXPOSTENDECLIE'
+      Size = 10
+    end
+    object QryCliEndNR_CEPCAIXPOSTENDECLIE: TStringField
+      FieldName = 'NR_CEPCAIXPOSTENDECLIE'
+      Size = 8
+    end
+    object QryCliEndFL_ENTRENDECLIE: TStringField
+      DisplayLabel = 'Entr.'
+      FieldName = 'FL_ENTRENDECLIE'
+      Size = 1
+    end
+    object QryCliEndFL_COBRENDECLIE: TStringField
+      DisplayLabel = 'Cobr.'
+      FieldName = 'FL_COBRENDECLIE'
+      Size = 1
+    end
+    object QryCliEndFL_ENTRPADRENDECLIE: TStringField
+      FieldName = 'FL_ENTRPADRENDECLIE'
+      Size = 1
+    end
+    object QryCliEndFL_COBRPADRENDECLIE: TStringField
+      FieldName = 'FL_COBRPADRENDECLIE'
+      Size = 1
+    end
+    object QryCliEndFL_LOCAPADRENDECLIE: TStringField
+      DisplayLabel = 'Local'
+      FieldName = 'FL_LOCAPADRENDECLIE'
+      Size = 1
+    end
+    object QryCliEndID_REGILOGI: TFloatField
+      FieldName = 'ID_REGILOGI'
+    end
+    object QryCliEndID_SUBRLOGI: TFloatField
+      FieldName = 'ID_SUBRLOGI'
+    end
+    object QryCliEndID_FORNECEDOR_TRANSPORTADOR: TFloatField
+      FieldName = 'ID_FORNECEDOR_TRANSPORTADOR'
+    end
+    object QryCliEndFX_ENDECLIE: TStringField
+      FieldName = 'FX_ENDECLIE'
+      Size = 1
+    end
+    object QryCliEndID_REGISUBRLOGI: TFloatField
+      FieldName = 'ID_REGISUBRLOGI'
+    end
+    object QryCliEndNM_REGILOGI: TStringField
+      FieldName = 'NM_REGILOGI'
+      Size = 40
+    end
+    object QryCliEndNM_BAIRRO: TStringField
+      DisplayLabel = 'Bairro'
+      FieldName = 'NM_BAIRRO'
+      Size = 30
+    end
+    object QryCliEndNM_CIDADE: TStringField
+      FieldName = 'NM_CIDADE'
+      Size = 40
+    end
+    object QryCliEndID_CIDADE: TFloatField
+      FieldName = 'ID_CIDADE'
+    end
+    object QryCliEndNM_PAIS: TStringField
+      FieldName = 'NM_PAIS'
+      Size = 40
+    end
+    object QryCliEndNM_SUBRLOGI: TStringField
+      FieldName = 'NM_SUBRLOGI'
+      Size = 40
+    end
+    object QryCliEndSG_ESTADO: TStringField
+      FieldName = 'SG_ESTADO'
+      Size = 10
+    end
+    object QryCliEndNM_REGIGEOG: TStringField
+      FieldName = 'NM_REGIGEOG'
+      Size = 30
+    end
+    object QryCliEndSG_TIPOLOGR: TStringField
+      DisplayLabel = 'Tipo Logr.'
+      FieldName = 'SG_TIPOLOGR'
+      Size = 10
+    end
+    object QryCliEndLATITUDE: TStringField
+      FieldName = 'LATITUDE'
+      Size = 80
+    end
+    object QryCliEndLONGITUDE: TStringField
+      FieldName = 'LONGITUDE'
+      Size = 80
+    end
+  end
+  object QryClieBloq: TSmartQuery
+    KeyFields = 'ID_BLOQCLIE'
+    KeySequence = 'ID_BLOQCLIE'
+    SQLInsert.Strings = (
+      'INSERT INTO cliente_bloqueio'
+      
+        '  (EMPRESA, FILIAL, ID_BLOQCLIE, ID_CLIENTE, ID_MOTIBLOQ, ID_USU' +
+        'ASIST, DT_BLOQCLIE, FL_TIPOBLOQCLIE, FX_BLOQCLIE)'
+      'VALUES'
+      
+        '  (:EMPRESA, :FILIAL, :ID_BLOQCLIE, :ID_CLIENTE, :ID_MOTIBLOQ, :' +
+        'ID_USUASIST, :DT_BLOQCLIE, :FL_TIPOBLOQCLIE, :FX_BLOQCLIE)')
+    SQLDelete.Strings = (
+      'DELETE FROM cliente_bloqueio'
+      'WHERE'
+      '  ID_BLOQCLIE = :ID_BLOQCLIE')
+    SQLUpdate.Strings = (
+      'UPDATE cliente_bloqueio'
+      'SET'
+      '  EMPRESA = :EMPRESA,'
+      '  FILIAL = :FILIAL,'
+      '  ID_BLOQCLIE = :ID_BLOQCLIE,'
+      '  ID_CLIENTE = :ID_CLIENTE,'
+      '  ID_MOTIBLOQ = :ID_MOTIBLOQ,'
+      '  ID_USUASIST = :ID_USUASIST,'
+      '  DT_BLOQCLIE = :DT_BLOQCLIE,'
+      '  FL_TIPOBLOQCLIE = :FL_TIPOBLOQCLIE,'
+      '  FX_BLOQCLIE = :FX_BLOQCLIE'
+      'WHERE'
+      '  ID_BLOQCLIE = :OLD_ID_BLOQCLIE')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  ID_BLOQCLIE = :ID_BLOQCLIE')
+    SQLLock.Strings = (
+      'SELECT * FROM cliente_bloqueio'
+      'WHERE'
+      '  ID_BLOQCLIE = :ID_BLOQCLIE'
+      'FOR UPDATE NOWAIT')
+    Session = FrmPrincipal.DB
+    SQL.Strings = (
+      'select '
+      '  cliente_bloqueio.empresa,'
+      '  cliente_bloqueio.filial,'
+      '  cliente_bloqueio.id_bloqclie,'
+      '  cliente_bloqueio.id_cliente,'
+      '  cliente_bloqueio.id_motibloq,'
+      '  cliente_bloqueio.id_usuasist,'
+      '  cliente_bloqueio.dt_bloqclie,'
+      '  cliente_bloqueio.fl_tipobloqclie,'
+      '  bloqueio_motivo.nm_motibloq,'
+      '  cliente_bloqueio.fx_bloqclie,'
+      '  sct_usuario.nome_usuario  '
+      'from'
+      '  cliente_bloqueio,bloqueio_motivo,sct_usuario  '
+      'where'
+      
+        '   bloqueio_motivo.id_motibloq(+) =cliente_bloqueio.id_motibloq ' +
+        'and'
+      '   sct_usuario.id_usuario = cliente_bloqueio.id_usuasist and'
+      '   cliente_bloqueio.id_cliente= :id_cliente'
+      '')
+    MasterFields = 'ID_CLIENTE'
+    DetailFields = 'ID_CLIENTE'
+    MasterSource = ODtS_Clie
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 352
+    Top = 40
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'id_cliente'
+        Value = nil
+      end>
+    object QryClieBloqEMPRESA: TStringField
+      FieldName = 'EMPRESA'
+      Required = True
+      Size = 2
+    end
+    object QryClieBloqFILIAL: TIntegerField
+      FieldName = 'FILIAL'
+      Required = True
+    end
+    object QryClieBloqID_BLOQCLIE: TFloatField
+      AutoGenerateValue = arAutoInc
+      DisplayLabel = 'Cod. Bloqueio'
+      FieldName = 'ID_BLOQCLIE'
+      Required = True
+    end
+    object QryClieBloqID_CLIENTE: TFloatField
+      FieldName = 'ID_CLIENTE'
+      Required = True
+    end
+    object QryClieBloqID_MOTIBLOQ: TFloatField
+      FieldName = 'ID_MOTIBLOQ'
+    end
+    object QryClieBloqID_USUASIST: TFloatField
+      FieldName = 'ID_USUASIST'
+      Required = True
+      DisplayFormat = 'Usu'#225'rio'
+    end
+    object QryClieBloqDT_BLOQCLIE: TDateTimeField
+      DisplayLabel = 'Data do Bloqueio'
+      FieldName = 'DT_BLOQCLIE'
+      Required = True
+    end
+    object QryClieBloqFL_TIPOBLOQCLIE: TStringField
+      DisplayLabel = 'Tipo'
+      FieldName = 'FL_TIPOBLOQCLIE'
+      Required = True
+      Size = 1
+    end
+    object QryClieBloqFX_BLOQCLIE: TStringField
+      FieldName = 'FX_BLOQCLIE'
+      Required = True
+      Size = 1
+    end
+    object QryClieBloqNM_MOTIBLOQ: TStringField
+      DisplayLabel = 'Motivo'
+      FieldName = 'NM_MOTIBLOQ'
+      Size = 40
+    end
+    object QryClieBloqNOME_USUARIO: TStringField
+      DisplayLabel = 'Usuario'
+      FieldName = 'NOME_USUARIO'
+      Size = 40
+    end
+  end
+  object QryVendedor: TSmartQuery
+    KeyFields = 'ID_VENDCLIE'
+    KeySequence = 'ID_VENDCLIE'
+    SQLInsert.Strings = (
+      'INSERT INTO cliente_vendedor'
+      
+        '  (EMPRESA, FILIAL, ID_VENDCLIE, ID_CLIENTE, ID_VENDEDOR, FL_PAD' +
+        'RVENDCLIE, FL_COMIVENDCLIE, PC_COMIVENDCLIE, FX_VENDCLIE, FL_REL' +
+        'ACIONADO, ID_VENDEDOR_REL)'
+      'VALUES'
+      
+        '  (:EMPRESA, :FILIAL, :ID_VENDCLIE, :ID_CLIENTE, :ID_VENDEDOR, :' +
+        'FL_PADRVENDCLIE, :FL_COMIVENDCLIE, :PC_COMIVENDCLIE, :FX_VENDCLI' +
+        'E, :FL_RELACIONADO, :ID_VENDEDOR_REL)')
+    SQLDelete.Strings = (
+      'DELETE FROM cliente_vendedor'
+      'WHERE'
+      '  ID_VENDCLIE = :ID_VENDCLIE')
+    SQLUpdate.Strings = (
+      'UPDATE cliente_vendedor'
+      'SET'
+      '  EMPRESA = :EMPRESA,'
+      '  FILIAL = :FILIAL,'
+      '  ID_VENDCLIE = :ID_VENDCLIE,'
+      '  ID_CLIENTE = :ID_CLIENTE,'
+      '  ID_VENDEDOR = :ID_VENDEDOR,'
+      '  FL_PADRVENDCLIE = :FL_PADRVENDCLIE,'
+      '  FL_COMIVENDCLIE = :FL_COMIVENDCLIE,'
+      '  PC_COMIVENDCLIE = :PC_COMIVENDCLIE,'
+      '  FX_VENDCLIE = :FX_VENDCLIE,'
+      '  FL_RELACIONADO = :FL_RELACIONADO,'
+      '  ID_VENDEDOR_REL = :ID_VENDEDOR_REL'
+      'WHERE'
+      '  ID_VENDCLIE = :OLD_ID_VENDCLIE')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  ID_VENDCLIE = :ID_VENDCLIE')
+    SQLLock.Strings = (
+      'SELECT * FROM cliente_vendedor'
+      'WHERE'
+      '  ID_VENDCLIE = :ID_VENDCLIE'
+      'FOR UPDATE NOWAIT')
+    Session = FrmPrincipal.DB
+    SQL.Strings = (
+      'select '
+      '  cliente_vendedor.filial,'
+      '  cliente_vendedor.empresa,'
+      '  cliente_vendedor.id_vendclie,'
+      '  cliente_vendedor.id_cliente,'
+      '  cliente_vendedor.id_vendedor,'
+      '  cliente_vendedor.fl_padrvendclie,'
+      '  cliente_vendedor.fl_comivendclie,'
+      '  cliente_vendedor.pc_comivendclie,'
+      '  cliente_vendedor.fx_vendclie,'
+      '  vendedor.nm_vendedor,'
+      '  vendedor.nm_fantvend,'
+      '  vendedor.nm_reduvend,'
+      '  vendedor.fl_comivend,'
+      '  vendedor.pc_comivend,'
+      '  cliente_vendedor.FL_RELACIONADO,'
+      '  cliente_vendedor.ID_VENDEDOR_REL,'
+      '  venrel.nm_vendedor as nm_venrel'
+      'from'
+      '  cliente_vendedor,'
+      '  vendedor,'
+      '  vendedor venrel,'
+      '  cliente '
+      'WHERE'
+      '   cliente_vendedor.id_vendedor = vendedor.id_vendedor and'
+      '   cliente_vendedor.id_cliente = cliente.id_cliente and'
+      '   venrel.id_vendedor(+) = cliente_vendedor.id_vendedor_rel and'
+      '   cliente_vendedor.id_cliente =:id_cliente '
+      '  '
+      ' ORDER BY cliente_vendedor.id_vendedor')
+    MasterFields = 'ID_CLIENTE'
+    MasterSource = ODtS_Clie
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 736
+    Top = 40
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'id_cliente'
+        Value = nil
+      end>
+    object QryVendedorID_CLIENTE: TFloatField
+      FieldName = 'ID_CLIENTE'
+      Required = True
+    end
+    object QryVendedorID_VENDEDOR: TFloatField
+      AutoGenerateValue = arAutoInc
+      DisplayLabel = 'Cod. Vendedor'
+      FieldName = 'ID_VENDEDOR'
+      Required = True
+    end
+    object QryVendedorFL_PADRVENDCLIE: TStringField
+      FieldName = 'FL_PADRVENDCLIE'
+      Size = 1
+    end
+    object QryVendedorFL_COMIVENDCLIE: TStringField
+      FieldName = 'FL_COMIVENDCLIE'
+      Size = 1
+    end
+    object QryVendedorPC_COMIVENDCLIE: TFloatField
+      FieldName = 'PC_COMIVENDCLIE'
+      DisplayFormat = '#,##0.00'
+    end
+    object QryVendedorFX_VENDCLIE: TStringField
+      FieldName = 'FX_VENDCLIE'
+      Required = True
+      Size = 1
+    end
+    object QryVendedorNM_VENDEDOR: TStringField
+      DisplayLabel = 'Nome Vendedor'
+      FieldName = 'NM_VENDEDOR'
+      Size = 40
+    end
+    object QryVendedorNM_FANTVEND: TStringField
+      DisplayLabel = 'Nome Fantasia'
+      FieldName = 'NM_FANTVEND'
+      Size = 40
+    end
+    object QryVendedorNM_REDUVEND: TStringField
+      DisplayLabel = 'Nome Reduzido'
+      FieldName = 'NM_REDUVEND'
+      Size = 15
+    end
+    object QryVendedorFL_COMIVEND: TStringField
+      FieldName = 'FL_COMIVEND'
+      Size = 1
+    end
+    object QryVendedorPC_COMIVEND: TFloatField
+      FieldName = 'PC_COMIVEND'
+    end
+    object QryVendedorFILIAL: TIntegerField
+      FieldName = 'FILIAL'
+      Required = True
+    end
+    object QryVendedorEMPRESA: TStringField
+      FieldName = 'EMPRESA'
+      Required = True
+      Size = 2
+    end
+    object QryVendedorID_VENDCLIE: TFloatField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'ID_VENDCLIE'
+      Required = True
+    end
+    object QryVendedorFL_RELACIONADO: TStringField
+      FieldName = 'FL_RELACIONADO'
+      Size = 1
+    end
+    object QryVendedorID_VENDEDOR_REL: TFloatField
+      FieldName = 'ID_VENDEDOR_REL'
+    end
+    object QryVendedorNM_VENREL: TStringField
+      FieldName = 'NM_VENREL'
+      Size = 40
     end
   end
 end

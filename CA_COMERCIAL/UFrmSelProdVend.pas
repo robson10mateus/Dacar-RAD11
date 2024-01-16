@@ -283,19 +283,19 @@ begin
   CASE SELPE OF
     1:BEGIN
       FrmPesqTPV:=TFrmPesqTPV.Create(Self);
-      FrmPesqTPV.Show;
+      FrmPesqTPV.ShowModal;
     END;
     2:BEGIN
       FrmPesqVend:=TFrmPesqVend.Create(Self);
-      FrmPesqVend.Show;
+      FrmPesqVend.ShowModal;
     END;
     3:BEGIN
       FrmPesqCliente:=TFrmPesqCliente.Create(Self);
-      FrmPesqCliente.Show;
+      FrmPesqCliente.ShowModal;
     END;
     5:BEGIN
       frmConsultaProdutos:=TfrmConsultaProdutos.Create(Self);
-      frmConsultaProdutos.Show;
+      frmConsultaProdutos.ShowModal;
     END;
   end;
 

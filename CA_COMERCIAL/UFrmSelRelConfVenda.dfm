@@ -498,7 +498,7 @@ object FrmSelRelConfVenda: TFrmSelRelConfVenda
   object pnlBotoes: TPanel
     Left = 0
     Top = 0
-    Width = 1112
+    Width = 1116
     Height = 45
     Align = alTop
     Color = clWindow
@@ -511,6 +511,7 @@ object FrmSelRelConfVenda: TFrmSelRelConfVenda
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 1112
     object Sb_Sair: TSpeedButton
       Left = 40
       Top = 5
@@ -683,8 +684,8 @@ object FrmSelRelConfVenda: TFrmSelRelConfVenda
   object PageControl1: TPageControl
     Left = 0
     Top = 45
-    Width = 1112
-    Height = 379
+    Width = 1116
+    Height = 380
     ActivePage = TabSheet1
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -695,6 +696,8 @@ object FrmSelRelConfVenda: TFrmSelRelConfVenda
     Font.Style = []
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 1112
+    ExplicitHeight = 379
     object TabSheet1: TTabSheet
       Caption = ' Op'#231#245'es de Filtro '
       object Label7: TLabel
@@ -747,7 +750,7 @@ object FrmSelRelConfVenda: TFrmSelRelConfVenda
         Columns = 2
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 15
+        Font.Height = 13
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = [fsBold]
@@ -1036,10 +1039,10 @@ object FrmSelRelConfVenda: TFrmSelRelConfVenda
         OnClick = BtAtivarClick
       end
       object BPESQ: TBitBtn
-        Left = 615
-        Top = 55
+        Left = 610
+        Top = 56
         Width = 22
-        Height = 20
+        Height = 23
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = 16

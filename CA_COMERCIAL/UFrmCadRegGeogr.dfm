@@ -31,6 +31,8 @@ object FrmCadRegGeog: TFrmCadRegGeog
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 643
+    ExplicitHeight = 387
     object ToolBar1: TToolBar
       Left = 1
       Top = 1
@@ -47,7 +49,7 @@ object FrmCadRegGeog: TFrmCadRegGeog
       Font.Style = []
       ParentFont = False
       TabOrder = 0
-      ExplicitWidth = 658
+      ExplicitWidth = 641
       object SB_PRIMEIRO: TSpeedButton
         Left = 0
         Top = 0
@@ -1990,6 +1992,8 @@ object FrmCadRegGeog: TFrmCadRegGeog
       Font.Style = []
       ParentFont = False
       TabOrder = 1
+      ExplicitWidth = 641
+      ExplicitHeight = 345
       object TabCriterio: TTabSheet
         Caption = 'Criterios'
         OnShow = TabCriterioShow
@@ -2554,105 +2558,6 @@ object FrmCadRegGeog: TFrmCadRegGeog
       end
     end
   end
-  object QryRegGeogr: TOraQuery
-    KeyFields = 'ID_REGIGEOG'
-    KeySequence = 'ID_REGIGEOG'
-    SQLInsert.Strings = (
-      'INSERT INTO regiao_geografica'
-      
-        '  (EMPRESA, FILIAL, ID_REGIGEOG, NM_REGIGEOG, SG_REGIGEOG, ID_PA' +
-        'IS, FX_REGIGEOG)'
-      'VALUES'
-      
-        '  (:EMPRESA, :FILIAL, :ID_REGIGEOG, :NM_REGIGEOG, :SG_REGIGEOG, ' +
-        ':ID_PAIS, :FX_REGIGEOG)')
-    SQLDelete.Strings = (
-      'DELETE FROM regiao_geografica'
-      'WHERE'
-      '  ID_REGIGEOG = :ID_REGIGEOG')
-    SQLUpdate.Strings = (
-      'UPDATE regiao_geografica'
-      'SET'
-      '  EMPRESA = :EMPRESA,'
-      '  FILIAL = :FILIAL,'
-      '  ID_REGIGEOG = :ID_REGIGEOG,'
-      '  NM_REGIGEOG = :NM_REGIGEOG,'
-      '  SG_REGIGEOG = :SG_REGIGEOG,'
-      '  ID_PAIS = :ID_PAIS,'
-      '  FX_REGIGEOG = :FX_REGIGEOG'
-      'WHERE'
-      '  ID_REGIGEOG = :OLD_ID_REGIGEOG')
-    SQLLock.Strings = (
-      'SELECT * FROM regiao_geografica'
-      'WHERE'
-      '  ID_REGIGEOG = :ID_REGIGEOG'
-      'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  ID_REGIGEOG = :ID_REGIGEOG')
-    LocalUpdate = True
-    SQL.Strings = (
-      'SELECT'
-      '   regiao_geografica.empresa,'
-      '   regiao_geografica.filial,'
-      '   regiao_geografica.id_regigeog,'
-      '   regiao_geografica.nm_regigeog,'
-      '   regiao_geografica.sg_regigeog,'
-      '   regiao_geografica.id_pais,'
-      '   regiao_geografica.fx_regigeog,'
-      '   pais.nm_pais'
-      'FROM'
-      '   regiao_geografica,'
-      '   pais'
-      'WHERE'
-      '   regiao_geografica.id_pais = pais.id_pais'
-      ''
-      '')
-    FetchAll = True
-    CachedUpdates = True
-    Left = 374
-    Top = 190
-    object QryRegGeogrEMPRESA: TStringField
-      FieldName = 'EMPRESA'
-      Required = True
-      Size = 2
-    end
-    object QryRegGeogrFILIAL: TIntegerField
-      FieldName = 'FILIAL'
-      Required = True
-    end
-    object QryRegGeogrID_REGIGEOG: TFloatField
-      AutoGenerateValue = arAutoInc
-      DisplayLabel = 'C'#243'digo'
-      FieldName = 'ID_REGIGEOG'
-    end
-    object QryRegGeogrNM_REGIGEOG: TStringField
-      DisplayLabel = 'Nome da Regi'#227'o Geogr'#225'fica'
-      FieldName = 'NM_REGIGEOG'
-      Required = True
-      Size = 30
-    end
-    object QryRegGeogrSG_REGIGEOG: TStringField
-      DisplayLabel = 'Sigla'
-      FieldName = 'SG_REGIGEOG'
-      Size = 3
-    end
-    object QryRegGeogrID_PAIS: TFloatField
-      FieldName = 'ID_PAIS'
-      Required = True
-    end
-    object QryRegGeogrFX_REGIGEOG: TStringField
-      FieldName = 'FX_REGIGEOG'
-      Required = True
-      Size = 1
-    end
-    object QryRegGeogrNM_PAIS: TStringField
-      DisplayLabel = 'Pa'#237's'
-      FieldName = 'NM_PAIS'
-      Required = True
-      Size = 40
-    end
-  end
   object DtSrcRegGeog: TOraDataSource
     DataSet = QryRegGeogr
     Left = 422
@@ -2717,5 +2622,100 @@ object FrmCadRegGeog: TFrmCadRegGeog
     DataSet = QryPais
     Left = 358
     Top = 86
+  end
+  object QryRegGeogr: TSmartQuery
+    KeyFields = 'ID_REGIGEOG'
+    KeySequence = 'ID_REGIGEOG'
+    SQLInsert.Strings = (
+      'INSERT INTO regiao_geografica'
+      
+        '  (EMPRESA, FILIAL, ID_REGIGEOG, NM_REGIGEOG, SG_REGIGEOG, ID_PA' +
+        'IS, FX_REGIGEOG)'
+      'VALUES'
+      
+        '  (:EMPRESA, :FILIAL, :ID_REGIGEOG, :NM_REGIGEOG, :SG_REGIGEOG, ' +
+        ':ID_PAIS, :FX_REGIGEOG)')
+    SQLDelete.Strings = (
+      'DELETE FROM regiao_geografica'
+      'WHERE'
+      '  ID_REGIGEOG = :ID_REGIGEOG')
+    SQLUpdate.Strings = (
+      'UPDATE regiao_geografica'
+      'SET'
+      '  EMPRESA = :EMPRESA,'
+      '  FILIAL = :FILIAL,'
+      '  ID_REGIGEOG = :ID_REGIGEOG,'
+      '  NM_REGIGEOG = :NM_REGIGEOG,'
+      '  SG_REGIGEOG = :SG_REGIGEOG,'
+      '  ID_PAIS = :ID_PAIS,'
+      '  FX_REGIGEOG = :FX_REGIGEOG'
+      'WHERE'
+      '  ID_REGIGEOG = :OLD_ID_REGIGEOG')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  ID_REGIGEOG = :ID_REGIGEOG')
+    SQLLock.Strings = (
+      'SELECT * FROM regiao_geografica'
+      'WHERE'
+      '  ID_REGIGEOG = :ID_REGIGEOG'
+      'FOR UPDATE NOWAIT')
+    SQL.Strings = (
+      'SELECT'
+      '   regiao_geografica.empresa,'
+      '   regiao_geografica.filial,'
+      '   regiao_geografica.id_regigeog,'
+      '   regiao_geografica.nm_regigeog,'
+      '   regiao_geografica.sg_regigeog,'
+      '   regiao_geografica.id_pais,'
+      '   regiao_geografica.fx_regigeog,'
+      '   pais.nm_pais'
+      'FROM'
+      '   regiao_geografica,'
+      '   pais'
+      'WHERE'
+      '   regiao_geografica.id_pais = pais.id_pais'
+      ''
+      '')
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 376
+    Top = 192
+    object QryRegGeogrEMPRESA: TStringField
+      FieldName = 'EMPRESA'
+      Required = True
+      Size = 2
+    end
+    object QryRegGeogrFILIAL: TIntegerField
+      FieldName = 'FILIAL'
+      Required = True
+    end
+    object QryRegGeogrID_REGIGEOG: TFloatField
+      FieldName = 'ID_REGIGEOG'
+      Required = True
+    end
+    object QryRegGeogrNM_REGIGEOG: TStringField
+      FieldName = 'NM_REGIGEOG'
+      Required = True
+      Size = 30
+    end
+    object QryRegGeogrSG_REGIGEOG: TStringField
+      FieldName = 'SG_REGIGEOG'
+      Size = 3
+    end
+    object QryRegGeogrID_PAIS: TFloatField
+      FieldName = 'ID_PAIS'
+      Required = True
+    end
+    object QryRegGeogrFX_REGIGEOG: TStringField
+      FieldName = 'FX_REGIGEOG'
+      Required = True
+      Size = 1
+    end
+    object QryRegGeogrNM_PAIS: TStringField
+      FieldName = 'NM_PAIS'
+      Size = 40
+    end
   end
 end

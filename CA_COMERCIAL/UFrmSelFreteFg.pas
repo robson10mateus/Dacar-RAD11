@@ -395,7 +395,7 @@ procedure TFrmSelFreteFg.btnTranspClick(Sender: TObject);
 begin
   FrmOriPesq:=1;
   frmConsultaFornecedores:= TfrmConsultaFornecedores.Create(Self);
-  frmConsultaFornecedores.Show;
+  frmConsultaFornecedores.ShowModal;
 end;
 
 end.

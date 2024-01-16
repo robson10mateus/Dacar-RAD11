@@ -18,7 +18,7 @@ object frmLanctoPesoBalancaoCarga: TfrmLanctoPesoBalancaoCarga
   object pnlBotoes: TPanel
     Left = 0
     Top = 0
-    Width = 659
+    Width = 663
     Height = 45
     Align = alTop
     Color = clWindow
@@ -30,7 +30,7 @@ object frmLanctoPesoBalancaoCarga: TfrmLanctoPesoBalancaoCarga
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 426
+    ExplicitWidth = 659
     object btnConfimar: TBitBtn
       Left = 5
       Top = 5
@@ -453,8 +453,8 @@ object frmLanctoPesoBalancaoCarga: TfrmLanctoPesoBalancaoCarga
   object pnlCentral: TPanel
     Left = 0
     Top = 45
-    Width = 659
-    Height = 346
+    Width = 663
+    Height = 347
     Align = alClient
     Color = clWindow
     Font.Charset = DEFAULT_CHARSET
@@ -465,8 +465,8 @@ object frmLanctoPesoBalancaoCarga: TfrmLanctoPesoBalancaoCarga
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 426
-    ExplicitHeight = 150
+    ExplicitWidth = 659
+    ExplicitHeight = 346
     object lblNumCarga: TLabel
       Left = 10
       Top = 20
@@ -729,7 +729,12 @@ object frmLanctoPesoBalancaoCarga: TfrmLanctoPesoBalancaoCarga
       TabOrder = 8
     end
   end
-  object qryCarga: TOraQuery
+  object dtsCarga: TOraDataSource
+    DataSet = qryCarga
+    Left = 200
+    Top = 8
+  end
+  object qryCarga: TSmartQuery
     SQLUpdate.Strings = (
       'UPDATE EXPEDICAO_CARGA'
       'SET QT_PESOBALANCAO = :QT_PESOBALANCAO'
@@ -738,9 +743,10 @@ object frmLanctoPesoBalancaoCarga: TfrmLanctoPesoBalancaoCarga
     SQL.Strings = (
       'SELECT * FROM EXPEDICAO_CARGA'
       'WHERE ID_CARGEXPE = :ID_CARGEXPE')
-    FetchAll = True
     CachedUpdates = True
-    AfterCancel = qryCargaAfterCancel
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
     Left = 168
     Top = 8
     ParamData = <
@@ -877,10 +883,5 @@ object frmLanctoPesoBalancaoCarga: TfrmLanctoPesoBalancaoCarga
       FieldName = 'QT_PESOBALANCAO'
       DisplayFormat = '#########,###0.000'
     end
-  end
-  object dtsCarga: TOraDataSource
-    DataSet = qryCarga
-    Left = 200
-    Top = 8
   end
 end

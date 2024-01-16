@@ -30,6 +30,8 @@ object FrmCadTpLogr: TFrmCadTpLogr
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 643
+    ExplicitHeight = 387
     object PageControl1: TPageControl
       Left = 1
       Top = 41
@@ -44,6 +46,8 @@ object FrmCadTpLogr: TFrmCadTpLogr
       Font.Style = []
       ParentFont = False
       TabOrder = 0
+      ExplicitWidth = 641
+      ExplicitHeight = 345
       object TabCriterio: TTabSheet
         Caption = 'Criterios'
         OnShow = TabCriterioShow
@@ -558,7 +562,7 @@ object FrmCadTpLogr: TFrmCadTpLogr
       Font.Style = []
       ParentFont = False
       TabOrder = 1
-      ExplicitWidth = 659
+      ExplicitWidth = 641
       object SB_PRIMEIRO: TSpeedButton
         Left = 0
         Top = 0
@@ -1863,89 +1867,6 @@ object FrmCadTpLogr: TFrmCadTpLogr
       end
     end
   end
-  object QryCadTpLogr: TOraQuery
-    KeyFields = 'ID_TIPOLOGR'
-    KeySequence = 'ID_TIPOLOGR'
-    SQLInsert.Strings = (
-      'INSERT INTO logradouro_tipo'
-      
-        '  (EMPRESA, FILIAL, ID_TIPOLOGR, SG_TIPOLOGR, NM_TIPOLOGR, FX_TI' +
-        'POLOGR)'
-      'VALUES'
-      
-        '  (:EMPRESA, :FILIAL, :ID_TIPOLOGR, :SG_TIPOLOGR, :NM_TIPOLOGR, ' +
-        ':FX_TIPOLOGR)')
-    SQLDelete.Strings = (
-      'DELETE FROM logradouro_tipo'
-      'WHERE'
-      '  ID_TIPOLOGR = :ID_TIPOLOGR')
-    SQLUpdate.Strings = (
-      'UPDATE logradouro_tipo'
-      'SET'
-      '  EMPRESA = :EMPRESA,'
-      '  FILIAL = :FILIAL,'
-      '  ID_TIPOLOGR = :ID_TIPOLOGR,'
-      '  SG_TIPOLOGR = :SG_TIPOLOGR,'
-      '  NM_TIPOLOGR = :NM_TIPOLOGR,'
-      '  FX_TIPOLOGR = :FX_TIPOLOGR'
-      'WHERE'
-      '  ID_TIPOLOGR = :OLD_ID_TIPOLOGR')
-    SQLLock.Strings = (
-      'SELECT * FROM logradouro_tipo'
-      'WHERE'
-      '  ID_TIPOLOGR = :ID_TIPOLOGR'
-      'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  ID_TIPOLOGR = :ID_TIPOLOGR')
-    LocalUpdate = True
-    SQL.Strings = (
-      'SELECT '
-      '  logradouro_tipo.empresa,'
-      '  logradouro_tipo.filial,'
-      '  logradouro_tipo.id_tipologr,'
-      '  logradouro_tipo.sg_tipologr,'
-      '  logradouro_tipo.nm_tipologr,'
-      '  logradouro_tipo.fx_tipologr'
-      'FROM'
-      '  logradouro_tipo'
-      'ORDER BY logradouro_tipo.nm_tipologr')
-    FetchAll = True
-    CachedUpdates = True
-    Left = 374
-    Top = 186
-    object QryCadTpLogrEMPRESA: TStringField
-      FieldName = 'EMPRESA'
-      Required = True
-      Size = 2
-    end
-    object QryCadTpLogrFILIAL: TIntegerField
-      FieldName = 'FILIAL'
-      Required = True
-    end
-    object QryCadTpLogrID_TIPOLOGR: TFloatField
-      AutoGenerateValue = arAutoInc
-      DisplayLabel = 'C'#243'digo'
-      FieldName = 'ID_TIPOLOGR'
-    end
-    object QryCadTpLogrSG_TIPOLOGR: TStringField
-      DisplayLabel = 'Sigla'
-      FieldName = 'SG_TIPOLOGR'
-      Required = True
-      Size = 10
-    end
-    object QryCadTpLogrNM_TIPOLOGR: TStringField
-      DisplayLabel = 'Descri'#231#227'o do Tipo de Logradouro'
-      FieldName = 'NM_TIPOLOGR'
-      Required = True
-      Size = 40
-    end
-    object QryCadTpLogrFX_TIPOLOGR: TStringField
-      FieldName = 'FX_TIPOLOGR'
-      Required = True
-      Size = 1
-    end
-  end
   object DtSrcCadTpLogr: TOraDataSource
     DataSet = QryCadTpLogr
     Left = 440
@@ -1977,5 +1898,86 @@ object FrmCadTpLogr: TFrmCadTpLogr
         Name = 'VUSUARIO'
         Value = nil
       end>
+  end
+  object QryCadTpLogr: TSmartQuery
+    KeyFields = 'ID_TIPOLOGR'
+    KeySequence = 'ID_TIPOLOGR'
+    SQLInsert.Strings = (
+      'INSERT INTO logradouro_tipo'
+      
+        '  (EMPRESA, FILIAL, ID_TIPOLOGR, SG_TIPOLOGR, NM_TIPOLOGR, FX_TI' +
+        'POLOGR)'
+      'VALUES'
+      
+        '  (:EMPRESA, :FILIAL, :ID_TIPOLOGR, :SG_TIPOLOGR, :NM_TIPOLOGR, ' +
+        ':FX_TIPOLOGR)')
+    SQLDelete.Strings = (
+      'DELETE FROM logradouro_tipo'
+      'WHERE'
+      '  ID_TIPOLOGR = :ID_TIPOLOGR')
+    SQLUpdate.Strings = (
+      'UPDATE logradouro_tipo'
+      'SET'
+      '  EMPRESA = :EMPRESA,'
+      '  FILIAL = :FILIAL,'
+      '  ID_TIPOLOGR = :ID_TIPOLOGR,'
+      '  SG_TIPOLOGR = :SG_TIPOLOGR,'
+      '  NM_TIPOLOGR = :NM_TIPOLOGR,'
+      '  FX_TIPOLOGR = :FX_TIPOLOGR'
+      'WHERE'
+      '  ID_TIPOLOGR = :OLD_ID_TIPOLOGR')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  ID_TIPOLOGR = :ID_TIPOLOGR')
+    SQLLock.Strings = (
+      'SELECT * FROM logradouro_tipo'
+      'WHERE'
+      '  ID_TIPOLOGR = :ID_TIPOLOGR'
+      'FOR UPDATE NOWAIT')
+    SQL.Strings = (
+      'SELECT '
+      '  logradouro_tipo.empresa,'
+      '  logradouro_tipo.filial,'
+      '  logradouro_tipo.id_tipologr,'
+      '  logradouro_tipo.sg_tipologr,'
+      '  logradouro_tipo.nm_tipologr,'
+      '  logradouro_tipo.fx_tipologr'
+      'FROM'
+      '  logradouro_tipo'
+      'ORDER BY logradouro_tipo.nm_tipologr')
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 376
+    Top = 184
+    object QryCadTpLogrEMPRESA: TStringField
+      FieldName = 'EMPRESA'
+      Required = True
+      Size = 2
+    end
+    object QryCadTpLogrFILIAL: TIntegerField
+      FieldName = 'FILIAL'
+      Required = True
+    end
+    object QryCadTpLogrID_TIPOLOGR: TFloatField
+      FieldName = 'ID_TIPOLOGR'
+      Required = True
+    end
+    object QryCadTpLogrSG_TIPOLOGR: TStringField
+      FieldName = 'SG_TIPOLOGR'
+      Required = True
+      Size = 10
+    end
+    object QryCadTpLogrNM_TIPOLOGR: TStringField
+      FieldName = 'NM_TIPOLOGR'
+      Required = True
+      Size = 40
+    end
+    object QryCadTpLogrFX_TIPOLOGR: TStringField
+      FieldName = 'FX_TIPOLOGR'
+      Required = True
+      Size = 1
+    end
   end
 end

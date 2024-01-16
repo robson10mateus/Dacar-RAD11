@@ -30,6 +30,8 @@ object FrmCadRegeSubLog: TFrmCadRegeSubLog
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 643
+    ExplicitHeight = 387
     object ToolBar1: TToolBar
       Left = 1
       Top = 1
@@ -46,7 +48,7 @@ object FrmCadRegeSubLog: TFrmCadRegeSubLog
       Font.Style = []
       ParentFont = False
       TabOrder = 0
-      ExplicitWidth = 659
+      ExplicitWidth = 641
       object SB_PRIMEIRO: TSpeedButton
         Left = 0
         Top = 0
@@ -1989,6 +1991,8 @@ object FrmCadRegeSubLog: TFrmCadRegeSubLog
       Font.Style = []
       ParentFont = False
       TabOrder = 1
+      ExplicitWidth = 641
+      ExplicitHeight = 345
       object TabCriterio: TTabSheet
         Caption = 'Criterios'
         OnShow = TabCriterioShow
@@ -2697,131 +2701,6 @@ object FrmCadRegeSubLog: TFrmCadRegeSubLog
       end
     end
   end
-  object QrySubeReg: TOraQuery
-    KeyFields = 'ID_REGISUBRLOGI'
-    KeySequence = 'ID_REGISUBRLOGI'
-    SQLInsert.Strings = (
-      'INSERT INTO logistica_regiao_subregiao'
-      
-        '  (EMPRESA, FILIAL, ID_REGISUBRLOGI, ID_REGILOGI, ID_SUBRLOGI, F' +
-        'L_RELAREGISUBRLOGI, FX_REGISUBRLOGI)'
-      'VALUES'
-      
-        '  (:EMPRESA, :FILIAL, :ID_REGISUBRLOGI, :ID_REGILOGI, :ID_SUBRLO' +
-        'GI, :FL_RELAREGISUBRLOGI, :FX_REGISUBRLOGI)')
-    SQLDelete.Strings = (
-      'DELETE FROM logistica_regiao_subregiao'
-      'WHERE'
-      '  ID_REGISUBRLOGI = :ID_REGISUBRLOGI')
-    SQLUpdate.Strings = (
-      'UPDATE logistica_regiao_subregiao'
-      'SET'
-      '  EMPRESA = :EMPRESA,'
-      '  FILIAL = :FILIAL,'
-      '  ID_REGISUBRLOGI = :ID_REGISUBRLOGI,'
-      '  ID_REGILOGI = :ID_REGILOGI,'
-      '  ID_SUBRLOGI = :ID_SUBRLOGI,'
-      '  FL_RELAREGISUBRLOGI = :FL_RELAREGISUBRLOGI,'
-      '  FX_REGISUBRLOGI = :FX_REGISUBRLOGI'
-      'WHERE'
-      '  ID_REGISUBRLOGI = :OLD_ID_REGISUBRLOGI')
-    SQLLock.Strings = (
-      'SELECT * FROM logistica_regiao_subregiao'
-      'WHERE'
-      '  ID_REGISUBRLOGI = :ID_REGISUBRLOGI'
-      'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  ID_REGISUBRLOGI = :ID_REGISUBRLOGI')
-    LocalUpdate = True
-    SQL.Strings = (
-      'SELECT'
-      '  logistica_regiao_subregiao.empresa,'
-      '  logistica_regiao_subregiao.filial,'
-      '  logistica_regiao_subregiao.id_regisubrlogi,'
-      '  logistica_regiao_subregiao.id_regilogi,'
-      '  logistica_regiao_subregiao.id_subrlogi,'
-      '  logistica_regiao_subregiao.fl_relaregisubrlogi,'
-      '  logistica_regiao_subregiao.fx_regisubrlogi,'
-      '  logistica_subregiao.nm_subrlogi,'
-      '  logistica_subregiao.id_intesubrlogi,'
-      '  logistica_regiao.nm_regilogi,'
-      '  logistica_regiao.id_interegilogi'
-      ''
-      'FROM '
-      '  logistica_regiao_subregiao,'
-      '  logistica_regiao,'
-      '  logistica_subregiao'
-      'WHERE '
-      
-        '  logistica_regiao_subregiao.id_regilogi = logistica_regiao.id_r' +
-        'egilogi AND'
-      
-        '  logistica_regiao_subregiao.id_subrlogi = logistica_subregiao.i' +
-        'd_subrlogi'
-      ''
-      '')
-    FetchAll = True
-    CachedUpdates = True
-    Left = 189
-    Top = 84
-    object QrySubeRegEMPRESA: TStringField
-      FieldName = 'EMPRESA'
-      Required = True
-      Size = 2
-    end
-    object QrySubeRegFILIAL: TIntegerField
-      FieldName = 'FILIAL'
-      Required = True
-    end
-    object QrySubeRegID_REGISUBRLOGI: TFloatField
-      AutoGenerateValue = arAutoInc
-      DisplayLabel = 'Codigo'
-      FieldName = 'ID_REGISUBRLOGI'
-    end
-    object QrySubeRegID_REGILOGI: TFloatField
-      DisplayLabel = 'Cod. Reg. Log'#237'st.'
-      FieldName = 'ID_REGILOGI'
-      Required = True
-    end
-    object QrySubeRegID_SUBRLOGI: TFloatField
-      DisplayLabel = 'Cod. Sub. Reg. Logist.'
-      FieldName = 'ID_SUBRLOGI'
-      Required = True
-    end
-    object QrySubeRegFL_RELAREGISUBRLOGI: TStringField
-      FieldName = 'FL_RELAREGISUBRLOGI'
-      Required = True
-      Size = 1
-    end
-    object QrySubeRegFX_REGISUBRLOGI: TStringField
-      FieldName = 'FX_REGISUBRLOGI'
-      Required = True
-      Size = 1
-    end
-    object QrySubeRegNM_SUBRLOGI: TStringField
-      DisplayLabel = 'Descr. Sub. Logist.'
-      FieldName = 'NM_SUBRLOGI'
-      Required = True
-      Size = 40
-    end
-    object QrySubeRegID_INTESUBRLOGI: TStringField
-      DisplayLabel = 'Cod Int. Sub. Reg. Logist.'
-      FieldName = 'ID_INTESUBRLOGI'
-      Size = 10
-    end
-    object QrySubeRegNM_REGILOGI: TStringField
-      DisplayLabel = 'Descr. Reg. Logist.'
-      FieldName = 'NM_REGILOGI'
-      Required = True
-      Size = 40
-    end
-    object QrySubeRegID_INTEREGILOGI: TStringField
-      DisplayLabel = 'Cod. Int. Reg. Logist.'
-      FieldName = 'ID_INTEREGILOGI'
-      Size = 10
-    end
-  end
   object DtSrcSubeReg: TOraDataSource
     DataSet = QrySubeReg
     Left = 221
@@ -2852,5 +2731,122 @@ object FrmCadRegeSubLog: TFrmCadRegeSubLog
         Name = 'VUSUARIO'
         Value = nil
       end>
+  end
+  object QrySubeReg: TSmartQuery
+    KeyFields = 'ID_REGISUBRLOGI'
+    KeySequence = 'ID_REGISUBRLOGI'
+    SQLInsert.Strings = (
+      'INSERT INTO logistica_regiao_subregiao'
+      
+        '  (EMPRESA, FILIAL, ID_REGISUBRLOGI, ID_REGILOGI, ID_SUBRLOGI, F' +
+        'L_RELAREGISUBRLOGI, FX_REGISUBRLOGI)'
+      'VALUES'
+      
+        '  (:EMPRESA, :FILIAL, :ID_REGISUBRLOGI, :ID_REGILOGI, :ID_SUBRLO' +
+        'GI, :FL_RELAREGISUBRLOGI, :FX_REGISUBRLOGI)')
+    SQLDelete.Strings = (
+      'DELETE FROM logistica_regiao_subregiao'
+      'WHERE'
+      '  ID_REGISUBRLOGI = :ID_REGISUBRLOGI')
+    SQLUpdate.Strings = (
+      'UPDATE logistica_regiao_subregiao'
+      'SET'
+      '  EMPRESA = :EMPRESA,'
+      '  FILIAL = :FILIAL,'
+      '  ID_REGISUBRLOGI = :ID_REGISUBRLOGI,'
+      '  ID_REGILOGI = :ID_REGILOGI,'
+      '  ID_SUBRLOGI = :ID_SUBRLOGI,'
+      '  FL_RELAREGISUBRLOGI = :FL_RELAREGISUBRLOGI,'
+      '  FX_REGISUBRLOGI = :FX_REGISUBRLOGI'
+      'WHERE'
+      '  ID_REGISUBRLOGI = :OLD_ID_REGISUBRLOGI')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  ID_REGISUBRLOGI = :ID_REGISUBRLOGI')
+    SQLLock.Strings = (
+      'SELECT * FROM logistica_regiao_subregiao'
+      'WHERE'
+      '  ID_REGISUBRLOGI = :ID_REGISUBRLOGI'
+      'FOR UPDATE NOWAIT')
+    SQL.Strings = (
+      'SELECT'
+      '  logistica_regiao_subregiao.empresa,'
+      '  logistica_regiao_subregiao.filial,'
+      '  logistica_regiao_subregiao.id_regisubrlogi,'
+      '  logistica_regiao_subregiao.id_regilogi,'
+      '  logistica_regiao_subregiao.id_subrlogi,'
+      '  logistica_regiao_subregiao.fl_relaregisubrlogi,'
+      '  logistica_regiao_subregiao.fx_regisubrlogi,'
+      '  logistica_subregiao.nm_subrlogi,'
+      '  logistica_subregiao.id_intesubrlogi,'
+      '  logistica_regiao.nm_regilogi,'
+      '  logistica_regiao.id_interegilogi'
+      ''
+      'FROM '
+      '  logistica_regiao_subregiao,'
+      '  logistica_regiao,'
+      '  logistica_subregiao'
+      'WHERE '
+      
+        '  logistica_regiao_subregiao.id_regilogi = logistica_regiao.id_r' +
+        'egilogi AND'
+      
+        '  logistica_regiao_subregiao.id_subrlogi = logistica_subregiao.i' +
+        'd_subrlogi'
+      ''
+      '')
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 192
+    Top = 88
+    object QrySubeRegEMPRESA: TStringField
+      FieldName = 'EMPRESA'
+      Required = True
+      Size = 2
+    end
+    object QrySubeRegFILIAL: TIntegerField
+      FieldName = 'FILIAL'
+      Required = True
+    end
+    object QrySubeRegID_REGISUBRLOGI: TFloatField
+      FieldName = 'ID_REGISUBRLOGI'
+      Required = True
+    end
+    object QrySubeRegID_REGILOGI: TFloatField
+      FieldName = 'ID_REGILOGI'
+      Required = True
+    end
+    object QrySubeRegID_SUBRLOGI: TFloatField
+      FieldName = 'ID_SUBRLOGI'
+      Required = True
+    end
+    object QrySubeRegFL_RELAREGISUBRLOGI: TStringField
+      FieldName = 'FL_RELAREGISUBRLOGI'
+      Required = True
+      Size = 1
+    end
+    object QrySubeRegFX_REGISUBRLOGI: TStringField
+      FieldName = 'FX_REGISUBRLOGI'
+      Required = True
+      Size = 1
+    end
+    object QrySubeRegNM_SUBRLOGI: TStringField
+      FieldName = 'NM_SUBRLOGI'
+      Size = 40
+    end
+    object QrySubeRegID_INTESUBRLOGI: TStringField
+      FieldName = 'ID_INTESUBRLOGI'
+      Size = 10
+    end
+    object QrySubeRegNM_REGILOGI: TStringField
+      FieldName = 'NM_REGILOGI'
+      Size = 40
+    end
+    object QrySubeRegID_INTEREGILOGI: TStringField
+      FieldName = 'ID_INTEREGILOGI'
+      Size = 10
+    end
   end
 end

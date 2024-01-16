@@ -23,7 +23,7 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
   object pnlBotoes: TPanel
     Left = 0
     Top = 0
-    Width = 1083
+    Width = 1087
     Height = 45
     Align = alTop
     Color = clWindow
@@ -36,6 +36,7 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 1083
     object btnConsultar: TSpeedButton
       Left = 5
       Top = 5
@@ -423,8 +424,8 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
   object PageControl1: TPageControl
     Left = 0
     Top = 45
-    Width = 1083
-    Height = 489
+    Width = 1087
+    Height = 490
     ActivePage = tbsFiltros
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -436,18 +437,20 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
     ParentFont = False
     TabOrder = 1
     OnChange = PageControl1Change
-    ExplicitHeight = 490
+    ExplicitWidth = 1083
+    ExplicitHeight = 489
     object tbsFiltros: TTabSheet
       Caption = ' Filtros '
       object pnlFiltros: TPanel
         Left = 0
         Top = 0
-        Width = 1075
+        Width = 1079
         Height = 110
         Align = alTop
         Color = clWindow
         ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 1075
         object lblDataEntrega: TLabel
           Left = 10
           Top = 10
@@ -506,10 +509,10 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
           TabOrder = 0
         end
         object btnDataEntrega: TBitBtn
-          Left = 95
-          Top = 30
+          Left = 94
+          Top = 29
           Width = 20
-          Height = 20
+          Height = 23
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = 16
@@ -546,10 +549,10 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
           OnExit = edtNumCargaExit
         end
         object btnNumCarga: TBitBtn
-          Left = 221
-          Top = 30
+          Left = 220
+          Top = 29
           Width = 20
-          Height = 20
+          Height = 23
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = 16
@@ -586,10 +589,10 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
           OnExit = edtPlacaVeiculoExit
         end
         object btnPlacaVeiculo: TBitBtn
-          Left = 95
-          Top = 76
+          Left = 94
+          Top = 75
           Width = 20
-          Height = 20
+          Height = 23
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = 16
@@ -628,8 +631,8 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
       object grdFiltro: TDBGrid
         Left = 0
         Top = 110
-        Width = 1075
-        Height = 352
+        Width = 1079
+        Height = 350
         Align = alClient
         DataSource = dtsCargas
         Font.Charset = DEFAULT_CHARSET
@@ -656,7 +659,7 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
             Title.Caption = 'N'#186' Carga'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
-            Title.Font.Height = 11
+            Title.Font.Height = 16
             Title.Font.Name = 'Arial'
             Title.Font.Pitch = fpVariable
             Title.Font.Style = [fsBold]
@@ -668,7 +671,7 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
             Title.Caption = 'Placa Ve'#237'culo'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
-            Title.Font.Height = 11
+            Title.Font.Height = 16
             Title.Font.Name = 'Arial'
             Title.Font.Pitch = fpVariable
             Title.Font.Style = [fsBold]
@@ -680,7 +683,7 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
             Title.Caption = 'Motorista'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
-            Title.Font.Height = 11
+            Title.Font.Height = 16
             Title.Font.Name = 'Arial'
             Title.Font.Pitch = fpVariable
             Title.Font.Style = [fsBold]
@@ -693,7 +696,7 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
             Title.Caption = 'Data Entr. Pedido'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
-            Title.Font.Height = 11
+            Title.Font.Height = 16
             Title.Font.Name = 'Arial'
             Title.Font.Pitch = fpVariable
             Title.Font.Style = [fsBold]
@@ -707,7 +710,7 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
             Title.Caption = 'KG Balan'#231#227'o'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
-            Title.Font.Height = 11
+            Title.Font.Height = 16
             Title.Font.Name = 'Arial'
             Title.Font.Pitch = fpVariable
             Title.Font.Style = [fsBold]
@@ -721,7 +724,7 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
             Title.Caption = 'Total de Pedidos'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
-            Title.Font.Height = 11
+            Title.Font.Height = 16
             Title.Font.Name = 'Arial'
             Title.Font.Pitch = fpVariable
             Title.Font.Style = [fsBold]
@@ -735,7 +738,7 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
             Title.Caption = 'Total de Caixas'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
-            Title.Font.Height = 11
+            Title.Font.Height = 16
             Title.Font.Name = 'Arial'
             Title.Font.Pitch = fpVariable
             Title.Font.Style = [fsBold]
@@ -750,8 +753,8 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
       object grdDetalhes: TDBGrid
         Left = 0
         Top = 110
-        Width = 1091
-        Height = 388
+        Width = 1079
+        Height = 350
         Align = alClient
         DataSource = dtsCargaPedidos
         Font.Charset = DEFAULT_CHARSET
@@ -779,7 +782,7 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
             Title.Caption = 'N'#186' Pedido'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
-            Title.Font.Height = 11
+            Title.Font.Height = 16
             Title.Font.Name = 'Arial'
             Title.Font.Pitch = fpVariable
             Title.Font.Style = [fsBold]
@@ -791,7 +794,7 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
             Title.Caption = 'N'#186' Nota Fiscal'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
-            Title.Font.Height = 11
+            Title.Font.Height = 16
             Title.Font.Name = 'Arial'
             Title.Font.Pitch = fpVariable
             Title.Font.Style = [fsBold]
@@ -803,7 +806,7 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
             Title.Caption = 'C'#243'd. Cliente'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
-            Title.Font.Height = 11
+            Title.Font.Height = 16
             Title.Font.Name = 'Arial'
             Title.Font.Pitch = fpVariable
             Title.Font.Style = [fsBold]
@@ -815,7 +818,7 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
             Title.Caption = 'Raz'#227'o Social'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
-            Title.Font.Height = 11
+            Title.Font.Height = 16
             Title.Font.Name = 'Arial'
             Title.Font.Pitch = fpVariable
             Title.Font.Style = [fsBold]
@@ -828,7 +831,7 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
             Title.Caption = 'C'#243'd. Vendedor'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
-            Title.Font.Height = 11
+            Title.Font.Height = 16
             Title.Font.Name = 'Arial'
             Title.Font.Pitch = fpVariable
             Title.Font.Style = [fsBold]
@@ -840,7 +843,7 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
             Title.Caption = 'Nome Vendedor'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
-            Title.Font.Height = 11
+            Title.Font.Height = 16
             Title.Font.Name = 'Arial'
             Title.Font.Pitch = fpVariable
             Title.Font.Style = [fsBold]
@@ -851,7 +854,7 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
       object pnlDetalhes: TPanel
         Left = 0
         Top = 0
-        Width = 1091
+        Width = 1079
         Height = 110
         Align = alTop
         Color = clWindow
@@ -860,7 +863,7 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
         object GroupBox1: TGroupBox
           Left = 1
           Top = 6
-          Width = 1089
+          Width = 1077
           Height = 97
           Align = alTop
           Caption = ' Imprimir '
@@ -922,7 +925,7 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
         object Panel1: TPanel
           Left = 1
           Top = 1
-          Width = 1089
+          Width = 1077
           Height = 5
           Align = alTop
           BevelOuter = bvNone

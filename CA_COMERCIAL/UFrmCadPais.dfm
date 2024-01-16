@@ -20,7 +20,7 @@ object FrmCadPais: TFrmCadPais
   object pnlBotoes: TPanel
     Left = 0
     Top = 0
-    Width = 1035
+    Width = 1039
     Height = 45
     Align = alTop
     Color = clWindow
@@ -33,6 +33,7 @@ object FrmCadPais: TFrmCadPais
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 1035
     object SB_PRIMEIRO: TSpeedButton
       Left = 5
       Top = 5
@@ -1340,8 +1341,8 @@ object FrmCadPais: TFrmCadPais
   object PageControl1: TPageControl
     Left = 0
     Top = 45
-    Width = 1035
-    Height = 580
+    Width = 1039
+    Height = 581
     ActivePage = TabDetalhes
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -1352,6 +1353,8 @@ object FrmCadPais: TFrmCadPais
     Font.Style = []
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 1035
+    ExplicitHeight = 580
     object TabCriterio: TTabSheet
       Caption = 'Criterios'
       OnShow = TabCriterioShow
@@ -1964,115 +1967,6 @@ object FrmCadPais: TFrmCadPais
       end
     end
   end
-  object QryCadPais: TOraQuery
-    KeyFields = 'ID_PAIS'
-    KeySequence = 'ID_PAIS'
-    SQLInsert.Strings = (
-      'INSERT INTO pais'
-      
-        '  (EMPRESA, FILIAL, ID_PAIS, NM_PAIS, ID_IBGE, NR_DDIPAIS, ID_RE' +
-        'GIINTE, FL_REGIOBRIPAIS, FX_PAIS)'
-      'VALUES'
-      
-        '  (:EMPRESA, :FILIAL, :ID_PAIS, :NM_PAIS, :ID_IBGE, :NR_DDIPAIS,' +
-        ' :ID_REGIINTE, :FL_REGIOBRIPAIS, :FX_PAIS)')
-    SQLDelete.Strings = (
-      'DELETE FROM pais'
-      'WHERE'
-      '  ID_PAIS = :ID_PAIS')
-    SQLUpdate.Strings = (
-      'UPDATE pais'
-      'SET'
-      '  EMPRESA = :EMPRESA,'
-      '  FILIAL = :FILIAL,'
-      '  ID_PAIS = :ID_PAIS,'
-      '  ID_IBGE = :ID_IBGE,'
-      '  NM_PAIS = :NM_PAIS,'
-      '  NR_DDIPAIS = :NR_DDIPAIS,'
-      '  ID_REGIINTE = :ID_REGIINTE,'
-      '  FL_REGIOBRIPAIS = :FL_REGIOBRIPAIS,'
-      '  FX_PAIS = :FX_PAIS'
-      'WHERE'
-      '  ID_PAIS = :OLD_ID_PAIS')
-    SQLLock.Strings = (
-      'SELECT * FROM pais'
-      'WHERE'
-      '  ID_PAIS = :ID_PAIS'
-      'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  ID_PAIS = :ID_PAIS')
-    LocalUpdate = True
-    SQL.Strings = (
-      'SELECT '
-      '  pais.empresa,'
-      '  pais.filial,'
-      '  pais.id_pais,'
-      '  pais.nm_pais,'
-      '  pais.id_ibge,'
-      '  pais.nr_ddipais,'
-      '  pais.id_regiinte,'
-      '  pais.fl_regiobripais,'
-      '  pais.fx_pais,'
-      '  regiao_internacional.nm_regiinte  '
-      'FROM'
-      '  pais,                              '
-      '  regiao_internacional     '
-      'where '
-      '  regiao_internacional.id_regiinte = pais.id_regiinte '
-      'order by pais.nm_pais')
-    FetchAll = True
-    CachedUpdates = True
-    Left = 456
-    Top = 11
-    object QryCadPaisEMPRESA: TStringField
-      FieldName = 'EMPRESA'
-      Required = True
-      Size = 2
-    end
-    object QryCadPaisFILIAL: TIntegerField
-      FieldName = 'FILIAL'
-      Required = True
-    end
-    object QryCadPaisID_PAIS: TFloatField
-      AutoGenerateValue = arAutoInc
-      DisplayLabel = 'Codigo'
-      FieldName = 'ID_PAIS'
-    end
-    object QryCadPaisNM_PAIS: TStringField
-      DisplayLabel = 'Nome do Pa'#237's'
-      FieldName = 'NM_PAIS'
-      Required = True
-      Size = 40
-    end
-    object QryCadPaisNR_DDIPAIS: TStringField
-      DisplayLabel = 'DDI'
-      FieldName = 'NR_DDIPAIS'
-      Size = 3
-    end
-    object QryCadPaisID_REGIINTE: TFloatField
-      FieldName = 'ID_REGIINTE'
-      Required = True
-    end
-    object QryCadPaisFL_REGIOBRIPAIS: TStringField
-      FieldName = 'FL_REGIOBRIPAIS'
-      Required = True
-      Size = 1
-    end
-    object QryCadPaisFX_PAIS: TStringField
-      FieldName = 'FX_PAIS'
-      Required = True
-      Size = 1
-    end
-    object QryCadPaisNM_REGIINTE: TStringField
-      DisplayLabel = 'Nome da Regi'#227'o Internacional'
-      FieldName = 'NM_REGIINTE'
-      Size = 30
-    end
-    object QryCadPaisID_IBGE: TIntegerField
-      FieldName = 'ID_IBGE'
-    end
-  end
   object DtSrcCadPais: TOraDataSource
     DataSet = QryCadPais
     Left = 483
@@ -2129,5 +2023,111 @@ object FrmCadPais: TFrmCadPais
         Name = 'VUSUARIO'
         Value = nil
       end>
+  end
+  object QryCadPais: TSmartQuery
+    KeyFields = 'ID_PAIS'
+    KeySequence = 'ID_PAIS'
+    SQLInsert.Strings = (
+      'INSERT INTO pais'
+      
+        '  (EMPRESA, FILIAL, ID_PAIS, NM_PAIS, ID_IBGE, NR_DDIPAIS, ID_RE' +
+        'GIINTE, FL_REGIOBRIPAIS, FX_PAIS)'
+      'VALUES'
+      
+        '  (:EMPRESA, :FILIAL, :ID_PAIS, :NM_PAIS, :ID_IBGE, :NR_DDIPAIS,' +
+        ' :ID_REGIINTE, :FL_REGIOBRIPAIS, :FX_PAIS)')
+    SQLDelete.Strings = (
+      'DELETE FROM pais'
+      'WHERE'
+      '  ID_PAIS = :ID_PAIS')
+    SQLUpdate.Strings = (
+      'UPDATE pais'
+      'SET'
+      '  EMPRESA = :EMPRESA,'
+      '  FILIAL = :FILIAL,'
+      '  ID_PAIS = :ID_PAIS,'
+      '  ID_IBGE = :ID_IBGE,'
+      '  NM_PAIS = :NM_PAIS,'
+      '  NR_DDIPAIS = :NR_DDIPAIS,'
+      '  ID_REGIINTE = :ID_REGIINTE,'
+      '  FL_REGIOBRIPAIS = :FL_REGIOBRIPAIS,'
+      '  FX_PAIS = :FX_PAIS'
+      'WHERE'
+      '  ID_PAIS = :OLD_ID_PAIS')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  ID_PAIS = :ID_PAIS')
+    SQLLock.Strings = (
+      'SELECT * FROM pais'
+      'WHERE'
+      '  ID_PAIS = :ID_PAIS'
+      'FOR UPDATE NOWAIT')
+    SQL.Strings = (
+      'SELECT '
+      '  pais.empresa,'
+      '  pais.filial,'
+      '  pais.id_pais,'
+      '  pais.nm_pais,'
+      '  pais.id_ibge,'
+      '  pais.nr_ddipais,'
+      '  pais.id_regiinte,'
+      '  pais.fl_regiobripais,'
+      '  pais.fx_pais,'
+      '  regiao_internacional.nm_regiinte  '
+      'FROM'
+      '  pais,                              '
+      '  regiao_internacional     '
+      'where '
+      '  regiao_internacional.id_regiinte = pais.id_regiinte '
+      'order by pais.nm_pais')
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 456
+    Top = 8
+    object QryCadPaisEMPRESA: TStringField
+      FieldName = 'EMPRESA'
+      Required = True
+      Size = 2
+    end
+    object QryCadPaisFILIAL: TIntegerField
+      FieldName = 'FILIAL'
+      Required = True
+    end
+    object QryCadPaisID_PAIS: TFloatField
+      FieldName = 'ID_PAIS'
+      Required = True
+    end
+    object QryCadPaisNM_PAIS: TStringField
+      FieldName = 'NM_PAIS'
+      Required = True
+      Size = 40
+    end
+    object QryCadPaisID_IBGE: TIntegerField
+      FieldName = 'ID_IBGE'
+    end
+    object QryCadPaisNR_DDIPAIS: TStringField
+      FieldName = 'NR_DDIPAIS'
+      Size = 3
+    end
+    object QryCadPaisID_REGIINTE: TFloatField
+      FieldName = 'ID_REGIINTE'
+      Required = True
+    end
+    object QryCadPaisFL_REGIOBRIPAIS: TStringField
+      FieldName = 'FL_REGIOBRIPAIS'
+      Required = True
+      Size = 1
+    end
+    object QryCadPaisFX_PAIS: TStringField
+      FieldName = 'FX_PAIS'
+      Required = True
+      Size = 1
+    end
+    object QryCadPaisNM_REGIINTE: TStringField
+      FieldName = 'NM_REGIINTE'
+      Size = 30
+    end
   end
 end

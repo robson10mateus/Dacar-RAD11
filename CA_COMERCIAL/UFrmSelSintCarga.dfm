@@ -498,8 +498,8 @@ object FrmSelSintCarga: TFrmSelSintCarga
   object PageControl1: TPageControl
     Left = 0
     Top = 45
-    Width = 750
-    Height = 355
+    Width = 754
+    Height = 356
     ActivePage = TabCriterio
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -510,6 +510,8 @@ object FrmSelSintCarga: TFrmSelSintCarga
     Font.Style = []
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 750
+    ExplicitHeight = 355
     object TabCriterio: TTabSheet
       Caption = 'Filtros'
       Font.Charset = DEFAULT_CHARSET
@@ -651,7 +653,7 @@ object FrmSelSintCarga: TFrmSelSintCarga
         Columns = 2
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 15
+        Font.Height = 13
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
@@ -802,10 +804,10 @@ object FrmSelSintCarga: TFrmSelSintCarga
         OnClick = BtAtivarClick
       end
       object BPESQ: TBitBtn
-        Left = 625
-        Top = 53
+        Left = 627
+        Top = 51
         Width = 23
-        Height = 20
+        Height = 23
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = 16
@@ -863,7 +865,7 @@ object FrmSelSintCarga: TFrmSelSintCarga
         Left = 0
         Top = 0
         Width = 746
-        Height = 328
+        Height = 326
         Align = alClient
         DataSource = DS
         Font.Charset = DEFAULT_CHARSET
@@ -1095,7 +1097,7 @@ object FrmSelSintCarga: TFrmSelSintCarga
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 750
+    Width = 754
     Height = 45
     Align = alTop
     Color = clWindow
@@ -1108,6 +1110,7 @@ object FrmSelSintCarga: TFrmSelSintCarga
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 750
     object Sb_Sair: TSpeedButton
       Left = 5
       Top = 5

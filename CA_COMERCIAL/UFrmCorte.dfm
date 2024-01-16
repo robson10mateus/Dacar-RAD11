@@ -26,8 +26,8 @@ object FrmCorte: TFrmCorte
   object PageControl1: TPageControl
     Left = 0
     Top = 41
-    Width = 784
-    Height = 454
+    Width = 788
+    Height = 455
     ActivePage = TabCriterio
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -39,6 +39,8 @@ object FrmCorte: TFrmCorte
     ParentFont = False
     TabOrder = 0
     OnMouseMove = PageControl1MouseMove
+    ExplicitWidth = 784
+    ExplicitHeight = 454
     object TabCriterio: TTabSheet
       Caption = 'Crit'#233'rio'
       object Label6: TLabel
@@ -323,12 +325,13 @@ object FrmCorte: TFrmCorte
       object Panel2: TPanel
         Left = 0
         Top = 0
-        Width = 776
+        Width = 780
         Height = 44
         Align = alTop
         Color = clWindow
         ParentBackground = False
         TabOrder = 8
+        ExplicitWidth = 776
         object Label1: TLabel
           Left = 319
           Top = 14
@@ -411,7 +414,7 @@ object FrmCorte: TFrmCorte
       object grdados: TDBGrid
         Left = 0
         Top = 0
-        Width = 776
+        Width = 780
         Height = 321
         Align = alTop
         Color = clWhite
@@ -493,8 +496,8 @@ object FrmCorte: TFrmCorte
       object Panel3: TPanel
         Left = 0
         Top = 321
-        Width = 776
-        Height = 107
+        Width = 780
+        Height = 104
         Align = alClient
         Color = clWindow
         Font.Charset = DEFAULT_CHARSET
@@ -506,7 +509,6 @@ object FrmCorte: TFrmCorte
         ParentBackground = False
         ParentFont = False
         TabOrder = 1
-        ExplicitHeight = 108
         object GroupBox1: TGroupBox
           Left = 13
           Top = 8
@@ -1198,7 +1200,7 @@ object FrmCorte: TFrmCorte
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 784
+    Width = 788
     Height = 41
     Anchors = []
     ButtonHeight = 37
@@ -1213,6 +1215,7 @@ object FrmCorte: TFrmCorte
     ParentFont = False
     TabOrder = 1
     OnMouseMove = ToolBar1MouseMove
+    ExplicitWidth = 784
     object SB_PRIMEIRO: TSpeedButton
       Left = 0
       Top = 0
@@ -2682,8 +2685,8 @@ object FrmCorte: TFrmCorte
   end
   object Panel1: TPanel
     Left = 0
-    Top = 495
-    Width = 784
+    Top = 496
+    Width = 788
     Height = 17
     Align = alBottom
     Color = clWindow
@@ -2696,253 +2699,8 @@ object FrmCorte: TFrmCorte
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
-    ExplicitTop = 496
-  end
-  object Qr: TOraQuery
-    SQLInsert.Strings = (
-      'INSERT INTO PEDIDO_VENDA_ITEM'
-      
-        '  (EMPRESA, FILIAL, ID_ITEMPEDIVEND, ID_PEDIVEND, ID_MATERIAL, I' +
-        'D_EMBALAGEM, ID_MATEEMBA, ID_TIPOOPER, VL_UNITITEMPEDIVEND, QN_E' +
-        'MBAITEMPEDIVEND, QN_PESOITEMPEDIVEND, QN_TARAITEMPEDIVEND, QN_EM' +
-        'BAEXPEITEMPEDIVEND, QN_PESOPADREXPEITEMPEDIVEND, QN_TARAREALEXPE' +
-        'ITEMPEDIVEND, QN_PESOREALEXPEITEMPEDIVEND, QN_CAIXCORTITEMPEDIVE' +
-        'ND, FX_ITEMPEDIVEND, VL_UNITBRUTITEMPEDIVEND, PC_DESCITEMPEDIVEN' +
-        'D, VL_UNITOUTROSAJUSTE, MOTIVO_AJUSTE)'
-      'VALUES'
-      
-        '  (:EMPRESA, :FILIAL, :ID_ITEMPEDIVEND, :ID_PEDIVEND, :ID_MATERI' +
-        'AL, :ID_EMBALAGEM, :ID_MATEEMBA, :ID_TIPOOPER, :VL_UNITITEMPEDIV' +
-        'END, :QN_EMBAITEMPEDIVEND, :QN_PESOITEMPEDIVEND, :QN_TARAITEMPED' +
-        'IVEND, :QN_EMBAEXPEITEMPEDIVEND, :QN_PESOPADREXPEITEMPEDIVEND, :' +
-        'QN_TARAREALEXPEITEMPEDIVEND, :QN_PESOREALEXPEITEMPEDIVEND, :QN_C' +
-        'AIXCORTITEMPEDIVEND, :FX_ITEMPEDIVEND, :VL_UNITBRUTITEMPEDIVEND,' +
-        ' :PC_DESCITEMPEDIVEND, :VL_UNITOUTROSAJUSTE, :MOTIVO_AJUSTE)')
-    SQLDelete.Strings = (
-      'DELETE FROM PEDIDO_VENDA_ITEM'
-      'WHERE'
-      '  ID_ITEMPEDIVEND = :ID_ITEMPEDIVEND')
-    SQLUpdate.Strings = (
-      'UPDATE PEDIDO_VENDA_ITEM'
-      'SET'
-      '  ID_ITEMPEDIVEND = :ID_ITEMPEDIVEND,'
-      '  ID_PEDIVEND = :ID_PEDIVEND,'
-      '  ID_MATEEMBA = :ID_MATEEMBA,'
-      '  VL_UNITITEMPEDIVEND = :VL_UNITITEMPEDIVEND,'
-      '  QN_EMBAITEMPEDIVEND = :QN_EMBAITEMPEDIVEND,'
-      '  QN_PESOITEMPEDIVEND = :QN_PESOITEMPEDIVEND,'
-      '  QN_TARAITEMPEDIVEND = :QN_TARAITEMPEDIVEND,'
-      '  QN_CAIXCORTITEMPEDIVEND = :QN_CAIXCORTITEMPEDIVEND,'
-      '  VL_UNITBRUTITEMPEDIVEND = :VL_UNITBRUTITEMPEDIVEND,'
-      '  PC_DESCITEMPEDIVEND = :PC_DESCITEMPEDIVEND'
-      'WHERE'
-      '  ID_ITEMPEDIVEND = :OLD_ID_ITEMPEDIVEND')
-    SQLLock.Strings = (
-      'SELECT * FROM PEDIDO_VENDA_ITEM'
-      'WHERE'
-      '  ID_ITEMPEDIVEND = :ID_ITEMPEDIVEND'
-      'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  ID_ITEMPEDIVEND = :ID_ITEMPEDIVEND')
-    LocalUpdate = True
-    Session = FrmPrincipal.DB
-    SQL.Strings = (
-      'SELECT'
-      '  PEDIDO_VENDA_ITEM.ID_ITEMPEDIVEND,'
-      '  PEDIDO_VENDA_ITEM.ID_MATEEMBA,'
-      '  MATERIAL_EMBALAGEM.NM_PRODMATEEMBA,'
-      '  MATERIAL_EMBALAGEM.ID_PRODMATEEMBA,'
-      '  DECODE(NVL(QN_CAPAPADRMATEEMBA, 0), 0, QN_CAPAMEDIMATEEMBA,'
-      
-        '                                             QN_CAPAPADRMATEEMBA' +
-        ') AS QN_PESOPADRITEMPEDIVEND,'
-      '  EMBALAGEM.QN_TARAEMBA,'
-      '  PEDIDO_VENDA_ITEM.VL_UNITITEMPEDIVEND,'
-      '  PEDIDO_VENDA_ITEM.QN_EMBAITEMPEDIVEND,'
-      '  PEDIDO_VENDA_ITEM.QN_PESOITEMPEDIVEND,'
-      '  PEDIDO_VENDA_ITEM.QN_TARAITEMPEDIVEND,'
-      '  PEDIDO_VENDA_ITEM.QN_CAIXCORTITEMPEDIVEND,'
-      '  ( PEDIDO_VENDA_ITEM.QN_EMBAITEMPEDIVEND +'
-      
-        '           NVL(PEDIDO_VENDA_ITEM.QN_CAIXCORTITEMPEDIVEND, 0) ) A' +
-        'S QN_CAIXORIGITEMPEDIVEND,'
-      '  0 AS QN_CAIXACORT,'
-      '  PEDIDO_VENDA_ITEM.VL_UNITBRUTITEMPEDIVEND,'
-      '  PEDIDO_VENDA_ITEM.PC_DESCITEMPEDIVEND,'
-      '  PEDIDO_VENDA.ID_PEDIVEND,'
-      '  PEDIDO_VENDA.ID_CLIENTE,'
-      '  VENDEDOR.ID_VENDEDOR,'
-      '  VENDEDOR.NM_VENDEDOR,'
-      '  CLIENTE.NM_CLIENTE,'
-      '  CLIENTE_ENDERECO.NM_LOGRENDECLIE,'
-      '  CLIENTE_ENDERECO.NR_LOGRENDECLIE,'
-      '  CLIENTE_ENDERECO.GN_COMPENDECLIE,'
-      '  BAIRRO.NM_BAIRRO,'
-      '  CIDADE.NM_CIDADE,'
-      '  PEDIDO_VENDA.DT_PEDIVEND,'
-      '  PEDIDO_VENDA.DT_ENTRPEDIVEND,'
-      '  PEDIDO_VENDA.FL_CREDUSADPEDIVEND'
-      'FROM'
-      '  BAIRRO,'
-      '  CIDADE,'
-      '  CLIENTE,'
-      '  CLIENTE_ENDERECO,'
-      '  LOGISTICA_REGIAO,'
-      '  LOGISTICA_SUBREGIAO,'
-      '  MATERIAL,'
-      '  EMBALAGEM,'
-      '  MATERIAL_EMBALAGEM,'
-      '  PEDIDO_VENDA,'
-      '  PEDIDO_VENDA_ITEM,'
-      '  PEDIDO_VENDA_TIPO,'
-      '  REGIAO_COMERCIAL,'
-      '  VENDEDOR,'
-      '  LOGRADOURO_TIPO LOGRADOURO_TIPO_V,'
-      '  LOGRADOURO_TIPO LOGRADOURO_TIPO_CE,'
-      '  LOGRADOURO_TIPO LOGRADOURO_TIPO_C'
-      'WHERE'
-      '  (PEDIDO_VENDA_ITEM.ID_PEDIVEND = PEDIDO_VENDA.ID_PEDIVEND) AND'
-      
-        '  (PEDIDO_VENDA_ITEM.ID_MATEEMBA = MATERIAL_EMBALAGEM.ID_MATEEMB' +
-        'A) AND'
-      '  (MATERIAL_EMBALAGEM.ID_MATERIAL = MATERIAL.ID_MATERIAL) AND'
-      '  (MATERIAL_EMBALAGEM.ID_EMBALAGEM = EMBALAGEM.ID_EMBALAGEM) AND'
-      '  (PEDIDO_VENDA.ID_CLIENTE = CLIENTE.ID_CLIENTE) AND'
-      
-        '  (PEDIDO_VENDA.ID_ENDECLIE_ENTREGA = CLIENTE_ENDERECO.ID_ENDECL' +
-        'IE) AND'
-      '  (CLIENTE_ENDERECO.ID_BAIRRO = BAIRRO.ID_BAIRRO) AND'
-      '  (BAIRRO.ID_CIDADE = CIDADE.ID_CIDADE) AND'
-      '  (PEDIDO_VENDA.ID_VENDEDOR = VENDEDOR.ID_VENDEDOR) AND'
-      
-        '  (PEDIDO_VENDA.ID_TIPOPEDIVEND = PEDIDO_VENDA_TIPO.ID_TIPOPEDIV' +
-        'END) AND'
-      '  (CLIENTE.ID_REGICOME = REGIAO_COMERCIAL.ID_REGICOME) AND'
-      '  (CLIENTE.ID_REGILOGI = LOGISTICA_REGIAO.ID_REGILOGI) AND'
-      '  (CLIENTE.ID_SUBRLOGI = LOGISTICA_SUBREGIAO.ID_SUBRLOGI) AND'
-      '  (LOGRADOURO_TIPO_V.ID_TIPOLOGR = VENDEDOR.ID_TIPOLOGR) AND'
-      
-        '  (LOGRADOURO_TIPO_CE.ID_TIPOLOGR = CLIENTE_ENDERECO.ID_TIPOLOGR' +
-        ') AND'
-      '  (LOGRADOURO_TIPO_C.ID_TIPOLOGR = CLIENTE.ID_TIPOLOGR)')
-    FetchAll = True
-    CachedUpdates = True
-    AfterOpen = QrAfterOpen
-    AfterPost = QrAfterPost
-    Left = 502
-    Top = 26
-    object QrID_ITEMPEDIVEND: TFloatField
-      FieldName = 'ID_ITEMPEDIVEND'
-      Required = True
-    end
-    object QrID_MATEEMBA: TFloatField
-      FieldName = 'ID_MATEEMBA'
-    end
-    object QrNM_PRODMATEEMBA: TStringField
-      FieldName = 'NM_PRODMATEEMBA'
-      Size = 40
-    end
-    object QrID_PRODMATEEMBA: TStringField
-      FieldName = 'ID_PRODMATEEMBA'
-      Size = 3
-    end
-    object QrQN_PESOPADRITEMPEDIVEND: TFloatField
-      FieldName = 'QN_PESOPADRITEMPEDIVEND'
-    end
-    object QrQN_TARAEMBA: TFloatField
-      FieldName = 'QN_TARAEMBA'
-      Required = True
-    end
-    object QrVL_UNITITEMPEDIVEND: TFloatField
-      FieldName = 'VL_UNITITEMPEDIVEND'
-      Required = True
-    end
-    object QrQN_EMBAITEMPEDIVEND: TFloatField
-      FieldName = 'QN_EMBAITEMPEDIVEND'
-      Required = True
-    end
-    object QrQN_PESOITEMPEDIVEND: TFloatField
-      FieldName = 'QN_PESOITEMPEDIVEND'
-      Required = True
-    end
-    object QrQN_TARAITEMPEDIVEND: TFloatField
-      FieldName = 'QN_TARAITEMPEDIVEND'
-      Required = True
-    end
-    object QrQN_CAIXCORTITEMPEDIVEND: TFloatField
-      FieldName = 'QN_CAIXCORTITEMPEDIVEND'
-      Required = True
-    end
-    object QrQN_CAIXORIGITEMPEDIVEND: TFloatField
-      FieldName = 'QN_CAIXORIGITEMPEDIVEND'
-    end
-    object QrQN_CAIXACORT: TFloatField
-      FieldName = 'QN_CAIXACORT'
-    end
-    object QrVL_UNITBRUTITEMPEDIVEND: TFloatField
-      FieldName = 'VL_UNITBRUTITEMPEDIVEND'
-    end
-    object QrPC_DESCITEMPEDIVEND: TFloatField
-      FieldName = 'PC_DESCITEMPEDIVEND'
-    end
-    object QrID_PEDIVEND: TFloatField
-      FieldName = 'ID_PEDIVEND'
-      Required = True
-    end
-    object QrID_CLIENTE: TFloatField
-      FieldName = 'ID_CLIENTE'
-      Required = True
-    end
-    object QrID_VENDEDOR: TFloatField
-      FieldName = 'ID_VENDEDOR'
-      Required = True
-    end
-    object QrNM_VENDEDOR: TStringField
-      FieldName = 'NM_VENDEDOR'
-      Required = True
-      Size = 40
-    end
-    object QrNM_CLIENTE: TStringField
-      FieldName = 'NM_CLIENTE'
-      Required = True
-      Size = 40
-    end
-    object QrNM_LOGRENDECLIE: TStringField
-      FieldName = 'NM_LOGRENDECLIE'
-      Required = True
-      Size = 40
-    end
-    object QrNR_LOGRENDECLIE: TStringField
-      FieldName = 'NR_LOGRENDECLIE'
-      Required = True
-      Size = 8
-    end
-    object QrGN_COMPENDECLIE: TStringField
-      FieldName = 'GN_COMPENDECLIE'
-    end
-    object QrNM_BAIRRO: TStringField
-      FieldName = 'NM_BAIRRO'
-      Required = True
-      Size = 30
-    end
-    object QrNM_CIDADE: TStringField
-      FieldName = 'NM_CIDADE'
-      Required = True
-      Size = 40
-    end
-    object QrDT_PEDIVEND: TDateTimeField
-      FieldName = 'DT_PEDIVEND'
-      Required = True
-    end
-    object QrDT_ENTRPEDIVEND: TDateTimeField
-      FieldName = 'DT_ENTRPEDIVEND'
-      Required = True
-    end
-    object QrFL_CREDUSADPEDIVEND: TStringField
-      FieldName = 'FL_CREDUSADPEDIVEND'
-      Size = 1
-    end
+    ExplicitTop = 495
+    ExplicitWidth = 784
   end
   object DS: TOraDataSource
     DataSet = Qr
@@ -3274,5 +3032,249 @@ object FrmCorte: TFrmCorte
     AutoCommit = True
     Left = 640
     Top = 16
+  end
+  object Qr: TSmartQuery
+    SQLInsert.Strings = (
+      'INSERT INTO PEDIDO_VENDA_ITEM'
+      
+        '  (EMPRESA, FILIAL, ID_ITEMPEDIVEND, ID_PEDIVEND, ID_MATERIAL, I' +
+        'D_EMBALAGEM, ID_MATEEMBA, ID_TIPOOPER, VL_UNITITEMPEDIVEND, QN_E' +
+        'MBAITEMPEDIVEND, QN_PESOITEMPEDIVEND, QN_TARAITEMPEDIVEND, QN_EM' +
+        'BAEXPEITEMPEDIVEND, QN_PESOPADREXPEITEMPEDIVEND, QN_TARAREALEXPE' +
+        'ITEMPEDIVEND, QN_PESOREALEXPEITEMPEDIVEND, QN_CAIXCORTITEMPEDIVE' +
+        'ND, FX_ITEMPEDIVEND, VL_UNITBRUTITEMPEDIVEND, PC_DESCITEMPEDIVEN' +
+        'D, VL_UNITOUTROSAJUSTE, MOTIVO_AJUSTE)'
+      'VALUES'
+      
+        '  (:EMPRESA, :FILIAL, :ID_ITEMPEDIVEND, :ID_PEDIVEND, :ID_MATERI' +
+        'AL, :ID_EMBALAGEM, :ID_MATEEMBA, :ID_TIPOOPER, :VL_UNITITEMPEDIV' +
+        'END, :QN_EMBAITEMPEDIVEND, :QN_PESOITEMPEDIVEND, :QN_TARAITEMPED' +
+        'IVEND, :QN_EMBAEXPEITEMPEDIVEND, :QN_PESOPADREXPEITEMPEDIVEND, :' +
+        'QN_TARAREALEXPEITEMPEDIVEND, :QN_PESOREALEXPEITEMPEDIVEND, :QN_C' +
+        'AIXCORTITEMPEDIVEND, :FX_ITEMPEDIVEND, :VL_UNITBRUTITEMPEDIVEND,' +
+        ' :PC_DESCITEMPEDIVEND, :VL_UNITOUTROSAJUSTE, :MOTIVO_AJUSTE)')
+    SQLDelete.Strings = (
+      'DELETE FROM PEDIDO_VENDA_ITEM'
+      'WHERE'
+      '  ID_ITEMPEDIVEND = :ID_ITEMPEDIVEND')
+    SQLUpdate.Strings = (
+      'UPDATE PEDIDO_VENDA_ITEM'
+      'SET'
+      '  ID_ITEMPEDIVEND = :ID_ITEMPEDIVEND,'
+      '  ID_PEDIVEND = :ID_PEDIVEND,'
+      '  ID_MATEEMBA = :ID_MATEEMBA,'
+      '  VL_UNITITEMPEDIVEND = :VL_UNITITEMPEDIVEND,'
+      '  QN_EMBAITEMPEDIVEND = :QN_EMBAITEMPEDIVEND,'
+      '  QN_PESOITEMPEDIVEND = :QN_PESOITEMPEDIVEND,'
+      '  QN_TARAITEMPEDIVEND = :QN_TARAITEMPEDIVEND,'
+      '  QN_CAIXCORTITEMPEDIVEND = :QN_CAIXCORTITEMPEDIVEND,'
+      '  VL_UNITBRUTITEMPEDIVEND = :VL_UNITBRUTITEMPEDIVEND,'
+      '  PC_DESCITEMPEDIVEND = :PC_DESCITEMPEDIVEND'
+      'WHERE'
+      '  ID_ITEMPEDIVEND = :OLD_ID_ITEMPEDIVEND')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  ID_ITEMPEDIVEND = :ID_ITEMPEDIVEND')
+    SQLLock.Strings = (
+      'SELECT * FROM PEDIDO_VENDA_ITEM'
+      'WHERE'
+      '  ID_ITEMPEDIVEND = :ID_ITEMPEDIVEND'
+      'FOR UPDATE NOWAIT')
+    Session = FrmPrincipal.DB
+    SQL.Strings = (
+      'SELECT'
+      '  PEDIDO_VENDA_ITEM.ID_ITEMPEDIVEND,'
+      '  PEDIDO_VENDA_ITEM.ID_MATEEMBA,'
+      '  MATERIAL_EMBALAGEM.NM_PRODMATEEMBA,'
+      '  MATERIAL_EMBALAGEM.ID_PRODMATEEMBA,'
+      '  DECODE(NVL(QN_CAPAPADRMATEEMBA, 0), 0, QN_CAPAMEDIMATEEMBA,'
+      
+        '                                             QN_CAPAPADRMATEEMBA' +
+        ') AS QN_PESOPADRITEMPEDIVEND,'
+      '  EMBALAGEM.QN_TARAEMBA,'
+      '  PEDIDO_VENDA_ITEM.VL_UNITITEMPEDIVEND,'
+      '  PEDIDO_VENDA_ITEM.QN_EMBAITEMPEDIVEND,'
+      '  PEDIDO_VENDA_ITEM.QN_PESOITEMPEDIVEND,'
+      '  PEDIDO_VENDA_ITEM.QN_TARAITEMPEDIVEND,'
+      '  PEDIDO_VENDA_ITEM.QN_CAIXCORTITEMPEDIVEND,'
+      '  ( PEDIDO_VENDA_ITEM.QN_EMBAITEMPEDIVEND +'
+      
+        '           NVL(PEDIDO_VENDA_ITEM.QN_CAIXCORTITEMPEDIVEND, 0) ) A' +
+        'S QN_CAIXORIGITEMPEDIVEND,'
+      '  0 AS QN_CAIXACORT,'
+      '  PEDIDO_VENDA_ITEM.VL_UNITBRUTITEMPEDIVEND,'
+      '  PEDIDO_VENDA_ITEM.PC_DESCITEMPEDIVEND,'
+      '  PEDIDO_VENDA.ID_PEDIVEND,'
+      '  PEDIDO_VENDA.ID_CLIENTE,'
+      '  VENDEDOR.ID_VENDEDOR,'
+      '  VENDEDOR.NM_VENDEDOR,'
+      '  CLIENTE.NM_CLIENTE,'
+      '  CLIENTE_ENDERECO.NM_LOGRENDECLIE,'
+      '  CLIENTE_ENDERECO.NR_LOGRENDECLIE,'
+      '  CLIENTE_ENDERECO.GN_COMPENDECLIE,'
+      '  BAIRRO.NM_BAIRRO,'
+      '  CIDADE.NM_CIDADE,'
+      '  PEDIDO_VENDA.DT_PEDIVEND,'
+      '  PEDIDO_VENDA.DT_ENTRPEDIVEND,'
+      '  PEDIDO_VENDA.FL_CREDUSADPEDIVEND'
+      'FROM'
+      '  BAIRRO,'
+      '  CIDADE,'
+      '  CLIENTE,'
+      '  CLIENTE_ENDERECO,'
+      '  LOGISTICA_REGIAO,'
+      '  LOGISTICA_SUBREGIAO,'
+      '  MATERIAL,'
+      '  EMBALAGEM,'
+      '  MATERIAL_EMBALAGEM,'
+      '  PEDIDO_VENDA,'
+      '  PEDIDO_VENDA_ITEM,'
+      '  PEDIDO_VENDA_TIPO,'
+      '  REGIAO_COMERCIAL,'
+      '  VENDEDOR,'
+      '  LOGRADOURO_TIPO LOGRADOURO_TIPO_V,'
+      '  LOGRADOURO_TIPO LOGRADOURO_TIPO_CE,'
+      '  LOGRADOURO_TIPO LOGRADOURO_TIPO_C'
+      'WHERE'
+      '  (PEDIDO_VENDA_ITEM.ID_PEDIVEND = PEDIDO_VENDA.ID_PEDIVEND) AND'
+      
+        '  (PEDIDO_VENDA_ITEM.ID_MATEEMBA = MATERIAL_EMBALAGEM.ID_MATEEMB' +
+        'A) AND'
+      '  (MATERIAL_EMBALAGEM.ID_MATERIAL = MATERIAL.ID_MATERIAL) AND'
+      '  (MATERIAL_EMBALAGEM.ID_EMBALAGEM = EMBALAGEM.ID_EMBALAGEM) AND'
+      '  (PEDIDO_VENDA.ID_CLIENTE = CLIENTE.ID_CLIENTE) AND'
+      
+        '  (PEDIDO_VENDA.ID_ENDECLIE_ENTREGA = CLIENTE_ENDERECO.ID_ENDECL' +
+        'IE) AND'
+      '  (CLIENTE_ENDERECO.ID_BAIRRO = BAIRRO.ID_BAIRRO) AND'
+      '  (BAIRRO.ID_CIDADE = CIDADE.ID_CIDADE) AND'
+      '  (PEDIDO_VENDA.ID_VENDEDOR = VENDEDOR.ID_VENDEDOR) AND'
+      
+        '  (PEDIDO_VENDA.ID_TIPOPEDIVEND = PEDIDO_VENDA_TIPO.ID_TIPOPEDIV' +
+        'END) AND'
+      '  (CLIENTE.ID_REGICOME = REGIAO_COMERCIAL.ID_REGICOME) AND'
+      '  (CLIENTE.ID_REGILOGI = LOGISTICA_REGIAO.ID_REGILOGI) AND'
+      '  (CLIENTE.ID_SUBRLOGI = LOGISTICA_SUBREGIAO.ID_SUBRLOGI) AND'
+      '  (LOGRADOURO_TIPO_V.ID_TIPOLOGR = VENDEDOR.ID_TIPOLOGR) AND'
+      
+        '  (LOGRADOURO_TIPO_CE.ID_TIPOLOGR = CLIENTE_ENDERECO.ID_TIPOLOGR' +
+        ') AND'
+      '  (LOGRADOURO_TIPO_C.ID_TIPOLOGR = CLIENTE.ID_TIPOLOGR)')
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 504
+    Top = 24
+    object QrID_ITEMPEDIVEND: TFloatField
+      FieldName = 'ID_ITEMPEDIVEND'
+      Required = True
+    end
+    object QrID_MATEEMBA: TFloatField
+      FieldName = 'ID_MATEEMBA'
+    end
+    object QrNM_PRODMATEEMBA: TStringField
+      FieldName = 'NM_PRODMATEEMBA'
+      Size = 40
+    end
+    object QrID_PRODMATEEMBA: TStringField
+      FieldName = 'ID_PRODMATEEMBA'
+      Size = 5
+    end
+    object QrQN_PESOPADRITEMPEDIVEND: TFloatField
+      FieldName = 'QN_PESOPADRITEMPEDIVEND'
+    end
+    object QrQN_TARAEMBA: TFloatField
+      FieldName = 'QN_TARAEMBA'
+      Required = True
+    end
+    object QrVL_UNITITEMPEDIVEND: TFloatField
+      FieldName = 'VL_UNITITEMPEDIVEND'
+      Required = True
+    end
+    object QrQN_EMBAITEMPEDIVEND: TFloatField
+      FieldName = 'QN_EMBAITEMPEDIVEND'
+      Required = True
+    end
+    object QrQN_PESOITEMPEDIVEND: TFloatField
+      FieldName = 'QN_PESOITEMPEDIVEND'
+      Required = True
+    end
+    object QrQN_TARAITEMPEDIVEND: TFloatField
+      FieldName = 'QN_TARAITEMPEDIVEND'
+      Required = True
+    end
+    object QrQN_CAIXCORTITEMPEDIVEND: TFloatField
+      FieldName = 'QN_CAIXCORTITEMPEDIVEND'
+      Required = True
+    end
+    object QrQN_CAIXORIGITEMPEDIVEND: TFloatField
+      FieldName = 'QN_CAIXORIGITEMPEDIVEND'
+    end
+    object QrQN_CAIXACORT: TFloatField
+      FieldName = 'QN_CAIXACORT'
+    end
+    object QrVL_UNITBRUTITEMPEDIVEND: TFloatField
+      FieldName = 'VL_UNITBRUTITEMPEDIVEND'
+    end
+    object QrPC_DESCITEMPEDIVEND: TFloatField
+      FieldName = 'PC_DESCITEMPEDIVEND'
+    end
+    object QrID_PEDIVEND: TFloatField
+      FieldName = 'ID_PEDIVEND'
+      Required = True
+    end
+    object QrID_CLIENTE: TFloatField
+      FieldName = 'ID_CLIENTE'
+      Required = True
+    end
+    object QrID_VENDEDOR: TFloatField
+      FieldName = 'ID_VENDEDOR'
+      Required = True
+    end
+    object QrNM_VENDEDOR: TStringField
+      FieldName = 'NM_VENDEDOR'
+      Required = True
+      Size = 40
+    end
+    object QrNM_CLIENTE: TStringField
+      FieldName = 'NM_CLIENTE'
+      Size = 60
+    end
+    object QrNM_LOGRENDECLIE: TStringField
+      FieldName = 'NM_LOGRENDECLIE'
+      Required = True
+      Size = 40
+    end
+    object QrNR_LOGRENDECLIE: TStringField
+      FieldName = 'NR_LOGRENDECLIE'
+      Required = True
+      Size = 8
+    end
+    object QrGN_COMPENDECLIE: TStringField
+      FieldName = 'GN_COMPENDECLIE'
+    end
+    object QrNM_BAIRRO: TStringField
+      FieldName = 'NM_BAIRRO'
+      Required = True
+      Size = 30
+    end
+    object QrNM_CIDADE: TStringField
+      FieldName = 'NM_CIDADE'
+      Required = True
+      Size = 40
+    end
+    object QrDT_PEDIVEND: TDateTimeField
+      FieldName = 'DT_PEDIVEND'
+      Required = True
+    end
+    object QrDT_ENTRPEDIVEND: TDateTimeField
+      FieldName = 'DT_ENTRPEDIVEND'
+      Required = True
+    end
+    object QrFL_CREDUSADPEDIVEND: TStringField
+      FieldName = 'FL_CREDUSADPEDIVEND'
+      Size = 1
+    end
   end
 end

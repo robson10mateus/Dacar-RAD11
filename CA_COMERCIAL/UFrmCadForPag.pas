@@ -5,7 +5,7 @@ interface
 uses
   SysUtils, Types, Classes, {$IFNDEF VER130} Variants {$ENDIF, Types}, Graphics, Controls, Forms, 
   Dialogs, StdCtrls, ExtCtrls, DBCtrls, ComCtrls, Buttons, Mask,
-  Grids, DBGrids, DB, Ora, MemDS, DBAccess, Vcl.ToolWin;
+  Grids, DBGrids, DB, Ora, MemDS, DBAccess, Vcl.ToolWin, OraSmart;
 
 type
   TFrmCadForPag = class(TForm)
@@ -52,7 +52,6 @@ type
     ToolButton3: TToolButton;
     QryCadFormPagPar: TOraQuery;
     DtSrcCadFormPagPar: TOraDataSource;
-    QryCadForPag: TOraQuery;
     DtSrcCadForPag: TOraDataSource;
     QrDireitos: TOraQuery;
     Label4: TLabel;
@@ -75,6 +74,12 @@ type
     QryCadFormPagParPC_PARCFORMPAGA: TFloatField;
     QryCadFormPagParQN_DIASPARCFORMPAGA: TIntegerField;
     QryCadFormPagParFX_PARCFORMPAGA: TStringField;
+    DBNrParForPag: TDBComboBox;
+    DBDiaParForPagPar: TDBComboBox;
+    DBComboBox1: TDBComboBox;
+    lblFormaPagtoNfe: TLabel;
+    cbxFormaPagtoNfe: TDBComboBox;
+    QryCadForPag: TSmartQuery;
     QryCadForPagEMPRESA: TStringField;
     QryCadForPagFILIAL: TIntegerField;
     QryCadForPagID_FORMPAGA: TFloatField;
@@ -86,11 +91,6 @@ type
     QryCadForPagFL_FORMPAGA: TStringField;
     QryCadForPagFX_FORMPAGA: TStringField;
     QryCadForPagQN_DIAS: TIntegerField;
-    DBNrParForPag: TDBComboBox;
-    DBDiaParForPagPar: TDBComboBox;
-    DBComboBox1: TDBComboBox;
-    lblFormaPagtoNfe: TLabel;
-    cbxFormaPagtoNfe: TDBComboBox;
     QryCadForPagNU_FORMA_PAGTO_NFE: TStringField;
     Function  Atual_ToolBar(BtOrdem:Integer):string;
     procedure LDcomponentes(LD:boolean);

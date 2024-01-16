@@ -42,15 +42,7 @@ type
     BtLimpar: TBitBtn;
     BtAtivar: TBitBtn;
     BPESQ: TBitBtn;
-    Qr: TOraQuery;
     SB_ATUAL: TSpeedButton;
-    QrEMPRESA: TStringField;
-    QrFILIAL: TIntegerField;
-    QrID_LOTE: TFloatField;
-    QrDATA_ALOJAMENTO: TDateTimeField;
-    QrID_USUARIO: TFloatField;
-    QrID_INTEGRADO: TFloatField;
-    QrNM_FORNECEDOR: TStringField;
     Ds: TOraDataSource;
     pnl_Lote: TPanel;
     DBEdit1: TDBEdit;
@@ -61,8 +53,6 @@ type
     DBEdit3: TDBEdit;
     Label4: TLabel;
     Qr_Integrado: TOraQuery;
-    QrID_FORNECEDOR: TFloatField;
-    QrNOME_USUARIO: TStringField;
     Qr_IntegradoID_INTEGRADO: TFloatField;
     Qr_IntegradoNM_FORNECEDOR: TStringField;
     Lkp_Integrado: TDBLookupComboBox;
@@ -71,23 +61,11 @@ type
     DBEdit4: TDBEdit;
     Pnl_Fornecedor: TPanel;
     dbg_Fornecedor: TDBGrid;
-    Qr_AlojamentoFornec: TOraQuery;
     Ds_AlojamentoFornec: TOraDataSource;
-    Qr_AlojamentoFornecEMPRESA: TStringField;
-    Qr_AlojamentoFornecFILIAL: TIntegerField;
-    Qr_AlojamentoFornecID_LOTE: TFloatField;
-    Qr_AlojamentoFornecID_FORNECEDOR: TFloatField;
-    Qr_AlojamentoFornecNR_NOTA: TFloatField;
-    Qr_AlojamentoFornecID_LINHAGEM: TFloatField;
-    Qr_AlojamentoFornecIDADE_MATRIZ: TIntegerField;
-    Qr_AlojamentoFornecVALOR_PINTAINHO: TFloatField;
-    Qr_AlojamentoFornecNM_FORNECEDOR: TStringField;
     Panel2: TPanel;
     DBEdit5: TDBEdit;
     Label9: TLabel;
     Label10: TLabel;
-    Qr_AlojamentoFornecDESC_LINHAGEM: TStringField;
-    Qr_AlojamentoFornecPRORIO_COMPRADO: TStringField;
     edt_Nota: TDBEdit;
     Label11: TLabel;
     DBLookupComboBox2: TDBLookupComboBox;
@@ -117,19 +95,8 @@ type
     Label16: TLabel;
     cbx_Sexo: TDBComboBox;
     Label17: TLabel;
-    Qr_LoteGalpao: TOraQuery;
     Ds_LoteGalpao: TOraDataSource;
-    Qr_LoteGalpaoEMPRESA: TStringField;
-    Qr_LoteGalpaoFILIAL: TIntegerField;
-    Qr_LoteGalpaoID_LOTE: TFloatField;
-    Qr_LoteGalpaoID_GALPAO: TFloatField;
-    Qr_LoteGalpaoTIPO: TStringField;
-    Qr_LoteGalpaoDESC_GALPAO: TStringField;
-    Qr_LoteGalpaoLARG_GALPAO: TFloatField;
-    Qr_LoteGalpaoCOMPR_GALPAO: TFloatField;
-    Qr_LoteGalpaoAREA_GALPAO: TFloatField;
     Lkp_Galpao: TDBLookupComboBox;
-    Qr_LoteGalpaoDESC_TIPO: TStringField;
     Qr_Galpao: TOraQuery;
     Ds_Galpao: TOraDataSource;
     Qr_GalpaoEMPRESA: TStringField;
@@ -143,7 +110,6 @@ type
     Qr_GalpaoATIVO: TStringField;
     Qr_GalpaoLKP_GALPAO: TStringField;
     DBEdit10: TDBEdit;
-    Qr_LoteGalpaoQTDE: TFloatField;
     edt_QtdGalpao: TDBEdit;
     Panel3: TPanel;
     btn_IncFornec: TSpeedButton;
@@ -152,23 +118,11 @@ type
     btn_ConfirmaFornec: TSpeedButton;
     Btn_CancelaFornec: TSpeedButton;
     Tab_Remessa: TTabSheet;
-    QrFL_STATUS: TStringField;
-    QrDT_FECHAMENTO: TDateTimeField;
     Tab_Retirada: TTabSheet;
     dbg_Remessa: TDBGrid;
     dbg_Retirada: TDBGrid;
     Panel4: TPanel;
-    Qr_Retirada: TOraQuery;
     Ds_Retirada: TOraDataSource;
-    Qr_RetiradaEMPRESA: TStringField;
-    Qr_RetiradaFILIAL: TIntegerField;
-    Qr_RetiradaID_LOTE: TFloatField;
-    Qr_RetiradaID_NOTAFISC: TFloatField;
-    Qr_RetiradaNR_NOTAFISC: TFloatField;
-    Qr_RetiradaDT_SAIDNOTAFISC: TDateTimeField;
-    Qr_RetiradaQTD_AVESABAT: TFloatField;
-    Qr_RetiradaPESO_AVES: TFloatField;
-    Qr_RetiradaTURMA: TIntegerField;
     Qr_Remessa: TOraQuery;
     Ds_Remessa: TOraDataSource;
     Qr_RemessaDT_SAIDNOTAFISC: TDateTimeField;
@@ -191,21 +145,16 @@ type
     btn_IncluirNota: TSpeedButton;
     btn_RetirarNota: TSpeedButton;
     Label19: TLabel;
-    Qr_RetiradaPeso_Medio: TFloatField;
     Label18: TLabel;
     lbl_Quantidade: TLabel;
     lbl_Peso: TLabel;
     btn_RelAnalitico: TSpeedButton;
-    Qr_AlojamentoFornecQUANTIDADE: TFloatField;
     Label20: TLabel;
     DBEdit11: TDBEdit;
-    QrNR_CNPJFORN: TStringField;
     DBEdit12: TDBEdit;
     Label21: TLabel;
     Qr_IntegradoNR_CNPJFORN: TStringField;
     Tab_Fechamento: TTabSheet;
-    QrSOBRA_RACAO: TFloatField;
-    QrMORTALIDADE: TFloatField;
     Qr_Fechamento: TOraQuery;
     Ds_Fechamento: TOraDataSource;
     Qr_FechamentoID_LOTE: TFloatField;
@@ -268,15 +217,7 @@ type
     btn_ConfLanc: TSpeedButton;
     btn_CancLanc: TSpeedButton;
     dbg_Lancto: TDBGrid;
-    Qr_Lancto: TOraQuery;
     Ds_Lancto: TOraDataSource;
-    Qr_LanctoEMPRESA: TStringField;
-    Qr_LanctoFILIAL: TIntegerField;
-    Qr_LanctoID_LOTE: TFloatField;
-    Qr_LanctoID_LANCLOTE: TFloatField;
-    Qr_LanctoTIPO_LANC: TStringField;
-    Qr_LanctoDESC_LANC: TStringField;
-    Qr_LanctoVALOR_LANC: TFloatField;
     Label42: TLabel;
     DBEdit30: TDBEdit;
     Qr_FechamentoGANHO_PESO_DIA: TFloatField;
@@ -297,28 +238,11 @@ type
     Btn_Fechar: TButton;
     Label44: TLabel;
     DBEdit32: TDBEdit;
-    QrPER_MORTALIDADE: TFloatField;
-    QrCONV_ALIMENTAR: TFloatField;
-    QrGANHO_PESO_DIA: TFloatField;
-    QrPESO_MEDIO: TFloatField;
-    QrIEP: TFloatField;
-    QrPRECO_AVE: TFloatField;
-    QrDATA_PAGTO: TDateTimeField;
-    QrVL_PAGTO: TFloatField;
     Qr_FechamentoDIAS_PAGTO: TIntegerField;
     btn_RelPagamento: TSpeedButton;
-    QrAVES_ALOJ: TFloatField;
-    QrAVES_ABAT: TFloatField;
-    QrTOT_KG: TFloatField;
-    QrIDADE: TFloatField;
-    QrTOTAL_RACAO: TFloatField;
     VT_TIPOLANC: TVirtualTable;
     VT_TIPOLANCTIPO_LANC: TStringField;
     VT_TIPOLANCDES_LANC: TStringField;
-    Qr_LanctoLkp_TIPO_LANC: TStringField;
-    QrPRECO_AVE_FINAL: TFloatField;
-    QrVL_PAGTO_FINAL: TFloatField;
-    QrMORT_PRIM_SEMANA: TFloatField;
     DBEdit33: TDBEdit;
     Label45: TLabel;
     Qr_FechamentoDESC_LINHAGEM: TStringField;
@@ -326,8 +250,6 @@ type
     Qr_FechamentoNOME_TECNICO: TStringField;
     Qr_NFRetiradaGN_PLACVEICNOTAFISC: TStringField;
     Qr_NFRetiradaVL_UNITITEMNOTAFISC: TFloatField;
-    Qr_RetiradaVL_UNIT: TFloatField;
-    Qr_RetiradaPLACAVEIC: TStringField;
     Qr_IntegradoFL_ATIVO: TStringField;
     Label46: TLabel;
     edt_VLAveFinal: TDBEdit;
@@ -341,10 +263,6 @@ type
     Qr_TurmaNM_FORNECEDOR: TStringField;
     Qr_TurmaVL_AVE_TURMA: TFloatField;
     btn_ReciboTurma: TSpeedButton;
-    Qr_RetiradaLkp_Turma: TStringField;
-    Qr_AlojamentoFornecGTA: TFloatField;
-    Qr_AlojamentoFornecDATA_GTA: TDateTimeField;
-    Qr_AlojamentoFornecDATA_RECEB: TDateTimeField;
     Label48: TLabel;
     DBEdit34: TDBEdit;
     Label49: TLabel;
@@ -353,8 +271,6 @@ type
     edtDataAloj: TDBEdit;
     BPesqDt: TBitBtn;
     btnDataAloj: TBitBtn;
-    Qr_RetiradaGTA: TFloatField;
-    Qr_RetiradaMORTALIDADE: TFloatField;
     Qr_NFRetiradaID_NOTA: TFloatField;
     btn_Boletim: TSpeedButton;
     Qr_FechamentoBONUS_PESOMEDIO: TFloatField;
@@ -362,7 +278,6 @@ type
     DBEdit36: TDBEdit;
     Qr_RemessaID_LOTE: TFloatField;
     Qr_NFRetiradaID_LOTE: TFloatField;
-    QrSTATUS: TStringField;
     Label51: TLabel;
     DBEdit37: TDBEdit;
     Qr_VerTurma: TOraQuery;
@@ -370,9 +285,6 @@ type
     Qr_VerTurmaVTURMA: TFloatField;
     Qr_VerTurmaVQTD: TFloatField;
     Qr_VerTurmaVPESO: TFloatField;
-    QrID_NUCLEO: TFloatField;
-    QrDATA_INCLOTE: TDateTimeField;
-    QrQTD_ALOJ: TFloatField;
     Qr_Nucleo: TOraQuery;
     Qr_NucleoID_NUCLEO: TFloatField;
     Qr_NucleoID_INTEGRADO: TFloatField;
@@ -391,8 +303,6 @@ type
     Qr_VerQtdAlojQTD_ALOJG: TFloatField;
     lbl_TotalNota: TLabel;
     lbl_TotalGalpao: TLabel;
-    QrIDADEK: TFloatField;
-    QrDESC_NUCLEO: TStringField;
     Qr_RemessaQN_EMBAITEMNOTAFISC: TFloatField;
     Qr_RemessaOPERACAO: TStringField;
     Qr_RacEngorda: TOraQuery;
@@ -400,8 +310,6 @@ type
     Qr_RacEngordaDT_ULTSAIDA: TDateTimeField;
     Bt_Atualiza: TButton;
     Qr_RacEngordaDT_PRIMSAIDA: TDateTimeField;
-    Qr_RetiradaPER_MORTBOLETIM: TFloatField;
-    Qr_AlojamentoFornecSEQ_NOTA: TIntegerField;
     Label54: TLabel;
     DBEdit2: TDBEdit;
     btn_LanctoPadrao: TSpeedButton;
@@ -411,6 +319,97 @@ type
     Qr_Direitos: TOraQuery;
     Qr_DireitosID_RECURSO: TFloatField;
     btn_RacaAves: TSpeedButton;
+    Qr: TSmartQuery;
+    QrEMPRESA: TStringField;
+    QrFILIAL: TIntegerField;
+    QrID_LOTE: TFloatField;
+    QrDATA_ALOJAMENTO: TDateTimeField;
+    QrID_USUARIO: TFloatField;
+    QrID_INTEGRADO: TFloatField;
+    QrID_FORNECEDOR: TFloatField;
+    QrNM_FORNECEDOR: TStringField;
+    QrNOME_USUARIO: TStringField;
+    QrFL_STATUS: TStringField;
+    QrDT_FECHAMENTO: TDateTimeField;
+    QrNR_CNPJFORN: TStringField;
+    QrSOBRA_RACAO: TFloatField;
+    QrMORTALIDADE: TFloatField;
+    QrPER_MORTALIDADE: TFloatField;
+    QrCONV_ALIMENTAR: TFloatField;
+    QrGANHO_PESO_DIA: TFloatField;
+    QrPESO_MEDIO: TFloatField;
+    QrIEP: TFloatField;
+    QrPRECO_AVE: TFloatField;
+    QrDATA_PAGTO: TDateTimeField;
+    QrVL_PAGTO: TFloatField;
+    QrAVES_ALOJ: TFloatField;
+    QrAVES_ABAT: TFloatField;
+    QrTOT_KG: TFloatField;
+    QrIDADE: TFloatField;
+    QrTOTAL_RACAO: TFloatField;
+    QrPRECO_AVE_FINAL: TFloatField;
+    QrVL_PAGTO_FINAL: TFloatField;
+    QrMORT_PRIM_SEMANA: TFloatField;
+    QrSTATUS: TStringField;
+    QrID_NUCLEO: TFloatField;
+    QrDATA_INCLOTE: TDateTimeField;
+    QrQTD_ALOJ: TFloatField;
+    QrIDADEK: TFloatField;
+    QrDESC_NUCLEO: TStringField;
+    Qr_Retirada: TSmartQuery;
+    Qr_RetiradaEMPRESA: TStringField;
+    Qr_RetiradaFILIAL: TIntegerField;
+    Qr_RetiradaID_LOTE: TFloatField;
+    Qr_RetiradaID_NOTAFISC: TFloatField;
+    Qr_RetiradaNR_NOTAFISC: TFloatField;
+    Qr_RetiradaDT_SAIDNOTAFISC: TDateTimeField;
+    Qr_RetiradaQTD_AVESABAT: TFloatField;
+    Qr_RetiradaPESO_AVES: TFloatField;
+    Qr_RetiradaTURMA: TIntegerField;
+    Qr_RetiradaPeso_Medio: TFloatField;
+    Qr_RetiradaVL_UNIT: TFloatField;
+    Qr_RetiradaPLACAVEIC: TStringField;
+    Qr_RetiradaLkp_Turma: TStringField;
+    Qr_RetiradaGTA: TFloatField;
+    Qr_RetiradaMORTALIDADE: TFloatField;
+    Qr_RetiradaPER_MORTBOLETIM: TFloatField;
+    Qr_LoteGalpao: TSmartQuery;
+    Qr_LoteGalpaoEMPRESA: TStringField;
+    Qr_LoteGalpaoFILIAL: TIntegerField;
+    Qr_LoteGalpaoID_LOTE: TFloatField;
+    Qr_LoteGalpaoID_GALPAO: TFloatField;
+    Qr_LoteGalpaoTIPO: TStringField;
+    Qr_LoteGalpaoQTDE: TFloatField;
+    Qr_LoteGalpaoDESC_GALPAO: TStringField;
+    Qr_LoteGalpaoLARG_GALPAO: TFloatField;
+    Qr_LoteGalpaoCOMPR_GALPAO: TFloatField;
+    Qr_LoteGalpaoAREA_GALPAO: TFloatField;
+    Qr_LoteGalpaoDESC_TIPO: TStringField;
+    Qr_AlojamentoFornec: TSmartQuery;
+    Qr_AlojamentoFornecEMPRESA: TStringField;
+    Qr_AlojamentoFornecFILIAL: TIntegerField;
+    Qr_AlojamentoFornecID_LOTE: TFloatField;
+    Qr_AlojamentoFornecID_FORNECEDOR: TFloatField;
+    Qr_AlojamentoFornecNR_NOTA: TFloatField;
+    Qr_AlojamentoFornecID_LINHAGEM: TFloatField;
+    Qr_AlojamentoFornecIDADE_MATRIZ: TIntegerField;
+    Qr_AlojamentoFornecVALOR_PINTAINHO: TFloatField;
+    Qr_AlojamentoFornecNM_FORNECEDOR: TStringField;
+    Qr_AlojamentoFornecDESC_LINHAGEM: TStringField;
+    Qr_AlojamentoFornecPRORIO_COMPRADO: TStringField;
+    Qr_AlojamentoFornecQUANTIDADE: TFloatField;
+    Qr_AlojamentoFornecGTA: TFloatField;
+    Qr_AlojamentoFornecDATA_GTA: TDateTimeField;
+    Qr_AlojamentoFornecDATA_RECEB: TDateTimeField;
+    Qr_AlojamentoFornecSEQ_NOTA: TIntegerField;
+    Qr_Lancto: TSmartQuery;
+    Qr_LanctoEMPRESA: TStringField;
+    Qr_LanctoFILIAL: TIntegerField;
+    Qr_LanctoID_LOTE: TFloatField;
+    Qr_LanctoID_LANCLOTE: TFloatField;
+    Qr_LanctoTIPO_LANC: TStringField;
+    Qr_LanctoDESC_LANC: TStringField;
+    Qr_LanctoVALOR_LANC: TFloatField;
     procedure Sb_SairClick(Sender: TObject);
     procedure SB_PRIMEIROClick(Sender: TObject);
     procedure SB_ANTERIORClick(Sender: TObject);
@@ -470,23 +469,23 @@ type
       Y: Integer);
     procedure BPESQClick(Sender: TObject);
     procedure btn_PesqNFClick(Sender: TObject);
-    procedure QrAfterOpen(DataSet: TDataSet);
+    procedure CRTemp_QrAfterOpen(DataSet: TDataSet);
     procedure btn_IncGalpaoClick(Sender: TObject);
     procedure btn_ExcGalpaoClick(Sender: TObject);
     procedure btn_EditaGalpaoClick(Sender: TObject);
     procedure btn_ConfGalpaoClick(Sender: TObject);
     procedure btn_CancGalpaoClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
-    procedure Qr_AlojamentoFornecBeforePost(DataSet: TDataSet);
-    procedure Qr_AlojamentoFornecAfterPost(DataSet: TDataSet);
-    procedure Qr_AlojamentoFornecAfterCancel(DataSet: TDataSet);
-    procedure Qr_AlojamentoFornecAfterInsert(DataSet: TDataSet);
-    procedure Qr_AlojamentoFornecAfterOpen(DataSet: TDataSet);
+    procedure CRTemp_Qr_AlojamentoFornecBeforePost(DataSet: TDataSet);
+    procedure CRTemp_Qr_AlojamentoFornecAfterPost(DataSet: TDataSet);
+    procedure CRTemp_Qr_AlojamentoFornecAfterCancel(DataSet: TDataSet);
+    procedure CRTemp_Qr_AlojamentoFornecAfterInsert(DataSet: TDataSet);
+    procedure CRTemp_Qr_AlojamentoFornecAfterOpen(DataSet: TDataSet);
     procedure Qr_GalpaoBeforeOpen(DataSet: TDataSet);
-    procedure QrAfterScroll(DataSet: TDataSet);
-    procedure Qr_LoteGalpaoAfterOpen(DataSet: TDataSet);
+    procedure CRTemp_QrAfterScroll(DataSet: TDataSet);
+    procedure CRTemp_Qr_LoteGalpaoAfterOpen(DataSet: TDataSet);
     procedure Ds_LoteGalpaoStateChange(Sender: TObject);
-    procedure Qr_LoteGalpaoBeforePost(DataSet: TDataSet);
+    procedure CRTemp_Qr_LoteGalpaoBeforePost(DataSet: TDataSet);
     procedure btn_IncFornecClick(Sender: TObject);
     procedure btn_EditaFornecClick(Sender: TObject);
     procedure btn_ExcluiFornecClick(Sender: TObject);
@@ -496,33 +495,33 @@ type
     procedure PageControl1Change(Sender: TObject);
     procedure btn_IncluirNotaClick(Sender: TObject);
     procedure btn_RetirarNotaClick(Sender: TObject);
-    procedure Qr_RetiradaCalcFields(DataSet: TDataSet);
+    procedure CRTemp_Qr_RetiradaCalcFields(DataSet: TDataSet);
     procedure Ds_RetiradaStateChange(Sender: TObject);
-    procedure Qr_RetiradaAfterOpen(DataSet: TDataSet);
-    procedure Qr_RetiradaAfterPost(DataSet: TDataSet);
+    procedure CRTemp_Qr_RetiradaAfterOpen(DataSet: TDataSet);
+    procedure CRTemp_Qr_RetiradaAfterPost(DataSet: TDataSet);
     procedure btn_RelAnaliticoClick(Sender: TObject);
     procedure Qr_FechamentoBeforeOpen(DataSet: TDataSet);
     procedure Qr_FechamentoCalcFields(DataSet: TDataSet);
     procedure btn_incLancClick(Sender: TObject);
-    procedure Qr_LanctoAfterInsert(DataSet: TDataSet);
+    procedure CRTemp_Qr_LanctoAfterInsert(DataSet: TDataSet);
     procedure btn_EdtLancClick(Sender: TObject);
     procedure btn_ExcluiLancClick(Sender: TObject);
     procedure btn_ConfLancClick(Sender: TObject);
     procedure btn_CancLancClick(Sender: TObject);
-    procedure Qr_LanctoAfterPost(DataSet: TDataSet);
-    procedure Qr_LanctoAfterCancel(DataSet: TDataSet);
-    procedure Qr_LanctoBeforePost(DataSet: TDataSet);
-    procedure Qr_LanctoAfterOpen(DataSet: TDataSet);
+    procedure CRTemp_Qr_LanctoAfterPost(DataSet: TDataSet);
+    procedure CRTemp_Qr_LanctoAfterCancel(DataSet: TDataSet);
+    procedure CRTemp_Qr_LanctoBeforePost(DataSet: TDataSet);
+    procedure CRTemp_Qr_LanctoAfterOpen(DataSet: TDataSet);
     procedure Ds_LanctoStateChange(Sender: TObject);
     procedure Qr_FechamentoAfterOpen(DataSet: TDataSet);
     procedure Qr_FechamentoAfterScroll(DataSet: TDataSet);
-    procedure Qr_RetiradaAfterCancel(DataSet: TDataSet);
-    procedure Qr_LoteGalpaoAfterInsert(DataSet: TDataSet);
+    procedure CRTemp_Qr_RetiradaAfterCancel(DataSet: TDataSet);
+    procedure CRTemp_Qr_LoteGalpaoAfterInsert(DataSet: TDataSet);
     procedure DsStateChange(Sender: TObject);
     procedure Btn_FecharClick(Sender: TObject);
-    procedure QrBeforePost(DataSet: TDataSet);
+    procedure CRTemp_QrBeforePost(DataSet: TDataSet);
     procedure Qr_GalpaoBeforePost(DataSet: TDataSet);
-    procedure Qr_RetiradaBeforePost(DataSet: TDataSet);
+    procedure CRTemp_Qr_RetiradaBeforePost(DataSet: TDataSet);
     procedure btn_RelPagamentoClick(Sender: TObject);
     procedure btn_ReciboTurmaClick(Sender: TObject);
     procedure BPesqDtClick(Sender: TObject);
@@ -531,7 +530,7 @@ type
       const Rect: TRect; DataCol: Integer; Column: TColumn;
       State: TGridDrawState);
     procedure btn_BoletimClick(Sender: TObject);
-    procedure Qr_LoteGalpaoAfterPost(DataSet: TDataSet);
+    procedure CRTemp_Qr_LoteGalpaoAfterPost(DataSet: TDataSet);
     procedure Qr_VerTurmaBeforeOpen(DataSet: TDataSet);
     procedure btn_DtLoteAlojClick(Sender: TObject);
     procedure Lkp_NucleoKeyDown(Sender: TObject; var Key: Word;
@@ -1292,7 +1291,7 @@ begin
         edt_Nota.setfocus ; } 
 end;
 
-procedure TFrmLoteIntegrado.QrAfterOpen(DataSet: TDataSet);
+procedure TFrmLoteIntegrado.CRTemp_QrAfterOpen(DataSet: TDataSet);
 begin
      Qr_AlojamentoFornec.Close;
      Qr_AlojamentoFornec.Open;
@@ -1544,7 +1543,7 @@ begin
 
 end;
 
-procedure TFrmLoteIntegrado.Qr_AlojamentoFornecBeforePost(DataSet: TDataSet);
+procedure TFrmLoteIntegrado.CRTemp_Qr_AlojamentoFornecBeforePost(DataSet: TDataSet);
 begin
      ActiveControl := Nil;
 
@@ -1584,7 +1583,7 @@ begin
 
 end;
 
-procedure TFrmLoteIntegrado.Qr_AlojamentoFornecAfterPost(DataSet: TDataSet);
+procedure TFrmLoteIntegrado.CRTemp_Qr_AlojamentoFornecAfterPost(DataSet: TDataSet);
 Var erro : string ;
 begin
      try
@@ -1608,12 +1607,12 @@ begin
      dbg_Fornecedor.Refresh;
 end;
 
-procedure TFrmLoteIntegrado.Qr_AlojamentoFornecAfterCancel(DataSet: TDataSet);
+procedure TFrmLoteIntegrado.CRTemp_Qr_AlojamentoFornecAfterCancel(DataSet: TDataSet);
 begin
      Qr_AlojamentoFornec.CancelUpdates;
 end;
 
-procedure TFrmLoteIntegrado.Qr_AlojamentoFornecAfterInsert(DataSet: TDataSet);
+procedure TFrmLoteIntegrado.CRTemp_Qr_AlojamentoFornecAfterInsert(DataSet: TDataSet);
 begin
      Qr_AlojamentoFornecEMPRESA.Value := 'CA';
      Qr_AlojamentoFornecFILIAL.Value  := gi_Filial;
@@ -1622,7 +1621,7 @@ begin
 
 end;
 
-procedure TFrmLoteIntegrado.Qr_AlojamentoFornecAfterOpen(DataSet: TDataSet);
+procedure TFrmLoteIntegrado.CRTemp_Qr_AlojamentoFornecAfterOpen(DataSet: TDataSet);
 begin
      Qr_Linhagem.Close;
      Qr_Linhagem.Open;
@@ -1639,7 +1638,7 @@ begin
 
 end;
 
-procedure TFrmLoteIntegrado.QrAfterScroll(DataSet: TDataSet);
+procedure TFrmLoteIntegrado.CRTemp_QrAfterScroll(DataSet: TDataSet);
 begin
      if ( PageControl1.ActivePage =  TabDetalhe )  then
      begin
@@ -1659,7 +1658,7 @@ begin
 
 end;
 
-procedure TFrmLoteIntegrado.Qr_LoteGalpaoAfterOpen(DataSet: TDataSet);
+procedure TFrmLoteIntegrado.CRTemp_Qr_LoteGalpaoAfterOpen(DataSet: TDataSet);
 begin
      AtualizaBotoes;
 end;
@@ -1669,7 +1668,7 @@ begin
      AtualizaBotoes;
 end;
 
-procedure TFrmLoteIntegrado.Qr_LoteGalpaoBeforePost(DataSet: TDataSet);
+procedure TFrmLoteIntegrado.CRTemp_Qr_LoteGalpaoBeforePost(DataSet: TDataSet);
 begin
     if ( QrID_INTEGRADO.Value <> Qr_GalpaoID_INTEGRADO.Value ) then
      begin
@@ -1945,7 +1944,7 @@ begin
 
 end;
 
-procedure TFrmLoteIntegrado.Qr_RetiradaCalcFields(DataSet: TDataSet);
+procedure TFrmLoteIntegrado.CRTemp_Qr_RetiradaCalcFields(DataSet: TDataSet);
 begin
      if ( Qr_RetiradaPESO_AVES.Value > 0 ) and ( Qr_RetiradaQTD_AVESABAT.Value > 0 ) then
      begin
@@ -1987,12 +1986,12 @@ begin
 
 end;
 
-procedure TFrmLoteIntegrado.Qr_RetiradaAfterOpen(DataSet: TDataSet);
+procedure TFrmLoteIntegrado.CRTemp_Qr_RetiradaAfterOpen(DataSet: TDataSet);
 begin
      Totaliza_Retirada();
 end;
 
-procedure TFrmLoteIntegrado.Qr_RetiradaAfterPost(DataSet: TDataSet);
+procedure TFrmLoteIntegrado.CRTemp_Qr_RetiradaAfterPost(DataSet: TDataSet);
 begin
      Qr_Retirada.ApplyUpdates;
      Qr_Retirada.CommitUpdates;
@@ -2055,7 +2054,7 @@ begin
 
 end;
 
-procedure TFrmLoteIntegrado.Qr_LanctoAfterInsert(DataSet: TDataSet);
+procedure TFrmLoteIntegrado.CRTemp_Qr_LanctoAfterInsert(DataSet: TDataSet);
 begin
      Qr_LanctoEMPRESA.Value := gs_Empresa;
      Qr_LanctoFILIAL.Value  := gi_Filial;
@@ -2090,18 +2089,18 @@ begin
      Qr_Lancto.Cancel;
 end;
 
-procedure TFrmLoteIntegrado.Qr_LanctoAfterPost(DataSet: TDataSet);
+procedure TFrmLoteIntegrado.CRTemp_Qr_LanctoAfterPost(DataSet: TDataSet);
 begin
      Qr_Lancto.ApplyUpdates;
      Qr_Lancto.CommitUpdates;
 end;
 
-procedure TFrmLoteIntegrado.Qr_LanctoAfterCancel(DataSet: TDataSet);
+procedure TFrmLoteIntegrado.CRTemp_Qr_LanctoAfterCancel(DataSet: TDataSet);
 begin
      Qr_Lancto.CancelUpdates;
 end;
 
-procedure TFrmLoteIntegrado.Qr_LanctoBeforePost(DataSet: TDataSet);
+procedure TFrmLoteIntegrado.CRTemp_Qr_LanctoBeforePost(DataSet: TDataSet);
 begin
      ActiveControl := Nil;
      if ( QrFL_STATUS.Value = 'FE' )  then
@@ -2136,7 +2135,7 @@ begin
 
 end;
 
-procedure TFrmLoteIntegrado.Qr_LanctoAfterOpen(DataSet: TDataSet);
+procedure TFrmLoteIntegrado.CRTemp_Qr_LanctoAfterOpen(DataSet: TDataSet);
 begin
      AtualizaBotoes;
 end;
@@ -2170,12 +2169,12 @@ begin
          Qr_Fator.Close;
 end;
 
-procedure TFrmLoteIntegrado.Qr_RetiradaAfterCancel(DataSet: TDataSet);
+procedure TFrmLoteIntegrado.CRTemp_Qr_RetiradaAfterCancel(DataSet: TDataSet);
 begin
      Qr_Retirada.CancelUpdates;
 end;
 
-procedure TFrmLoteIntegrado.Qr_LoteGalpaoAfterInsert(DataSet: TDataSet);
+procedure TFrmLoteIntegrado.CRTemp_Qr_LoteGalpaoAfterInsert(DataSet: TDataSet);
 begin
      Qr_LoteGalpaoEMPRESA.Value := 'CA';
      Qr_LoteGalpaoFILIAL.Value := gi_Filial;
@@ -2342,7 +2341,7 @@ begin
      MessageDlg('Lote foi fechado.'+ Mensagem , mtInformation,[mbOk], 0, mbOk);
 end;
 
-procedure TFrmLoteIntegrado.QrBeforePost(DataSet: TDataSet);
+procedure TFrmLoteIntegrado.CRTemp_QrBeforePost(DataSet: TDataSet);
 begin
      if ( QrFL_STATUS.Value = 'FE' ) AND ( not FechandoLote ) then
      begin
@@ -2360,7 +2359,7 @@ begin
      end;
 end;
 
-procedure TFrmLoteIntegrado.Qr_RetiradaBeforePost(DataSet: TDataSet);
+procedure TFrmLoteIntegrado.CRTemp_Qr_RetiradaBeforePost(DataSet: TDataSet);
 begin
      if ( QrFL_STATUS.Value = 'FE' ) then
      begin
@@ -2441,7 +2440,7 @@ begin
 
 end;
 
-procedure TFrmLoteIntegrado.Qr_LoteGalpaoAfterPost(DataSet: TDataSet);
+procedure TFrmLoteIntegrado.CRTemp_Qr_LoteGalpaoAfterPost(DataSet: TDataSet);
 begin
      Qr_Fechamento.Close;
      Qr_Fechamento.Open;

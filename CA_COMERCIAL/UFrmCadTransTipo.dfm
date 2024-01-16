@@ -31,6 +31,8 @@ object FrmCadTransTipo: TFrmCadTransTipo
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 643
+    ExplicitHeight = 387
     object PageControl1: TPageControl
       Left = 1
       Top = 41
@@ -45,6 +47,8 @@ object FrmCadTransTipo: TFrmCadTransTipo
       Font.Style = []
       ParentFont = False
       TabOrder = 0
+      ExplicitWidth = 641
+      ExplicitHeight = 345
       object TabCriterio: TTabSheet
         Caption = 'Criterios'
         OnShow = TabCriterioShow
@@ -524,7 +528,7 @@ object FrmCadTransTipo: TFrmCadTransTipo
       Font.Style = []
       ParentFont = False
       TabOrder = 1
-      ExplicitWidth = 659
+      ExplicitWidth = 641
       object SB_PRIMEIRO: TSpeedButton
         Left = 0
         Top = 0
@@ -2454,77 +2458,6 @@ object FrmCadTransTipo: TFrmCadTransTipo
       end
     end
   end
-  object QryCadTpTrans: TOraQuery
-    KeyFields = 'ID_TIPOTRAN'
-    KeySequence = 'ID_TIPOTRAN'
-    SQLInsert.Strings = (
-      'INSERT INTO transporte_tipo'
-      '  (EMPRESA, FILIAL, ID_TIPOTRAN, NM_TIPOTRAN, FX_TIPOTRAN)'
-      'VALUES'
-      '  (:EMPRESA, :FILIAL, :ID_TIPOTRAN, :NM_TIPOTRAN, :FX_TIPOTRAN)')
-    SQLDelete.Strings = (
-      'DELETE FROM transporte_tipo'
-      'WHERE'
-      '  ID_TIPOTRAN = :ID_TIPOTRAN')
-    SQLUpdate.Strings = (
-      'UPDATE transporte_tipo'
-      'SET'
-      '  EMPRESA = :EMPRESA,'
-      '  FILIAL = :FILIAL,'
-      '  ID_TIPOTRAN = :ID_TIPOTRAN,'
-      '  NM_TIPOTRAN = :NM_TIPOTRAN,'
-      '  FX_TIPOTRAN = :FX_TIPOTRAN'
-      'WHERE'
-      '  ID_TIPOTRAN = :OLD_ID_TIPOTRAN')
-    SQLLock.Strings = (
-      'SELECT * FROM transporte_tipo'
-      'WHERE'
-      '  ID_TIPOTRAN = :ID_TIPOTRAN'
-      'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  ID_TIPOTRAN = :ID_TIPOTRAN')
-    LocalUpdate = True
-    SQL.Strings = (
-      'SELECT '
-      '  transporte_tipo.empresa,'
-      '  transporte_tipo.filial,'
-      '  transporte_tipo.id_tipotran,'
-      '  transporte_tipo.nm_tipotran,'
-      '  transporte_tipo.fx_tipotran'
-      'FROM'
-      '  transporte_tipo'
-      'ORDER BY transporte_tipo.nm_tipotran')
-    FetchAll = True
-    CachedUpdates = True
-    Left = 374
-    Top = 186
-    object QryCadTpTransEMPRESA: TStringField
-      FieldName = 'EMPRESA'
-      Required = True
-      Size = 2
-    end
-    object QryCadTpTransFILIAL: TIntegerField
-      FieldName = 'FILIAL'
-      Required = True
-    end
-    object QryCadTpTransID_TIPOTRAN: TFloatField
-      DisplayLabel = 'C'#243'digo'
-      FieldName = 'ID_TIPOTRAN'
-      Required = True
-    end
-    object QryCadTpTransNM_TIPOTRAN: TStringField
-      DisplayLabel = 'Descri'#231#227'o do Tipo de Transporte'
-      FieldName = 'NM_TIPOTRAN'
-      Required = True
-      Size = 40
-    end
-    object QryCadTpTransFX_TIPOTRAN: TStringField
-      FieldName = 'FX_TIPOTRAN'
-      Required = True
-      Size = 1
-    end
-  end
   object DtSrcCadTpTrans: TOraDataSource
     DataSet = QryCadTpTrans
     Left = 440
@@ -2556,5 +2489,75 @@ object FrmCadTransTipo: TFrmCadTransTipo
         Name = 'VUSUARIO'
         Value = nil
       end>
+  end
+  object QryCadTpTrans: TSmartQuery
+    KeyFields = 'ID_TIPOTRAN'
+    KeySequence = 'ID_TIPOTRAN'
+    SQLInsert.Strings = (
+      'INSERT INTO transporte_tipo'
+      '  (EMPRESA, FILIAL, ID_TIPOTRAN, NM_TIPOTRAN, FX_TIPOTRAN)'
+      'VALUES'
+      '  (:EMPRESA, :FILIAL, :ID_TIPOTRAN, :NM_TIPOTRAN, :FX_TIPOTRAN)')
+    SQLDelete.Strings = (
+      'DELETE FROM transporte_tipo'
+      'WHERE'
+      '  ID_TIPOTRAN = :ID_TIPOTRAN')
+    SQLUpdate.Strings = (
+      'UPDATE transporte_tipo'
+      'SET'
+      '  EMPRESA = :EMPRESA,'
+      '  FILIAL = :FILIAL,'
+      '  ID_TIPOTRAN = :ID_TIPOTRAN,'
+      '  NM_TIPOTRAN = :NM_TIPOTRAN,'
+      '  FX_TIPOTRAN = :FX_TIPOTRAN'
+      'WHERE'
+      '  ID_TIPOTRAN = :OLD_ID_TIPOTRAN')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  ID_TIPOTRAN = :ID_TIPOTRAN')
+    SQLLock.Strings = (
+      'SELECT * FROM transporte_tipo'
+      'WHERE'
+      '  ID_TIPOTRAN = :ID_TIPOTRAN'
+      'FOR UPDATE NOWAIT')
+    SQL.Strings = (
+      'SELECT '
+      '  transporte_tipo.empresa,'
+      '  transporte_tipo.filial,'
+      '  transporte_tipo.id_tipotran,'
+      '  transporte_tipo.nm_tipotran,'
+      '  transporte_tipo.fx_tipotran'
+      'FROM'
+      '  transporte_tipo'
+      'ORDER BY transporte_tipo.nm_tipotran')
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 376
+    Top = 184
+    object QryCadTpTransEMPRESA: TStringField
+      FieldName = 'EMPRESA'
+      Required = True
+      Size = 2
+    end
+    object QryCadTpTransFILIAL: TIntegerField
+      FieldName = 'FILIAL'
+      Required = True
+    end
+    object QryCadTpTransID_TIPOTRAN: TFloatField
+      FieldName = 'ID_TIPOTRAN'
+      Required = True
+    end
+    object QryCadTpTransNM_TIPOTRAN: TStringField
+      FieldName = 'NM_TIPOTRAN'
+      Required = True
+      Size = 40
+    end
+    object QryCadTpTransFX_TIPOTRAN: TStringField
+      FieldName = 'FX_TIPOTRAN'
+      Required = True
+      Size = 1
+    end
   end
 end

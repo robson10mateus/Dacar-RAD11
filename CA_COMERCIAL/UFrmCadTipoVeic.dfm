@@ -31,6 +31,8 @@ object FrmCadTipoVeic: TFrmCadTipoVeic
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 643
+    ExplicitHeight = 387
     object PageControl1: TPageControl
       Left = 1
       Top = 41
@@ -45,6 +47,8 @@ object FrmCadTipoVeic: TFrmCadTipoVeic
       Font.Style = []
       ParentFont = False
       TabOrder = 0
+      ExplicitWidth = 641
+      ExplicitHeight = 345
       object TabCriterio: TTabSheet
         Caption = 'Criterios'
         OnShow = TabCriterioShow
@@ -589,7 +593,7 @@ object FrmCadTipoVeic: TFrmCadTipoVeic
       Font.Style = []
       ParentFont = False
       TabOrder = 1
-      ExplicitWidth = 657
+      ExplicitWidth = 641
       object SB_PRIMEIRO: TSpeedButton
         Left = 0
         Top = 0
@@ -2519,95 +2523,6 @@ object FrmCadTipoVeic: TFrmCadTipoVeic
       end
     end
   end
-  object QryCadTpVeic: TOraQuery
-    KeyFields = 'ID_TIPOVEIC'
-    KeySequence = 'ID_TIPOVEIC'
-    SQLInsert.Strings = (
-      'INSERT INTO veiculo_tipo'
-      
-        '  (EMPRESA, FILIAL, ID_TIPOVEIC, NM_TIPOVEIC, QN_CAPATIPOVEIC, I' +
-        'D_UNIDMEDI, FX_TIPOVEIC)'
-      'VALUES'
-      
-        '  (:EMPRESA, :FILIAL, :ID_TIPOVEIC, :NM_TIPOVEIC, :QN_CAPATIPOVE' +
-        'IC, :ID_UNIDMEDI, :FX_TIPOVEIC)')
-    SQLDelete.Strings = (
-      'DELETE FROM veiculo_tipo'
-      'WHERE'
-      '  ID_TIPOVEIC = :ID_TIPOVEIC')
-    SQLUpdate.Strings = (
-      'UPDATE veiculo_tipo'
-      'SET'
-      '  EMPRESA = :EMPRESA,'
-      '  FILIAL = :FILIAL,'
-      '  ID_TIPOVEIC = :ID_TIPOVEIC,'
-      '  NM_TIPOVEIC = :NM_TIPOVEIC,'
-      '  QN_CAPATIPOVEIC = :QN_CAPATIPOVEIC,'
-      '  ID_UNIDMEDI = :ID_UNIDMEDI,'
-      '  FX_TIPOVEIC = :FX_TIPOVEIC'
-      'WHERE'
-      '  ID_TIPOVEIC = :OLD_ID_TIPOVEIC')
-    SQLLock.Strings = (
-      'SELECT * FROM veiculo_tipo'
-      'WHERE'
-      '  ID_TIPOVEIC = :ID_TIPOVEIC'
-      'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  ID_TIPOVEIC = :ID_TIPOVEIC')
-    LocalUpdate = True
-    SQL.Strings = (
-      'SELECT '
-      '  veiculo_tipo.empresa,'
-      '  veiculo_tipo.filial,'
-      '  veiculo_tipo.id_tipoveic,'
-      '  veiculo_tipo.nm_tipoveic,'
-      '  veiculo_tipo.qn_capatipoveic,'
-      '  veiculo_tipo.id_unidmedi,'
-      '  veiculo_tipo.fx_tipoveic'
-      'FROM'
-      '  veiculo_tipo'
-      ''
-      'ORDER BY veiculo_tipo.nm_tipoveic')
-    FetchAll = True
-    CachedUpdates = True
-    Left = 374
-    Top = 186
-    object QryCadTpVeicEMPRESA: TStringField
-      FieldName = 'EMPRESA'
-      Required = True
-      Size = 2
-    end
-    object QryCadTpVeicFILIAL: TIntegerField
-      FieldName = 'FILIAL'
-      Required = True
-    end
-    object QryCadTpVeicID_TIPOVEIC: TFloatField
-      AutoGenerateValue = arAutoInc
-      DisplayLabel = 'C'#243'digo'
-      FieldName = 'ID_TIPOVEIC'
-    end
-    object QryCadTpVeicNM_TIPOVEIC: TStringField
-      DisplayLabel = 'Descri'#231#227'o Tipo de Ve'#237'culo'
-      FieldName = 'NM_TIPOVEIC'
-      Required = True
-      Size = 40
-    end
-    object QryCadTpVeicQN_CAPATIPOVEIC: TFloatField
-      DisplayLabel = 'Capacidade Carga'
-      FieldName = 'QN_CAPATIPOVEIC'
-      Required = True
-    end
-    object QryCadTpVeicID_UNIDMEDI: TFloatField
-      FieldName = 'ID_UNIDMEDI'
-      Required = True
-    end
-    object QryCadTpVeicFX_TIPOVEIC: TStringField
-      FieldName = 'FX_TIPOVEIC'
-      Required = True
-      Size = 1
-    end
-  end
   object DtSrcCadTpVeic: TOraDataSource
     DataSet = QryCadTpVeic
     Left = 408
@@ -2693,5 +2608,92 @@ object FrmCadTipoVeic: TFrmCadTipoVeic
     DataSet = QryUniMed
     Left = 440
     Top = 96
+  end
+  object QryCadTpVeic: TSmartQuery
+    KeyFields = 'ID_TIPOVEIC'
+    KeySequence = 'ID_TIPOVEIC'
+    SQLInsert.Strings = (
+      'INSERT INTO veiculo_tipo'
+      
+        '  (EMPRESA, FILIAL, ID_TIPOVEIC, NM_TIPOVEIC, QN_CAPATIPOVEIC, I' +
+        'D_UNIDMEDI, FX_TIPOVEIC)'
+      'VALUES'
+      
+        '  (:EMPRESA, :FILIAL, :ID_TIPOVEIC, :NM_TIPOVEIC, :QN_CAPATIPOVE' +
+        'IC, :ID_UNIDMEDI, :FX_TIPOVEIC)')
+    SQLDelete.Strings = (
+      'DELETE FROM veiculo_tipo'
+      'WHERE'
+      '  ID_TIPOVEIC = :ID_TIPOVEIC')
+    SQLUpdate.Strings = (
+      'UPDATE veiculo_tipo'
+      'SET'
+      '  EMPRESA = :EMPRESA,'
+      '  FILIAL = :FILIAL,'
+      '  ID_TIPOVEIC = :ID_TIPOVEIC,'
+      '  NM_TIPOVEIC = :NM_TIPOVEIC,'
+      '  QN_CAPATIPOVEIC = :QN_CAPATIPOVEIC,'
+      '  ID_UNIDMEDI = :ID_UNIDMEDI,'
+      '  FX_TIPOVEIC = :FX_TIPOVEIC'
+      'WHERE'
+      '  ID_TIPOVEIC = :OLD_ID_TIPOVEIC')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  ID_TIPOVEIC = :ID_TIPOVEIC')
+    SQLLock.Strings = (
+      'SELECT * FROM veiculo_tipo'
+      'WHERE'
+      '  ID_TIPOVEIC = :ID_TIPOVEIC'
+      'FOR UPDATE NOWAIT')
+    SQL.Strings = (
+      'SELECT '
+      '  veiculo_tipo.empresa,'
+      '  veiculo_tipo.filial,'
+      '  veiculo_tipo.id_tipoveic,'
+      '  veiculo_tipo.nm_tipoveic,'
+      '  veiculo_tipo.qn_capatipoveic,'
+      '  veiculo_tipo.id_unidmedi,'
+      '  veiculo_tipo.fx_tipoveic'
+      'FROM'
+      '  veiculo_tipo'
+      ''
+      'ORDER BY veiculo_tipo.nm_tipoveic')
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 376
+    Top = 184
+    object QryCadTpVeicEMPRESA: TStringField
+      FieldName = 'EMPRESA'
+      Required = True
+      Size = 2
+    end
+    object QryCadTpVeicFILIAL: TIntegerField
+      FieldName = 'FILIAL'
+      Required = True
+    end
+    object QryCadTpVeicID_TIPOVEIC: TFloatField
+      FieldName = 'ID_TIPOVEIC'
+      Required = True
+    end
+    object QryCadTpVeicNM_TIPOVEIC: TStringField
+      FieldName = 'NM_TIPOVEIC'
+      Required = True
+      Size = 40
+    end
+    object QryCadTpVeicQN_CAPATIPOVEIC: TFloatField
+      FieldName = 'QN_CAPATIPOVEIC'
+      Required = True
+    end
+    object QryCadTpVeicID_UNIDMEDI: TFloatField
+      FieldName = 'ID_UNIDMEDI'
+      Required = True
+    end
+    object QryCadTpVeicFX_TIPOVEIC: TStringField
+      FieldName = 'FX_TIPOVEIC'
+      Required = True
+      Size = 1
+    end
   end
 end

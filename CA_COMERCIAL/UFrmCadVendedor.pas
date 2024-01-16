@@ -5,7 +5,8 @@ interface
 uses
    SysUtils, Types, Classes, {$IFNDEF VER130} Variants {$ENDIF, Types}, Graphics, Controls, Forms,
    Dialogs, StdCtrls, Buttons, ComCtrls, Mask, DBCtrls, ExtCtrls,
-   Grids, DBGrids, DB, Ora, MemDS, DBAccess, Global, UFrmPesqClie, Winapi.Windows;
+   Grids, DBGrids, DB, Ora, MemDS, DBAccess, Global, UFrmPesqClie, Winapi.Windows,
+  OraSmart;
 
 type
   TFrmCadVendedor = class(TForm)
@@ -30,7 +31,6 @@ type
   Label15: TLabel;
   DBNomeVendedor: TDBEdit;
   Label3: TLabel;
-  qryVendedores: TOraQuery;
   DtSrcVendedor: TOraDataSource;
   DBFantasia: TDBEdit;
   lbFantasia: TLabel;
@@ -70,7 +70,6 @@ type
   Label26: TLabel;
   TabClientes: TTabSheet;
   dbgrdClientes: TDBGrid;
-  qryVendedorCliente: TOraQuery;
   DtSrcVendedorCliente: TOraDataSource;
   DtSrcDireitos: TOraDataSource;
   qryClientes: TOraQuery;
@@ -87,59 +86,11 @@ type
   dblkcbbFornecedor: TDBLookupComboBox;
   qryFornecedor: TOraQuery;
   DtSrcFornecedor: TOraDataSource;
-  QryVendedoresID_VENDEDOR: TFloatField;
-  QryVendedoresNM_VENDEDOR: TStringField;
-  strngfldVendedoresNM_FANTVEND: TStringField;
-  QryVendedoresNM_REDUVEND: TStringField;
-  strngfldVendedoresNM_LOGRVEND: TStringField;
-  strngfldVendedoresNR_LOGRVEND: TStringField;
-  strngfldVendedoresGN_COMPENDEVEND: TStringField;
-  strngfldVendedoresNM_BAIRVEND: TStringField;
-  strngfldVendedoresNR_CEPVEND: TStringField;
-  strngfldVendedoresNR_FONEVEND: TStringField;
-  strngfldVendedoresNR_FAXVEND: TStringField;
-  strngfldVendedoresNR_FONECOMPVEND: TStringField;
-  strngfldVendedoresGN_URLVEND: TStringField;
-  strngfldVendedoresGN_EMAIVEND: TStringField;
-  dtmfldVendedoresDT_NASCVEND: TDateTimeField;
-  QryVendedoresFL_BLOQADMIVEND: TStringField;
-  QryVendedoresFL_ATIVVEND: TStringField;
-  QryVendedoresFL_COMIVEND: TStringField;
-  QryVendedoresFL_PESSVEND: TStringField;
-  strngfldVendedoresNR_CNPJVEND: TStringField;
-  strngfldVendedoresNR_INSCESTAVEND: TStringField;
-  strngfldVendedoresNR_RGVEND: TStringField;
-  strngfldVendedoresGN_ORGAEXPERGVEND: TStringField;
-  strngfldVendedoresNR_CPFVEND: TStringField;
-  QryVendedoresPC_COMIVEND: TFloatField;
-  strngfldVendedoresGN_OBSEVEND: TStringField;
-  QryVendedoresFL_PARTCORTE: TStringField;
-  fltfldVendedoresID_TIPOVENDEDOR: TFloatField;
-  fltfldVendedoresID_CIDADE: TFloatField;
-  fltfldVendedoresID_TIPOLOGR: TFloatField;
-  fltfldVendedoresID_FORNECEDOR: TFloatField;
-  qryVendedoresEMPRESA: TStringField;
-  qryVendedoresFILIAL: TIntegerField;
-  qryVendedoresIE_VENDEDOR: TStringField;
-  qryVendedoresID_INTEVEND: TStringField;
-  qryVendedoresIE_CONTCONT: TStringField;
-  qryVendedoresNR_CAIXPOSTVEND: TStringField;
-  qryVendedoresNR_CEPCAIXPOSTVEND: TStringField;
-  qryVendedoresGN_MENSVENDVEND: TStringField;
-  qryVendedoresFX_VENDEDOR: TStringField;
-  qryVendedoresDT_CADAVEND: TDateTimeField;
-  qryVendedoresDT_ALTEVEND: TDateTimeField;
-  qryVendedorClienteID_CLIENTE: TFloatField;
-  qryVendedorClienteCLIENTE: TStringField;
-  qryVendedorClienteVENDEDORPADRAO: TStringField;
-  qryVendedorClienteCOMISSIONADO: TStringField;
-  QryVendedorClienteCOMISSAO: TFloatField;
   DBRPessoa: TDBRadioGroup;
   Label4: TLabel;
   dblkcbbUsuario: TDBLookupComboBox;
   qryUsuario: TOraQuery;
   DtSrcUsuario: TDataSource;
-  qryVendedoresID_USUARIO: TIntegerField;
   qryUsuarioID_USUARIO: TIntegerField;
   qryUsuarioNOME_USUARIO: TStringField;
   Panel1: TPanel;
@@ -167,6 +118,56 @@ type
   DBInscEst: TDBEdit;
     btnExcel: TSpeedButton;
     dlgSaveArquivo: TSaveDialog;
+    qryVendedores: TSmartQuery;
+    qryVendedoresID_VENDEDOR: TFloatField;
+    qryVendedoresNM_VENDEDOR: TStringField;
+    qryVendedoresNM_FANTVEND: TStringField;
+    qryVendedoresNM_REDUVEND: TStringField;
+    qryVendedoresNM_LOGRVEND: TStringField;
+    qryVendedoresNR_LOGRVEND: TStringField;
+    qryVendedoresGN_COMPENDEVEND: TStringField;
+    qryVendedoresNM_BAIRVEND: TStringField;
+    qryVendedoresNR_CEPVEND: TStringField;
+    qryVendedoresNR_FONEVEND: TStringField;
+    qryVendedoresNR_FONECOMPVEND: TStringField;
+    qryVendedoresNR_FAXVEND: TStringField;
+    qryVendedoresGN_URLVEND: TStringField;
+    qryVendedoresGN_EMAIVEND: TStringField;
+    qryVendedoresDT_NASCVEND: TDateTimeField;
+    qryVendedoresFL_BLOQADMIVEND: TStringField;
+    qryVendedoresFL_ATIVVEND: TStringField;
+    qryVendedoresFL_COMIVEND: TStringField;
+    qryVendedoresFL_PESSVEND: TStringField;
+    qryVendedoresNR_CNPJVEND: TStringField;
+    qryVendedoresNR_INSCESTAVEND: TStringField;
+    qryVendedoresNR_RGVEND: TStringField;
+    qryVendedoresGN_ORGAEXPERGVEND: TStringField;
+    qryVendedoresNR_CPFVEND: TStringField;
+    qryVendedoresPC_COMIVEND: TFloatField;
+    qryVendedoresGN_OBSEVEND: TStringField;
+    qryVendedoresFL_PARTCORTE: TStringField;
+    qryVendedoresID_TIPOVENDEDOR: TFloatField;
+    qryVendedoresID_CIDADE: TFloatField;
+    qryVendedoresID_TIPOLOGR: TFloatField;
+    qryVendedoresID_FORNECEDOR: TFloatField;
+    qryVendedoresEMPRESA: TStringField;
+    qryVendedoresFILIAL: TIntegerField;
+    qryVendedoresIE_VENDEDOR: TStringField;
+    qryVendedoresID_INTEVEND: TStringField;
+    qryVendedoresIE_CONTCONT: TStringField;
+    qryVendedoresNR_CAIXPOSTVEND: TStringField;
+    qryVendedoresNR_CEPCAIXPOSTVEND: TStringField;
+    qryVendedoresGN_MENSVENDVEND: TStringField;
+    qryVendedoresFX_VENDEDOR: TStringField;
+    qryVendedoresDT_CADAVEND: TDateTimeField;
+    qryVendedoresDT_ALTEVEND: TDateTimeField;
+    qryVendedoresID_USUARIO: TIntegerField;
+    qryVendedorCliente: TSmartQuery;
+    qryVendedorClienteID_CLIENTE: TFloatField;
+    qryVendedorClienteCLIENTE: TStringField;
+    qryVendedorClienteVENDEDORPADRAO: TStringField;
+    qryVendedorClienteCOMISSIONADO: TStringField;
+    qryVendedorClienteCOMISSAO: TFloatField;
   procedure SB_PRIMEIROClick (Sender: TObject);
   procedure SB_ANTERIORClick (Sender: TObject);
   procedure SB_PROXIMOClick (Sender: TObject);
@@ -199,12 +200,13 @@ type
     const Rect: TRect; DataCol: Integer; Column: TColumn;
     State: TGridDrawState);
     procedure btnExcelClick(Sender: TObject);
+    procedure DBRPessoaChange(Sender: TObject);
 
    private
       OrdemColuna , Ordem : string ;
       function LCamposRetornaString (item: Integer): string;
       function CBCondRetornaString (item: Integer): string;
-      function ConstroiConsultaVendedor (Query: TOraQuery): string;
+      function ConstroiConsultaVendedor (Query: TSmartQuery): string;
       function AdicionaExpressao (item: Integer; expressao: string): string;
       procedure VerificaDireitos;
       procedure Atual_ToolBar (BtOrdem: Integer);
@@ -361,7 +363,7 @@ begin
   end;
 end;
 
-function TFrmCadVendedor.ConstroiConsultaVendedor (Query: TOraQuery): string;
+function TFrmCadVendedor.ConstroiConsultaVendedor (Query: TSmartQuery): string;
 begin
   with Query.SQL do
   begin
@@ -481,7 +483,7 @@ var
 begin
   str := DBDataNascimento.Text;
   Cria_FrmSelData (str);
-  DBDataNascimento.Text := str;
+  qryVendedoresDT_NASCVEND.Value := StrToDate(str);
   DBDataNascimento.SetFocus;
 end;
 
@@ -798,9 +800,9 @@ begin
     end;
 end;
 
-procedure TFrmCadVendedor.DBRPessoaExit(Sender: TObject);
+procedure TFrmCadVendedor.DBRPessoaChange(Sender: TObject);
 begin
-  if DBRPessoa.Value ='F' then
+ if DBRPessoa.Value ='F' then
   begin
     DBCNPJ.Text:='';
     DBInscEst.Text:='';
@@ -813,7 +815,6 @@ begin
 
   if DBRPessoa.Value ='J' then
   begin
-    DBRg.Text:='';
     DBCPF.Text:='';
     DBOrgaoExpedidor.Text:='';
     DBCNPJ.Enabled:=True;
@@ -822,6 +823,32 @@ begin
     DBCPF.Enabled:=False;
     DBOrgaoExpedidor.Enabled:=False;
   end;
+end;
+
+procedure TFrmCadVendedor.DBRPessoaExit(Sender: TObject);
+begin
+//  if DBRPessoa.Value ='F' then
+//  begin
+//    DBCNPJ.Text:='';
+//    DBInscEst.Text:='';
+//    DBCNPJ.Enabled:=False;
+//    DBInscEst.Enabled:=False;
+//    DBRg.Enabled:=True;
+//    DBCPF.Enabled:=True;
+//    DBOrgaoExpedidor.Enabled:=True;
+//  end;
+//
+//  if DBRPessoa.Value ='J' then
+//  begin
+//    DBRg.Text:='';
+//    DBCPF.Text:='';
+//    DBOrgaoExpedidor.Text:='';
+//    DBCNPJ.Enabled:=True;
+//    DBInscEst.Enabled:=True;
+//    DBRg.Enabled:=False;
+//    DBCPF.Enabled:=False;
+//    DBOrgaoExpedidor.Enabled:=False;
+//  end;
 end;
 
 procedure TFrmCadVendedor.DBGrid1TitleClick(Column: TColumn);
@@ -853,7 +880,7 @@ begin
     if Odd( DataSource.DataSet.RecNo) then
       Canvas.Brush.Color := $00FFF2D9
     else
-      Canvas.Brush.Color := clBackground;
+      Canvas.Brush.Color := clWindow;
 
     Canvas.Font.Color := clBlack;
     Canvas.FillRect(Rect);
@@ -875,7 +902,7 @@ begin
     if Odd( DataSource.DataSet.RecNo) then
       Canvas.Brush.Color := $00FFF2D9
     else
-      Canvas.Brush.Color := clBackground;
+      Canvas.Brush.Color := clWindow;
 
     Canvas.Font.Color := clBlack;
     Canvas.FillRect(Rect);

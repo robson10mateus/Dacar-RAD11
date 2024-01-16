@@ -494,8 +494,8 @@ object FrmSelFreteFg: TFrmSelFreteFg
   object pnlFiltros: TPanel
     Left = 0
     Top = 40
-    Width = 526
-    Height = 201
+    Width = 530
+    Height = 202
     Align = alClient
     BevelWidth = 3
     Color = clWindow
@@ -508,6 +508,8 @@ object FrmSelFreteFg: TFrmSelFreteFg
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 526
+    ExplicitHeight = 201
     object Label3: TLabel
       Left = 15
       Top = 140
@@ -694,9 +696,9 @@ object FrmSelFreteFg: TFrmSelFreteFg
     end
     object btnTransp: TBitBtn
       Left = 69
-      Top = 161
+      Top = 160
       Width = 21
-      Height = 19
+      Height = 23
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
       Font.Height = 16
@@ -735,7 +737,7 @@ object FrmSelFreteFg: TFrmSelFreteFg
   object pnlBotoes: TPanel
     Left = 0
     Top = 0
-    Width = 526
+    Width = 530
     Height = 40
     Align = alTop
     Color = clWindow
@@ -748,6 +750,7 @@ object FrmSelFreteFg: TFrmSelFreteFg
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 526
     object SB_Relatorio: TSpeedButton
       Left = 5
       Top = 2

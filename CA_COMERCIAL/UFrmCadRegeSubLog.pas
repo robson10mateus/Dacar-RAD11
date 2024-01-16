@@ -5,7 +5,7 @@ interface
 uses
   SysUtils, Types, Classes, {$IFNDEF VER130} Variants {$ENDIF, Types}, Graphics, Controls, Forms, 
   Dialogs, StdCtrls, DBCtrls, Mask, Grids, DBGrids, Buttons,
-  ExtCtrls, ComCtrls, DB, Ora, MemDS, DBAccess, Vcl.ToolWin;
+  ExtCtrls, ComCtrls, DB, Ora, MemDS, DBAccess, Vcl.ToolWin, OraSmart;
 
 type
   TFrmCadRegeSubLog = class(TForm)
@@ -50,15 +50,7 @@ type
     Label15: TLabel;
     Label3: TLabel;
     DBRadioGroup7: TDBRadioGroup;
-    QrySubeReg: TOraQuery;
     DtSrcSubeReg: TOraDataSource;
-    QrySubeRegEMPRESA: TStringField;
-    QrySubeRegFILIAL: TIntegerField;
-    QrySubeRegID_REGISUBRLOGI: TFloatField;
-    QrySubeRegID_REGILOGI: TFloatField;
-    QrySubeRegID_SUBRLOGI: TFloatField;
-    QrySubeRegFL_RELAREGISUBRLOGI: TStringField;
-    QrySubeRegFX_REGISUBRLOGI: TStringField;
     QrDireitos: TOraQuery;
     DBCodRegLog: TDBEdit;
     DBNmRegLog: TDBEdit;
@@ -71,12 +63,20 @@ type
     DBNmSubRegLog: TDBEdit;
     Label8: TLabel;
     DBCodISubRegLog: TDBEdit;
+    BtCenCus: TBitBtn;
+    BitBtn1: TBitBtn;
+    QrySubeReg: TSmartQuery;
+    QrySubeRegEMPRESA: TStringField;
+    QrySubeRegFILIAL: TIntegerField;
+    QrySubeRegID_REGISUBRLOGI: TFloatField;
+    QrySubeRegID_REGILOGI: TFloatField;
+    QrySubeRegID_SUBRLOGI: TFloatField;
+    QrySubeRegFL_RELAREGISUBRLOGI: TStringField;
+    QrySubeRegFX_REGISUBRLOGI: TStringField;
     QrySubeRegNM_SUBRLOGI: TStringField;
     QrySubeRegID_INTESUBRLOGI: TStringField;
     QrySubeRegNM_REGILOGI: TStringField;
     QrySubeRegID_INTEREGILOGI: TStringField;
-    BtCenCus: TBitBtn;
-    BitBtn1: TBitBtn;
     Function  Atual_ToolBar(BtOrdem:Integer):string;
     procedure LDcomponentes(LD:boolean);
     procedure SB_PRIMEIROClick(Sender: TObject);

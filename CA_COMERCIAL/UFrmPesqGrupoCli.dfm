@@ -1,15 +1,15 @@
 object FrmPesqGrupoCli: TFrmPesqGrupoCli
   Left = 214
   Top = 99
-  Width = 412
-  Height = 396
+  Width = 424
+  Height = 437
   HorzScrollBar.Range = 401
   VertScrollBar.Range = 385
   ActiveControl = EdExpre
   BorderIcons = [biHelp]
   BorderStyle = bsSingle
   Caption = 'Pesquisa Grupo de Clientes'
-  Color = clBackground
+  Color = clWindow
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
   Font.Height = 11
@@ -106,7 +106,7 @@ object FrmPesqGrupoCli: TFrmPesqGrupoCli
     Left = 16
     Top = 80
     Width = 140
-    Height = 21
+    Height = 23
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = 15
@@ -125,7 +125,7 @@ object FrmPesqGrupoCli: TFrmPesqGrupoCli
     Left = 172
     Top = 80
     Width = 140
-    Height = 21
+    Height = 23
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = 15

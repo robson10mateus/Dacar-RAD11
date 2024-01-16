@@ -3,9 +3,9 @@ object FrmVendedorCliente: TFrmVendedorCliente
   Top = 172
   ActiveControl = PageControl1
   Caption = 'Consulta Vendedor x Cliente'
-  ClientHeight = 0
-  ClientWidth = 120
-  Color = clBackground
+  ClientHeight = 591
+  ClientWidth = 933
+  Color = clWindow
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -21,26 +21,30 @@ object FrmVendedorCliente: TFrmVendedorCliente
   object PageControl1: TPageControl
     Left = 0
     Top = 0
-    Width = 120
-    Height = 0
-    ActivePage = Tab_Lista
+    Width = 933
+    Height = 591
+    ActivePage = Tab_Criterio
     Align = alClient
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = 15
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 941
-    ExplicitHeight = 496
     object Tab_Criterio: TTabSheet
       Caption = 'Crit'#233'rio'
       object Label6: TLabel
         Left = 316
         Top = 53
-        Width = 54
+        Width = 56
         Height = 15
         Caption = 'Condi'#231#227'o:'
       end
       object Label7: TLabel
         Left = 308
         Top = 85
-        Width = 55
+        Width = 62
         Height = 15
         Caption = 'Express'#227'o:'
       end
@@ -51,10 +55,11 @@ object FrmVendedorCliente: TFrmVendedorCliente
         Height = 369
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 11
+        Font.Height = 15
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
+        ItemHeight = 15
         ParentFont = False
         TabOrder = 0
         OnClick = LCamposClick
@@ -83,8 +88,8 @@ object FrmVendedorCliente: TFrmVendedorCliente
         Columns = 2
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 11
-        Font.Name = 'helvetica'
+        Font.Height = 15
+        Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = [fsBold]
         ItemIndex = 0
@@ -98,7 +103,7 @@ object FrmVendedorCliente: TFrmVendedorCliente
         Left = 382
         Top = 80
         Width = 265
-        Height = 21
+        Height = 23
         TabOrder = 3
         OnChange = EdExpreChange
       end
@@ -109,7 +114,7 @@ object FrmVendedorCliente: TFrmVendedorCliente
         Height = 273
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 12
+        Font.Height = 15
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
@@ -124,6 +129,11 @@ object FrmVendedorCliente: TFrmVendedorCliente
         Caption = '&Incluir'
         Default = True
         Enabled = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = 16
+        Font.Name = 'Arial'
+        Font.Style = []
         Glyph.Data = {
           1E060000424D1E0600000000000036000000280000001B000000120000000100
           180000000000E8050000120B0000120B00000000000000000000C0C0C0C0C0C0
@@ -175,6 +185,7 @@ object FrmVendedorCliente: TFrmVendedorCliente
           C0C0C0C0C0C0000000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
           C0C0C0C0C0C0C0C0C0C0C0C0C0000000000000C0C0C0C0C0C0C0C0C0C0C0C000
           0000}
+        ParentFont = False
         TabOrder = 6
         OnClick = BtIncluirClick
       end
@@ -184,6 +195,11 @@ object FrmVendedorCliente: TFrmVendedorCliente
         Width = 75
         Height = 23
         Caption = 'Limpar'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = 16
+        Font.Name = 'Arial'
+        Font.Style = []
         Glyph.Data = {
           2A010000424D2A010000000000007600000028000000110000000F0000000100
           040000000000B4000000120B0000120B00001000000010000000000000000000
@@ -195,6 +211,7 @@ object FrmVendedorCliente: TFrmVendedorCliente
           FFFFF0000000FFF0F0F0F0F0FFFFF0000000FFF0FFFFFFF0FFFFF0000000FF70
           000000007FFFF0000000FF0FFFFFFFFF0FFFF0000000FF70000000007FFFF000
           0000FFFFF70007FFFFFFF0000000}
+        ParentFont = False
         TabOrder = 8
         OnClick = BtLimparClick
       end
@@ -204,6 +221,11 @@ object FrmVendedorCliente: TFrmVendedorCliente
         Width = 75
         Height = 22
         Caption = '&Ativar'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = 16
+        Font.Name = 'Arial'
+        Font.Style = []
         Glyph.Data = {
           36030000424D3603000000000000360000002800000010000000100000000100
           18000000000000030000120B0000120B00000000000000000000FFFFFFFFFFFF
@@ -231,14 +253,20 @@ object FrmVendedorCliente: TFrmVendedorCliente
           FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
           FFFFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
           FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+        ParentFont = False
         TabOrder = 5
         OnClick = BtAtivarClick
       end
       object BPESQ: TBitBtn
-        Left = 623
+        Left = 625
         Top = 80
         Width = 23
-        Height = 20
+        Height = 23
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = 16
+        Font.Name = 'Arial'
+        Font.Style = []
         Glyph.Data = {
           E6000000424DE6000000000000007600000028000000100000000E0000000100
           04000000000070000000120B0000120B00001000000010000000000000000000
@@ -248,6 +276,7 @@ object FrmVendedorCliente: TFrmVendedorCliente
           3333333300000B1333333330F7F700333333330F7F7F703333333307F7F7F033
           3333330F7F7F703333333307F7F7F033333333307F7F03333333333300003333
           33333333333333333333}
+        ParentFont = False
         TabOrder = 7
         Visible = False
         OnClick = BPESQClick
@@ -259,7 +288,7 @@ object FrmVendedorCliente: TFrmVendedorCliente
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 933
+        Width = 925
         Height = 41
         Anchors = []
         ButtonHeight = 37
@@ -273,9 +302,10 @@ object FrmVendedorCliente: TFrmVendedorCliente
         Font.Style = []
         ParentFont = False
         TabOrder = 0
+        ExplicitWidth = 112
         object SB_Relatorio: TSpeedButton
-          Left = 45
-          Top = 4
+          Left = 0
+          Top = 0
           Width = 40
           Height = 37
           Hint = 'Imprimir'
@@ -297,8 +327,8 @@ object FrmVendedorCliente: TFrmVendedorCliente
           OnClick = SB_RelatorioClick
         end
         object Sb_Sair: TSpeedButton
-          Left = 406
-          Top = 4
+          Left = 40
+          Top = 0
           Width = 40
           Height = 37
           Hint = 'Sair'
@@ -488,8 +518,8 @@ object FrmVendedorCliente: TFrmVendedorCliente
           OnClick = Sb_SairClick
         end
         object SB_ATUAL: TSpeedButton
-          Left = 1
-          Top = 4
+          Left = 80
+          Top = 0
           Width = 39
           Height = 37
           Hint = 'Atualizar'
@@ -679,16 +709,16 @@ object FrmVendedorCliente: TFrmVendedorCliente
           OnClick = SB_ATUALClick
         end
         object ToolButton2: TToolButton
-          Left = 40
-          Top = 4
+          Left = 119
+          Top = 0
           Width = 5
           Caption = 'ToolButton2'
           ImageIndex = 0
           Style = tbsSeparator
         end
         object ToolButton3: TToolButton
-          Left = 85
-          Top = 4
+          Left = 124
+          Top = 0
           Width = 321
           Caption = 'ToolButton3'
           ImageIndex = 1
@@ -698,18 +728,24 @@ object FrmVendedorCliente: TFrmVendedorCliente
       object DBGrid1: TDBGrid
         Left = 0
         Top = 41
-        Width = 933
-        Height = 425
+        Width = 925
+        Height = 520
         Align = alClient
         Color = clWhite
         DataSource = Ds
         FixedColor = clSilver
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = 15
+        Font.Name = 'Arial'
+        Font.Style = []
         Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
+        ParentFont = False
         TabOrder = 1
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
-        TitleFont.Height = -12
-        TitleFont.Name = 'Segoe UI'
+        TitleFont.Height = 16
+        TitleFont.Name = 'Arial'
         TitleFont.Style = []
         OnKeyDown = DBGrid1KeyDown
         Columns = <

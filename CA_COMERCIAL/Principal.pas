@@ -5,7 +5,8 @@ Interface
 Uses
   DB, MemDS, DBAccess, Ora,  Types, Controls, ComCtrls, Classes,
   SysUtils, Graphics, Forms, Dialogs, Menus,  ExtCtrls, StdCtrls, OraCall,
-  Vcl.Buttons, System.IniFiles, Winapi.TlHelp32, Winapi.Windows;
+  Vcl.Buttons, System.IniFiles, Winapi.TlHelp32, Winapi.Windows, DASQLMonitor,
+  OraSQLMonitor;
 Type
   TFrmPrincipal = class(TForm)
     MainMenu1: TMainMenu;
@@ -122,6 +123,7 @@ Type
     VEN074: TMenuItem;
     VEN075: TMenuItem;
     VEN076: TMenuItem;
+    OraSQLMonitor1: TOraSQLMonitor;
     procedure Trataerros(Sender: TObject; E: Exception);
     procedure FormCreate(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
@@ -403,7 +405,7 @@ procedure TFrmPrincipal.Sobre1Click(Sender: TObject);
 begin
 Try
   Application.CreateForm(TFrmSobre, FrmSobre);
-  FrmSobre.ShowModal;
+  FrmSobre.Show;
 Finally
   FrmSobre.Free;
 End;
@@ -2405,7 +2407,7 @@ begin
   try
     VEN015b.Enabled:= False;
     FrmSelProdVend:=TFrmSelProdVend.Create(Self);
-    FrmSelProdVend.ShowModal;
+    FrmSelProdVend.Show;
   except;
     VEN015b.Enabled:= True;
     FrmSelProdVend.Free;
@@ -2417,7 +2419,7 @@ begin
   try
     VEN015a.Enabled:= False;
     frmVendasVendedorCliente:=TfrmVendasVendedorCliente.Create(Self);
-    frmVendasVendedorCliente.ShowModal;
+    frmVendasVendedorCliente.Show;
   except;
     VEN015a.Enabled:= True;
     frmVendasVendedorCliente.Free;

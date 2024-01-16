@@ -16,7 +16,6 @@ object frmEmissorNFe: TfrmEmissorNFe
   Font.Style = []
   KeyPreview = True
   Position = poDefault
-  WindowState = wsMaximized
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
@@ -94,48 +93,56 @@ object frmEmissorNFe: TfrmEmissorNFe
             Expanded = False
             FieldName = 'DT_CARGEXPE'
             Title.Caption = 'Data Carga'
+            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'FL_STATCARGEXPE'
             Title.Caption = 'Status'
+            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'ID_CLIENTE'
             Title.Caption = 'C'#243'd Cli'
+            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'NM_CLIENTE'
             Title.Caption = 'Nome do Cliente'
+            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'NR_NOTAFISC'
             Title.Caption = 'Documento'
+            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'FL_CANCNOTAFISC'
             Title.Caption = 'Canc.'
+            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'CANCELADA'
             Title.Caption = 'Canc. Sefaz'
+            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'INUTILIZADA'
             Title.Caption = 'Inutilizada'
+            Width = 64
             Visible = True
           end
           item
@@ -147,35 +154,41 @@ object frmEmissorNFe: TfrmEmissorNFe
           item
             Expanded = False
             FieldName = 'NFE_CHAVE'
+            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'NFE_PROTOCOLO'
+            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'NM_TIPOPEDIVEND'
             Title.Caption = 'Tipo Pedido'
+            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'NM_FORMPAGA'
             Title.Caption = 'Forma Pagto'
+            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'ID_FORMPAGA'
             Title.Caption = 'C'#243'd Forma Pagto'
+            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'NM_NATUOPERNOTAFISC'
             Title.Caption = 'Nat. Opera'#231#227'o'
+            Width = 64
             Visible = True
           end>
       end
@@ -4699,429 +4712,6 @@ object frmEmissorNFe: TfrmEmissorNFe
       Size = 1
     end
   end
-  object QImpDocPed: TOraQuery
-    SQLUpdate.Strings = (
-      'UPDATE PEDIDO_VENDA'
-      'SET'
-      
-        '  ID_PEDIVEND = :ID_PEDIVEND,                                   ' +
-        '                   '
-      
-        '  ID_CLIENTE = :ID_CLIENTE,                                     ' +
-        '                  '
-      
-        '  FL_STATPEDIVEND = :FL_STATPEDIVEND,                           ' +
-        '                       '
-      
-        '  DT_FATUPEDIVEND = :DT_FATUPEDIVEND,                           ' +
-        '                       '
-      
-        '  ID_TIPOPEDIVEND = :ID_TIPOPEDIVEND,                           ' +
-        '                       '
-      
-        '  ID_FORMPAGA = :ID_FORMPAGA,                                   ' +
-        '                   '
-      
-        '  ID_SITUCOBR = :ID_SITUCOBR,                                   ' +
-        '                   '
-      
-        '  ID_INSTCOBR = :ID_INSTCOBR,                                   ' +
-        '                   '
-      
-        '  ID_CONTA = :ID_CONTA,                                         ' +
-        '                '
-      
-        '  DT_ENTRPEDIVEND = :DT_ENTRPEDIVEND,                           ' +
-        '                       '
-      '  EMPRESA = :EMPRESA,'
-      '  FILIAL = :FILIAL,'
-      '  ID_VENDEDOR = :ID_VENDEDOR,'
-      '  VL_PEDIVEND = :VL_PEDIVEND,'
-      '  FL_CREDUSADPEDIVEND = :FL_CREDUSADPEDIVEND,'
-      '  VL_TRANAUTOPEDIVEND = :VL_TRANAUTOPEDIVEND,'
-      '  PC_IMPOFRETAUTOPEDIVEND = :PC_IMPOFRETAUTOPEDIVEND,'
-      '  VL_OUTRAJUSANTPEDIVEND = :VL_OUTRAJUSANTPEDIVEND,'
-      '  VL_OUTRAJUSPEDIVEND = :VL_OUTRAJUSPEDIVEND,'
-      
-        '  DTHORA_GERADOC = :DTHORA_GERADOC                              ' +
-        '               '
-      'WHERE'
-      '  ID_PEDIVEND = :OLD_ID_PEDIVEND')
-    SQLLock.Strings = (
-      'SELECT * FROM PEDIDO_VENDA'
-      'WHERE'
-      '   ID_PEDIVEND = :ID_PEDIVEND            '
-      'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  Pedido_venda.ID_PEDIVEND = :ID_PEDIVEND')
-    LocalUpdate = True
-    Session = FrmPrincipal.DB
-    SQL.Strings = (
-      'SELECT DISTINCT Expedicao_carga.DT_CARGEXPE,'
-      '      Expedicao_carga.ID_CARGEXPE,'
-      '      Expedicao_carga.FL_STATCARGEXPE,'
-      '      Expedicao_carga.NR_LACRCARGEXPE,'
-      '      Pedido_venda.ID_PEDIVEND,'
-      '      Pedido_venda.ID_CLIENTE,'
-      '      Pedido_venda.FL_STATPEDIVEND,'
-      '      Pedido_venda.DT_FATUPEDIVEND,'
-      '      Pedido_venda.ID_TIPOPEDIVEND,'
-      '      Pedido_venda.ID_FORMPAGA,'
-      '      Pedido_venda.ID_SITUCOBR,'
-      '      Pedido_venda.ID_INSTCOBR,'
-      '      Pedido_venda.ID_CONTA,'
-      '      Pedido_venda.DT_ENTRPEDIVEND,'
-      '      Pedido_venda.EMPRESA,'
-      '      Pedido_venda.FILIAL,'
-      '      Pedido_venda.ID_VENDEDOR,'
-      '      Pedido_venda.VL_PEDIVEND,'
-      '      Pedido_venda.FL_CREDUSADPEDIVEND,'
-      '      Pedido_venda.VL_TRANAUTOPEDIVEND,'
-      '      Pedido_Venda.PC_IMPOFRETAUTOPEDIVEND,'
-      '      Pedido_venda.fl_bloqajusfinapedivend,'
-      '      Pedido_venda.VL_OUTRAJUSANTPEDIVEND,'
-      '      Pedido_venda.VL_OUTRAJUSPEDIVEND,'
-      '      Pedido_venda.IE_PEDIVEND,'
-      '      Vendedor.FL_COMIVEND,'
-      '      Vendedor.PC_COMIVEND,'
-      '      Cliente.NM_CLIENTE,'
-      '      Banco_agencia.NR_AGENBANC,'
-      '      Banco.NR_BANCO,'
-      '      Conta.NR_CONTA,'
-      '      Conta.NR_CODICEDECONT,'
-      '      Nota_fiscal_serie2.SG_SERINOTAFISC,'
-      '      Nota_fiscal.ID_NOTAFISC,'
-      '      Nota_fiscal.NR_NOTAFISC,'
-      '      Nota_fiscal.FL_CANCNOTAFISC,'
-      '      Nota_fiscal.FL_IMPRNOTAFISC,'
-      '      Nota_fiscal.gn_placveicnotafisc,'
-      '      Nota_fiscal.DT_EMISNOTAFISC,'
-      '      Nota_fiscal.NM_NATUOPERNOTAFISC,'
-      '      Forma_pagamento.NM_FORMPAGA,'
-      '      Pedido_venda_tipo.NM_TIPOPEDIVEND,'
-      '      -- Boleto.NR_BOLETO,'
-      '      Pedido_venda.DTHORA_GERADOC,'
-      '      NOTA_FISCAL_XML.ID_NFE_XML,'
-      '      NOTA_FISCAL_XML.NFE_PROTOCOLO,'
-      '      NOTA_FISCAL_XML.NFE_CHAVE,'
-      '      NOTA_FISCAL_XML.NFE_SEQEVENTO,'
-      '      NOTA_FISCAL_XML.CANCELADA,'
-      '     NOTA_FISCAL_XML.INUTILIZADA,'
-      '      Nota_fiscal.SG_SERINOTAFISC_NOTAFISC,'
-      
-        '       CASE WHEN SUBSTR(Nota_fiscal.NR_CFOP_NOTAFISC,1,1) = '#39'1'#39' ' +
-        'OR '
-      
-        '                 SUBSTR(Nota_fiscal.NR_CFOP_NOTAFISC,1,1) = '#39'2'#39' ' +
-        'OR'
-      '                 SUBSTR(Nota_fiscal.NR_CFOP_NOTAFISC,1,1) = '#39'3'#39
-      '                 THEN '#39'0'#39' ELSE '#39'1'#39' END  TIPOEMI,'
-      '     Cliente.GN_EMAICLIE,'
-      
-        '    TO_DATE( NOTA_FISCAL_XML.NFE_DT_RECEBTO,'#39'DD/MM/YYYY HH24:MI:' +
-        'SS'#39'  ) DT_AUTORIZACAO'
-      ' FROM EXPEDICAO_CARGA Expedicao_carga,'
-      '      PEDIDO_VENDA Pedido_venda,'
-      '      PEDIDO_VENDA_NOTA_FISCAL Pedido_venda_nota_fiscal,'
-      '      PEDIDO_VENDA_TIPO Pedido_venda_tipo,'
-      '      CLIENTE Cliente,'
-      '      NOTA_FISCAL_SERIE Nota_fiscal_serie,'
-      '      NOTA_FISCAL_SERIE Nota_fiscal_serie2,'
-      '      NOTA_FISCAL Nota_fiscal,'
-      '      CONTA Conta,'
-      '      BANCO Banco,'
-      '      BANCO_AGENCIA Banco_agencia,'
-      '      VENDEDOR Vendedor,'
-      
-        '      -- BOLETO Boleto,                                         ' +
-        '                       '
-      
-        '      FORMA_PAGAMENTO Forma_pagamento,                          ' +
-        '                    '
-      ''
-      
-        '     &NOTA_XML NOTA_FISCAL_XML                                  ' +
-        '                             '
-      ''
-      
-        'WHERE (Pedido_venda.ID_PEDIVEND = Pedido_venda_nota_fiscal.ID_PE' +
-        'DIVEND )         '
-      
-        '  AND (Nota_fiscal.SG_SERINOTAFISC_NOTAFISC = Nota_fiscal_serie.' +
-        'SG_SERINOTAFISC )'
-      
-        '  AND (Pedido_venda_nota_fiscal.ID_NOTAFISC = Nota_fiscal.ID_NOT' +
-        'AFISC )           '
-      
-        '  AND (Expedicao_carga.ID_CARGEXPE = Pedido_venda.ID_CARGEXPE)  ' +
-        '                    '
-      
-        '  AND (Pedido_venda.ID_CLIENTE = Cliente.ID_CLIENTE)            ' +
-        '                    '
-      
-        '  AND (Pedido_venda.ID_CONTA = Conta.ID_CONTA)                  ' +
-        '                    '
-      
-        '  AND (Conta.ID_AGENBANC = Banco_agencia.ID_AGENBANC(+))        ' +
-        '                    '
-      
-        '  AND (Banco_agencia.ID_BANCO = Banco.ID_BANCO(+))              ' +
-        '                    '
-      
-        '  AND (Pedido_venda.ID_VENDEDOR = Vendedor.ID_VENDEDOR)         ' +
-        '                    '
-      
-        '  -- AND (Pedido_venda.ID_PEDIVEND = Boleto.ID_PEDIVEND(+))     ' +
-        '                       '
-      
-        '  AND (Pedido_venda.ID_TIPOPEDIVEND = Pedido_venda_tipo.ID_TIPOP' +
-        'EDIVEND)            '
-      
-        '  AND (Pedido_venda_tipo.ID_SERINOTAFISC = Nota_fiscal_serie2.ID' +
-        '_SERINOTAFISC)      '
-      
-        '  AND (Pedido_venda.ID_FORMPAGA = Forma_pagamento.ID_FORMPAGA)  ' +
-        '                    '
-      ''
-      
-        '  AND (nota_fiscal.id_notafisc = nota_fiscal_xml.id_notafisc(+))' +
-        '                    '
-      ' AND  Nota_fiscal.ID_NOTAFISC  in (  &Notas  )'
-      '  '
-      'ORDER BY &Ordem  -- Nota_fiscal.NR_NOTAFISC')
-    DetailFields = 'Pedido_venda.ID_CLIENTE'
-    FetchAll = True
-    CachedUpdates = True
-    BeforeOpen = QImpDocPedBeforeOpen
-    AfterScroll = QImpDocPedAfterScroll
-    Left = 68
-    Top = 9
-    MacroData = <
-      item
-        Name = 'NOTA_XML'
-        Value = 'NOTA_FISCAL_XML'
-      end
-      item
-        Name = 'Notas'
-        Value = '0'
-      end
-      item
-        Name = 'Ordem'
-        Value = 'NOTA_FISCAL.ID_NOTAFISC DESC'
-      end>
-    object QImpDocPedDT_CARGEXPE: TDateTimeField
-      FieldName = 'DT_CARGEXPE'
-      Required = True
-    end
-    object QImpDocPedID_CARGEXPE: TFloatField
-      FieldName = 'ID_CARGEXPE'
-      Required = True
-    end
-    object QImpDocPedFL_STATCARGEXPE: TStringField
-      FieldName = 'FL_STATCARGEXPE'
-      Required = True
-      Size = 2
-    end
-    object QImpDocPedID_PEDIVEND: TFloatField
-      FieldName = 'ID_PEDIVEND'
-      Required = True
-    end
-    object QImpDocPedID_CLIENTE: TFloatField
-      FieldName = 'ID_CLIENTE'
-      Required = True
-    end
-    object QImpDocPedFL_STATPEDIVEND: TStringField
-      FieldName = 'FL_STATPEDIVEND'
-      Required = True
-      Size = 2
-    end
-    object QImpDocPedDT_FATUPEDIVEND: TDateTimeField
-      FieldName = 'DT_FATUPEDIVEND'
-    end
-    object QImpDocPedID_TIPOPEDIVEND: TFloatField
-      FieldName = 'ID_TIPOPEDIVEND'
-      Required = True
-    end
-    object QImpDocPedID_FORMPAGA: TFloatField
-      FieldName = 'ID_FORMPAGA'
-      Required = True
-    end
-    object QImpDocPedID_SITUCOBR: TFloatField
-      FieldName = 'ID_SITUCOBR'
-      Required = True
-    end
-    object QImpDocPedID_INSTCOBR: TFloatField
-      FieldName = 'ID_INSTCOBR'
-      Required = True
-    end
-    object QImpDocPedID_CONTA: TFloatField
-      FieldName = 'ID_CONTA'
-      Required = True
-    end
-    object QImpDocPedDT_ENTRPEDIVEND: TDateTimeField
-      FieldName = 'DT_ENTRPEDIVEND'
-      Required = True
-    end
-    object QImpDocPedEMPRESA: TStringField
-      FieldName = 'EMPRESA'
-      Required = True
-      Size = 2
-    end
-    object QImpDocPedFILIAL: TIntegerField
-      FieldName = 'FILIAL'
-      Required = True
-    end
-    object QImpDocPedID_VENDEDOR: TFloatField
-      FieldName = 'ID_VENDEDOR'
-      Required = True
-    end
-    object QImpDocPedVL_PEDIVEND: TFloatField
-      FieldName = 'VL_PEDIVEND'
-    end
-    object QImpDocPedFL_CREDUSADPEDIVEND: TStringField
-      FieldName = 'FL_CREDUSADPEDIVEND'
-      Size = 1
-    end
-    object QImpDocPedVL_TRANAUTOPEDIVEND: TFloatField
-      FieldName = 'VL_TRANAUTOPEDIVEND'
-    end
-    object QImpDocPedPC_IMPOFRETAUTOPEDIVEND: TFloatField
-      FieldName = 'PC_IMPOFRETAUTOPEDIVEND'
-    end
-    object QImpDocPedFL_COMIVEND: TStringField
-      FieldName = 'FL_COMIVEND'
-      Required = True
-      Size = 1
-    end
-    object QImpDocPedPC_COMIVEND: TFloatField
-      FieldName = 'PC_COMIVEND'
-      Required = True
-    end
-    object QImpDocPedNM_CLIENTE: TStringField
-      FieldName = 'NM_CLIENTE'
-      Required = True
-      Size = 40
-    end
-    object QImpDocPedNR_AGENBANC: TStringField
-      FieldName = 'NR_AGENBANC'
-      Size = 10
-    end
-    object QImpDocPedNR_BANCO: TStringField
-      FieldName = 'NR_BANCO'
-      Size = 4
-    end
-    object QImpDocPedNR_CONTA: TStringField
-      FieldName = 'NR_CONTA'
-      Size = 10
-    end
-    object QImpDocPedNR_CODICEDECONT: TStringField
-      FieldName = 'NR_CODICEDECONT'
-      Size = 10
-    end
-    object QImpDocPedSG_SERINOTAFISC: TStringField
-      FieldName = 'SG_SERINOTAFISC'
-      Required = True
-      Size = 3
-    end
-    object QImpDocPedNR_NOTAFISC: TFloatField
-      FieldName = 'NR_NOTAFISC'
-    end
-    object QImpDocPedFL_CANCNOTAFISC: TStringField
-      FieldName = 'FL_CANCNOTAFISC'
-      Size = 1
-    end
-    object QImpDocPedFL_IMPRNOTAFISC: TStringField
-      FieldName = 'FL_IMPRNOTAFISC'
-      Size = 1
-    end
-    object QImpDocPedNM_FORMPAGA: TStringField
-      FieldName = 'NM_FORMPAGA'
-      Required = True
-      Size = 40
-    end
-    object QImpDocPedNM_TIPOPEDIVEND: TStringField
-      FieldName = 'NM_TIPOPEDIVEND'
-      Required = True
-      Size = 40
-    end
-    object QImpDocPedFL_BLOQAJUSFINAPEDIVEND: TStringField
-      FieldName = 'FL_BLOQAJUSFINAPEDIVEND'
-      Size = 1
-    end
-    object QImpDocPedVL_OUTRAJUSANTPEDIVEND: TFloatField
-      FieldName = 'VL_OUTRAJUSANTPEDIVEND'
-    end
-    object QImpDocPedVL_OUTRAJUSPEDIVEND: TFloatField
-      FieldName = 'VL_OUTRAJUSPEDIVEND'
-    end
-    object QImpDocPedDTHORA_GERADOC: TDateTimeField
-      FieldName = 'DTHORA_GERADOC'
-    end
-    object QImpDocPedNR_LACRCARGEXPE: TStringField
-      FieldName = 'NR_LACRCARGEXPE'
-      Size = 40
-    end
-    object QImpDocPedNFE_PROTOCOLO: TStringField
-      DisplayLabel = 'N'#186' Protocolo'
-      FieldName = 'NFE_PROTOCOLO'
-    end
-    object QImpDocPedNFE_CHAVE: TStringField
-      DisplayLabel = 'Chave NFe'
-      FieldName = 'NFE_CHAVE'
-      Size = 60
-    end
-    object QImpDocPedID_NOTAFISC: TFloatField
-      FieldName = 'ID_NOTAFISC'
-    end
-    object QImpDocPedGN_PLACVEICNOTAFISC: TStringField
-      FieldName = 'GN_PLACVEICNOTAFISC'
-      Size = 10
-    end
-    object QImpDocPedDT_EMISNOTAFISC: TDateTimeField
-      FieldName = 'DT_EMISNOTAFISC'
-      Required = True
-    end
-    object QImpDocPedNFE_SEQEVENTO: TIntegerField
-      FieldName = 'NFE_SEQEVENTO'
-    end
-    object QImpDocPedID_NFE_XML: TFloatField
-      FieldName = 'ID_NFE_XML'
-    end
-    object QImpDocPedCANCELADA: TStringField
-      FieldName = 'CANCELADA'
-      Size = 1
-    end
-    object QImpDocPedNM_NATUOPERNOTAFISC: TStringField
-      FieldName = 'NM_NATUOPERNOTAFISC'
-      Required = True
-      Size = 40
-    end
-    object QImpDocPedSG_SERINOTAFISC_NOTAFISC: TStringField
-      FieldName = 'SG_SERINOTAFISC_NOTAFISC'
-      Required = True
-      Size = 3
-    end
-    object QImpDocPedTIPOEMI: TStringField
-      FieldName = 'TIPOEMI'
-      FixedChar = True
-      Size = 1
-    end
-    object QImpDocPedGN_EMAICLIE: TStringField
-      FieldName = 'GN_EMAICLIE'
-      Size = 200
-    end
-    object QImpDocPedDT_AUTORIZACAO: TDateTimeField
-      FieldName = 'DT_AUTORIZACAO'
-    end
-    object QImpDocPedINUTILIZADA: TStringField
-      FieldName = 'INUTILIZADA'
-      Size = 1
-    end
-    object QImpDocPedIE_PEDIVEND: TStringField
-      FieldName = 'IE_PEDIVEND'
-    end
-  end
   object Qr_CaBase: TOraQuery
     Session = FrmPrincipal.DB
     SQL.Strings = (
@@ -5224,350 +4814,12 @@ object frmEmissorNFe: TfrmEmissorNFe
     Left = 99
     Top = 9
   end
-  object qryNFEXML_Teste: TOraQuery
-    KeyFields = 'ID_NFE_XML'
-    KeySequence = 'ID_NFEXML_Teste'
-    SQLInsert.Strings = (
-      'INSERT INTO NOTA_FISCAL_XML_Teste'
-      
-        '  (EMPRESA, FILIAL, ID_NFE_XML, ID_NOTAFISC, DT_EMISNOTAFISC, NR' +
-        '_NOTAFISC, RECIBO_ENVIO, RECIBO_RETORNO, DATA_ENVIO, NFE_NUMERO,' +
-        ' NFE_CHAVE, NFE_DT_RECEBTO, NFE_PROTOCOLO, NFE_CHAVE_DIGITAL, NF' +
-        'E_LOCAL, NFE_XML, ENVIO, RETORNO, AUTORIZACAO, SR_NOTAFISC, LOTE' +
-        ', DANFE, CANCELADA, INUTILIZADA, EMAIL, NFE_SEQEVENTO)'
-      'VALUES'
-      
-        '  (:EMPRESA, :FILIAL, :ID_NFE_XML, :ID_NOTAFISC, :DT_EMISNOTAFIS' +
-        'C, :NR_NOTAFISC, :RECIBO_ENVIO, :RECIBO_RETORNO, :DATA_ENVIO, :N' +
-        'FE_NUMERO, :NFE_CHAVE, :NFE_DT_RECEBTO, :NFE_PROTOCOLO, :NFE_CHA' +
-        'VE_DIGITAL, :NFE_LOCAL, empty_blob(), :ENVIO, :RETORNO, :AUTORIZ' +
-        'ACAO, :SR_NOTAFISC, :LOTE, :DANFE, :CANCELADA, :INUTILIZADA, :EM' +
-        'AIL, :NFE_SEQEVENTO)'
-      'RETURNING'
-      '  NFE_XML'
-      'INTO'
-      '  :NFE_XML')
-    SQLDelete.Strings = (
-      'DELETE FROM NOTA_FISCAL_XML_Teste'
-      'WHERE'
-      '  ID_NFE_XML = :ID_NFE_XML')
-    SQLUpdate.Strings = (
-      'UPDATE NOTA_FISCAL_XML_Teste'
-      'SET'
-      '  ENVIO = :ENVIO,'
-      '  RETORNO = :RETORNO,'
-      '  AUTORIZACAO = :AUTORIZACAO,'
-      '  SR_NOTAFISC = :SR_NOTAFISC,'
-      '  LOTE = :LOTE,'
-      '  DANFE = :DANFE,'
-      '  CANCELADA = :CANCELADA,'
-      '  INUTILIZADA = :INUTILIZADA,'
-      '  EMAIL = :EMAIL,'
-      '  NFE_SEQEVENTO = :NFE_SEQEVENTO'
-      'WHERE'
-      '  ID_NFE_XML = :OLD_ID_NFE_XML')
-    SQLLock.Strings = (
-      'SELECT * FROM NOTA_FISCAL_XML_Teste'
-      'WHERE'
-      '  ID_NFE_XML = :ID_NFE_XML'
-      'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  ID_NFE_XML = :ID_NFE_XML')
-    Session = FrmPrincipal.DB
-    SQL.Strings = (
-      'SELECT * FROM NOTA_FISCAL_XML_Teste'
-      'WHERE  ID_NFE_XML = :ID_NFE_XML')
-    FetchAll = True
-    CachedUpdates = True
-    Left = 277
-    Top = 9
-    ParamData = <
-      item
-        DataType = ftUnknown
-        Name = 'ID_NFE_XML'
-        Value = nil
-      end>
-    object qryNFEXML_TesteEMPRESA: TStringField
-      FieldName = 'EMPRESA'
-      Size = 2
-    end
-    object qryNFEXML_TesteFILIAL: TIntegerField
-      FieldName = 'FILIAL'
-    end
-    object qryNFEXML_TesteID_NFE_XML: TFloatField
-      FieldName = 'ID_NFE_XML'
-    end
-    object qryNFEXML_TesteID_NOTAFISC: TFloatField
-      FieldName = 'ID_NOTAFISC'
-    end
-    object qryNFEXML_TesteDT_EMISNOTAFISC: TStringField
-      FieldName = 'DT_EMISNOTAFISC'
-    end
-    object qryNFEXML_TesteNR_NOTAFISC: TFloatField
-      FieldName = 'NR_NOTAFISC'
-    end
-    object qryNFEXML_TesteRECIBO_ENVIO: TStringField
-      FieldName = 'RECIBO_ENVIO'
-    end
-    object qryNFEXML_TesteRECIBO_RETORNO: TStringField
-      FieldName = 'RECIBO_RETORNO'
-    end
-    object qryNFEXML_TesteDATA_ENVIO: TStringField
-      FieldName = 'DATA_ENVIO'
-    end
-    object qryNFEXML_TesteNFE_NUMERO: TFloatField
-      FieldName = 'NFE_NUMERO'
-    end
-    object qryNFEXML_TesteNFE_CHAVE: TStringField
-      FieldName = 'NFE_CHAVE'
-      Size = 60
-    end
-    object qryNFEXML_TesteNFE_DT_RECEBTO: TStringField
-      FieldName = 'NFE_DT_RECEBTO'
-    end
-    object qryNFEXML_TesteNFE_PROTOCOLO: TStringField
-      FieldName = 'NFE_PROTOCOLO'
-    end
-    object qryNFEXML_TesteNFE_CHAVE_DIGITAL: TStringField
-      FieldName = 'NFE_CHAVE_DIGITAL'
-      Size = 40
-    end
-    object qryNFEXML_TesteNFE_LOCAL: TStringField
-      FieldName = 'NFE_LOCAL'
-      Size = 240
-    end
-    object qryNFEXML_TesteNFE_XML: TBlobField
-      FieldName = 'NFE_XML'
-      BlobType = ftOraBlob
-    end
-    object qryNFEXML_TesteENVIO: TStringField
-      FieldName = 'ENVIO'
-      Size = 1
-    end
-    object qryNFEXML_TesteRETORNO: TStringField
-      FieldName = 'RETORNO'
-      Size = 1
-    end
-    object qryNFEXML_TesteAUTORIZACAO: TStringField
-      FieldName = 'AUTORIZACAO'
-      Size = 1
-    end
-    object qryNFEXML_TesteSR_NOTAFISC: TStringField
-      FieldName = 'SR_NOTAFISC'
-      Size = 3
-    end
-    object qryNFEXML_TesteLOTE: TFloatField
-      FieldName = 'LOTE'
-    end
-    object qryNFEXML_TesteDANFE: TStringField
-      FieldName = 'DANFE'
-      Size = 1
-    end
-    object qryNFEXML_TesteCANCELADA: TStringField
-      FieldName = 'CANCELADA'
-      Size = 1
-    end
-    object qryNFEXML_TesteINUTILIZADA: TStringField
-      FieldName = 'INUTILIZADA'
-      Size = 1
-    end
-    object qryNFEXML_TesteEMAIL: TStringField
-      FieldName = 'EMAIL'
-      Size = 1
-    end
-    object qryNFEXML_TesteNFE_SEQEVENTO: TIntegerField
-      FieldName = 'NFE_SEQEVENTO'
-    end
-  end
   object PopupMenu1: TPopupMenu
     Left = 734
     Top = 9
     object Abrir1: TMenuItem
       Caption = 'Abrir'
       OnClick = Abrir1Click
-    end
-  end
-  object qryNFEXML: TOraQuery
-    KeyFields = 'ID_NFE_XML'
-    KeySequence = 'ID_NFEXML'
-    SQLInsert.Strings = (
-      'INSERT INTO NOTA_FISCAL_XML'
-      
-        '  (EMPRESA, FILIAL, ID_NFE_XML, ID_NOTAFISC, DT_EMISNOTAFISC, NR' +
-        '_NOTAFISC, RECIBO_ENVIO, RECIBO_RETORNO, DATA_ENVIO, NFE_NUMERO,' +
-        ' NFE_CHAVE, NFE_DT_RECEBTO, NFE_PROTOCOLO, NFE_CHAVE_DIGITAL, NF' +
-        'E_LOCAL, NFE_XML, ENVIO, RETORNO, AUTORIZACAO, SR_NOTAFISC, LOTE' +
-        ', DANFE, CANCELADA, INUTILIZADA, EMAIL, NFE_SEQEVENTO)'
-      'VALUES'
-      
-        '  (:EMPRESA, :FILIAL, :ID_NFE_XML, :ID_NOTAFISC, :DT_EMISNOTAFIS' +
-        'C, :NR_NOTAFISC, :RECIBO_ENVIO, :RECIBO_RETORNO, :DATA_ENVIO, :N' +
-        'FE_NUMERO, :NFE_CHAVE, :NFE_DT_RECEBTO, :NFE_PROTOCOLO, :NFE_CHA' +
-        'VE_DIGITAL, :NFE_LOCAL, empty_blob(), :ENVIO, :RETORNO, :AUTORIZ' +
-        'ACAO, :SR_NOTAFISC, :LOTE, :DANFE, :CANCELADA, :INUTILIZADA, :EM' +
-        'AIL, :NFE_SEQEVENTO)'
-      'RETURNING'
-      '  NFE_XML'
-      'INTO'
-      '  :NFE_XML')
-    SQLDelete.Strings = (
-      'DELETE FROM NOTA_FISCAL_XML'
-      'WHERE'
-      '  ID_NFE_XML = :ID_NFE_XML')
-    SQLUpdate.Strings = (
-      'UPDATE NOTA_FISCAL_XML'
-      'SET'
-      '  EMPRESA = :EMPRESA,'
-      '  FILIAL = :FILIAL,'
-      '  ID_NFE_XML = :ID_NFE_XML,'
-      '  ID_NOTAFISC = :ID_NOTAFISC,'
-      '  DT_EMISNOTAFISC = :DT_EMISNOTAFISC,'
-      '  NR_NOTAFISC = :NR_NOTAFISC,'
-      '  RECIBO_ENVIO = :RECIBO_ENVIO,'
-      '  RECIBO_RETORNO = :RECIBO_RETORNO,'
-      '  DATA_ENVIO = :DATA_ENVIO,'
-      '  NFE_NUMERO = :NFE_NUMERO,'
-      '  NFE_CHAVE = :NFE_CHAVE,'
-      '  NFE_DT_RECEBTO = :NFE_DT_RECEBTO,'
-      '  NFE_PROTOCOLO = :NFE_PROTOCOLO,'
-      '  NFE_CHAVE_DIGITAL = :NFE_CHAVE_DIGITAL,'
-      '  NFE_LOCAL = :NFE_LOCAL,'
-      '  NFE_XML = empty_blob(),'
-      '  ENVIO = :ENVIO,'
-      '  RETORNO = :RETORNO,'
-      '  AUTORIZACAO = :AUTORIZACAO,'
-      '  SR_NOTAFISC = :SR_NOTAFISC,'
-      '  LOTE = :LOTE,'
-      '  DANFE = :DANFE,'
-      '  CANCELADA = :CANCELADA,'
-      '  INUTILIZADA = :INUTILIZADA,'
-      '  EMAIL = :EMAIL,'
-      '  NFE_SEQEVENTO = :NFE_SEQEVENTO'
-      'WHERE'
-      '  ID_NFE_XML = :OLD_ID_NFE_XML'
-      'RETURNING'
-      '  NFE_XML'
-      'INTO'
-      '  :NFE_XML')
-    SQLLock.Strings = (
-      'SELECT * FROM NOTA_FISCAL_XML'
-      'WHERE'
-      '  ID_NFE_XML = :ID_NFE_XML'
-      'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  ID_NFE_XML = :ID_NFE_XML')
-    Session = FrmPrincipal.DB
-    SQL.Strings = (
-      'SELECT * FROM NOTA_FISCAL_XML'
-      'WHERE  ID_NFE_XML = :ID_NFE_XML')
-    FetchAll = True
-    CachedUpdates = True
-    Left = 249
-    Top = 9
-    ParamData = <
-      item
-        DataType = ftUnknown
-        Name = 'ID_NFE_XML'
-        Value = nil
-      end>
-    object qryNFEXMLEMPRESA: TStringField
-      FieldName = 'EMPRESA'
-      Required = True
-      Size = 2
-    end
-    object qryNFEXMLFILIAL: TIntegerField
-      FieldName = 'FILIAL'
-      Required = True
-    end
-    object qryNFEXMLID_NFE_XML: TFloatField
-      FieldName = 'ID_NFE_XML'
-      Required = True
-    end
-    object qryNFEXMLID_NOTAFISC: TFloatField
-      FieldName = 'ID_NOTAFISC'
-      Required = True
-    end
-    object qryNFEXMLDT_EMISNOTAFISC: TStringField
-      FieldName = 'DT_EMISNOTAFISC'
-      Required = True
-    end
-    object qryNFEXMLNR_NOTAFISC: TFloatField
-      FieldName = 'NR_NOTAFISC'
-      Required = True
-    end
-    object qryNFEXMLRECIBO_ENVIO: TStringField
-      FieldName = 'RECIBO_ENVIO'
-    end
-    object qryNFEXMLRECIBO_RETORNO: TStringField
-      FieldName = 'RECIBO_RETORNO'
-    end
-    object qryNFEXMLDATA_ENVIO: TStringField
-      FieldName = 'DATA_ENVIO'
-    end
-    object qryNFEXMLNFE_NUMERO: TFloatField
-      FieldName = 'NFE_NUMERO'
-    end
-    object qryNFEXMLNFE_CHAVE: TStringField
-      FieldName = 'NFE_CHAVE'
-      Size = 60
-    end
-    object qryNFEXMLNFE_DT_RECEBTO: TStringField
-      FieldName = 'NFE_DT_RECEBTO'
-    end
-    object qryNFEXMLNFE_PROTOCOLO: TStringField
-      FieldName = 'NFE_PROTOCOLO'
-    end
-    object qryNFEXMLNFE_CHAVE_DIGITAL: TStringField
-      FieldName = 'NFE_CHAVE_DIGITAL'
-      Size = 40
-    end
-    object qryNFEXMLNFE_LOCAL: TStringField
-      FieldName = 'NFE_LOCAL'
-      Size = 240
-    end
-    object qryNFEXMLNFE_XML: TBlobField
-      FieldName = 'NFE_XML'
-      BlobType = ftOraBlob
-    end
-    object qryNFEXMLENVIO: TStringField
-      FieldName = 'ENVIO'
-      Size = 1
-    end
-    object qryNFEXMLRETORNO: TStringField
-      FieldName = 'RETORNO'
-      Size = 1
-    end
-    object qryNFEXMLAUTORIZACAO: TStringField
-      FieldName = 'AUTORIZACAO'
-      Size = 1
-    end
-    object qryNFEXMLSR_NOTAFISC: TStringField
-      FieldName = 'SR_NOTAFISC'
-      Size = 3
-    end
-    object qryNFEXMLLOTE: TFloatField
-      FieldName = 'LOTE'
-    end
-    object qryNFEXMLDANFE: TStringField
-      FieldName = 'DANFE'
-      Size = 1
-    end
-    object qryNFEXMLCANCELADA: TStringField
-      FieldName = 'CANCELADA'
-      Size = 1
-    end
-    object qryNFEXMLINUTILIZADA: TStringField
-      FieldName = 'INUTILIZADA'
-      Size = 1
-    end
-    object qryNFEXMLEMAIL: TStringField
-      FieldName = 'EMAIL'
-      Size = 1
-    end
-    object qryNFEXMLNFE_SEQEVENTO: TIntegerField
-      FieldName = 'NFE_SEQEVENTO'
     end
   end
   object qryTempUpda: TOraQuery
@@ -6111,6 +5363,769 @@ object frmEmissorNFe: TfrmEmissorNFe
     object mnu_Todos: TMenuItem
       Caption = 'Selecionar Todos'
       OnClick = mnu_TodosClick
+    end
+  end
+  object qryNFEXML: TSmartQuery
+    KeyFields = 'ID_NFE_XML'
+    KeySequence = 'ID_NFEXML'
+    SQLInsert.Strings = (
+      'INSERT INTO NOTA_FISCAL_XML'
+      
+        '  (EMPRESA, FILIAL, ID_NFE_XML, ID_NOTAFISC, DT_EMISNOTAFISC, NR' +
+        '_NOTAFISC, RECIBO_ENVIO, RECIBO_RETORNO, DATA_ENVIO, NFE_NUMERO,' +
+        ' NFE_CHAVE, NFE_DT_RECEBTO, NFE_PROTOCOLO, NFE_CHAVE_DIGITAL, NF' +
+        'E_LOCAL, NFE_XML, ENVIO, RETORNO, AUTORIZACAO, SR_NOTAFISC, LOTE' +
+        ', DANFE, CANCELADA, INUTILIZADA, EMAIL, NFE_SEQEVENTO)'
+      'VALUES'
+      
+        '  (:EMPRESA, :FILIAL, :ID_NFE_XML, :ID_NOTAFISC, :DT_EMISNOTAFIS' +
+        'C, :NR_NOTAFISC, :RECIBO_ENVIO, :RECIBO_RETORNO, :DATA_ENVIO, :N' +
+        'FE_NUMERO, :NFE_CHAVE, :NFE_DT_RECEBTO, :NFE_PROTOCOLO, :NFE_CHA' +
+        'VE_DIGITAL, :NFE_LOCAL, empty_blob(), :ENVIO, :RETORNO, :AUTORIZ' +
+        'ACAO, :SR_NOTAFISC, :LOTE, :DANFE, :CANCELADA, :INUTILIZADA, :EM' +
+        'AIL, :NFE_SEQEVENTO)'
+      'RETURNING'
+      '  NFE_XML'
+      'INTO'
+      '  :NFE_XML')
+    SQLDelete.Strings = (
+      'DELETE FROM NOTA_FISCAL_XML'
+      'WHERE'
+      '  ID_NFE_XML = :ID_NFE_XML')
+    SQLUpdate.Strings = (
+      'UPDATE NOTA_FISCAL_XML'
+      'SET'
+      '  EMPRESA = :EMPRESA,'
+      '  FILIAL = :FILIAL,'
+      '  ID_NFE_XML = :ID_NFE_XML,'
+      '  ID_NOTAFISC = :ID_NOTAFISC,'
+      '  DT_EMISNOTAFISC = :DT_EMISNOTAFISC,'
+      '  NR_NOTAFISC = :NR_NOTAFISC,'
+      '  RECIBO_ENVIO = :RECIBO_ENVIO,'
+      '  RECIBO_RETORNO = :RECIBO_RETORNO,'
+      '  DATA_ENVIO = :DATA_ENVIO,'
+      '  NFE_NUMERO = :NFE_NUMERO,'
+      '  NFE_CHAVE = :NFE_CHAVE,'
+      '  NFE_DT_RECEBTO = :NFE_DT_RECEBTO,'
+      '  NFE_PROTOCOLO = :NFE_PROTOCOLO,'
+      '  NFE_CHAVE_DIGITAL = :NFE_CHAVE_DIGITAL,'
+      '  NFE_LOCAL = :NFE_LOCAL,'
+      '  NFE_XML = empty_blob(),'
+      '  ENVIO = :ENVIO,'
+      '  RETORNO = :RETORNO,'
+      '  AUTORIZACAO = :AUTORIZACAO,'
+      '  SR_NOTAFISC = :SR_NOTAFISC,'
+      '  LOTE = :LOTE,'
+      '  DANFE = :DANFE,'
+      '  CANCELADA = :CANCELADA,'
+      '  INUTILIZADA = :INUTILIZADA,'
+      '  EMAIL = :EMAIL,'
+      '  NFE_SEQEVENTO = :NFE_SEQEVENTO'
+      'WHERE'
+      '  ID_NFE_XML = :OLD_ID_NFE_XML'
+      'RETURNING'
+      '  NFE_XML'
+      'INTO'
+      '  :NFE_XML')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  ID_NFE_XML = :ID_NFE_XML')
+    SQLLock.Strings = (
+      'SELECT * FROM NOTA_FISCAL_XML'
+      'WHERE'
+      '  ID_NFE_XML = :ID_NFE_XML'
+      'FOR UPDATE NOWAIT')
+    Session = FrmPrincipal.DB
+    SQL.Strings = (
+      'SELECT * FROM NOTA_FISCAL_XML'
+      'WHERE  ID_NFE_XML = :ID_NFE_XML')
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 248
+    Top = 8
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'ID_NFE_XML'
+        Value = nil
+      end>
+    object qryNFEXMLEMPRESA: TStringField
+      FieldName = 'EMPRESA'
+      Required = True
+      Size = 2
+    end
+    object qryNFEXMLFILIAL: TIntegerField
+      FieldName = 'FILIAL'
+      Required = True
+    end
+    object qryNFEXMLID_NFE_XML: TFloatField
+      FieldName = 'ID_NFE_XML'
+      Required = True
+    end
+    object qryNFEXMLID_NOTAFISC: TFloatField
+      FieldName = 'ID_NOTAFISC'
+      Required = True
+    end
+    object qryNFEXMLDT_EMISNOTAFISC: TStringField
+      FieldName = 'DT_EMISNOTAFISC'
+      Required = True
+    end
+    object qryNFEXMLNR_NOTAFISC: TFloatField
+      FieldName = 'NR_NOTAFISC'
+      Required = True
+    end
+    object qryNFEXMLRECIBO_ENVIO: TStringField
+      FieldName = 'RECIBO_ENVIO'
+    end
+    object qryNFEXMLRECIBO_RETORNO: TStringField
+      FieldName = 'RECIBO_RETORNO'
+    end
+    object qryNFEXMLDATA_ENVIO: TStringField
+      FieldName = 'DATA_ENVIO'
+    end
+    object qryNFEXMLNFE_NUMERO: TFloatField
+      FieldName = 'NFE_NUMERO'
+    end
+    object qryNFEXMLNFE_CHAVE: TStringField
+      FieldName = 'NFE_CHAVE'
+      Size = 60
+    end
+    object qryNFEXMLNFE_DT_RECEBTO: TStringField
+      FieldName = 'NFE_DT_RECEBTO'
+    end
+    object qryNFEXMLNFE_PROTOCOLO: TStringField
+      FieldName = 'NFE_PROTOCOLO'
+    end
+    object qryNFEXMLNFE_CHAVE_DIGITAL: TStringField
+      FieldName = 'NFE_CHAVE_DIGITAL'
+      Size = 40
+    end
+    object qryNFEXMLNFE_LOCAL: TStringField
+      FieldName = 'NFE_LOCAL'
+      Size = 240
+    end
+    object qryNFEXMLNFE_XML: TBlobField
+      FieldName = 'NFE_XML'
+      BlobType = ftOraBlob
+    end
+    object qryNFEXMLENVIO: TStringField
+      FieldName = 'ENVIO'
+      Size = 1
+    end
+    object qryNFEXMLRETORNO: TStringField
+      FieldName = 'RETORNO'
+      Size = 1
+    end
+    object qryNFEXMLAUTORIZACAO: TStringField
+      FieldName = 'AUTORIZACAO'
+      Size = 1
+    end
+    object qryNFEXMLSR_NOTAFISC: TStringField
+      FieldName = 'SR_NOTAFISC'
+      Size = 3
+    end
+    object qryNFEXMLLOTE: TFloatField
+      FieldName = 'LOTE'
+    end
+    object qryNFEXMLDANFE: TStringField
+      FieldName = 'DANFE'
+      Size = 1
+    end
+    object qryNFEXMLCANCELADA: TStringField
+      FieldName = 'CANCELADA'
+      Size = 1
+    end
+    object qryNFEXMLINUTILIZADA: TStringField
+      FieldName = 'INUTILIZADA'
+      Size = 1
+    end
+    object qryNFEXMLEMAIL: TStringField
+      FieldName = 'EMAIL'
+      Size = 1
+    end
+    object qryNFEXMLNFE_SEQEVENTO: TIntegerField
+      FieldName = 'NFE_SEQEVENTO'
+    end
+  end
+  object qryNFEXML_Teste: TSmartQuery
+    KeyFields = 'ID_NFE_XML'
+    KeySequence = 'ID_NFEXML_TESTE'
+    SQLInsert.Strings = (
+      'INSERT INTO NOTA_FISCAL_XML_Teste'
+      
+        '  (EMPRESA, FILIAL, ID_NFE_XML, ID_NOTAFISC, DT_EMISNOTAFISC, NR' +
+        '_NOTAFISC, RECIBO_ENVIO, RECIBO_RETORNO, DATA_ENVIO, NFE_NUMERO,' +
+        ' NFE_CHAVE, NFE_DT_RECEBTO, NFE_PROTOCOLO, NFE_CHAVE_DIGITAL, NF' +
+        'E_LOCAL, NFE_XML, ENVIO, RETORNO, AUTORIZACAO, SR_NOTAFISC, LOTE' +
+        ', DANFE, CANCELADA, INUTILIZADA, EMAIL, NFE_SEQEVENTO)'
+      'VALUES'
+      
+        '  (:EMPRESA, :FILIAL, :ID_NFE_XML, :ID_NOTAFISC, :DT_EMISNOTAFIS' +
+        'C, :NR_NOTAFISC, :RECIBO_ENVIO, :RECIBO_RETORNO, :DATA_ENVIO, :N' +
+        'FE_NUMERO, :NFE_CHAVE, :NFE_DT_RECEBTO, :NFE_PROTOCOLO, :NFE_CHA' +
+        'VE_DIGITAL, :NFE_LOCAL, empty_blob(), :ENVIO, :RETORNO, :AUTORIZ' +
+        'ACAO, :SR_NOTAFISC, :LOTE, :DANFE, :CANCELADA, :INUTILIZADA, :EM' +
+        'AIL, :NFE_SEQEVENTO)'
+      'RETURNING'
+      '  NFE_XML'
+      'INTO'
+      '  :NFE_XML')
+    SQLDelete.Strings = (
+      'DELETE FROM NOTA_FISCAL_XML_Teste'
+      'WHERE'
+      '  ID_NFE_XML = :ID_NFE_XML')
+    SQLUpdate.Strings = (
+      'UPDATE NOTA_FISCAL_XML_Teste'
+      'SET'
+      '  ENVIO = :ENVIO,'
+      '  RETORNO = :RETORNO,'
+      '  AUTORIZACAO = :AUTORIZACAO,'
+      '  SR_NOTAFISC = :SR_NOTAFISC,'
+      '  LOTE = :LOTE,'
+      '  DANFE = :DANFE,'
+      '  CANCELADA = :CANCELADA,'
+      '  INUTILIZADA = :INUTILIZADA,'
+      '  EMAIL = :EMAIL,'
+      '  NFE_SEQEVENTO = :NFE_SEQEVENTO'
+      'WHERE'
+      '  ID_NFE_XML = :OLD_ID_NFE_XML')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  ID_NFE_XML = :ID_NFE_XML')
+    SQLLock.Strings = (
+      'SELECT * FROM NOTA_FISCAL_XML_Teste'
+      'WHERE'
+      '  ID_NFE_XML = :ID_NFE_XML'
+      'FOR UPDATE NOWAIT')
+    Session = FrmPrincipal.DB
+    SQL.Strings = (
+      'SELECT * FROM NOTA_FISCAL_XML_Teste'
+      'WHERE  ID_NFE_XML = :ID_NFE_XML')
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 280
+    Top = 8
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'ID_NFE_XML'
+        Value = nil
+      end>
+    object qryNFEXML_TesteEMPRESA: TStringField
+      FieldName = 'EMPRESA'
+      Size = 2
+    end
+    object qryNFEXML_TesteFILIAL: TIntegerField
+      FieldName = 'FILIAL'
+    end
+    object qryNFEXML_TesteID_NFE_XML: TFloatField
+      FieldName = 'ID_NFE_XML'
+    end
+    object qryNFEXML_TesteID_NOTAFISC: TFloatField
+      FieldName = 'ID_NOTAFISC'
+    end
+    object qryNFEXML_TesteDT_EMISNOTAFISC: TStringField
+      FieldName = 'DT_EMISNOTAFISC'
+    end
+    object qryNFEXML_TesteNR_NOTAFISC: TFloatField
+      FieldName = 'NR_NOTAFISC'
+    end
+    object qryNFEXML_TesteRECIBO_ENVIO: TStringField
+      FieldName = 'RECIBO_ENVIO'
+    end
+    object qryNFEXML_TesteRECIBO_RETORNO: TStringField
+      FieldName = 'RECIBO_RETORNO'
+    end
+    object qryNFEXML_TesteDATA_ENVIO: TStringField
+      FieldName = 'DATA_ENVIO'
+    end
+    object qryNFEXML_TesteNFE_NUMERO: TFloatField
+      FieldName = 'NFE_NUMERO'
+    end
+    object qryNFEXML_TesteNFE_CHAVE: TStringField
+      FieldName = 'NFE_CHAVE'
+      Size = 60
+    end
+    object qryNFEXML_TesteNFE_DT_RECEBTO: TStringField
+      FieldName = 'NFE_DT_RECEBTO'
+    end
+    object qryNFEXML_TesteNFE_PROTOCOLO: TStringField
+      FieldName = 'NFE_PROTOCOLO'
+    end
+    object qryNFEXML_TesteNFE_CHAVE_DIGITAL: TStringField
+      FieldName = 'NFE_CHAVE_DIGITAL'
+      Size = 40
+    end
+    object qryNFEXML_TesteNFE_LOCAL: TStringField
+      FieldName = 'NFE_LOCAL'
+      Size = 240
+    end
+    object qryNFEXML_TesteNFE_XML: TBlobField
+      FieldName = 'NFE_XML'
+      BlobType = ftOraBlob
+    end
+    object qryNFEXML_TesteENVIO: TStringField
+      FieldName = 'ENVIO'
+      Size = 1
+    end
+    object qryNFEXML_TesteRETORNO: TStringField
+      FieldName = 'RETORNO'
+      Size = 1
+    end
+    object qryNFEXML_TesteAUTORIZACAO: TStringField
+      FieldName = 'AUTORIZACAO'
+      Size = 1
+    end
+    object qryNFEXML_TesteSR_NOTAFISC: TStringField
+      FieldName = 'SR_NOTAFISC'
+      Size = 3
+    end
+    object qryNFEXML_TesteLOTE: TFloatField
+      FieldName = 'LOTE'
+    end
+    object qryNFEXML_TesteDANFE: TStringField
+      FieldName = 'DANFE'
+      Size = 1
+    end
+    object qryNFEXML_TesteCANCELADA: TStringField
+      FieldName = 'CANCELADA'
+      Size = 1
+    end
+    object qryNFEXML_TesteINUTILIZADA: TStringField
+      FieldName = 'INUTILIZADA'
+      Size = 1
+    end
+    object qryNFEXML_TesteEMAIL: TStringField
+      FieldName = 'EMAIL'
+      Size = 1
+    end
+    object qryNFEXML_TesteNFE_SEQEVENTO: TIntegerField
+      FieldName = 'NFE_SEQEVENTO'
+    end
+  end
+  object QImpDocPed: TSmartQuery
+    SQLUpdate.Strings = (
+      'UPDATE PEDIDO_VENDA'
+      'SET'
+      
+        '  ID_PEDIVEND = :ID_PEDIVEND,                                   ' +
+        '                   '
+      
+        '  ID_CLIENTE = :ID_CLIENTE,                                     ' +
+        '                  '
+      
+        '  FL_STATPEDIVEND = :FL_STATPEDIVEND,                           ' +
+        '                       '
+      
+        '  DT_FATUPEDIVEND = :DT_FATUPEDIVEND,                           ' +
+        '                       '
+      
+        '  ID_TIPOPEDIVEND = :ID_TIPOPEDIVEND,                           ' +
+        '                       '
+      
+        '  ID_FORMPAGA = :ID_FORMPAGA,                                   ' +
+        '                   '
+      
+        '  ID_SITUCOBR = :ID_SITUCOBR,                                   ' +
+        '                   '
+      
+        '  ID_INSTCOBR = :ID_INSTCOBR,                                   ' +
+        '                   '
+      
+        '  ID_CONTA = :ID_CONTA,                                         ' +
+        '                '
+      
+        '  DT_ENTRPEDIVEND = :DT_ENTRPEDIVEND,                           ' +
+        '                       '
+      '  EMPRESA = :EMPRESA,'
+      '  FILIAL = :FILIAL,'
+      '  ID_VENDEDOR = :ID_VENDEDOR,'
+      '  VL_PEDIVEND = :VL_PEDIVEND,'
+      '  FL_CREDUSADPEDIVEND = :FL_CREDUSADPEDIVEND,'
+      '  VL_TRANAUTOPEDIVEND = :VL_TRANAUTOPEDIVEND,'
+      '  PC_IMPOFRETAUTOPEDIVEND = :PC_IMPOFRETAUTOPEDIVEND,'
+      '  VL_OUTRAJUSANTPEDIVEND = :VL_OUTRAJUSANTPEDIVEND,'
+      '  VL_OUTRAJUSPEDIVEND = :VL_OUTRAJUSPEDIVEND,'
+      
+        '  DTHORA_GERADOC = :DTHORA_GERADOC                              ' +
+        '               '
+      'WHERE'
+      '  ID_PEDIVEND = :OLD_ID_PEDIVEND')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  Pedido_venda.ID_PEDIVEND = :ID_PEDIVEND')
+    SQLLock.Strings = (
+      'SELECT * FROM PEDIDO_VENDA'
+      'WHERE'
+      '   ID_PEDIVEND = :ID_PEDIVEND            '
+      'FOR UPDATE NOWAIT')
+    Session = FrmPrincipal.DB
+    SQL.Strings = (
+      'SELECT DISTINCT Expedicao_carga.DT_CARGEXPE,'
+      '      Expedicao_carga.ID_CARGEXPE,'
+      '      Expedicao_carga.FL_STATCARGEXPE,'
+      '      Expedicao_carga.NR_LACRCARGEXPE,'
+      '      Pedido_venda.ID_PEDIVEND,'
+      '      Pedido_venda.ID_CLIENTE,'
+      '      Pedido_venda.FL_STATPEDIVEND,'
+      '      Pedido_venda.DT_FATUPEDIVEND,'
+      '      Pedido_venda.ID_TIPOPEDIVEND,'
+      '      Pedido_venda.ID_FORMPAGA,'
+      '      Pedido_venda.ID_SITUCOBR,'
+      '      Pedido_venda.ID_INSTCOBR,'
+      '      Pedido_venda.ID_CONTA,'
+      '      Pedido_venda.DT_ENTRPEDIVEND,'
+      '      Pedido_venda.EMPRESA,'
+      '      Pedido_venda.FILIAL,'
+      '      Pedido_venda.ID_VENDEDOR,'
+      '      Pedido_venda.VL_PEDIVEND,'
+      '      Pedido_venda.FL_CREDUSADPEDIVEND,'
+      '      Pedido_venda.VL_TRANAUTOPEDIVEND,'
+      '      Pedido_Venda.PC_IMPOFRETAUTOPEDIVEND,'
+      '      Pedido_venda.fl_bloqajusfinapedivend,'
+      '      Pedido_venda.VL_OUTRAJUSANTPEDIVEND,'
+      '      Pedido_venda.VL_OUTRAJUSPEDIVEND,'
+      '      Pedido_venda.IE_PEDIVEND,'
+      '      Vendedor.FL_COMIVEND,'
+      '      Vendedor.PC_COMIVEND,'
+      '      Cliente.NM_CLIENTE,'
+      '      Banco_agencia.NR_AGENBANC,'
+      '      Banco.NR_BANCO,'
+      '      Conta.NR_CONTA,'
+      '      Conta.NR_CODICEDECONT,'
+      '      Nota_fiscal_serie2.SG_SERINOTAFISC,'
+      '      Nota_fiscal.ID_NOTAFISC,'
+      '      Nota_fiscal.NR_NOTAFISC,'
+      '      Nota_fiscal.FL_CANCNOTAFISC,'
+      '      Nota_fiscal.FL_IMPRNOTAFISC,'
+      '      Nota_fiscal.gn_placveicnotafisc,'
+      '      Nota_fiscal.DT_EMISNOTAFISC,'
+      '      Nota_fiscal.NM_NATUOPERNOTAFISC,'
+      '      Forma_pagamento.NM_FORMPAGA,'
+      '      Pedido_venda_tipo.NM_TIPOPEDIVEND,'
+      '      -- Boleto.NR_BOLETO,'
+      '      Pedido_venda.DTHORA_GERADOC,'
+      '      NOTA_FISCAL_XML.ID_NFE_XML,'
+      '      NOTA_FISCAL_XML.NFE_PROTOCOLO,'
+      '      NOTA_FISCAL_XML.NFE_CHAVE,'
+      '      NOTA_FISCAL_XML.NFE_SEQEVENTO,'
+      '      NOTA_FISCAL_XML.CANCELADA,'
+      '     NOTA_FISCAL_XML.INUTILIZADA,'
+      '      Nota_fiscal.SG_SERINOTAFISC_NOTAFISC,'
+      
+        '       CASE WHEN SUBSTR(Nota_fiscal.NR_CFOP_NOTAFISC,1,1) = '#39'1'#39' ' +
+        'OR '
+      
+        '                 SUBSTR(Nota_fiscal.NR_CFOP_NOTAFISC,1,1) = '#39'2'#39' ' +
+        'OR'
+      '                 SUBSTR(Nota_fiscal.NR_CFOP_NOTAFISC,1,1) = '#39'3'#39
+      '                 THEN '#39'0'#39' ELSE '#39'1'#39' END  TIPOEMI,'
+      '     Cliente.GN_EMAICLIE,'
+      
+        '    TO_DATE( NOTA_FISCAL_XML.NFE_DT_RECEBTO,'#39'DD/MM/YYYY HH24:MI:' +
+        'SS'#39'  ) DT_AUTORIZACAO'
+      ' FROM EXPEDICAO_CARGA Expedicao_carga,'
+      '      PEDIDO_VENDA Pedido_venda,'
+      '      PEDIDO_VENDA_NOTA_FISCAL Pedido_venda_nota_fiscal,'
+      '      PEDIDO_VENDA_TIPO Pedido_venda_tipo,'
+      '      CLIENTE Cliente,'
+      '      NOTA_FISCAL_SERIE Nota_fiscal_serie,'
+      '      NOTA_FISCAL_SERIE Nota_fiscal_serie2,'
+      '      NOTA_FISCAL Nota_fiscal,'
+      '      CONTA Conta,'
+      '      BANCO Banco,'
+      '      BANCO_AGENCIA Banco_agencia,'
+      '      VENDEDOR Vendedor,'
+      
+        '      -- BOLETO Boleto,                                         ' +
+        '                       '
+      
+        '      FORMA_PAGAMENTO Forma_pagamento,                          ' +
+        '                    '
+      ''
+      
+        '     &NOTA_XML NOTA_FISCAL_XML                                  ' +
+        '                             '
+      ''
+      
+        'WHERE (Pedido_venda.ID_PEDIVEND = Pedido_venda_nota_fiscal.ID_PE' +
+        'DIVEND )         '
+      
+        '  AND (Nota_fiscal.SG_SERINOTAFISC_NOTAFISC = Nota_fiscal_serie.' +
+        'SG_SERINOTAFISC )'
+      
+        '  AND (Pedido_venda_nota_fiscal.ID_NOTAFISC = Nota_fiscal.ID_NOT' +
+        'AFISC )           '
+      
+        '  AND (Expedicao_carga.ID_CARGEXPE = Pedido_venda.ID_CARGEXPE)  ' +
+        '                    '
+      
+        '  AND (Pedido_venda.ID_CLIENTE = Cliente.ID_CLIENTE)            ' +
+        '                    '
+      
+        '  AND (Pedido_venda.ID_CONTA = Conta.ID_CONTA)                  ' +
+        '                    '
+      
+        '  AND (Conta.ID_AGENBANC = Banco_agencia.ID_AGENBANC(+))        ' +
+        '                    '
+      
+        '  AND (Banco_agencia.ID_BANCO = Banco.ID_BANCO(+))              ' +
+        '                    '
+      
+        '  AND (Pedido_venda.ID_VENDEDOR = Vendedor.ID_VENDEDOR)         ' +
+        '                    '
+      
+        '  -- AND (Pedido_venda.ID_PEDIVEND = Boleto.ID_PEDIVEND(+))     ' +
+        '                       '
+      
+        '  AND (Pedido_venda.ID_TIPOPEDIVEND = Pedido_venda_tipo.ID_TIPOP' +
+        'EDIVEND)            '
+      
+        '  AND (Pedido_venda_tipo.ID_SERINOTAFISC = Nota_fiscal_serie2.ID' +
+        '_SERINOTAFISC)      '
+      
+        '  AND (Pedido_venda.ID_FORMPAGA = Forma_pagamento.ID_FORMPAGA)  ' +
+        '                    '
+      ''
+      
+        '  AND (nota_fiscal.id_notafisc = nota_fiscal_xml.id_notafisc(+))' +
+        '                    '
+      ' AND  Nota_fiscal.ID_NOTAFISC  in (  &Notas  )'
+      '  '
+      'ORDER BY &Ordem  -- Nota_fiscal.NR_NOTAFISC')
+    DetailFields = 'Pedido_venda.ID_CLIENTE'
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 72
+    Top = 8
+    MacroData = <
+      item
+        Name = 'NOTA_XML'
+        Value = 'NOTA_FISCAL_XML'
+      end
+      item
+        Name = 'Notas'
+        Value = '0'
+      end
+      item
+        Name = 'Ordem'
+        Value = 'NOTA_FISCAL.ID_NOTAFISC DESC'
+      end>
+    object QImpDocPedDT_CARGEXPE: TDateTimeField
+      FieldName = 'DT_CARGEXPE'
+      Required = True
+    end
+    object QImpDocPedID_CARGEXPE: TFloatField
+      FieldName = 'ID_CARGEXPE'
+      Required = True
+    end
+    object QImpDocPedFL_STATCARGEXPE: TStringField
+      FieldName = 'FL_STATCARGEXPE'
+      Required = True
+      Size = 2
+    end
+    object QImpDocPedNR_LACRCARGEXPE: TStringField
+      FieldName = 'NR_LACRCARGEXPE'
+      Size = 40
+    end
+    object QImpDocPedID_PEDIVEND: TFloatField
+      FieldName = 'ID_PEDIVEND'
+      Required = True
+    end
+    object QImpDocPedID_CLIENTE: TFloatField
+      FieldName = 'ID_CLIENTE'
+      Required = True
+    end
+    object QImpDocPedFL_STATPEDIVEND: TStringField
+      FieldName = 'FL_STATPEDIVEND'
+      Required = True
+      Size = 2
+    end
+    object QImpDocPedDT_FATUPEDIVEND: TDateTimeField
+      FieldName = 'DT_FATUPEDIVEND'
+    end
+    object QImpDocPedID_TIPOPEDIVEND: TFloatField
+      FieldName = 'ID_TIPOPEDIVEND'
+      Required = True
+    end
+    object QImpDocPedID_FORMPAGA: TFloatField
+      FieldName = 'ID_FORMPAGA'
+      Required = True
+    end
+    object QImpDocPedID_SITUCOBR: TFloatField
+      FieldName = 'ID_SITUCOBR'
+      Required = True
+    end
+    object QImpDocPedID_INSTCOBR: TFloatField
+      FieldName = 'ID_INSTCOBR'
+      Required = True
+    end
+    object QImpDocPedID_CONTA: TFloatField
+      FieldName = 'ID_CONTA'
+      Required = True
+    end
+    object QImpDocPedDT_ENTRPEDIVEND: TDateTimeField
+      FieldName = 'DT_ENTRPEDIVEND'
+      Required = True
+    end
+    object QImpDocPedEMPRESA: TStringField
+      FieldName = 'EMPRESA'
+      Required = True
+      Size = 2
+    end
+    object QImpDocPedFILIAL: TIntegerField
+      FieldName = 'FILIAL'
+      Required = True
+    end
+    object QImpDocPedID_VENDEDOR: TFloatField
+      FieldName = 'ID_VENDEDOR'
+      Required = True
+    end
+    object QImpDocPedVL_PEDIVEND: TFloatField
+      FieldName = 'VL_PEDIVEND'
+    end
+    object QImpDocPedFL_CREDUSADPEDIVEND: TStringField
+      FieldName = 'FL_CREDUSADPEDIVEND'
+      Size = 1
+    end
+    object QImpDocPedVL_TRANAUTOPEDIVEND: TFloatField
+      FieldName = 'VL_TRANAUTOPEDIVEND'
+    end
+    object QImpDocPedPC_IMPOFRETAUTOPEDIVEND: TFloatField
+      FieldName = 'PC_IMPOFRETAUTOPEDIVEND'
+    end
+    object QImpDocPedFL_BLOQAJUSFINAPEDIVEND: TStringField
+      FieldName = 'FL_BLOQAJUSFINAPEDIVEND'
+      Size = 1
+    end
+    object QImpDocPedVL_OUTRAJUSANTPEDIVEND: TFloatField
+      FieldName = 'VL_OUTRAJUSANTPEDIVEND'
+    end
+    object QImpDocPedVL_OUTRAJUSPEDIVEND: TFloatField
+      FieldName = 'VL_OUTRAJUSPEDIVEND'
+    end
+    object QImpDocPedIE_PEDIVEND: TStringField
+      FieldName = 'IE_PEDIVEND'
+    end
+    object QImpDocPedFL_COMIVEND: TStringField
+      FieldName = 'FL_COMIVEND'
+      Required = True
+      Size = 1
+    end
+    object QImpDocPedPC_COMIVEND: TFloatField
+      FieldName = 'PC_COMIVEND'
+      Required = True
+    end
+    object QImpDocPedNM_CLIENTE: TStringField
+      FieldName = 'NM_CLIENTE'
+      Size = 60
+    end
+    object QImpDocPedNR_AGENBANC: TStringField
+      FieldName = 'NR_AGENBANC'
+      Size = 10
+    end
+    object QImpDocPedNR_BANCO: TStringField
+      FieldName = 'NR_BANCO'
+      Size = 4
+    end
+    object QImpDocPedNR_CONTA: TStringField
+      FieldName = 'NR_CONTA'
+      Size = 10
+    end
+    object QImpDocPedNR_CODICEDECONT: TStringField
+      FieldName = 'NR_CODICEDECONT'
+      Size = 10
+    end
+    object QImpDocPedSG_SERINOTAFISC: TStringField
+      FieldName = 'SG_SERINOTAFISC'
+      Required = True
+      Size = 3
+    end
+    object QImpDocPedID_NOTAFISC: TFloatField
+      FieldName = 'ID_NOTAFISC'
+      Required = True
+    end
+    object QImpDocPedNR_NOTAFISC: TFloatField
+      FieldName = 'NR_NOTAFISC'
+      Required = True
+    end
+    object QImpDocPedFL_CANCNOTAFISC: TStringField
+      FieldName = 'FL_CANCNOTAFISC'
+      Size = 1
+    end
+    object QImpDocPedFL_IMPRNOTAFISC: TStringField
+      FieldName = 'FL_IMPRNOTAFISC'
+      Size = 1
+    end
+    object QImpDocPedGN_PLACVEICNOTAFISC: TStringField
+      FieldName = 'GN_PLACVEICNOTAFISC'
+      Size = 10
+    end
+    object QImpDocPedDT_EMISNOTAFISC: TDateTimeField
+      FieldName = 'DT_EMISNOTAFISC'
+      Required = True
+    end
+    object QImpDocPedNM_NATUOPERNOTAFISC: TStringField
+      FieldName = 'NM_NATUOPERNOTAFISC'
+      Required = True
+      Size = 40
+    end
+    object QImpDocPedNM_FORMPAGA: TStringField
+      FieldName = 'NM_FORMPAGA'
+      Required = True
+      Size = 40
+    end
+    object QImpDocPedNM_TIPOPEDIVEND: TStringField
+      FieldName = 'NM_TIPOPEDIVEND'
+      Required = True
+      Size = 40
+    end
+    object QImpDocPedDTHORA_GERADOC: TDateTimeField
+      FieldName = 'DTHORA_GERADOC'
+    end
+    object QImpDocPedID_NFE_XML: TFloatField
+      FieldName = 'ID_NFE_XML'
+    end
+    object QImpDocPedNFE_PROTOCOLO: TStringField
+      FieldName = 'NFE_PROTOCOLO'
+    end
+    object QImpDocPedNFE_CHAVE: TStringField
+      FieldName = 'NFE_CHAVE'
+      Size = 60
+    end
+    object QImpDocPedNFE_SEQEVENTO: TIntegerField
+      FieldName = 'NFE_SEQEVENTO'
+    end
+    object QImpDocPedCANCELADA: TStringField
+      FieldName = 'CANCELADA'
+      Size = 1
+    end
+    object QImpDocPedINUTILIZADA: TStringField
+      FieldName = 'INUTILIZADA'
+      Size = 1
+    end
+    object QImpDocPedSG_SERINOTAFISC_NOTAFISC: TStringField
+      FieldName = 'SG_SERINOTAFISC_NOTAFISC'
+      Required = True
+      Size = 3
+    end
+    object QImpDocPedTIPOEMI: TStringField
+      FieldName = 'TIPOEMI'
+      FixedChar = True
+      Size = 1
+    end
+    object QImpDocPedGN_EMAICLIE: TStringField
+      FieldName = 'GN_EMAICLIE'
+      Size = 200
+    end
+    object QImpDocPedDT_AUTORIZACAO: TDateTimeField
+      FieldName = 'DT_AUTORIZACAO'
     end
   end
 end

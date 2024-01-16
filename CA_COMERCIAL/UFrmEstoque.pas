@@ -5,7 +5,7 @@ interface
 uses
   SysUtils, Types, Classes, Variants, Graphics, Controls, Forms,
   Dialogs, StdCtrls, Buttons, ExtCtrls, Mask, DB, MemDS, DBAccess, Ora,
-  Grids, DBGrids, ComCtrls, DBCtrls, DBClient, Winapi.Windows;
+  Grids, DBGrids, ComCtrls, DBCtrls, DBClient, Winapi.Windows, OraSmart;
 
 type
   TFrmEstoque = class(TForm)
@@ -18,7 +18,6 @@ type
     btnBuscaData: TBitBtn;
     lbData: TLabel;
     btnEditar: TSpeedButton;
-    QryEstoqueInicial: TOraQuery;
     PageControl1: TPageControl;
     tabEstoque: TTabSheet;
     DBGrid1: TDBGrid;
@@ -29,12 +28,6 @@ type
     btnJob: TButton;
     LbJob: TLabel;
     QryLog: TOraQuery;
-    QryEstoqueInicialID_PRODMATEEMBA: TStringField;
-    QryEstoqueInicialNM_PRODMATEEMBA: TStringField;
-    QryEstoqueInicialDATA: TDateTimeField;
-    QryEstoqueInicialTIPO: TStringField;
-    QryEstoqueInicialESTOQUE_ANT: TFloatField;
-    QryEstoqueInicialESTOQUE_ANT_CX: TFloatField;
     QryJobJOB_NAME: TStringField;
     QryJobSTATE: TStringField;
     QryAjuste: TOraQuery;
@@ -61,6 +54,13 @@ type
     QryLogUSUARIO: TFloatField;
     QryLogID_AJUSTE: TFloatField;
     QryAtualiza: TOraQuery;
+    QryEstoqueInicial: TSmartQuery;
+    QryEstoqueInicialID_PRODMATEEMBA: TStringField;
+    QryEstoqueInicialNM_PRODMATEEMBA: TStringField;
+    QryEstoqueInicialDATA: TDateTimeField;
+    QryEstoqueInicialTIPO: TStringField;
+    QryEstoqueInicialESTOQUE_ANT: TFloatField;
+    QryEstoqueInicialESTOQUE_ANT_CX: TFloatField;
     procedure btnSairClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);

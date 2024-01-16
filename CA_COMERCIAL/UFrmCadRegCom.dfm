@@ -31,6 +31,8 @@ object FrmCadRegCom: TFrmCadRegCom
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 643
+    ExplicitHeight = 387
     object PageControl1: TPageControl
       Left = 1
       Top = 41
@@ -45,6 +47,8 @@ object FrmCadRegCom: TFrmCadRegCom
       Font.Style = []
       ParentFont = False
       TabOrder = 0
+      ExplicitWidth = 641
+      ExplicitHeight = 345
       object TabCriterio: TTabSheet
         Caption = 'Criterios'
         OnShow = TabCriterioShow
@@ -525,7 +529,7 @@ object FrmCadRegCom: TFrmCadRegCom
       Font.Style = []
       ParentFont = False
       TabOrder = 1
-      ExplicitWidth = 659
+      ExplicitWidth = 641
       object SB_PRIMEIRO: TSpeedButton
         Left = 0
         Top = 0
@@ -2455,77 +2459,6 @@ object FrmCadRegCom: TFrmCadRegCom
       end
     end
   end
-  object QryCadRegCom: TOraQuery
-    KeyFields = 'ID_REGICOME'
-    KeySequence = 'ID_REGICOME'
-    SQLInsert.Strings = (
-      'INSERT INTO regiao_comercial'
-      '  (EMPRESA, FILIAL, ID_REGICOME, NM_REGICOME, FX_REGICOME)'
-      'VALUES'
-      '  (:EMPRESA, :FILIAL, :ID_REGICOME, :NM_REGICOME, :FX_REGICOME)')
-    SQLDelete.Strings = (
-      'DELETE FROM regiao_comercial'
-      'WHERE'
-      '  ID_REGICOME = :ID_REGICOME')
-    SQLUpdate.Strings = (
-      'UPDATE regiao_comercial'
-      'SET'
-      '  EMPRESA = :EMPRESA,'
-      '  FILIAL = :FILIAL,'
-      '  ID_REGICOME = :ID_REGICOME,'
-      '  NM_REGICOME = :NM_REGICOME,'
-      '  FX_REGICOME = :FX_REGICOME'
-      'WHERE'
-      '  ID_REGICOME = :OLD_ID_REGICOME')
-    SQLLock.Strings = (
-      'SELECT * FROM regiao_comercial'
-      'WHERE'
-      '  ID_REGICOME = :ID_REGICOME'
-      'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  ID_REGICOME = :ID_REGICOME')
-    LocalUpdate = True
-    SQL.Strings = (
-      'SELECT '
-      '   regiao_comercial.empresa,'
-      '   regiao_comercial.filial,'
-      '   regiao_comercial.id_regicome,'
-      '   regiao_comercial.nm_regicome,'
-      '   regiao_comercial.fx_regicome'
-      'FROM'
-      '   regiao_comercial')
-    FetchAll = True
-    CachedUpdates = True
-    Left = 382
-    Top = 194
-    object QryCadRegComEMPRESA: TStringField
-      FieldName = 'EMPRESA'
-      Required = True
-      Size = 2
-    end
-    object QryCadRegComFILIAL: TIntegerField
-      FieldName = 'FILIAL'
-      Required = True
-    end
-    object QryCadRegComID_REGICOME: TFloatField
-      AutoGenerateValue = arAutoInc
-      DisplayLabel = 'C'#243'digo'
-      FieldName = 'ID_REGICOME'
-      Required = True
-    end
-    object QryCadRegComNM_REGICOME: TStringField
-      DisplayLabel = 'Descri'#231#227'o da Regi'#227'o Comercial'
-      FieldName = 'NM_REGICOME'
-      Required = True
-      Size = 40
-    end
-    object QryCadRegComFX_REGICOME: TStringField
-      FieldName = 'FX_REGICOME'
-      Required = True
-      Size = 1
-    end
-  end
   object DtSrcCadPais: TOraDataSource
     DataSet = QryCadRegCom
     Left = 440
@@ -2557,5 +2490,74 @@ object FrmCadRegCom: TFrmCadRegCom
         Name = 'VUSUARIO'
         Value = nil
       end>
+  end
+  object QryCadRegCom: TSmartQuery
+    KeyFields = 'ID_REGICOME'
+    KeySequence = 'ID_REGICOME'
+    SQLInsert.Strings = (
+      'INSERT INTO regiao_comercial'
+      '  (EMPRESA, FILIAL, ID_REGICOME, NM_REGICOME, FX_REGICOME)'
+      'VALUES'
+      '  (:EMPRESA, :FILIAL, :ID_REGICOME, :NM_REGICOME, :FX_REGICOME)')
+    SQLDelete.Strings = (
+      'DELETE FROM regiao_comercial'
+      'WHERE'
+      '  ID_REGICOME = :ID_REGICOME')
+    SQLUpdate.Strings = (
+      'UPDATE regiao_comercial'
+      'SET'
+      '  EMPRESA = :EMPRESA,'
+      '  FILIAL = :FILIAL,'
+      '  ID_REGICOME = :ID_REGICOME,'
+      '  NM_REGICOME = :NM_REGICOME,'
+      '  FX_REGICOME = :FX_REGICOME'
+      'WHERE'
+      '  ID_REGICOME = :OLD_ID_REGICOME')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  ID_REGICOME = :ID_REGICOME')
+    SQLLock.Strings = (
+      'SELECT * FROM regiao_comercial'
+      'WHERE'
+      '  ID_REGICOME = :ID_REGICOME'
+      'FOR UPDATE NOWAIT')
+    SQL.Strings = (
+      'SELECT '
+      '   regiao_comercial.empresa,'
+      '   regiao_comercial.filial,'
+      '   regiao_comercial.id_regicome,'
+      '   regiao_comercial.nm_regicome,'
+      '   regiao_comercial.fx_regicome'
+      'FROM'
+      '   regiao_comercial')
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 384
+    Top = 192
+    object QryCadRegComEMPRESA: TStringField
+      FieldName = 'EMPRESA'
+      Required = True
+      Size = 2
+    end
+    object QryCadRegComFILIAL: TIntegerField
+      FieldName = 'FILIAL'
+      Required = True
+    end
+    object QryCadRegComID_REGICOME: TFloatField
+      FieldName = 'ID_REGICOME'
+      Required = True
+    end
+    object QryCadRegComNM_REGICOME: TStringField
+      FieldName = 'NM_REGICOME'
+      Required = True
+      Size = 40
+    end
+    object QryCadRegComFX_REGICOME: TStringField
+      FieldName = 'FX_REGICOME'
+      Required = True
+      Size = 1
+    end
   end
 end

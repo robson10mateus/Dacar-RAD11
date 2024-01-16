@@ -6,7 +6,7 @@ uses
   SysUtils, Types, Classes, Variants, Graphics, Controls, Forms,
   Dialogs, StdCtrls, ComCtrls, ExtCtrls, Grids, DBGrids, Buttons,
   Mask, DBAccess, Ora, DB, MemDS, DateUtils, DBCtrls, Vcl.ToolWin,
-  Winapi.Windows;
+  Winapi.Windows, OraSmart;
 
 type
   TPageControl = class(ComCtrls.TPageControl)
@@ -73,7 +73,6 @@ type
     Qr_DataDIAS_PROC: TFloatField;
     Tab_Inventario: TTabSheet;
     dbg_Inventario: TDBGrid;
-    qry_Inventario: TOraQuery;
     Ds_Inventario: TOraDataSource;
     sqlFinalizaInventario: TOraSQL;
     QrDES_TIPO: TStringField;
@@ -88,23 +87,12 @@ type
     edt_DataAjuste: TMaskEdit;
     BitBtn1: TBitBtn;
     dbg_Ajuste: TDBGrid;
-    Qr_Ajuste: TOraQuery;
     Ds_Ajuste: TOraDataSource;
-    Qr_AjusteEMPRESA: TStringField;
-    Qr_AjusteFILIAL: TIntegerField;
-    Qr_AjusteID_MATERIAL: TFloatField;
-    Qr_AjusteID_PRODMATEEMBA: TStringField;
-    Qr_AjusteNM_PRODMATEEMBA: TStringField;
-    Qr_AjusteDATA: TDateTimeField;
-    Qr_AjusteQTD_AJUSTE: TFloatField;
-    Qr_AjusteOBS_AJUSTE: TStringField;
     Qr_Produtos: TOraQuery;
     Ds_Produtos: TOraDataSource;
     Qr_ProdutosID_MATERIAL: TFloatField;
     Qr_ProdutosID_PRODMATEEMBA: TStringField;
     Qr_ProdutosNM_PRODMATEEMBA: TStringField;
-    Qr_AjusteLkp_Produto: TStringField;
-    Qr_AjusteLkp_Id_Material: TIntegerField;
     QrPMEDIO: TFloatField;
     QrCAIXA: TFloatField;
     chkComputarProducao: TCheckBox;
@@ -125,11 +113,6 @@ type
     edtDataInventario: TMaskEdit;
     btnDataInventario: TBitBtn;
     SpeedButton2: TSpeedButton;
-    qry_InventarioID_PRODMATEEMBA: TStringField;
-    qry_InventarioNM_PRODMATEEMBA: TStringField;
-    qry_InventarioKG_INVENTARIO: TFloatField;
-    qry_InventarioCX_INVENTARIO: TFloatField;
-    qry_InventarioOP_FECHADO: TStringField;
     Qr_EstoqueCX_PRODUZIDO: TFloatField;
     Qr_EstoqueCX_DEVOLUCAO: TFloatField;
     Qr_EstoqueCX_EXPEDIDO: TFloatField;
@@ -147,9 +130,6 @@ type
     btnAjusteConfirmar: TSpeedButton;
     btnAjusteCancelar: TSpeedButton;
     btnAjusteConsultar: TSpeedButton;
-    qry_InventarioDT_REGIPROD: TStringField;
-    qry_InventarioID_MATERIAL: TFloatField;
-    Qr_AjusteCO_DESCARTE: TFloatField;
     Label2: TLabel;
     edtDescProduto: TEdit;
     edtCodProduto: TEdit;
@@ -163,6 +143,26 @@ type
     Qr_EstoqueCX_EXPEDIDO_BON: TFloatField;
     Qr_EstoqueKG_EXPEDIDO_BON: TFloatField;
     QryTemp: TOraQuery;
+    Qr_Ajuste: TSmartQuery;
+    Qr_AjusteEMPRESA: TStringField;
+    Qr_AjusteFILIAL: TIntegerField;
+    Qr_AjusteID_MATERIAL: TFloatField;
+    Qr_AjusteID_PRODMATEEMBA: TStringField;
+    Qr_AjusteNM_PRODMATEEMBA: TStringField;
+    Qr_AjusteDATA: TDateTimeField;
+    Qr_AjusteQTD_AJUSTE: TFloatField;
+    Qr_AjusteOBS_AJUSTE: TStringField;
+    Qr_AjusteLkp_Produto: TStringField;
+    Qr_AjusteLkp_Id_Material: TIntegerField;
+    Qr_AjusteCO_DESCARTE: TFloatField;
+    qry_Inventario: TSmartQuery;
+    qry_InventarioID_MATERIAL: TFloatField;
+    qry_InventarioID_PRODMATEEMBA: TStringField;
+    qry_InventarioNM_PRODMATEEMBA: TStringField;
+    qry_InventarioKG_INVENTARIO: TFloatField;
+    qry_InventarioCX_INVENTARIO: TFloatField;
+    qry_InventarioDT_REGIPROD: TStringField;
+    qry_InventarioOP_FECHADO: TStringField;
     procedure brnDataInicialClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure btn_ProcessarClick(Sender: TObject);
@@ -170,7 +170,7 @@ type
     procedure Sb_SairClick(Sender: TObject);
     procedure SB_RelatorioClick(Sender: TObject);
     procedure PageControl1Change(Sender: TObject);
-    procedure qry_InventarioAfterPost(DataSet: TDataSet);
+    procedure CRTemp_qry_InventarioAfterPost(DataSet: TDataSet);
     procedure dbg_InventarioTitleClick(Column: TColumn);
     procedure DBGrid1KeyDown(Sender: TObject; var Key: Word;
       Shift: TShiftState);
@@ -181,12 +181,12 @@ type
     procedure Btn_ExcluirAjusteClick(Sender: TObject);
     procedure Btn_ConfAjusteClick(Sender: TObject);
     procedure btn_CancAjusteClick(Sender: TObject);
-    procedure Qr_AjusteBeforeOpen(DataSet: TDataSet);
-    procedure Qr_AjusteAfterInsert(DataSet: TDataSet);
-    procedure Qr_AjusteAfterOpen(DataSet: TDataSet);
+    procedure CRTemp_Qr_AjusteBeforeOpen(DataSet: TDataSet);
+    procedure CRTemp_Qr_AjusteAfterInsert(DataSet: TDataSet);
+    procedure CRTemp_Qr_AjusteAfterOpen(DataSet: TDataSet);
     procedure Ds_AjusteStateChange(Sender: TObject);
-    procedure Qr_AjusteBeforePost(DataSet: TDataSet);
-    procedure Qr_AjusteBeforeDelete(DataSet: TDataSet);
+    procedure CRTemp_Qr_AjusteBeforePost(DataSet: TDataSet);
+    procedure CRTemp_Qr_AjusteBeforeDelete(DataSet: TDataSet);
     procedure dbg_AjusteTitleClick(Column: TColumn);
     procedure btnConsultarClick(Sender: TObject);
     procedure DBGrid2DrawColumnCell(Sender: TObject; const Rect: TRect;
@@ -409,7 +409,7 @@ begin
 
 end;
 
-procedure TFrmConsultaEstoque.qry_InventarioAfterPost(DataSet: TDataSet);
+procedure TFrmConsultaEstoque.CRTemp_qry_InventarioAfterPost(DataSet: TDataSet);
 begin
      qry_Inventario.CommitUpdates;
      qry_Inventario.ApplyUpdates;
@@ -516,12 +516,12 @@ begin
      Qr_Ajuste.CancelUpdates;
 end;
 
-procedure TFrmConsultaEstoque.Qr_AjusteBeforeOpen(DataSet: TDataSet);
+procedure TFrmConsultaEstoque.CRTemp_Qr_AjusteBeforeOpen(DataSet: TDataSet);
 begin
 //     Qr_Ajuste.MacroByName('Macro').Value := ' WHERE A.DATA = TO_DATE ( ''' + edt_DataAjuste.Text + ''',''DD/MM/YYYY'' )';
 end;
 
-procedure TFrmConsultaEstoque.Qr_AjusteAfterInsert(DataSet: TDataSet);
+procedure TFrmConsultaEstoque.CRTemp_Qr_AjusteAfterInsert(DataSet: TDataSet);
 begin
       Qr_AjusteEMPRESA.value := gs_Empresa;
       Qr_AjusteFILIAL.value  := gi_Filial;
@@ -554,7 +554,7 @@ begin
   end;
 end;
 
-procedure TFrmConsultaEstoque.Qr_AjusteAfterOpen(DataSet: TDataSet);
+procedure TFrmConsultaEstoque.CRTemp_Qr_AjusteAfterOpen(DataSet: TDataSet);
 begin
     AtualizaBotoes;
 end;
@@ -564,7 +564,7 @@ begin
      AtualizaBotoes;
 end;
 
-procedure TFrmConsultaEstoque.Qr_AjusteBeforePost(DataSet: TDataSet);
+procedure TFrmConsultaEstoque.CRTemp_Qr_AjusteBeforePost(DataSet: TDataSet);
 begin
      if ( Qr_AjusteDATA.Value <> Today   ) then
      begin
@@ -573,7 +573,7 @@ begin
      end;
 end;
 
-procedure TFrmConsultaEstoque.Qr_AjusteBeforeDelete(DataSet: TDataSet);
+procedure TFrmConsultaEstoque.CRTemp_Qr_AjusteBeforeDelete(DataSet: TDataSet);
 begin
      if ( Qr_AjusteDATA.Value <> Today   ) then
      begin

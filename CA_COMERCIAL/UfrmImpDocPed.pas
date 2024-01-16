@@ -20,7 +20,6 @@ type
   TfrmImpDocPed = class(TForm)
     PageControl1: TPageControl;
     TsLista: TTabSheet;
-    QImpDocPed: TOraQuery;
     grdDados: TDBGrid;
     DSPediVe: TOraDataSource;
     TabSheet1: TTabSheet;
@@ -152,38 +151,6 @@ type
     QryItenQN_TARAREALEXPEITEMPEDIVEND: TFloatField;
     QryItenQN_PESOREALEXPEITEMPEDIVEND: TFloatField;
     QryItenFX_ITEMPEDIVEND: TStringField;
-    QImpDocPedDT_CARGEXPE: TDateTimeField;
-    QImpDocPedID_CARGEXPE: TFloatField;
-    QImpDocPedFL_STATCARGEXPE: TStringField;
-    QImpDocPedID_PEDIVEND: TFloatField;
-    QImpDocPedID_CLIENTE: TFloatField;
-    QImpDocPedFL_STATPEDIVEND: TStringField;
-    QImpDocPedDT_FATUPEDIVEND: TDateTimeField;
-    QImpDocPedID_TIPOPEDIVEND: TFloatField;
-    QImpDocPedID_FORMPAGA: TFloatField;
-    QImpDocPedID_SITUCOBR: TFloatField;
-    QImpDocPedID_INSTCOBR: TFloatField;
-    QImpDocPedID_CONTA: TFloatField;
-    QImpDocPedDT_ENTRPEDIVEND: TDateTimeField;
-    QImpDocPedEMPRESA: TStringField;
-    QImpDocPedFILIAL: TIntegerField;
-    QImpDocPedID_VENDEDOR: TFloatField;
-    QImpDocPedVL_PEDIVEND: TFloatField;
-    QImpDocPedFL_CREDUSADPEDIVEND: TStringField;
-    QImpDocPedVL_TRANAUTOPEDIVEND: TFloatField;
-    QImpDocPedPC_IMPOFRETAUTOPEDIVEND: TFloatField;
-    QImpDocPedFL_COMIVEND: TStringField;
-    QImpDocPedPC_COMIVEND: TFloatField;
-    QImpDocPedNM_CLIENTE: TStringField;
-    QImpDocPedNR_AGENBANC: TStringField;
-    QImpDocPedNR_BANCO: TStringField;
-    QImpDocPedNR_CONTA: TStringField;
-    QImpDocPedNR_CODICEDECONT: TStringField;
-    QImpDocPedSG_SERINOTAFISC: TStringField;
-    QImpDocPedNR_NOTAFISC: TFloatField;
-    QImpDocPedFL_CANCNOTAFISC: TStringField;
-    QImpDocPedFL_IMPRNOTAFISC: TStringField;
-    QImpDocPedNM_FORMPAGA: TStringField;
     QrRelNota: TOraQuery;
     ImprimirBoleto1: TMenuItem;
     ImprimirNotaFiscal1: TMenuItem;
@@ -213,10 +180,6 @@ type
     GerarBoletos1: TMenuItem;
     ImprimeNFCancelada1: TMenuItem;
     NotaFiscalSalvarHTML1: TMenuItem;
-    QImpDocPedNM_TIPOPEDIVEND: TStringField;
-    QImpDocPedFL_BLOQAJUSFINAPEDIVEND: TStringField;
-    QImpDocPedVL_OUTRAJUSANTPEDIVEND: TFloatField;
-    QImpDocPedVL_OUTRAJUSPEDIVEND: TFloatField;
     ImprimeFatura1: TMenuItem;
     QryFatura: TOraQuery;
     QryFaturaEMPRESA: TStringField;
@@ -248,7 +211,6 @@ type
     QryFaturaCIDADE_COBRA: TStringField;
     QryFaturaUF_COBRA: TStringField;
     QryFaturaNM_BAIRRO: TStringField;
-    QImpDocPedDTHORA_GERADOC: TDateTimeField;
     QryItemNfEle: TOraQuery;
     QryNfEle: TOraQuery;
     DSNfEle: TOraDataSource;
@@ -393,7 +355,6 @@ type
     QryNfEleNR_DDDCIDA: TStringField;
     qryPisCofins: TOraQuery;
     qryPisCofinsNR_ST_PISCOFINS: TStringField;
-    QImpDocPedNR_LACRCARGEXPE: TStringField;
     qryCidExpNf: TOraQuery;
     qryCidExpNfSG_ESTADO: TStringField;
     qryCidExpNfNM_CIDADE: TStringField;
@@ -440,8 +401,6 @@ type
     EnviarEmailNFeSPdf: TMenuItem;
     EnviarEmailNFeCPdf: TMenuItem;
     CancelarComunicacaoSefaz1: TMenuItem;
-    QImpDocPedNFE_PROTOCOLO: TStringField;
-    QImpDocPedNFE_CHAVE: TStringField;
     EnviarNFe21: TMenuItem;
     qryClienteID_CLIENTE: TFloatField;
     qryClienteNM_CLIENTE: TStringField;
@@ -638,7 +597,6 @@ type
     qCTeEmitenteCIDADE: TStringField;
     qCTeEmitenteCEP: TStringField;
     qCTeEmitenteUF: TStringField;
-    QImpDocPedID_NOTAFISC: TFloatField;
     qCTeRemDestID_CLIENTE: TFloatField;
     qCTeRemDestCNPJ: TStringField;
     qCTeRemDestINSCRICAO_ESTADUAL: TStringField;
@@ -723,7 +681,6 @@ type
     Qr_CaBaseFONE: TStringField;
     Qr_CaBaseCODIGO_MUNICIPIO: TStringField;
     ImprimirDANFE2: TMenuItem;
-    QImpDocPedFL_CTE: TStringField;
     Qry_NotaNaoTransmitida: TOraQuery;
     Qry_NotaNaoTransmitidaNR_NOTAFISC: TFloatField;
     Qry_NotaNaoTransmitidaSG_SERINOTAFISC_NOTAFISC: TStringField;
@@ -732,12 +689,9 @@ type
     Qry_NotaNaoTransmitidaID_NOTAFISC: TFloatField;
     Qry_NotaNaoTransmitidaNFE_CHAVE: TStringField;
     Qry_NotaNaoTransmitidaUNOMEUNEG: TStringField;
-    QImpDocPedPC_JURODIARIO: TFloatField;
     Men_Grid: TPopupMenu;
     mnu_Todos: TMenuItem;
     SpeedButton1: TSpeedButton;
-    QImpDocPedINUTILIZADA: TStringField;
-    QImpDocPedCANC_SEFAZ: TStringField;
     Qry_BoletoConfere: TOraQuery;
     Qry_BoletoConfereID_PEDIVEND: TFloatField;
     Qry_BoletoConfereVL_BOLETO: TFloatField;
@@ -806,7 +760,6 @@ type
     SpeedButton2: TSpeedButton;
     Sql_ValeCaixa: TOraSQL;
     GerarValeCaixa1: TMenuItem;
-    QImpDocPedID_VALE: TFloatField;
     ImprimeValeCaixa1: TMenuItem;
     SQL_ImpVale: TOraSQL;
     Qr_SaldoVale: TOraQuery;
@@ -816,7 +769,6 @@ type
     SQL_AtualizaValeAnt: TOraSQL;
     mnuCanhotos: TMenuItem;
     LanctoPesoBalanoCarga1: TMenuItem;
-    QImpDocPedFLAG_CEDENTE: TStringField;
     Panel8: TPanel;
     SB_PRIMEIRO: TSpeedButton;
     SB_ANTERIOR: TSpeedButton;
@@ -834,15 +786,62 @@ type
     btnNFE: TSpeedButton;
     Shape7: TShape;
     Label17: TLabel;
-    QImpDocPedSITUACAO: TStringField;
     Panel9: TPanel;
     lblTotalNotas: TLabel;
     QrTipoPedFL_VALIDA_SIMPLES_NAC: TStringField;
-    QImpDocPedFL_VALIDA_SIMPLES_NAC: TStringField;
     Panel1: TPanel;
     ImageList1: TImageList;
-    QImpDocPedSEL: TStringField;
-    ID_GRUPCLIE: TFloatField;
+    QImpDocPed: TSmartQuery;
+    QImpDocPedID_GRUPCLIE: TFloatField;
+    QImpDocPedSITUACAO: TStringField;
+    QImpDocPedDT_CARGEXPE: TDateTimeField;
+    QImpDocPedID_CARGEXPE: TFloatField;
+    QImpDocPedFL_STATCARGEXPE: TStringField;
+    QImpDocPedNR_LACRCARGEXPE: TStringField;
+    QImpDocPedID_PEDIVEND: TFloatField;
+    QImpDocPedID_CLIENTE: TFloatField;
+    QImpDocPedFL_STATPEDIVEND: TStringField;
+    QImpDocPedDT_FATUPEDIVEND: TDateTimeField;
+    QImpDocPedID_TIPOPEDIVEND: TFloatField;
+    QImpDocPedID_FORMPAGA: TFloatField;
+    QImpDocPedID_SITUCOBR: TFloatField;
+    QImpDocPedID_INSTCOBR: TFloatField;
+    QImpDocPedID_CONTA: TFloatField;
+    QImpDocPedDT_ENTRPEDIVEND: TDateTimeField;
+    QImpDocPedEMPRESA: TStringField;
+    QImpDocPedFILIAL: TIntegerField;
+    QImpDocPedID_VENDEDOR: TFloatField;
+    QImpDocPedVL_PEDIVEND: TFloatField;
+    QImpDocPedFL_CREDUSADPEDIVEND: TStringField;
+    QImpDocPedVL_TRANAUTOPEDIVEND: TFloatField;
+    QImpDocPedPC_IMPOFRETAUTOPEDIVEND: TFloatField;
+    QImpDocPedFL_BLOQAJUSFINAPEDIVEND: TStringField;
+    QImpDocPedVL_OUTRAJUSANTPEDIVEND: TFloatField;
+    QImpDocPedVL_OUTRAJUSPEDIVEND: TFloatField;
+    QImpDocPedFL_COMIVEND: TStringField;
+    QImpDocPedPC_COMIVEND: TFloatField;
+    QImpDocPedNM_CLIENTE: TStringField;
+    QImpDocPedNR_AGENBANC: TStringField;
+    QImpDocPedNR_BANCO: TStringField;
+    QImpDocPedNR_CONTA: TStringField;
+    QImpDocPedFLAG_CEDENTE: TStringField;
+    QImpDocPedNR_CODICEDECONT: TStringField;
+    QImpDocPedPC_JURODIARIO: TFloatField;
+    QImpDocPedSG_SERINOTAFISC: TStringField;
+    QImpDocPedID_NOTAFISC: TFloatField;
+    QImpDocPedNR_NOTAFISC: TFloatField;
+    QImpDocPedFL_CANCNOTAFISC: TStringField;
+    QImpDocPedFL_IMPRNOTAFISC: TStringField;
+    QImpDocPedNM_FORMPAGA: TStringField;
+    QImpDocPedNM_TIPOPEDIVEND: TStringField;
+    QImpDocPedFL_VALIDA_SIMPLES_NAC: TStringField;
+    QImpDocPedDTHORA_GERADOC: TDateTimeField;
+    QImpDocPedNFE_PROTOCOLO: TStringField;
+    QImpDocPedNFE_CHAVE: TStringField;
+    QImpDocPedINUTILIZADA: TStringField;
+    QImpDocPedCANC_SEFAZ: TStringField;
+    QImpDocPedFL_CTE: TStringField;
+    QImpDocPedID_VALE: TFloatField;
     procedure Sb_SairClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure BtIncluirClick(Sender: TObject);
@@ -904,8 +903,8 @@ type
     procedure btn_NFEClick(Sender: TObject);
     procedure ImprimirDANFE2Click(Sender: TObject);
     procedure btn_CteClick(Sender: TObject);
-    procedure QImpDocPedAfterScroll(DataSet: TDataSet);
-    procedure QImpDocPedAfterOpen(DataSet: TDataSet);
+    procedure CRTemp_QImpDocPedAfterScroll(DataSet: TDataSet);
+    procedure CRTemp_QImpDocPedAfterOpen(DataSet: TDataSet);
     procedure grdDadosTitleClick(Column: TColumn);
     procedure mnu_TodosClick(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
@@ -1393,7 +1392,7 @@ begin
    CASE SELPE OF
      1:BEGIN
         FrmPesqCliente:=TFrmPesqCliente.Create(Self);
-        FrmPesqCliente.Show;
+        FrmPesqCliente.ShowModal;
        END;
      2:BEGIN
          Cria_FrmPesqConta(VIDConta,VNMConta);
@@ -1401,7 +1400,7 @@ begin
         END;
      3:BEGIN
         FrmPesqVend:=TFrmPesqVend.Create(Self);
-        FrmPesqVend.Show;
+        FrmPesqVend.ShowModal;
        END;
   4..5:BEGIN
         Cria_FrmSelData(Vdtstr);
@@ -1414,12 +1413,12 @@ begin
 
     20:BEGIN
         FrmPesqCaminhao:=TFrmPesqCaminhao.Create(Self);
-        FrmPesqCaminhao.Show;
+        FrmPesqCaminhao.ShowModal;
        END;
 
     26:BEGIN
         frmConsultaGrupoClientes:=TfrmConsultaGrupoClientes.Create(Self);
-        frmConsultaGrupoClientes.Show;
+        frmConsultaGrupoClientes.ShowModal;
        END;
 
    end;
@@ -11054,14 +11053,14 @@ begin
 end;
 
 
-procedure TfrmImpDocPed.QImpDocPedAfterScroll(DataSet: TDataSet);
+procedure TfrmImpDocPed.CRTemp_QImpDocPedAfterScroll(DataSet: TDataSet);
 begin
      btn_Cte.Visible := ( QImpDocPedFL_CTE.AsString = 'S');
    //  GerarValeCaixa1.Enabled := ( QImpDocPedID_VALE.AsInteger = 0   );
    //  ImprimeValeCaixa1.Enabled := ( QImpDocPedID_VALE.AsInteger > 0   );
 end;
 
-procedure TfrmImpDocPed.QImpDocPedAfterOpen(DataSet: TDataSet);
+procedure TfrmImpDocPed.CRTemp_QImpDocPedAfterOpen(DataSet: TDataSet);
 begin
      btn_Cte.Visible := ( QImpDocPedFL_CTE.AsString = 'S');
      //GerarValeCaixa1.Enabled   := ( QImpDocPedID_VALE.AsInteger = 0   );

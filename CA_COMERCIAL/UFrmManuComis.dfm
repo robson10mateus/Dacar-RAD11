@@ -26,9 +26,9 @@ object FrmManuComis: TFrmManuComis
   object PageControl1: TPageControl
     Left = 0
     Top = 41
-    Width = 1003
-    Height = 391
-    ActivePage = TabLista
+    Width = 1007
+    Height = 392
+    ActivePage = TabCriterio
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
@@ -38,6 +38,8 @@ object FrmManuComis: TFrmManuComis
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 1003
+    ExplicitHeight = 391
     object TabCriterio: TTabSheet
       Caption = 'Crit'#233'rio'
       object Label6: TLabel
@@ -296,9 +298,9 @@ object FrmManuComis: TFrmManuComis
       end
       object BPESQ: TBitBtn
         Left = 614
-        Top = 91
+        Top = 90
         Width = 25
-        Height = 20
+        Height = 23
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = 16
@@ -333,7 +335,7 @@ object FrmManuComis: TFrmManuComis
         Left = 0
         Top = 0
         Width = 999
-        Height = 365
+        Height = 362
         Align = alClient
         Color = clWhite
         DataSource = DS
@@ -457,7 +459,7 @@ object FrmManuComis: TFrmManuComis
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 1003
+    Width = 1007
     Height = 41
     Anchors = []
     ButtonHeight = 37
@@ -471,7 +473,7 @@ object FrmManuComis: TFrmManuComis
     Font.Style = []
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 1007
+    ExplicitWidth = 1003
     object SB_PRIMEIRO: TSpeedButton
       Left = 0
       Top = 0
@@ -1240,8 +1242,15 @@ object FrmManuComis: TFrmManuComis
       ShowHint = True
       OnClick = SB_ULTIMOClick
     end
-    object SB_CONFIRMA: TSpeedButton
+    object ToolButton1: TToolButton
       Left = 157
+      Top = 0
+      Width = 123
+      Caption = 'ToolButton1'
+      Style = tbsSeparator
+    end
+    object SB_CONFIRMA: TSpeedButton
+      Left = 280
       Top = 0
       Width = 40
       Height = 37
@@ -1433,7 +1442,7 @@ object FrmManuComis: TFrmManuComis
       OnClick = SB_CONFIRMAClick
     end
     object SB_CANCEL: TSpeedButton
-      Left = 197
+      Left = 320
       Top = 0
       Width = 40
       Height = 37
@@ -1624,8 +1633,16 @@ object FrmManuComis: TFrmManuComis
       ShowHint = True
       OnClick = SB_CANCELClick
     end
+    object ToolButton3: TToolButton
+      Left = 360
+      Top = 0
+      Width = 376
+      Caption = 'ToolButton3'
+      ImageIndex = 1
+      Style = tbsSeparator
+    end
     object Sb_Sair: TSpeedButton
-      Left = 237
+      Left = 736
       Top = 0
       Width = 40
       Height = 37
@@ -1815,26 +1832,11 @@ object FrmManuComis: TFrmManuComis
       ShowHint = True
       OnClick = Sb_SairClick
     end
-    object ToolButton1: TToolButton
-      Left = 277
-      Top = 0
-      Width = 123
-      Caption = 'ToolButton1'
-      Style = tbsSeparator
-    end
-    object ToolButton3: TToolButton
-      Left = 400
-      Top = 0
-      Width = 376
-      Caption = 'ToolButton3'
-      ImageIndex = 1
-      Style = tbsSeparator
-    end
   end
   object Panel1: TPanel
     Left = 0
-    Top = 432
-    Width = 1003
+    Top = 433
+    Width = 1007
     Height = 17
     Align = alBottom
     Color = clWindow
@@ -1847,6 +1849,8 @@ object FrmManuComis: TFrmManuComis
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
+    ExplicitTop = 432
+    ExplicitWidth = 1003
   end
   object Qr: TOraQuery
     SQLInsert.Strings = (

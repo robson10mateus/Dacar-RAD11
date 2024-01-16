@@ -1,8 +1,8 @@
 object frmPedidosAbaixoTabela: TfrmPedidosAbaixoTabela
   Left = 614
   Top = 305
-  Width = 583
-  Height = 378
+  Width = 620
+  Height = 444
   VertScrollBar.Range = 45
   ActiveControl = edtPedido
   Caption = 'Comercial Dacar - Rela'#231#227'o dos Pedidos com Pre'#231'o Abaixo da Tabela'
@@ -493,7 +493,7 @@ object frmPedidosAbaixoTabela: TfrmPedidosAbaixoTabela
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 567
+    Width = 608
     Height = 45
     Align = alTop
     Color = clWindow
@@ -505,7 +505,7 @@ object frmPedidosAbaixoTabela: TfrmPedidosAbaixoTabela
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 505
+    ExplicitWidth = 567
     object btnConsultar: TSpeedButton
       Left = 5
       Top = 5
@@ -884,7 +884,7 @@ object frmPedidosAbaixoTabela: TfrmPedidosAbaixoTabela
     object BtLimpar: TBitBtn
       Left = 115
       Top = 5
-      Width = 95
+      Width = 110
       Height = 35
       Caption = 'Limpar Filtros'
       Font.Charset = DEFAULT_CHARSET
@@ -912,8 +912,8 @@ object frmPedidosAbaixoTabela: TfrmPedidosAbaixoTabela
   object Panel2: TPanel
     Left = 0
     Top = 45
-    Width = 567
-    Height = 294
+    Width = 608
+    Height = 361
     Align = alClient
     Color = clWindow
     Font.Charset = DEFAULT_CHARSET
@@ -924,6 +924,8 @@ object frmPedidosAbaixoTabela: TfrmPedidosAbaixoTabela
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 567
+    ExplicitHeight = 294
     object Label1: TLabel
       Left = 10
       Top = 82
@@ -1041,7 +1043,7 @@ object frmPedidosAbaixoTabela: TfrmPedidosAbaixoTabela
     object edtCliente: TEdit
       Left = 80
       Top = 111
-      Width = 395
+      Width = 400
       Height = 23
       CharCase = ecUpperCase
       Enabled = False
@@ -1111,7 +1113,7 @@ object frmPedidosAbaixoTabela: TfrmPedidosAbaixoTabela
       Left = 480
       Top = 10
       Width = 23
-      Height = 21
+      Height = 23
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = 16
@@ -1134,7 +1136,7 @@ object frmPedidosAbaixoTabela: TfrmPedidosAbaixoTabela
       Left = 170
       Top = 10
       Width = 23
-      Height = 21
+      Height = 23
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = 16
@@ -1157,7 +1159,7 @@ object frmPedidosAbaixoTabela: TfrmPedidosAbaixoTabela
       Left = 480
       Top = 111
       Width = 23
-      Height = 21
+      Height = 23
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = 16
@@ -1195,7 +1197,7 @@ object frmPedidosAbaixoTabela: TfrmPedidosAbaixoTabela
       Left = 170
       Top = 45
       Width = 23
-      Height = 21
+      Height = 23
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = 16
@@ -1234,7 +1236,7 @@ object frmPedidosAbaixoTabela: TfrmPedidosAbaixoTabela
       Left = 480
       Top = 43
       Width = 23
-      Height = 21
+      Height = 23
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = 16
@@ -1273,7 +1275,7 @@ object frmPedidosAbaixoTabela: TfrmPedidosAbaixoTabela
       Left = 480
       Top = 77
       Width = 23
-      Height = 21
+      Height = 23
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = 16
@@ -1343,7 +1345,7 @@ object frmPedidosAbaixoTabela: TfrmPedidosAbaixoTabela
         '(PV.FL_STATPEDIVEND = '#39'VP'#39' OR PV.FL_STATPEDIVEND = '#39'AB'#39' OR PV.FL' +
         '_STATPEDIVEND = '#39'CN'#39' OR PV.FL_STATPEDIVEND = '#39'FE'#39')'
       'ORDER BY PV.ID_PEDIVEND')
-    Left = 220
+    Left = 300
     Top = 10
     object qryRelPrecoAbaixoTabelaID_PEDIVEND: TFloatField
       FieldName = 'ID_PEDIVEND'
@@ -1447,7 +1449,7 @@ object frmPedidosAbaixoTabela: TfrmPedidosAbaixoTabela
   end
   object dtsRelPrecoAbaixoTabela: TOraDataSource
     DataSet = qryRelPrecoAbaixoTabela
-    Left = 248
+    Left = 384
     Top = 9
   end
 end

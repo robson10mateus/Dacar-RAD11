@@ -498,7 +498,7 @@ object FrmConsultaEstoque: TFrmConsultaEstoque
     Top = 0
     Width = 1402
     Height = 672
-    ActivePage = Tab_Processa
+    ActivePage = Tab_Inventario
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
@@ -509,6 +509,8 @@ object FrmConsultaEstoque: TFrmConsultaEstoque
     ParentFont = False
     TabOrder = 0
     OnChange = PageControl1Change
+    ExplicitWidth = 1398
+    ExplicitHeight = 671
     object Tab_Processa: TTabSheet
       Caption = ' Consulta Estoque '
       ImageIndex = 2
@@ -521,6 +523,7 @@ object FrmConsultaEstoque: TFrmConsultaEstoque
         Color = clWindow
         ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 1390
         object SB_Relatorio: TSpeedButton
           Left = 465
           Top = 15
@@ -1030,7 +1033,7 @@ object FrmConsultaEstoque: TFrmConsultaEstoque
           Left = 268
           Top = 30
           Width = 21
-          Height = 19
+          Height = 23
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = 16
@@ -1052,7 +1055,7 @@ object FrmConsultaEstoque: TFrmConsultaEstoque
         end
         object edtDataFinal: TMaskEdit
           Left = 304
-          Top = 29
+          Top = 30
           Width = 91
           Height = 23
           EditMask = '!99/99/9999;1;0'
@@ -1062,9 +1065,9 @@ object FrmConsultaEstoque: TFrmConsultaEstoque
         end
         object btnDataFinal: TBitBtn
           Left = 394
-          Top = 31
+          Top = 30
           Width = 21
-          Height = 19
+          Height = 23
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = 16
@@ -1136,9 +1139,9 @@ object FrmConsultaEstoque: TFrmConsultaEstoque
         end
         object Btmaterial: TBitBtn
           Left = 60
-          Top = 82
+          Top = 80
           Width = 20
-          Height = 20
+          Height = 23
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = 16
@@ -1197,13 +1200,13 @@ object FrmConsultaEstoque: TFrmConsultaEstoque
         Color = clWindow
         ParentBackground = False
         TabOrder = 1
-        ExplicitWidth = 1406
-        ExplicitHeight = 537
+        ExplicitWidth = 1390
+        ExplicitHeight = 531
         object DBGrid2: TDBGrid
           Left = 1
           Top = 1
-          Width = 1408
-          Height = 536
+          Width = 1392
+          Height = 530
           Align = alClient
           DataSource = Ds_Estoque
           Font.Charset = DEFAULT_CHARSET
@@ -1318,8 +1321,8 @@ object FrmConsultaEstoque: TFrmConsultaEstoque
       object dbg_Inventario: TDBGrid
         Left = 0
         Top = 60
-        Width = 1410
-        Height = 588
+        Width = 1394
+        Height = 582
         Align = alClient
         DataSource = Ds_Inventario
         Font.Charset = DEFAULT_CHARSET
@@ -1394,7 +1397,7 @@ object FrmConsultaEstoque: TFrmConsultaEstoque
       object Panel2: TPanel
         Left = 0
         Top = 0
-        Width = 1410
+        Width = 1394
         Height = 60
         Align = alTop
         Color = clWindow
@@ -1941,7 +1944,7 @@ object FrmConsultaEstoque: TFrmConsultaEstoque
           Left = 100
           Top = 30
           Width = 21
-          Height = 19
+          Height = 23
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = 16
@@ -1969,7 +1972,7 @@ object FrmConsultaEstoque: TFrmConsultaEstoque
       object pnl_TopoAjuste: TPanel
         Left = 0
         Top = 0
-        Width = 1410
+        Width = 1394
         Height = 150
         Align = alTop
         Color = clWindow
@@ -2798,8 +2801,8 @@ object FrmConsultaEstoque: TFrmConsultaEstoque
       object dbg_Ajuste: TDBGrid
         Left = 0
         Top = 150
-        Width = 1410
-        Height = 498
+        Width = 1394
+        Height = 492
         Align = alClient
         DataSource = Ds_Ajuste
         Font.Charset = DEFAULT_CHARSET
@@ -3153,7 +3156,7 @@ object FrmConsultaEstoque: TFrmConsultaEstoque
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 1410
+        Width = 1394
         Height = 41
         Anchors = []
         ButtonHeight = 37
@@ -3397,8 +3400,8 @@ object FrmConsultaEstoque: TFrmConsultaEstoque
       object DBGrid1: TDBGrid
         Left = 0
         Top = 41
-        Width = 1410
-        Height = 607
+        Width = 1394
+        Height = 601
         Align = alClient
         Color = clWhite
         DataSource = Ds
@@ -4019,71 +4022,6 @@ object FrmConsultaEstoque: TFrmConsultaEstoque
       FieldName = 'DT_INV'
     end
   end
-  object qry_Inventario: TOraQuery
-    Session = FrmPrincipal.DB
-    SQL.Strings = (
-      
-        'SELECT ME.ID_MATERIAL, ME.ID_PRODMATEEMBA, ME.NM_PRODMATEEMBA, S' +
-        'UM(QN_PESOLIQUREGIPROD) KG_INVENTARIO, SUM(QT_CAIXA) CX_INVENTAR' +
-        'IO, TO_CHAR(PR.DT_REGIPROD,'#39'DD/MM/YY'#39') AS DT_REGIPROD, '
-      '(CASE WHEN PR.FX_REGIPROD = '#39'N'#39' THEN'
-      '    '#39'EM ABERTO'#39
-      'ELSE'
-      '    '#39'FINALIZADO'#39
-      'END) OP_FECHADO'
-      'FROM PRODUCAO_REGISTRO PR'
-      
-        'INNER JOIN MATERIAL_EMBALAGEM ME ON (ME.ID_MATERIAL = PR.ID_MATE' +
-        'RIAL AND ME.ID_PRODMATEEMBA = PR.ID_PRODMATEEMBA)'
-      
-        'WHERE PR.FL_STATREGIPROD = '#39'IV'#39' AND TO_CHAR(PR.DT_REGIPROD,'#39'DD/M' +
-        'M/YYYY'#39') = :PR_DATA'
-      
-        'GROUP BY ME.ID_MATERIAL, ME.ID_PRODMATEEMBA, ME.NM_PRODMATEEMBA,' +
-        ' TO_CHAR(PR.DT_REGIPROD,'#39'DD/MM/YY'#39'), PR.FX_REGIPROD'
-      
-        'ORDER BY ME.ID_MATERIAL, ME.ID_PRODMATEEMBA, ME.NM_PRODMATEEMBA,' +
-        ' TO_CHAR(PR.DT_REGIPROD,'#39'DD/MM/YY'#39'), PR.FX_REGIPROD')
-    FetchAll = True
-    CachedUpdates = True
-    AfterPost = qry_InventarioAfterPost
-    Left = 132
-    Top = 331
-    ParamData = <
-      item
-        DataType = ftUnknown
-        Name = 'PR_DATA'
-        Value = nil
-      end>
-    object qry_InventarioID_PRODMATEEMBA: TStringField
-      FieldName = 'ID_PRODMATEEMBA'
-      Size = 5
-    end
-    object qry_InventarioNM_PRODMATEEMBA: TStringField
-      FieldName = 'NM_PRODMATEEMBA'
-      Size = 40
-    end
-    object qry_InventarioKG_INVENTARIO: TFloatField
-      FieldName = 'KG_INVENTARIO'
-      DisplayFormat = '#,##0.000'
-    end
-    object qry_InventarioCX_INVENTARIO: TFloatField
-      FieldName = 'CX_INVENTARIO'
-    end
-    object qry_InventarioOP_FECHADO: TStringField
-      FieldName = 'OP_FECHADO'
-      FixedChar = True
-      Size = 1
-    end
-    object qry_InventarioDT_REGIPROD: TStringField
-      FieldName = 'DT_REGIPROD'
-      Size = 8
-    end
-    object qry_InventarioID_MATERIAL: TFloatField
-      FieldName = 'ID_MATERIAL'
-      Required = True
-    end
-  end
   object Ds_Inventario: TOraDataSource
     DataSet = qry_Inventario
     Left = 98
@@ -4106,133 +4044,6 @@ object FrmConsultaEstoque: TFrmConsultaEstoque
         Name = 'PR_DATA'
         Value = nil
       end>
-  end
-  object Qr_Ajuste: TOraQuery
-    SQLInsert.Strings = (
-      'INSERT INTO AJUSTE_ESTOQUE'
-      
-        '  (EMPRESA, FILIAL, ID_MATERIAL, ID_PRODMATEEMBA, DATA, QTD_AJUS' +
-        'TE, OBS_AJUSTE)'
-      'VALUES'
-      'D_AJUSTE, :OBS_AJUSTE)')
-    SQLDelete.Strings = (
-      'DELETE FROM AJUSTE_ESTOQUE'
-      'WHERE'
-      '  EMPRESA = :EMPRESA and'
-      '  FILIAL = :FILIAL and'
-      '  ID_MATERIAL = :ID_MATERIAL and'
-      '  ID_PRODMATEEMBA = :ID_PRODMATEEMBA and'
-      '  DATA = :DATA')
-    SQLUpdate.Strings = (
-      'UPDATE AJUSTE_ESTOQUE'
-      'SET'
-      '  EMPRESA = :EMPRESA,'
-      '  FILIAL = :FILIAL,'
-      '  ID_MATERIAL = :ID_MATERIAL,'
-      '  ID_PRODMATEEMBA = :ID_PRODMATEEMBA,'
-      '  DATA = :DATA,'
-      '  QTD_AJUSTE = :QTD_AJUSTE,'
-      '  OBS_AJUSTE = :OBS_AJUSTE'
-      'WHERE'
-      '  EMPRESA = :OLD_EMPRESA and'
-      '  FILIAL = :OLD_FILIAL and'
-      '  ID_MATERIAL = :OLD_ID_MATERIAL and'
-      '  ID_PRODMATEEMBA = :OLD_ID_PRODMATEEMBA and'
-      '  DATA = :OLD_DATA')
-    SQLLock.Strings = (
-      'SELECT * FROM AJUSTE_ESTOQUE'
-      'WHERE'
-      '  EMPRESA = :EMPRESA and'
-      '  FILIAL = :FILIAL and'
-      '  ID_MATERIAL = :ID_MATERIAL and'
-      '  ID_PRODMATEEMBA = :ID_PRODMATEEMBA and'
-      '  DATA = :DATA'
-      'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  A.EMPRESA = :EMPRESA and'
-      '  A.FILIAL = :FILIAL and'
-      '  A.ID_MATERIAL = :ID_MATERIAL and'
-      '  A.ID_PRODMATEEMBA = :ID_PRODMATEEMBA and'
-      '  A.DATA = :DATA')
-    Session = FrmPrincipal.DB
-    SQL.Strings = (
-      
-        'SELECT A.EMPRESA, A.FILIAL, A.ID_MATERIAL, A.ID_PRODMATEEMBA, ME' +
-        '.NM_PRODMATEEMBA, '
-      '       A.DATA, A.QTD_AJUSTE, A.OBS_AJUSTE, A.CO_DESCARTE '
-      '  FROM AJUSTE_ESTOQUE A'
-      ' INNER JOIN MATERIAL_EMBALAGEM ME'
-      '   ON A.ID_MATERIAL     = ME.ID_MATERIAL'
-      '  AND A.ID_PRODMATEEMBA = ME.ID_PRODMATEEMBA'
-      '&Macro  ')
-    FetchAll = True
-    CachedUpdates = True
-    BeforeOpen = Qr_AjusteBeforeOpen
-    AfterOpen = Qr_AjusteAfterOpen
-    AfterInsert = Qr_AjusteAfterInsert
-    BeforePost = Qr_AjusteBeforePost
-    BeforeDelete = Qr_AjusteBeforeDelete
-    Left = 164
-    Top = 329
-    MacroData = <
-      item
-        Name = 'Macro'
-      end>
-    object Qr_AjusteEMPRESA: TStringField
-      FieldName = 'EMPRESA'
-      Required = True
-      Size = 2
-    end
-    object Qr_AjusteFILIAL: TIntegerField
-      FieldName = 'FILIAL'
-      Required = True
-    end
-    object Qr_AjusteID_MATERIAL: TFloatField
-      FieldName = 'ID_MATERIAL'
-      Required = True
-    end
-    object Qr_AjusteID_PRODMATEEMBA: TStringField
-      FieldName = 'ID_PRODMATEEMBA'
-      Required = True
-      Size = 5
-    end
-    object Qr_AjusteNM_PRODMATEEMBA: TStringField
-      FieldName = 'NM_PRODMATEEMBA'
-      Size = 40
-    end
-    object Qr_AjusteDATA: TDateTimeField
-      FieldName = 'DATA'
-      Required = True
-    end
-    object Qr_AjusteQTD_AJUSTE: TFloatField
-      FieldName = 'QTD_AJUSTE'
-    end
-    object Qr_AjusteOBS_AJUSTE: TStringField
-      FieldName = 'OBS_AJUSTE'
-      Size = 200
-    end
-    object Qr_AjusteLkp_Produto: TStringField
-      FieldKind = fkLookup
-      FieldName = 'Lkp_Produto'
-      LookupDataSet = Qr_Produtos
-      LookupKeyFields = 'ID_PRODMATEEMBA'
-      LookupResultField = 'NM_PRODMATEEMBA'
-      KeyFields = 'ID_PRODMATEEMBA'
-      Lookup = True
-    end
-    object Qr_AjusteLkp_Id_Material: TIntegerField
-      FieldKind = fkLookup
-      FieldName = 'Lkp_Id_Material'
-      LookupDataSet = Qr_Produtos
-      LookupKeyFields = 'ID_PRODMATEEMBA'
-      LookupResultField = 'ID_MATERIAL'
-      KeyFields = 'ID_PRODMATEEMBA'
-      Lookup = True
-    end
-    object Qr_AjusteCO_DESCARTE: TFloatField
-      FieldName = 'CO_DESCARTE'
-    end
   end
   object Ds_Ajuste: TOraDataSource
     DataSet = Qr_Ajuste
@@ -4344,5 +4155,192 @@ object FrmConsultaEstoque: TFrmConsultaEstoque
     Session = FrmPrincipal.DB
     Left = 284
     Top = 314
+  end
+  object Qr_Ajuste: TSmartQuery
+    SQLInsert.Strings = (
+      'INSERT INTO AJUSTE_ESTOQUE'
+      
+        '  (EMPRESA, FILIAL, ID_MATERIAL, ID_PRODMATEEMBA, DATA, QTD_AJUS' +
+        'TE, OBS_AJUSTE)'
+      'VALUES'
+      'D_AJUSTE, :OBS_AJUSTE)')
+    SQLDelete.Strings = (
+      'DELETE FROM AJUSTE_ESTOQUE'
+      'WHERE'
+      '  EMPRESA = :EMPRESA and'
+      '  FILIAL = :FILIAL and'
+      '  ID_MATERIAL = :ID_MATERIAL and'
+      '  ID_PRODMATEEMBA = :ID_PRODMATEEMBA and'
+      '  DATA = :DATA')
+    SQLUpdate.Strings = (
+      'UPDATE AJUSTE_ESTOQUE'
+      'SET'
+      '  EMPRESA = :EMPRESA,'
+      '  FILIAL = :FILIAL,'
+      '  ID_MATERIAL = :ID_MATERIAL,'
+      '  ID_PRODMATEEMBA = :ID_PRODMATEEMBA,'
+      '  DATA = :DATA,'
+      '  QTD_AJUSTE = :QTD_AJUSTE,'
+      '  OBS_AJUSTE = :OBS_AJUSTE'
+      'WHERE'
+      '  EMPRESA = :OLD_EMPRESA and'
+      '  FILIAL = :OLD_FILIAL and'
+      '  ID_MATERIAL = :OLD_ID_MATERIAL and'
+      '  ID_PRODMATEEMBA = :OLD_ID_PRODMATEEMBA and'
+      '  DATA = :OLD_DATA')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  A.EMPRESA = :EMPRESA and'
+      '  A.FILIAL = :FILIAL and'
+      '  A.ID_MATERIAL = :ID_MATERIAL and'
+      '  A.ID_PRODMATEEMBA = :ID_PRODMATEEMBA and'
+      '  A.DATA = :DATA')
+    SQLLock.Strings = (
+      'SELECT * FROM AJUSTE_ESTOQUE'
+      'WHERE'
+      '  EMPRESA = :EMPRESA and'
+      '  FILIAL = :FILIAL and'
+      '  ID_MATERIAL = :ID_MATERIAL and'
+      '  ID_PRODMATEEMBA = :ID_PRODMATEEMBA and'
+      '  DATA = :DATA'
+      'FOR UPDATE NOWAIT')
+    Session = FrmPrincipal.DB
+    SQL.Strings = (
+      
+        'SELECT A.EMPRESA, A.FILIAL, A.ID_MATERIAL, A.ID_PRODMATEEMBA, ME' +
+        '.NM_PRODMATEEMBA, '
+      '       A.DATA, A.QTD_AJUSTE, A.OBS_AJUSTE, A.CO_DESCARTE '
+      '  FROM AJUSTE_ESTOQUE A'
+      ' INNER JOIN MATERIAL_EMBALAGEM ME'
+      '   ON A.ID_MATERIAL     = ME.ID_MATERIAL'
+      '  AND A.ID_PRODMATEEMBA = ME.ID_PRODMATEEMBA'
+      '&Macro  ')
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 168
+    Top = 328
+    MacroData = <
+      item
+        Name = 'Macro'
+      end>
+    object Qr_AjusteEMPRESA: TStringField
+      FieldName = 'EMPRESA'
+      Required = True
+      Size = 2
+    end
+    object Qr_AjusteFILIAL: TIntegerField
+      FieldName = 'FILIAL'
+      Required = True
+    end
+    object Qr_AjusteID_MATERIAL: TFloatField
+      FieldName = 'ID_MATERIAL'
+      Required = True
+    end
+    object Qr_AjusteID_PRODMATEEMBA: TStringField
+      FieldName = 'ID_PRODMATEEMBA'
+      Required = True
+      Size = 5
+    end
+    object Qr_AjusteNM_PRODMATEEMBA: TStringField
+      FieldName = 'NM_PRODMATEEMBA'
+      Size = 40
+    end
+    object Qr_AjusteDATA: TDateTimeField
+      FieldName = 'DATA'
+      Required = True
+    end
+    object Qr_AjusteQTD_AJUSTE: TFloatField
+      FieldName = 'QTD_AJUSTE'
+    end
+    object Qr_AjusteOBS_AJUSTE: TStringField
+      FieldName = 'OBS_AJUSTE'
+      Size = 200
+    end
+    object Qr_AjusteLkp_Produto: TStringField
+      FieldKind = fkLookup
+      FieldName = 'Lkp_Produto'
+      LookupDataSet = Qr_Produtos
+      LookupKeyFields = 'ID_PRODMATEEMBA'
+      LookupResultField = 'NM_PRODMATEEMBA'
+      KeyFields = 'ID_PRODMATEEMBA'
+      Lookup = True
+    end
+    object Qr_AjusteLkp_Id_Material: TIntegerField
+      FieldKind = fkLookup
+      FieldName = 'Lkp_Id_Material'
+      LookupDataSet = Qr_Produtos
+      LookupKeyFields = 'ID_PRODMATEEMBA'
+      LookupResultField = 'ID_MATERIAL'
+      KeyFields = 'ID_PRODMATEEMBA'
+      Lookup = True
+    end
+    object Qr_AjusteCO_DESCARTE: TFloatField
+      FieldName = 'CO_DESCARTE'
+    end
+  end
+  object qry_Inventario: TSmartQuery
+    Session = FrmPrincipal.DB
+    SQL.Strings = (
+      
+        'SELECT ME.ID_MATERIAL, ME.ID_PRODMATEEMBA, ME.NM_PRODMATEEMBA, S' +
+        'UM(QN_PESOLIQUREGIPROD) KG_INVENTARIO, SUM(QT_CAIXA) CX_INVENTAR' +
+        'IO, TO_CHAR(PR.DT_REGIPROD,'#39'DD/MM/YY'#39') AS DT_REGIPROD, '
+      '(CASE WHEN PR.FX_REGIPROD = '#39'N'#39' THEN'
+      '    '#39'EM ABERTO'#39
+      'ELSE'
+      '    '#39'FINALIZADO'#39
+      'END) OP_FECHADO'
+      'FROM PRODUCAO_REGISTRO PR'
+      
+        'INNER JOIN MATERIAL_EMBALAGEM ME ON (ME.ID_MATERIAL = PR.ID_MATE' +
+        'RIAL AND ME.ID_PRODMATEEMBA = PR.ID_PRODMATEEMBA)'
+      
+        'WHERE PR.FL_STATREGIPROD = '#39'IV'#39' AND TO_CHAR(PR.DT_REGIPROD,'#39'DD/M' +
+        'M/YYYY'#39') = :PR_DATA'
+      
+        'GROUP BY ME.ID_MATERIAL, ME.ID_PRODMATEEMBA, ME.NM_PRODMATEEMBA,' +
+        ' TO_CHAR(PR.DT_REGIPROD,'#39'DD/MM/YY'#39'), PR.FX_REGIPROD'
+      
+        'ORDER BY ME.ID_MATERIAL, ME.ID_PRODMATEEMBA, ME.NM_PRODMATEEMBA,' +
+        ' TO_CHAR(PR.DT_REGIPROD,'#39'DD/MM/YY'#39'), PR.FX_REGIPROD')
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 136
+    Top = 328
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'PR_DATA'
+        Value = nil
+      end>
+    object qry_InventarioID_MATERIAL: TFloatField
+      FieldName = 'ID_MATERIAL'
+    end
+    object qry_InventarioID_PRODMATEEMBA: TStringField
+      FieldName = 'ID_PRODMATEEMBA'
+      Size = 5
+    end
+    object qry_InventarioNM_PRODMATEEMBA: TStringField
+      FieldName = 'NM_PRODMATEEMBA'
+      Size = 40
+    end
+    object qry_InventarioKG_INVENTARIO: TFloatField
+      FieldName = 'KG_INVENTARIO'
+    end
+    object qry_InventarioCX_INVENTARIO: TFloatField
+      FieldName = 'CX_INVENTARIO'
+    end
+    object qry_InventarioDT_REGIPROD: TStringField
+      FieldName = 'DT_REGIPROD'
+      Size = 8
+    end
+    object qry_InventarioOP_FECHADO: TStringField
+      FieldName = 'OP_FECHADO'
+      Size = 10
+    end
   end
 end

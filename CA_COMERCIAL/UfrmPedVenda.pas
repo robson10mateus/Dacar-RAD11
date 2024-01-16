@@ -987,7 +987,7 @@ var
 implementation
 
 uses SysUtils, UPesquiCliente, UFrmPesqVend,global, ufrmConsultaFormaPagto,
-     UFrmPesqTPV, UFrmSeldata, {UFrmPesqMatEmba,} UFrmTituAtra, UFRMATRA,
+     UFrmPesqTPV, UFrmSeldata, UFrmTituAtra, UFRMATRA,
      Principal, UFRMUltVend, UFrmCargaNF, UFrmCartorio, DateUtils,
      UFrmSaldoVendas, UFrmPesCaminhao, UFrmGeraVarejo, UFrmConsuObs, UFrmSite,
      UFrmGeraTelevendas, UFrmDialBanco, UFrmPedVendaConta, UFrmSaldoProdCorte,

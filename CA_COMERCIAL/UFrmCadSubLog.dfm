@@ -30,6 +30,8 @@ object FrmCadSubLog: TFrmCadSubLog
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 643
+    ExplicitHeight = 387
     object ToolBar1: TToolBar
       Left = 1
       Top = 1
@@ -46,8 +48,7 @@ object FrmCadSubLog: TFrmCadSubLog
       Font.Style = []
       ParentFont = False
       TabOrder = 0
-      ExplicitLeft = 88
-      ExplicitWidth = 692
+      ExplicitWidth = 641
       object SB_PRIMEIRO: TSpeedButton
         Left = 0
         Top = 0
@@ -1990,6 +1991,8 @@ object FrmCadSubLog: TFrmCadSubLog
       Font.Style = []
       ParentFont = False
       TabOrder = 1
+      ExplicitWidth = 641
+      ExplicitHeight = 345
       object TabCriterio: TTabSheet
         Caption = 'Criterios'
         OnShow = TabCriterioShow
@@ -2311,16 +2314,19 @@ object FrmCadSubLog: TFrmCadSubLog
             item
               Expanded = False
               FieldName = 'NM_SUBRLOGI'
+              Width = 64
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'ID_INTESUBRLOGI'
+              Width = 64
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'QN_FATOFRETABATSUBRLOGI'
+              Width = 64
               Visible = True
             end>
         end
@@ -2520,95 +2526,6 @@ object FrmCadSubLog: TFrmCadSubLog
       end
     end
   end
-  object QryCadRegSub: TOraQuery
-    KeyFields = 'ID_SUBRLOGI'
-    KeySequence = 'ID_SUBRLOGI'
-    SQLInsert.Strings = (
-      'INSERT INTO logistica_subregiao'
-      
-        '  (EMPRESA, FILIAL, ID_SUBRLOGI, NM_SUBRLOGI, FX_SUBRLOGI, ID_IN' +
-        'TESUBRLOGI, QN_FATOFRETABATSUBRLOGI)'
-      'VALUES'
-      
-        '  (:EMPRESA, :FILIAL, :ID_SUBRLOGI, :NM_SUBRLOGI, :FX_SUBRLOGI, ' +
-        ':ID_INTESUBRLOGI, :QN_FATOFRETABATSUBRLOGI)')
-    SQLDelete.Strings = (
-      'DELETE FROM logistica_subregiao'
-      'WHERE'
-      '  ID_SUBRLOGI = :ID_SUBRLOGI')
-    SQLUpdate.Strings = (
-      'UPDATE logistica_subregiao'
-      'SET'
-      '  EMPRESA = :EMPRESA,'
-      '  FILIAL = :FILIAL,'
-      '  ID_SUBRLOGI = :ID_SUBRLOGI,'
-      '  NM_SUBRLOGI = :NM_SUBRLOGI,'
-      '  FX_SUBRLOGI = :FX_SUBRLOGI,'
-      '  ID_INTESUBRLOGI = :ID_INTESUBRLOGI,'
-      '  QN_FATOFRETABATSUBRLOGI = :QN_FATOFRETABATSUBRLOGI'
-      'WHERE'
-      '  ID_SUBRLOGI = :OLD_ID_SUBRLOGI')
-    SQLLock.Strings = (
-      'SELECT * FROM logistica_subregiao'
-      'WHERE'
-      '  ID_SUBRLOGI = :ID_SUBRLOGI'
-      'FOR UPDATE NOWAIT')
-    SQLRefresh.Strings = (
-      'WHERE'
-      '  ID_SUBRLOGI = :ID_SUBRLOGI')
-    LocalUpdate = True
-    SQL.Strings = (
-      'SELECT '
-      '  logistica_subregiao.empresa,'
-      '  logistica_subregiao.filial,'
-      '  logistica_subregiao.id_subrlogi,'
-      '  logistica_subregiao.nm_subrlogi,'
-      '  logistica_subregiao.fx_subrlogi,'
-      '  logistica_subregiao.id_intesubrlogi,'
-      '  logistica_subregiao.qn_fatofretabatsubrlogi'
-      'FROM '
-      '  logistica_subregiao')
-    FetchAll = True
-    CachedUpdates = True
-    Left = 282
-    Top = 83
-    object QryCadRegSubEMPRESA: TStringField
-      FieldName = 'EMPRESA'
-      Required = True
-      Size = 2
-    end
-    object QryCadRegSubFILIAL: TIntegerField
-      FieldName = 'FILIAL'
-      Required = True
-    end
-    object QryCadRegSubID_SUBRLOGI: TFloatField
-      AutoGenerateValue = arAutoInc
-      DisplayLabel = 'C'#243'digo'
-      FieldName = 'ID_SUBRLOGI'
-    end
-    object QryCadRegSubNM_SUBRLOGI: TStringField
-      DisplayLabel = 'Descri'#231#227'o de Subregi'#227'o Log'#237'stica'
-      FieldName = 'NM_SUBRLOGI'
-      Required = True
-      Size = 40
-    end
-    object QryCadRegSubFX_SUBRLOGI: TStringField
-      FieldName = 'FX_SUBRLOGI'
-      Required = True
-      Size = 1
-    end
-    object QryCadRegSubID_INTESUBRLOGI: TStringField
-      Alignment = taRightJustify
-      DisplayLabel = 'C'#243'd. Interno'
-      FieldName = 'ID_INTESUBRLOGI'
-      Size = 10
-    end
-    object QryCadRegSubQN_FATOFRETABATSUBRLOGI: TFloatField
-      DisplayLabel = 'Valor Fator Frete Abatido'
-      FieldName = 'QN_FATOFRETABATSUBRLOGI'
-      DisplayFormat = '##0.00'
-    end
-  end
   object DtSrcCadReg: TOraDataSource
     DataSet = QryCadRegSub
     Left = 328
@@ -2639,5 +2556,89 @@ object FrmCadSubLog: TFrmCadSubLog
         Name = 'VUSUARIO'
         Value = nil
       end>
+  end
+  object QryCadRegSub: TSmartQuery
+    KeyFields = 'ID_SUBRLOGI'
+    KeySequence = 'ID_SUBRLOGI'
+    SQLInsert.Strings = (
+      'INSERT INTO logistica_subregiao'
+      
+        '  (EMPRESA, FILIAL, ID_SUBRLOGI, NM_SUBRLOGI, FX_SUBRLOGI, ID_IN' +
+        'TESUBRLOGI, QN_FATOFRETABATSUBRLOGI)'
+      'VALUES'
+      
+        '  (:EMPRESA, :FILIAL, :ID_SUBRLOGI, :NM_SUBRLOGI, :FX_SUBRLOGI, ' +
+        ':ID_INTESUBRLOGI, :QN_FATOFRETABATSUBRLOGI)')
+    SQLDelete.Strings = (
+      'DELETE FROM logistica_subregiao'
+      'WHERE'
+      '  ID_SUBRLOGI = :ID_SUBRLOGI')
+    SQLUpdate.Strings = (
+      'UPDATE logistica_subregiao'
+      'SET'
+      '  EMPRESA = :EMPRESA,'
+      '  FILIAL = :FILIAL,'
+      '  ID_SUBRLOGI = :ID_SUBRLOGI,'
+      '  NM_SUBRLOGI = :NM_SUBRLOGI,'
+      '  FX_SUBRLOGI = :FX_SUBRLOGI,'
+      '  ID_INTESUBRLOGI = :ID_INTESUBRLOGI,'
+      '  QN_FATOFRETABATSUBRLOGI = :QN_FATOFRETABATSUBRLOGI'
+      'WHERE'
+      '  ID_SUBRLOGI = :OLD_ID_SUBRLOGI')
+    SQLRefresh.Strings = (
+      'WHERE'
+      '  ID_SUBRLOGI = :ID_SUBRLOGI')
+    SQLLock.Strings = (
+      'SELECT * FROM logistica_subregiao'
+      'WHERE'
+      '  ID_SUBRLOGI = :ID_SUBRLOGI'
+      'FOR UPDATE NOWAIT')
+    SQL.Strings = (
+      'SELECT '
+      '  logistica_subregiao.empresa,'
+      '  logistica_subregiao.filial,'
+      '  logistica_subregiao.id_subrlogi,'
+      '  logistica_subregiao.nm_subrlogi,'
+      '  logistica_subregiao.fx_subrlogi,'
+      '  logistica_subregiao.id_intesubrlogi,'
+      '  logistica_subregiao.qn_fatofretabatsubrlogi'
+      'FROM '
+      '  logistica_subregiao')
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 280
+    Top = 80
+    object QryCadRegSubEMPRESA: TStringField
+      FieldName = 'EMPRESA'
+      Required = True
+      Size = 2
+    end
+    object QryCadRegSubFILIAL: TIntegerField
+      FieldName = 'FILIAL'
+      Required = True
+    end
+    object QryCadRegSubID_SUBRLOGI: TFloatField
+      FieldName = 'ID_SUBRLOGI'
+      Required = True
+    end
+    object QryCadRegSubNM_SUBRLOGI: TStringField
+      FieldName = 'NM_SUBRLOGI'
+      Required = True
+      Size = 40
+    end
+    object QryCadRegSubFX_SUBRLOGI: TStringField
+      FieldName = 'FX_SUBRLOGI'
+      Required = True
+      Size = 1
+    end
+    object QryCadRegSubID_INTESUBRLOGI: TStringField
+      FieldName = 'ID_INTESUBRLOGI'
+      Size = 10
+    end
+    object QryCadRegSubQN_FATOFRETABATSUBRLOGI: TFloatField
+      FieldName = 'QN_FATOFRETABATSUBRLOGI'
+    end
   end
 end

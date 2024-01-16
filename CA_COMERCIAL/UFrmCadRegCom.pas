@@ -5,7 +5,7 @@ interface
 uses
   SysUtils, Types, Classes, {$IFNDEF VER130} Variants {$ENDIF, Types}, Graphics, Controls, Forms, 
   Dialogs, StdCtrls, ExtCtrls, DBCtrls, ComCtrls, Buttons, Mask,
-  Grids, DBGrids, DB, Ora, MemDS, DBAccess, Vcl.ToolWin;
+  Grids, DBGrids, DB, Ora, MemDS, DBAccess, Vcl.ToolWin, OraSmart;
 
 type
   TFrmCadRegCom = class(TForm)
@@ -50,9 +50,9 @@ type
     SB_EDIT: TSpeedButton;
     ToolButton1: TToolButton;
     ToolButton3: TToolButton;
-    QryCadRegCom: TOraQuery;
     DtSrcCadPais: TOraDataSource;
     QrDireitos: TOraQuery;
+    QryCadRegCom: TSmartQuery;
     QryCadRegComEMPRESA: TStringField;
     QryCadRegComFILIAL: TIntegerField;
     QryCadRegComID_REGICOME: TFloatField;

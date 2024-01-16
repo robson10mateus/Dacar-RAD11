@@ -4,13 +4,13 @@ inherited ufrmConsultaRegioes: TufrmConsultaRegioes
   Width = 462
   Height = 380
   Caption = 'Comercial Dacar - Consulta de Regi'#245'es'
+  Color = clWindow
   OnClose = FormClose
   ExplicitWidth = 462
   ExplicitHeight = 380
-  PixelsPerInch = 96
   TextHeight = 10
   inherited DBGrid1: TDBGrid
-    Width = 446
+    Width = 450
     Height = 172
     DataSource = dtsConsultarRegiao
     OnTitleClick = DBGrid1TitleClick
@@ -29,8 +29,8 @@ inherited ufrmConsultaRegioes: TufrmConsultaRegioes
       end>
   end
   inherited pnlBotoes: TPanel
-    Width = 446
-    ExplicitWidth = 462
+    Width = 450
+    ExplicitWidth = 446
     inherited BitBtn1: TBitBtn
       OnClick = BitBtn1Click
     end
@@ -39,8 +39,8 @@ inherited ufrmConsultaRegioes: TufrmConsultaRegioes
     end
   end
   inherited pnlFiltros: TPanel
-    Width = 446
-    ExplicitWidth = 462
+    Width = 450
+    ExplicitWidth = 446
     inherited EdExpre: TEdit
       OnKeyPress = EdExpreKeyPress
     end
