@@ -7,7 +7,7 @@ object FrmSaldoVendas: TFrmSaldoVendas
   ActiveControl = PageControl1
   BorderStyle = bsDialog
   Caption = 'Saldo em rela'#231#227'o as cotas diarias de venda.'
-  Color = clBackground
+  Color = clWindow
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = 11
@@ -23,8 +23,8 @@ object FrmSaldoVendas: TFrmSaldoVendas
   object PageControl1: TPageControl
     Left = 0
     Top = 41
-    Width = 683
-    Height = 407
+    Width = 687
+    Height = 408
     ActivePage = TabSheet1
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -35,8 +35,8 @@ object FrmSaldoVendas: TFrmSaldoVendas
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 699
-    ExplicitHeight = 446
+    ExplicitWidth = 683
+    ExplicitHeight = 407
     object TabSheet1: TTabSheet
       Caption = 'Detalhe'
       Font.Charset = DEFAULT_CHARSET
@@ -49,8 +49,8 @@ object FrmSaldoVendas: TFrmSaldoVendas
       object DBGrid1: TDBGrid
         Left = 0
         Top = 160
-        Width = 691
-        Height = 256
+        Width = 679
+        Height = 218
         Align = alClient
         Color = clWhite
         DataSource = DSForm
@@ -114,7 +114,7 @@ object FrmSaldoVendas: TFrmSaldoVendas
       object Panel2: TPanel
         Left = 0
         Top = 0
-        Width = 691
+        Width = 679
         Height = 160
         Align = alTop
         Color = clWindow
@@ -127,6 +127,7 @@ object FrmSaldoVendas: TFrmSaldoVendas
         ParentBackground = False
         ParentFont = False
         TabOrder = 1
+        ExplicitWidth = 675
         object Label1: TLabel
           Left = 20
           Top = 56
@@ -536,7 +537,7 @@ object FrmSaldoVendas: TFrmSaldoVendas
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 683
+    Width = 687
     Height = 41
     Anchors = []
     ButtonHeight = 37
@@ -550,10 +551,9 @@ object FrmSaldoVendas: TFrmSaldoVendas
     Font.Style = []
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 699
     object SB_PRIMEIRO: TSpeedButton
-      Left = 1
-      Top = 4
+      Left = 0
+      Top = 0
       Width = 40
       Height = 37
       Hint = 'Primeiro'
@@ -743,8 +743,8 @@ object FrmSaldoVendas: TFrmSaldoVendas
       OnClick = SB_PRIMEIROClick
     end
     object SB_ANTERIOR: TSpeedButton
-      Left = 41
-      Top = 4
+      Left = 40
+      Top = 0
       Width = 39
       Height = 37
       Hint = 'Anterior'
@@ -934,8 +934,8 @@ object FrmSaldoVendas: TFrmSaldoVendas
       OnClick = SB_ANTERIORClick
     end
     object SB_PROXIMO: TSpeedButton
-      Left = 80
-      Top = 4
+      Left = 79
+      Top = 0
       Width = 39
       Height = 37
       Hint = 'Pr'#243'ximo'
@@ -1125,8 +1125,8 @@ object FrmSaldoVendas: TFrmSaldoVendas
       OnClick = SB_PROXIMOClick
     end
     object SB_ULTIMO: TSpeedButton
-      Left = 119
-      Top = 4
+      Left = 118
+      Top = 0
       Width = 39
       Height = 37
       Hint = #218'ltimo'
@@ -1316,8 +1316,8 @@ object FrmSaldoVendas: TFrmSaldoVendas
       OnClick = SB_ULTIMOClick
     end
     object Sb_Sair: TSpeedButton
-      Left = 656
-      Top = 4
+      Left = 157
+      Top = 0
       Width = 40
       Height = 37
       Hint = 'Sair'
@@ -1507,8 +1507,8 @@ object FrmSaldoVendas: TFrmSaldoVendas
       OnClick = Sb_SairClick
     end
     object ToolButton3: TToolButton
-      Left = 158
-      Top = 4
+      Left = 197
+      Top = 0
       Width = 498
       Caption = 'ToolButton3'
       ImageIndex = 1
@@ -1517,8 +1517,8 @@ object FrmSaldoVendas: TFrmSaldoVendas
   end
   object Panel1: TPanel
     Left = 0
-    Top = 448
-    Width = 683
+    Top = 449
+    Width = 687
     Height = 26
     Align = alBottom
     Color = clWindow
@@ -1531,8 +1531,8 @@ object FrmSaldoVendas: TFrmSaldoVendas
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
-    ExplicitTop = 487
-    ExplicitWidth = 699
+    ExplicitTop = 448
+    ExplicitWidth = 683
     object Shape1: TShape
       Left = 269
       Top = 6

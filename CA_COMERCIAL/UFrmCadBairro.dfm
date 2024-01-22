@@ -4,7 +4,7 @@ object FrmCadBairro: TFrmCadBairro
   Width = 675
   Height = 430
   VertScrollBar.Range = 45
-  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
   Caption = 'Comercial Dacar - Cadastro de Bairros'
   Color = clWindow
   Font.Charset = DEFAULT_CHARSET

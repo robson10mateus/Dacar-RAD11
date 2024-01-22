@@ -516,7 +516,7 @@ object FrmTabPreco: TFrmTabPreco
       Top = 1
       Width = 1218
       Height = 544
-      ActivePage = TabCriterio
+      ActivePage = TabLista
       Align = alClient
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
@@ -833,7 +833,7 @@ object FrmTabPreco: TFrmTabPreco
           Left = 0
           Top = 0
           Width = 1210
-          Height = 516
+          Height = 514
           Align = alClient
           DataSource = DtSrcCadTabPrecos
           Font.Charset = DEFAULT_CHARSET
@@ -858,7 +858,7 @@ object FrmTabPreco: TFrmTabPreco
               FieldName = 'ID_TABEPREC'
               Title.Font.Charset = DEFAULT_CHARSET
               Title.Font.Color = clBlack
-              Title.Font.Height = 11
+              Title.Font.Height = 16
               Title.Font.Name = 'Arial'
               Title.Font.Pitch = fpVariable
               Title.Font.Style = [fsBold]
@@ -870,7 +870,7 @@ object FrmTabPreco: TFrmTabPreco
               FieldName = 'NM_TABEPREC'
               Title.Font.Charset = DEFAULT_CHARSET
               Title.Font.Color = clBlack
-              Title.Font.Height = 11
+              Title.Font.Height = 16
               Title.Font.Name = 'Arial'
               Title.Font.Pitch = fpVariable
               Title.Font.Style = [fsBold]
@@ -883,7 +883,7 @@ object FrmTabPreco: TFrmTabPreco
               Title.Caption = 'Tabela Ativa'
               Title.Font.Charset = DEFAULT_CHARSET
               Title.Font.Color = clBlack
-              Title.Font.Height = 11
+              Title.Font.Height = 16
               Title.Font.Name = 'Arial'
               Title.Font.Pitch = fpVariable
               Title.Font.Style = [fsBold]
@@ -897,7 +897,7 @@ object FrmTabPreco: TFrmTabPreco
         object Panel3: TPanel
           Left = 0
           Top = 0
-          Width = 1206
+          Width = 1210
           Height = 122
           Align = alTop
           Color = clWindow
@@ -1078,7 +1078,7 @@ object FrmTabPreco: TFrmTabPreco
         object Panel4: TPanel
           Left = 0
           Top = 0
-          Width = 1206
+          Width = 1210
           Height = 202
           Align = alTop
           BevelOuter = bvNone
@@ -1088,7 +1088,7 @@ object FrmTabPreco: TFrmTabPreco
           object GroupBox1: TGroupBox
             Left = 0
             Top = 0
-            Width = 1206
+            Width = 1210
             Height = 74
             Align = alTop
             Font.Charset = DEFAULT_CHARSET
@@ -1633,7 +1633,7 @@ object FrmTabPreco: TFrmTabPreco
           object grpLoc: TGroupBox
             Left = 0
             Top = 79
-            Width = 1206
+            Width = 1210
             Height = 58
             Align = alTop
             Caption = 'Localizar C'#243'digo / Descri'#231#227'o'
@@ -1836,7 +1836,7 @@ object FrmTabPreco: TFrmTabPreco
           object Panel5: TPanel
             Left = 0
             Top = 74
-            Width = 1206
+            Width = 1210
             Height = 5
             Align = alTop
             BevelOuter = bvNone
@@ -1847,7 +1847,7 @@ object FrmTabPreco: TFrmTabPreco
           object Panel2: TPanel
             Left = 0
             Top = 137
-            Width = 1206
+            Width = 1210
             Height = 60
             Align = alTop
             Color = clWindow
@@ -2305,8 +2305,8 @@ object FrmTabPreco: TFrmTabPreco
         object DBGrid3: TDBGrid
           Left = 0
           Top = 202
-          Width = 1206
-          Height = 311
+          Width = 1210
+          Height = 312
           Align = alClient
           DataSource = DtSrcTabPreco
           Font.Charset = DEFAULT_CHARSET
@@ -2335,7 +2335,6 @@ object FrmTabPreco: TFrmTabPreco
             item
               Expanded = False
               FieldName = 'NM_PRODMATEEMBA'
-              Width = 64
               Visible = True
             end
             item
@@ -2441,7 +2440,6 @@ object FrmTabPreco: TFrmTabPreco
               Title.Font.Name = 'Arial'
               Title.Font.Pitch = fpVariable
               Title.Font.Style = [fsBold]
-              Width = 64
               Visible = True
             end
             item
@@ -2455,7 +2453,6 @@ object FrmTabPreco: TFrmTabPreco
               Title.Font.Name = 'Arial'
               Title.Font.Pitch = fpVariable
               Title.Font.Style = [fsBold]
-              Width = 64
               Visible = True
             end
             item
@@ -2469,7 +2466,6 @@ object FrmTabPreco: TFrmTabPreco
               Title.Font.Name = 'Arial'
               Title.Font.Pitch = fpVariable
               Title.Font.Style = [fsBold]
-              Width = 64
               Visible = True
             end
             item
@@ -2483,7 +2479,6 @@ object FrmTabPreco: TFrmTabPreco
               Title.Font.Name = 'Arial'
               Title.Font.Pitch = fpVariable
               Title.Font.Style = [fsBold]
-              Width = 64
               Visible = True
             end
             item
@@ -2497,7 +2492,6 @@ object FrmTabPreco: TFrmTabPreco
               Title.Font.Name = 'Arial'
               Title.Font.Pitch = fpVariable
               Title.Font.Style = [fsBold]
-              Width = 64
               Visible = True
             end>
         end

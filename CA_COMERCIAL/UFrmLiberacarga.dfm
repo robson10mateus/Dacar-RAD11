@@ -91,14 +91,12 @@ object FrmLiberacarga: TFrmLiberacarga
             Expanded = False
             FieldName = 'NM_FORNECEDOR'
             Title.Caption = 'Transportador'
-            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'NR_ORDEENTRCARGEXPE'
             Title.Caption = 'Ordem Carga'
-            Width = 64
             Visible = True
           end
           item
@@ -112,14 +110,12 @@ object FrmLiberacarga: TFrmLiberacarga
             Expanded = False
             FieldName = 'DT_DESBCARGEXPE'
             Title.Caption = 'Data de Desbloqueio'
-            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'NOME_USUARIO'
             Title.Caption = 'Usu'#225'rio Desbloqueio'
-            Width = 64
             Visible = True
           end>
       end
@@ -1235,7 +1231,7 @@ object FrmLiberacarga: TFrmLiberacarga
       Left = 95
       Top = 40
       Width = 20
-      Height = 20
+      Height = 23
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = 16

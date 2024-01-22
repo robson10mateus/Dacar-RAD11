@@ -418,8 +418,8 @@ begin
   Width := Screen.Width;
   Height := Screen.Height-50;
 
-  if ( FileExists(ExtractFilePath(Application.ExeName) + 'Imagens\Icone_Modulo.bmp') ) then
-    FrmPrincipal.Icon.LoadFromFile( ExtractFilePath(Application.ExeName) + 'Imagens\Icone_Modulo.bmp' );
+//  if ( FileExists(ExtractFilePath(Application.ExeName) + 'Imagens\Icone_Modulo.bmp') ) then
+//    FrmPrincipal.Icon.LoadFromFile( ExtractFilePath(Application.ExeName) + 'Imagens\Icone_Modulo.bmp' );
 
   FrmPrincipal.Show;
   EfetuarLogin;
@@ -1960,52 +1960,60 @@ begin
       dataHoraServidor := frmSenha.DataHoraServidor;
       dadosCadastraisFilial := frmSenha.DadosCadastraisFilial;
 
-      DB.Disconnect;
-      DB.ConnectString := frmSenha.ConnectionString;
-
-      // Acessando Dacar via VPN
-      if ( PosEx('10.0.1.',IPLocal,0 )>0 ) OR( PosEx('10.0.10.',IPLocal,0 )>0 ) then
-      begin
-        if ( PosEx('192.168.0.250', DB.ConnectString ) > 0 ) then
-           DB.ConnectString :=  StringReplace(DB.ConnectString ,'192.168.0.250','189.0.0.202',[]);
-      end;
-
-      DB.Options.DateFormat   := 'DD/MM/YYYY';//'DD-MON-RR';
-      DB.Options.DateLanguage := 'PORTUGUESE';//'ENGLISH';
-
-      DB.Connect;
-
-      qryTemp.Close;
-      qryTemp.SQL.Clear;
-      qryTemp.SQL.Add( ' Select sysdate as Data From dual ' ) ;
-      qryTemp.Open;
-
-      gs_Filial := MidStr(dadosCadastraisFilial.Cnpj,11,2) +'-'+ RightStr( dadosCadastraisFilial.Cnpj,2)  + ' - '+ dadosCadastraisFilial.NomeFilial   ;
-
       if frmSenha.ConnectionString <> '' then
       begin
-        if ( frmSenha.CodigoBase  in [66, 67, 68, 69]  )  then
+        DB.Disconnect;
+        DB.ConnectString := frmSenha.ConnectionString;
+
+        // Acessando Dacar via VPN
+        if ( PosEx('10.0.1.',IPLocal,0 )>0 ) OR( PosEx('10.0.10.',IPLocal,0 )>0 ) then
         begin
-          FrmPrincipal.Caption:= 'Comercial - V. '+GlbVersao+ ' - Conectado na base ' + gs_Unidade +' - Filial : '+ gs_Filial;
-          FrmPrincipal.StatusBar1.Panels[4].Text := gs_Unidade +' - '+ gs_Filial ;
-        end
-        else if ( frmSenha.CodigoBase = 2 ) then
-        begin
-          FrmPrincipal.Caption:= 'Transportadora Calma Ltda - Módulo Comercial';
-        end
-        else
-        begin
-          FrmPrincipal.Caption:= 'Avícola Dacar Ltda - Módulo Comercial';
+          if ( PosEx('192.168.0.250', DB.ConnectString ) > 0 ) then
+             DB.ConnectString :=  StringReplace(DB.ConnectString ,'192.168.0.250','189.0.0.202',[]);
         end;
 
-        FrmPrincipal.StatusBar1.Panels[0].Text := 'Versão do Módulo: ' + GlbVersao;
-        FrmPrincipal.StatusBar1.Panels[1].Text := gs_NomeUsuario ;
-        FrmPrincipal.StatusBar1.Panels[2].Text := qryTemp.FieldByname('Data').AsString;
-        FrmPrincipal.StatusBar1.Panels[3].Text := GetIP;
+        DB.Options.DateFormat   := 'DD/MM/YYYY';//'DD-MON-RR';
+        DB.Options.DateLanguage := 'PORTUGUESE';//'ENGLISH';
 
-        ControlarAcesso(gi_IdenModu, gi_IdenUsua);
-        AtualizarDataFaturamento(dataHoraServidor );
+        DB.Connect;
+
+        qryTemp.Close;
+        qryTemp.SQL.Clear;
+        qryTemp.SQL.Add( ' Select sysdate as Data From dual ' ) ;
+        qryTemp.Open;
+
+        gs_Filial := MidStr(dadosCadastraisFilial.Cnpj,11,2) +'-'+ RightStr( dadosCadastraisFilial.Cnpj,2)  + ' - '+ dadosCadastraisFilial.NomeFilial   ;
+
+        if frmSenha.ConnectionString <> '' then
+        begin
+          if ( frmSenha.CodigoBase  in [66, 67, 68, 69]  )  then
+          begin
+            FrmPrincipal.Caption:= 'Comercial - V. '+GlbVersao+ ' - Conectado na base ' + gs_Unidade +' - Filial : '+ gs_Filial;
+            FrmPrincipal.StatusBar1.Panels[4].Text := gs_Unidade +' - '+ gs_Filial ;
+          end
+          else if ( frmSenha.CodigoBase = 2 ) then
+          begin
+            FrmPrincipal.Caption:= 'Transportadora Calma Ltda - Módulo Comercial';
+          end
+          else
+          begin
+            FrmPrincipal.Caption:= 'Avícola Dacar Ltda - Módulo Comercial';
+          end;
+
+          FrmPrincipal.StatusBar1.Panels[0].Text := 'Versão do Módulo: ' + GlbVersao;
+          FrmPrincipal.StatusBar1.Panels[1].Text := gs_NomeUsuario ;
+          FrmPrincipal.StatusBar1.Panels[2].Text := qryTemp.FieldByname('Data').AsString;
+          FrmPrincipal.StatusBar1.Panels[3].Text := GetIP;
+
+          ControlarAcesso(gi_IdenModu, gi_IdenUsua);
+          AtualizarDataFaturamento(dataHoraServidor );
+        end;
+      end
+      else
+      begin
+        Application.Terminate;
       end;
+
     except
       Close;
     end;

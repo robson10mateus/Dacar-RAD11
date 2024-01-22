@@ -4,7 +4,7 @@ object FrmCadPais: TFrmCadPais
   Width = 1051
   Height = 664
   VertScrollBar.Range = 45
-  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
   Caption = 'Cadastro de Pa'#237'ses'
   Color = clWindow
   Font.Charset = DEFAULT_CHARSET
@@ -1244,8 +1244,8 @@ object FrmCadPais: TFrmCadPais
       OnClick = SB_CANCELClick
     end
     object Sb_Sair: TSpeedButton
-      Left = 371
-      Top = 4
+      Left = 365
+      Top = 5
       Width = 40
       Height = 35
       Hint = 'Sair'

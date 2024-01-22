@@ -5,7 +5,7 @@ object FrmCadCidade: TFrmCadCidade
   Height = 430
   VertScrollBar.Range = 45
   ActiveControl = PageControl1
-  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
   Caption = 'Comercial Dacar - Cadastro de Cidades'
   Color = clBackground
   Font.Charset = DEFAULT_CHARSET

@@ -27,7 +27,6 @@ type
     Panel1: TPanel;
     btnJob: TButton;
     LbJob: TLabel;
-    QryLog: TOraQuery;
     QryJobJOB_NAME: TStringField;
     QryJobSTATE: TStringField;
     QryAjuste: TOraQuery;
@@ -43,6 +42,15 @@ type
     CdsTempID_PRODMATEEMBA: TStringField;
     CdsTempESTOQUE_ANT_CX: TStringField;
     DsAtualiza: TOraDataSource;
+    QryAtualiza: TOraQuery;
+    QryEstoqueInicial: TSmartQuery;
+    QryEstoqueInicialID_PRODMATEEMBA: TStringField;
+    QryEstoqueInicialNM_PRODMATEEMBA: TStringField;
+    QryEstoqueInicialDATA: TDateTimeField;
+    QryEstoqueInicialTIPO: TStringField;
+    QryEstoqueInicialESTOQUE_ANT: TFloatField;
+    QryEstoqueInicialESTOQUE_ANT_CX: TFloatField;
+    QryLog: TSmartQuery;
     QryLogEMPRESA: TStringField;
     QryLogFILIAL: TFloatField;
     QryLogDATA: TDateTimeField;
@@ -53,14 +61,6 @@ type
     QryLogESTOQUE_ANT_OLD: TFloatField;
     QryLogUSUARIO: TFloatField;
     QryLogID_AJUSTE: TFloatField;
-    QryAtualiza: TOraQuery;
-    QryEstoqueInicial: TSmartQuery;
-    QryEstoqueInicialID_PRODMATEEMBA: TStringField;
-    QryEstoqueInicialNM_PRODMATEEMBA: TStringField;
-    QryEstoqueInicialDATA: TDateTimeField;
-    QryEstoqueInicialTIPO: TStringField;
-    QryEstoqueInicialESTOQUE_ANT: TFloatField;
-    QryEstoqueInicialESTOQUE_ANT_CX: TFloatField;
     procedure btnSairClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
@@ -73,9 +73,10 @@ type
     procedure btnCancelaClick(Sender: TObject);
     procedure btnConfirmaClick(Sender: TObject);
     procedure btnJobClick(Sender: TObject);
-//    procedure QryEstoqueInicialBeforePost(DataSet: TDataSet);
     procedure DBGrid1ColEnter(Sender: TObject);
     procedure btnImportaXLSClick(Sender: TObject);
+    procedure QryEstoqueInicialAfterUpdateExecute(Sender: TDataSet;
+      StatementTypes: TStatementTypes; Params: TDAParams);
   private
     { Private declarations }
     Function  Atual_ToolBar(BtOrdem:Integer):string;
@@ -194,6 +195,43 @@ begin
   QryAtualiza.First;
 end;
 
+procedure TFrmEstoque.QryEstoqueInicialAfterUpdateExecute(Sender: TDataSet;
+  StatementTypes: TStatementTypes; Params: TDAParams);
+begin
+  QryAjuste.Open;
+
+  QryLog.ParamByName('DATA').Value := edt_Data.Text;
+  QryLog.Open;
+
+  QryLog.Insert;
+
+  QryLogEMPRESA.Value := gs_Empresa;
+  QryLogFILIAL.Value := gi_Filial;
+  QryLogUSUARIO.Value := gi_IdenUsua;
+
+  if QryLog.RecordCount > 0 then
+    QryLogID_AJUSTE.Value := QryAjusteMAXID_AJUSTE.Value
+  else
+    QryLogID_AJUSTE.Value := QryAjusteMAXID_AJUSTE.Value + 1;
+
+  QryLogDATA.Value := QryEstoqueInicialDATA.Value;
+  QryLogID_PRODMATEEMBA.Value := QryEstoqueInicialID_PRODMATEEMBA.Value;
+
+  QryLogESTOQUE_ANT_CX_OLD.Value := QryEstoqueInicialESTOQUE_ANT_CX.OldValue;
+  QryLogESTOQUE_ANT_OLD.Value    := QryEstoqueInicialESTOQUE_ANT.OldValue;
+
+  QryLogESTOQUE_ANT_CX_NEW.Value :=  QryEstoqueInicialESTOQUE_ANT_CX.NewValue;
+  QryLogESTOQUE_ANT_NEW.Value    := QryEstoqueInicialESTOQUE_ANT.NewValue;
+
+  QryLog.Post;
+  QryLog.ApplyUpdates;
+  QryLog.CommitUpdates;
+
+  QryLog.Close;
+  QryAjuste.Close;
+
+end;
+
 procedure TFrmEstoque.btnAtualizarClick(Sender: TObject);
 begin
   QryEstoqueInicial.ParamByName('DATA').AsString := edt_Data.Text;
@@ -234,6 +272,7 @@ begin
   end;
 
   QryEstoqueInicial.Edit;
+
   DBGrid1.Options := [dgEditing,dgTitles,dgIndicator,dgColumnResize,dgColLines,dgRowLines,dgTabs,dgAlwaysShowSelection,dgMultiSelect];
   DBGrid1.OnColEnter := DBGrid1ColEnter;
 
@@ -262,9 +301,6 @@ begin
   QryEstoqueInicial.ApplyUpdates;
   QryEstoqueInicial.CommitUpdates;
 
-  QryLog.ApplyUpdates;
-  QryLog.CommitUpdates;
-
   try
     OraSQL1.SQL.Clear;
     OraSQL1.SQL.Add('update POSICAO_ESTOQUE PE ');
@@ -287,14 +323,14 @@ begin
     Application.MessageBox('Estoque atualizado.', PChar(FrmEstoque.Caption), MB_OK + MB_ICONINFORMATION);
   end;
 
+  btnJobClick(Self);
+
   QryEstoqueInicial.ParamByName('DATA').AsString := edt_Data.Text;
   QryEstoqueInicial.Refresh;
 
-  btnJobClick(Self);
+  QryAtualiza.Refresh;
 
   Application.MessageBox('Estoque inicial atualizado.', PChar(FrmEstoque.Caption), MB_OK + MB_ICONINFORMATION);
-
-  QryAtualiza.Refresh;
 
   DBGrid1.OnColEnter := nil;
 
@@ -433,7 +469,15 @@ end;
 
 procedure TFrmEstoque.btnImportaXLSClick(Sender: TObject);
 begin
-  btnEditarClick(Self);
+//  btnEditarClick(Self);
+
+  if StatusJob then
+  begin
+    Application.MessageBox('Desative a Job para editar.', PChar(FrmEstoque.Caption),MB_OK + MB_ICONINFORMATION);
+    Exit;
+  end;
+
+  QryEstoqueInicial.Edit;
 
   if StatusJob = False then
   begin
@@ -448,32 +492,15 @@ begin
       QryEstoqueInicial.First;
 
       QryAjuste.Open;
-      QryLog.Open;
 
       while not QryEstoqueInicial.Eof do
       begin
         if CdsTempID_PRODMATEEMBA.Value = QryEstoqueInicialID_PRODMATEEMBA.Value then
         begin
           QryEstoqueInicial.Edit;
-          QryLog.Append;
 
           QryEstoqueInicialESTOQUE_ANT_CX.AsString := CdsTempESTOQUE_ANT_CX.Value;
 
-          QryLogEMPRESA.Value := gs_Empresa;
-          QryLogFILIAL.Value := gi_Filial;
-          QryLogUSUARIO.Value := gi_IdenUsua;
-          QryLogID_AJUSTE.Value := QryAjusteMAXID_AJUSTE.Value + 1;
-
-          QryLogDATA.Value := QryEstoqueInicialDATA.Value;
-          QryLogID_PRODMATEEMBA.Value := QryEstoqueInicialID_PRODMATEEMBA.Value;
-
-          QryLogESTOQUE_ANT_CX_OLD.Value := QryEstoqueInicialESTOQUE_ANT_CX.OldValue;
-          QryLogESTOQUE_ANT_OLD.Value    := QryEstoqueInicialESTOQUE_ANT.OldValue;
-
-          QryLogESTOQUE_ANT_CX_NEW.AsString :=  CdsTempESTOQUE_ANT_CX.Value;
-          QryLogESTOQUE_ANT_NEW.Value    := QryEstoqueInicialESTOQUE_ANT.NewValue;
-
-          QryLog.Post;
           QryEstoqueInicial.Post;
 
           CdsTemp.Next;

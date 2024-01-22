@@ -48,7 +48,6 @@ type
     SB_CANCEL: TSpeedButton;
     Sb_Sair: TSpeedButton;
     SB_EDIT: TSpeedButton;
-    ToolButton1: TToolButton;
     ToolButton3: TToolButton;
     DtSrcCadTpTrans: TOraDataSource;
     QrDireitos: TOraQuery;

@@ -1,8 +1,8 @@
 object FrmSelData: TFrmSelData
   Left = 736
   Top = 446
-  Width = 235
-  Height = 170
+  Width = 236
+  Height = 167
   HorzScrollBar.Range = 217
   VertScrollBar.Range = 122
   ActiveControl = SEDia
@@ -19,9 +19,10 @@ object FrmSelData: TFrmSelData
   TextHeight = 15
   object Panel2: TPanel
     Left = 0
-    Top = 67
-    Width = 217
-    Height = 55
+    Top = 66
+    Width = 224
+    Height = 63
+    Align = alClient
     Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -31,12 +32,16 @@ object FrmSelData: TFrmSelData
     ParentBackground = False
     ParentFont = False
     TabOrder = 5
+    ExplicitTop = 67
+    ExplicitWidth = 217
+    ExplicitHeight = 55
   end
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 217
+    Width = 224
     Height = 66
+    Align = alTop
     Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -46,6 +51,7 @@ object FrmSelData: TFrmSelData
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
+    ExplicitWidth = 217
     object Label1: TLabel
       Left = 127
       Top = 22

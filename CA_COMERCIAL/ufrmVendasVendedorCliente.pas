@@ -210,9 +210,10 @@ type
     procedure BPESQClick(Sender: TObject);
     procedure BtIncluirClick(Sender: TObject);
     procedure BtAtivarClick(Sender: TObject);
-    procedure tvVendasClienteVendedorItemClick(Sender: TObject;
-      Button: TMouseButton; Node: TTreeNode; const Pt: TPoint);
+//    procedure tvVendasClienteVendedorItemClick(Sender: TObject;
+//      Button: TMouseButton; Node: TTreeNode; const Pt: TPoint);
     procedure btnExcelClick(Sender: TObject);
+    procedure tvVendasClienteVendedorClick(Sender: TObject);
   private
     { Private declarations }
     VFINAL, Vdata:STRING;
@@ -465,9 +466,8 @@ Begin
 
 end;
 
-procedure TfrmVendasVendedorCliente.tvVendasClienteVendedorItemClick(
-  Sender: TObject; Button: TMouseButton; Node: TTreeNode;
-  const Pt: TPoint);
+procedure TfrmVendasVendedorCliente.tvVendasClienteVendedorClick(
+  Sender: TObject);
 var
   Nodo : TTreeNode;
   index, X, y : integer;

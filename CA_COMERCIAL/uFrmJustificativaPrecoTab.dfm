@@ -2,11 +2,13 @@ object frmJustificativaPrecoTab: TfrmJustificativaPrecoTab
   Left = 789
   Top = 361
   Width = 557
-  Height = 245
+  Height = 287
   VertScrollBar.Range = 245
   ActiveControl = btnConfirmar
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
   Caption = 'Dacar Comercial - Justificativa Pre'#231'o Abaixo Tabela'
-  Color = clBackground
+  Color = clWindow
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -17,7 +19,7 @@ object frmJustificativaPrecoTab: TfrmJustificativaPrecoTab
   object pnlBotoes: TPanel
     Left = 0
     Top = 0
-    Width = 524
+    Width = 545
     Height = 45
     Align = alTop
     Color = clWindow
@@ -29,7 +31,7 @@ object frmJustificativaPrecoTab: TfrmJustificativaPrecoTab
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 557
+    ExplicitWidth = 524
     object btnConfirmar: TBitBtn
       Left = 5
       Top = 5
@@ -313,9 +315,9 @@ object frmJustificativaPrecoTab: TfrmJustificativaPrecoTab
   object pnlMotivo: TPanel
     Left = 0
     Top = 45
-    Width = 524
-    Height = 200
-    Align = alTop
+    Width = 545
+    Height = 204
+    Align = alClient
     Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -325,11 +327,12 @@ object frmJustificativaPrecoTab: TfrmJustificativaPrecoTab
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 557
+    ExplicitWidth = 524
+    ExplicitHeight = 200
     object GroupBox1: TGroupBox
       Left = 1
       Top = 11
-      Width = 555
+      Width = 543
       Height = 181
       Align = alTop
       Caption = ' Justificativa '
@@ -341,36 +344,40 @@ object frmJustificativaPrecoTab: TfrmJustificativaPrecoTab
       Font.Style = []
       ParentFont = False
       TabOrder = 0
+      ExplicitWidth = 522
       object Panel1: TPanel
         Left = 2
-        Top = 15
-        Width = 551
+        Top = 17
+        Width = 539
         Height = 5
         Align = alTop
         BevelOuter = bvNone
         Color = clWindow
         ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 518
       end
       object memMotivo: TMemo
         Left = 2
-        Top = 20
-        Width = 551
-        Height = 159
+        Top = 22
+        Width = 539
+        Height = 157
         Align = alClient
         TabOrder = 1
+        ExplicitWidth = 518
       end
     end
     object Panel2: TPanel
       Left = 1
       Top = 1
-      Width = 555
+      Width = 543
       Height = 10
       Align = alTop
       BevelOuter = bvNone
       Color = clWindow
       ParentBackground = False
       TabOrder = 1
+      ExplicitWidth = 522
     end
   end
 end

@@ -1674,7 +1674,7 @@ begin
   SB_ULTIMO.Enabled:=false;
   SBDiversos.Enabled:=false;
   btnNFE.Enabled := False;
-  PageControl1.Pages[1].TabVisible:=false;
+//  PageControl1.Pages[1].TabVisible:=false;
 end;
 
 procedure TfrmImpDocPed.SBDiversosClick(Sender: TObject);

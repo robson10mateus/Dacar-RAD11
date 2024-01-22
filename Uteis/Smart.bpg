@@ -1,0 +1,52 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = Utils.exe Contabil.exe SmartAcessos.exe Comercial.exe Fiscal.exe \
+  FiscalII.exe SMECA.exe Compras.exe SEDP.exe Financeiro.exe RH.exe
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+
+Utils.exe: Utils.dpr
+  $(DCC)
+
+Contabil.exe: ..\CONTABIL\Contabil.dpr
+  $(DCC)
+
+SmartAcessos.exe: ..\Acessos Sistema\SmartAcessos.dpr
+  $(DCC)
+
+Comercial.exe: ..\CA_COMERCIAL\Comercial.dpr
+  $(DCC)
+
+Fiscal.exe: ..\Carregamento\Fiscal.dpr
+  $(DCC)
+
+FiscalII.exe: ..\FiscalII\FiscalII.dpr
+  $(DCC)
+
+SMECA.exe: ..\SMECAA\Fonte\SMECA.dpr
+  $(DCC)
+
+Compras.exe: ..\Compras\Compras.dpr
+  $(DCC)
+
+SEDP.exe: ..\EXPEDICAO\Fonte\SEDP.dpr
+  $(DCC)
+
+Financeiro.exe: ..\Financeiro\Financeiro.dpr
+  $(DCC)
+
+RH.exe: ..\RH\RH.dpr
+  $(DCC)
+
+

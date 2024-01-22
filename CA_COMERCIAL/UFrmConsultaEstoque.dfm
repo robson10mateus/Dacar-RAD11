@@ -498,7 +498,7 @@ object FrmConsultaEstoque: TFrmConsultaEstoque
     Top = 0
     Width = 1402
     Height = 672
-    ActivePage = Tab_Inventario
+    ActivePage = Tab_Processa
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
@@ -523,7 +523,6 @@ object FrmConsultaEstoque: TFrmConsultaEstoque
         Color = clWindow
         ParentBackground = False
         TabOrder = 0
-        ExplicitWidth = 1390
         object SB_Relatorio: TSpeedButton
           Left = 465
           Top = 15
@@ -1200,8 +1199,6 @@ object FrmConsultaEstoque: TFrmConsultaEstoque
         Color = clWindow
         ParentBackground = False
         TabOrder = 1
-        ExplicitWidth = 1390
-        ExplicitHeight = 531
         object DBGrid2: TDBGrid
           Left = 1
           Top = 1
@@ -1403,6 +1400,7 @@ object FrmConsultaEstoque: TFrmConsultaEstoque
         Color = clWindow
         ParentBackground = False
         TabOrder = 1
+        ExplicitWidth = 1390
         object btnImpInventario: TSpeedButton
           Left = 195
           Top = 15

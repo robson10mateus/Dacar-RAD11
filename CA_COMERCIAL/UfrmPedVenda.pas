@@ -3839,7 +3839,7 @@ begin
                         'PAIS.ID_PAIS, CLIENTE.id_grupclie, Cliente_vendedor.pc_comivendclie, ESTADO.SG_ESTADO, '+
                         'CLIENTE.FL_NF_POSTERIOR, CLIENTE.NR_INSCESTACLIE, CLIENTE.ID_TABEPREC, TABELA_PRECO.FL_ATUALIZA, '+
                         'CLIENTE.GN_EMAICLIE, TABELA_PRECO.NM_TABEPREC, TABELA_PRECO.FX_TABEPREC, CLIENTE.OP_SIMPLES_NACIONAL, '+
-                        'CLIENTE.LATITUDE, CLIENTE.LONGITUDE, CLIENTE.FL_TITUABERTO '+
+                        'CLIENTE.LATITUDE, CLIENTE.LONGITUDE '+
                         'FROM CLIENTE, CLIENTE_VENDEDOR, BAIRRO, CIDADE, ESTADO, PAIS, TABELA_PRECO '+
                         'WHERE (CLIENTE.ID_CLIENTE = CLIENTE_VENDEDOR.ID_CLIENTE (+)) AND  CLIENTE.ID_TABEPREC = TABELA_PRECO.ID_TABEPREC '+
                         'AND CLIENTE.ID_BAIRRO = BAIRRO.ID_BAIRRO AND BAIRRO.ID_CIDADE = CIDADE.ID_CIDADE '+
@@ -3982,26 +3982,26 @@ begin
 
   QrTitu.Close;
   QRTitu.SQL.clear;
-  // Contamos os títulos que podem estar abertos
-  QRTitu.SQL.Text :=
-      ' SELECT COUNT(*) AS TITUABERTO                         '+
-      ' FROM Pedido_Venda,ca_titurec,pedido_venda_tipo        '+
-      ' WHERE Pedido_Venda.id_pedivend=ca_titurec.rnumedocu   '+
-      ' AND Pedido_Venda.id_tipopedivend=pedido_venda_tipo.id_tipopedivend  '+
-      ' AND ca_titurec.rdatavenc < TO_DATE(''' + datetostr(VDATATU) + ''',''' + 'DD/MM/YYYY' + ''')' +
-      ' AND (ca_titurec.rst_cobra = ''A'')                            '+
-      ' AND (ca_titurec.rid_cliente = ''' + floattostr(QPediVe['ID_CLIENTE']) + ''')'+
-      ' AND NVL(pedido_venda_tipo.fl_consfinatipopedivend,''S'')=''S'' ';
-  QRTitu.Open;
-
-  if (QryTempC.FieldByName('FL_TITUABERTO').Value <> 'S') and (QRTitu.FieldByName('TITUABERTO').Value > 0) then
-  begin
-    Screen.Cursor := crDefault;
-    Application.MessageBox('Cadastro do Cliente não permite lançamento de pedido se tiver Titulos em Aberto. Entre em contato com o Financeiro.', PChar(FrmPedVenda.Caption), MB_OK + MB_ICONINFORMATION);
-    SBCancelClick(sender);
-    QRTitu.Close;
-    Exit;
-  end;
+//  // Contamos os títulos que podem estar abertos
+//  QRTitu.SQL.Text :=
+//      ' SELECT COUNT(*) AS TITUABERTO                         '+
+//      ' FROM Pedido_Venda,ca_titurec,pedido_venda_tipo        '+
+//      ' WHERE Pedido_Venda.id_pedivend=ca_titurec.rnumedocu   '+
+//      ' AND Pedido_Venda.id_tipopedivend=pedido_venda_tipo.id_tipopedivend  '+
+//      ' AND ca_titurec.rdatavenc < TO_DATE(''' + datetostr(VDATATU) + ''',''' + 'DD/MM/YYYY' + ''')' +
+//      ' AND (ca_titurec.rst_cobra = ''A'')                            '+
+//      ' AND (ca_titurec.rid_cliente = ''' + floattostr(QPediVe['ID_CLIENTE']) + ''')'+
+//      ' AND NVL(pedido_venda_tipo.fl_consfinatipopedivend,''S'')=''S'' ';
+//  QRTitu.Open;
+//
+//  if (QryTempC.FieldByName('FL_TITUABERTO').Value <> 'S') and (QRTitu.FieldByName('TITUABERTO').Value > 0) then
+//  begin
+//    Screen.Cursor := crDefault;
+//    Application.MessageBox('Cadastro do Cliente não permite lançamento de pedido se tiver Titulos em Aberto. Entre em contato com o Financeiro.', PChar(FrmPedVenda.Caption), MB_OK + MB_ICONINFORMATION);
+//    SBCancelClick(sender);
+//    QRTitu.Close;
+//    Exit;
+//  end;
 
   // Ajustamos os campos demonstrativos
   QPediVe['NM_CLIENTE'] := qryTempC['NM_CLIENTE' ];

@@ -5,7 +5,6 @@ object FrmEstoque: TFrmEstoque
   Height = 683
   VertScrollBar.Range = 60
   ActiveControl = edt_Data
-  BorderIcons = [biMaximize]
   BorderStyle = bsSingle
   Caption = 'Comercial Dacar - Ajuste Estoque Inicial'
   Color = clWindow
@@ -671,6 +670,8 @@ object FrmEstoque: TFrmEstoque
     Font.Style = []
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 1309
+    ExplicitHeight = 584
     object tabEstoque: TTabSheet
       Caption = 'Ajusta Estoque Inicial'
       object DBGrid1: TDBGrid
@@ -961,83 +962,6 @@ object FrmEstoque: TFrmEstoque
       Size = 15
     end
   end
-  object QryLog: TOraQuery
-    SQLInsert.Strings = (
-      'INSERT INTO LOG_AJUSTE_ESTOQUE'
-      
-        '    (EMPRESA, FILIAL, DATA, ID_PRODMATEEMBA, ESTOQUE_ANT_CX_NEW,' +
-        ' ESTOQUE_ANT_NEW, ESTOQUE_ANT_CX_OLD, ESTOQUE_ANT_OLD, USUARIO, ' +
-        'ID_AJUSTE)'
-      'VALUES'
-      
-        '    (:EMPRESA, :FILIAL, :DATA, :ID_PRODMATEEMBA, :ESTOQUE_ANT_CX' +
-        '_NEW, :ESTOQUE_ANT_NEW, :ESTOQUE_ANT_CX_OLD, :ESTOQUE_ANT_OLD, :' +
-        'USUARIO, :ID_AJUSTE)')
-    SQLUpdate.Strings = (
-      'UPDATE LOG_AJUSTE_ESTOQUE'
-      'SET'
-      '    ESTOQUE_ANT_CX_NEW = :ESTOQUE_ANT_CX_NEW,'
-      '    ESTOQUE_ANT_NEW = :ESTOQUE_ANT_NEW'
-      'WHERE'
-      '    DATA = :DATA'
-      '    AND USUARIO = :USUARIO'
-      '    AND ID_PRODMATEEMBA = :ID_PRODMATEEMBA')
-    LocalUpdate = True
-    SQL.Strings = (
-      'SELECT '
-      '    EMPRESA, '
-      '    FILIAL, '
-      '    DATA, '
-      '    ID_PRODMATEEMBA, '
-      '    ESTOQUE_ANT_CX_NEW, '
-      '    ESTOQUE_ANT_NEW, '
-      '    ESTOQUE_ANT_CX_OLD, '
-      '    ESTOQUE_ANT_OLD, '
-      '    USUARIO,'
-      '    ID_AJUSTE'
-      'FROM '
-      '    LOG_AJUSTE_ESTOQUE')
-    FetchAll = True
-    CachedUpdates = True
-    Left = 584
-    Top = 8
-    object QryLogEMPRESA: TStringField
-      FieldName = 'EMPRESA'
-      Required = True
-      Size = 2
-    end
-    object QryLogFILIAL: TFloatField
-      FieldName = 'FILIAL'
-      Required = True
-    end
-    object QryLogDATA: TDateTimeField
-      FieldName = 'DATA'
-      Required = True
-    end
-    object QryLogID_PRODMATEEMBA: TStringField
-      FieldName = 'ID_PRODMATEEMBA'
-      Size = 5
-    end
-    object QryLogESTOQUE_ANT_CX_NEW: TFloatField
-      FieldName = 'ESTOQUE_ANT_CX_NEW'
-    end
-    object QryLogESTOQUE_ANT_NEW: TFloatField
-      FieldName = 'ESTOQUE_ANT_NEW'
-    end
-    object QryLogESTOQUE_ANT_CX_OLD: TFloatField
-      FieldName = 'ESTOQUE_ANT_CX_OLD'
-    end
-    object QryLogESTOQUE_ANT_OLD: TFloatField
-      FieldName = 'ESTOQUE_ANT_OLD'
-    end
-    object QryLogUSUARIO: TFloatField
-      FieldName = 'USUARIO'
-      Required = True
-    end
-    object QryLogID_AJUSTE: TFloatField
-      FieldName = 'ID_AJUSTE'
-    end
-  end
   object QryAjuste: TOraQuery
     SQL.Strings = (
       'SELECT MAX(ID_AJUSTE) FROM LOG_AJUSTE_ESTOQUE')
@@ -1145,6 +1069,7 @@ object FrmEstoque: TFrmEstoque
     SQLRefresh.Strings = (
       'WHERE'
       '  DATA = :DATA')
+    Session = FrmPrincipal.DB
     SQL.Strings = (
       'SELECT '
       '    PE.ID_PRODMATEEMBA,'
@@ -1164,6 +1089,7 @@ object FrmEstoque: TFrmEstoque
     LockMode = lmNone
     Options.SetFieldsReadOnly = False
     Options.ExtendedFieldsInfo = False
+    AfterUpdateExecute = QryEstoqueInicialAfterUpdateExecute
     Left = 512
     Top = 8
     ParamData = <
@@ -1194,6 +1120,93 @@ object FrmEstoque: TFrmEstoque
     end
     object QryEstoqueInicialESTOQUE_ANT_CX: TFloatField
       FieldName = 'ESTOQUE_ANT_CX'
+    end
+  end
+  object QryLog: TSmartQuery
+    SQLInsert.Strings = (
+      'INSERT INTO LOG_AJUSTE_ESTOQUE'
+      
+        '    (EMPRESA, FILIAL, DATA, ID_PRODMATEEMBA, ESTOQUE_ANT_CX_NEW,' +
+        ' ESTOQUE_ANT_NEW, ESTOQUE_ANT_CX_OLD, ESTOQUE_ANT_OLD, USUARIO, ' +
+        'ID_AJUSTE)'
+      'VALUES'
+      
+        '    (:EMPRESA, :FILIAL, :DATA, :ID_PRODMATEEMBA, :ESTOQUE_ANT_CX' +
+        '_NEW, :ESTOQUE_ANT_NEW, :ESTOQUE_ANT_CX_OLD, :ESTOQUE_ANT_OLD, :' +
+        'USUARIO, :ID_AJUSTE)')
+    SQLUpdate.Strings = (
+      'UPDATE LOG_AJUSTE_ESTOQUE'
+      'SET'
+      '    ESTOQUE_ANT_CX_NEW = :ESTOQUE_ANT_CX_NEW,'
+      '    ESTOQUE_ANT_NEW = :ESTOQUE_ANT_NEW'
+      'WHERE'
+      '    DATA = :DATA'
+      '    AND USUARIO = :USUARIO'
+      '    AND ID_PRODMATEEMBA = :ID_PRODMATEEMBA')
+    Session = FrmPrincipal.DB
+    SQL.Strings = (
+      'SELECT '
+      '    EMPRESA, '
+      '    FILIAL, '
+      '    DATA, '
+      '    ID_PRODMATEEMBA, '
+      '    ESTOQUE_ANT_CX_NEW, '
+      '    ESTOQUE_ANT_NEW, '
+      '    ESTOQUE_ANT_CX_OLD, '
+      '    ESTOQUE_ANT_OLD, '
+      '    USUARIO,'
+      '    ID_AJUSTE'
+      'FROM '
+      '    LOG_AJUSTE_ESTOQUE'
+      'WHERE'
+      '    DATA = :DATA')
+    CachedUpdates = True
+    LockMode = lmNone
+    Options.SetFieldsReadOnly = False
+    Options.ExtendedFieldsInfo = False
+    Left = 584
+    Top = 8
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'DATA'
+        Value = nil
+      end>
+    object QryLogEMPRESA: TStringField
+      FieldName = 'EMPRESA'
+      Required = True
+      Size = 2
+    end
+    object QryLogFILIAL: TFloatField
+      FieldName = 'FILIAL'
+      Required = True
+    end
+    object QryLogDATA: TDateTimeField
+      FieldName = 'DATA'
+      Required = True
+    end
+    object QryLogID_PRODMATEEMBA: TStringField
+      FieldName = 'ID_PRODMATEEMBA'
+      Size = 5
+    end
+    object QryLogESTOQUE_ANT_CX_NEW: TFloatField
+      FieldName = 'ESTOQUE_ANT_CX_NEW'
+    end
+    object QryLogESTOQUE_ANT_NEW: TFloatField
+      FieldName = 'ESTOQUE_ANT_NEW'
+    end
+    object QryLogESTOQUE_ANT_CX_OLD: TFloatField
+      FieldName = 'ESTOQUE_ANT_CX_OLD'
+    end
+    object QryLogESTOQUE_ANT_OLD: TFloatField
+      FieldName = 'ESTOQUE_ANT_OLD'
+    end
+    object QryLogUSUARIO: TFloatField
+      FieldName = 'USUARIO'
+      Required = True
+    end
+    object QryLogID_AJUSTE: TFloatField
+      FieldName = 'ID_AJUSTE'
     end
   end
 end

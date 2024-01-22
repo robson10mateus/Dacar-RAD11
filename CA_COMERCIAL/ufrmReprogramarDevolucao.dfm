@@ -163,8 +163,8 @@ object frmReprogramarDevolucao: TfrmReprogramarDevolucao
       object Panel1: TPanel
         Left = 0
         Top = 200
-        Width = 1389
-        Height = 371
+        Width = 1393
+        Height = 372
         Align = alClient
         Caption = 'Panel1'
         Color = clWindow
@@ -177,8 +177,6 @@ object frmReprogramarDevolucao: TfrmReprogramarDevolucao
         ParentBackground = False
         ParentFont = False
         TabOrder = 0
-        ExplicitWidth = 1393
-        ExplicitHeight = 372
         object DBGrid2: TDBGrid
           Left = 1
           Top = 1
@@ -238,7 +236,7 @@ object frmReprogramarDevolucao: TfrmReprogramarDevolucao
       object Panel2: TPanel
         Left = 0
         Top = 0
-        Width = 1389
+        Width = 1393
         Height = 200
         Align = alTop
         Color = clWindow
@@ -251,7 +249,6 @@ object frmReprogramarDevolucao: TfrmReprogramarDevolucao
         ParentBackground = False
         ParentFont = False
         TabOrder = 1
-        ExplicitWidth = 1393
         object Label1: TLabel
           Left = 105
           Top = 9

@@ -8,7 +8,7 @@ object FrmUltVend: TFrmUltVend
   BorderIcons = [biSystemMenu, biMinimize, biMaximize, biHelp]
   BorderStyle = bsSingle
   Caption = #218'ltima Venda'
-  Color = clBackground
+  Color = clWindow
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -19,7 +19,7 @@ object FrmUltVend: TFrmUltVend
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 503
+    Width = 507
     Height = 41
     Anchors = []
     ButtonHeight = 37
@@ -33,10 +33,9 @@ object FrmUltVend: TFrmUltVend
     Font.Style = []
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 519
     object Sb_Sair: TSpeedButton
-      Left = 475
-      Top = 4
+      Left = 0
+      Top = 0
       Width = 40
       Height = 37
       Hint = 'Sair'
@@ -226,8 +225,8 @@ object FrmUltVend: TFrmUltVend
       OnClick = Sb_SairClick
     end
     object ToolButton3: TToolButton
-      Left = 1
-      Top = 4
+      Left = 40
+      Top = 0
       Width = 474
       Caption = 'ToolButton3'
       ImageIndex = 1
@@ -237,8 +236,8 @@ object FrmUltVend: TFrmUltVend
   object PageControl1: TPageControl
     Left = 0
     Top = 41
-    Width = 503
-    Height = 373
+    Width = 507
+    Height = 374
     ActivePage = TabSheet1
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -249,8 +248,8 @@ object FrmUltVend: TFrmUltVend
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 519
-    ExplicitHeight = 412
+    ExplicitWidth = 503
+    ExplicitHeight = 373
     object TabSheet1: TTabSheet
       Caption = 'Detalhe'
       Font.Charset = DEFAULT_CHARSET
@@ -263,8 +262,8 @@ object FrmUltVend: TFrmUltVend
       object DBGrid1: TDBGrid
         Left = 0
         Top = 177
-        Width = 511
-        Height = 205
+        Width = 499
+        Height = 167
         Align = alClient
         Color = clWhite
         DataSource = DSItem
@@ -320,7 +319,7 @@ object FrmUltVend: TFrmUltVend
       object Panel1: TPanel
         Left = 0
         Top = 0
-        Width = 511
+        Width = 499
         Height = 177
         Align = alTop
         Color = clWindow
@@ -333,6 +332,7 @@ object FrmUltVend: TFrmUltVend
         ParentBackground = False
         ParentFont = False
         TabOrder = 1
+        ExplicitWidth = 495
         object Label1: TLabel
           Left = 32
           Top = 17
@@ -675,7 +675,7 @@ object FrmUltVend: TFrmUltVend
       '                        ')
     MasterSource = DSUltVend
     MasterFields = 'ID_PEDIVEND'
-    DetailFields = ':Id_PediVend '
+    DetailFields = 'ID_PEDIVEND'
     Left = 336
     Top = 24
     ParamData = <

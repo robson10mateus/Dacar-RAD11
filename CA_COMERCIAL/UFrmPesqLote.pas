@@ -4,13 +4,11 @@ interface
 
 uses
   SysUtils, Types, Classes, Variants, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, DB, Ora, MemDS, DBAccess, Buttons, Grids, DBGrids;
+  Dialogs, StdCtrls, DB, Ora, MemDS, DBAccess, Buttons, Grids, DBGrids,
+  Vcl.ExtCtrls;
 
 type
   TFrmPesqLote = class(TForm)
-    DBGrid1: TDBGrid;
-    BitBtn2: TBitBtn;
-    BitBtn3: TBitBtn;
     Qr: TOraQuery;
     DS: TOraDataSource;
     QrID_LOTE: TFloatField;
@@ -18,8 +16,12 @@ type
     QrNR_CNPJFORN: TStringField;
     QrFL_STATUS: TStringField;
     QrINTEGRADO: TStringField;
-    Edt_Lote: TEdit;
+    Panel1: TPanel;
+    BitBtn2: TBitBtn;
+    BitBtn3: TBitBtn;
     btn_PesqLote: TBitBtn;
+    DBGrid1: TDBGrid;
+    Edt_Lote: TEdit;
     Label1: TLabel;
     procedure Edt_LoteKeyPress(Sender: TObject; var Key: Char);
     procedure btn_PesqLoteClick(Sender: TObject);

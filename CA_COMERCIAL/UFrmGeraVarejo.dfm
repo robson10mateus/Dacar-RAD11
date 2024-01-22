@@ -7,7 +7,7 @@ object FrmGeraVarejo: TFrmGeraVarejo
   ActiveControl = BtnSIM
   BorderStyle = bsDialog
   Caption = 'Gera Varejo'
-  Color = clBackground
+  Color = clWindow
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -20,7 +20,7 @@ object FrmGeraVarejo: TFrmGeraVarejo
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 496
+    Width = 500
     Height = 162
     Align = alTop
     Color = clWindow
@@ -32,7 +32,7 @@ object FrmGeraVarejo: TFrmGeraVarejo
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 512
+    ExplicitWidth = 496
     object lblTexto: TLabel
       Left = 157
       Top = 48
@@ -108,7 +108,7 @@ object FrmGeraVarejo: TFrmGeraVarejo
       Left = 240
       Top = 97
       Width = 116
-      Height = 32
+      Height = 26
       EditMask = '!00/00/0000;1;_'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlue
@@ -125,8 +125,8 @@ object FrmGeraVarejo: TFrmGeraVarejo
   object Panel2: TPanel
     Left = 0
     Top = 162
-    Width = 496
-    Height = 18
+    Width = 500
+    Height = 19
     Align = alClient
     Color = clWindow
     Font.Charset = DEFAULT_CHARSET
@@ -137,8 +137,8 @@ object FrmGeraVarejo: TFrmGeraVarejo
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 512
-    ExplicitHeight = 57
+    ExplicitWidth = 496
+    ExplicitHeight = 18
     object BtnSIM: TBitBtn
       Left = 101
       Top = 17

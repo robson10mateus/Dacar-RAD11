@@ -600,12 +600,19 @@ object FrmMontaCarga: TFrmMontaCarga
           Width = 105
           Height = 28
           Columns = 2
+          DefaultHeaderFont = False
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = 15
           Font.Name = 'Arial'
           Font.Pitch = fpVariable
           Font.Style = [fsBold]
+          HeaderFont.Charset = DEFAULT_CHARSET
+          HeaderFont.Color = clBlack
+          HeaderFont.Height = 15
+          HeaderFont.Name = 'Arial'
+          HeaderFont.Pitch = fpVariable
+          HeaderFont.Style = [fsBold]
           ItemIndex = 0
           Items.Strings = (
             '&e'
@@ -923,8 +930,6 @@ object FrmMontaCarga: TFrmMontaCarga
         Color = clWindow
         ParentBackground = False
         TabOrder = 0
-        ExplicitWidth = 1176
-        ExplicitHeight = 440
         object grdSelePedi: TDBGrid
           Left = 3
           Top = 3
@@ -1051,7 +1056,6 @@ object FrmMontaCarga: TFrmMontaCarga
           Color = clWindow
           ParentBackground = False
           TabOrder = 1
-          ExplicitWidth = 1170
           object btnInclPedi: TSpeedButton
             Left = 220
             Top = 2
@@ -1924,8 +1928,6 @@ object FrmMontaCarga: TFrmMontaCarga
           Color = clWindow
           ParentBackground = False
           TabOrder = 2
-          ExplicitWidth = 1115
-          ExplicitHeight = 194
           object grdSelecionado: TDBGrid
             Left = 0
             Top = 0
@@ -2061,7 +2063,6 @@ object FrmMontaCarga: TFrmMontaCarga
           Color = clWindow
           ParentBackground = False
           TabOrder = 3
-          ExplicitHeight = 194
           object Panel4: TPanel
             Left = 1
             Top = 101
@@ -2171,7 +2172,6 @@ object FrmMontaCarga: TFrmMontaCarga
         ParentBackground = False
         ParentFont = False
         TabOrder = 1
-        ExplicitWidth = 1176
         object Label3: TLabel
           Left = 10
           Top = 20
@@ -2289,9 +2289,9 @@ object FrmMontaCarga: TFrmMontaCarga
         end
         object BPesqDt: TBitBtn
           Left = 155
-          Top = 42
+          Top = 40
           Width = 20
-          Height = 19
+          Height = 23
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = 16
@@ -2334,9 +2334,9 @@ object FrmMontaCarga: TFrmMontaCarga
         end
         object BPesqDtEntre: TBitBtn
           Left = 347
-          Top = 42
+          Top = 40
           Width = 19
-          Height = 19
+          Height = 23
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = 16
@@ -2399,9 +2399,9 @@ object FrmMontaCarga: TFrmMontaCarga
         end
         object BitBtn1: TBitBtn
           Left = 260
-          Top = 42
+          Top = 40
           Width = 20
-          Height = 19
+          Height = 23
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = 16
@@ -2625,7 +2625,6 @@ object FrmMontaCarga: TFrmMontaCarga
         Color = clWindow
         ParentBackground = False
         TabOrder = 2
-        ExplicitWidth = 1176
         object rgpCriterios: TRadioGroup
           Left = 5
           Top = 5
@@ -2676,7 +2675,7 @@ object FrmMontaCarga: TFrmMontaCarga
           end
           object btnCriterios: TBitBtn
             Left = 200
-            Top = 84
+            Top = 88
             Width = 83
             Height = 22
             Caption = '&Ativa'
@@ -2809,7 +2808,7 @@ object FrmMontaCarga: TFrmMontaCarga
             Left = 59
             Top = 12
             Width = 21
-            Height = 19
+            Height = 23
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
             Font.Height = 16
@@ -2861,7 +2860,7 @@ object FrmMontaCarga: TFrmMontaCarga
             Left = 60
             Top = 37
             Width = 20
-            Height = 19
+            Height = 23
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
             Font.Height = 16
@@ -2885,7 +2884,7 @@ object FrmMontaCarga: TFrmMontaCarga
             Left = 60
             Top = 63
             Width = 20
-            Height = 19
+            Height = 23
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
             Font.Height = 16
@@ -3246,10 +3245,10 @@ object FrmMontaCarga: TFrmMontaCarga
             OnKeyPress = DBEdit3KeyPress
           end
           object BitBtn6: TBitBtn
-            Left = 285
-            Top = 29
+            Left = 290
+            Top = 25
             Width = 21
-            Height = 19
+            Height = 23
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
             Font.Height = 16

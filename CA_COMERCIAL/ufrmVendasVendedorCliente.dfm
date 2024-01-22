@@ -206,7 +206,7 @@ object frmVendasVendedorCliente: TfrmVendasVendedorCliente
     Top = 45
     Width = 1278
     Height = 593
-    ActivePage = TabSheet1
+    ActivePage = TabSheet2
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
@@ -603,6 +603,10 @@ object frmVendasVendedorCliente: TfrmVendasVendedorCliente
           Indent = 19
           ReadOnly = True
           TabOrder = 0
+          OnClick = tvVendasClienteVendedorClick
+          Items.NodeData = {
+            0301000000200000000000000000000000FFFFFFFFFFFFFFFF00000000000000
+            000000000001013100}
         end
       end
       object Panel2: TPanel

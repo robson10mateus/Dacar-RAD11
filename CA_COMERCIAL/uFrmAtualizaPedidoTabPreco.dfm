@@ -9,7 +9,7 @@ object frmAtualizaPedidoTabPreco: TfrmAtualizaPedidoTabPreco
   Caption = 
     'Comercial Dacar - Atualiza'#231#227'o de Pedidos com Pre'#231'o Abaixo da Tab' +
     'ela'
-  Color = clBackground
+  Color = clWindow
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -497,7 +497,7 @@ object frmAtualizaPedidoTabPreco: TfrmAtualizaPedidoTabPreco
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 965
+    Width = 969
     Height = 45
     Align = alTop
     Color = clWindow
@@ -509,7 +509,7 @@ object frmAtualizaPedidoTabPreco: TfrmAtualizaPedidoTabPreco
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 981
+    ExplicitWidth = 965
     object btnValidaPedidos: TSpeedButton
       Left = 5
       Top = 5
@@ -1258,7 +1258,7 @@ object frmAtualizaPedidoTabPreco: TfrmAtualizaPedidoTabPreco
       Flat = True
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
-      Font.Height = 11
+      Font.Height = 15
       Font.Name = 'Arial'
       Font.Pitch = fpVariable
       Font.Style = []
@@ -1409,7 +1409,7 @@ object frmAtualizaPedidoTabPreco: TfrmAtualizaPedidoTabPreco
   object Panel2: TPanel
     Left = 0
     Top = 45
-    Width = 965
+    Width = 969
     Height = 125
     Align = alTop
     Color = clWindow
@@ -1421,6 +1421,7 @@ object frmAtualizaPedidoTabPreco: TfrmAtualizaPedidoTabPreco
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 965
     object Label1: TLabel
       Left = 236
       Top = 15
@@ -1649,7 +1650,7 @@ object frmAtualizaPedidoTabPreco: TfrmAtualizaPedidoTabPreco
       Columns = 2
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
-      Font.Height = 15
+      Font.Height = 13
       Font.Name = 'Arial'
       Font.Pitch = fpVariable
       Font.Style = [fsBold]
@@ -1667,7 +1668,7 @@ object frmAtualizaPedidoTabPreco: TfrmAtualizaPedidoTabPreco
       Left = 592
       Top = 15
       Width = 23
-      Height = 21
+      Height = 23
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = 16
@@ -1713,7 +1714,7 @@ object frmAtualizaPedidoTabPreco: TfrmAtualizaPedidoTabPreco
       Left = 375
       Top = 43
       Width = 23
-      Height = 21
+      Height = 23
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = 16
@@ -1752,7 +1753,7 @@ object frmAtualizaPedidoTabPreco: TfrmAtualizaPedidoTabPreco
       Left = 375
       Top = 69
       Width = 23
-      Height = 21
+      Height = 23
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = 16
@@ -1791,7 +1792,7 @@ object frmAtualizaPedidoTabPreco: TfrmAtualizaPedidoTabPreco
       Left = 375
       Top = 95
       Width = 23
-      Height = 21
+      Height = 23
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = 16
@@ -1830,7 +1831,7 @@ object frmAtualizaPedidoTabPreco: TfrmAtualizaPedidoTabPreco
   object Panel3: TPanel
     Left = 0
     Top = 170
-    Width = 965
+    Width = 969
     Height = 260
     Align = alTop
     Color = clWindow
@@ -1842,11 +1843,11 @@ object frmAtualizaPedidoTabPreco: TfrmAtualizaPedidoTabPreco
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
-    ExplicitWidth = 981
+    ExplicitWidth = 965
     object GroupBox1: TGroupBox
       Left = 1
       Top = 6
-      Width = 979
+      Width = 967
       Height = 255
       Align = alTop
       Caption = ' Pedidos Com Pre'#231'o de Venda Abaixo da Tabela de Pre'#231'o '
@@ -1858,22 +1859,24 @@ object frmAtualizaPedidoTabPreco: TfrmAtualizaPedidoTabPreco
       Font.Style = []
       ParentFont = False
       TabOrder = 0
+      ExplicitWidth = 963
       object Panel4: TPanel
         Left = 2
-        Top = 15
-        Width = 975
+        Top = 17
+        Width = 963
         Height = 10
         Align = alTop
         BevelOuter = bvNone
         Color = clWindow
         ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 959
       end
       object DBGrid1: TDBGrid
         Left = 2
-        Top = 25
-        Width = 975
-        Height = 228
+        Top = 27
+        Width = 963
+        Height = 226
         Align = alClient
         DataSource = dtsPedidos
         Font.Charset = DEFAULT_CHARSET
@@ -1964,20 +1967,21 @@ object frmAtualizaPedidoTabPreco: TfrmAtualizaPedidoTabPreco
     object Panel5: TPanel
       Left = 1
       Top = 1
-      Width = 979
+      Width = 967
       Height = 5
       Align = alTop
       BevelOuter = bvNone
       Color = clWindow
       ParentBackground = False
       TabOrder = 1
+      ExplicitWidth = 963
     end
   end
   object Panel6: TPanel
     Left = 0
     Top = 430
-    Width = 965
-    Height = 288
+    Width = 969
+    Height = 289
     Align = alClient
     Color = clWindow
     Font.Charset = DEFAULT_CHARSET
@@ -1988,13 +1992,13 @@ object frmAtualizaPedidoTabPreco: TfrmAtualizaPedidoTabPreco
     ParentBackground = False
     ParentFont = False
     TabOrder = 3
-    ExplicitWidth = 981
-    ExplicitHeight = 327
+    ExplicitWidth = 965
+    ExplicitHeight = 288
     object GroupBox2: TGroupBox
       Left = 1
       Top = 11
-      Width = 979
-      Height = 315
+      Width = 967
+      Height = 277
       Align = alClient
       Caption = 
         ' Itens do Pedido             -------- Total de Caixas do Pedido ' +
@@ -2007,32 +2011,37 @@ object frmAtualizaPedidoTabPreco: TfrmAtualizaPedidoTabPreco
       Font.Style = []
       ParentFont = False
       TabOrder = 0
+      ExplicitWidth = 963
+      ExplicitHeight = 276
       object Panel7: TPanel
         Left = 2
-        Top = 15
-        Width = 975
+        Top = 17
+        Width = 963
         Height = 10
         Align = alTop
         BevelOuter = bvNone
         Color = clWindow
         ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 959
       end
       object Panel9: TPanel
         Left = 2
-        Top = 25
-        Width = 975
-        Height = 288
+        Top = 27
+        Width = 963
+        Height = 248
         Align = alClient
         Color = clWindow
         Enabled = False
         ParentBackground = False
         TabOrder = 1
+        ExplicitWidth = 959
+        ExplicitHeight = 247
         object DBGrid2: TDBGrid
           Left = 1
           Top = 1
-          Width = 973
-          Height = 286
+          Width = 961
+          Height = 246
           Align = alClient
           DataSource = dtsItensPedido
           Font.Charset = DEFAULT_CHARSET
@@ -2095,13 +2104,14 @@ object frmAtualizaPedidoTabPreco: TfrmAtualizaPedidoTabPreco
     object Panel8: TPanel
       Left = 1
       Top = 1
-      Width = 979
+      Width = 967
       Height = 10
       Align = alTop
       BevelOuter = bvNone
       Color = clWindow
       ParentBackground = False
       TabOrder = 1
+      ExplicitWidth = 963
     end
     object btnItensPedido: TBitBtn
       Left = 119

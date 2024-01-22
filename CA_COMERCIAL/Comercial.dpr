@@ -1,7 +1,7 @@
 // JCL_DEBUG_EXPERT_GENERATEJDBG OFF
 program Comercial;
 
-{%ToDo 'Comercial.todo'}
+
 
 uses
   Forms,
@@ -156,7 +156,6 @@ uses
   UFrmParametrosIntegrado in 'UFrmParametrosIntegrado.pas' {FrmParametrosIntegrado},
   UFrmConsRemessaRacao in 'UFrmConsRemessaRacao.pas' {FrmConsRemessaRacao},
   UFrmRelRemessaRacao in 'UFrmRelRemessaRacao.pas' {FrmRelRemessaRacao},
-  UFrmVendedorCliente in '..\Compras\UFrmVendedorCliente.pas' {FrmVendedorCliente},
   UFrmRelVendedorCliente in 'UFrmRelVendedorCliente.pas' {FrmRelVendedorCliente},
   UFrmRelEstoque in 'UFrmRelEstoque.pas' {FrmRelEstoque},
   UFrmConsultaEstoque in 'UFrmConsultaEstoque.pas' {FrmConsultaEstoque},
@@ -183,7 +182,7 @@ uses
   uFrmControleEntregaCargas in 'uFrmControleEntregaCargas.pas' {FrmControleEntregaCargas},
   uFrmRelControleEntregaCargas in 'uFrmRelControleEntregaCargas.pas' {FrmRelControleEntregaCargas},
   uFrmRelControleEntregaCargasPedido in 'uFrmRelControleEntregaCargasPedido.pas' {frmRelControleEntregaCargasPedido},
-  uFrmOcorrencias in 'UFrmOcorrencias.pas' {FrmOcorrencias},
+  UFrmOcorrencias in 'UFrmOcorrencias.pas' {FrmOcorrencias},
   uFrmDocumentacaoNFE in 'uFrmDocumentacaoNFE.pas' {frmDocumentacaoNFE},
   UFrmRelEstoquePeriodo in 'UFrmRelEstoquePeriodo.pas' {FrmRelEstoquePeriodo},
   uFrmConsultaFormaPagto in 'uFrmConsultaFormaPagto.pas' {frmConsultaFormaPagto},
@@ -214,7 +213,8 @@ uses
   ufrmImportacaoDadosXLS in '..\Uteis\ufrmImportacaoDadosXLS.pas' {frmImportacaoDadosXLS},
   ufrmConsultaListaInativacao in 'ufrmConsultaListaInativacao.pas' {frmConsultaListaInativacao},
   ufrmReprogramarDevolucao in 'ufrmReprogramarDevolucao.pas' {frmReprogramarDevolucao},
-  uFfmFormularioComissao in 'uFfmFormularioComissao.pas' {frmFormularioComissao};
+  uFfmFormularioComissao in 'uFfmFormularioComissao.pas' {frmFormularioComissao},
+  UFrmVendedorCliente in 'UFrmVendedorCliente.pas' {FrmVendedorCliente};
 
 {FrmConsultaUsuarioSistema}
 

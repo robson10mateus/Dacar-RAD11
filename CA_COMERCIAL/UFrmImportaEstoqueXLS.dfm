@@ -536,7 +536,7 @@ object FrmImportaEstoqueXLS: TFrmImportaEstoqueXLS
     RowCount = 100
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
-    Font.Height = 12
+    Font.Height = 15
     Font.Name = 'Arial'
     Font.Pitch = fpVariable
     Font.Style = []

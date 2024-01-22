@@ -8,7 +8,7 @@ object FrmCartorio: TFrmCartorio
   BorderIcons = []
   BorderStyle = bsSingle
   Caption = 'T'#237'tulos enviados a Cart'#243'rio'
-  Color = clBackground
+  Color = clWindow
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -19,7 +19,7 @@ object FrmCartorio: TFrmCartorio
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 307
+    Width = 311
     Height = 41
     Anchors = []
     ButtonHeight = 37
@@ -33,10 +33,9 @@ object FrmCartorio: TFrmCartorio
     Font.Style = []
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 323
     object SB_PRIMEIRO: TSpeedButton
-      Left = 1
-      Top = 4
+      Left = 0
+      Top = 0
       Width = 40
       Height = 37
       Hint = 'Primeiro'
@@ -226,8 +225,8 @@ object FrmCartorio: TFrmCartorio
       OnClick = SB_PRIMEIROClick
     end
     object SB_ANTERIOR: TSpeedButton
-      Left = 41
-      Top = 4
+      Left = 40
+      Top = 0
       Width = 39
       Height = 37
       Hint = 'Anterior'
@@ -417,8 +416,8 @@ object FrmCartorio: TFrmCartorio
       OnClick = SB_ANTERIORClick
     end
     object SB_PROXIMO: TSpeedButton
-      Left = 80
-      Top = 4
+      Left = 79
+      Top = 0
       Width = 39
       Height = 37
       Hint = 'Pr'#243'ximo'
@@ -608,8 +607,8 @@ object FrmCartorio: TFrmCartorio
       OnClick = SB_PROXIMOClick
     end
     object SB_ULTIMO: TSpeedButton
-      Left = 119
-      Top = 4
+      Left = 118
+      Top = 0
       Width = 39
       Height = 37
       Hint = #218'ltimo'
@@ -799,8 +798,8 @@ object FrmCartorio: TFrmCartorio
       OnClick = SB_ULTIMOClick
     end
     object Sb_Sair: TSpeedButton
-      Left = 279
-      Top = 4
+      Left = 157
+      Top = 0
       Width = 40
       Height = 37
       Hint = 'Sair'
@@ -990,8 +989,8 @@ object FrmCartorio: TFrmCartorio
       OnClick = Sb_SairClick
     end
     object ToolButton3: TToolButton
-      Left = 158
-      Top = 4
+      Left = 197
+      Top = 0
       Width = 121
       Caption = 'ToolButton3'
       ImageIndex = 1
@@ -1001,8 +1000,8 @@ object FrmCartorio: TFrmCartorio
   object PageControl1: TPageControl
     Left = 0
     Top = 41
-    Width = 307
-    Height = 285
+    Width = 311
+    Height = 286
     ActivePage = TabSheet1
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -1013,8 +1012,8 @@ object FrmCartorio: TFrmCartorio
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 323
-    ExplicitHeight = 324
+    ExplicitWidth = 307
+    ExplicitHeight = 285
     object TabSheet1: TTabSheet
       Caption = 'Detalhe'
       Font.Charset = DEFAULT_CHARSET
@@ -1027,8 +1026,8 @@ object FrmCartorio: TFrmCartorio
       object DBGrid1: TDBGrid
         Left = 0
         Top = 0
-        Width = 315
-        Height = 294
+        Width = 303
+        Height = 256
         Align = alClient
         Color = clWhite
         DataSource = DSCARTORIO
@@ -1071,8 +1070,8 @@ object FrmCartorio: TFrmCartorio
   end
   object Panel1: TPanel
     Left = 0
-    Top = 326
-    Width = 307
+    Top = 327
+    Width = 311
     Height = 32
     Align = alBottom
     Color = clWindow
@@ -1084,8 +1083,8 @@ object FrmCartorio: TFrmCartorio
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
-    ExplicitTop = 365
-    ExplicitWidth = 323
+    ExplicitTop = 326
+    ExplicitWidth = 307
     object Shape1: TShape
       Left = 93
       Top = 7
