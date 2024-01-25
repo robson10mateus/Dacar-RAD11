@@ -48,6 +48,8 @@ object FrmEntradaSaidaCaixas: TFrmEntradaSaidaCaixas
       Font.Style = []
       ParentFont = False
       TabOrder = 0
+      ExplicitWidth = 1455
+      ExplicitHeight = 580
       object TabFiltro: TTabSheet
         Caption = 'Filtro'
         Font.Charset = DEFAULT_CHARSET
@@ -517,7 +519,7 @@ object FrmEntradaSaidaCaixas: TFrmEntradaSaidaCaixas
           object Label1: TLabel
             Left = 1
             Top = 1
-            Width = 1449
+            Width = 125
             Height = 15
             Align = alTop
             Alignment = taCenter
@@ -529,7 +531,6 @@ object FrmEntradaSaidaCaixas: TFrmEntradaSaidaCaixas
             Font.Pitch = fpVariable
             Font.Style = [fsBold]
             ParentFont = False
-            ExplicitWidth = 125
           end
           object DBGrid3: TDBGrid
             Left = 1
@@ -740,7 +741,7 @@ object FrmEntradaSaidaCaixas: TFrmEntradaSaidaCaixas
           object Label3: TLabel
             Left = 1
             Top = 1
-            Width = 1449
+            Width = 102
             Height = 15
             Align = alTop
             Alignment = taCenter
@@ -752,7 +753,6 @@ object FrmEntradaSaidaCaixas: TFrmEntradaSaidaCaixas
             Font.Pitch = fpVariable
             Font.Style = [fsBold]
             ParentFont = False
-            ExplicitWidth = 102
           end
           object DBGrid4: TDBGrid
             Left = 1
@@ -781,12 +781,6 @@ object FrmEntradaSaidaCaixas: TFrmEntradaSaidaCaixas
               item
                 Expanded = False
                 FieldName = 'DT_PEDIVEND'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clBlack
-                Font.Height = 15
-                Font.Name = 'Arial'
-                Font.Pitch = fpVariable
-                Font.Style = []
                 ReadOnly = True
                 Title.Caption = 'Data Pedido'
                 Title.Font.Charset = DEFAULT_CHARSET
@@ -801,12 +795,6 @@ object FrmEntradaSaidaCaixas: TFrmEntradaSaidaCaixas
               item
                 Expanded = False
                 FieldName = 'ID_PEDIVEND'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clBlack
-                Font.Height = 15
-                Font.Name = 'Arial'
-                Font.Pitch = fpVariable
-                Font.Style = []
                 ReadOnly = True
                 Title.Caption = 'C'#243'd Pedido'
                 Title.Font.Charset = DEFAULT_CHARSET
@@ -821,12 +809,6 @@ object FrmEntradaSaidaCaixas: TFrmEntradaSaidaCaixas
               item
                 Expanded = False
                 FieldName = 'CLIENTE'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clBlack
-                Font.Height = 15
-                Font.Name = 'Arial'
-                Font.Pitch = fpVariable
-                Font.Style = []
                 ReadOnly = True
                 Title.Caption = 'Cliente'
                 Title.Font.Charset = DEFAULT_CHARSET
@@ -841,12 +823,6 @@ object FrmEntradaSaidaCaixas: TFrmEntradaSaidaCaixas
               item
                 Expanded = False
                 FieldName = 'OBS_CAIXA_SUCATA'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clBlack
-                Font.Height = 15
-                Font.Name = 'Arial'
-                Font.Pitch = fpVariable
-                Font.Style = []
                 Title.Caption = 'Obs.'
                 Title.Font.Charset = DEFAULT_CHARSET
                 Title.Font.Color = clBlack
@@ -860,12 +836,6 @@ object FrmEntradaSaidaCaixas: TFrmEntradaSaidaCaixas
               item
                 Expanded = False
                 FieldName = 'QTD_CAIXA_SUCATA'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clBlack
-                Font.Height = 15
-                Font.Name = 'Arial'
-                Font.Pitch = fpVariable
-                Font.Style = []
                 ReadOnly = True
                 Title.Caption = 'Qtd. Caixa'
                 Title.Font.Charset = DEFAULT_CHARSET
@@ -880,12 +850,6 @@ object FrmEntradaSaidaCaixas: TFrmEntradaSaidaCaixas
               item
                 Expanded = False
                 FieldName = 'PESO_CAIXA_SUCATA'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clBlack
-                Font.Height = 15
-                Font.Name = 'Arial'
-                Font.Pitch = fpVariable
-                Font.Style = []
                 ReadOnly = True
                 Title.Caption = 'Peso Caixa'
                 Title.Font.Charset = DEFAULT_CHARSET
@@ -900,12 +864,6 @@ object FrmEntradaSaidaCaixas: TFrmEntradaSaidaCaixas
               item
                 Expanded = False
                 FieldName = 'VALOR_CAIXA_ITEM'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clBlack
-                Font.Height = 15
-                Font.Name = 'Arial'
-                Font.Pitch = fpVariable
-                Font.Style = []
                 ReadOnly = True
                 Title.Caption = 'Valor Item'
                 Title.Font.Charset = DEFAULT_CHARSET
@@ -920,12 +878,6 @@ object FrmEntradaSaidaCaixas: TFrmEntradaSaidaCaixas
               item
                 Expanded = False
                 FieldName = 'VALOR_CAIXA_TOTAL'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clBlack
-                Font.Height = 15
-                Font.Name = 'Arial'
-                Font.Pitch = fpVariable
-                Font.Style = []
                 Title.Caption = 'Valor Total'
                 Title.Font.Charset = DEFAULT_CHARSET
                 Title.Font.Color = clBlack
@@ -950,7 +902,7 @@ object FrmEntradaSaidaCaixas: TFrmEntradaSaidaCaixas
           object Label2: TLabel
             Left = 1
             Top = 1
-            Width = 1449
+            Width = 59
             Height = 15
             Align = alTop
             Alignment = taCenter
@@ -962,7 +914,6 @@ object FrmEntradaSaidaCaixas: TFrmEntradaSaidaCaixas
             Font.Pitch = fpVariable
             Font.Style = [fsBold]
             ParentFont = False
-            ExplicitWidth = 59
           end
           object DBGrid2: TDBGrid
             Left = 1
@@ -991,12 +942,6 @@ object FrmEntradaSaidaCaixas: TFrmEntradaSaidaCaixas
               item
                 Expanded = False
                 FieldName = 'DATA_ENTREGA'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clBlack
-                Font.Height = 15
-                Font.Name = 'Arial'
-                Font.Pitch = fpVariable
-                Font.Style = []
                 Title.Caption = 'Data Entrega'
                 Title.Font.Charset = DEFAULT_CHARSET
                 Title.Font.Color = clBlack
@@ -1010,12 +955,6 @@ object FrmEntradaSaidaCaixas: TFrmEntradaSaidaCaixas
               item
                 Expanded = False
                 FieldName = 'ID_VALE'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clBlack
-                Font.Height = 15
-                Font.Name = 'Arial'
-                Font.Pitch = fpVariable
-                Font.Style = []
                 Title.Caption = 'Vale Caixa'
                 Title.Font.Charset = DEFAULT_CHARSET
                 Title.Font.Color = clBlack
@@ -1029,12 +968,6 @@ object FrmEntradaSaidaCaixas: TFrmEntradaSaidaCaixas
               item
                 Expanded = False
                 FieldName = 'ID_PEDIDO'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clBlack
-                Font.Height = 15
-                Font.Name = 'Arial'
-                Font.Pitch = fpVariable
-                Font.Style = []
                 Title.Caption = 'N'#186' Pedido'
                 Title.Font.Charset = DEFAULT_CHARSET
                 Title.Font.Color = clBlack
@@ -1048,12 +981,6 @@ object FrmEntradaSaidaCaixas: TFrmEntradaSaidaCaixas
               item
                 Expanded = False
                 FieldName = 'CLIENTE'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clBlack
-                Font.Height = 15
-                Font.Name = 'Arial'
-                Font.Pitch = fpVariable
-                Font.Style = []
                 Title.Caption = 'Cliente'
                 Title.Font.Charset = DEFAULT_CHARSET
                 Title.Font.Color = clBlack
@@ -1067,12 +994,6 @@ object FrmEntradaSaidaCaixas: TFrmEntradaSaidaCaixas
               item
                 Expanded = False
                 FieldName = 'SALDO_ANTERIOR'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clBlack
-                Font.Height = 15
-                Font.Name = 'Arial'
-                Font.Pitch = fpVariable
-                Font.Style = []
                 Title.Caption = 'Saldo Anterior'
                 Title.Font.Charset = DEFAULT_CHARSET
                 Title.Font.Color = clBlack
@@ -1086,12 +1007,6 @@ object FrmEntradaSaidaCaixas: TFrmEntradaSaidaCaixas
               item
                 Expanded = False
                 FieldName = 'SALDO'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clBlack
-                Font.Height = 15
-                Font.Name = 'Arial'
-                Font.Pitch = fpVariable
-                Font.Style = []
                 Title.Caption = 'Saldo Atual'
                 Title.Font.Charset = DEFAULT_CHARSET
                 Title.Font.Color = clBlack
@@ -1105,12 +1020,6 @@ object FrmEntradaSaidaCaixas: TFrmEntradaSaidaCaixas
               item
                 Expanded = False
                 FieldName = 'QTD_ENTREGUE'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clBlack
-                Font.Height = 15
-                Font.Name = 'Arial'
-                Font.Pitch = fpVariable
-                Font.Style = []
                 Title.Caption = 'Qtd. Entrega'
                 Title.Font.Charset = DEFAULT_CHARSET
                 Title.Font.Color = clBlack
@@ -1124,12 +1033,6 @@ object FrmEntradaSaidaCaixas: TFrmEntradaSaidaCaixas
               item
                 Expanded = False
                 FieldName = 'QTD_DEVOLVIDA'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clBlack
-                Font.Height = 15
-                Font.Name = 'Arial'
-                Font.Pitch = fpVariable
-                Font.Style = []
                 Title.Caption = 'Qtd. Devolvida'
                 Title.Font.Charset = DEFAULT_CHARSET
                 Title.Font.Color = clBlack
@@ -1143,12 +1046,6 @@ object FrmEntradaSaidaCaixas: TFrmEntradaSaidaCaixas
               item
                 Expanded = False
                 FieldName = 'VENDEDOR'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clBlack
-                Font.Height = 15
-                Font.Name = 'Arial'
-                Font.Pitch = fpVariable
-                Font.Style = []
                 Title.Caption = 'Vendedor'
                 Title.Font.Charset = DEFAULT_CHARSET
                 Title.Font.Color = clBlack

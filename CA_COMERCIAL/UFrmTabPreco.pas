@@ -6,7 +6,7 @@ uses
   SysUtils, Types, Classes, Variants, Graphics, Controls, Forms,
   Dialogs, StdCtrls, ExtCtrls, ComCtrls, Buttons, DBCtrls, Mask,
   Grids, DBGrids, DB, Ora, MemDS, DBAccess, DBClient, OraCall,
-  Winapi.Windows, OraSmart;
+  Winapi.Windows, OraSmart, MidasLib;
 
 type
   TFrmTabPreco = class(TForm)

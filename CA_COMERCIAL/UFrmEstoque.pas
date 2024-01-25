@@ -5,7 +5,7 @@ interface
 uses
   SysUtils, Types, Classes, Variants, Graphics, Controls, Forms,
   Dialogs, StdCtrls, Buttons, ExtCtrls, Mask, DB, MemDS, DBAccess, Ora,
-  Grids, DBGrids, ComCtrls, DBCtrls, DBClient, Winapi.Windows, OraSmart;
+  Grids, DBGrids, ComCtrls, DBCtrls, DBClient, Winapi.Windows, OraSmart, MidasLib;
 
 type
   TFrmEstoque = class(TForm)

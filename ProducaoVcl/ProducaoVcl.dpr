@@ -1,6 +1,19 @@
 program ProducaoVcl;
 
 uses
+  {$IFDEF EurekaLog}
+  EMemLeaks,
+  EResLeaks,
+  EDebugJCL,
+  EDebugExports,
+  EFixSafeCallException,
+  EMapWin32,
+  EAppVCL,
+  EDialogWinAPIMSClassic,
+  EDialogWinAPIEurekaLogDetailed,
+  EDialogWinAPIStepsToReproduce,
+  ExceptionLog7,
+  {$ENDIF EurekaLog}
   Forms,
   CPDrv in 'CPDrv.pas',
   uVg_VariaveisGlobais in 'uVg_VariaveisGlobais.pas',
@@ -30,4 +43,5 @@ begin
   Application.CreateForm(TFrmPrincipal, FrmPrincipal);
   Application.Run;
 end.
+
 

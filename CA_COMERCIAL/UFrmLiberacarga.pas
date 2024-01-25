@@ -96,6 +96,7 @@ procedure TFrmLiberacarga.SB_ATIVAClick(Sender: TObject);
 begin
   try
     qryForm.Close;
+    QryForm.ParamByName('FILIAL').AsInteger := 1;
     qryForm.ParamByName('DtCarg').AsDate := StrToDate(Edt.Text);
     qryForm.Open;
 

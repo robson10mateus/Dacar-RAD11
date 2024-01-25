@@ -214,7 +214,9 @@ uses
   ufrmConsultaListaInativacao in 'ufrmConsultaListaInativacao.pas' {frmConsultaListaInativacao},
   ufrmReprogramarDevolucao in 'ufrmReprogramarDevolucao.pas' {frmReprogramarDevolucao},
   uFfmFormularioComissao in 'uFfmFormularioComissao.pas' {frmFormularioComissao},
-  UFrmVendedorCliente in 'UFrmVendedorCliente.pas' {FrmVendedorCliente};
+  UFrmVendedorCliente in 'UFrmVendedorCliente.pas' {FrmVendedorCliente},
+  UFrmEstoque in 'UFrmEstoque.pas' {FrmEstoque},
+  UFrmEntradaSaidaCaixas in 'UFrmEntradaSaidaCaixas.pas' {FrmEntradaSaidaCaixas};
 
 {FrmConsultaUsuarioSistema}
 
