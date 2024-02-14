@@ -1,8 +1,8 @@
 object FrmSobre: TFrmSobre
   Left = 333
   Top = 108
-  Width = 401
-  Height = 329
+  Width = 420
+  Height = 371
   HorzScrollBar.Range = 397
   VertScrollBar.Range = 313
   ActiveControl = BitBtn1
@@ -2689,11 +2689,11 @@ object FrmSobre: TFrmSobre
     Top = 130
     Width = 73
     Height = 17
-    DataField = 'MODVERSAO'
+    DataField = 'VERSAO'
     DataSource = DS
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
-    Font.Height = 11
+    Font.Height = 15
     Font.Name = 'Arial'
     Font.Pitch = fpVariable
     Font.Style = [fsBold]
@@ -2738,16 +2738,34 @@ object FrmSobre: TFrmSobre
   object Qr: TOraQuery
     Session = FrmPrincipal.DB
     SQL.Strings = (
-      'SELECT'
-      '  GMODULO.MODNOME,'
-      '  GMODULO.MODCODIGO,'
-      '  GMODULO.MODVERSAO'
-      'FROM'
-      '  GMODULO'
+      'SELECT * FROM SCT_MODULO'
       'WHERE'
-      '  GMODULO.MODCODIGO = '#39'V'#39)
+      '    ID_MODULO = 9')
     Left = 168
     Top = 8
+    object QrID_MODULO: TIntegerField
+      FieldName = 'ID_MODULO'
+      Required = True
+    end
+    object QrNOME_MODULO: TStringField
+      FieldName = 'NOME_MODULO'
+      Required = True
+      Size = 10
+    end
+    object QrDESC_MODULO: TStringField
+      FieldName = 'DESC_MODULO'
+      Required = True
+      Size = 40
+    end
+    object QrATIVO: TStringField
+      FieldName = 'ATIVO'
+      FixedChar = True
+      Size = 1
+    end
+    object QrVERSAO: TStringField
+      FieldName = 'VERSAO'
+      Size = 15
+    end
   end
   object DS: TOraDataSource
     DataSet = Qr

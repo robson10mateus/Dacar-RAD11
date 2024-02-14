@@ -1,7 +1,7 @@
 object FrmCadTransport: TFrmCadTransport
   Left = 451
   Top = 154
-  Width = 1247
+  Width = 1096
   Height = 762
   VertScrollBar.Range = 45
   ActiveControl = PageControl2
@@ -25,7 +25,7 @@ object FrmCadTransport: TFrmCadTransport
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 1235
+    Width = 1084
     Height = 45
     Anchors = []
     ButtonHeight = 36
@@ -1355,7 +1355,7 @@ object FrmCadTransport: TFrmCadTransport
   object PageControl2: TPageControl
     Left = 0
     Top = 125
-    Width = 1235
+    Width = 1084
     Height = 599
     ActivePage = TabDetalhe
     Align = alClient
@@ -1673,7 +1673,7 @@ object FrmCadTransport: TFrmCadTransport
       object Panel1: TPanel
         Left = 0
         Top = 550
-        Width = 1227
+        Width = 1076
         Height = 19
         Align = alBottom
         Color = clWindow
@@ -4364,12 +4364,13 @@ object FrmCadTransport: TFrmCadTransport
       object Panel5: TPanel
         Left = 0
         Top = 0
-        Width = 1227
+        Width = 1223
         Height = 170
         Align = alTop
         Color = clWindow
         ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 1227
         object Label44: TLabel
           Left = 145
           Top = 10
@@ -4857,8 +4858,8 @@ object FrmCadTransport: TFrmCadTransport
       object DBGrid1: TDBGrid
         Left = 0
         Top = 170
-        Width = 1227
-        Height = 399
+        Width = 1223
+        Height = 398
         Align = alClient
         DataSource = DSVeiculo
         Font.Charset = DEFAULT_CHARSET
@@ -5131,12 +5132,13 @@ object FrmCadTransport: TFrmCadTransport
       object Panel7: TPanel
         Left = 0
         Top = 0
-        Width = 1227
+        Width = 1223
         Height = 300
         Align = alTop
         Color = clWindow
         ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 1227
         object Label17: TLabel
           Left = 94
           Top = 5
@@ -5848,8 +5850,8 @@ object FrmCadTransport: TFrmCadTransport
       object DBGrid2: TDBGrid
         Left = 0
         Top = 300
-        Width = 1227
-        Height = 269
+        Width = 1223
+        Height = 268
         Align = alClient
         Color = clWhite
         DataSource = DsMotorista
@@ -6057,7 +6059,7 @@ object FrmCadTransport: TFrmCadTransport
   object Panel8: TPanel
     Left = 0
     Top = 45
-    Width = 1235
+    Width = 1084
     Height = 80
     Align = alTop
     Color = clWindow

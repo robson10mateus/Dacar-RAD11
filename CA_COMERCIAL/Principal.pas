@@ -6,7 +6,10 @@ Uses
   DB, MemDS, DBAccess, Ora,  Types, Controls, ComCtrls, Classes,
   SysUtils, Graphics, Forms, Dialogs, Menus,  ExtCtrls, StdCtrls, OraCall,
   Vcl.Buttons, System.IniFiles, Winapi.TlHelp32, Winapi.Windows, DASQLMonitor,
-  OraSQLMonitor;
+  OraSQLMonitor, Vcl.WinXCtrls, Vcl.CategoryButtons, Vcl.ButtonGroup,
+  Vcl.ControlList, JvExExtCtrls, JvSplitter, System.Actions, Vcl.ActnList,
+  System.ImageList, Vcl.ImgList, Vcl.Imaging.pngimage, System.StrUtils,
+  JvExStdCtrls, JvButton, JvCtrls;
 Type
   TFrmPrincipal = class(TForm)
     MainMenu1: TMainMenu;
@@ -124,6 +127,247 @@ Type
     VEN075: TMenuItem;
     VEN076: TMenuItem;
     OraSQLMonitor1: TOraSQLMonitor;
+    ImageList1: TImageList;
+    ActionMenuPrincipal: TActionList;
+    ACArquivo: TAction;
+    ACVendas: TAction;
+    ACTransporte: TAction;
+    ACImpressão: TAction;
+    ACManutencao: TAction;
+    ACLogistica: TAction;
+    ACAjuda: TAction;
+    ACMenu: TAction;
+    SplitMenuPrincipal: TSplitView;
+    SplitSubMenuVendas: TSplitView;
+    ActionSubMenus: TActionList;
+    ACVEN004: TAction;
+    ACVEN017: TAction;
+    ACVEN020: TAction;
+    ACVEN027: TAction;
+    ACVEN028: TAction;
+    ACVEN029: TAction;
+    ACVEN030: TAction;
+    ACVEN031: TAction;
+    ACVEN032: TAction;
+    ACVEN035: TAction;
+    ACVEN036: TAction;
+    ACVEN037: TAction;
+    ACVEN038: TAction;
+    ACVEN039: TAction;
+    ACVEN040: TAction;
+    ACVEN042: TAction;
+    SplitSubMenuTransporte: TSplitView;
+    ACVEN006: TAction;
+    ACVEN007: TAction;
+    ACVEN009: TAction;
+    ACVEN033: TAction;
+    ACVEN041: TAction;
+    ACVEN057: TAction;
+    ACVEN062: TAction;
+    SplitSubMenuImpressão: TSplitView;
+    ACVEN005: TAction;
+    ACVEN008: TAction;
+    ACVEN011: TAction;
+    ACVEN012: TAction;
+    ACVEN013: TAction;
+    ACVEN014: TAction;
+    ACVEN015: TAction;
+    ACVEN021: TAction;
+    ACVEN026: TAction;
+    ACVEN049: TAction;
+    ACVEN034: TAction;
+    ACVEN071: TAction;
+    ACVEN045: TAction;
+    ACVEN046: TAction;
+    ACVEN047: TAction;
+    ACVEN050: TAction;
+    ACVEN051: TAction;
+    ACVEN052: TAction;
+    ACVEN053: TAction;
+    ACVEN055: TAction;
+    ACVEN056: TAction;
+    ACVEN058: TAction;
+    ACVEN061: TAction;
+    ACVEN063: TAction;
+    ACVEN064: TAction;
+    ACVEN066: TAction;
+    ACVEN067: TAction;
+    ACVEN068: TAction;
+    ACVEN075: TAction;
+    SplitSubMenuArquivo: TSplitView;
+    SplitSubMenuManutencao: TSplitView;
+    ACVEN010: TAction;
+    ACVEN016: TAction;
+    ACVEN018: TAction;
+    ACVEN019: TAction;
+    ACVEN022: TAction;
+    ACVEN043: TAction;
+    ACVEN044: TAction;
+    ACVEN048: TAction;
+    ACVEN054: TAction;
+    ACVEN059: TAction;
+    ACVEN065: TAction;
+    ACVEN074: TAction;
+    SplitSubMenuLogistica: TSplitView;
+    ACVEN023: TAction;
+    ACVEN024: TAction;
+    ACVEN025: TAction;
+    SplitSubMenuAjuda: TSplitView;
+    BtnMenu: TSpeedButton;
+    BtnArquivo: TSpeedButton;
+    BtnVendas: TSpeedButton;
+    BtnTransporte: TSpeedButton;
+    BtnImpressao: TSpeedButton;
+    BtnManutencao: TSpeedButton;
+    BtnLogistica: TSpeedButton;
+    BtnAjuda: TSpeedButton;
+    ScrollBox1: TScrollBox;
+    BtnLogarNovamente: TSpeedButton;
+    BtnSair: TSpeedButton;
+    ScrollBox2: TScrollBox;
+    BtnVEN004: TSpeedButton;
+    BtnVEN017: TSpeedButton;
+    BtnVEN020: TSpeedButton;
+    BtnVEN027: TSpeedButton;
+    BtnVEN028: TSpeedButton;
+    BtnVEN029: TSpeedButton;
+    BtnVEN030: TSpeedButton;
+    BtnVEN031: TSpeedButton;
+    BtnVEN032: TSpeedButton;
+    BtnVEN035: TSpeedButton;
+    BtnVEN036: TSpeedButton;
+    BtnVEN037: TSpeedButton;
+    BtnVEN038: TSpeedButton;
+    BtnVEN039: TSpeedButton;
+    BtnVEN040: TSpeedButton;
+    BtnVEN042: TSpeedButton;
+    ScrollBox3: TScrollBox;
+    BtnVEN006: TSpeedButton;
+    BtnVEN007: TSpeedButton;
+    BtnVEN009: TSpeedButton;
+    BtnVEN033: TSpeedButton;
+    BtnVEN041: TSpeedButton;
+    BtnVEN057: TSpeedButton;
+    BtnVEN062: TSpeedButton;
+    ScrollBox4: TScrollBox;
+    BtnVEN005: TSpeedButton;
+    BtnVEN008: TSpeedButton;
+    BtnVEN011: TSpeedButton;
+    BtnVEN012: TSpeedButton;
+    BtnVEN013: TSpeedButton;
+    BtnVEN014: TSpeedButton;
+    BtnVEN015: TSpeedButton;
+    BtnVEN021: TSpeedButton;
+    BtnVEN026: TSpeedButton;
+    BtnVEN049: TSpeedButton;
+    BtnVEN034: TSpeedButton;
+    BtnVEN071: TSpeedButton;
+    BtnVEN045: TSpeedButton;
+    BtnVEN046: TSpeedButton;
+    BtnVEN047: TSpeedButton;
+    BtnVEN050: TSpeedButton;
+    BtnVEN052: TSpeedButton;
+    BtnVEN051: TSpeedButton;
+    BtnVEN053: TSpeedButton;
+    BtnVEN055: TSpeedButton;
+    BtnVEN056: TSpeedButton;
+    BtnVEN058: TSpeedButton;
+    BtnVEN061: TSpeedButton;
+    BtnVEN063: TSpeedButton;
+    BtnVEN064: TSpeedButton;
+    BtnVEN066: TSpeedButton;
+    BtnVEN067: TSpeedButton;
+    BtnVEN068: TSpeedButton;
+    BtnVEN075: TSpeedButton;
+    ScrollBox5: TScrollBox;
+    BtnVEN010: TSpeedButton;
+    BtnVEN016: TSpeedButton;
+    BtnVEN018: TSpeedButton;
+    BtnVEN019: TSpeedButton;
+    BtnVEN022: TSpeedButton;
+    BtnVEN043: TSpeedButton;
+    BtnVEN044: TSpeedButton;
+    BtnVEN048: TSpeedButton;
+    BtnVEN054: TSpeedButton;
+    BtnVEN059: TSpeedButton;
+    BtnVEN065: TSpeedButton;
+    BtnVEN074: TSpeedButton;
+    ScrollBox6: TScrollBox;
+    BtnVEN023: TSpeedButton;
+    BtnVEN024: TSpeedButton;
+    BtnVEN025: TSpeedButton;
+    ScrollBox7: TScrollBox;
+    BtnSobre: TSpeedButton;
+    ACVEN072: TAction;
+    ACVEN073: TAction;
+    ACVoltar: TAction;
+    BtnVoltarAjuda: TSpeedButton;
+    BtnVoltarArquivo: TSpeedButton;
+    BtnVoltarImpressao: TSpeedButton;
+    BtnVoltarLogistica: TSpeedButton;
+    BtnVoltarManutencao: TSpeedButton;
+    BtnVoltarTransporte: TSpeedButton;
+    BtnVoltarVendas: TSpeedButton;
+    ImgVEN017: TImage;
+    ImgVEN029: TImage;
+    ImgVEN030: TImage;
+    ACSair: TAction;
+    SplitSubMenuPedidoDevolucao: TSplitView;
+    BtnVEN072: TSpeedButton;
+    BtnVEN073: TSpeedButton;
+    BtnVoltarPedidoDevolucao: TSpeedButton;
+    SplitSubMenuCadatroLocalidades: TSplitView;
+    BtnCadTipoLogradouro: TSpeedButton;
+    BtnCadBairros: TSpeedButton;
+    BtnVoltarLocalidades: TSpeedButton;
+    BtnCadCidades: TSpeedButton;
+    BtnCadEstados: TSpeedButton;
+    BtnCadPaises: TSpeedButton;
+    BtnCadRegGeo: TSpeedButton;
+    BtnCadRegInter: TSpeedButton;
+    SplitSubMenuCadastroLogistica: TSplitView;
+    BtnCadRegLog: TSpeedButton;
+    BtnCadSubRegLog: TSpeedButton;
+    BtnVoltarCadLogistica: TSpeedButton;
+    BtnCadRegSubRegLog: TSpeedButton;
+    ImgVEN033: TImage;
+    SplitSubMenuCadTransporte: TSplitView;
+    BtnCadTipoTransporte: TSpeedButton;
+    BtnCadTipoVeiculo: TSpeedButton;
+    BtnVoltarTransportador: TSpeedButton;
+    BtnCadTipoTransportadores: TSpeedButton;
+    BtnCadRegiao: TSpeedButton;
+    ActionSubMenus2: TActionList;
+    ACCadRegLog: TAction;
+    ACCadSubRegLog: TAction;
+    ACCadRegSubRegLog: TAction;
+    ACCadTipoLogradouro: TAction;
+    ACCadBairros: TAction;
+    ACCadCidades: TAction;
+    ACCadEstados: TAction;
+    ACCadPaises: TAction;
+    ACCadRegGeo: TAction;
+    ACCadRegInter: TAction;
+    ACCadTipoTransporte: TAction;
+    ACCadTipoVeiculo: TAction;
+    ACCadTipoTransportadores: TAction;
+    ACCadRegiao: TAction;
+    SplitSubMenuRelVendasVendedor: TSplitView;
+    BtnVEN015a: TSpeedButton;
+    BtnVEN015b: TSpeedButton;
+    BtnVoltarRelVendasVendedor: TSpeedButton;
+    ImgVEN015: TImage;
+    ACVEN015a: TAction;
+    ACVEN015b: TAction;
+    SplitSubMenuControleCaixas: TSplitView;
+    BtnLancamentos: TSpeedButton;
+    BtnRelSaldo: TSpeedButton;
+    BtnVoltarControleCaixas: TSpeedButton;
+    ACLancamentos: TAction;
+    ACRelSaldo: TAction;
+    ACControleCaixas: TAction;
+    BtnControleCaixas: TSpeedButton;
+    ImgVEN054: TImage;
     procedure Trataerros(Sender: TObject; E: Exception);
     procedure FormCreate(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
@@ -232,6 +476,29 @@ Type
     procedure VEN074Click(Sender: TObject);
     procedure VEN075Click(Sender: TObject);
     procedure VEN076Click(Sender: TObject);
+    procedure ACMenuExecute(Sender: TObject);
+    procedure ACVendasExecute(Sender: TObject);
+    procedure ACTransporteExecute(Sender: TObject);
+    procedure ACImpressãoExecute(Sender: TObject);
+    procedure ACArquivoExecute(Sender: TObject);
+    procedure ACManutencaoExecute(Sender: TObject);
+    procedure ACLogisticaExecute(Sender: TObject);
+    procedure ACAjudaExecute(Sender: TObject);
+    procedure ACVEN017Execute(Sender: TObject);
+    procedure ACVoltarExecute(Sender: TObject);
+    procedure ACVEN029Execute(Sender: TObject);
+    procedure ACVEN030Execute(Sender: TObject);
+    procedure ACVEN033Execute(Sender: TObject);
+    procedure ACVEN015Execute(Sender: TObject);
+    procedure ACVEN054Execute(Sender: TObject);
+    procedure ACMenuUpdate(Sender: TObject);
+    procedure ACArquivoUpdate(Sender: TObject);
+    procedure ACVendasUpdate(Sender: TObject);
+    procedure ACTransporteUpdate(Sender: TObject);
+    procedure ACImpressãoUpdate(Sender: TObject);
+    procedure ACManutencaoUpdate(Sender: TObject);
+    procedure ACLogisticaUpdate(Sender: TObject);
+    procedure ACAjudaUpdate(Sender: TObject);
   private
     Senha : String;
     dataHoraServidor :  TDateTime;
@@ -243,6 +510,10 @@ Type
       dataHoraServidor: TDateTime);
     procedure EfetuarLogin;
     procedure AlterarSequence(form: TForm; filial: Integer);
+    procedure VerificaFormAberto;
+    procedure HabilitarMenuLateral(habilitar: Boolean);
+    procedure AtualizaMenuLateral(Str: string);
+    procedure AtualizaImagem(Str: string);
     { Private declarations }
   public
     //Alterado por Edmil
@@ -274,7 +545,7 @@ uses
   UFrmSelFreteDevo, UFrmDesativaPesquisa, UFrmXmlEmail, UFrmPedVendaCorte,
   UFrmCarregaNFe, UFrmHistoricoPrecoTelevendas, UFrmCadVendedor,
   UFrmTranspChaveNFe, UFrmVenProd, UFrmAlteracaoPlaca, uDataAccess,
-  uFrmSenha, uUtil , StdConvs, StrUtils , UFrmLoteIntegrado ,
+  uFrmSenha, uUtil , StdConvs, UFrmLoteIntegrado ,
   UFrmProgRacao, UFrmResultGranjeiro, UFrmConsApanha,
   UFrmConsVendaFrangoAbate, UFrmParametrosIntegrado, UFrmConsRemessaRacao,
   UFrmVendedorCliente, UFrmConsultaEstoque, UFrmConferenciaCarga,
@@ -404,9 +675,9 @@ end;
 procedure TFrmPrincipal.Sobre1Click(Sender: TObject);
 begin
 Try
-  Application.CreateForm(TFrmSobre, FrmSobre);
+  FrmSobre:=TFrmSobre.Create(Self);
   FrmSobre.Show;
-Finally
+except
   FrmSobre.Free;
 End;
 end;
@@ -423,6 +694,7 @@ begin
 
   FrmPrincipal.Show;
   EfetuarLogin;
+  AtualizaMenuLateral('SplitMenuPrincipal');
 end;
 
 procedure TFrmPrincipal.Timer2Timer(Sender: TObject);
@@ -439,6 +711,8 @@ Finally
   FrmInst.Free;
 End;
 end;
+
+
 
 procedure TFrmPrincipal.Button1Click(Sender: TObject);
 begin
@@ -471,6 +745,7 @@ begin
     VEN004.Enabled:= False;
     FrmPedVenda:=TFrmPedVenda.Create(Self);
     FrmPedVenda.Show;
+    VerificaFormAberto;
   except;
     VEN004.Enabled:= True;
     FrmPedVenda.Free;
@@ -520,7 +795,7 @@ begin
    frmImpDocPed.Show;
   except;
    frmImpDocPed.Free;
- end;
+  end;
 end;
 
 procedure TFrmPrincipal.VEN005Click(
@@ -530,6 +805,7 @@ begin
     VEN005.Enabled:= False;
     FrmImpDocPed:=TfrmImpDocPed.Create(Self);
     FrmImpDocPed.Show;
+    VerificaFormAberto;
   except;
     VEN005.Enabled:= True;
     FrmImpDocPed.Free;
@@ -543,6 +819,7 @@ begin
     VEN007.Enabled:= False;
     FrmFeCarManu:=TfrmFeCarManu.Create(Self);
     FrmFeCarManu.Show;
+    VerificaFormAberto;
   Except;
     VEN007.Enabled:= True;
     FrmFeCarManu.Free;
@@ -602,6 +879,7 @@ try
    VEN006.Enabled:= False;
    FrmMontaCarga:=TFrmMontaCarga.Create(Self);
    FrmMontaCarga.Show;
+   VerificaFormAberto;
 except;
    VEN006.Enabled:= True;
    FrmMontaCarga.Free;
@@ -615,6 +893,7 @@ begin
    VEN008.Enabled:= False;
    FrmSelRelDoa:=TFrmSelRelDoa.Create(Self);
    FrmSelRelDoa.ShowModal;
+   VerificaFormAberto;
  Except;
    VEN008.Enabled:= True;
    FrmSelRelDoa.Free;
@@ -628,6 +907,7 @@ begin
     VEN009.Enabled:= False;
     FrmLiberaCarga:=TFrmLiberaCarga.Create(Self);
     FrmLiberaCarga.Show;
+    VerificaFormAberto;
   except;
     VEN009.Enabled:= True;
     FrmLiberaCarga.Free;
@@ -640,6 +920,7 @@ begin
     VEN010.Enabled:= False;
     FrmManuComis:=TFrmManuComis.Create(Self);
     FrmManuComis.Show;
+    VerificaFormAberto;
   except;
     VEN010.Enabled:= True;
     FrmManuComis.Free;
@@ -653,6 +934,7 @@ begin
     VEN011.Enabled:= False;
     FrmSelFreteFg:=TFrmSelFreteFg.Create(Self);
     FrmSelFreteFg.Show;
+    VerificaFormAberto;
   Except;
     VEN011.Enabled:= True;
     FrmSelFreteFg.Free;
@@ -665,6 +947,7 @@ begin
     VEN012.Enabled:= False;
     FrmSelRelConfVenda:=TFrmSelRelConfVenda.Create(Self);
     FrmSelRelConfVenda.Show;
+    VerificaFormAberto;
   Except;
     VEN012.Enabled:= True;
     FrmSelRelConfVenda.Free;
@@ -677,6 +960,7 @@ begin
     VEN013.Enabled:= False;
     FrmSelVenProd:=TFrmSelVenProd.Create(Self);
     FrmSelVenProd.Show;
+    VerificaFormAberto;
   Except;
     VEN013.Enabled:= True;
     FrmSelVenProd.Free;
@@ -689,6 +973,7 @@ begin
     VEN014.Enabled:= False;
     FrmSelSintCarga:=TFrmSelSintCarga.Create(Self);
     FrmSelSintCarga.Show;
+    VerificaFormAberto;
   except;
     VEN014.Enabled:= True;
     FrmSelSintCarga.Free;
@@ -760,6 +1045,7 @@ begin
     VEN017.Enabled:= False;
     FrmPediDevoVend:=TFrmPediDevoVend.Create(Self);
     FrmPediDevoVend.Show;
+    VerificaFormAberto
   except;
     VEN017.Enabled:= True;
     FrmPediDevoVend.Free;
@@ -772,10 +1058,339 @@ begin
     VEN018.Enabled:= False;
     FrmAtualVersao:=TFrmAtualVersao.Create(Self);
     FrmAtualVersao.Show;
+    VerificaFormAberto;
   except;
     VEN018.Enabled:= True;
     FrmAtualVersao.Free;
   end;
+end;
+
+procedure TFrmPrincipal.ACAjudaExecute(Sender: TObject);
+begin
+  AtualizaMenuLateral('SplitSubMenuAjuda');
+end;
+
+procedure TFrmPrincipal.ACAjudaUpdate(Sender: TObject);
+begin
+  AtualizaImagem('SplitSubMenuAjuda');
+end;
+
+procedure TFrmPrincipal.ACArquivoExecute(Sender: TObject);
+begin
+  AtualizaMenuLateral('SplitSubMenuArquivo');
+end;
+
+procedure TFrmPrincipal.ACArquivoUpdate(Sender: TObject);
+begin
+  AtualizaImagem('SplitSubMenuArquivo');
+end;
+
+procedure TFrmPrincipal.ACVEN015Execute(Sender: TObject);
+begin
+  if SplitSubMenuRelVendasVendedor.Opened = True then
+    SplitSubMenuRelVendasVendedor.Opened := False
+  else
+    SplitSubMenuRelVendasVendedor.Opened := True;
+
+  if SplitSubMenuTransporte.Opened = True then
+    SplitSubMenuTransporte.Opened := False;
+
+  if SplitSubMenuImpressão.Opened = true then
+    SplitSubMenuImpressão.Opened := False;
+
+  if SplitSubMenuArquivo.Opened = True then
+    SplitSubMenuArquivo.Opened := False;
+
+  if SplitSubMenuManutencao.Opened = True then
+    SplitSubMenuManutencao.Opened := False;
+
+  if SplitSubMenuLogistica.Opened = True then
+    SplitSubMenuLogistica.Opened := False;
+
+  if SplitSubMenuAjuda.Opened = True then
+    SplitSubMenuAjuda.Opened := False;
+
+  if SplitSubMenuVendas.Opened = True then
+    SplitSubMenuVendas.Opened := False;
+end;
+
+procedure TFrmPrincipal.ACVEN017Execute(Sender: TObject);
+begin
+  if SplitSubMenuPedidoDevolucao.Opened = True then
+    SplitSubMenuPedidoDevolucao.Opened := False
+  else
+    SplitSubMenuPedidoDevolucao.Opened := True;
+
+  if SplitSubMenuTransporte.Opened = True then
+    SplitSubMenuTransporte.Opened := False;
+
+  if SplitSubMenuImpressão.Opened = true then
+    SplitSubMenuImpressão.Opened := False;
+
+  if SplitSubMenuArquivo.Opened = True then
+    SplitSubMenuArquivo.Opened := False;
+
+  if SplitSubMenuManutencao.Opened = True then
+    SplitSubMenuManutencao.Opened := False;
+
+  if SplitSubMenuLogistica.Opened = True then
+    SplitSubMenuLogistica.Opened := False;
+
+  if SplitSubMenuAjuda.Opened = True then
+    SplitSubMenuAjuda.Opened := False;
+
+  if SplitSubMenuVendas.Opened = True then
+    SplitSubMenuVendas.Opened := False;
+end;
+
+
+procedure TFrmPrincipal.ACVEN029Execute(Sender: TObject);
+begin
+  if SplitSubMenuCadatroLocalidades.Opened = True then
+    SplitSubMenuCadatroLocalidades.Opened := False
+  else
+    SplitSubMenuCadatroLocalidades.Opened := True;
+
+  if SplitSubMenuTransporte.Opened = True then
+    SplitSubMenuTransporte.Opened := False;
+
+  if SplitSubMenuImpressão.Opened = true then
+    SplitSubMenuImpressão.Opened := False;
+
+  if SplitSubMenuArquivo.Opened = True then
+    SplitSubMenuArquivo.Opened := False;
+
+  if SplitSubMenuManutencao.Opened = True then
+    SplitSubMenuManutencao.Opened := False;
+
+  if SplitSubMenuLogistica.Opened = True then
+    SplitSubMenuLogistica.Opened := False;
+
+  if SplitSubMenuAjuda.Opened = True then
+    SplitSubMenuAjuda.Opened := False;
+
+  if SplitSubMenuVendas.Opened = True then
+    SplitSubMenuVendas.Opened := False;
+
+end;
+
+procedure TFrmPrincipal.ACVEN030Execute(Sender: TObject);
+begin
+  if SplitSubMenuCadastroLogistica.Opened = True then
+    SplitSubMenuCadastroLogistica.Opened := False
+  else
+    SplitSubMenuCadastroLogistica.Opened := True;
+
+  if SplitSubMenuTransporte.Opened = True then
+    SplitSubMenuTransporte.Opened := False;
+
+  if SplitSubMenuImpressão.Opened = true then
+    SplitSubMenuImpressão.Opened := False;
+
+  if SplitSubMenuArquivo.Opened = True then
+    SplitSubMenuArquivo.Opened := False;
+
+  if SplitSubMenuManutencao.Opened = True then
+    SplitSubMenuManutencao.Opened := False;
+
+  if SplitSubMenuLogistica.Opened = True then
+    SplitSubMenuLogistica.Opened := False;
+
+  if SplitSubMenuAjuda.Opened = True then
+    SplitSubMenuAjuda.Opened := False;
+
+  if SplitSubMenuVendas.Opened = True then
+    SplitSubMenuVendas.Opened := False;
+end;
+
+procedure TFrmPrincipal.ACVEN033Execute(Sender: TObject);
+begin
+  if SplitSubMenuCadTransporte.Opened = True then
+    SplitSubMenuCadTransporte.Opened := False
+  else
+    SplitSubMenuCadTransporte.Opened := True;
+
+  if SplitSubMenuTransporte.Opened = True then
+    SplitSubMenuTransporte.Opened := False;
+
+  if SplitSubMenuImpressão.Opened = true then
+    SplitSubMenuImpressão.Opened := False;
+
+  if SplitSubMenuArquivo.Opened = True then
+    SplitSubMenuArquivo.Opened := False;
+
+  if SplitSubMenuManutencao.Opened = True then
+    SplitSubMenuManutencao.Opened := False;
+
+  if SplitSubMenuLogistica.Opened = True then
+    SplitSubMenuLogistica.Opened := False;
+
+  if SplitSubMenuAjuda.Opened = True then
+    SplitSubMenuAjuda.Opened := False;
+
+  if SplitSubMenuVendas.Opened = True then
+    SplitSubMenuVendas.Opened := False;
+end;
+
+procedure TFrmPrincipal.ACVEN054Execute(Sender: TObject);
+begin
+  if SplitSubMenuControleCaixas.Opened = True then
+    SplitSubMenuControleCaixas.Opened := False
+  else
+    SplitSubMenuControleCaixas.Opened := True;
+
+  if SplitSubMenuTransporte.Opened = True then
+    SplitSubMenuTransporte.Opened := False;
+
+  if SplitSubMenuImpressão.Opened = true then
+    SplitSubMenuImpressão.Opened := False;
+
+  if SplitSubMenuArquivo.Opened = True then
+    SplitSubMenuArquivo.Opened := False;
+
+  if SplitSubMenuManutencao.Opened = True then
+    SplitSubMenuManutencao.Opened := False;
+
+  if SplitSubMenuLogistica.Opened = True then
+    SplitSubMenuLogistica.Opened := False;
+
+  if SplitSubMenuAjuda.Opened = True then
+    SplitSubMenuAjuda.Opened := False;
+
+  if SplitSubMenuVendas.Opened = True then
+    SplitSubMenuVendas.Opened := False;
+end;
+
+procedure TFrmPrincipal.ACVendasExecute(Sender: TObject);
+begin
+  AtualizaMenuLateral('SplitSubMenuVendas');
+end;
+
+procedure TFrmPrincipal.ACVendasUpdate(Sender: TObject);
+begin
+  AtualizaImagem('SplitSubMenuVendas');
+end;
+
+procedure TFrmPrincipal.ACVoltarExecute(Sender: TObject);
+begin
+    if SplitSubMenuVendas.Opened = True then
+      SplitSubMenuVendas.Opened := False;
+
+  if SplitSubMenuAjuda.Opened = True then
+    SplitSubMenuAjuda.Opened := False;
+
+  if SplitSubMenuArquivo.Opened = True then
+    SplitSubMenuArquivo.Opened := False;
+
+  if SplitSubMenuTransporte.Opened = True then
+    SplitSubMenuTransporte.Opened := False;
+
+  if SplitSubMenuImpressão.Opened = True then
+    SplitSubMenuImpressão.Opened := False;
+
+  if SplitSubMenuManutencao.Opened = True then
+    SplitSubMenuManutencao.Opened := False;
+
+  if SplitSubMenuLogistica.Opened = True then
+    SplitSubMenuLogistica.Opened := False;
+
+  if SplitSubMenuPedidoDevolucao.Opened = True then
+  begin
+    SplitSubMenuPedidoDevolucao.Opened := False;
+
+    if SplitSubMenuVendas.Opened = False then
+      SplitSubMenuVendas.Opened := True;
+  end;
+
+  if SplitSubMenuCadatroLocalidades.Opened = True then
+  begin
+    SplitSubMenuCadatroLocalidades.Opened := False;
+
+    if SplitSubMenuVendas.Opened = False then
+      SplitSubMenuVendas.Opened := True;
+  end;
+
+  if SplitSubMenuCadastroLogistica.Opened = True then
+  begin
+    SplitSubMenuCadastroLogistica.Opened := False;
+
+    if SplitSubMenuVendas.Opened = False then
+      SplitSubMenuVendas.Opened := True;
+  end;
+
+  if SplitSubMenuCadTransporte.Opened = True then
+  begin
+    SplitSubMenuCadTransporte.Opened := False;
+
+    if SplitSubMenuTransporte.Opened = False then
+      SplitSubMenuTransporte.Opened := True;
+  end;
+
+  if SplitSubMenuRelVendasVendedor.Opened = True then
+  begin
+    SplitSubMenuRelVendasVendedor.Opened := False;
+
+    if SplitSubMenuImpressão.Opened = False then
+      SplitSubMenuImpressão.Opened := True;
+  end;
+
+  if SplitSubMenuControleCaixas.Opened = True then
+  begin
+    SplitSubMenuControleCaixas.Opened := False;
+
+    if SplitSubMenuManutencao.Opened = False then
+      SplitSubMenuManutencao.Opened := True;
+  end;
+end;
+
+procedure TFrmPrincipal.ACTransporteExecute(Sender: TObject);
+begin
+  AtualizaMenuLateral('SplitSubMenuTransporte');
+end;
+
+procedure TFrmPrincipal.ACTransporteUpdate(Sender: TObject);
+begin
+  AtualizaImagem('SplitSubMenuTransporte');
+end;
+
+procedure TFrmPrincipal.ACImpressãoExecute(Sender: TObject);
+begin
+  AtualizaMenuLateral('SplitSubMenuImpressão');
+end;
+
+procedure TFrmPrincipal.ACImpressãoUpdate(Sender: TObject);
+begin
+  AtualizaImagem('SplitSubMenuImpressão');
+end;
+
+procedure TFrmPrincipal.ACMenuExecute(Sender: TObject);
+begin
+  AtualizaMenuLateral('SplitMenuPrincipal');
+end;
+
+procedure TFrmPrincipal.ACMenuUpdate(Sender: TObject);
+begin
+  AtualizaImagem('SplitMenuPrincipal')
+end;
+
+procedure TFrmPrincipal.ACManutencaoExecute(Sender: TObject);
+begin
+  AtualizaMenuLateral('SplitSubMenuManutencao');
+end;
+
+procedure TFrmPrincipal.ACManutencaoUpdate(Sender: TObject);
+begin
+  AtualizaImagem('SplitSubMenuManutencao');
+end;
+
+procedure TFrmPrincipal.ACLogisticaExecute(Sender: TObject);
+begin
+  AtualizaMenuLateral('SplitSubMenuLogistica');
+end;
+
+procedure TFrmPrincipal.ACLogisticaUpdate(Sender: TObject);
+begin
+  AtualizaImagem('SplitSubMenuLogistica');
 end;
 
 procedure TFrmPrincipal.AlterarSequence(form: TForm; filial: Integer);
@@ -1142,6 +1757,7 @@ begin
     VEN019.Enabled:= False;
     FrmParamComercial:=TFrmParamComercial.Create(Self);
     FrmParamComercial.Show;
+    VerificaFormAberto;
   Except;
     VEN019.Enabled:= True;
     FrmParamComercial.Free;
@@ -1154,6 +1770,7 @@ begin
    VEN020.Enabled:= False;
    FrmCorte:=TFrmCorte.Create(Self);
    FrmCorte.Show;
+   VerificaFormAberto;
  except;
    VEN020.Enabled:= True;
    FrmCorte.Free;
@@ -1167,6 +1784,7 @@ begin
     VEN021.Enabled:= False;
     FrmImpNFRacao:=TFrmImpNFRacao.Create(Self);
     FrmImpNFRacao.Show;
+    VerificaFormAberto;
   except;
     VEN021.Enabled:= True;
     FrmImpNFRacao.Free;
@@ -1179,6 +1797,7 @@ begin
     VEN022.Enabled:= False;
     FrmParametro:=TFrmParametro.Create(Self);
     FrmParametro.Show;
+    VerificaFormAberto;
   except
     VEN022.Enabled:= True;
     FrmParametro.Free;
@@ -1191,6 +1810,7 @@ begin
     VEN023.Enabled:= False;
     FrmPedagio:=TFrmPedagio.Create(Self);
     FrmPedagio.Show;
+    VerificaFormAberto;
   Except;
     VEN023.Enabled:= True;
     FrmPedagio.Free;
@@ -1203,6 +1823,7 @@ begin
     VEN024.Enabled:= False;
     FrmSubRegiao:=TFrmSubRegiao.Create(Self);
     FrmSubRegiao.Show;
+    VerificaFormAberto;
   Except;
     VEN024.Enabled:= True;
     FrmSubRegiao.Free;
@@ -1289,6 +1910,7 @@ begin
     VEN025.Enabled:= False;
     FrmFreteFixo:=TFrmFreteFixo.Create(Self);
     FrmFreteFixo.Show;
+    VerificaFormAberto;
   Except;
     VEN025.Enabled:= True;
     FrmFreteFixo.Free;
@@ -1303,6 +1925,7 @@ begin
     VEN026.Enabled:= False;
     FrmSelPedagio:=TFrmSelPedagio.Create(Self);
     FrmSelPedagio.ShowModal;
+    VerificaFormAberto;
   Except;
     VEN026.Enabled:= True;
     FrmSelPedagio.Free;
@@ -1317,6 +1940,7 @@ begin
     VEN027.Enabled:= False;
     FrmClientes:=TFrmClientes.Create(Self);
     FrmClientes.Show;
+    VerificaFormAberto;
   Except;
     VEN027.Enabled:= True;
     FrmClientes.Free;
@@ -1331,6 +1955,7 @@ begin
     VEN028.Enabled:= False;
     FrmTabPreco:=TFrmTabPreco.Create(Self);
     FrmTabPreco.Show;
+    VerificaFormAberto;
   Except;
     VEN028.Enabled:= True;
     FrmTabPreco.Free;
@@ -1344,6 +1969,7 @@ begin
  Try
   FrmCadBairro:=TFrmCadBairro.Create(Self);
   FrmCadBairro.Show;
+  VerificaFormAberto
  Except;
   FrmCadBairro.Free;
  End;
@@ -1356,6 +1982,7 @@ begin
  Try
   FrmCadEstado:=TFrmCadEstado.Create(Self);
   FrmCadEstado.Show;
+  VerificaFormAberto
  Except;
   FrmCadEstado.Free;
  End;
@@ -1369,6 +1996,7 @@ begin
     CadastrodeBairro1.Enabled:= False;
     FrmCadBairro:=TFrmCadBairro.Create(Self);
     FrmCadBairro.Show;
+    VerificaFormAberto
   Except;
     CadastrodeBairro1.Enabled:= True;
     FrmCadBairro.Free;
@@ -1383,6 +2011,7 @@ begin
     CadastrodeCidades1.Enabled:= False;
     FrmCadCidade:=TFrmCadCidade.Create(Self);
     FrmCadCidade.Show;
+    VerificaFormAberto
   Except;
     CadastrodeCidades1.Enabled:= True;
     FrmCadCidade.Free;
@@ -1398,6 +2027,7 @@ begin
     CadastrodeEstados1.Enabled:= False;
     FrmCadEstado:=TFrmCadEstado.Create(Self);
     FrmCadEstado.Show;
+    VerificaFormAberto
   Except;
     CadastrodeEstados1.Enabled:= True;
     FrmCadEstado.Free;
@@ -1412,6 +2042,7 @@ begin
     CadastrodePases1.Enabled:= False;
     FrmCadPais:=TFrmCadPais.Create(Self);
     FrmCadPais.Show;
+    VerificaFormAberto
   Except;
     CadastrodePases1.Enabled:= True;
     FrmCadPais.Free;
@@ -1426,6 +2057,7 @@ begin
     CadastrodeRegioGeogrfica1.Enabled:= False;
     FrmCadRegGeog:=TFrmCadRegGeog.Create(Self);
     FrmCadRegGeog.Show;
+    VerificaFormAberto
   Except;
     CadastrodeRegioGeogrfica1.Enabled:= True;
     FrmCadRegGeog.Free;
@@ -1441,6 +2073,7 @@ begin
     CadastrodeRegioInternacional1.Enabled:= False;
     FrmCadRegInt:=TFrmCadRegInt.Create(Self);
     FrmCadRegInt.Show;
+    VerificaFormAberto
   Except;
     CadastrodeRegioInternacional1.Enabled:= True;
     FrmCadRegInt.Free;
@@ -1455,6 +2088,7 @@ begin
     CadastrodeRegiesLogsticas1.Enabled:= False;
     FrmCadRegLog:=TFrmCadRegLog.Create(Self);
     FrmCadRegLog.Show;
+    VerificaFormAberto
   Except;
     CadastrodeRegiesLogsticas1.Enabled:= True;
     FrmCadRegLog.Free;
@@ -1470,6 +2104,7 @@ begin
     CadastrodeSubregiesLogsticas1.Enabled:= False;
     FrmCadSubLog:=TFrmCadSubLog.Create(Self);
     FrmCadSubLog.Show;
+    VerificaFormAberto
   Except;
     CadastrodeSubregiesLogsticas1.Enabled:= True;
     FrmCadSubLog.Free;
@@ -1485,6 +2120,7 @@ begin
     CadastrodeRegiesXSubregiesLogstica1.Enabled:= False;
     FrmCadRegeSubLog:=TFrmCadRegeSubLog.Create(Self);
     FrmCadRegeSubLog.Show;
+    VerificaFormAberto
   Except;
     CadastrodeRegiesXSubregiesLogstica1.Enabled:= True;
     FrmCadRegeSubLog.Free;
@@ -1500,6 +2136,7 @@ begin
     VEN031.Enabled:= False;
     FrmCadRegCom:=TFrmCadRegCom.Create(Self);
     FrmCadRegCom.Show;
+    VerificaFormAberto;
   Except;
     VEN031.Enabled:= True;
     FrmCadRegCom.Free;
@@ -1515,6 +2152,7 @@ begin
     VEN032.Enabled:= False;
     FrmCadForPag:=TFrmCadForPag.Create(Self);
     FrmCadForPag.Show;
+    VerificaFormAberto;
   Except;
     VEN032.Enabled:= True;
     FrmCadForPag.Free;
@@ -1529,6 +2167,7 @@ begin
     CadastroTipodeLogradouro1.Enabled:= False;
     FrmCadTpLogr:=TFrmCadTpLogr.Create(Self);
     FrmCadTpLogr.Show;
+    VerificaFormAberto
   Except;
     CadastroTipodeLogradouro1.Enabled:= True;
     FrmCadTpLogr.Free;
@@ -1543,6 +2182,7 @@ begin
     CadastrodeTiposdeTransporte1.Enabled:= False;
     FrmCadTransTipo:=TFrmCadTransTipo.Create(Self);
     FrmCadTransTipo.Show;
+    VerificaFormAberto
   Except;
     CadastrodeTiposdeTransporte1.Enabled:= True;
     FrmCadTransTipo.Free;
@@ -1557,6 +2197,7 @@ begin
     CadastroTipodeVeculo1.Enabled:= False;
     FrmCadTipoVeic:=TFrmCadTipoVeic.Create(Self);
     FrmCadTipoVeic.Show;
+    VerificaFormAberto
   Except;
     CadastroTipodeVeculo1.Enabled:= True;
     FrmCadTipoVeic.Free;
@@ -1571,6 +2212,7 @@ begin
     CadastrodeTransportadores1.Enabled:= False;
     FrmCadTransport:=TFrmCadTransport.Create(Self);
     FrmCadTransport.Show;
+    VerificaFormAberto
   Except;
     CadastrodeTransportadores1.Enabled:= True;
     FrmCadTransport.Free;
@@ -1585,6 +2227,7 @@ begin
     Screen.Cursor := crSQLWait;
     FrmSelFreteDevo:=TFrmSelFreteDevo.Create(Self);
     FrmSelFreteDevo.ShowModal;
+    VerificaFormAberto;
   Except;
     Screen.Cursor := crDefault;
     VEN034.Enabled:= True;
@@ -1601,6 +2244,7 @@ begin
     VEN035.Enabled:= False;
     FrmDesativaPesquisa :=TFrmDesativaPesquisa.Create(Self);
     FrmDesativaPesquisa.ShowModal;
+    VerificaFormAberto;
   Except;
     VEN035.Enabled:= True;
     FrmDesativaPesquisa.Free;
@@ -1615,6 +2259,7 @@ begin
     VEN036.Enabled:= False;
     FrmXmlEmail :=TFrmXmlEmail.Create(Self);
     FrmXmlEmail.ShowModal;
+    VerificaFormAberto;
   Except;
     VEN036.Enabled:= True;
     FrmXmlEmail.Free;
@@ -1629,6 +2274,7 @@ begin
     VEN037.Enabled:= False;
     FrmPedVendaCorte:=TFrmPedVendaCorte.Create(Self);
     FrmPedVendaCorte.ShowModal;
+    VerificaFormAberto;
   Except;
     Screen.Cursor := crDefault;
     VEN037.Enabled:= True;
@@ -1644,6 +2290,7 @@ begin
     VEN038.Enabled:= False;
     FrmCarregaNFe :=TFrmCarregaNFe.Create(Self);
     FrmCarregaNFe.ShowModal;
+    VerificaFormAberto;
   Except;
     VEN038.Enabled:= True;
     FrmCarregaNFe.Free;
@@ -1658,6 +2305,7 @@ begin
     VEN039.Enabled:= False;
     FrmHistoricoPrecoTelevendas := TFrmHistoricoPrecoTelevendas.Create(Self);
     FrmHistoricoPrecoTelevendas.showmodal;
+    VerificaFormAberto;
   Except;
     VEN039.Enabled:= True;
     FrmHistoricoPrecoTelevendas.Free;
@@ -1672,6 +2320,7 @@ begin
     VEN040.Enabled:= False;
     FrmCadVendedor :=TFrmCadVendedor.Create(Self);
     FrmCadVendedor.Show;
+    VerificaFormAberto;
   Except;
     VEN040.Enabled:= True;
     FrmCadVendedor.Free;
@@ -1697,6 +2346,7 @@ begin
     VEN041.Enabled:= False;
     FrmTranspChaveNFe:=TFrmTranspChaveNFe.Create(Self);
     FrmTranspChaveNFe.ShowModal;
+    VerificaFormAberto;
   Except;
     VEN041.Enabled:= True;
     FrmTranspChaveNFe.Free;
@@ -1709,6 +2359,7 @@ begin
     VEN071.Enabled:= False;
     FrmVenProd:=TFrmVenProd.Create(Self);
     FrmVenProd.ShowModal;
+    VerificaFormAberto;
   Except;
     VEN071.Enabled:= True;
     FrmVenProd.Free;
@@ -1721,10 +2372,32 @@ begin
       VEN042.Enabled:= False;
       FrmAlteracaoPlaca:=TFrmAlteracaoPlaca.Create(Self);
       FrmAlteracaoPlaca.Show;
+      VerificaFormAberto;
     except;
       VEN042.Enabled:= True;
       FrmAlteracaoPlaca.Free;
     end;
+end;
+
+procedure TFrmPrincipal.HabilitarMenuLateral(habilitar: Boolean);
+var
+  i, j :Integer;
+begin
+  for I := 0 to FrmPrincipal.ComponentCount-1 do
+  begin
+    if FrmPrincipal.Components[i] is TSpeedButton then
+    begin
+      if (TSpeedButton(FrmPrincipal.Components[i]).Action <> ACMenu) and (TSpeedButton(FrmPrincipal.Components[i]).Action <> ACArquivo) and
+      (TSpeedButton(FrmPrincipal.Components[i]).Action <> ACVendas) and (TSpeedButton(FrmPrincipal.Components[i]).Action <> ACTransporte) and
+      (TSpeedButton(FrmPrincipal.Components[i]).Action <> ACImpressão) and (TSpeedButton(FrmPrincipal.Components[i]).Action <> ACManutencao) and
+      (TSpeedButton(FrmPrincipal.Components[i]).Action <> ACLogistica) and (TSpeedButton(FrmPrincipal.Components[i]).Action <> ACAjuda) and
+      (TSpeedButton(FrmPrincipal.Components[i]).Action <> ACVoltar) and (TSpeedButton(FrmPrincipal.Components[i]).Action <> ACSair) and
+      (TSpeedButton(FrmPrincipal.Components[i]).Name <> 'BtnLogarNovamente') and (TSpeedButton(FrmPrincipal.Components[i]).Name <> 'BtnSobre') then
+      begin
+        TSpeedButton(FrmPrincipal.Components[i]).Enabled := habilitar;
+      end;
+    end;
+  end;
 end;
 
 procedure TFrmPrincipal.HabilitarModulos(habilitar: Boolean);
@@ -1742,12 +2415,18 @@ end;
 
 procedure TFrmPrincipal.ControlarAcesso(idModulo, idUsuario: Integer);
 var
-  qryConsulta: TOraQuery;
+  qryConsulta, qryJanelas: TOraQuery;
   sql: string;
+  i :Integer;
+  Tag :string;
 begin
   HabilitarModulos(false);
+  HabilitarMenuLateral(false);
+
+  FrmPrincipal.Menu := nil;
 
   qryConsulta := ConsultarAcessos(idModulo, idUsuario);
+
   qryConsulta.First;
 
   while not qryConsulta.Eof do
@@ -1825,6 +2504,151 @@ begin
 
     qryConsulta.Next;
   end;
+
+  qryConsulta.First;
+
+  while not qryConsulta.Eof do
+  begin
+    case qryConsulta.FieldByName ('ID_JANELA').AsInteger of
+      4:  FrmPrincipal.BtnVEN004.Enabled:= True;
+      5:  FrmPrincipal.BtnVEN005.Enabled:= True;
+      6:  FrmPrincipal.BtnVEN006.Enabled:= True;
+      7:  FrmPrincipal.BtnVEN007.Enabled:= True;
+      8:  FrmPrincipal.BtnVEN008.Enabled:= True;
+      9:  FrmPrincipal.BtnVEN009.Enabled:= True;
+      10:  FrmPrincipal.BtnVEN010.Enabled:= True;
+      11:  FrmPrincipal.BtnVEN011.Enabled:= True;
+      12:  FrmPrincipal.BtnVEN012.Enabled:= True;
+      13:  FrmPrincipal.BtnVEN013.Enabled:= True;
+      14:  FrmPrincipal.BtnVEN014.Enabled:= True;
+      15:  FrmPrincipal.BtnVEN015.Enabled:= True;
+      16:  FrmPrincipal.BtnVEN016.Enabled:= True;
+      17:  FrmPrincipal.BtnVEN017.Enabled:= True;
+      18:  FrmPrincipal.BtnVEN018.Enabled:= True;
+      19:  FrmPrincipal.BtnVEN019.Enabled:= True;
+      20:  FrmPrincipal.BtnVEN020.Enabled:= True;
+      21:  FrmPrincipal.BtnVEN021.Enabled:= True;
+      22:  FrmPrincipal.BtnVEN022.Enabled:= True;
+      23:  FrmPrincipal.BtnVEN023.Enabled:= True;
+      24:  FrmPrincipal.BtnVEN024.Enabled:= True;
+      25:  FrmPrincipal.BtnVEN025.Enabled:= True;
+      26:  FrmPrincipal.BtnVEN026.Enabled:= True;
+      27:  FrmPrincipal.BtnVEN027.Enabled:= True;
+      28:  FrmPrincipal.BtnVEN028.Enabled:= True;
+      29:  FrmPrincipal.BtnVEN029.Enabled:= True;
+      30:  FrmPrincipal.BtnVEN030.Enabled:= True;
+      31:  FrmPrincipal.BtnVEN031.Enabled:= True;
+      32:  FrmPrincipal.BtnVEN032.Enabled:= True;
+      33:  FrmPrincipal.BtnVEN033.Enabled:= True;
+      34:  FrmPrincipal.BtnVEN034.Enabled:= True;
+      35:  FrmPrincipal.BtnVEN035.Enabled:= True;
+      36:  FrmPrincipal.BtnVEN036.Enabled:= True;
+      37:  FrmPrincipal.BtnVEN037.Enabled:= True;
+      38:  FrmPrincipal.BtnVEN038.Enabled:= True;
+      39:  FrmPrincipal.BtnVEN039.Enabled:= True;
+      40:  FrmPrincipal.BtnVEN040.Enabled:= True;
+      41:  FrmPrincipal.BtnVEN041.Enabled:= True;
+      42:  FrmPrincipal.BtnVEN042.Enabled:= True;
+      43:  FrmPrincipal.BtnVEN043.Enabled:= True;
+      44:  FrmPrincipal.BtnVEN044.Enabled:= True;
+      45:  FrmPrincipal.BtnVEN045.Enabled:= True;
+      46:  FrmPrincipal.BtnVEN046.Enabled:= True;
+      47:  FrmPrincipal.BtnVEN047.Enabled:= True;
+      48:  FrmPrincipal.BtnVEN048.Enabled:= True;
+      49:  FrmPrincipal.BtnVEN049.Enabled:= True;
+      50:  FrmPrincipal.BtnVEN050.Enabled:= True;
+      51:  FrmPrincipal.BtnVEN051.Enabled:= True;
+      52:  FrmPrincipal.BtnVEN052.Enabled:= True;
+      53:  FrmPrincipal.BtnVEN053.Enabled:= True;
+      54:  FrmPrincipal.BtnVEN054.Enabled:= True;
+      55:  FrmPrincipal.BtnVEN055.Enabled:= True;
+      56:  FrmPrincipal.BtnVEN056.Enabled:= True;
+      57:  FrmPrincipal.BtnVEN057.Enabled:= True;
+      58:  FrmPrincipal.BtnVEN058.Enabled:= True;
+      59:  FrmPrincipal.BtnVEN059.Enabled:= True;
+      61:  FrmPrincipal.BtnVEN061.Enabled:= True;
+      62:  FrmPrincipal.BtnVEN062.Enabled:= True;
+      63:  FrmPrincipal.BtnVEN063.Enabled:= True;
+      64:  FrmPrincipal.BtnVEN064.Enabled:= True;
+      65:  FrmPrincipal.BtnVEN065.Enabled:= True;
+      66:  FrmPrincipal.BtnVEN066.Enabled:= True;
+//      67:  FrmPrincipal.BtnVEN067.Enabled:= True;
+      68:  FrmPrincipal.BtnVEN068.Enabled:= True;
+      71:  FrmPrincipal.BtnVEN071.Enabled:= True;
+      72:  FrmPrincipal.BtnVEN072.Enabled:= True;
+      73:  FrmPrincipal.BtnVEN073.Enabled:= True;
+      74:  FrmPrincipal.BtnVEN074.Enabled:= True;
+      75:  FrmPrincipal.BtnVEN075.Enabled:= True;
+//      76:  FrmPrincipal.BtnControleCaixas.Enabled:= True;
+    end;
+
+    qryConsulta.Next;
+  end;
+
+  if BtnVEN029.Enabled = True then
+  begin
+    BtnCadCidades.Enabled        := True;
+    BtnCadEstados.Enabled        := True;
+    BtnCadPaises.Enabled         := True;
+    BtnCadBairros.Enabled        := True;
+    BtnCadRegGeo.Enabled         := True;
+    BtnCadRegInter.Enabled       := True;
+    BtnCadTipoLogradouro.Enabled := True;
+  end
+  else
+  begin
+    ImgVEN029.Enabled := False;
+    ImgVEN029.Visible := False;
+  end;
+
+  if BtnVEN030.Enabled = True then
+  begin
+    BtnCadRegLog.Enabled       := True;
+    BtnCadSubRegLog.Enabled    := True;
+    BtnCadRegSubRegLog.Enabled := True;
+  end
+  else
+  begin
+    ImgVEN030.Enabled := False;
+    ImgVEN030.Visible := False;
+  end;
+
+  if BtnVEN033.Enabled = True then
+  begin
+    BtnCadTipoTransporte.Enabled      := True;
+    BtnCadTipoVeiculo.Enabled         := True;
+    BtnCadTipoTransportadores.Enabled := True;
+    BtnCadRegiao.Enabled              := True;
+  end
+  else
+  begin
+    ImgVEN033.Enabled := False;
+    ImgVEN033.Visible := False;
+  end;
+
+  if BtnVEN015.Enabled = True then
+  begin
+    BtnVEN015a.Enabled := True;
+    BtnVEN015b.Enabled := True;
+  end
+  else
+  begin
+    ImgVEN015.Enabled := False;
+    ImgVEN015.Visible := False;
+  end;
+
+  if BtnVEN054.Enabled = True then
+  begin
+    BtnLancamentos.Enabled    := True;
+    BtnRelSaldo.Enabled       := True;
+    BtnControleCaixas.Enabled := True;
+  end
+  else
+  begin
+    ImgVEN054.Enabled := False;
+    ImgVEN054.Visible := False;
+  end;
+
 end;
 
 procedure TFrmPrincipal.btnTesteClick(Sender: TObject);
@@ -2028,6 +2852,7 @@ begin
     VEN043.Enabled   := False;
     FrmLoteIntegrado := TFrmLoteIntegrado.Create(Self);
     FrmLoteIntegrado.Show;
+    VerificaFormAberto;
   except;
     VEN043.Enabled   := True;
     FrmLoteIntegrado.Free;
@@ -2040,6 +2865,7 @@ begin
     VEN044.Enabled   := False;
     FrmProgRacao := TFrmProgRacao.Create(Self);
     FrmProgRacao.Show;
+    VerificaFormAberto;
   except;
     VEN044.Enabled   := True;
     FrmProgRacao.Free;
@@ -2052,6 +2878,7 @@ begin
     VEN045.Enabled   := False;
     FrmResultGranjeiro := TFrmResultGranjeiro.Create(Self);
     FrmResultGranjeiro.Show;
+    VerificaFormAberto;
   except;
     VEN045.Enabled   := True;
     FrmResultGranjeiro.Free;
@@ -2064,6 +2891,7 @@ begin
     VEN046.Enabled   := False;
     FrmConsApanha := TFrmConsApanha.Create(Self);
     FrmConsApanha.Show;
+    VerificaFormAberto;
   except;
     VEN046.Enabled   := True;
     FrmConsApanha.Free;
@@ -2076,6 +2904,7 @@ begin
     VEN047.Enabled   := False;
     FrmConsVendaFrangoAbate := TFrmConsVendaFrangoAbate.Create(Self);
     FrmConsVendaFrangoAbate.Show;
+    VerificaFormAberto;
   except;
     VEN047.Enabled   := True;
     FrmConsVendaFrangoAbate.Free;
@@ -2088,6 +2917,7 @@ begin
     VEN048.Enabled   := False;
     FrmParametrosIntegrado := TFrmParametrosIntegrado.Create(Self);
     FrmParametrosIntegrado.Show;
+    VerificaFormAberto;
   except;
     VEN048.Enabled   := True;
     FrmParametrosIntegrado.Free;
@@ -2100,6 +2930,7 @@ begin
     VEN049.Enabled   := False;
     FrmConsRemessaRacao := TFrmConsRemessaRacao.Create(Self);
     FrmConsRemessaRacao.Show;
+    VerificaFormAberto;
   except;
     VEN049.Enabled   := True;
     FrmConsRemessaRacao.Free;
@@ -2112,6 +2943,7 @@ begin
       VEN050.Enabled   := False;
       FrmVendedorCliente := TFrmVendedorCliente.Create(Self);
       FrmVendedorCliente.Show;
+      VerificaFormAberto;
     except;
       VEN050.Enabled   := True;
       FrmVendedorCliente.Free;
@@ -2124,6 +2956,7 @@ begin
       VEN051.Enabled   := False;
       FrmConsultaEstoque := TFrmConsultaEstoque.Create(Self);
       FrmConsultaEstoque.Show;
+      VerificaFormAberto;
     except;
       VEN051.Enabled   := True;
       FrmConsultaEstoque.Free;
@@ -2136,6 +2969,7 @@ begin
       VEN052.Enabled   := False;
       FrmConferenciaCarga := TFrmConferenciaCarga.Create(Self);
       FrmConferenciaCarga.Show;
+      VerificaFormAberto;
     except;
       VEN052.Enabled   := True;
       FrmConferenciaCarga.Free;
@@ -2148,6 +2982,7 @@ begin
       VEN053.Enabled := False;
       FrmDiferencaPreco := TFrmDiferencaPreco.Create(Self);
       FrmDiferencaPreco.Show;
+      VerificaFormAberto;
     except;
       VEN053.Enabled := True;
       FrmDiferencaPreco.Free;
@@ -2229,6 +3064,7 @@ begin
       VEN055.Enabled   := False;
       FrmSaldoCaixas := TFrmSaldoCaixas.Create(Self);
       FrmSaldoCaixas.Show;
+      VerificaFormAberto;
     except;
       VEN055.Enabled   := True;
       FrmSaldoCaixas.Free;
@@ -2242,6 +3078,7 @@ begin
     VEN056.Enabled   := False;
     frmVendasDiaria := TfrmVendasDiaria.Create(Self);
     frmVendasDiaria.Show;
+    VerificaFormAberto;
   except;
     VEN056.Enabled   := True;
     frmVendasDiaria.Free;
@@ -2257,6 +3094,7 @@ begin
     VEN054.Enabled   := False;
     FrmControleCaixas := TFrmControleCaixas.Create(Self);
     FrmControleCaixas.Show;
+    VerificaFormAberto;
   except;
     VEN054.Enabled   := True;
     FrmControleCaixas.Free;
@@ -2270,6 +3108,7 @@ begin
     VEN055.Enabled   := False;
     FrmSaldoCaixas := TFrmSaldoCaixas.Create(Self);
     FrmSaldoCaixas.Show;
+    VerificaFormAberto;
   except;
     VEN055.Enabled   := True;
     FrmSaldoCaixas.Free;
@@ -2282,6 +3121,7 @@ begin
     VEN057.Enabled:= False;
     frmLanctoPesoBalancaoCarga:=TfrmLanctoPesoBalancaoCarga.Create(Self);
     frmLanctoPesoBalancaoCarga.Show;
+    VerificaFormAberto;
   Except;
     VEN057.Enabled:= True;
     frmLanctoPesoBalancaoCarga.Free;
@@ -2294,6 +3134,7 @@ begin
     VEN058.Enabled:= False;
     FrmCorteProdutos:=TFrmCorteProdutos.Create(Self);
     FrmCorteProdutos.Show;
+    VerificaFormAberto;
   Except;
     VEN058.Enabled:= True;
     FrmCorteProdutos.Free;
@@ -2306,6 +3147,7 @@ begin
     VEN059.Enabled:= False;
     FrmOcorrencias:=TFrmOcorrencias.Create(Self);
     FrmOcorrencias.Show;
+    VerificaFormAberto;
  Except;
     VEN059.Enabled:= True;
     FrmOcorrencias.Free;
@@ -2318,6 +3160,7 @@ begin
     VEN061.Enabled:= False;
     FrmSelQuebr:=TFrmSelQuebr.Create(Self);
     FrmSelQuebr.Show;
+    VerificaFormAberto;
  Except;
     VEN061.Enabled:= True;
     FrmSelQuebr.Free;
@@ -2330,6 +3173,7 @@ begin
     VEN062.Enabled:= False;
     FrmControleEntregaCargas:=TFrmControleEntregaCargas.Create(Self);
     FrmControleEntregaCargas.Show;
+    VerificaFormAberto;
   Except;
     VEN062.Enabled:= True;
     FrmControleEntregaCargas.Free;
@@ -2342,6 +3186,7 @@ begin
     VEN063.Enabled:= False;
     frmDocumentacaoNFE:=TfrmDocumentacaoNFE.Create(Self);
     frmDocumentacaoNFE.Show;
+    VerificaFormAberto;
   Except;
     VEN063.Enabled:= True;
     frmDocumentacaoNFE.Free;
@@ -2354,6 +3199,7 @@ begin
     VEN064.Enabled:= False;
     frmPedidosPosHorario:=TfrmPedidosPosHorario.Create(Self);
     frmPedidosPosHorario.Show;
+    VerificaFormAberto;
   Except;
     VEN064.Enabled:= True;
     frmPedidosPosHorario.Free;
@@ -2366,6 +3212,7 @@ begin
     VEN065.Enabled:= False;
     frmAlteraContaPedido:=TfrmAlteraContaPedido.Create(Self);
     frmAlteraContaPedido.Show;
+    VerificaFormAberto;
   Except;
     VEN065.Enabled:= True;
     frmAlteraContaPedido.Free;
@@ -2378,6 +3225,7 @@ begin
     VEN066.Enabled:= False;
     frmPedidosAbaixoTabela:=TfrmPedidosAbaixoTabela.Create(Self);
     frmPedidosAbaixoTabela.Show;
+    VerificaFormAberto;
   Except;
     VEN066.Enabled:= True;
     frmPedidosAbaixoTabela.Free;
@@ -2390,6 +3238,7 @@ begin
     VEN067.Enabled:= False;
     FrmRelVendasVendedorPercentual:=TFrmRelVendasVendedorPercentual.Create(Self);
     FrmRelVendasVendedorPercentual.Show;
+    VerificaFormAberto;
   Except;
     VEN067.Enabled:= True;
     FrmRelVendasVendedorPercentual.Free;
@@ -2403,6 +3252,7 @@ begin
     CadastrodeRegio1.Enabled:= False;
     FrmCadRegiao:=TFrmCadRegiao.Create(Self);
     FrmCadRegiao.Show;
+    VerificaFormAberto
   Except;
     CadastrodeRegio1.Enabled:= True;
     FrmCadRegiao.Free;
@@ -2416,6 +3266,7 @@ begin
     VEN015b.Enabled:= False;
     FrmSelProdVend:=TFrmSelProdVend.Create(Self);
     FrmSelProdVend.Show;
+    VerificaFormAberto;
   except;
     VEN015b.Enabled:= True;
     FrmSelProdVend.Free;
@@ -2428,6 +3279,7 @@ begin
     VEN015a.Enabled:= False;
     frmVendasVendedorCliente:=TfrmVendasVendedorCliente.Create(Self);
     frmVendasVendedorCliente.Show;
+    VerificaFormAberto;
   except;
     VEN015a.Enabled:= True;
     frmVendasVendedorCliente.Free;
@@ -2441,6 +3293,7 @@ begin
     VEN073.Enabled:= False;
     frmReprogramarDevolucao:= TfrmReprogramarDevolucao.Create(Self);
     frmReprogramarDevolucao.Show;
+    VerificaFormAberto
   except;
     VEN073.Enabled:= True;
     frmReprogramarDevolucao.Free;
@@ -2453,6 +3306,7 @@ begin
     VEN074.Enabled:= False;
     frmEstoque:= TFrmEstoque.Create(Self);
     FrmEstoque.Show;
+    VerificaFormAberto;
   except
     VEN074.Enabled:= True;
     FrmEstoque.Free;
@@ -2465,6 +3319,7 @@ begin
     VEN075.Enabled:= False;
     FrmRelVendaCliente:= TFrmRelVendaCliente.Create(Self);
     FrmRelVendaCliente.Show;
+    VerificaFormAberto;
   except
     VEN075.Enabled:= True;
     FrmRelVendaCliente.Free;
@@ -2477,13 +3332,204 @@ begin
     VEN076.Enabled:= False;
     FrmEntradaSaidaCaixas := TFrmEntradaSaidaCaixas.Create(Self);
     FrmEntradaSaidaCaixas.Show;
+    VerificaFormAberto
   except
     VEN076.Enabled:= True;
     FrmEntradaSaidaCaixas.Free;
   end;
 end;
 
+procedure TFrmPrincipal.VerificaFormAberto;
+var
+  i, j :Integer;
+begin
+  for i := 0 to Screen.FormCount - 1 do
+  begin
+    if (Screen.Forms[i].Name <> 'Fenha') and (Screen.Forms[i].Name <> 'FrmPrincipal') then
+    begin
+      for j := 0 to (FrmPrincipal.ComponentCount -1) do
+        if (FrmPrincipal.Components[j].ClassName) = 'TSplitView' then
+          if TSplitView(FrmPrincipal.Components[j]).Opened = True then
+            TSplitView(FrmPrincipal.Components[j]).Opened := False;
+    end;
+
+  end;
+end;
+
+procedure TFrmPrincipal.AtualizaMenuLateral(Str: string);
+var
+  i: Integer;
+begin
+  for i := FrmPrincipal.ComponentCount -1 downto 0 do
+  begin
+    if (FrmPrincipal.Components[i] is TSplitView) and ((FrmPrincipal.Components[i] as TSplitView).Name = Str) then
+    begin
+      case AnsiIndexStr(Str, ['SplitMenuPrincipal', 'SplitSubMenuArquivo', 'SplitSubMenuVendas', 'SplitSubMenuTransporte', 'SplitSubMenuImpressão', 'SplitSubMenuManutencao', 'SplitSubMenuLogistica', 'SplitSubMenuAjuda']) of
+        0:
+        begin
+          if (FrmPrincipal.Components[i] as TSplitView).Opened = True then
+            (FrmPrincipal.Components[i] as TSplitView).Opened := False
+          else
+            (FrmPrincipal.Components[i] as TSplitView).Opened := True;
+        end;
+
+        1:
+        begin
+          if (FrmPrincipal.Components[i] as TSplitView).Opened = True then
+            (FrmPrincipal.Components[i] as TSplitView).Opened := False
+          else
+            (FrmPrincipal.Components[i] as TSplitView).Opened := True;
+        end;
+
+        2:
+        begin
+          if (FrmPrincipal.Components[i] as TSplitView).Opened = True then
+            (FrmPrincipal.Components[i] as TSplitView).Opened := False
+          else
+            (FrmPrincipal.Components[i] as TSplitView).Opened := True;
+        end;
+
+        3:
+        begin
+          if (FrmPrincipal.Components[i] as TSplitView).Opened = True then
+            (FrmPrincipal.Components[i] as TSplitView).Opened := False
+          else
+            (FrmPrincipal.Components[i] as TSplitView).Opened := True;
+        end;
+
+        4:
+        begin
+          if (FrmPrincipal.Components[i] as TSplitView).Opened = True then
+            (FrmPrincipal.Components[i] as TSplitView).Opened := False
+          else
+            (FrmPrincipal.Components[i] as TSplitView).Opened := True;
+        end;
+
+        5:
+        begin
+          if (FrmPrincipal.Components[i] as TSplitView).Opened = True then
+            (FrmPrincipal.Components[i] as TSplitView).Opened := False
+          else
+            (FrmPrincipal.Components[i] as TSplitView).Opened := True;
+        end;
+
+        6:
+        begin
+          if (FrmPrincipal.Components[i] as TSplitView).Opened = True then
+            (FrmPrincipal.Components[i] as TSplitView).Opened := False
+          else
+            (FrmPrincipal.Components[i] as TSplitView).Opened := True;
+        end;
+
+        7:
+        begin
+          if (FrmPrincipal.Components[i] as TSplitView).Opened = True then
+            (FrmPrincipal.Components[i] as TSplitView).Opened := False
+          else
+            (FrmPrincipal.Components[i] as TSplitView).Opened := True;
+        end;
+      end;
+    end;
+
+    if (FrmPrincipal.Components[i] is TSplitView) and ((FrmPrincipal.Components[i] as TSplitView).Name <> Str) then
+    begin
+      (FrmPrincipal.Components[i] as TSplitView).Opened := False;
+    end;
+  end;
+
+end;
+
+
+procedure TFrmPrincipal.AtualizaImagem(Str: string);
+var
+  i: Integer;
+begin
+  for i := FrmPrincipal.ComponentCount -1 downto 0 do
+  begin
+    if (FrmPrincipal.Components[i] is TSplitView) and ((FrmPrincipal.Components[i] as TSplitView).Name = Str) then
+    begin
+      case AnsiIndexStr(Str, ['SplitMenuPrincipal', 'SplitSubMenuArquivo', 'SplitSubMenuVendas', 'SplitSubMenuTransporte', 'SplitSubMenuImpressão', 'SplitSubMenuManutencao', 'SplitSubMenuLogistica', 'SplitSubMenuAjuda']) of
+        0:
+        begin
+          if (FrmPrincipal.Components[i] as TSplitView).Opened = False then
+            ACMenu.ImageIndex := 0
+          else
+            ACMenu.ImageIndex := 1;
+        end;
+
+        1:
+        begin
+          if (FrmPrincipal.Components[i] as TSplitView).Opened = False then
+            ACArquivo.ImageIndex := 2
+          else
+            ACArquivo.ImageIndex := 3;
+        end;
+
+        2:
+        begin
+          if (FrmPrincipal.Components[i] as TSplitView).Opened = False then
+            ACVendas.ImageIndex := 4
+          else
+            ACVendas.ImageIndex := 5;
+
+          if (SplitSubMenuPedidoDevolucao.Opened = True) or (SplitSubMenuCadatroLocalidades.Opened = True) or (SplitSubMenuCadastroLogistica.Opened = True) then
+            ACVendas.ImageIndex := 5;
+        end;
+
+        3:
+        begin
+          if (FrmPrincipal.Components[i] as TSplitView).Opened = False then
+            ACTransporte.ImageIndex := 6
+          else
+            ACTransporte.ImageIndex := 7;
+
+          if SplitSubMenuCadTransporte.Opened = True then
+            ACTransporte.ImageIndex := 7;
+
+        end;
+
+        4:
+        begin
+          if (FrmPrincipal.Components[i] as TSplitView).Opened = False then
+            ACImpressão.ImageIndex := 8
+          else
+            ACImpressão.ImageIndex := 9;
+
+          if SplitSubMenuRelVendasVendedor.Opened = True then
+            ACImpressão.ImageIndex := 9;
+        end;
+
+        5:
+        begin
+          if (FrmPrincipal.Components[i] as TSplitView).Opened = False then
+            ACManutencao.ImageIndex := 10
+          else
+            ACManutencao.ImageIndex := 11;
+
+          if SplitSubMenuControleCaixas.Opened = True then
+            ACManutencao.ImageIndex := 11;
+        end;
+
+        6:
+        begin
+          if (FrmPrincipal.Components[i] as TSplitView).Opened = False then
+            ACLogistica.ImageIndex := 12
+          else
+            ACLogistica.ImageIndex := 13;
+        end;
+
+        7:
+        begin
+          if (FrmPrincipal.Components[i] as TSplitView).Opened = False then
+            ACAjuda.ImageIndex := 14
+          else
+            ACAjuda.ImageIndex := 15;
+        end;
+
+      end;
+    end;
+  end;
+
+end;
+
 end.
-
-
-

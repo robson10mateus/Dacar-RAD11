@@ -23,6 +23,11 @@ type
     Qr: TOraQuery;
     DS: TOraDataSource;
     DBVersao: TDBText;
+    QrID_MODULO: TIntegerField;
+    QrNOME_MODULO: TStringField;
+    QrDESC_MODULO: TStringField;
+    QrATIVO: TStringField;
+    QrVERSAO: TStringField;
     procedure BitBtn1Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure Timer2Timer(Sender: TObject);

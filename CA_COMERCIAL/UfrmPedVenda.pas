@@ -7538,6 +7538,16 @@ begin
     end;
   end;
 
+  if PageControl1.ActivePage = TabSheet1 then
+  begin
+    PageControl1.Pages[1].TabVisible:= False;
+    PageControl1.Pages[2].TabVisible:= False;
+    PageControl1.Pages[3].TabVisible:= False;
+    PageControl1.Pages[4].TabVisible:= false;
+    PageControl1.Pages[5].TabVisible := False;
+  end;
+
+
 end;
 
 function TFrmPedVenda.ValidaDocumentoReferenciado: boolean;
