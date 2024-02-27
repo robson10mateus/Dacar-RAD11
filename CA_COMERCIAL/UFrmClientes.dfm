@@ -513,7 +513,7 @@ object FrmClientes: TFrmClientes
     TabOrder = 0
     OnChange = PageControl2Change
     ExplicitWidth = 1337
-    ExplicitHeight = 556
+    ExplicitHeight = 754
     object TabCriterio: TTabSheet
       Caption = ' Filtros '
       OnShow = TabCriterioShow
@@ -823,7 +823,8 @@ object FrmClientes: TFrmClientes
         Color = clWindow
         ParentBackground = False
         TabOrder = 8
-        ExplicitTop = 508
+        ExplicitTop = 705
+        ExplicitWidth = 1329
         object LRodape: TLabel
           Left = 80
           Top = 2
@@ -930,7 +931,6 @@ object FrmClientes: TFrmClientes
         ParentBackground = False
         ParentFont = False
         TabOrder = 1
-        ExplicitTop = 501
       end
       object Panel2: TPanel
         Left = 0
@@ -948,7 +948,6 @@ object FrmClientes: TFrmClientes
         ParentBackground = False
         ParentFont = False
         TabOrder = 2
-        ExplicitTop = 514
       end
     end
     object TabDetalhe: TTabSheet

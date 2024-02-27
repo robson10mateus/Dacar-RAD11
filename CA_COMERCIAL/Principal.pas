@@ -9,7 +9,7 @@ Uses
   OraSQLMonitor, Vcl.WinXCtrls, Vcl.CategoryButtons, Vcl.ButtonGroup,
   Vcl.ControlList, JvExExtCtrls, JvSplitter, System.Actions, Vcl.ActnList,
   System.ImageList, Vcl.ImgList, Vcl.Imaging.pngimage, System.StrUtils,
-  JvExStdCtrls, JvButton, JvCtrls;
+  JvExStdCtrls, JvButton, JvCtrls, System.Math;
 Type
   TFrmPrincipal = class(TForm)
     MainMenu1: TMainMenu;
@@ -212,7 +212,6 @@ Type
     ACVEN023: TAction;
     ACVEN024: TAction;
     ACVEN025: TAction;
-    SplitSubMenuAjuda: TSplitView;
     BtnMenu: TSpeedButton;
     BtnArquivo: TSpeedButton;
     BtnVendas: TSpeedButton;
@@ -296,14 +295,10 @@ Type
     BtnVEN023: TSpeedButton;
     BtnVEN024: TSpeedButton;
     BtnVEN025: TSpeedButton;
-    ScrollBox7: TScrollBox;
-    BtnSobre: TSpeedButton;
     ACVEN072: TAction;
     ACVEN073: TAction;
     ACVoltar: TAction;
-    BtnVoltarAjuda: TSpeedButton;
     BtnVoltarArquivo: TSpeedButton;
-    BtnVoltarImpressao: TSpeedButton;
     BtnVoltarLogistica: TSpeedButton;
     BtnVoltarManutencao: TSpeedButton;
     BtnVoltarTransporte: TSpeedButton;
@@ -368,6 +363,7 @@ Type
     ACControleCaixas: TAction;
     BtnControleCaixas: TSpeedButton;
     ImgVEN054: TImage;
+    BtnVoltarImpressao: TSpeedButton;
     procedure Trataerros(Sender: TObject; E: Exception);
     procedure FormCreate(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
@@ -483,7 +479,7 @@ Type
     procedure ACArquivoExecute(Sender: TObject);
     procedure ACManutencaoExecute(Sender: TObject);
     procedure ACLogisticaExecute(Sender: TObject);
-    procedure ACAjudaExecute(Sender: TObject);
+//    procedure ACAjudaExecute(Sender: TObject);
     procedure ACVEN017Execute(Sender: TObject);
     procedure ACVoltarExecute(Sender: TObject);
     procedure ACVEN029Execute(Sender: TObject);
@@ -499,6 +495,69 @@ Type
     procedure ACManutencaoUpdate(Sender: TObject);
     procedure ACLogisticaUpdate(Sender: TObject);
     procedure ACAjudaUpdate(Sender: TObject);
+    procedure ACVEN004Update(Sender: TObject);
+    procedure ACVEN005Update(Sender: TObject);
+    procedure ACVEN006Update(Sender: TObject);
+    procedure ACVEN007Update(Sender: TObject);
+    procedure ACVEN008Update(Sender: TObject);
+    procedure ACVEN009Update(Sender: TObject);
+    procedure ACVEN010Update(Sender: TObject);
+    procedure ACVEN011Update(Sender: TObject);
+    procedure ACVEN012Update(Sender: TObject);
+    procedure ACVEN013Update(Sender: TObject);
+    procedure ACVEN014Update(Sender: TObject);
+    procedure ACVEN018Update(Sender: TObject);
+    procedure ACVEN019Update(Sender: TObject);
+    procedure ScrollBox4MouseWheel(Sender: TObject; Shift: TShiftState;
+      WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
+    procedure ACVEN020Update(Sender: TObject);
+    procedure ACVEN021Update(Sender: TObject);
+    procedure ACVEN022Update(Sender: TObject);
+    procedure ACVEN023Update(Sender: TObject);
+    procedure ACVEN024Update(Sender: TObject);
+    procedure ACVEN025Update(Sender: TObject);
+    procedure ACVEN026Update(Sender: TObject);
+    procedure ACVEN027Update(Sender: TObject);
+    procedure ACVEN028Update(Sender: TObject);
+    procedure ACVEN031Update(Sender: TObject);
+    procedure ACVEN032Update(Sender: TObject);
+    procedure ACVEN034Update(Sender: TObject);
+    procedure ACVEN035Update(Sender: TObject);
+    procedure ACVEN036Update(Sender: TObject);
+    procedure ACVEN037Update(Sender: TObject);
+    procedure ACVEN038Update(Sender: TObject);
+    procedure ACVEN039Update(Sender: TObject);
+    procedure ACVEN040Update(Sender: TObject);
+    procedure ACVEN041Update(Sender: TObject);
+    procedure ACVEN042Update(Sender: TObject);
+    procedure ACVEN043Update(Sender: TObject);
+    procedure ACVEN044Update(Sender: TObject);
+    procedure ACVEN045Update(Sender: TObject);
+    procedure ACVEN046Update(Sender: TObject);
+    procedure ACVEN047Update(Sender: TObject);
+    procedure ACVEN048Update(Sender: TObject);
+    procedure ACVEN049Update(Sender: TObject);
+    procedure ACVEN050Update(Sender: TObject);
+    procedure ACVEN051Update(Sender: TObject);
+    procedure ACVEN052Update(Sender: TObject);
+    procedure ACVEN053Update(Sender: TObject);
+    procedure ACVEN055Update(Sender: TObject);
+    procedure ACVEN056Update(Sender: TObject);
+    procedure ACVEN057Update(Sender: TObject);
+    procedure ACVEN058Update(Sender: TObject);
+    procedure ACVEN059Update(Sender: TObject);
+    procedure ACVEN061Update(Sender: TObject);
+    procedure ACVEN062Update(Sender: TObject);
+    procedure ACVEN063Update(Sender: TObject);
+    procedure ACVEN064Update(Sender: TObject);
+    procedure ACVEN065Update(Sender: TObject);
+    procedure ACVEN066Update(Sender: TObject);
+    procedure ACVEN067Update(Sender: TObject);
+    procedure ACVEN071Update(Sender: TObject);
+    procedure ACVEN072Update(Sender: TObject);
+    procedure ACVEN073Update(Sender: TObject);
+    procedure ACVEN074Update(Sender: TObject);
+    procedure ACVEN075Update(Sender: TObject);
   private
     Senha : String;
     dataHoraServidor :  TDateTime;
@@ -672,6 +731,20 @@ begin
   Close;
 end;
 
+procedure TFrmPrincipal.ScrollBox4MouseWheel(Sender: TObject;
+  Shift: TShiftState; WheelDelta: Integer; MousePos: TPoint;
+  var Handled: Boolean);
+var
+  aPos: SmallInt;
+begin
+  aPos:= ScrollBox4.VertScrollBar.Position - WheelDelta div 10;
+  aPos:= Max(aPos, 0);
+  aPos:= Min(aPos, ScrollBox4.VertScrollBar.Range);
+  ScrollBox4.VertScrollBar.Position := aPos;
+  Handled := True;
+end;
+
+
 procedure TFrmPrincipal.Sobre1Click(Sender: TObject);
 begin
 Try
@@ -704,14 +777,13 @@ end;
 
 procedure TFrmPrincipal.InstruesparaBoletas1Click(Sender: TObject);
 begin
-Try
-  Application.CreateForm(TFrmInst, FrmInst);
-  FrmInst.ShowModal;
-Finally
-  FrmInst.Free;
-End;
+  Try
+    Application.CreateForm(TFrmInst, FrmInst);
+    FrmInst.ShowModal;
+  Finally
+    FrmInst.Free;
+  End;
 end;
-
 
 
 procedure TFrmPrincipal.Button1Click(Sender: TObject);
@@ -1065,10 +1137,6 @@ begin
   end;
 end;
 
-procedure TFrmPrincipal.ACAjudaExecute(Sender: TObject);
-begin
-  AtualizaMenuLateral('SplitSubMenuAjuda');
-end;
 
 procedure TFrmPrincipal.ACAjudaUpdate(Sender: TObject);
 begin
@@ -1083,6 +1151,61 @@ end;
 procedure TFrmPrincipal.ACArquivoUpdate(Sender: TObject);
 begin
   AtualizaImagem('SplitSubMenuArquivo');
+end;
+
+procedure TFrmPrincipal.ACVEN004Update(Sender: TObject);
+begin
+  BtnVEN004.Enabled := not Assigned(FrmPedVenda);
+end;
+
+procedure TFrmPrincipal.ACVEN005Update(Sender: TObject);
+begin
+  BtnVEN005.Enabled := not Assigned(FrmImpDocPed);
+end;
+
+procedure TFrmPrincipal.ACVEN006Update(Sender: TObject);
+begin
+  BtnVEN006.Enabled := not Assigned(FrmMontaCarga);
+end;
+
+procedure TFrmPrincipal.ACVEN007Update(Sender: TObject);
+begin
+  BtnVEN007.Enabled := not Assigned(FrmFeCarManu);
+end;
+
+procedure TFrmPrincipal.ACVEN008Update(Sender: TObject);
+begin
+  BtnVEN008.Enabled := not Assigned(FrmSelRelDoa);
+end;
+
+procedure TFrmPrincipal.ACVEN009Update(Sender: TObject);
+begin
+  BtnVEN009.Enabled := not Assigned(FrmLiberaCarga);
+end;
+
+procedure TFrmPrincipal.ACVEN010Update(Sender: TObject);
+begin
+  BtnVEN010.Enabled := not Assigned(FrmManuComis);
+end;
+
+procedure TFrmPrincipal.ACVEN011Update(Sender: TObject);
+begin
+  BtnVEN011.Enabled := not Assigned(FrmSelFreteFg);
+end;
+
+procedure TFrmPrincipal.ACVEN012Update(Sender: TObject);
+begin
+  BtnVEN012.Enabled := not Assigned(FrmSelRelConfVenda);
+end;
+
+procedure TFrmPrincipal.ACVEN013Update(Sender: TObject);
+begin
+  BtnVEN013.Enabled := not Assigned(FrmSelVenProd);
+end;
+
+procedure TFrmPrincipal.ACVEN014Update(Sender: TObject);
+begin
+  BtnVEN014.Enabled := not Assigned(FrmSelSintCarga);
 end;
 
 procedure TFrmPrincipal.ACVEN015Execute(Sender: TObject);
@@ -1106,9 +1229,6 @@ begin
 
   if SplitSubMenuLogistica.Opened = True then
     SplitSubMenuLogistica.Opened := False;
-
-  if SplitSubMenuAjuda.Opened = True then
-    SplitSubMenuAjuda.Opened := False;
 
   if SplitSubMenuVendas.Opened = True then
     SplitSubMenuVendas.Opened := False;
@@ -1136,13 +1256,65 @@ begin
   if SplitSubMenuLogistica.Opened = True then
     SplitSubMenuLogistica.Opened := False;
 
-  if SplitSubMenuAjuda.Opened = True then
-    SplitSubMenuAjuda.Opened := False;
-
   if SplitSubMenuVendas.Opened = True then
     SplitSubMenuVendas.Opened := False;
 end;
 
+
+procedure TFrmPrincipal.ACVEN018Update(Sender: TObject);
+begin
+  BtnVEN018.Enabled := not Assigned(FrmAtualVersao);
+end;
+
+procedure TFrmPrincipal.ACVEN019Update(Sender: TObject);
+begin
+  BtnVEN019.Enabled := not Assigned(FrmParamComercial);
+end;
+
+procedure TFrmPrincipal.ACVEN020Update(Sender: TObject);
+begin
+  BtnVEN020.Enabled := not Assigned(FrmCorte);
+end;
+
+procedure TFrmPrincipal.ACVEN021Update(Sender: TObject);
+begin
+  BtnVEN021.Enabled := not Assigned(FrmImpNFRacao);
+end;
+
+procedure TFrmPrincipal.ACVEN022Update(Sender: TObject);
+begin
+  BtnVEN022.Enabled := not Assigned(FrmParametro);
+end;
+
+procedure TFrmPrincipal.ACVEN023Update(Sender: TObject);
+begin
+  BtnVEN023.Enabled := not Assigned(FrmPedagio);
+end;
+
+procedure TFrmPrincipal.ACVEN024Update(Sender: TObject);
+begin
+  BtnVEN024.Enabled := not Assigned(FrmSubRegiao);
+end;
+
+procedure TFrmPrincipal.ACVEN025Update(Sender: TObject);
+begin
+  BtnVEN025.Enabled := not Assigned(FrmFreteFixo);
+end;
+
+procedure TFrmPrincipal.ACVEN026Update(Sender: TObject);
+begin
+  BtnVEN026.Enabled := not Assigned(FrmSelPedagio);
+end;
+
+procedure TFrmPrincipal.ACVEN027Update(Sender: TObject);
+begin
+  BtnVEN027.Enabled := not Assigned(FrmClientes);
+end;
+
+procedure TFrmPrincipal.ACVEN028Update(Sender: TObject);
+begin
+  BtnVEN028.Enabled := not Assigned(FrmTabPreco);
+end;
 
 procedure TFrmPrincipal.ACVEN029Execute(Sender: TObject);
 begin
@@ -1165,9 +1337,6 @@ begin
 
   if SplitSubMenuLogistica.Opened = True then
     SplitSubMenuLogistica.Opened := False;
-
-  if SplitSubMenuAjuda.Opened = True then
-    SplitSubMenuAjuda.Opened := False;
 
   if SplitSubMenuVendas.Opened = True then
     SplitSubMenuVendas.Opened := False;
@@ -1196,11 +1365,18 @@ begin
   if SplitSubMenuLogistica.Opened = True then
     SplitSubMenuLogistica.Opened := False;
 
-  if SplitSubMenuAjuda.Opened = True then
-    SplitSubMenuAjuda.Opened := False;
-
   if SplitSubMenuVendas.Opened = True then
     SplitSubMenuVendas.Opened := False;
+end;
+
+procedure TFrmPrincipal.ACVEN031Update(Sender: TObject);
+begin
+  BtnVEN031.Enabled := not Assigned(FrmCadRegCom);
+end;
+
+procedure TFrmPrincipal.ACVEN032Update(Sender: TObject);
+begin
+  BtnVEN032.Enabled := not Assigned(FrmCadForPag);
 end;
 
 procedure TFrmPrincipal.ACVEN033Execute(Sender: TObject);
@@ -1225,11 +1401,108 @@ begin
   if SplitSubMenuLogistica.Opened = True then
     SplitSubMenuLogistica.Opened := False;
 
-  if SplitSubMenuAjuda.Opened = True then
-    SplitSubMenuAjuda.Opened := False;
-
   if SplitSubMenuVendas.Opened = True then
     SplitSubMenuVendas.Opened := False;
+end;
+
+procedure TFrmPrincipal.ACVEN034Update(Sender: TObject);
+begin
+  BtnVEN034.Enabled := not Assigned(FrmSelFreteDevo);
+end;
+
+procedure TFrmPrincipal.ACVEN035Update(Sender: TObject);
+begin
+  BtnVEN035.Enabled := not Assigned(FrmDesativaPesquisa);
+end;
+
+procedure TFrmPrincipal.ACVEN036Update(Sender: TObject);
+begin
+  BtnVEN036.Enabled := not Assigned(FrmXmlEmail);
+end;
+
+procedure TFrmPrincipal.ACVEN037Update(Sender: TObject);
+begin
+  BtnVEN037.Enabled := not Assigned(FrmPedVendaCorte);
+end;
+
+procedure TFrmPrincipal.ACVEN038Update(Sender: TObject);
+begin
+  BtnVEN038.Enabled := not Assigned(FrmCarregaNFe);
+end;
+
+procedure TFrmPrincipal.ACVEN039Update(Sender: TObject);
+begin
+  BtnVEN039.Enabled := not Assigned(FrmHistoricoPrecoTelevendas);
+end;
+
+procedure TFrmPrincipal.ACVEN040Update(Sender: TObject);
+begin
+  BtnVEN040.Enabled := not Assigned(FrmCadVendedor);
+end;
+
+procedure TFrmPrincipal.ACVEN041Update(Sender: TObject);
+begin
+  BtnVEN041.Enabled := not Assigned(FrmTranspChaveNFe);
+end;
+
+procedure TFrmPrincipal.ACVEN042Update(Sender: TObject);
+begin
+  BtnVEN042.Enabled := not Assigned(FrmAlteracaoPlaca);
+end;
+
+procedure TFrmPrincipal.ACVEN043Update(Sender: TObject);
+begin
+  BtnVEN043.Enabled := not Assigned(FrmLoteIntegrado);
+end;
+
+procedure TFrmPrincipal.ACVEN044Update(Sender: TObject);
+begin
+  BtnVEN044.Enabled := not Assigned(FrmProgRacao);
+end;
+
+procedure TFrmPrincipal.ACVEN045Update(Sender: TObject);
+begin
+  BtnVEN045.Enabled := not Assigned(FrmResultGranjeiro);
+end;
+
+procedure TFrmPrincipal.ACVEN046Update(Sender: TObject);
+begin
+  BtnVEN046.Enabled := not Assigned(FrmConsApanha);
+end;
+
+procedure TFrmPrincipal.ACVEN047Update(Sender: TObject);
+begin
+  BtnVEN047.Enabled := not Assigned(FrmConsVendaFrangoAbate);
+end;
+
+procedure TFrmPrincipal.ACVEN048Update(Sender: TObject);
+begin
+  BtnVEN048.Enabled := not Assigned(FrmParametrosIntegrado);
+end;
+
+procedure TFrmPrincipal.ACVEN049Update(Sender: TObject);
+begin
+  BtnVEN049.Enabled := not Assigned(FrmConsRemessaRacao);
+end;
+
+procedure TFrmPrincipal.ACVEN050Update(Sender: TObject);
+begin
+  BtnVEN050.Enabled := not Assigned(FrmVendedorCliente);
+end;
+
+procedure TFrmPrincipal.ACVEN051Update(Sender: TObject);
+begin
+  BtnVEN051.Enabled := not Assigned(FrmConsultaEstoque);
+end;
+
+procedure TFrmPrincipal.ACVEN052Update(Sender: TObject);
+begin
+  BtnVEN052.Enabled := not Assigned(FrmConferenciaCarga);
+end;
+
+procedure TFrmPrincipal.ACVEN053Update(Sender: TObject);
+begin
+  BtnVEN053.Enabled := not Assigned(FrmDiferencaPreco);
 end;
 
 procedure TFrmPrincipal.ACVEN054Execute(Sender: TObject);
@@ -1254,11 +1527,94 @@ begin
   if SplitSubMenuLogistica.Opened = True then
     SplitSubMenuLogistica.Opened := False;
 
-  if SplitSubMenuAjuda.Opened = True then
-    SplitSubMenuAjuda.Opened := False;
-
   if SplitSubMenuVendas.Opened = True then
     SplitSubMenuVendas.Opened := False;
+end;
+
+procedure TFrmPrincipal.ACVEN055Update(Sender: TObject);
+begin
+  BtnVEN055.Enabled := not Assigned(FrmSaldoCaixas);
+end;
+
+procedure TFrmPrincipal.ACVEN056Update(Sender: TObject);
+begin
+  BtnVEN056.Enabled := not Assigned(frmVendasDiaria);
+end;
+
+procedure TFrmPrincipal.ACVEN057Update(Sender: TObject);
+begin
+  BtnVEN057.Enabled := not Assigned(frmLanctoPesoBalancaoCarga);
+end;
+
+procedure TFrmPrincipal.ACVEN058Update(Sender: TObject);
+begin
+  BtnVEN058.Enabled := not Assigned(FrmCorteProdutos);
+end;
+
+procedure TFrmPrincipal.ACVEN059Update(Sender: TObject);
+begin
+  BtnVEN059.Enabled := not Assigned(FrmOcorrencias);
+end;
+
+procedure TFrmPrincipal.ACVEN061Update(Sender: TObject);
+begin
+  BtnVEN061.Enabled := not Assigned(FrmSelQuebr);
+end;
+
+procedure TFrmPrincipal.ACVEN062Update(Sender: TObject);
+begin
+  BtnVEN062.Enabled := not Assigned(FrmControleEntregaCargas);
+end;
+
+procedure TFrmPrincipal.ACVEN063Update(Sender: TObject);
+begin
+  BtnVEN063.Enabled := not Assigned(frmDocumentacaoNFE);
+end;
+
+procedure TFrmPrincipal.ACVEN064Update(Sender: TObject);
+begin
+  BtnVEN064.Enabled := not Assigned(frmPedidosPosHorario);
+end;
+
+procedure TFrmPrincipal.ACVEN065Update(Sender: TObject);
+begin
+  BtnVEN065.Enabled := not Assigned(frmAlteraContaPedido);
+end;
+
+procedure TFrmPrincipal.ACVEN066Update(Sender: TObject);
+begin
+  BtnVEN066.Enabled := not Assigned(frmPedidosAbaixoTabela);
+end;
+
+procedure TFrmPrincipal.ACVEN067Update(Sender: TObject);
+begin
+  BtnVEN067.Enabled := not Assigned(FrmRelVendasVendedorPercentual);
+end;
+
+
+procedure TFrmPrincipal.ACVEN071Update(Sender: TObject);
+begin
+  BtnVEN071.Enabled := not Assigned(FrmVenProd);
+end;
+
+procedure TFrmPrincipal.ACVEN072Update(Sender: TObject);
+begin
+  BtnVEN072.Enabled := not Assigned(FrmPediDevoVend);
+end;
+
+procedure TFrmPrincipal.ACVEN073Update(Sender: TObject);
+begin
+  BtnVEN073.Enabled := not Assigned(frmReprogramarDevolucao);
+end;
+
+procedure TFrmPrincipal.ACVEN074Update(Sender: TObject);
+begin
+  BtnVEN074.Enabled := not Assigned(frmEstoque);
+end;
+
+procedure TFrmPrincipal.ACVEN075Update(Sender: TObject);
+begin
+  BtnVEN075.Enabled := not Assigned(FrmRelVendaCliente);
 end;
 
 procedure TFrmPrincipal.ACVendasExecute(Sender: TObject);
@@ -1275,9 +1631,6 @@ procedure TFrmPrincipal.ACVoltarExecute(Sender: TObject);
 begin
     if SplitSubMenuVendas.Opened = True then
       SplitSubMenuVendas.Opened := False;
-
-  if SplitSubMenuAjuda.Opened = True then
-    SplitSubMenuAjuda.Opened := False;
 
   if SplitSubMenuArquivo.Opened = True then
     SplitSubMenuArquivo.Opened := False;
@@ -2747,7 +3100,7 @@ var
 begin
   Try
     Try
-      GlbVersao := '1.23.34';
+      GlbVersao := '1.24.03';
       IPLocal := GetIP ;
       frmSenha := TfrmSenha.Create(Self, 9, GlbVersao);
       frmSenha.LogUsua := gs_LogUsua;
@@ -3352,7 +3705,6 @@ begin
           if TSplitView(FrmPrincipal.Components[j]).Opened = True then
             TSplitView(FrmPrincipal.Components[j]).Opened := False;
     end;
-
   end;
 end;
 
@@ -3364,7 +3716,7 @@ begin
   begin
     if (FrmPrincipal.Components[i] is TSplitView) and ((FrmPrincipal.Components[i] as TSplitView).Name = Str) then
     begin
-      case AnsiIndexStr(Str, ['SplitMenuPrincipal', 'SplitSubMenuArquivo', 'SplitSubMenuVendas', 'SplitSubMenuTransporte', 'SplitSubMenuImpressão', 'SplitSubMenuManutencao', 'SplitSubMenuLogistica', 'SplitSubMenuAjuda']) of
+      case AnsiIndexStr(Str, ['SplitMenuPrincipal', 'SplitSubMenuArquivo', 'SplitSubMenuVendas', 'SplitSubMenuTransporte', 'SplitSubMenuImpressão', 'SplitSubMenuManutencao', 'SplitSubMenuLogistica']) of
         0:
         begin
           if (FrmPrincipal.Components[i] as TSplitView).Opened = True then
@@ -3421,13 +3773,6 @@ begin
             (FrmPrincipal.Components[i] as TSplitView).Opened := True;
         end;
 
-        7:
-        begin
-          if (FrmPrincipal.Components[i] as TSplitView).Opened = True then
-            (FrmPrincipal.Components[i] as TSplitView).Opened := False
-          else
-            (FrmPrincipal.Components[i] as TSplitView).Opened := True;
-        end;
       end;
     end;
 
@@ -3448,7 +3793,7 @@ begin
   begin
     if (FrmPrincipal.Components[i] is TSplitView) and ((FrmPrincipal.Components[i] as TSplitView).Name = Str) then
     begin
-      case AnsiIndexStr(Str, ['SplitMenuPrincipal', 'SplitSubMenuArquivo', 'SplitSubMenuVendas', 'SplitSubMenuTransporte', 'SplitSubMenuImpressão', 'SplitSubMenuManutencao', 'SplitSubMenuLogistica', 'SplitSubMenuAjuda']) of
+      case AnsiIndexStr(Str, ['SplitMenuPrincipal', 'SplitSubMenuArquivo', 'SplitSubMenuVendas', 'SplitSubMenuTransporte', 'SplitSubMenuImpressão', 'SplitSubMenuManutencao', 'SplitSubMenuLogistica']) of
         0:
         begin
           if (FrmPrincipal.Components[i] as TSplitView).Opened = False then
@@ -3518,18 +3863,11 @@ begin
             ACLogistica.ImageIndex := 13;
         end;
 
-        7:
-        begin
-          if (FrmPrincipal.Components[i] as TSplitView).Opened = False then
-            ACAjuda.ImageIndex := 14
-          else
-            ACAjuda.ImageIndex := 15;
-        end;
-
       end;
     end;
   end;
 
 end;
+
 
 end.

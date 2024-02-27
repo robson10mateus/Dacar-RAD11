@@ -489,7 +489,7 @@ object FrmPedVenda: TFrmPedVenda
     0000000000000000000000000000000000000000000000000000000000000000
     0000000000000000000000000000}
   KeyPreview = True
-  Position = poDesigned
+  Position = poScreenCenter
   Visible = True
   WindowState = wsMaximized
   OnClose = FormClose
@@ -1137,8 +1137,8 @@ object FrmPedVenda: TFrmPedVenda
       object Panel1: TPanel
         Left = 0
         Top = 0
-        Width = 1743
-        Height = 679
+        Width = 1747
+        Height = 680
         Align = alClient
         BevelWidth = 2
         BorderWidth = 1
@@ -1290,7 +1290,7 @@ object FrmPedVenda: TFrmPedVenda
         object grpPedido: TGroupBox
           Left = 3
           Top = 4
-          Width = 1737
+          Width = 1741
           Height = 250
           Align = alTop
           Caption = '                           '
@@ -2319,7 +2319,7 @@ object FrmPedVenda: TFrmPedVenda
         object Panel4: TPanel
           Left = 3
           Top = 3
-          Width = 1737
+          Width = 1741
           Height = 1
           Align = alTop
           BevelOuter = bvNone
@@ -2330,7 +2330,7 @@ object FrmPedVenda: TFrmPedVenda
         object Panel10: TPanel
           Left = 3
           Top = 254
-          Width = 1737
+          Width = 1741
           Height = 3
           Align = alTop
           BevelOuter = bvNone
@@ -2341,7 +2341,7 @@ object FrmPedVenda: TFrmPedVenda
         object Panel11: TPanel
           Left = 3
           Top = 257
-          Width = 1737
+          Width = 1741
           Height = 3
           Align = alTop
           BevelOuter = bvNone
@@ -2352,7 +2352,7 @@ object FrmPedVenda: TFrmPedVenda
         object grpPagamento: TGroupBox
           Left = 3
           Top = 260
-          Width = 1737
+          Width = 1741
           Height = 65
           Align = alTop
           Caption = '                                  '
@@ -2651,7 +2651,7 @@ object FrmPedVenda: TFrmPedVenda
         object grpTransportes: TGroupBox
           Left = 3
           Top = 330
-          Width = 1737
+          Width = 1741
           Height = 120
           Align = alTop
           Caption = '                                '
@@ -3237,7 +3237,7 @@ object FrmPedVenda: TFrmPedVenda
         object Panel12: TPanel
           Left = 3
           Top = 325
-          Width = 1737
+          Width = 1741
           Height = 5
           Align = alTop
           BevelOuter = bvNone
@@ -3248,7 +3248,7 @@ object FrmPedVenda: TFrmPedVenda
         object Panel13: TPanel
           Left = 3
           Top = 450
-          Width = 1737
+          Width = 1741
           Height = 3
           Align = alTop
           BevelOuter = bvNone
@@ -3259,7 +3259,7 @@ object FrmPedVenda: TFrmPedVenda
         object grpDadosAdicionais: TGroupBox
           Left = 3
           Top = 453
-          Width = 1737
+          Width = 1741
           Height = 120
           Align = alTop
           Caption = '                           '
@@ -3678,7 +3678,6 @@ object FrmPedVenda: TFrmPedVenda
         Color = clWindow
         ParentBackground = False
         TabOrder = 1
-        ExplicitWidth = 1743
         object GroupBox6: TGroupBox
           Left = 0
           Top = 3
@@ -3694,7 +3693,6 @@ object FrmPedVenda: TFrmPedVenda
           Font.Style = [fsBold]
           ParentFont = False
           TabOrder = 0
-          ExplicitWidth = 1743
           object btn_ConfObs: TSpeedButton
             Left = 756
             Top = 69
@@ -4209,7 +4207,6 @@ object FrmPedVenda: TFrmPedVenda
           Color = clWindow
           ParentBackground = False
           TabOrder = 1
-          ExplicitWidth = 1743
         end
       end
       object Panel3: TPanel
@@ -4221,7 +4218,6 @@ object FrmPedVenda: TFrmPedVenda
         Color = clWindow
         ParentBackground = False
         TabOrder = 2
-        ExplicitWidth = 1743
         object lblAviso: TLabel
           Left = 48
           Top = 58
@@ -4252,7 +4248,6 @@ object FrmPedVenda: TFrmPedVenda
           Font.Style = [fsBold]
           ParentFont = False
           TabOrder = 0
-          ExplicitWidth = 1741
           object Label48: TLabel
             Left = 10
             Top = 20
@@ -6109,14 +6104,13 @@ object FrmPedVenda: TFrmPedVenda
       object Panel5: TPanel
         Left = 0
         Top = 0
-        Width = 1743
+        Width = 1747
         Height = 3
         Align = alTop
         BevelOuter = bvNone
         Color = clWindow
         ParentBackground = False
         TabOrder = 2
-        ExplicitWidth = 1747
       end
     end
   end

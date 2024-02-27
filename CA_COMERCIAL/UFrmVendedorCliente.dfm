@@ -1329,7 +1329,25 @@ object FrmVendedorCliente: TFrmVendedorCliente
       
         '    (SELECT DISTINCT MAX(V.DT_PEDIVEND) FROM PEDIDO_VENDA V WHER' +
         'E V.FL_STATPEDIVEND <> '#39'CN'#39' AND V.ID_CLIENTE = PV.ID_CLIENTE) AS' +
-        ' ULT_VEND'
+        ' ULT_VEND,'
+      '    C.ID_TIPOVEND || '#39' - '#39' ||'
+      '    CASE WHEN C.ID_TIPOVEND = 1 THEN'
+      '        '#39'Atacado'#39
+      '    WHEN C.ID_TIPOVEND = 2 THEN'
+      '        '#39'Varejo'#39
+      '    WHEN C.ID_TIPOVEND = 4 THEN'
+      '        '#39'Exporta'#231#227'o'#39' '
+      '    WHEN C.ID_TIPOVEND = 5 THEN'
+      '        '#39'Doa'#231#227'o'#39
+      '    WHEN C.ID_TIPOVEND = 6 THEN'
+      '        '#39'Outras'#39
+      '    WHEN C.ID_TIPOVEND = 7 THEN'
+      '        '#39'Exporta'#231#227'o Indireta'#39
+      '    WHEN C.ID_TIPOVEND = 8 THEN'
+      '        '#39'FEC. MANUAL CARGA EXP. EXTERNA'#39
+      '    WHEN C.ID_TIPOVEND = 9 THEN'
+      '        '#39'Emiss'#227'o de NF no ato da entrega'#39
+      '    END AS TIPO_VENDA '
       'FROM CLIENTE C'
       'LEFT JOIN Bairro B ON C.ID_BAIRRO = B.ID_BAIRRO'
       'LEFT JOIN CIDADE M ON B.ID_CIDADE = M.ID_CIDADE '
@@ -1413,6 +1431,10 @@ object FrmVendedorCliente: TFrmVendedorCliente
     end
     object QrULT_VEND: TDateTimeField
       FieldName = 'ULT_VEND'
+    end
+    object QrTIPO_VENDA: TStringField
+      FieldName = 'TIPO_VENDA'
+      Size = 74
     end
   end
   object Ds: TOraDataSource

@@ -6,7 +6,7 @@ uses
 Types, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, ComCtrls, Buttons, DB, MemDS, DBAccess, Ora, Grids,
   DBGrids, ExtCtrls, Mask, DBCtrls, System.Actions,
-  Vcl.ActnList, Vcl.Menus, OraSmart, Clipbrd, Winapi.Windows;
+  Vcl.ActnList, Vcl.Menus, OraSmart, Clipbrd, Winapi.Windows;{, Winapi.Messages;}
 
 
 type
@@ -947,6 +947,7 @@ type
     function fValidaPrecoTabela(nQtde:Integer):Boolean;
     function fRetornaColunaPreco():string;
     procedure pValidaMultiplosPedidos(sCliente:string; dDataEntrega : TDateTime);
+//    procedure WMSIZE(var Msg: TMessage); message WM_SIZE;
 
   public
     // VARIAVEIS INTERGER
@@ -8905,5 +8906,21 @@ begin
   qryTempC.Close;
 
 end;
+
+//procedure TFrmPedVenda.WMSIZE(var Msg: TMessage);
+//begin
+//  inherited;
+//  if Msg.WParam = SIZE_MAXIMIZED then
+//  begin
+//    ShowWindow(Handle, SW_MAXIMIZE);
+//    Left := 0;
+//    Top := 0;
+//    if FrmPrincipal.SplitMenuPrincipal.Opened then
+//    begin
+//      Width := FrmPrincipal.Width - 130;
+//      Height := FrmPrincipal.Height - 70;
+//    end;
+//  end;
+//end;
 
 end.

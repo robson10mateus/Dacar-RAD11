@@ -48,6 +48,7 @@ type
     QrVENDEDOR: TStringField;
     QrFL_RESGATADO: TStringField;
     QrULT_VEND: TDateTimeField;
+    QrTIPO_VENDA: TStringField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormShow(Sender: TObject);
     procedure Sb_SairClick(Sender: TObject);
@@ -311,7 +312,8 @@ begin
       Write(Arquivo, 'SIMPLES NACIONAL;');
       Write(Arquivo, 'TABELA DE PREÇO;');
       write(Arquivo, 'VENDEDOR;');
-      WriteLn(Arquivo, 'ÚLTIMA VENDA;');
+      Write(Arquivo, 'ÚLTIMA VENDA;');
+      Writeln(Arquivo, 'TIPO DE VENDA;');
 
       Qr.First;
 
@@ -329,7 +331,8 @@ begin
         write(Arquivo, QrSIMPLES.AsString + ';');
         write(Arquivo, QrNM_TABEPREC.AsString + ';');
         Write(Arquivo, QrVENDEDOR.AsString + ';');
-        Writeln(Arquivo, QrULT_VEND.AsString + ';');
+        Write(Arquivo, QrULT_VEND.AsString + ';');
+        Writeln(Arquivo, QrTIPO_VENDA.AsString + ';');
 
         Qr.Next;
       end;

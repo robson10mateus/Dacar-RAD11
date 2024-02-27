@@ -163,8 +163,8 @@ object frmReprogramarDevolucao: TfrmReprogramarDevolucao
       object Panel1: TPanel
         Left = 0
         Top = 200
-        Width = 1393
-        Height = 372
+        Width = 1389
+        Height = 371
         Align = alClient
         Caption = 'Panel1'
         Color = clWindow
@@ -177,6 +177,8 @@ object frmReprogramarDevolucao: TfrmReprogramarDevolucao
         ParentBackground = False
         ParentFont = False
         TabOrder = 0
+        ExplicitWidth = 1393
+        ExplicitHeight = 372
         object DBGrid2: TDBGrid
           Left = 1
           Top = 1
@@ -236,7 +238,7 @@ object frmReprogramarDevolucao: TfrmReprogramarDevolucao
       object Panel2: TPanel
         Left = 0
         Top = 0
-        Width = 1393
+        Width = 1389
         Height = 200
         Align = alTop
         Color = clWindow
@@ -249,6 +251,7 @@ object frmReprogramarDevolucao: TfrmReprogramarDevolucao
         ParentBackground = False
         ParentFont = False
         TabOrder = 1
+        ExplicitWidth = 1393
         object Label1: TLabel
           Left = 105
           Top = 9
@@ -1050,32 +1053,36 @@ object frmReprogramarDevolucao: TfrmReprogramarDevolucao
     Session = FrmPrincipal.DB
     SQL.Strings = (
       'SELECT'
-      '  PDV.EMPRESA,'
-      '  PDV.FILIAL,'
-      '  PDV.ID_PEDIDEVOVEND,'
-      '  PDV.ID_PEDIVEND,'
-      '  PDV.FL_TIPOPEDIDEVOVEND,'
-      '  PDV.DT_PEDIDEVOVEND,'
-      '  PV.DT_ENTRPEDIVEND,'
-      '  CL.ID_CLIENTE,'
-      '  CL.NM_CLIENTE,'
-      '  VD.ID_VENDEDOR,'
-      '  VD.NM_VENDEDOR,'
-      '  PV.ID_CONTA,'
-      '  CASE PV.FL_REPROGRAMADO WHEN '#39'S'#39' THEN '
-      '    '#39'Reprogramado'#39
-      '  ELSE '
-      '    '#39'N'#227'o Reprogramado'#39' '
-      '  END AS STATUS, PV.FL_REPROGRAMADO  '
+      '    PDV.EMPRESA,'
+      '    PDV.FILIAL,'
+      '    PDV.ID_PEDIDEVOVEND,'
+      '    PDV.ID_PEDIVEND,'
+      '    PDV.FL_TIPOPEDIDEVOVEND,'
+      '    PDV.DT_PEDIDEVOVEND,'
+      '    PV.DT_ENTRPEDIVEND,'
+      '    CL.ID_CLIENTE,'
+      '    CL.NM_CLIENTE,'
+      '    VD.ID_VENDEDOR,'
+      '    VD.NM_VENDEDOR,'
+      '    PV.ID_CONTA,'
+      '    CASE PV.FL_REPROGRAMADO WHEN '#39'S'#39' THEN '
+      '        '#39'Reprogramado'#39
+      '    ELSE '
+      '        '#39'N'#227'o Reprogramado'#39' '
+      '    END AS STATUS, '
+      '    PV.FL_REPROGRAMADO, '
+      '    CL.FL_BLOQADMICLIE '
       'FROM'
-      '  PEDIDO_DEVOLUCAO_VENDA PDV'
-      '  INNER JOIN PEDIDO_VENDA PV ON PV.ID_PEDIVEND = PDV.ID_PEDIVEND'
-      '  INNER JOIN VENDEDOR VD ON VD.ID_VENDEDOR = PV.ID_VENDEDOR'
-      '  INNER JOIN CLIENTE CL ON CL.ID_CLIENTE = PV.ID_CLIENTE'
-      'WHERE'
+      '    PEDIDO_DEVOLUCAO_VENDA PDV'
       
-        '  (PDV.FL_TIPOPEDIDEVOVEND = '#39'T'#39') AND TO_DATE(PDV.DT_PEDIDEVOVEN' +
-        'D) = TO_DATE(SYSDATE)'
+        '    INNER JOIN PEDIDO_VENDA PV ON PV.ID_PEDIVEND = PDV.ID_PEDIVE' +
+        'ND'
+      '    INNER JOIN VENDEDOR VD ON VD.ID_VENDEDOR = PV.ID_VENDEDOR'
+      '    INNER JOIN CLIENTE CL ON CL.ID_CLIENTE = PV.ID_CLIENTE'
+      'WHERE'
+      '    (PDV.FL_TIPOPEDIDEVOVEND = '#39'T'#39') '
+      '    AND TO_DATE(PDV.DT_PEDIDEVOVEND) = TO_DATE(SYSDATE)'
+      '    AND (CL.FL_BLOQADMICLIE <> '#39'S'#39')'
       'ORDER BY PDV.ID_PEDIDEVOVEND DESC')
     FetchAll = True
     CachedUpdates = True

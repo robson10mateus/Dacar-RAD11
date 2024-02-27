@@ -7,7 +7,7 @@ object FrmCadCidade: TFrmCadCidade
   ActiveControl = PageControl1
   BorderStyle = bsSingle
   Caption = 'Comercial Dacar - Cadastro de Cidades'
-  Color = clBackground
+  Color = clWindow
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12

@@ -1715,13 +1715,13 @@ begin
     DbLatitude.Enabled := True;
     DbLongitude.Enabled := True;
     DBHPage.Enabled := True;
-    DBLograd.Enabled := True;
-    DBNum.Enabled := True;
-    DBLTplog.Enabled := True;
-    DBCompl.Enabled := True;
-    DBCep.Enabled := True;
-    DBCeppst.Enabled := True;
-    DBEmail.Enabled := True;
+//    DBLograd.Enabled := True;
+//    DBNum.Enabled := True;
+//    DBLTplog.Enabled := True;
+//    DBCompl.Enabled := True;
+//    DBCep.Enabled := True;
+//    DBCeppst.Enabled := True;
+//    DBEmail.Enabled := True;
 
     OQry_Clie.Edit;
   end;
@@ -2446,6 +2446,7 @@ end;
 procedure TFrmClientes.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
+  FrmClientes:=Nil;
   FrmPrincipal.VEN027.Enabled:= True;
   Action:=caFree;
 end;

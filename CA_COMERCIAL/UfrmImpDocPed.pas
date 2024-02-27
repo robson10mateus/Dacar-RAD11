@@ -1024,7 +1024,7 @@ end;
 procedure TfrmImpDocPed.FormClose(Sender: TObject;
  var Action: TCloseAction);
 begin
-  FrmPedVenda:=Nil;
+  FrmImpDocPed:=Nil;
   FrmPrincipal.VEN005.Enabled:= True;
   Action:=caFree;
 end;
