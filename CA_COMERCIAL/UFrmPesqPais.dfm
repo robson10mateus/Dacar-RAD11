@@ -9,7 +9,7 @@ object FrmPesqPais: TFrmPesqPais
   BorderIcons = [biHelp]
   BorderStyle = bsSingle
   Caption = 'Pesquisa Pa'#237's '
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
   Font.Height = 11

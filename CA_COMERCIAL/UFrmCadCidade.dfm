@@ -1,18 +1,19 @@
 object FrmCadCidade: TFrmCadCidade
   Left = 635
   Top = 372
-  Width = 675
+  Width = 680
   Height = 430
   VertScrollBar.Range = 45
   ActiveControl = PageControl1
   BorderStyle = bsSingle
   Caption = 'Comercial Dacar - Cadastro de Cidades'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  FormStyle = fsMDIChild
   Icon.Data = {
     000001000300101000000100200068040000360000002020000001002000A810
     00009E0400003030000001002000A82500004615000028000000100000002000
@@ -487,6 +488,7 @@ object FrmCadCidade: TFrmCadCidade
     0000000000000000000000000000000000000000000000000000000000000000
     0000000000000000000000000000}
   Position = poScreenCenter
+  Visible = True
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
@@ -494,7 +496,7 @@ object FrmCadCidade: TFrmCadCidade
   object PageControl1: TPageControl
     Left = 0
     Top = 45
-    Width = 663
+    Width = 668
     Height = 347
     ActivePage = TabLista
     Align = alClient
@@ -754,7 +756,7 @@ object FrmCadCidade: TFrmCadCidade
       object MResul: TMemo
         Left = 270
         Top = 110
-        Width = 380
+        Width = 375
         Height = 150
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
@@ -812,7 +814,7 @@ object FrmCadCidade: TFrmCadCidade
       object DBGrid1: TDBGrid
         Left = 0
         Top = 0
-        Width = 655
+        Width = 660
         Height = 317
         Align = alClient
         DataSource = DtSrcCadCidade
@@ -904,9 +906,9 @@ object FrmCadCidade: TFrmCadCidade
         Top = 416
         Width = 786
         Height = 48
-        Color = clWindow
         ParentBackground = False
         TabOrder = 1
+        Visible = False
         object Label1: TLabel
           Left = 17
           Top = 7
@@ -1258,10 +1260,9 @@ object FrmCadCidade: TFrmCadCidade
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 663
+    Width = 668
     Height = 45
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15

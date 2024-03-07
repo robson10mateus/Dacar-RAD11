@@ -175,6 +175,7 @@ end;
 procedure TFrmAtualVersao.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
+  FrmAtualVersao:=Nil;
   FrmPrincipal.VEN018.Enabled:= True;
   Action:=caFree;
 end;

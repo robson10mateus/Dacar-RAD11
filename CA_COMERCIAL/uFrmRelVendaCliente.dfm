@@ -281,6 +281,8 @@ object FrmRelVendaCliente: TFrmRelVendaCliente
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 1289
+    ExplicitHeight = 591
     object TabCriterio: TTabSheet
       Caption = 'Crit'#233'rio'
       object Label6: TLabel

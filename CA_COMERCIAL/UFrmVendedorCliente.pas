@@ -48,7 +48,7 @@ type
     QrVENDEDOR: TStringField;
     QrFL_RESGATADO: TStringField;
     QrULT_VEND: TDateTimeField;
-    QrTIPO_VENDA: TStringField;
+    QrNM_TIPOPEDIVEND: TStringField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormShow(Sender: TObject);
     procedure Sb_SairClick(Sender: TObject);
@@ -84,6 +84,7 @@ uses Principal, Global, ufrmConsultaCidades, UFrmPesqVend, UFrmRelVendedorClient
 procedure TFrmVendedorCliente.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
+  FrmVendedorCliente:=nil;
   FrmPrincipal.VEN050.Enabled:= True;
   Action:=caFree;
 end;
@@ -313,7 +314,7 @@ begin
       Write(Arquivo, 'TABELA DE PREÇO;');
       write(Arquivo, 'VENDEDOR;');
       Write(Arquivo, 'ÚLTIMA VENDA;');
-      Writeln(Arquivo, 'TIPO DE VENDA;');
+      Writeln(Arquivo, 'TIPO DE PEDIDO DE SAIDA;');
 
       Qr.First;
 
@@ -332,7 +333,7 @@ begin
         write(Arquivo, QrNM_TABEPREC.AsString + ';');
         Write(Arquivo, QrVENDEDOR.AsString + ';');
         Write(Arquivo, QrULT_VEND.AsString + ';');
-        Writeln(Arquivo, QrTIPO_VENDA.AsString + ';');
+        Writeln(Arquivo, QrNM_TIPOPEDIVEND.AsString + ';');
 
         Qr.Next;
       end;

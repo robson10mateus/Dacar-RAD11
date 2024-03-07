@@ -242,6 +242,7 @@ end;
 procedure TFrmPedagio.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
+  FrmPedagio:=nil;
   FrmPrincipal.VEN023.Enabled:= True;
   Action:=caFree;
 end;

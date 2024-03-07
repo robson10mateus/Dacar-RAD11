@@ -353,7 +353,6 @@ object FrmAlteraSenha: TFrmAlteraSenha
     Caption = 
       'ATEN'#199#195'O! A SENHA '#201' DE RESPONSABILIDADE '#218'NICA E EXCLUSIVAMENTE DO' +
       ' USU'#193'RIO.'
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clRed
     Font.Height = 15

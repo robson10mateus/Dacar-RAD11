@@ -81,8 +81,9 @@ uses Principal,Global, UFrmSeldata, UFrmRelVendaFrangoAbate ;
 procedure TFrmConsVendaFrangoAbate.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-     FrmPrincipal.VEN047.Enabled:= True;
-     Action:=caFree;
+  FrmConsVendaFrangoAbate:=nil;
+  FrmPrincipal.VEN047.Enabled:= True;
+  Action:=caFree;
 end;
 
 procedure TFrmConsVendaFrangoAbate.bt_PesqDTIClick(Sender: TObject);

@@ -20,10 +20,9 @@ object frmValidaCadastroExistenteCliente: TfrmValidaCadastroExistenteCliente
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 448
+    Width = 444
     Height = 20
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -32,16 +31,14 @@ object frmValidaCadastroExistenteCliente: TfrmValidaCadastroExistenteCliente
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 444
   end
   object Panel2: TPanel
     Left = 0
     Top = 20
-    Width = 448
+    Width = 444
     Height = 41
     Align = alTop
     Caption = 'Informe o CNPJ/ CPF'
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = 15
@@ -51,15 +48,13 @@ object frmValidaCadastroExistenteCliente: TfrmValidaCadastroExistenteCliente
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 444
   end
   object Panel3: TPanel
     Left = 0
     Top = 61
-    Width = 448
-    Height = 94
+    Width = 444
+    Height = 93
     Align = alClient
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = 15
@@ -69,7 +64,6 @@ object frmValidaCadastroExistenteCliente: TfrmValidaCadastroExistenteCliente
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
-    ExplicitWidth = 444
     ExplicitHeight = 57
     object SB_CONFIRMA: TSpeedButton
       Left = 198

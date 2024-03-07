@@ -33,10 +33,9 @@ object FrmHistoricoPrecoTelevendas: TFrmHistoricoPrecoTelevendas
     Font.Style = []
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 792
     object SB_PRIMEIRO: TSpeedButton
-      Left = 1
-      Top = 4
+      Left = 0
+      Top = 0
       Width = 35
       Height = 36
       Hint = 'Primeiro'
@@ -227,8 +226,8 @@ object FrmHistoricoPrecoTelevendas: TFrmHistoricoPrecoTelevendas
       OnMouseMove = SB_PRIMEIROMouseMove
     end
     object SB_ANTERIOR: TSpeedButton
-      Left = 36
-      Top = 4
+      Left = 35
+      Top = 0
       Width = 35
       Height = 36
       Hint = 'Anterior'
@@ -419,8 +418,8 @@ object FrmHistoricoPrecoTelevendas: TFrmHistoricoPrecoTelevendas
       OnMouseMove = SB_ANTERIORMouseMove
     end
     object SB_PROXIMO: TSpeedButton
-      Left = 71
-      Top = 4
+      Left = 70
+      Top = 0
       Width = 35
       Height = 36
       Hint = 'Pr'#243'ximo'
@@ -611,8 +610,8 @@ object FrmHistoricoPrecoTelevendas: TFrmHistoricoPrecoTelevendas
       OnMouseMove = SB_PROXIMOMouseMove
     end
     object SB_ULTIMO: TSpeedButton
-      Left = 106
-      Top = 4
+      Left = 105
+      Top = 0
       Width = 35
       Height = 36
       Hint = #218'ltimo'
@@ -803,8 +802,8 @@ object FrmHistoricoPrecoTelevendas: TFrmHistoricoPrecoTelevendas
       OnMouseMove = SB_ULTIMOMouseMove
     end
     object SB_NOVO: TSpeedButton
-      Left = 149
-      Top = 4
+      Left = 140
+      Top = 0
       Width = 35
       Height = 36
       Hint = 'Incluir'
@@ -995,8 +994,8 @@ object FrmHistoricoPrecoTelevendas: TFrmHistoricoPrecoTelevendas
       OnMouseMove = SB_NOVOMouseMove
     end
     object SB_EXCLUI: TSpeedButton
-      Left = 184
-      Top = 4
+      Left = 175
+      Top = 0
       Width = 35
       Height = 36
       Hint = 'Excluir'
@@ -1187,8 +1186,8 @@ object FrmHistoricoPrecoTelevendas: TFrmHistoricoPrecoTelevendas
       OnMouseMove = SB_EXCLUIMouseMove
     end
     object SB_CONFIRMA: TSpeedButton
-      Left = 254
-      Top = 4
+      Left = 210
+      Top = 0
       Width = 35
       Height = 36
       Hint = 'Confirmar'
@@ -1380,8 +1379,8 @@ object FrmHistoricoPrecoTelevendas: TFrmHistoricoPrecoTelevendas
       OnMouseMove = SB_CONFIRMAMouseMove
     end
     object SB_CANCEL: TSpeedButton
-      Left = 289
-      Top = 4
+      Left = 245
+      Top = 0
       Width = 35
       Height = 36
       Hint = 'Cancelar'
@@ -1573,8 +1572,8 @@ object FrmHistoricoPrecoTelevendas: TFrmHistoricoPrecoTelevendas
       OnMouseMove = SB_CANCELMouseMove
     end
     object Sb_Sair: TSpeedButton
-      Left = 748
-      Top = 4
+      Left = 280
+      Top = 0
       Width = 35
       Height = 36
       Hint = 'Sair'
@@ -1764,8 +1763,8 @@ object FrmHistoricoPrecoTelevendas: TFrmHistoricoPrecoTelevendas
       OnClick = Sb_SairClick
     end
     object SB_EDIT: TSpeedButton
-      Left = 219
-      Top = 4
+      Left = 315
+      Top = 0
       Width = 35
       Height = 36
       Hint = 'Editar'
@@ -1956,15 +1955,15 @@ object FrmHistoricoPrecoTelevendas: TFrmHistoricoPrecoTelevendas
       OnMouseMove = SB_EDITMouseMove
     end
     object ToolButton1: TToolButton
-      Left = 141
-      Top = 4
+      Left = 350
+      Top = 0
       Width = 8
       Caption = 'ToolButton1'
       Style = tbsSeparator
     end
     object ToolButton3: TToolButton
-      Left = 324
-      Top = 4
+      Left = 358
+      Top = 0
       Width = 424
       Caption = 'ToolButton3'
       ImageIndex = 1
@@ -2329,7 +2328,6 @@ object FrmHistoricoPrecoTelevendas: TFrmHistoricoPrecoTelevendas
         Top = 416
         Width = 786
         Height = 48
-        Color = clWindow
         ParentBackground = False
         TabOrder = 1
       end
@@ -2343,7 +2341,6 @@ object FrmHistoricoPrecoTelevendas: TFrmHistoricoPrecoTelevendas
         Width = 784
         Height = 461
         Align = alClient
-        Color = clWindow
         ParentBackground = False
         TabOrder = 0
         object Label14: TLabel

@@ -8,7 +8,7 @@ object FrmVenProd: TFrmVenProd
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Relat'#243'rio de Resumo de Vendas por Produtos'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = 11
@@ -38,7 +38,6 @@ object FrmVenProd: TFrmVenProd
     Font.Style = []
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 623
     object Sb_Sair: TSpeedButton
       Left = 0
       Top = 0
@@ -245,7 +244,6 @@ object FrmVenProd: TFrmVenProd
     Width = 638
     Height = 66
     Align = alClient
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -255,8 +253,6 @@ object FrmVenProd: TFrmVenProd
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 623
-    ExplicitHeight = 55
     object Label1: TLabel
       Left = 15
       Top = 34
@@ -273,7 +269,7 @@ object FrmVenProd: TFrmVenProd
     end
     object lbDtCorte: TLabel
       Left = 1
-      Top = 54
+      Top = 51
       Width = 3
       Height = 15
       Align = alBottom

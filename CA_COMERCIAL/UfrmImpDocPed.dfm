@@ -8,7 +8,7 @@ object frmImpDocPed: TfrmImpDocPed
   BorderIcons = [biMinimize, biMaximize]
   BorderStyle = bsSingle
   Caption = 'Comercial Dacar - Faturamento / Emiss'#227'o NF-e'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -25,8 +25,8 @@ object frmImpDocPed: TfrmImpDocPed
   object PageControl1: TPageControl
     Left = 0
     Top = 161
-    Width = 1417
-    Height = 554
+    Width = 1413
+    Height = 553
     ActivePage = TabSheet1
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -38,8 +38,6 @@ object frmImpDocPed: TfrmImpDocPed
     ParentFont = False
     TabOrder = 0
     OnChange = PageControl1Change
-    ExplicitWidth = 1413
-    ExplicitHeight = 553
     object TabSheet1: TTabSheet
       Caption = 'Crit'#233'rio'
       ImageIndex = 2
@@ -525,7 +523,6 @@ object frmImpDocPed: TfrmImpDocPed
         Height = 40
         Align = alBottom
         Alignment = taRightJustify
-        Color = clWindow
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = 15
@@ -648,7 +645,6 @@ object frmImpDocPed: TfrmImpDocPed
         Width = 1409
         Height = 484
         Align = alClient
-        Color = clWindow
         ParentBackground = False
         TabOrder = 1
         object grdDados: TDBGrid
@@ -795,11 +791,10 @@ object frmImpDocPed: TfrmImpDocPed
   object Panel8: TPanel
     Left = 0
     Top = 116
-    Width = 1417
+    Width = 1413
     Height = 45
     Hint = 'Op'#231#245'es Gerais de Nota Fsical Eletr'#244'nica'
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -810,7 +805,6 @@ object frmImpDocPed: TfrmImpDocPed
     ParentShowHint = False
     ShowHint = True
     TabOrder = 1
-    ExplicitWidth = 1413
     object SB_PRIMEIRO: TSpeedButton
       Left = 5
       Top = 5
@@ -1999,10 +1993,9 @@ object frmImpDocPed: TfrmImpDocPed
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 1417
+    Width = 1413
     Height = 116
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -2012,7 +2005,6 @@ object frmImpDocPed: TfrmImpDocPed
     ParentFont = False
     TabOrder = 2
     Visible = False
-    ExplicitWidth = 1413
   end
   object DSPediVe: TOraDataSource
     DataSet = QImpDocPed

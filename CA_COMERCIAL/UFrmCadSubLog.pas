@@ -576,7 +576,9 @@ end;
 procedure TFrmCadSubLog.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
+  FrmCadSubLog:=nil;
   FrmPrincipal.CadastrodeSubregiesLogsticas1.Enabled:= True;
+  Action:=caFree;
 end;
 
 procedure TFrmCadSubLog.DBGrid1TitleClick(Column: TColumn);

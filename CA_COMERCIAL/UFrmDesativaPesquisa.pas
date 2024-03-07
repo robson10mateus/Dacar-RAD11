@@ -318,7 +318,9 @@ end;
 procedure TFrmDesativaPesquisa.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
+  FrmDesativaPesquisa:=nil;
   FrmPrincipal.VEN035.Enabled:= True;
+  Action:=caFree;
 end;
 
 end.

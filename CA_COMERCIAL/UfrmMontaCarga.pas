@@ -390,6 +390,8 @@ begin
   QrAcesso.Post;
   QrAcesso.CommitUpdates;
   QrAcesso.ApplyUpdates;
+
+  FrmMontaCarga:=nil;
   FrmPrincipal.VEN006.Enabled:= True;
   Action:=caFree;
 end;

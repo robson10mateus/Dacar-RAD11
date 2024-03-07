@@ -655,7 +655,9 @@ end;
 procedure TFrmCadCidade.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-     FrmPrincipal.CadastrodeCidades1.Enabled:= True;
+  FrmCadCidade:=nil;
+  FrmPrincipal.CadastrodeCidades1.Enabled:= True;
+  Action:=caFree;
 end;
 
 procedure TFrmCadCidade.DBGrid1DrawColumnCell(Sender: TObject;

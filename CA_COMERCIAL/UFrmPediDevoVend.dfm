@@ -6,7 +6,7 @@ object FrmPediDevoVend: TFrmPediDevoVend
   VertScrollBar.Range = 45
   BorderStyle = bsSingle
   Caption = 'Comercial Dacar - Devolu'#231#227'o / Quebra de Venda'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = 11
@@ -501,8 +501,8 @@ object FrmPediDevoVend: TFrmPediDevoVend
   object PageControl1: TPageControl
     Left = 0
     Top = 45
-    Width = 1401
-    Height = 714
+    Width = 1397
+    Height = 713
     ActivePage = TabCriterio
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -513,8 +513,6 @@ object FrmPediDevoVend: TFrmPediDevoVend
     Font.Style = []
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 1397
-    ExplicitHeight = 713
     object TabCriterio: TTabSheet
       Caption = ' Crit'#233'rio '
       object Label6: TLabel
@@ -2150,7 +2148,6 @@ object FrmPediDevoVend: TFrmPediDevoVend
         Width = 1393
         Height = 105
         Align = alTop
-        Color = clWindow
         ParentBackground = False
         TabOrder = 0
         object Label32: TLabel
@@ -2465,7 +2462,6 @@ object FrmPediDevoVend: TFrmPediDevoVend
         Width = 1393
         Height = 266
         Align = alBottom
-        Color = clWindow
         ParentBackground = False
         TabOrder = 2
         object grpProduto: TGroupBox
@@ -3179,10 +3175,9 @@ object FrmPediDevoVend: TFrmPediDevoVend
   object Panel6: TPanel
     Left = 0
     Top = 0
-    Width = 1401
+    Width = 1397
     Height = 45
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -3192,7 +3187,6 @@ object FrmPediDevoVend: TFrmPediDevoVend
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 1397
     object SB_PRIMEIRO: TSpeedButton
       Left = 5
       Top = 5

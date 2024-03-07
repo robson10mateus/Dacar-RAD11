@@ -72,8 +72,9 @@ end;
 
 procedure TfrmPedidosPosHorario.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
-  FrmPrincipal.VEN064.Enabled := True;
-  Action := Cafree;
+  frmPedidosPosHorario:=nil;
+  FrmPrincipal.VEN064.Enabled:= True;
+  Action:=caFree;
 end;
 
 procedure TfrmPedidosPosHorario.brnDataInicialClick(Sender: TObject);

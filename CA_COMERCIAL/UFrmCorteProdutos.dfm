@@ -33,6 +33,8 @@ object FrmCorteProdutos: TFrmCorteProdutos
     Font.Style = []
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 921
+    ExplicitHeight = 457
     object Tab_Criterio: TTabSheet
       Caption = 'Crit'#233'rio'
       object Label6: TLabel
@@ -772,73 +774,25 @@ object FrmCorteProdutos: TFrmCorteProdutos
           item
             Expanded = False
             FieldName = 'ID_PEDIVEND'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Height = 15
-            Font.Name = 'Arial'
-            Font.Pitch = fpVariable
-            Font.Style = []
             Title.Caption = 'N'#186' Pedido'
-            Title.Font.Charset = DEFAULT_CHARSET
-            Title.Font.Color = clBlack
-            Title.Font.Height = 16
-            Title.Font.Name = 'Arial'
-            Title.Font.Pitch = fpVariable
-            Title.Font.Style = []
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'NM_CLIENTE'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Height = 15
-            Font.Name = 'Arial'
-            Font.Pitch = fpVariable
-            Font.Style = []
             Title.Caption = 'Cliente'
-            Title.Font.Charset = DEFAULT_CHARSET
-            Title.Font.Color = clBlack
-            Title.Font.Height = 16
-            Title.Font.Name = 'Arial'
-            Title.Font.Pitch = fpVariable
-            Title.Font.Style = []
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'QN_CAIXCORTITEMPEDIVEND'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Height = 15
-            Font.Name = 'Arial'
-            Font.Pitch = fpVariable
-            Font.Style = []
             Title.Caption = 'Cx. Cortadas'
-            Title.Font.Charset = DEFAULT_CHARSET
-            Title.Font.Color = clBlack
-            Title.Font.Height = 16
-            Title.Font.Name = 'Arial'
-            Title.Font.Pitch = fpVariable
-            Title.Font.Style = []
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'NM_PRODMATEEMBA'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Height = 15
-            Font.Name = 'Arial'
-            Font.Pitch = fpVariable
-            Font.Style = []
             Title.Caption = 'Produto'
-            Title.Font.Charset = DEFAULT_CHARSET
-            Title.Font.Color = clBlack
-            Title.Font.Height = 16
-            Title.Font.Name = 'Arial'
-            Title.Font.Pitch = fpVariable
-            Title.Font.Style = []
             Width = 200
             Visible = True
           end>

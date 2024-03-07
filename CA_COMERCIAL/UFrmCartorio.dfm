@@ -8,7 +8,7 @@ object FrmCartorio: TFrmCartorio
   BorderIcons = []
   BorderStyle = bsSingle
   Caption = 'T'#237'tulos enviados a Cart'#243'rio'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -19,7 +19,7 @@ object FrmCartorio: TFrmCartorio
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 311
+    Width = 307
     Height = 41
     Anchors = []
     ButtonHeight = 37
@@ -33,6 +33,7 @@ object FrmCartorio: TFrmCartorio
     Font.Style = []
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 311
     object SB_PRIMEIRO: TSpeedButton
       Left = 0
       Top = 0
@@ -1000,8 +1001,8 @@ object FrmCartorio: TFrmCartorio
   object PageControl1: TPageControl
     Left = 0
     Top = 41
-    Width = 311
-    Height = 286
+    Width = 307
+    Height = 285
     ActivePage = TabSheet1
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -1012,8 +1013,6 @@ object FrmCartorio: TFrmCartorio
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 307
-    ExplicitHeight = 285
     object TabSheet1: TTabSheet
       Caption = 'Detalhe'
       Font.Charset = DEFAULT_CHARSET
@@ -1070,11 +1069,10 @@ object FrmCartorio: TFrmCartorio
   end
   object Panel1: TPanel
     Left = 0
-    Top = 327
-    Width = 311
+    Top = 326
+    Width = 307
     Height = 32
     Align = alBottom
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -1083,8 +1081,6 @@ object FrmCartorio: TFrmCartorio
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
-    ExplicitTop = 326
-    ExplicitWidth = 307
     object Shape1: TShape
       Left = 93
       Top = 7

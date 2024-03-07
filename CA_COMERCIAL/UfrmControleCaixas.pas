@@ -201,9 +201,9 @@ end;
 procedure TFrmControleCaixas.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
+  FrmControleCaixas:=nil;
   FrmPrincipal.VEN054.Enabled := True;
   Action := Cafree;
-
 end;
 
 procedure TFrmControleCaixas.Sb_SairClick(Sender: TObject);

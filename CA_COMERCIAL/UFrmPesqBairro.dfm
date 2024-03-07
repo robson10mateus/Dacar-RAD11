@@ -536,7 +536,6 @@ object FrmPesqBairro: TFrmPesqBairro
     Width = 514
     Height = 45
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -976,7 +975,6 @@ object FrmPesqBairro: TFrmPesqBairro
     Width = 514
     Height = 125
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15

@@ -81,6 +81,7 @@ uses Principal, UFrmPesqVend, Global,UFrmPesqCid, UFrmRelSaldoCaixas, UFrmPesqGr
 procedure TFrmSaldoCaixas.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
+  FrmSaldoCaixas:=nil;
   FrmPrincipal.VEN055.Enabled:= True;
   Action:=caFree;
 end;

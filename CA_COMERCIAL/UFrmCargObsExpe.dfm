@@ -1483,7 +1483,6 @@ object FrmCargObsExpe: TFrmCargObsExpe
     Width = 627
     Height = 28
     Align = alBottom
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15

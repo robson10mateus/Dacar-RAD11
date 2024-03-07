@@ -9,7 +9,7 @@ object FrmPesqGrupo: TFrmPesqGrupo
   BorderIcons = [biHelp]
   BorderStyle = bsSingle
   Caption = 'Pesquisa Grupo de Produtos'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
   Font.Height = 11

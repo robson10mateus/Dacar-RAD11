@@ -831,7 +831,9 @@ end;
 procedure TFrmHistoricoPrecoTelevendas.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
+  FrmHistoricoPrecoTelevendas:=nil;
   FrmPrincipal.VEN039.Enabled:= True;
+  Action:=caFree;
 end;
 
 end.

@@ -7,7 +7,7 @@ object FrmSaldoVendas: TFrmSaldoVendas
   ActiveControl = PageControl1
   BorderStyle = bsDialog
   Caption = 'Saldo em rela'#231#227'o as cotas diarias de venda.'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = 11
@@ -23,8 +23,8 @@ object FrmSaldoVendas: TFrmSaldoVendas
   object PageControl1: TPageControl
     Left = 0
     Top = 41
-    Width = 687
-    Height = 408
+    Width = 683
+    Height = 407
     ActivePage = TabSheet1
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -35,8 +35,6 @@ object FrmSaldoVendas: TFrmSaldoVendas
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 683
-    ExplicitHeight = 407
     object TabSheet1: TTabSheet
       Caption = 'Detalhe'
       Font.Charset = DEFAULT_CHARSET
@@ -117,7 +115,6 @@ object FrmSaldoVendas: TFrmSaldoVendas
         Width = 679
         Height = 160
         Align = alTop
-        Color = clWindow
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = 15
@@ -537,7 +534,7 @@ object FrmSaldoVendas: TFrmSaldoVendas
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 687
+    Width = 683
     Height = 41
     Anchors = []
     ButtonHeight = 37
@@ -551,6 +548,7 @@ object FrmSaldoVendas: TFrmSaldoVendas
     Font.Style = []
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 687
     object SB_PRIMEIRO: TSpeedButton
       Left = 0
       Top = 0
@@ -1517,11 +1515,10 @@ object FrmSaldoVendas: TFrmSaldoVendas
   end
   object Panel1: TPanel
     Left = 0
-    Top = 449
-    Width = 687
+    Top = 448
+    Width = 683
     Height = 26
     Align = alBottom
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -1531,8 +1528,6 @@ object FrmSaldoVendas: TFrmSaldoVendas
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
-    ExplicitTop = 448
-    ExplicitWidth = 683
     object Shape1: TShape
       Left = 269
       Top = 6

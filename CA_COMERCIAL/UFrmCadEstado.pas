@@ -670,7 +670,9 @@ end;
 procedure TFrmCadEstado.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
+  FrmCadEstado := nil;
   FrmPrincipal.CadastrodeEstados1.Enabled:= True;
+  Action := caFree;
 end;
 
 end.

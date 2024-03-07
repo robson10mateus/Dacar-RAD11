@@ -5,8 +5,9 @@ object FrmEntradaSaidaCaixas: TFrmEntradaSaidaCaixas
   Height = 666
   VertScrollBar.Range = 45
   ActiveControl = PageControl1
+  BorderStyle = bsSingle
   Caption = 'Comercial Dacar - Controle de Caixas'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -28,7 +29,6 @@ object FrmEntradaSaidaCaixas: TFrmEntradaSaidaCaixas
     Width = 1461
     Height = 583
     Align = alClient
-    Color = clWindow
     ParentBackground = False
     TabOrder = 0
     ExplicitWidth = 1457
@@ -513,7 +513,6 @@ object FrmEntradaSaidaCaixas: TFrmEntradaSaidaCaixas
           Width = 1451
           Height = 121
           Align = alClient
-          Color = clWindow
           ParentBackground = False
           TabOrder = 0
           object Label1: TLabel
@@ -735,7 +734,6 @@ object FrmEntradaSaidaCaixas: TFrmEntradaSaidaCaixas
           Width = 1451
           Height = 200
           Align = alTop
-          Color = clWindow
           ParentBackground = False
           TabOrder = 1
           object Label3: TLabel
@@ -896,7 +894,6 @@ object FrmEntradaSaidaCaixas: TFrmEntradaSaidaCaixas
           Width = 1451
           Height = 230
           Align = alTop
-          Color = clWindow
           ParentBackground = False
           TabOrder = 2
           object Label2: TLabel
@@ -1067,7 +1064,6 @@ object FrmEntradaSaidaCaixas: TFrmEntradaSaidaCaixas
     Width = 1461
     Height = 45
     Align = alTop
-    Color = clWindow
     ParentBackground = False
     TabOrder = 1
     ExplicitWidth = 1457

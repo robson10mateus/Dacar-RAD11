@@ -9,7 +9,7 @@ object FrmPesqFor: TFrmPesqFor
   BorderIcons = [biHelp]
   BorderStyle = bsSingle
   Caption = 'Pesquisa de Fornecedor'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
   Font.Height = 11

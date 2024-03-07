@@ -7,7 +7,7 @@ object FrmControleEntregaCargas: TFrmControleEntregaCargas
   ActiveControl = PageControl1
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'Comercial Dacar - Controle de Entregas por Carga'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -27,7 +27,6 @@ object FrmControleEntregaCargas: TFrmControleEntregaCargas
     Width = 1153
     Height = 40
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -1318,13 +1317,13 @@ object FrmControleEntregaCargas: TFrmControleEntregaCargas
       object pnlFiltros: TPanel
         Left = 0
         Top = 0
-        Width = 1145
+        Width = 1149
         Height = 140
         Align = alTop
         BevelOuter = bvNone
-        Color = clWindow
         ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 1145
         object lblPlaca: TLabel
           Left = 130
           Top = 10
@@ -1552,8 +1551,8 @@ object FrmControleEntregaCargas: TFrmControleEntregaCargas
       object grdFiltros: TDBGrid
         Left = 0
         Top = 140
-        Width = 1145
-        Height = 410
+        Width = 1149
+        Height = 411
         Align = alClient
         DataSource = dtsCargas
         Font.Charset = DEFAULT_CHARSET
@@ -1658,7 +1657,6 @@ object FrmControleEntregaCargas: TFrmControleEntregaCargas
         Height = 120
         Align = alTop
         BevelOuter = bvNone
-        Color = clWindow
         ParentBackground = False
         TabOrder = 0
         object lblDetalhesVeiculo: TLabel
@@ -1884,7 +1882,6 @@ object FrmControleEntregaCargas: TFrmControleEntregaCargas
         Height = 165
         Align = alTop
         BevelOuter = bvNone
-        Color = clWindow
         ParentBackground = False
         TabOrder = 1
         object lblDetalhesNumPedido: TLabel
@@ -2189,13 +2186,11 @@ object FrmControleEntregaCargas: TFrmControleEntregaCargas
             item
               Expanded = False
               FieldName = 'ID_PEDIVEND'
-              Width = 64
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'NR_NOTAFISC'
-              Width = 64
               Visible = True
             end
             item
@@ -2229,13 +2224,11 @@ object FrmControleEntregaCargas: TFrmControleEntregaCargas
             item
               Expanded = False
               FieldName = 'NM_VENDEDOR'
-              Width = 64
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'NO_MOTIVO'
-              Width = 64
               Visible = True
             end>
         end

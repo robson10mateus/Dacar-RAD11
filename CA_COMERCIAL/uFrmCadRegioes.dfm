@@ -5,8 +5,9 @@ object FrmCadRegiao: TFrmCadRegiao
   Height = 471
   VertScrollBar.Range = 45
   ActiveControl = PageControl2
+  BorderStyle = bsSingle
   Caption = 'Comercial Dacar - Cadastro de Regi'#245'es de Entrega'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -25,7 +26,6 @@ object FrmCadRegiao: TFrmCadRegiao
     Width = 1074
     Height = 45
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -1590,7 +1590,6 @@ object FrmCadRegiao: TFrmCadRegiao
         Width = 1066
         Height = 19
         Align = alBottom
-        Color = clWindow
         ParentBackground = False
         TabOrder = 6
         ExplicitTop = 338

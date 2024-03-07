@@ -1729,7 +1729,9 @@ end;
 procedure TFrmXmlEmail.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
+  FrmXmlEmail:=nil;
   FrmPrincipal.VEN036.Enabled:= True;
+  Action:=caFree;
 end;
 
 end.

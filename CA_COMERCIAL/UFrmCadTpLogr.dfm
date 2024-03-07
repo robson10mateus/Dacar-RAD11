@@ -4,9 +4,9 @@ object FrmCadTpLogr: TFrmCadTpLogr
   ActiveControl = PageControl1
   BorderStyle = bsSingle
   Caption = 'Cadastro Tipo de Logradouro'
-  ClientHeight = 388
-  ClientWidth = 647
-  Color = clWindow
+  ClientHeight = 383
+  ClientWidth = 668
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -19,10 +19,9 @@ object FrmCadTpLogr: TFrmCadTpLogr
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 647
-    Height = 388
+    Width = 668
+    Height = 383
     Align = alClient
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -31,14 +30,14 @@ object FrmCadTpLogr: TFrmCadTpLogr
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 643
-    ExplicitHeight = 387
+    ExplicitWidth = 639
+    ExplicitHeight = 386
     object PageControl1: TPageControl
       Left = 1
       Top = 41
-      Width = 645
-      Height = 346
-      ActivePage = TabCriterio
+      Width = 666
+      Height = 341
+      ActivePage = TabLista
       Align = alClient
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
@@ -47,8 +46,8 @@ object FrmCadTpLogr: TFrmCadTpLogr
       Font.Style = []
       ParentFont = False
       TabOrder = 0
-      ExplicitWidth = 641
-      ExplicitHeight = 345
+      ExplicitWidth = 637
+      ExplicitHeight = 344
       object TabCriterio: TTabSheet
         Caption = 'Criterios'
         OnShow = TabCriterioShow
@@ -345,8 +344,9 @@ object FrmCadTpLogr: TFrmCadTpLogr
         object DBGrid1: TDBGrid
           Left = 0
           Top = 0
-          Width = 657
-          Height = 297
+          Width = 658
+          Height = 311
+          Align = alClient
           DataSource = DtSrcCadTpLogr
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -364,18 +364,21 @@ object FrmCadTpLogr: TFrmCadTpLogr
             item
               Expanded = False
               FieldName = 'ID_TIPOLOGR'
+              Title.Caption = 'C'#243'd'
               Width = 50
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'NM_TIPOLOGR'
+              Title.Caption = 'Descri'#231#227'o'
               Width = 205
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'SG_TIPOLOGR'
+              Title.Caption = 'Sigla'
               Width = 100
               Visible = True
             end>
@@ -385,7 +388,6 @@ object FrmCadTpLogr: TFrmCadTpLogr
           Top = 416
           Width = 786
           Height = 48
-          Color = clWindow
           ParentBackground = False
           TabOrder = 1
           object Label1: TLabel
@@ -448,13 +450,17 @@ object FrmCadTpLogr: TFrmCadTpLogr
         Caption = 'Detalhes'
         ImageIndex = 2
         object Panel3: TPanel
-          Left = 10
-          Top = 8
-          Width = 627
-          Height = 265
-          Color = clWindow
+          Left = 0
+          Top = 0
+          Width = 658
+          Height = 311
+          Align = alClient
           ParentBackground = False
           TabOrder = 0
+          ExplicitLeft = 10
+          ExplicitTop = 8
+          ExplicitWidth = 639
+          ExplicitHeight = 289
           object Label14: TLabel
             Left = 24
             Top = 64
@@ -550,7 +556,7 @@ object FrmCadTpLogr: TFrmCadTpLogr
     object ToolBar1: TToolBar
       Left = 1
       Top = 1
-      Width = 645
+      Width = 666
       Height = 40
       ButtonHeight = 36
       ButtonWidth = 39
@@ -563,7 +569,7 @@ object FrmCadTpLogr: TFrmCadTpLogr
       Font.Style = []
       ParentFont = False
       TabOrder = 1
-      ExplicitWidth = 641
+      ExplicitWidth = 637
       object SB_PRIMEIRO: TSpeedButton
         Left = 0
         Top = 0

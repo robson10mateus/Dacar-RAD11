@@ -7,7 +7,7 @@ object FrmSelSintCarga: TFrmSelSintCarga
   ActiveControl = PageControl1
   BorderStyle = bsSingle
   Caption = 'Comercial Dacar - Relat'#243'rio Sint'#233'tico de Cargas'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
   Font.Height = 11
@@ -498,8 +498,8 @@ object FrmSelSintCarga: TFrmSelSintCarga
   object PageControl1: TPageControl
     Left = 0
     Top = 45
-    Width = 754
-    Height = 356
+    Width = 750
+    Height = 355
     ActivePage = TabCriterio
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -510,8 +510,6 @@ object FrmSelSintCarga: TFrmSelSintCarga
     Font.Style = []
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 750
-    ExplicitHeight = 355
     object TabCriterio: TTabSheet
       Caption = 'Filtros'
       Font.Charset = DEFAULT_CHARSET
@@ -1097,10 +1095,9 @@ object FrmSelSintCarga: TFrmSelSintCarga
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 754
+    Width = 750
     Height = 45
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = 15
@@ -1110,7 +1107,6 @@ object FrmSelSintCarga: TFrmSelSintCarga
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 750
     object Sb_Sair: TSpeedButton
       Left = 5
       Top = 5

@@ -3,9 +3,9 @@ object FrmConsApanha: TFrmConsApanha
   Top = 186
   ActiveControl = PageControl1
   Caption = 'Consulta Apanha'
-  ClientHeight = 392
-  ClientWidth = 1020
-  Color = clWindow
+  ClientHeight = 390
+  ClientWidth = 1012
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -21,8 +21,8 @@ object FrmConsApanha: TFrmConsApanha
   object PageControl1: TPageControl
     Left = 0
     Top = 0
-    Width = 1020
-    Height = 392
+    Width = 1012
+    Height = 390
     ActivePage = Tab_Lista
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -32,15 +32,15 @@ object FrmConsApanha: TFrmConsApanha
     Font.Style = []
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 1032
-    ExplicitHeight = 395
+    ExplicitWidth = 1016
+    ExplicitHeight = 391
     object Tab_Lista: TTabSheet
       Caption = 'Lista'
       ImageIndex = 1
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 1024
+        Width = 1012
         Height = 45
         Anchors = []
         ButtonHeight = 42
@@ -54,6 +54,7 @@ object FrmConsApanha: TFrmConsApanha
         Font.Style = []
         ParentFont = False
         TabOrder = 0
+        ExplicitWidth = 1008
         object SB_Relatorio: TSpeedButton
           Left = 0
           Top = 0
@@ -481,7 +482,6 @@ object FrmConsApanha: TFrmConsApanha
           Width = 211
           Height = 42
           Align = alCustom
-          Color = clWindow
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = 15
@@ -588,8 +588,8 @@ object FrmConsApanha: TFrmConsApanha
       object DBGrid1: TDBGrid
         Left = 0
         Top = 45
-        Width = 1024
-        Height = 322
+        Width = 1012
+        Height = 317
         Align = alClient
         Color = clWhite
         DataSource = Ds

@@ -111,7 +111,9 @@ end;
 procedure TFrmSelRelDoa.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
+  FrmSelRelDoa:=nil;
   FrmPrincipal.VEN008.Enabled:= True;
+  Action:=caFree;
 end;
 
 end.

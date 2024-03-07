@@ -75,8 +75,9 @@ uses Principal,Global, UFrmSeldata, UFrmRelLoteAnalitico, UFrmRelProgRacao;
 procedure TFrmProgRacao.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-     FrmPrincipal.VEN044.Enabled:= True;
-     Action:=caFree;
+  FrmProgRacao:=nil;
+  FrmPrincipal.VEN044.Enabled:= True;
+  Action:=caFree;
 end;
 
 procedure TFrmProgRacao.bt_PesqDTIClick(Sender: TObject);

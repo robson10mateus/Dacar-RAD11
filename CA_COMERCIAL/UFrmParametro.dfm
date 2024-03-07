@@ -7,7 +7,7 @@ object FrmParametro: TFrmParametro
   ActiveControl = PageControl1
   BorderStyle = bsSingle
   Caption = 'Comercial Dacar - Configura'#231#245'es de Par'#226'metros e Dados do Sistema'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -21,8 +21,8 @@ object FrmParametro: TFrmParametro
   object PageControl1: TPageControl
     Left = 0
     Top = 45
-    Width = 1143
-    Height = 469
+    Width = 1139
+    Height = 468
     ActivePage = Tab_Empresa
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -33,8 +33,6 @@ object FrmParametro: TFrmParametro
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 1139
-    ExplicitHeight = 468
     object Tab_Empresa: TTabSheet
       Caption = ' Dados da Empresa '
       Font.Charset = DEFAULT_CHARSET
@@ -253,10 +251,9 @@ object FrmParametro: TFrmParametro
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 1143
+    Width = 1139
     Height = 45
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -265,7 +262,6 @@ object FrmParametro: TFrmParametro
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 1139
     object btnCancelar: TSpeedButton
       Left = 215
       Top = 5

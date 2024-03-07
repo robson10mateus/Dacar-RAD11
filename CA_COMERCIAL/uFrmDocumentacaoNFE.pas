@@ -147,8 +147,9 @@ end;
 procedure TfrmDocumentacaoNFE.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-  FrmPrincipal.VEN063.Enabled := True;
-  Action := Cafree;
+  frmDocumentacaoNFE:=nil;
+  FrmPrincipal.VEN063.Enabled:= True;
+  Action:=caFree;
 end;
 
 procedure TfrmDocumentacaoNFE.btnConsultarClick(Sender: TObject);

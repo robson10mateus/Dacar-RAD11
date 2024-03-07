@@ -241,6 +241,7 @@ end;
 procedure TfrmVendasVendedorCliente.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
+  frmVendasVendedorCliente:=nil;
   FrmPrincipal.VEN015a.Enabled:= True;
   Action:=caFree;
 end;

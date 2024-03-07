@@ -4,7 +4,7 @@ inherited FrmPesqCliente: TFrmPesqCliente
   Width = 900
   BorderIcons = [biSystemMenu]
   Caption = 'Comercial Dacar - Consulta de Clientes'
-  Color = clWindow
+  Color = clBtnFace
   Icon.Data = {
     000001000300101000000100200068040000360000002020000001002000A810
     00009E0400003030000001002000A82500004615000028000000100000002000
@@ -482,8 +482,7 @@ inherited FrmPesqCliente: TFrmPesqCliente
   ExplicitWidth = 900
   TextHeight = 10
   inherited DBGrid1: TDBGrid
-    Width = 888
-    Height = 242
+    Width = 884
     DataSource = DSCli
     OnTitleClick = DBGrid1TitleClick
     Columns = <
@@ -529,7 +528,7 @@ inherited FrmPesqCliente: TFrmPesqCliente
       end>
   end
   inherited pnlBotoes: TPanel
-    Width = 888
+    Width = 884
     ExplicitWidth = 884
     inherited BitBtn1: TBitBtn
       OnClick = BitBtn1Click
@@ -545,7 +544,7 @@ inherited FrmPesqCliente: TFrmPesqCliente
     end
   end
   inherited pnlFiltros: TPanel
-    Width = 888
+    Width = 884
     ExplicitWidth = 884
     inherited EdExpre: TEdit
       OnKeyPress = EdExpreKeyPress

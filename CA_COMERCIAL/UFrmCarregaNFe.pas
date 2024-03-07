@@ -2129,7 +2129,10 @@ begin
   Qry_XMLN.Close;
   Qry_Notas.Close;
   Qry_NFEXML.Close;
-  FrmPrincipal.VEN038.Enabled := True;
+
+  FrmCarregaNFe:=nil;
+  FrmPrincipal.VEN038.Enabled:= True;
+  Action:=caFree;
 end;
 
 procedure TFrmCarregaNFe.Localiza_movidas_xml(Sender: TObject);

@@ -555,7 +555,6 @@ object FrmCargObsPedi: TFrmCargObsPedi
     Width = 634
     Height = 45
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15

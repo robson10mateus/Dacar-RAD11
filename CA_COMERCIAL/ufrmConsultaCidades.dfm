@@ -4,7 +4,7 @@ inherited frmConsultaCidades: TfrmConsultaCidades
   Width = 529
   Height = 355
   Caption = 'Comercial Dacar - Consulta de Cidades'
-  Color = clWindow
+  Color = clBtnFace
   Icon.Data = {
     000001000300101000000100200068040000360000002020000001002000A810
     00009E0400003030000001002000A82500004615000028000000100000002000
@@ -483,8 +483,8 @@ inherited frmConsultaCidades: TfrmConsultaCidades
   ExplicitHeight = 355
   TextHeight = 10
   inherited DBGrid1: TDBGrid
-    Width = 517
-    Height = 147
+    Width = 513
+    Height = 146
     DataSource = dtsConsultaCidades
     OnTitleClick = DBGrid1TitleClick
     Columns = <
@@ -509,7 +509,7 @@ inherited frmConsultaCidades: TfrmConsultaCidades
       end>
   end
   inherited pnlBotoes: TPanel
-    Width = 517
+    Width = 513
     ExplicitWidth = 513
     inherited BitBtn1: TBitBtn
       OnClick = BitBtn1Click
@@ -519,7 +519,7 @@ inherited frmConsultaCidades: TfrmConsultaCidades
     end
   end
   inherited pnlFiltros: TPanel
-    Width = 517
+    Width = 513
     ExplicitWidth = 513
     inherited EdExpre: TEdit
       Top = 89

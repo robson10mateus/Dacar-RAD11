@@ -7,7 +7,7 @@ object FrmSubRegiao: TFrmSubRegiao
   ActiveControl = PageControl1
   BorderStyle = bsSingle
   Caption = 'Cadastro de Sub-Regi'#227'o Log'#237'stica'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = 11
@@ -26,8 +26,8 @@ object FrmSubRegiao: TFrmSubRegiao
   object PageControl1: TPageControl
     Left = 0
     Top = 41
-    Width = 788
-    Height = 444
+    Width = 784
+    Height = 443
     ActivePage = TabDetalhe
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -38,8 +38,6 @@ object FrmSubRegiao: TFrmSubRegiao
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 784
-    ExplicitHeight = 443
     object TabCriterio: TTabSheet
       Caption = 'Crit'#233'rio'
       OnShow = TabCriterioShow
@@ -440,9 +438,9 @@ object FrmSubRegiao: TFrmSubRegiao
         Width = 780
         Height = 70
         Align = alTop
-        Color = clWindow
         ParentBackground = False
         TabOrder = 5
+        ExplicitWidth = 776
       end
       object DBCOD: TDBEdit
         Left = 19
@@ -506,9 +504,10 @@ object FrmSubRegiao: TFrmSubRegiao
         Width = 780
         Height = 293
         Align = alClient
-        Color = clWindow
         ParentBackground = False
         TabOrder = 3
+        ExplicitWidth = 776
+        ExplicitHeight = 292
         object DBGrid2: TDBGrid
           Left = 1
           Top = 1
@@ -572,9 +571,9 @@ object FrmSubRegiao: TFrmSubRegiao
         Width = 780
         Height = 51
         Align = alTop
-        Color = clWindow
         ParentBackground = False
         TabOrder = 4
+        ExplicitWidth = 776
         object SpeedButton2: TSpeedButton
           Left = 52
           Top = 13
@@ -1123,7 +1122,7 @@ object FrmSubRegiao: TFrmSubRegiao
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 788
+    Width = 784
     Height = 41
     Anchors = []
     ButtonHeight = 33
@@ -1137,7 +1136,6 @@ object FrmSubRegiao: TFrmSubRegiao
     Font.Style = []
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 784
     object SB_PRIMEIRO: TSpeedButton
       Left = 0
       Top = 0
@@ -3286,11 +3284,10 @@ object FrmSubRegiao: TFrmSubRegiao
   end
   object Panel1: TPanel
     Left = 0
-    Top = 485
-    Width = 788
+    Top = 484
+    Width = 784
     Height = 17
     Align = alBottom
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -3300,8 +3297,6 @@ object FrmSubRegiao: TFrmSubRegiao
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
-    ExplicitTop = 484
-    ExplicitWidth = 784
   end
   object DS: TDataSource
     DataSet = Qr

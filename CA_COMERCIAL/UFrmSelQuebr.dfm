@@ -33,6 +33,8 @@ object FrmSelQuebr: TFrmSelQuebr
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 855
+    ExplicitHeight = 565
     object TabCriterio: TTabSheet
       Caption = 'Crit'#233'rio'
       object Label6: TLabel

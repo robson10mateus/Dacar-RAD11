@@ -831,7 +831,6 @@ object FrmEditaNotaFiscal: TFrmEditaNotaFiscal
     Width = 489
     Height = 271
     Align = alClient
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15

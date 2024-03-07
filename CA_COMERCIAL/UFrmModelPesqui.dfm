@@ -48,7 +48,6 @@ object FrmModelPesqui: TFrmModelPesqui
     Width = 684
     Height = 45
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = 15
@@ -498,7 +497,6 @@ object FrmModelPesqui: TFrmModelPesqui
     Width = 684
     Height = 125
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = 15

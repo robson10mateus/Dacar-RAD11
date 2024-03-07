@@ -101,8 +101,9 @@ uses Principal, Global, ufrmConsultaCidades, ufrmConsultarRegioes;
 procedure TFrmCadRegiao.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-     FrmPrincipal.CadastrodeRegio1.Enabled:= True;
-     Action:=caFree;
+  FrmCadRegiao:=nil;
+  FrmPrincipal.CadastrodeRegio1.Enabled:= True;
+  Action:=caFree;
 end;
 
 procedure TFrmCadRegiao.Sb_SairClick(Sender: TObject);

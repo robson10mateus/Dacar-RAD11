@@ -69,8 +69,9 @@ uses Principal,Global,UFrmSeldata, UFrmPesCaminhao , UFrmRelConfCarga, UFrmConfC
 procedure TFrmConferenciaCarga.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-     FrmPrincipal.VEN052.Enabled:= True;
-     Action:=caFree;
+  FrmConferenciaCarga:=nil;
+  FrmPrincipal.VEN052.Enabled:= True;
+  Action:=caFree;
 end;
 
 procedure TFrmConferenciaCarga.FormShow(Sender: TObject);

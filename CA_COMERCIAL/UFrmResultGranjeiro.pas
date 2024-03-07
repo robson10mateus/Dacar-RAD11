@@ -100,8 +100,9 @@ uses Principal,Global, UFrmSeldata , UFrmPesqIntegrado , UFrmPesqFor,
 procedure TFrmResultGranjeiro.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-     FrmPrincipal.VEN045.Enabled:= True;
-     Action:=caFree;
+  FrmResultGranjeiro:=nil;
+  FrmPrincipal.VEN045.Enabled:= True;
+  Action:=caFree;
 end;
 
 procedure TFrmResultGranjeiro.bt_PesqDTIClick(Sender: TObject);

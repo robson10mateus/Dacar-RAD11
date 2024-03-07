@@ -20,7 +20,6 @@ object frmEnviaEmail: TfrmEnviaEmail
     Width = 989
     Height = 45
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -363,7 +362,6 @@ object frmEnviaEmail: TfrmEnviaEmail
     Height = 440
     Align = alTop
     BevelOuter = bvNone
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -542,7 +540,6 @@ object frmEnviaEmail: TfrmEnviaEmail
     Height = 68
     Align = alClient
     BevelOuter = bvNone
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15

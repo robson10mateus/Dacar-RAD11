@@ -5,8 +5,9 @@ object FrmSaldoCaixas: TFrmSaldoCaixas
   Height = 701
   VertScrollBar.Range = 44
   ActiveControl = PageControl1
+  BorderStyle = bsSingle
   Caption = 'Comercial Dacar - Relat'#243'rio de Saldo de Caixas'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
   Font.Height = 11
@@ -867,7 +868,6 @@ object FrmSaldoCaixas: TFrmSaldoCaixas
     Width = 1214
     Height = 45
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = 15

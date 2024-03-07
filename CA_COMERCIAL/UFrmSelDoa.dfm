@@ -4,9 +4,9 @@ object FrmSelRelDoa: TFrmSelRelDoa
   BorderIcons = []
   BorderStyle = bsDialog
   Caption = 'Relat'#243'rio de Doa'#231#227'o'
-  ClientHeight = 379
-  ClientWidth = 407
-  Color = clWindow
+  ClientHeight = 377
+  ClientWidth = 399
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -19,11 +19,10 @@ object FrmSelRelDoa: TFrmSelRelDoa
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 407
-    Height = 379
+    Width = 399
+    Height = 377
     Align = alClient
     BevelWidth = 3
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -32,6 +31,8 @@ object FrmSelRelDoa: TFrmSelRelDoa
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 403
+    ExplicitHeight = 378
     object Label1: TLabel
       Left = 77
       Top = 44

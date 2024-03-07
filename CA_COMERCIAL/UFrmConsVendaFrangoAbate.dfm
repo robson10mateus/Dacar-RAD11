@@ -3,9 +3,9 @@ object FrmConsVendaFrangoAbate: TFrmConsVendaFrangoAbate
   Top = 89
   ActiveControl = PageControl1
   Caption = 'Consulta Venda Frango para Abate'
-  ClientHeight = 533
-  ClientWidth = 848
-  Color = clWindow
+  ClientHeight = 531
+  ClientWidth = 840
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -21,8 +21,8 @@ object FrmConsVendaFrangoAbate: TFrmConsVendaFrangoAbate
   object PageControl1: TPageControl
     Left = 0
     Top = 0
-    Width = 848
-    Height = 533
+    Width = 840
+    Height = 531
     ActivePage = Tab_Lista
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -32,15 +32,15 @@ object FrmConsVendaFrangoAbate: TFrmConsVendaFrangoAbate
     Font.Style = []
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 860
-    ExplicitHeight = 536
+    ExplicitWidth = 844
+    ExplicitHeight = 532
     object Tab_Lista: TTabSheet
       Caption = 'Lista'
       ImageIndex = 1
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 852
+        Width = 840
         Height = 45
         Anchors = []
         ButtonHeight = 42
@@ -54,6 +54,7 @@ object FrmConsVendaFrangoAbate: TFrmConsVendaFrangoAbate
         Font.Style = []
         ParentFont = False
         TabOrder = 0
+        ExplicitWidth = 836
         object SB_Relatorio: TSpeedButton
           Left = 0
           Top = 0
@@ -481,7 +482,6 @@ object FrmConsVendaFrangoAbate: TFrmConsVendaFrangoAbate
           Width = 211
           Height = 42
           Align = alCustom
-          Color = clWindow
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = 15
@@ -588,8 +588,8 @@ object FrmConsVendaFrangoAbate: TFrmConsVendaFrangoAbate
       object DBGrid1: TDBGrid
         Left = 0
         Top = 45
-        Width = 852
-        Height = 463
+        Width = 840
+        Height = 458
         Hint = 'CTRL + C p/ colar'
         Align = alClient
         Color = clWhite

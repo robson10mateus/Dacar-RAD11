@@ -129,6 +129,7 @@ end;
 procedure TFrmSelRelConfVenda.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
+  FrmSelRelConfVenda:=nil;
   FrmPrincipal.VEN012.Enabled:= True;
   Action:=caFree;
 end;

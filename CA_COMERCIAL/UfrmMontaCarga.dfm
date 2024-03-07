@@ -8,7 +8,7 @@ object FrmMontaCarga: TFrmMontaCarga
   BorderIcons = [biMinimize, biMaximize]
   BorderStyle = bsSingle
   Caption = 'Comercial Dacar - Log'#237'stica e Montagem de Cargas'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -499,8 +499,8 @@ object FrmMontaCarga: TFrmMontaCarga
   object PageControl1: TPageControl
     Left = 0
     Top = 45
-    Width = 1188
-    Height = 676
+    Width = 1184
+    Height = 675
     ActivePage = TabSheet1
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -514,8 +514,6 @@ object FrmMontaCarga: TFrmMontaCarga
     TabOrder = 0
     TabStop = False
     OnChange = PageControl1Change
-    ExplicitWidth = 1184
-    ExplicitHeight = 675
     object TabSheet1: TTabSheet
       Caption = 'Crit'#233'rio'
       ImageIndex = 2
@@ -922,18 +920,17 @@ object FrmMontaCarga: TFrmMontaCarga
       object Area3: TPanel
         Left = 0
         Top = 205
-        Width = 1180
-        Height = 441
+        Width = 1176
+        Height = 440
         Align = alClient
         BevelWidth = 2
         BorderWidth = 1
-        Color = clWindow
         ParentBackground = False
         TabOrder = 0
         object grdSelePedi: TDBGrid
           Left = 3
           Top = 3
-          Width = 1174
+          Width = 1170
           Height = 200
           Align = alTop
           DataSource = dtsSelePedi
@@ -1050,12 +1047,12 @@ object FrmMontaCarga: TFrmMontaCarga
         object Panel1: TPanel
           Left = 3
           Top = 203
-          Width = 1174
+          Width = 1170
           Height = 40
           Align = alTop
-          Color = clWindow
           ParentBackground = False
           TabOrder = 1
+          ExplicitWidth = 1174
           object btnInclPedi: TSpeedButton
             Left = 220
             Top = 2
@@ -1921,13 +1918,14 @@ object FrmMontaCarga: TFrmMontaCarga
         object Panel2: TPanel
           Left = 58
           Top = 243
-          Width = 1119
-          Height = 195
+          Width = 1115
+          Height = 194
           Align = alClient
           BevelOuter = bvNone
-          Color = clWindow
           ParentBackground = False
           TabOrder = 2
+          ExplicitWidth = 1119
+          ExplicitHeight = 195
           object grdSelecionado: TDBGrid
             Left = 0
             Top = 0
@@ -2058,9 +2056,8 @@ object FrmMontaCarga: TFrmMontaCarga
           Left = 3
           Top = 243
           Width = 55
-          Height = 195
+          Height = 194
           Align = alLeft
-          Color = clWindow
           ParentBackground = False
           TabOrder = 3
           object Panel4: TPanel
@@ -2069,7 +2066,6 @@ object FrmMontaCarga: TFrmMontaCarga
             Width = 53
             Height = 45
             Align = alTop
-            Color = clWindow
             ParentBackground = False
             TabOrder = 0
             DesignSize = (
@@ -2109,7 +2105,6 @@ object FrmMontaCarga: TFrmMontaCarga
             Width = 53
             Height = 45
             Align = alTop
-            Color = clWindow
             ParentBackground = False
             TabOrder = 1
             DesignSize = (
@@ -2150,7 +2145,6 @@ object FrmMontaCarga: TFrmMontaCarga
             Height = 100
             Align = alTop
             BevelOuter = bvNone
-            Color = clWindow
             ParentBackground = False
             TabOrder = 2
           end
@@ -2159,10 +2153,9 @@ object FrmMontaCarga: TFrmMontaCarga
       object Area1: TPanel
         Left = 0
         Top = 0
-        Width = 1180
+        Width = 1176
         Height = 75
         Align = alTop
-        Color = clWindow
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = 15
@@ -2172,6 +2165,7 @@ object FrmMontaCarga: TFrmMontaCarga
         ParentBackground = False
         ParentFont = False
         TabOrder = 1
+        ExplicitWidth = 1180
         object Label3: TLabel
           Left = 10
           Top = 20
@@ -2619,10 +2613,9 @@ object FrmMontaCarga: TFrmMontaCarga
       object Area2: TPanel
         Left = 0
         Top = 75
-        Width = 1180
+        Width = 1176
         Height = 130
         Align = alTop
-        Color = clWindow
         ParentBackground = False
         TabOrder = 2
         object rgpCriterios: TRadioGroup
@@ -3275,10 +3268,9 @@ object FrmMontaCarga: TFrmMontaCarga
   object pnlBotoes: TPanel
     Left = 0
     Top = 0
-    Width = 1188
+    Width = 1184
     Height = 45
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -3287,7 +3279,6 @@ object FrmMontaCarga: TFrmMontaCarga
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 1184
     object SB_PRIMEIRO: TSpeedButton
       Left = 5
       Top = 5

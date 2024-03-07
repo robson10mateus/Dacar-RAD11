@@ -22,7 +22,7 @@ object FrmProgRacao: TFrmProgRacao
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 927
+    Width = 923
     Height = 41
     Anchors = []
     ButtonHeight = 37
@@ -36,7 +36,6 @@ object FrmProgRacao: TFrmProgRacao
     Font.Style = []
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 923
     object SB_Relatorio: TSpeedButton
       Left = 0
       Top = 0
@@ -462,10 +461,9 @@ object FrmProgRacao: TFrmProgRacao
   object Panel1: TPanel
     Left = 0
     Top = 41
-    Width = 927
+    Width = 923
     Height = 54
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -474,7 +472,6 @@ object FrmProgRacao: TFrmProgRacao
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 923
     object Label49: TLabel
       Left = 24
       Top = 9
@@ -602,8 +599,8 @@ object FrmProgRacao: TFrmProgRacao
   object DBGrid1: TDBGrid
     Left = 0
     Top = 95
-    Width = 927
-    Height = 404
+    Width = 923
+    Height = 403
     Align = alClient
     Color = clWhite
     DataSource = Ds
@@ -666,91 +663,78 @@ object FrmProgRacao: TFrmProgRacao
         Expanded = False
         FieldName = 'AVES'
         Title.Caption = 'Aves'
-        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'RACAO'
         Title.Caption = 'Ra'#231#227'o Env'
-        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'RP_SEM'
         Title.Caption = 'Prev Sem'
-        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'RP_DIA'
         Title.Caption = 'Prev Dia'
-        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'RP_DIA_SEMSEG'
         Title.Caption = 'Prev Sem Seg'
-        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'RP_ACUM_ANT'
         Title.Caption = 'Acum Sem Ant'
-        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'RP_ACUM'
         Title.Caption = 'Acum Sem'
-        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'RAC_SOBRA'
         Title.Caption = 'Sobra'
-        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'RAC_SOBRA2'
         Title.Caption = 'Sobra Sem At'
-        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'INIC_SEM'
         Title.Caption = 'Ini Sem'
-        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'INIC_SEM_SEG'
         Title.Caption = 'Ini Sem Seg'
-        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'DIAS_RAC'
         Title.Caption = 'Dias Rac'
-        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'DIAS_RAC2'
         Title.Caption = 'Dias Rac 2'
-        Width = 64
         Visible = True
       end>
   end

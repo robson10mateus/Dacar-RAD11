@@ -3,8 +3,8 @@ object FrmInfoCTE: TFrmInfoCTE
   Top = 174
   ActiveControl = edtOutrasCaracteristicas
   Caption = 'Informa'#231#245'es do CT-e'
-  ClientHeight = 285
-  ClientWidth = 366
+  ClientHeight = 283
+  ClientWidth = 358
   Color = clBackground
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,10 +17,9 @@ object FrmInfoCTE: TFrmInfoCTE
   object pnlBackground: TPanel
     Left = 0
     Top = 0
-    Width = 366
-    Height = 285
+    Width = 358
+    Height = 283
     Align = alClient
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15

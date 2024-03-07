@@ -3,9 +3,9 @@ object FrmDiferencaPreco: TFrmDiferencaPreco
   Top = 108
   ActiveControl = PageControl1
   Caption = 'Diferen'#231'a de Pre'#231'o'
-  ClientHeight = 438
-  ClientWidth = 896
-  Color = clWindow
+  ClientHeight = 436
+  ClientWidth = 888
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -21,8 +21,8 @@ object FrmDiferencaPreco: TFrmDiferencaPreco
   object PageControl1: TPageControl
     Left = 0
     Top = 0
-    Width = 896
-    Height = 438
+    Width = 888
+    Height = 436
     ActivePage = Tab_Lista
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -32,8 +32,6 @@ object FrmDiferencaPreco: TFrmDiferencaPreco
     Font.Style = []
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 892
-    ExplicitHeight = 437
     object Tab_Criterio: TTabSheet
       Caption = 'Crit'#233'rio'
       object Label6: TLabel
@@ -442,6 +440,7 @@ object FrmDiferencaPreco: TFrmDiferencaPreco
         Font.Style = []
         ParentFont = False
         TabOrder = 0
+        ExplicitWidth = 884
         object SB_ATUAL: TSpeedButton
           Left = 0
           Top = 0

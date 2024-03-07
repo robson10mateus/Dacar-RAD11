@@ -6,7 +6,7 @@ object FrmAlteracaoPlaca: TFrmAlteracaoPlaca
   VertScrollBar.Range = 41
   ActiveControl = EDt
   Caption = 'Altera'#231#227'o de Placa'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -36,7 +36,6 @@ object FrmAlteracaoPlaca: TFrmAlteracaoPlaca
     Font.Style = []
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 812
     object SB_ATIVA: TSpeedButton
       Left = 0
       Top = 0
@@ -329,7 +328,6 @@ object FrmAlteracaoPlaca: TFrmAlteracaoPlaca
       Width = 124
       Height = 37
       Align = alCustom
-      Color = clWindow
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = 15
@@ -410,8 +408,6 @@ object FrmAlteracaoPlaca: TFrmAlteracaoPlaca
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 812
-    ExplicitHeight = 389
     object TabSheet2: TTabSheet
       Caption = 'Detalhe'
       ImageIndex = 1
@@ -419,7 +415,7 @@ object FrmAlteracaoPlaca: TFrmAlteracaoPlaca
         Left = 0
         Top = 0
         Width = 804
-        Height = 320
+        Height = 317
         Align = alClient
         DataSource = DSFORM
         Font.Charset = DEFAULT_CHARSET
@@ -510,13 +506,13 @@ object FrmAlteracaoPlaca: TFrmAlteracaoPlaca
       end
       object Panel1: TPanel
         Left = 0
-        Top = 320
+        Top = 317
         Width = 804
         Height = 42
         Align = alBottom
-        Color = clWindow
         ParentBackground = False
         TabOrder = 1
+        ExplicitTop = 316
         ExplicitWidth = 800
         object Shape1: TShape
           Left = 133

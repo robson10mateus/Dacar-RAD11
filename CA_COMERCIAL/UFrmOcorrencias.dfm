@@ -7,7 +7,7 @@ object FrmOcorrencias: TFrmOcorrencias
   ActiveControl = PageControl1
   BorderStyle = bsSingle
   Caption = 'Comercial Dacar - Chamados e Ocorr'#234'ncias'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -496,8 +496,8 @@ object FrmOcorrencias: TFrmOcorrencias
   object PageControl1: TPageControl
     Left = 0
     Top = 45
-    Width = 1028
-    Height = 567
+    Width = 1024
+    Height = 566
     ActivePage = Tab_Detalhe
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -508,8 +508,6 @@ object FrmOcorrencias: TFrmOcorrencias
     Font.Style = []
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 1024
-    ExplicitHeight = 566
     object Tab_Criterio: TTabSheet
       Caption = ' Crit'#233'rio '
       Font.Charset = DEFAULT_CHARSET
@@ -1144,10 +1142,9 @@ object FrmOcorrencias: TFrmOcorrencias
   object pnlBotoes: TPanel
     Left = 0
     Top = 0
-    Width = 1028
+    Width = 1024
     Height = 45
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -1156,7 +1153,6 @@ object FrmOcorrencias: TFrmOcorrencias
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 1024
     object SB_ANTERIOR: TSpeedButton
       Left = 5
       Top = 4

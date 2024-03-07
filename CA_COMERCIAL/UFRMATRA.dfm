@@ -8,7 +8,7 @@ object FrmATRA: TFrmATRA
   BorderIcons = []
   BorderStyle = bsSingle
   Caption = 'T'#237'tulos em Atraso e a Vencer'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -19,7 +19,7 @@ object FrmATRA: TFrmATRA
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 651
+    Width = 647
     Height = 41
     Anchors = []
     ButtonHeight = 34
@@ -33,6 +33,7 @@ object FrmATRA: TFrmATRA
     Font.Style = []
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 651
     object SB_PRIMEIRO: TSpeedButton
       Left = 0
       Top = 0
@@ -1000,8 +1001,8 @@ object FrmATRA: TFrmATRA
   object PageControl1: TPageControl
     Left = 0
     Top = 41
-    Width = 651
-    Height = 360
+    Width = 647
+    Height = 359
     ActivePage = TabSheet1
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -1012,8 +1013,6 @@ object FrmATRA: TFrmATRA
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 647
-    ExplicitHeight = 359
     object TabSheet1: TTabSheet
       Caption = 'Detalhe'
       Font.Charset = DEFAULT_CHARSET
@@ -1093,11 +1092,10 @@ object FrmATRA: TFrmATRA
   end
   object Panel1: TPanel
     Left = 0
-    Top = 401
-    Width = 651
+    Top = 400
+    Width = 647
     Height = 58
     Align = alBottom
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -1106,8 +1104,6 @@ object FrmATRA: TFrmATRA
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
-    ExplicitTop = 400
-    ExplicitWidth = 647
     object Shape1: TShape
       Left = 403
       Top = 20

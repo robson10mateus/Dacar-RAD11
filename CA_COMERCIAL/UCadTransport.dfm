@@ -5,8 +5,9 @@ object FrmCadTransport: TFrmCadTransport
   Height = 762
   VertScrollBar.Range = 45
   ActiveControl = PageControl2
+  BorderStyle = bsSingle
   Caption = 'Comercial Dacar - Cadastro de Transportadoras'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
   Font.Height = 11
@@ -39,7 +40,7 @@ object FrmCadTransport: TFrmCadTransport
     Font.Style = []
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 1231
+    ExplicitWidth = 1080
     object SB_PRIMEIRO: TSpeedButton
       Left = 0
       Top = 0
@@ -1357,7 +1358,7 @@ object FrmCadTransport: TFrmCadTransport
     Top = 125
     Width = 1084
     Height = 599
-    ActivePage = TabDetalhe
+    ActivePage = TabLista
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
@@ -1367,7 +1368,7 @@ object FrmCadTransport: TFrmCadTransport
     Font.Style = []
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 1231
+    ExplicitWidth = 1080
     ExplicitHeight = 598
     object TabCriterio: TTabSheet
       Caption = ' Filtro '
@@ -1676,11 +1677,8 @@ object FrmCadTransport: TFrmCadTransport
         Width = 1076
         Height = 19
         Align = alBottom
-        Color = clWindow
         ParentBackground = False
         TabOrder = 8
-        ExplicitTop = 549
-        ExplicitWidth = 1223
         object LRodape: TLabel
           Left = 80
           Top = 2
@@ -1709,7 +1707,7 @@ object FrmCadTransport: TFrmCadTransport
       object DBGrd_CadForn: TDBGrid
         Left = 0
         Top = 0
-        Width = 1227
+        Width = 1076
         Height = 543
         Align = alClient
         Color = clWhite
@@ -1736,6 +1734,7 @@ object FrmCadTransport: TFrmCadTransport
           item
             Expanded = False
             FieldName = 'ID_FORNECEDOR'
+            Title.Caption = 'C'#243'digo'
             Width = 50
             Visible = True
           end
@@ -1763,6 +1762,7 @@ object FrmCadTransport: TFrmCadTransport
           item
             Expanded = False
             FieldName = 'NM_FANTFORN'
+            Title.Caption = 'Nome Fantasia'
             Visible = True
           end
           item
@@ -1783,16 +1783,16 @@ object FrmCadTransport: TFrmCadTransport
           item
             Expanded = False
             FieldName = 'FL_ATIVFORN'
+            Title.Caption = 'Ativo'
             Visible = True
           end>
       end
       object Panel4: TPanel
         Left = 0
         Top = 543
-        Width = 1227
+        Width = 1076
         Height = 13
         Align = alBottom
-        Color = clWindow
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = 15
@@ -1806,10 +1806,9 @@ object FrmCadTransport: TFrmCadTransport
       object Panel2: TPanel
         Left = 0
         Top = 556
-        Width = 1227
+        Width = 1076
         Height = 13
         Align = alBottom
-        Color = clWindow
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = 15
@@ -4364,13 +4363,11 @@ object FrmCadTransport: TFrmCadTransport
       object Panel5: TPanel
         Left = 0
         Top = 0
-        Width = 1223
+        Width = 1076
         Height = 170
         Align = alTop
-        Color = clWindow
         ParentBackground = False
         TabOrder = 0
-        ExplicitWidth = 1227
         object Label44: TLabel
           Left = 145
           Top = 10
@@ -4858,8 +4855,8 @@ object FrmCadTransport: TFrmCadTransport
       object DBGrid1: TDBGrid
         Left = 0
         Top = 170
-        Width = 1223
-        Height = 398
+        Width = 1076
+        Height = 399
         Align = alClient
         DataSource = DSVeiculo
         Font.Charset = DEFAULT_CHARSET
@@ -4923,10 +4920,9 @@ object FrmCadTransport: TFrmCadTransport
       object Panel6: TPanel
         Left = 0
         Top = 0
-        Width = 1227
+        Width = 1076
         Height = 110
         Align = alTop
-        Color = clWindow
         ParentBackground = False
         TabOrder = 0
         object Label8: TLabel
@@ -5132,13 +5128,11 @@ object FrmCadTransport: TFrmCadTransport
       object Panel7: TPanel
         Left = 0
         Top = 0
-        Width = 1223
+        Width = 1076
         Height = 300
         Align = alTop
-        Color = clWindow
         ParentBackground = False
         TabOrder = 0
-        ExplicitWidth = 1227
         object Label17: TLabel
           Left = 94
           Top = 5
@@ -5850,8 +5844,8 @@ object FrmCadTransport: TFrmCadTransport
       object DBGrid2: TDBGrid
         Left = 0
         Top = 300
-        Width = 1223
-        Height = 268
+        Width = 1076
+        Height = 269
         Align = alClient
         Color = clWhite
         DataSource = DsMotorista
@@ -6062,7 +6056,6 @@ object FrmCadTransport: TFrmCadTransport
     Width = 1084
     Height = 80
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = 15
@@ -6073,7 +6066,7 @@ object FrmCadTransport: TFrmCadTransport
     ParentFont = False
     TabOrder = 2
     Visible = False
-    ExplicitWidth = 1231
+    ExplicitWidth = 1080
   end
   object ODtS_Forn: TOraDataSource
     DataSet = OQry_Forn

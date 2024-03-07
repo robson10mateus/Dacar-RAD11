@@ -6,7 +6,7 @@ object FrmCadBairro: TFrmCadBairro
   VertScrollBar.Range = 45
   BorderStyle = bsSingle
   Caption = 'Comercial Dacar - Cadastro de Bairros'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -496,7 +496,6 @@ object FrmCadBairro: TFrmCadBairro
     Width = 663
     Height = 45
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -1814,7 +1813,7 @@ object FrmCadBairro: TFrmCadBairro
     Top = 45
     Width = 663
     Height = 347
-    ActivePage = TabDetalhes
+    ActivePage = TabCriterio
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
@@ -1875,7 +1874,7 @@ object FrmCadBairro: TFrmCadBairro
         Left = 10
         Top = 30
         Width = 250
-        Height = 230
+        Height = 251
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = 15
@@ -2071,9 +2070,9 @@ object FrmCadBairro: TFrmCadBairro
       end
       object MResul: TMemo
         Left = 270
-        Top = 110
-        Width = 380
-        Height = 150
+        Top = 126
+        Width = 363
+        Height = 155
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = 15
@@ -2101,8 +2100,8 @@ object FrmCadBairro: TFrmCadBairro
         OnKeyPress = EdExprKeyPress
       end
       object BitBtn2: TBitBtn
-        Left = 500
-        Top = 75
+        Left = 505
+        Top = 76
         Width = 20
         Height = 20
         Font.Charset = DEFAULT_CHARSET
@@ -2158,7 +2157,7 @@ object FrmCadBairro: TFrmCadBairro
             Title.Caption = 'C'#243'd'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
-            Title.Font.Height = 11
+            Title.Font.Height = 15
             Title.Font.Name = 'Arial'
             Title.Font.Pitch = fpVariable
             Title.Font.Style = [fsBold]
@@ -2170,7 +2169,7 @@ object FrmCadBairro: TFrmCadBairro
             FieldName = 'NM_BAIRRO'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
-            Title.Font.Height = 11
+            Title.Font.Height = 15
             Title.Font.Name = 'Arial'
             Title.Font.Pitch = fpVariable
             Title.Font.Style = [fsBold]
@@ -2182,7 +2181,7 @@ object FrmCadBairro: TFrmCadBairro
             FieldName = 'NM_CIDADE'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
-            Title.Font.Height = 11
+            Title.Font.Height = 15
             Title.Font.Name = 'Arial'
             Title.Font.Pitch = fpVariable
             Title.Font.Style = [fsBold]
@@ -2195,7 +2194,7 @@ object FrmCadBairro: TFrmCadBairro
             Title.Caption = 'UF'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
-            Title.Font.Height = 11
+            Title.Font.Height = 15
             Title.Font.Name = 'Arial'
             Title.Font.Pitch = fpVariable
             Title.Font.Style = [fsBold]

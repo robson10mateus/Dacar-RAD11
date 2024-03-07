@@ -34,7 +34,6 @@ object FrmDialBanco: TFrmDialBanco
     Width = 335
     Height = 41
     Align = alBottom
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15

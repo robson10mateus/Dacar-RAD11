@@ -7,7 +7,7 @@ object FrmAtualVersao: TFrmAtualVersao
   ActiveControl = PageControl1
   BorderStyle = bsSingle
   Caption = 'Atualizar Vers'#227'o'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = 11
@@ -26,8 +26,8 @@ object FrmAtualVersao: TFrmAtualVersao
   object PageControl1: TPageControl
     Left = 0
     Top = 41
-    Width = 619
-    Height = 337
+    Width = 615
+    Height = 336
     ActivePage = TabSheet1
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -38,8 +38,6 @@ object FrmAtualVersao: TFrmAtualVersao
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 615
-    ExplicitHeight = 336
     object TabSheet1: TTabSheet
       Caption = 'Lista'
       Font.Charset = DEFAULT_CHARSET
@@ -111,7 +109,7 @@ object FrmAtualVersao: TFrmAtualVersao
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 619
+    Width = 615
     Height = 41
     Anchors = []
     ButtonHeight = 37
@@ -719,11 +717,10 @@ object FrmAtualVersao: TFrmAtualVersao
   end
   object Panel1: TPanel
     Left = 0
-    Top = 378
-    Width = 619
+    Top = 377
+    Width = 615
     Height = 57
     Align = alBottom
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -733,8 +730,6 @@ object FrmAtualVersao: TFrmAtualVersao
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
-    ExplicitTop = 377
-    ExplicitWidth = 615
   end
   object QR: TOraQuery
     SQLInsert.Strings = (

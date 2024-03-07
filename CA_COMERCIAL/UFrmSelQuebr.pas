@@ -73,8 +73,9 @@ uses Principal,Global, UFrmSelRelQuebr, UFrmPesCaminhao;
 
 procedure TFrmSelQuebr.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
-     FrmPrincipal.VEN061.Enabled:= True;
-     Action:= caFree;
+  FrmSelQuebr:=nil;
+  FrmPrincipal.VEN061.Enabled:= True;
+  Action:=caFree;
 end;
 
 procedure TFrmSelQuebr.FormActivate(Sender: TObject);

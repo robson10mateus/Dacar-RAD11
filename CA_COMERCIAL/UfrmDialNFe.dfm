@@ -38,7 +38,6 @@ object frmDialNFe: TfrmDialNFe
     Width = 413
     Height = 38
     Align = alBottom
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15

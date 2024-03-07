@@ -614,7 +614,9 @@ end;
 procedure TFrmCadBairro.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
+  FrmCadBairro:=nil;
   FrmPrincipal.CadastrodeBairro1.Enabled:= True;
+  Action:=caFree;
 end;
 
 procedure TFrmCadBairro.DBNmBairroKeyPress(Sender: TObject; var Key: Char);

@@ -7,7 +7,7 @@ object FrmPedVenda: TFrmPedVenda
   ActiveControl = PageControl1
   BorderStyle = bsSingle
   Caption = 'Comercial Dacar - Lancto de Pedido de Venda'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
   Font.Height = 11
@@ -500,8 +500,8 @@ object FrmPedVenda: TFrmPedVenda
   object PageControl1: TPageControl
     Left = 0
     Top = 187
-    Width = 1755
-    Height = 710
+    Width = 1751
+    Height = 709
     ActivePage = TabSheet1
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -514,8 +514,6 @@ object FrmPedVenda: TFrmPedVenda
     ParentFont = False
     TabOrder = 0
     OnChange = PageControl1Change
-    ExplicitWidth = 1751
-    ExplicitHeight = 709
     object TabSheet1: TTabSheet
       Caption = ' Crit'#233'rio '
       ImageIndex = 2
@@ -1137,12 +1135,11 @@ object FrmPedVenda: TFrmPedVenda
       object Panel1: TPanel
         Left = 0
         Top = 0
-        Width = 1747
-        Height = 680
+        Width = 1743
+        Height = 679
         Align = alClient
         BevelWidth = 2
         BorderWidth = 1
-        Color = clWindow
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = 15
@@ -1152,6 +1149,8 @@ object FrmPedVenda: TFrmPedVenda
         ParentBackground = False
         ParentFont = False
         TabOrder = 0
+        ExplicitWidth = 1747
+        ExplicitHeight = 680
         object Label68: TLabel
           Left = 12
           Top = 604
@@ -1290,7 +1289,7 @@ object FrmPedVenda: TFrmPedVenda
         object grpPedido: TGroupBox
           Left = 3
           Top = 4
-          Width = 1741
+          Width = 1737
           Height = 250
           Align = alTop
           Caption = '                           '
@@ -1302,6 +1301,7 @@ object FrmPedVenda: TFrmPedVenda
           Font.Style = []
           ParentFont = False
           TabOrder = 2
+          ExplicitWidth = 1741
           object Label11: TLabel
             Left = 460
             Top = 22
@@ -2319,40 +2319,40 @@ object FrmPedVenda: TFrmPedVenda
         object Panel4: TPanel
           Left = 3
           Top = 3
-          Width = 1741
+          Width = 1737
           Height = 1
           Align = alTop
           BevelOuter = bvNone
-          Color = clWindow
           ParentBackground = False
           TabOrder = 3
+          ExplicitWidth = 1741
         end
         object Panel10: TPanel
           Left = 3
           Top = 254
-          Width = 1741
+          Width = 1737
           Height = 3
           Align = alTop
           BevelOuter = bvNone
-          Color = clWindow
           ParentBackground = False
           TabOrder = 4
+          ExplicitWidth = 1741
         end
         object Panel11: TPanel
           Left = 3
           Top = 257
-          Width = 1741
+          Width = 1737
           Height = 3
           Align = alTop
           BevelOuter = bvNone
-          Color = clWindow
           ParentBackground = False
           TabOrder = 5
+          ExplicitWidth = 1741
         end
         object grpPagamento: TGroupBox
           Left = 3
           Top = 260
-          Width = 1741
+          Width = 1737
           Height = 65
           Align = alTop
           Caption = '                                  '
@@ -2364,6 +2364,7 @@ object FrmPedVenda: TFrmPedVenda
           Font.Style = []
           ParentFont = False
           TabOrder = 6
+          ExplicitWidth = 1741
           object SpeedButton2: TSpeedButton
             Left = 710
             Top = 201
@@ -2651,7 +2652,7 @@ object FrmPedVenda: TFrmPedVenda
         object grpTransportes: TGroupBox
           Left = 3
           Top = 330
-          Width = 1741
+          Width = 1737
           Height = 120
           Align = alTop
           Caption = '                                '
@@ -2663,6 +2664,7 @@ object FrmPedVenda: TFrmPedVenda
           Font.Style = []
           ParentFont = False
           TabOrder = 7
+          ExplicitWidth = 1741
           object Label9: TLabel
             Left = 380
             Top = 20
@@ -3237,29 +3239,29 @@ object FrmPedVenda: TFrmPedVenda
         object Panel12: TPanel
           Left = 3
           Top = 325
-          Width = 1741
+          Width = 1737
           Height = 5
           Align = alTop
           BevelOuter = bvNone
-          Color = clWindow
           ParentBackground = False
           TabOrder = 8
+          ExplicitWidth = 1741
         end
         object Panel13: TPanel
           Left = 3
           Top = 450
-          Width = 1741
+          Width = 1737
           Height = 3
           Align = alTop
           BevelOuter = bvNone
-          Color = clWindow
           ParentBackground = False
           TabOrder = 9
+          ExplicitWidth = 1741
         end
         object grpDadosAdicionais: TGroupBox
           Left = 3
           Top = 453
-          Width = 1741
+          Width = 1737
           Height = 120
           Align = alTop
           Caption = '                           '
@@ -3271,6 +3273,7 @@ object FrmPedVenda: TFrmPedVenda
           Font.Style = []
           ParentFont = False
           TabOrder = 10
+          ExplicitWidth = 1741
           object SpeedButton1: TSpeedButton
             Left = 520
             Top = 11
@@ -3562,8 +3565,8 @@ object FrmPedVenda: TFrmPedVenda
       object DBGrid2: TDBGrid
         Left = 0
         Top = 355
-        Width = 1747
-        Height = 325
+        Width = 1743
+        Height = 324
         TabStop = False
         Align = alClient
         DataSource = DSItem
@@ -3671,17 +3674,17 @@ object FrmPedVenda: TFrmPedVenda
       object Panel2: TPanel
         Left = 0
         Top = 0
-        Width = 1747
+        Width = 1743
         Height = 155
         Align = alTop
         BevelOuter = bvNone
-        Color = clWindow
         ParentBackground = False
         TabOrder = 1
+        ExplicitWidth = 1747
         object GroupBox6: TGroupBox
           Left = 0
           Top = 3
-          Width = 1747
+          Width = 1743
           Height = 150
           Align = alTop
           Caption = ' Dados do Pedido '
@@ -3693,6 +3696,7 @@ object FrmPedVenda: TFrmPedVenda
           Font.Style = [fsBold]
           ParentFont = False
           TabOrder = 0
+          ExplicitWidth = 1747
           object btn_ConfObs: TSpeedButton
             Left = 756
             Top = 69
@@ -4200,24 +4204,24 @@ object FrmPedVenda: TFrmPedVenda
         object Panel14: TPanel
           Left = 0
           Top = 0
-          Width = 1747
+          Width = 1743
           Height = 3
           Align = alTop
           BevelOuter = bvNone
-          Color = clWindow
           ParentBackground = False
           TabOrder = 1
+          ExplicitWidth = 1747
         end
       end
       object Panel3: TPanel
         Left = 0
         Top = 155
-        Width = 1747
+        Width = 1743
         Height = 200
         Align = alTop
-        Color = clWindow
         ParentBackground = False
         TabOrder = 2
+        ExplicitWidth = 1747
         object lblAviso: TLabel
           Left = 48
           Top = 58
@@ -4677,7 +4681,6 @@ object FrmPedVenda: TFrmPedVenda
               Width = 274
               Height = 45
               BevelOuter = bvNone
-              Color = clWindow
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
               Font.Height = 50
@@ -4937,7 +4940,6 @@ object FrmPedVenda: TFrmPedVenda
         Width = 1747
         Height = 65
         Align = alTop
-        Color = clWindow
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = 15
@@ -6104,23 +6106,22 @@ object FrmPedVenda: TFrmPedVenda
       object Panel5: TPanel
         Left = 0
         Top = 0
-        Width = 1747
+        Width = 1743
         Height = 3
         Align = alTop
         BevelOuter = bvNone
-        Color = clWindow
         ParentBackground = False
         TabOrder = 2
+        ExplicitWidth = 1747
       end
     end
   end
   object pnlBotoes: TPanel
     Left = 0
     Top = 142
-    Width = 1755
+    Width = 1751
     Height = 45
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = 15
@@ -6130,7 +6131,6 @@ object FrmPedVenda: TFrmPedVenda
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 1751
     object SBSalva: TSpeedButton
       Left = 250
       Top = 5
@@ -8400,10 +8400,9 @@ object FrmPedVenda: TFrmPedVenda
   object Panel9: TPanel
     Left = 0
     Top = 0
-    Width = 1755
+    Width = 1751
     Height = 142
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = 15
@@ -8414,7 +8413,6 @@ object FrmPedVenda: TFrmPedVenda
     ParentFont = False
     TabOrder = 2
     Visible = False
-    ExplicitWidth = 1751
   end
   object DSPediVe: TOraDataSource
     DataSet = QPediVe

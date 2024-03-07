@@ -9,7 +9,7 @@ object FrmPesqConta: TFrmPesqConta
   BorderIcons = [biHelp]
   BorderStyle = bsSingle
   Caption = 'Pesquisa de Contas'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
   Font.Height = 11

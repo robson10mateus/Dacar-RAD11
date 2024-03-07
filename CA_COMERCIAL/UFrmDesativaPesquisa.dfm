@@ -26,7 +26,6 @@ object FrmDesativaPesquisa: TFrmDesativaPesquisa
     Height = 40
     Align = alTop
     BevelOuter = bvNone
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -35,7 +34,6 @@ object FrmDesativaPesquisa: TFrmDesativaPesquisa
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 769
     object Label1: TLabel
       Left = 21
       Top = 26
@@ -108,7 +106,6 @@ object FrmDesativaPesquisa: TFrmDesativaPesquisa
     Height = 55
     Align = alBottom
     BevelOuter = bvNone
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -117,8 +114,6 @@ object FrmDesativaPesquisa: TFrmDesativaPesquisa
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitTop = 544
-    ExplicitWidth = 769
     object Label2: TLabel
       Left = 21
       Top = 14
@@ -156,7 +151,6 @@ object FrmDesativaPesquisa: TFrmDesativaPesquisa
     Height = 465
     Align = alLeft
     BevelOuter = bvNone
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -165,12 +159,11 @@ object FrmDesativaPesquisa: TFrmDesativaPesquisa
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
-    ExplicitHeight = 504
     object DBGrid1: TDBGrid
       Left = 0
       Top = 0
       Width = 334
-      Height = 504
+      Height = 466
       Align = alClient
       DataSource = DtsPesquisa
       Font.Charset = DEFAULT_CHARSET
@@ -211,7 +204,6 @@ object FrmDesativaPesquisa: TFrmDesativaPesquisa
     Height = 465
     Align = alLeft
     BevelOuter = bvNone
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -220,7 +212,6 @@ object FrmDesativaPesquisa: TFrmDesativaPesquisa
     ParentBackground = False
     ParentFont = False
     TabOrder = 3
-    ExplicitHeight = 504
     object btnAnexarUm: TBitBtn
       Left = 8
       Top = 35
@@ -426,7 +417,6 @@ object FrmDesativaPesquisa: TFrmDesativaPesquisa
     Height = 465
     Align = alLeft
     BevelOuter = bvNone
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -458,7 +448,6 @@ object FrmDesativaPesquisa: TFrmDesativaPesquisa
     Height = 465
     Align = alLeft
     BevelOuter = bvNone
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -467,7 +456,6 @@ object FrmDesativaPesquisa: TFrmDesativaPesquisa
     ParentBackground = False
     ParentFont = False
     TabOrder = 5
-    ExplicitHeight = 504
   end
   object DtsPesquisa: TDataSource
     DataSet = QryPesquisa

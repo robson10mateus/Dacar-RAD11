@@ -8,7 +8,7 @@ object FrmPesqCid: TFrmPesqCid
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Cadastro de Cliente - Consulta Cidade'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -494,8 +494,8 @@ object FrmPesqCid: TFrmPesqCid
   object DBGrid1: TDBGrid
     Left = 0
     Top = 170
-    Width = 733
-    Height = 197
+    Width = 729
+    Height = 196
     Align = alClient
     DataSource = DtSrcPesqCid
     Font.Charset = DEFAULT_CHARSET
@@ -554,10 +554,9 @@ object FrmPesqCid: TFrmPesqCid
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 733
+    Width = 729
     Height = 45
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -566,7 +565,6 @@ object FrmPesqCid: TFrmPesqCid
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 729
     object BitBtn4: TBitBtn
       Left = 40
       Top = 5
@@ -994,10 +992,9 @@ object FrmPesqCid: TFrmPesqCid
   object Panel2: TPanel
     Left = 0
     Top = 45
-    Width = 733
+    Width = 729
     Height = 125
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -1006,7 +1003,6 @@ object FrmPesqCid: TFrmPesqCid
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
-    ExplicitWidth = 729
     object Lbl_Expr: TLabel
       Left = 10
       Top = 70

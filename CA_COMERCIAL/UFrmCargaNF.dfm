@@ -429,7 +429,6 @@ object FrmCargaNF: TFrmCargaNF
     Width = 381
     Height = 224
     Align = alClient
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -595,7 +594,6 @@ object FrmCargaNF: TFrmCargaNF
     Width = 381
     Height = 25
     Align = alBottom
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15

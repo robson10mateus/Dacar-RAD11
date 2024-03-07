@@ -83,8 +83,9 @@ uses Principal,Global, UFrmConsApanhaRel , UFrmSeldata ;
 procedure TFrmConsApanha.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-     FrmPrincipal.VEN046.Enabled:= True;
-     Action:=caFree;
+  FrmConsApanha:=nil;
+  FrmPrincipal.VEN046.Enabled:= True;
+  Action:=caFree;
 end;
 
 procedure TFrmConsApanha.bt_PesqDTIClick(Sender: TObject);

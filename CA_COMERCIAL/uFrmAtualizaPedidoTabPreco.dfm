@@ -9,7 +9,7 @@ object frmAtualizaPedidoTabPreco: TfrmAtualizaPedidoTabPreco
   Caption = 
     'Comercial Dacar - Atualiza'#231#227'o de Pedidos com Pre'#231'o Abaixo da Tab' +
     'ela'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -497,10 +497,9 @@ object frmAtualizaPedidoTabPreco: TfrmAtualizaPedidoTabPreco
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 969
+    Width = 965
     Height = 45
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -509,7 +508,6 @@ object frmAtualizaPedidoTabPreco: TfrmAtualizaPedidoTabPreco
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 965
     object btnValidaPedidos: TSpeedButton
       Left = 5
       Top = 5
@@ -1409,10 +1407,9 @@ object frmAtualizaPedidoTabPreco: TfrmAtualizaPedidoTabPreco
   object Panel2: TPanel
     Left = 0
     Top = 45
-    Width = 969
+    Width = 965
     Height = 125
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -1421,7 +1418,6 @@ object frmAtualizaPedidoTabPreco: TfrmAtualizaPedidoTabPreco
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 965
     object Label1: TLabel
       Left = 236
       Top = 15
@@ -1831,10 +1827,9 @@ object frmAtualizaPedidoTabPreco: TfrmAtualizaPedidoTabPreco
   object Panel3: TPanel
     Left = 0
     Top = 170
-    Width = 969
+    Width = 965
     Height = 260
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -1843,7 +1838,6 @@ object frmAtualizaPedidoTabPreco: TfrmAtualizaPedidoTabPreco
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
-    ExplicitWidth = 965
     object GroupBox1: TGroupBox
       Left = 1
       Top = 6
@@ -1867,7 +1861,6 @@ object frmAtualizaPedidoTabPreco: TfrmAtualizaPedidoTabPreco
         Height = 10
         Align = alTop
         BevelOuter = bvNone
-        Color = clWindow
         ParentBackground = False
         TabOrder = 0
         ExplicitWidth = 959
@@ -1971,7 +1964,6 @@ object frmAtualizaPedidoTabPreco: TfrmAtualizaPedidoTabPreco
       Height = 5
       Align = alTop
       BevelOuter = bvNone
-      Color = clWindow
       ParentBackground = False
       TabOrder = 1
       ExplicitWidth = 963
@@ -1980,10 +1972,9 @@ object frmAtualizaPedidoTabPreco: TfrmAtualizaPedidoTabPreco
   object Panel6: TPanel
     Left = 0
     Top = 430
-    Width = 969
-    Height = 289
+    Width = 965
+    Height = 288
     Align = alClient
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -1992,8 +1983,6 @@ object frmAtualizaPedidoTabPreco: TfrmAtualizaPedidoTabPreco
     ParentBackground = False
     ParentFont = False
     TabOrder = 3
-    ExplicitWidth = 965
-    ExplicitHeight = 288
     object GroupBox2: TGroupBox
       Left = 1
       Top = 11
@@ -2020,7 +2009,6 @@ object frmAtualizaPedidoTabPreco: TfrmAtualizaPedidoTabPreco
         Height = 10
         Align = alTop
         BevelOuter = bvNone
-        Color = clWindow
         ParentBackground = False
         TabOrder = 0
         ExplicitWidth = 959
@@ -2031,7 +2019,6 @@ object frmAtualizaPedidoTabPreco: TfrmAtualizaPedidoTabPreco
         Width = 963
         Height = 248
         Align = alClient
-        Color = clWindow
         Enabled = False
         ParentBackground = False
         TabOrder = 1
@@ -2108,7 +2095,6 @@ object frmAtualizaPedidoTabPreco: TfrmAtualizaPedidoTabPreco
       Height = 10
       Align = alTop
       BevelOuter = bvNone
-      Color = clWindow
       ParentBackground = False
       TabOrder = 1
       ExplicitWidth = 963

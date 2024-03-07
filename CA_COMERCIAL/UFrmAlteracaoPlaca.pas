@@ -166,8 +166,9 @@ end;
 procedure TFrmAlteracaoPlaca.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-     FrmPrincipal.VEN042.Enabled:= True;
-     Action := caFree;
+  FrmAlteracaoPlaca:=nil;
+  FrmPrincipal.VEN042.Enabled:= True;
+  Action:=caFree;
 end;
 
 procedure TFrmAlteracaoPlaca.BPesqDtClick(Sender: TObject);

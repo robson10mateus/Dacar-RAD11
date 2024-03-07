@@ -17,7 +17,6 @@ object FrmResultGranjeiro: TFrmResultGranjeiro
   WindowState = wsMaximized
   OnClose = FormClose
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 15
   object PageControl1: TPageControl
     Left = 0
@@ -28,7 +27,7 @@ object FrmResultGranjeiro: TFrmResultGranjeiro
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = 13
+    Font.Height = 15
     Font.Name = 'Arial'
     Font.Style = []
     ParentFont = False
@@ -38,26 +37,26 @@ object FrmResultGranjeiro: TFrmResultGranjeiro
       object Label6: TLabel
         Left = 316
         Top = 53
-        Width = 48
-        Height = 13
+        Width = 56
+        Height = 15
         Caption = 'Condi'#231#227'o:'
       end
       object Label7: TLabel
         Left = 308
         Top = 85
-        Width = 50
-        Height = 13
+        Width = 62
+        Height = 15
         Caption = 'Express'#227'o:'
       end
       object Label49: TLabel
         Left = 461
         Top = 1
-        Width = 55
-        Height = 12
+        Width = 62
+        Height = 15
         Caption = 'Data Inicial'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 13
+        Font.Height = 15
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = [fsBold]
@@ -66,12 +65,12 @@ object FrmResultGranjeiro: TFrmResultGranjeiro
       object Label1: TLabel
         Left = 554
         Top = 1
-        Width = 49
-        Height = 12
+        Width = 55
+        Height = 15
         Caption = 'Data Final'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 13
+        Font.Height = 15
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = [fsBold]
@@ -84,11 +83,11 @@ object FrmResultGranjeiro: TFrmResultGranjeiro
         Height = 369
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 13
+        Font.Height = 15
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
-        ItemHeight = 13
+        ItemHeight = 15
         ParentFont = False
         TabOrder = 0
         OnClick = LCamposClick
@@ -97,7 +96,7 @@ object FrmResultGranjeiro: TFrmResultGranjeiro
         Left = 383
         Top = 49
         Width = 138
-        Height = 21
+        Height = 23
         ItemIndex = 0
         TabOrder = 1
         Text = 'Igual a'
@@ -117,7 +116,7 @@ object FrmResultGranjeiro: TFrmResultGranjeiro
         Columns = 2
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 13
+        Font.Height = 15
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = [fsBold]
@@ -132,7 +131,7 @@ object FrmResultGranjeiro: TFrmResultGranjeiro
         Left = 382
         Top = 80
         Width = 265
-        Height = 21
+        Height = 23
         TabOrder = 3
         OnChange = EdExpreChange
       end
@@ -143,7 +142,7 @@ object FrmResultGranjeiro: TFrmResultGranjeiro
         Height = 227
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 13
+        Font.Height = 15
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
@@ -160,7 +159,7 @@ object FrmResultGranjeiro: TFrmResultGranjeiro
         Enabled = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = 14
+        Font.Height = 16
         Font.Name = 'Arial'
         Font.Style = []
         Glyph.Data = {
@@ -226,7 +225,7 @@ object FrmResultGranjeiro: TFrmResultGranjeiro
         Caption = 'Limpar'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = 14
+        Font.Height = 16
         Font.Name = 'Arial'
         Font.Style = []
         Glyph.Data = {
@@ -252,7 +251,7 @@ object FrmResultGranjeiro: TFrmResultGranjeiro
         Caption = '&Ativar'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = 14
+        Font.Height = 16
         Font.Name = 'Arial'
         Font.Style = []
         Glyph.Data = {
@@ -290,7 +289,7 @@ object FrmResultGranjeiro: TFrmResultGranjeiro
         Left = 460
         Top = 16
         Width = 91
-        Height = 21
+        Height = 23
         Hint = 'Data Sa'#237'da'
         ParentShowHint = False
         ShowHint = True
@@ -301,7 +300,7 @@ object FrmResultGranjeiro: TFrmResultGranjeiro
         Left = 554
         Top = 16
         Width = 91
-        Height = 21
+        Height = 23
         Hint = 'Data Sa'#237'da'
         ParentShowHint = False
         ShowHint = True
@@ -315,7 +314,7 @@ object FrmResultGranjeiro: TFrmResultGranjeiro
         Height = 19
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = 14
+        Font.Height = 16
         Font.Name = 'Arial'
         Font.Style = []
         Glyph.Data = {
@@ -338,7 +337,7 @@ object FrmResultGranjeiro: TFrmResultGranjeiro
         Height = 19
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = 14
+        Font.Height = 16
         Font.Name = 'Arial'
         Font.Style = []
         Glyph.Data = {
@@ -361,7 +360,7 @@ object FrmResultGranjeiro: TFrmResultGranjeiro
         Height = 20
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = 14
+        Font.Height = 16
         Font.Name = 'Arial'
         Font.Style = []
         Glyph.Data = {
@@ -387,7 +386,7 @@ object FrmResultGranjeiro: TFrmResultGranjeiro
         Columns = 3
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 13
+        Font.Height = 15
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
@@ -402,7 +401,7 @@ object FrmResultGranjeiro: TFrmResultGranjeiro
         Left = 315
         Top = 16
         Width = 139
-        Height = 21
+        Height = 23
         ItemIndex = 0
         TabOrder = 13
         Text = 'Data Saida'
@@ -865,7 +864,7 @@ object FrmResultGranjeiro: TFrmResultGranjeiro
         FixedColor = clSilver
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = 13
+        Font.Height = 15
         Font.Name = 'Arial'
         Font.Style = []
         Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -873,7 +872,7 @@ object FrmResultGranjeiro: TFrmResultGranjeiro
         TabOrder = 1
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
-        TitleFont.Height = 14
+        TitleFont.Height = 16
         TitleFont.Name = 'Arial'
         TitleFont.Style = []
         OnKeyDown = DBGrid1KeyDown

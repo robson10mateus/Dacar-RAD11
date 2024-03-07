@@ -326,8 +326,9 @@ end;
 procedure TfrmVendasDiaria.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-     FrmPrincipal.VEN056.Enabled:= True;
-     Action:=caFree;
+  frmVendasDiaria:=nil;
+  FrmPrincipal.VEN056.Enabled:= True;
+  Action:=caFree;
 end;
 
 procedure TfrmVendasDiaria.btnExcelClick(Sender: TObject);

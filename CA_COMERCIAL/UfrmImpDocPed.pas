@@ -1035,105 +1035,105 @@ procedure TfrmImpDocPed.BtIncluirClick(Sender: TObject);
   Vcampos,FA,FO:integer;
 begin
   If EdExpre.Text<>'' then
-   Begin
-     IF MResul.Lines.Count>0 then
-       begin
-         If RGeou.ItemIndex=0  then
-            Vre:=' AND '
-         Else
-         begin
-            Vlinha:= MResul.Lines.Strings[MResul.Lines.Count-1];
-            MResul.Lines.Strings[MResul.Lines.Count-1]:= Copy(Vlinha,1,length(Vlinha)-1);
-            Vre:=' OR ';
-         end;
-       end;
+  Begin
+    IF MResul.Lines.Count>0 then
+    begin
+      If RGeou.ItemIndex=0  then
+        Vre:=' AND '
+      Else
+      begin
+        Vlinha:= MResul.Lines.Strings[MResul.Lines.Count-1];
+        MResul.Lines.Strings[MResul.Lines.Count-1]:= Copy(Vlinha,1,length(Vlinha)-1);
+        Vre:=' OR ';
+      end;
+    end;
 
     If  LCampos.itemindex=-1 then
       Vcampos:=0
     else
       Vcampos:=LCampos.itemindex;
 
-     //COLOCAR PARENTESES ANTES DO AND
-     If RGeou.ItemIndex=0  then
-       Vre:= Vre + '(' ;
+    //COLOCAR PARENTESES ANTES DO AND
+    If RGeou.ItemIndex=0  then
+      Vre:= Vre + '(' ;
 
-     Case LCampos.itemindex of
-       0:Vre:=Vre + 'Pedido_venda.ID_FORMPAGA';
-       1:Vre:=Vre + 'pedido_venda.ID_CLIENTE';
-       2:Vre:=Vre + 'Pedido_venda.ID_CONTA';
-       3:Vre:=Vre + 'pedido_venda.ID_VENDEDOR';
-       4:Vre:=Vre + 'Expedicao_carga.DT_CARGEXPE';
-       5:Vre:=Vre + 'Pedido_venda.DT_PEDIVEND';
-       6:Vre:=Vre + 'Forma_pagamento.NM_FORMPAGA';
-       7:Vre:=Vre + 'Cliente.NM_CLIENTE';
-       8:Vre:=Vre + 'Vendedor.NM_VENDEDOR';
-       9:Vre:=Vre + 'Boleto.NR_BOLETO';
-      10:Vre:=Vre + 'Expedicao_carga.ID_CARGEXPE';
-      11:Vre:=Vre + 'Conta.NR_CONTA';
-      12:Vre:=Vre + 'Nota_fiscal.NR_NOTAFISC';
-      13:Vre:=Vre + 'Pedido_venda.ID_PEDIVEND';
-      14:Vre:=Vre + 'Nota_fiscal.SG_SERINOTAFISC_NOTAFISC';
-      15:Vre:=Vre + 'Expedicao_carga.FL_STATCARGEXPE';
-      16:Vre:=Vre + 'Pedido_venda.FL_STATPEDIVEND';
-      17:Vre:=Vre + 'Pedido_venda.DT_FATUPEDIVEND';
-      18:Vre:=Vre + 'TRUNC(Pedido_venda.dt_entrpedivend)';
-      19:Vre:=Vre + 'Pedido_venda.ID_TIPOPEDIVEND';
-      20:Vre:=Vre + 'Nota_fiscal.gn_placveicnotafisc';
-      21:Vre:=Vre + 'Nota_fiscal.NR_CFOP_NOTAFISC';
-      22:Vre:=Vre + '(CASE WHEN nota_fiscal_xml.id_notafisc IS NOT NULL then ''S'' ELSE ''N'' END)';
-      {NOME: FABRICIO DATA:12/03/2018 MOTIVO: NOVOS FILTROS PARA EMISSÃO DE XML}
-      23:Vre:=Vre + 'Nota_fiscal.FL_CANCNOTAFISC';  // NOTA CANCELADA
-      24:Vre:=Vre + 'Nota_fiscal.DT_EMISNOTAFISC';  // DATA DE EMISSAO DA NOTA
-      25:Vre:=Vre + 'Cliente.FL_FUNCIONARIO';
-      26:Vre:=Vre + 'cliente.ID_GRUPCLIE';
-     end;
+    Case LCampos.itemindex of
+      0:Vre:=Vre + 'Pedido_venda.ID_FORMPAGA';
+      1:Vre:=Vre + 'pedido_venda.ID_CLIENTE';
+      2:Vre:=Vre + 'Pedido_venda.ID_CONTA';
+      3:Vre:=Vre + 'pedido_venda.ID_VENDEDOR';
+      4:Vre:=Vre + 'Expedicao_carga.DT_CARGEXPE';
+      5:Vre:=Vre + 'Pedido_venda.DT_PEDIVEND';
+      6:Vre:=Vre + 'Forma_pagamento.NM_FORMPAGA';
+      7:Vre:=Vre + 'Cliente.NM_CLIENTE';
+      8:Vre:=Vre + 'Vendedor.NM_VENDEDOR';
+      9:Vre:=Vre + 'Boleto.NR_BOLETO';
+     10:Vre:=Vre + 'Expedicao_carga.ID_CARGEXPE';
+     11:Vre:=Vre + 'Conta.NR_CONTA';
+     12:Vre:=Vre + 'Nota_fiscal.NR_NOTAFISC';
+     13:Vre:=Vre + 'Pedido_venda.ID_PEDIVEND';
+     14:Vre:=Vre + 'Nota_fiscal.SG_SERINOTAFISC_NOTAFISC';
+     15:Vre:=Vre + 'Expedicao_carga.FL_STATCARGEXPE';
+     16:Vre:=Vre + 'Pedido_venda.FL_STATPEDIVEND';
+     17:Vre:=Vre + 'Pedido_venda.DT_FATUPEDIVEND';
+     18:Vre:=Vre + 'TRUNC(Pedido_venda.dt_entrpedivend)';
+     19:Vre:=Vre + 'Pedido_venda.ID_TIPOPEDIVEND';
+     20:Vre:=Vre + 'Nota_fiscal.gn_placveicnotafisc';
+     21:Vre:=Vre + 'Nota_fiscal.NR_CFOP_NOTAFISC';
+     22:Vre:=Vre + '(CASE WHEN nota_fiscal_xml.id_notafisc IS NOT NULL then ''S'' ELSE ''N'' END)';
+     {NOME: FABRICIO DATA:12/03/2018 MOTIVO: NOVOS FILTROS PARA EMISSÃO DE XML}
+     23:Vre:=Vre + 'Nota_fiscal.FL_CANCNOTAFISC';  // NOTA CANCELADA
+     24:Vre:=Vre + 'Nota_fiscal.DT_EMISNOTAFISC';  // DATA DE EMISSAO DA NOTA
+     25:Vre:=Vre + 'Cliente.FL_FUNCIONARIO';
+     26:Vre:=Vre + 'cliente.ID_GRUPCLIE';
+    end;
 
 
-     Case CBCond.ItemIndex of
-       0: Vre:=Vre + ' = ';
-       1: Vre:=Vre + ' <> ';
-       2: Vre:=Vre + ' > ';
-       3: Vre:=Vre + ' >= ';
-       4: Vre:=Vre + ' < ';
-       5: Vre:=Vre + ' <= ';
-       6: Vre:=Vre + ' LIKE ';
-       7: Vre:=Vre + ' IS NULL ';
-     end;
+    Case CBCond.ItemIndex of
+      0: Vre:=Vre + ' = ';
+      1: Vre:=Vre + ' <> ';
+      2: Vre:=Vre + ' > ';
+      3: Vre:=Vre + ' >= ';
+      4: Vre:=Vre + ' < ';
+      5: Vre:=Vre + ' <= ';
+      6: Vre:=Vre + ' LIKE ';
+      7: Vre:=Vre + ' IS NULL ';
+    end;
 
-  If CBCond.ItemIndex<7 then
-   begin
-     Case LCampos.itemindex of
-         4..5:Vre:=Vre + 'TO_DATE(''';
-         6..9:Vre:=Vre + '''';
-           11:Vre:=Vre + '''';
-       14..16:Vre:=Vre + '''';
-       17..18:Vre:=Vre + 'TO_DATE(''';
-       20..23:Vre:=Vre + '''';
-       24:Vre:=Vre + 'TO_DATE(''';
-       25:Vre:=Vre + '''';
-     end;
+    If CBCond.ItemIndex<7 then
+    begin
+      Case LCampos.itemindex of
+        4..5:Vre:=Vre + 'TO_DATE(''';
+        6..9:Vre:=Vre + '''';
+          11:Vre:=Vre + '''';
+          14..16:Vre:=Vre + '''';
+          17..18:Vre:=Vre + 'TO_DATE(''';
+          20..23:Vre:=Vre + '''';
+          24:Vre:=Vre + 'TO_DATE(''';
+          25:Vre:=Vre + '''';
+      end;
 
-  If CBCond.ItemIndex = 6 then
-     Vre:=Vre + '%';
+      If CBCond.ItemIndex = 6 then
+        Vre:=Vre + '%';
 
-  Vre:=Vre + UpperCase(Edexpre.text);
+      Vre:=Vre + UpperCase(Edexpre.text);
 
-  If CBCond.ItemIndex = 6 then
-     Vre:=Vre + '%';
+      If CBCond.ItemIndex = 6 then
+        Vre:=Vre + '%';
 
-     //TO_DATE('25-Aug-2003 00:00:00','DD-MON-YYYY HH24:MI:SS')
+      //TO_DATE('25-Aug-2003 00:00:00','DD-MON-YYYY HH24:MI:SS')
 
-     Case LCampos.itemindex of
-         4..5:Vre:= Vre + '''' + ',' + '''DD/MM/YYYY HH24:MI:SS''' +')';
-         6..9:Vre:= Vre + '''';
-           11:Vre:= Vre + '''';
-       14..16:Vre:= Vre + '''';
-       17..18:Vre:= Vre + '''' + ',' + '''DD/MM/YYYY HH24:MI:SS''' +')';
-       20..23:Vre:=Vre + '''';
-       24:Vre:= Vre + '''' + ',' + '''DD/MM/YYYY HH24:MI:SS''' +')';
-       25:Vre:=Vre + '''';
-     end;
-  end;
+      Case LCampos.itemindex of
+          4..5:Vre:= Vre + '''' + ',' + '''DD/MM/YYYY HH24:MI:SS''' +')';
+          6..9:Vre:= Vre + '''';
+            11:Vre:= Vre + '''';
+        14..16:Vre:= Vre + '''';
+        17..18:Vre:= Vre + '''' + ',' + '''DD/MM/YYYY HH24:MI:SS''' +')';
+        20..23:Vre:=Vre + '''';
+            24:Vre:= Vre + '''' + ',' + '''DD/MM/YYYY HH24:MI:SS''' +')';
+            25:Vre:=Vre + '''';
+      end;
+    end;
 
     Vre:=Vre+')';
 
@@ -1142,7 +1142,7 @@ begin
     EdExpre.Text :='';
     BtIncluir.Enabled:=false;
 
-   end;
+  end;
    BtAtivar.SetFocus;
 end;
 

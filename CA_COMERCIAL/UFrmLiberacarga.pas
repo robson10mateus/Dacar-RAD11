@@ -293,6 +293,7 @@ end;
 procedure TFrmLiberacarga.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
+  FrmLiberacarga:=nil;
   FrmPrincipal.VEN009.Enabled:= True;
   Action:=caFree;
 end;

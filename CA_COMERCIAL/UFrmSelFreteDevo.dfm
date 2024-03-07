@@ -5,8 +5,8 @@ object FrmSelFreteDevo: TFrmSelFreteDevo
   BorderIcons = []
   BorderStyle = bsDialog
   Caption = 'Relat'#243'rio de Frete das Devolu'#231#245'es'
-  ClientHeight = 317
-  ClientWidth = 407
+  ClientHeight = 315
+  ClientWidth = 399
   Color = clBackground
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -21,11 +21,10 @@ object FrmSelFreteDevo: TFrmSelFreteDevo
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 407
-    Height = 317
+    Width = 399
+    Height = 315
     Align = alClient
     BevelWidth = 3
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -34,6 +33,8 @@ object FrmSelFreteDevo: TFrmSelFreteDevo
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 403
+    ExplicitHeight = 316
     object Label1: TLabel
       Left = 38
       Top = 56

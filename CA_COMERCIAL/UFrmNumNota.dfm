@@ -26,7 +26,6 @@ object FrmNumNota: TFrmNumNota
     Width = 479
     Height = 231
     Align = alClient
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -143,7 +142,6 @@ object FrmNumNota: TFrmNumNota
     Width = 479
     Height = 45
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15

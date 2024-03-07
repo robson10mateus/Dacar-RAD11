@@ -1,15 +1,14 @@
 object FrmPedVendaCorte: TFrmPedVendaCorte
   Left = 243
   Top = 232
-  Width = 817
-  Height = 382
+  Width = 900
+  Height = 410
   HorzScrollBar.Range = 811
   VertScrollBar.Range = 370
   ActiveControl = eData
-  BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Pedido de Venda - Corte'
-  Color = clBackground
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -116,7 +115,7 @@ object FrmPedVendaCorte: TFrmPedVendaCorte
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 811
+    Width = 888
     Height = 39
     Anchors = []
     ButtonHeight = 35
@@ -130,10 +129,10 @@ object FrmPedVendaCorte: TFrmPedVendaCorte
     Font.Style = []
     ParentFont = False
     TabOrder = 3
-    ExplicitWidth = 817
+    ExplicitWidth = 811
     object Sb_Sair: TSpeedButton
-      Left = 780
-      Top = 4
+      Left = 0
+      Top = 0
       Width = 35
       Height = 35
       Hint = 'Sair'
@@ -323,15 +322,15 @@ object FrmPedVendaCorte: TFrmPedVendaCorte
       OnClick = Sb_SairClick
     end
     object ToolButton1: TToolButton
-      Left = 140
-      Top = 4
+      Left = 35
+      Top = 0
       Width = 640
       Caption = 'ToolButton1'
       Style = tbsDivider
     end
     object DBNavigator1: TDBNavigator
-      Left = 1
-      Top = 4
+      Left = 675
+      Top = 0
       Width = 139
       Height = 35
       DataSource = dtsPesq
@@ -342,8 +341,8 @@ object FrmPedVendaCorte: TFrmPedVendaCorte
   end
   object DBGrid1: TDBGrid
     Left = 0
-    Top = 86
-    Width = 811
+    Top = 88
+    Width = 888
     Height = 248
     Align = alBottom
     DataSource = dtsPesq
@@ -433,13 +432,12 @@ object FrmPedVendaCorte: TFrmPedVendaCorte
   end
   object Panel1: TPanel
     Left = 0
-    Top = 334
-    Width = 811
+    Top = 336
+    Width = 888
     Height = 36
     Align = alBottom
     Alignment = taLeftJustify
     BevelOuter = bvNone
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlue
     Font.Height = 15
@@ -449,8 +447,8 @@ object FrmPedVendaCorte: TFrmPedVendaCorte
     ParentBackground = False
     ParentFont = False
     TabOrder = 6
-    ExplicitTop = 346
-    ExplicitWidth = 817
+    ExplicitTop = 334
+    ExplicitWidth = 811
     object Label2: TLabel
       Left = 595
       Top = 10

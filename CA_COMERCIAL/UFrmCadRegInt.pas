@@ -565,7 +565,9 @@ end;
 procedure TFrmCadRegInt.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
+  FrmCadRegInt:=nil;
   FrmPrincipal.CadastrodeRegioInternacional1.Enabled:= True;
+  Action:=caFree;
 end;
 
 end.

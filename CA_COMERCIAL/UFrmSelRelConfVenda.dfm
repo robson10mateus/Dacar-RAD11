@@ -6,7 +6,7 @@ object FrmSelRelConfVenda: TFrmSelRelConfVenda
   VertScrollBar.Range = 45
   BorderStyle = bsSingle
   Caption = 'Comercial Dacar - Relat'#243'rio de Confer'#234'ncia de Vendas'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = 11
@@ -498,10 +498,9 @@ object FrmSelRelConfVenda: TFrmSelRelConfVenda
   object pnlBotoes: TPanel
     Left = 0
     Top = 0
-    Width = 1116
+    Width = 1112
     Height = 45
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -511,7 +510,6 @@ object FrmSelRelConfVenda: TFrmSelRelConfVenda
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 1112
     object Sb_Sair: TSpeedButton
       Left = 40
       Top = 5
@@ -684,8 +682,8 @@ object FrmSelRelConfVenda: TFrmSelRelConfVenda
   object PageControl1: TPageControl
     Left = 0
     Top = 45
-    Width = 1116
-    Height = 380
+    Width = 1112
+    Height = 379
     ActivePage = TabSheet1
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -696,8 +694,6 @@ object FrmSelRelConfVenda: TFrmSelRelConfVenda
     Font.Style = []
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 1112
-    ExplicitHeight = 379
     object TabSheet1: TTabSheet
       Caption = ' Op'#231#245'es de Filtro '
       object Label7: TLabel

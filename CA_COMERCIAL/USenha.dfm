@@ -28,7 +28,6 @@ object Fenha: TFenha
     Height = 368
     Align = alClient
     BevelWidth = 4
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -42,7 +41,6 @@ object Fenha: TFenha
       Top = 9
       Width = 356
       Height = 118
-      Color = clWindow
       ParentBackground = False
       TabOrder = 0
       object Image1: TImage
@@ -3034,7 +3032,6 @@ object Fenha: TFenha
       Height = 201
       BevelOuter = bvLowered
       BevelWidth = 2
-      Color = clWindow
       ParentBackground = False
       TabOrder = 1
       object SpeedButton1: TSpeedButton

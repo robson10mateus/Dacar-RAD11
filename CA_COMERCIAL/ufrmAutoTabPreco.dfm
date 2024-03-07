@@ -495,7 +495,6 @@ object frmAutoTabPreco: TfrmAutoTabPreco
     Width = 412
     Height = 199
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = 15
@@ -538,7 +537,6 @@ object frmAutoTabPreco: TfrmAutoTabPreco
         Height = 5
         Align = alTop
         BevelOuter = bvNone
-        Color = clWindow
         ParentBackground = False
         TabOrder = 1
       end
@@ -550,7 +548,6 @@ object frmAutoTabPreco: TfrmAutoTabPreco
       Height = 10
       Align = alTop
       BevelOuter = bvNone
-      Color = clWindow
       ParentBackground = False
       TabOrder = 1
     end
@@ -561,7 +558,6 @@ object frmAutoTabPreco: TfrmAutoTabPreco
     Width = 412
     Height = 65
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = 15

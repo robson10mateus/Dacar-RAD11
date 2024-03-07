@@ -7,7 +7,7 @@ object FrmManuComis: TFrmManuComis
   ActiveControl = PageControl1
   BorderStyle = bsSingle
   Caption = 'Manuten'#231#227'o de Comiss'#227'o'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = 11
@@ -26,8 +26,8 @@ object FrmManuComis: TFrmManuComis
   object PageControl1: TPageControl
     Left = 0
     Top = 41
-    Width = 1007
-    Height = 392
+    Width = 1003
+    Height = 391
     ActivePage = TabCriterio
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -38,8 +38,6 @@ object FrmManuComis: TFrmManuComis
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 1003
-    ExplicitHeight = 391
     object TabCriterio: TTabSheet
       Caption = 'Crit'#233'rio'
       object Label6: TLabel
@@ -459,7 +457,7 @@ object FrmManuComis: TFrmManuComis
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 1007
+    Width = 1003
     Height = 41
     Anchors = []
     ButtonHeight = 37
@@ -473,7 +471,6 @@ object FrmManuComis: TFrmManuComis
     Font.Style = []
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 1003
     object SB_PRIMEIRO: TSpeedButton
       Left = 0
       Top = 0
@@ -1835,11 +1832,10 @@ object FrmManuComis: TFrmManuComis
   end
   object Panel1: TPanel
     Left = 0
-    Top = 433
-    Width = 1007
+    Top = 432
+    Width = 1003
     Height = 17
     Align = alBottom
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -1849,8 +1845,6 @@ object FrmManuComis: TFrmManuComis
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
-    ExplicitTop = 432
-    ExplicitWidth = 1003
   end
   object Qr: TOraQuery
     SQLInsert.Strings = (

@@ -122,14 +122,15 @@ end;
 procedure TFrmEntradaSaidaCaixas.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-  FrmPrincipal.VEN076.Enabled:= True;
-  Action:=caFree;
-
   Qr.Close;
   QrDetalhe.Close;
   QrRel.Close;
   QrEntradaCaixa.Close;
   QrSaidaSucata.Close;
+
+  FrmEntradaSaidaCaixas:=nil;
+  FrmPrincipal.VEN076.Enabled:= True;
+  Action:=caFree;
 end;
 
 procedure TFrmEntradaSaidaCaixas.FormCreate(Sender: TObject);

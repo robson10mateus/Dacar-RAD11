@@ -7,7 +7,7 @@ object FrmPesqLote: TFrmPesqLote
   VertScrollBar.Range = 334
   BorderStyle = bsSingle
   Caption = 'Pesquisa Lote'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -17,8 +17,8 @@ object FrmPesqLote: TFrmPesqLote
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 574
-    Height = 340
+    Width = 570
+    Height = 339
     Align = alClient
     TabOrder = 0
     ExplicitLeft = 384

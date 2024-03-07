@@ -50,7 +50,6 @@ object FrmDialCupom: TFrmDialCupom
     Width = 735
     Height = 38
     Align = alBottom
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -287,7 +286,6 @@ object FrmDialCupom: TFrmDialCupom
     Height = 25
     Align = alBottom
     BevelOuter = bvNone
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15

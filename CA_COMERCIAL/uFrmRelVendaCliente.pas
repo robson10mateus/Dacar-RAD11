@@ -261,8 +261,9 @@ end;
 procedure TFrmRelVendaCliente.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
+  FrmRelVendaCliente:=nil;
   FrmPrincipal.VEN075.Enabled:= True;
-  Action:=caFree;
+  Action:=caFree;;
 end;
 
 procedure TFrmRelVendaCliente.LCamposClick(Sender: TObject);

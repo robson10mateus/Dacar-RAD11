@@ -8,7 +8,7 @@ object FrmSelData: TFrmSelData
   ActiveControl = SEDia
   BorderStyle = bsSingle
   Caption = 'Sele'#231#227'o de Data'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -20,10 +20,9 @@ object FrmSelData: TFrmSelData
   object Panel2: TPanel
     Left = 0
     Top = 66
-    Width = 224
-    Height = 63
+    Width = 220
+    Height = 62
     Align = alClient
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -39,10 +38,9 @@ object FrmSelData: TFrmSelData
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 224
+    Width = 220
     Height = 66
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15

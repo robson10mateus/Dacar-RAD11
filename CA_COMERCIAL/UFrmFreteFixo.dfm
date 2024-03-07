@@ -7,7 +7,7 @@ object FrmFreteFixo: TFrmFreteFixo
   ActiveControl = PageControl1
   BorderStyle = bsSingle
   Caption = 'Manuten'#231#227'o de Frete Fixo para Cliente'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = 11
@@ -25,8 +25,8 @@ object FrmFreteFixo: TFrmFreteFixo
   object PageControl1: TPageControl
     Left = 0
     Top = 41
-    Width = 569
-    Height = 337
+    Width = 565
+    Height = 336
     ActivePage = TabSheet1
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -37,8 +37,6 @@ object FrmFreteFixo: TFrmFreteFixo
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 565
-    ExplicitHeight = 336
     object TabSheet1: TTabSheet
       Caption = 'Clientes'
       Font.Charset = DEFAULT_CHARSET
@@ -95,7 +93,7 @@ object FrmFreteFixo: TFrmFreteFixo
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 569
+    Width = 565
     Height = 41
     Anchors = []
     ButtonHeight = 37
@@ -109,7 +107,6 @@ object FrmFreteFixo: TFrmFreteFixo
     Font.Style = []
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 565
     object SB_PRIMEIRO: TSpeedButton
       Left = 0
       Top = 0
@@ -1651,11 +1648,10 @@ object FrmFreteFixo: TFrmFreteFixo
   end
   object Panel1: TPanel
     Left = 0
-    Top = 378
-    Width = 569
+    Top = 377
+    Width = 565
     Height = 57
     Align = alBottom
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -1665,8 +1661,6 @@ object FrmFreteFixo: TFrmFreteFixo
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
-    ExplicitTop = 377
-    ExplicitWidth = 565
     object SpeedButton1: TSpeedButton
       Left = 298
       Top = 16

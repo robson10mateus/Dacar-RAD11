@@ -23,7 +23,6 @@ object FrmGeraTelevendas: TFrmGeraTelevendas
     Width = 496
     Height = 162
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -114,7 +113,6 @@ object FrmGeraTelevendas: TFrmGeraTelevendas
     Width = 496
     Height = 18
     Align = alClient
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15

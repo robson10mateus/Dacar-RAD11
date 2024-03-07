@@ -8,7 +8,7 @@ object FrmSobre: TFrmSobre
   ActiveControl = BitBtn1
   BorderStyle = bsDialog
   Caption = 'Sobre '
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = 11

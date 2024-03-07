@@ -8,7 +8,7 @@ object frmJustificativaPrecoTab: TfrmJustificativaPrecoTab
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Dacar Comercial - Justificativa Pre'#231'o Abaixo Tabela'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -19,10 +19,9 @@ object frmJustificativaPrecoTab: TfrmJustificativaPrecoTab
   object pnlBotoes: TPanel
     Left = 0
     Top = 0
-    Width = 545
+    Width = 541
     Height = 45
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -315,10 +314,9 @@ object frmJustificativaPrecoTab: TfrmJustificativaPrecoTab
   object pnlMotivo: TPanel
     Left = 0
     Top = 45
-    Width = 545
-    Height = 204
+    Width = 541
+    Height = 203
     Align = alClient
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -352,7 +350,6 @@ object frmJustificativaPrecoTab: TfrmJustificativaPrecoTab
         Height = 5
         Align = alTop
         BevelOuter = bvNone
-        Color = clWindow
         ParentBackground = False
         TabOrder = 0
         ExplicitWidth = 518
@@ -374,7 +371,6 @@ object frmJustificativaPrecoTab: TfrmJustificativaPrecoTab
       Height = 10
       Align = alTop
       BevelOuter = bvNone
-      Color = clWindow
       ParentBackground = False
       TabOrder = 1
       ExplicitWidth = 522

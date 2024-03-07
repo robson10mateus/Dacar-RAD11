@@ -119,8 +119,9 @@ uses Principal,Global,UFrmSeldata, uEmail;
 procedure TFrmOcorrencias.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-     FrmPrincipal.VEN059.Enabled:= True;
-     Action:= caFree;
+  FrmOcorrencias:=nil;
+  FrmPrincipal.VEN059.Enabled:= True;
+  Action:=caFree;
 end;
 
 procedure TFrmOcorrencias.Sb_SairClick(Sender: TObject);

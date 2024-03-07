@@ -3,9 +3,9 @@ object FrmConsultaEstoque: TFrmConsultaEstoque
   Top = 209
   ActiveControl = PageControl1
   Caption = 'Comercial Dacar - Relat'#243'rio de Consulta de Estoque'
-  ClientHeight = 672
-  ClientWidth = 1402
-  Color = clWindow
+  ClientHeight = 670
+  ClientWidth = 1394
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
   Font.Height = 11
@@ -496,8 +496,8 @@ object FrmConsultaEstoque: TFrmConsultaEstoque
   object PageControl1: TPageControl
     Left = 0
     Top = 0
-    Width = 1402
-    Height = 672
+    Width = 1394
+    Height = 670
     ActivePage = Tab_Processa
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -509,8 +509,6 @@ object FrmConsultaEstoque: TFrmConsultaEstoque
     ParentFont = False
     TabOrder = 0
     OnChange = PageControl1Change
-    ExplicitWidth = 1398
-    ExplicitHeight = 671
     object Tab_Processa: TTabSheet
       Caption = ' Consulta Estoque '
       ImageIndex = 2
@@ -520,9 +518,9 @@ object FrmConsultaEstoque: TFrmConsultaEstoque
         Width = 1394
         Height = 110
         Align = alTop
-        Color = clWindow
         ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 1390
         object SB_Relatorio: TSpeedButton
           Left = 465
           Top = 15
@@ -1196,9 +1194,10 @@ object FrmConsultaEstoque: TFrmConsultaEstoque
         Height = 532
         Align = alClient
         Caption = 'Panel4'
-        Color = clWindow
         ParentBackground = False
         TabOrder = 1
+        ExplicitWidth = 1390
+        ExplicitHeight = 531
         object DBGrid2: TDBGrid
           Left = 1
           Top = 1
@@ -1397,7 +1396,6 @@ object FrmConsultaEstoque: TFrmConsultaEstoque
         Width = 1394
         Height = 60
         Align = alTop
-        Color = clWindow
         ParentBackground = False
         TabOrder = 1
         ExplicitWidth = 1390
@@ -1973,7 +1971,6 @@ object FrmConsultaEstoque: TFrmConsultaEstoque
         Width = 1394
         Height = 150
         Align = alTop
-        Color = clWindow
         ParentBackground = False
         TabOrder = 0
         object btnAjusteIncluir: TSpeedButton

@@ -7,7 +7,7 @@ object FrmSelVenProd: TFrmSelVenProd
   ActiveControl = LCampos
   BorderStyle = bsSingle
   Caption = 'Comercial Dacar - Relat'#243'rio de Vendas por Produtos'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = 11
@@ -26,10 +26,9 @@ object FrmSelVenProd: TFrmSelVenProd
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 770
+    Width = 766
     Height = 45
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -39,7 +38,6 @@ object FrmSelVenProd: TFrmSelVenProd
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 766
     object btnExcel: TSpeedButton
       Left = 5
       Top = 5
@@ -267,10 +265,9 @@ object FrmSelVenProd: TFrmSelVenProd
   object Panel3: TPanel
     Left = 0
     Top = 45
-    Width = 770
-    Height = 424
+    Width = 766
+    Height = 423
     Align = alClient
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -280,8 +277,6 @@ object FrmSelVenProd: TFrmSelVenProd
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 766
-    ExplicitHeight = 423
     object Label6: TLabel
       Left = 280
       Top = 29
@@ -628,7 +623,6 @@ object FrmSelVenProd: TFrmSelVenProd
       Top = 145
       Width = 482
       Height = 70
-      Color = clWindow
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = 15

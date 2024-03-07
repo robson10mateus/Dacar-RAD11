@@ -24,7 +24,6 @@ object FrmTotalDevo: TFrmTotalDevo
     Width = 582
     Height = 45
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -246,7 +245,6 @@ object FrmTotalDevo: TFrmTotalDevo
     Width = 582
     Height = 145
     Align = alClient
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -418,7 +416,6 @@ object FrmTotalDevo: TFrmTotalDevo
       Top = 69
       Width = 3
       Height = 48
-      Color = clWindow
       ParentBackground = False
       TabOrder = 9
     end
@@ -427,7 +424,6 @@ object FrmTotalDevo: TFrmTotalDevo
       Top = 69
       Width = 15
       Height = 3
-      Color = clWindow
       ParentBackground = False
       TabOrder = 0
     end
@@ -436,7 +432,6 @@ object FrmTotalDevo: TFrmTotalDevo
       Top = 116
       Width = 17
       Height = 3
-      Color = clWindow
       ParentBackground = False
       TabOrder = 2
     end
@@ -445,7 +440,6 @@ object FrmTotalDevo: TFrmTotalDevo
       Top = 90
       Width = 20
       Height = 3
-      Color = clWindow
       ParentBackground = False
       TabOrder = 4
     end

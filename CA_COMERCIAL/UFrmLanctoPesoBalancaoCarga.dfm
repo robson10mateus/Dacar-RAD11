@@ -6,7 +6,7 @@ object frmLanctoPesoBalancaoCarga: TfrmLanctoPesoBalancaoCarga
   VertScrollBar.Range = 45
   ActiveControl = btnConfimar
   Caption = 'Comercial Dacar - Lan'#231'amento de Peso Balan'#231#227'o da Carga'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -18,10 +18,9 @@ object frmLanctoPesoBalancaoCarga: TfrmLanctoPesoBalancaoCarga
   object pnlBotoes: TPanel
     Left = 0
     Top = 0
-    Width = 663
+    Width = 659
     Height = 45
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -30,7 +29,6 @@ object frmLanctoPesoBalancaoCarga: TfrmLanctoPesoBalancaoCarga
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 659
     object btnConfimar: TBitBtn
       Left = 5
       Top = 5
@@ -453,10 +451,9 @@ object frmLanctoPesoBalancaoCarga: TfrmLanctoPesoBalancaoCarga
   object pnlCentral: TPanel
     Left = 0
     Top = 45
-    Width = 663
-    Height = 347
+    Width = 659
+    Height = 346
     Align = alClient
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -465,8 +462,6 @@ object frmLanctoPesoBalancaoCarga: TfrmLanctoPesoBalancaoCarga
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 659
-    ExplicitHeight = 346
     object lblNumCarga: TLabel
       Left = 10
       Top = 20

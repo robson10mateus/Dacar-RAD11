@@ -7,7 +7,7 @@ object FrmLiberacarga: TFrmLiberacarga
   ActiveControl = PageControl1
   BorderStyle = bsSingle
   Caption = 'Comercial Dacar - Libera'#231#227'o de Cargas'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = 11
@@ -25,8 +25,8 @@ object FrmLiberacarga: TFrmLiberacarga
   object PageControl1: TPageControl
     Left = 0
     Top = 82
-    Width = 1067
-    Height = 328
+    Width = 1063
+    Height = 327
     ActivePage = TabSheet2
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -37,8 +37,6 @@ object FrmLiberacarga: TFrmLiberacarga
     Font.Style = []
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 1063
-    ExplicitHeight = 327
     object TabSheet2: TTabSheet
       Caption = 'Detalhe'
       Font.Charset = DEFAULT_CHARSET
@@ -124,11 +122,10 @@ object FrmLiberacarga: TFrmLiberacarga
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 1067
+    Width = 1063
     Height = 82
     Align = alTop
     BorderStyle = bsSingle
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -138,7 +135,6 @@ object FrmLiberacarga: TFrmLiberacarga
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 1063
     object SB_ATIVA: TSpeedButton
       Left = 140
       Top = 29

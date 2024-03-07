@@ -9,7 +9,7 @@ object FrmPesqMatEmba: TFrmPesqMatEmba
   BorderIcons = [biHelp]
   BorderStyle = bsSingle
   Caption = 'Pesquisa Material Embalagem '
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
   Font.Height = 11
@@ -107,7 +107,7 @@ object FrmPesqMatEmba: TFrmPesqMatEmba
     Left = 24
     Top = 80
     Width = 241
-    Height = 21
+    Height = 23
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = 15
@@ -132,7 +132,7 @@ object FrmPesqMatEmba: TFrmPesqMatEmba
     Left = 296
     Top = 80
     Width = 144
-    Height = 21
+    Height = 23
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = 15

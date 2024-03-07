@@ -50,7 +50,6 @@ object FrmBaseTeste: TFrmBaseTeste
     Top = 8
     Width = 393
     Height = 73
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15

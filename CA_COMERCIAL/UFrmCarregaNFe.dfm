@@ -7,7 +7,7 @@ object FrmCarregaNFe: TFrmCarregaNFe
   VertScrollBar.Range = 15
   ActiveControl = XmlSaida
   Caption = 'Importa'#231#227'o do XML NFE Entrada / Saida - 1.0.2.29 - 30/10/2013'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -24,7 +24,6 @@ object FrmCarregaNFe: TFrmCarregaNFe
     Width = 476
     Height = 621
     Align = alLeft
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -39,7 +38,6 @@ object FrmCarregaNFe: TFrmCarregaNFe
       Width = 474
       Height = 177
       Align = alTop
-      Color = clWindow
       ParentBackground = False
       TabOrder = 0
       object GroupBox2: TGroupBox
@@ -427,7 +425,6 @@ object FrmCarregaNFe: TFrmCarregaNFe
       Height = 18
       Align = alTop
       Caption = 'Notas Fiscais Filtradas'
-      Color = clWindow
       ParentBackground = False
       TabOrder = 1
     end
@@ -520,7 +517,6 @@ object FrmCarregaNFe: TFrmCarregaNFe
       Height = 36
       Align = alBottom
       BevelInner = bvLowered
-      Color = clWindow
       ParentBackground = False
       TabOrder = 3
       object spbLocalizaDestino: TSpeedButton
@@ -598,7 +594,6 @@ object FrmCarregaNFe: TFrmCarregaNFe
       Height = 36
       Align = alBottom
       BevelInner = bvLowered
-      Color = clWindow
       ParentBackground = False
       TabOrder = 5
       object SpeedButton1: TSpeedButton
@@ -662,7 +657,6 @@ object FrmCarregaNFe: TFrmCarregaNFe
     Height = 621
     Align = alClient
     BevelOuter = bvNone
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -678,7 +672,6 @@ object FrmCarregaNFe: TFrmCarregaNFe
       Height = 42
       Align = alTop
       BevelOuter = bvNone
-      Color = clWindow
       ParentBackground = False
       TabOrder = 0
       ExplicitWidth = 735
@@ -1032,7 +1025,6 @@ object FrmCarregaNFe: TFrmCarregaNFe
       Height = 18
       Align = alTop
       Caption = 'Notas Fiscais N'#227'o Incluidas'
-      Color = clWindow
       ParentBackground = False
       TabOrder = 1
       ExplicitWidth = 735
@@ -1067,7 +1059,6 @@ object FrmCarregaNFe: TFrmCarregaNFe
       Height = 366
       Align = alClient
       BevelOuter = bvLowered
-      Color = clWindow
       ParentBackground = False
       TabOrder = 2
       ExplicitWidth = 735
@@ -1171,7 +1162,6 @@ object FrmCarregaNFe: TFrmCarregaNFe
         Height = 349
         Align = alRight
         BevelOuter = bvLowered
-        Color = clWindow
         ParentBackground = False
         TabOrder = 1
         Visible = False
@@ -1200,7 +1190,6 @@ object FrmCarregaNFe: TFrmCarregaNFe
           Height = 15
           Align = alTop
           Caption = 'Auditoria da escritura'#231#227'o:'
-          Color = clWindow
           ParentBackground = False
           TabOrder = 1
         end
@@ -1211,7 +1200,6 @@ object FrmCarregaNFe: TFrmCarregaNFe
           Height = 36
           Align = alBottom
           BevelInner = bvLowered
-          Color = clWindow
           ParentBackground = False
           TabOrder = 2
           ExplicitTop = 311
@@ -1255,7 +1243,6 @@ object FrmCarregaNFe: TFrmCarregaNFe
       Height = 18
       Align = alTop
       Caption = 'Notas Fiscais Incluidas'
-      Color = clWindow
       ParentBackground = False
       TabOrder = 3
       ExplicitWidth = 735
@@ -1267,7 +1254,6 @@ object FrmCarregaNFe: TFrmCarregaNFe
       Height = 178
       Align = alTop
       BevelOuter = bvLowered
-      Color = clWindow
       ParentBackground = False
       TabOrder = 4
       ExplicitWidth = 735
@@ -1358,7 +1344,6 @@ object FrmCarregaNFe: TFrmCarregaNFe
     Height = 621
     Align = alLeft
     BevelOuter = bvNone
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -1375,7 +1360,6 @@ object FrmCarregaNFe: TFrmCarregaNFe
     Height = 621
     Align = alRight
     BevelOuter = bvNone
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -1392,7 +1376,6 @@ object FrmCarregaNFe: TFrmCarregaNFe
     Height = 15
     Align = alBottom
     BevelOuter = bvNone
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -1409,7 +1392,6 @@ object FrmCarregaNFe: TFrmCarregaNFe
     Height = 621
     Align = alLeft
     BevelOuter = bvNone
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15

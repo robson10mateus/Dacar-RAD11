@@ -3,9 +3,9 @@ object FrmConferenciaCarga: TFrmConferenciaCarga
   Top = 184
   ActiveControl = PageControl1
   Caption = 'Dacar Comercial - Relat'#243'rio de Confer'#234'ncia Carga'
-  ClientHeight = 401
-  ClientWidth = 896
-  Color = clWindow
+  ClientHeight = 399
+  ClientWidth = 888
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -494,8 +494,8 @@ object FrmConferenciaCarga: TFrmConferenciaCarga
   object PageControl1: TPageControl
     Left = 0
     Top = 0
-    Width = 896
-    Height = 401
+    Width = 888
+    Height = 399
     ActivePage = Tab_Criterio
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -506,8 +506,6 @@ object FrmConferenciaCarga: TFrmConferenciaCarga
     Font.Style = []
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 892
-    ExplicitHeight = 400
     object Tab_Criterio: TTabSheet
       Caption = 'Crit'#233'rio'
       object Label6: TLabel
@@ -871,7 +869,6 @@ object FrmConferenciaCarga: TFrmConferenciaCarga
         Width = 888
         Height = 45
         Align = alTop
-        Color = clWindow
         ParentBackground = False
         TabOrder = 1
         ExplicitWidth = 884

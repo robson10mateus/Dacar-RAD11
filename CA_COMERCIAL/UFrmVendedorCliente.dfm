@@ -7,7 +7,7 @@ object FrmVendedorCliente: TFrmVendedorCliente
   ActiveControl = PageControl1
   BorderStyle = bsSingle
   Caption = 'Comercial Dacar - Relat'#243'rio de Cliente X Vendedor'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
   Font.Height = 11
@@ -956,7 +956,6 @@ object FrmVendedorCliente: TFrmVendedorCliente
     Width = 859
     Height = 45
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = 15
@@ -1330,24 +1329,7 @@ object FrmVendedorCliente: TFrmVendedorCliente
         '    (SELECT DISTINCT MAX(V.DT_PEDIVEND) FROM PEDIDO_VENDA V WHER' +
         'E V.FL_STATPEDIVEND <> '#39'CN'#39' AND V.ID_CLIENTE = PV.ID_CLIENTE) AS' +
         ' ULT_VEND,'
-      '    C.ID_TIPOVEND || '#39' - '#39' ||'
-      '    CASE WHEN C.ID_TIPOVEND = 1 THEN'
-      '        '#39'Atacado'#39
-      '    WHEN C.ID_TIPOVEND = 2 THEN'
-      '        '#39'Varejo'#39
-      '    WHEN C.ID_TIPOVEND = 4 THEN'
-      '        '#39'Exporta'#231#227'o'#39' '
-      '    WHEN C.ID_TIPOVEND = 5 THEN'
-      '        '#39'Doa'#231#227'o'#39
-      '    WHEN C.ID_TIPOVEND = 6 THEN'
-      '        '#39'Outras'#39
-      '    WHEN C.ID_TIPOVEND = 7 THEN'
-      '        '#39'Exporta'#231#227'o Indireta'#39
-      '    WHEN C.ID_TIPOVEND = 8 THEN'
-      '        '#39'FEC. MANUAL CARGA EXP. EXTERNA'#39
-      '    WHEN C.ID_TIPOVEND = 9 THEN'
-      '        '#39'Emiss'#227'o de NF no ato da entrega'#39
-      '    END AS TIPO_VENDA '
+      '    PVT.NM_TIPOPEDIVEND'
       'FROM CLIENTE C'
       'LEFT JOIN Bairro B ON C.ID_BAIRRO = B.ID_BAIRRO'
       'LEFT JOIN CIDADE M ON B.ID_CIDADE = M.ID_CIDADE '
@@ -1355,6 +1337,9 @@ object FrmVendedorCliente: TFrmVendedorCliente
       'LEFT JOIN VENDEDOR V ON CV.ID_VENDEDOR = V.ID_VENDEDOR'
       'LEFT JOIN TABELA_PRECO TB ON (TB.ID_TABEPREC = C.ID_TABEPREC)'
       'LEFT JOIN PEDIDO_VENDA PV ON (PV.ID_CLIENTE = C.ID_CLIENTE) '
+      
+        'LEFT JOIN PEDIDO_VENDA_TIPO PVT ON (PVT.id_tipopedivend  = C.ID_' +
+        'TIPOPEDIVEND)'
       '&Macro'
       'ORDER BY V.NM_VENDEDOR, C.NM_CLIENTE')
     FetchAll = True
@@ -1432,9 +1417,9 @@ object FrmVendedorCliente: TFrmVendedorCliente
     object QrULT_VEND: TDateTimeField
       FieldName = 'ULT_VEND'
     end
-    object QrTIPO_VENDA: TStringField
-      FieldName = 'TIPO_VENDA'
-      Size = 74
+    object QrNM_TIPOPEDIVEND: TStringField
+      FieldName = 'NM_TIPOPEDIVEND'
+      Size = 40
     end
   end
   object Ds: TOraDataSource

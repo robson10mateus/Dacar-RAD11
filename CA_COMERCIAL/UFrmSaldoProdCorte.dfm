@@ -307,7 +307,6 @@ object FrmSaldoProdCorte: TFrmSaldoProdCorte
     Width = 593
     Height = 34
     Align = alBottom
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15

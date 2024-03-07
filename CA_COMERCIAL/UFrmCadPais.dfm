@@ -1,29 +1,30 @@
 object FrmCadPais: TFrmCadPais
   Left = 407
   Top = 142
-  Width = 1051
-  Height = 664
+  Width = 680
+  Height = 430
   VertScrollBar.Range = 45
   BorderStyle = bsSingle
   Caption = 'Cadastro de Pa'#237'ses'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
   Font.Height = 11
   Font.Name = 'Arial'
   Font.Pitch = fpVariable
   Font.Style = []
+  FormStyle = fsMDIChild
   Position = poScreenCenter
+  Visible = True
   OnClose = FormClose
   OnShow = FormShow
   TextHeight = 10
   object pnlBotoes: TPanel
     Left = 0
     Top = 0
-    Width = 1039
+    Width = 668
     Height = 45
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = 15
@@ -33,7 +34,7 @@ object FrmCadPais: TFrmCadPais
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 1035
+    ExplicitWidth = 664
     object SB_PRIMEIRO: TSpeedButton
       Left = 5
       Top = 5
@@ -1341,8 +1342,8 @@ object FrmCadPais: TFrmCadPais
   object PageControl1: TPageControl
     Left = 0
     Top = 45
-    Width = 1039
-    Height = 581
+    Width = 668
+    Height = 347
     ActivePage = TabDetalhes
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -1353,8 +1354,8 @@ object FrmCadPais: TFrmCadPais
     Font.Style = []
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 1035
-    ExplicitHeight = 580
+    ExplicitWidth = 664
+    ExplicitHeight = 296
     object TabCriterio: TTabSheet
       Caption = 'Criterios'
       OnShow = TabCriterioShow
@@ -1630,8 +1631,8 @@ object FrmCadPais: TFrmCadPais
         OnKeyPress = EdExprKeyPress
       end
       object BitBtn2: TBitBtn
-        Left = 500
-        Top = 90
+        Left = 505
+        Top = 91
         Width = 20
         Height = 20
         Font.Charset = DEFAULT_CHARSET
@@ -1660,8 +1661,9 @@ object FrmCadPais: TFrmCadPais
       object DBGrid1: TDBGrid
         Left = 0
         Top = 0
-        Width = 657
-        Height = 297
+        Width = 660
+        Height = 317
+        Align = alClient
         DataSource = DtSrcCadPais
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
@@ -1681,24 +1683,28 @@ object FrmCadPais: TFrmCadPais
           item
             Expanded = False
             FieldName = 'ID_PAIS'
+            Title.Caption = 'C'#243'd'
             Width = 50
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'NM_PAIS'
+            Title.Caption = 'Nome'
             Width = 205
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'NR_DDIPAIS'
+            Title.Caption = 'DDI'
             Width = 100
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'NM_REGIINTE'
+            Title.Caption = 'Reg. Internacional'
             Width = 185
             Visible = True
           end>
@@ -1708,9 +1714,9 @@ object FrmCadPais: TFrmCadPais
         Top = 416
         Width = 786
         Height = 48
-        Color = clWindow
         ParentBackground = False
         TabOrder = 1
+        Visible = False
         object Label1: TLabel
           Left = 17
           Top = 7
@@ -1775,11 +1781,11 @@ object FrmCadPais: TFrmCadPais
       Caption = 'Detalhes'
       ImageIndex = 2
       object Panel3: TPanel
-        Left = 10
-        Top = 8
-        Width = 627
-        Height = 265
-        Color = clWindow
+        Left = 0
+        Top = 0
+        Width = 660
+        Height = 317
+        Align = alClient
         ParentBackground = False
         TabOrder = 0
         object Label14: TLabel

@@ -1740,6 +1740,7 @@ end;
 procedure TFrmCadTransport.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
+  FrmCadTransport:=nil;
   FrmPrincipal.CadastrodeTransportadores1.Enabled:= True;
   Action:=caFree;
 end;

@@ -269,6 +269,7 @@ end;
 procedure TFrmSubRegiao.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
+  FrmSubRegiao:=nil;
   FrmPrincipal.VEN024.Enabled:= True;
   Action:=caFree;
 end;

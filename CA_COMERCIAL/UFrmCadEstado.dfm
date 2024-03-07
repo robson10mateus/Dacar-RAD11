@@ -1,18 +1,20 @@
 object FrmCadEstado: TFrmCadEstado
-  Left = 474
+  Left = 475
   Top = 264
   ActiveControl = PageControl1
   BorderStyle = bsSingle
   Caption = 'Cadastro de Estado'
-  ClientHeight = 388
-  ClientWidth = 647
-  Color = clWindow
+  ClientHeight = 392
+  ClientWidth = 668
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Position = poDesktopCenter
+  FormStyle = fsMDIChild
+  Position = poDefault
+  Visible = True
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
@@ -20,10 +22,9 @@ object FrmCadEstado: TFrmCadEstado
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 647
-    Height = 388
+    Width = 668
+    Height = 392
     Align = alClient
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -32,12 +33,12 @@ object FrmCadEstado: TFrmCadEstado
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 643
-    ExplicitHeight = 387
+    ExplicitWidth = 639
+    ExplicitHeight = 386
     object ToolBar1: TToolBar
       Left = 1
       Top = 1
-      Width = 645
+      Width = 666
       Height = 45
       ButtonHeight = 35
       ButtonWidth = 35
@@ -50,7 +51,6 @@ object FrmCadEstado: TFrmCadEstado
       Font.Style = []
       ParentFont = False
       TabOrder = 0
-      ExplicitWidth = 641
       object SB_PRIMEIRO: TSpeedButton
         Left = 0
         Top = 0
@@ -1357,9 +1357,9 @@ object FrmCadEstado: TFrmCadEstado
     object PageControl1: TPageControl
       Left = 1
       Top = 46
-      Width = 645
-      Height = 341
-      ActivePage = TabLista
+      Width = 666
+      Height = 345
+      ActivePage = TabDetalhes
       Align = alClient
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
@@ -1368,8 +1368,8 @@ object FrmCadEstado: TFrmCadEstado
       Font.Style = []
       ParentFont = False
       TabOrder = 1
-      ExplicitWidth = 641
-      ExplicitHeight = 340
+      ExplicitWidth = 637
+      ExplicitHeight = 339
       object TabCriterio: TTabSheet
         Caption = 'Criterios'
         OnShow = TabCriterioShow
@@ -1416,7 +1416,7 @@ object FrmCadEstado: TFrmCadEstado
           Left = 6
           Top = 24
           Width = 260
-          Height = 265
+          Height = 281
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = 15
@@ -1454,9 +1454,9 @@ object FrmCadEstado: TFrmCadEstado
         end
         object RGeou: TRadioGroup
           Left = 459
-          Top = 28
+          Top = 24
           Width = 90
-          Height = 34
+          Height = 38
           Columns = 2
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -1610,7 +1610,7 @@ object FrmCadEstado: TFrmCadEstado
           Left = 283
           Top = 127
           Width = 301
-          Height = 162
+          Height = 178
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = 15
@@ -1637,8 +1637,8 @@ object FrmCadEstado: TFrmCadEstado
           OnKeyPress = EdExprKeyPress
         end
         object BitBtn2: TBitBtn
-          Left = 500
-          Top = 90
+          Left = 505
+          Top = 91
           Width = 20
           Height = 20
           Font.Charset = DEFAULT_CHARSET
@@ -1666,8 +1666,9 @@ object FrmCadEstado: TFrmCadEstado
         object DBGrid1: TDBGrid
           Left = 0
           Top = 0
-          Width = 657
-          Height = 297
+          Width = 658
+          Height = 315
+          Align = alClient
           DataSource = DtSrcCadEstado
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -1685,24 +1686,28 @@ object FrmCadEstado: TFrmCadEstado
             item
               Expanded = False
               FieldName = 'SG_ESTADO'
+              Title.Caption = 'Sigla'
               Width = 50
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'NM_ESTADO'
+              Title.Caption = 'Nome Estado'
               Width = 205
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'NM_REGIGEOG'
+              Title.Caption = 'Reg. Geografica'
               Width = 180
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'NM_PAIS'
+              Title.Caption = 'Nome Pa'#237's'
               Width = 185
               Visible = True
             end>
@@ -1712,9 +1717,9 @@ object FrmCadEstado: TFrmCadEstado
           Top = 416
           Width = 786
           Height = 48
-          Color = clWindow
           ParentBackground = False
           TabOrder = 1
+          Visible = False
           object Label1: TLabel
             Left = 17
             Top = 7
@@ -1776,13 +1781,17 @@ object FrmCadEstado: TFrmCadEstado
         ImageIndex = 2
         OnShow = TabDetalhesShow
         object Panel3: TPanel
-          Left = 8
-          Top = 8
-          Width = 625
-          Height = 265
-          Color = clWindow
+          Left = 0
+          Top = 0
+          Width = 658
+          Height = 315
+          Align = alClient
           ParentBackground = False
           TabOrder = 0
+          ExplicitLeft = 8
+          ExplicitTop = 8
+          ExplicitWidth = 625
+          ExplicitHeight = 265
           object Label13: TLabel
             Left = 24
             Top = 112
@@ -2000,8 +2009,8 @@ object FrmCadEstado: TFrmCadEstado
             TabOrder = 8
           end
           object BtCenCus: TBitBtn
-            Left = 65
-            Top = 128
+            Left = 68
+            Top = 129
             Width = 19
             Height = 21
             Font.Charset = DEFAULT_CHARSET
@@ -2078,8 +2087,8 @@ object FrmCadEstado: TFrmCadEstado
   end
   object DtSrcCadEstado: TOraDataSource
     DataSet = QryCadEstado
-    Left = 554
-    Top = 101
+    Left = 546
+    Top = 21
   end
   object QryRegiaoGeog: TOraQuery
     SQL.Strings = (
@@ -2129,8 +2138,8 @@ object FrmCadEstado: TFrmCadEstado
       '  AND id_recurso=:VRECUR'
       '  AND id_janela = 29'
       '  AND id_usuario=:VUSUARIO')
-    Left = 451
-    Top = 126
+    Left = 435
+    Top = 14
     ParamData = <
       item
         DataType = ftUnknown
@@ -2244,8 +2253,8 @@ object FrmCadEstado: TFrmCadEstado
     LockMode = lmNone
     Options.SetFieldsReadOnly = False
     Options.ExtendedFieldsInfo = False
-    Left = 552
-    Top = 56
+    Left = 496
+    Top = 16
     object QryCadEstadoEMPRESA: TStringField
       FieldName = 'EMPRESA'
       Required = True

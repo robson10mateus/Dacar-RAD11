@@ -8,7 +8,7 @@ object frmPedidosPosHorario: TfrmPedidosPosHorario
   Caption = 
     'Comercial Dacar - Rela'#231#227'o dos Pedidos Digitados ap'#243's Hor'#225'rio Per' +
     'mitido'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -498,10 +498,9 @@ object frmPedidosPosHorario: TfrmPedidosPosHorario
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 1162
+    Width = 1158
     Height = 60
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -510,7 +509,6 @@ object frmPedidosPosHorario: TfrmPedidosPosHorario
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 1158
     object SB_Relatorio: TSpeedButton
       Left = 295
       Top = 15
@@ -1001,8 +999,8 @@ object frmPedidosPosHorario: TfrmPedidosPosHorario
   object GroupBox1: TGroupBox
     Left = 0
     Top = 65
-    Width = 1162
-    Height = 512
+    Width = 1158
+    Height = 511
     Align = alClient
     Caption = ' Rela'#231#227'o dos Pedidos Digitados ap'#243's Hor'#225'rio Permitido '
     Font.Charset = DEFAULT_CHARSET
@@ -1013,8 +1011,6 @@ object frmPedidosPosHorario: TfrmPedidosPosHorario
     Font.Style = []
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 1158
-    ExplicitHeight = 511
     object DBGrid1: TDBGrid
       Left = 2
       Top = 22
@@ -1081,7 +1077,6 @@ object frmPedidosPosHorario: TfrmPedidosPosHorario
       Height = 5
       Align = alTop
       BevelOuter = bvNone
-      Color = clWindow
       ParentBackground = False
       TabOrder = 1
       ExplicitWidth = 1154
@@ -1090,11 +1085,10 @@ object frmPedidosPosHorario: TfrmPedidosPosHorario
   object Panel2: TPanel
     Left = 0
     Top = 60
-    Width = 1162
+    Width = 1158
     Height = 5
     Align = alTop
     BevelOuter = bvNone
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -1103,7 +1097,6 @@ object frmPedidosPosHorario: TfrmPedidosPosHorario
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
-    ExplicitWidth = 1158
   end
   object qryPedidos: TOraQuery
     SQL.Strings = (

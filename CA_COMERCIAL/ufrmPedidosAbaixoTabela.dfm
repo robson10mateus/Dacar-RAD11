@@ -493,10 +493,9 @@ object frmPedidosAbaixoTabela: TfrmPedidosAbaixoTabela
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 608
+    Width = 604
     Height = 45
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -912,10 +911,9 @@ object frmPedidosAbaixoTabela: TfrmPedidosAbaixoTabela
   object Panel2: TPanel
     Left = 0
     Top = 45
-    Width = 608
-    Height = 361
+    Width = 604
+    Height = 360
     Align = alClient
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15

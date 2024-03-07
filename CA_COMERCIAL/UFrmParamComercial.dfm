@@ -7,7 +7,7 @@ object FrmParamComercial: TFrmParamComercial
   ActiveControl = PageControl1
   BorderStyle = bsSingle
   Caption = 'Parametros Comerciais'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = 11
@@ -26,8 +26,8 @@ object FrmParamComercial: TFrmParamComercial
   object PageControl1: TPageControl
     Left = 0
     Top = 41
-    Width = 788
-    Height = 457
+    Width = 784
+    Height = 456
     ActivePage = TabDetalhe
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -39,8 +39,6 @@ object FrmParamComercial: TFrmParamComercial
     ParentFont = False
     TabOrder = 0
     OnMouseMove = PageControl1MouseMove
-    ExplicitWidth = 784
-    ExplicitHeight = 456
     object TabCriterio: TTabSheet
       Caption = 'Crit'#233'rio'
       object Label6: TLabel
@@ -542,9 +540,9 @@ object FrmParamComercial: TFrmParamComercial
         Width = 780
         Height = 67
         Align = alTop
-        Color = clWindow
         ParentBackground = False
         TabOrder = 12
+        ExplicitWidth = 776
         object Label14: TLabel
           Left = 37
           Top = 10
@@ -731,9 +729,9 @@ object FrmParamComercial: TFrmParamComercial
         Width = 780
         Height = 201
         Align = alTop
-        Color = clWindow
         ParentBackground = False
         TabOrder = 11
+        ExplicitWidth = 776
         object Label16: TLabel
           Left = 274
           Top = 77
@@ -1830,7 +1828,7 @@ object FrmParamComercial: TFrmParamComercial
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 788
+    Width = 784
     Height = 41
     Anchors = []
     ButtonHeight = 37
@@ -1845,7 +1843,6 @@ object FrmParamComercial: TFrmParamComercial
     ParentFont = False
     TabOrder = 1
     OnMouseMove = ToolBar1MouseMove
-    ExplicitWidth = 784
     object SB_PRIMEIRO: TSpeedButton
       Left = 0
       Top = 0
@@ -3980,11 +3977,10 @@ object FrmParamComercial: TFrmParamComercial
   end
   object Panel1: TPanel
     Left = 0
-    Top = 498
-    Width = 788
+    Top = 497
+    Width = 784
     Height = 17
     Align = alBottom
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -3994,8 +3990,6 @@ object FrmParamComercial: TFrmParamComercial
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
-    ExplicitTop = 497
-    ExplicitWidth = 784
   end
   object DS: TOraDataSource
     DataSet = Qr

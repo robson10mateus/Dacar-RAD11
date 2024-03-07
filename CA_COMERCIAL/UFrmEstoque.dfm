@@ -7,7 +7,7 @@ object FrmEstoque: TFrmEstoque
   ActiveControl = edt_Data
   BorderStyle = bsSingle
   Caption = 'Comercial Dacar - Ajuste Estoque Inicial'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -27,7 +27,6 @@ object FrmEstoque: TFrmEstoque
     Width = 1309
     Height = 60
     Align = alTop
-    Color = clWindow
     ParentBackground = False
     TabOrder = 0
     object btnAtualizar: TSpeedButton
@@ -780,7 +779,6 @@ object FrmEstoque: TFrmEstoque
         Width = 1305
         Height = 81
         Align = alTop
-        Color = clWindow
         ParentBackground = False
         TabOrder = 1
         ExplicitWidth = 1301

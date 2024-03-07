@@ -6,7 +6,7 @@ object FrmConsRemessaRacao: TFrmConsRemessaRacao
   VertScrollBar.Range = 46
   ActiveControl = edtDataIni
   Caption = 'Consulta Remessa de Ra'#231#227'o'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -463,7 +463,6 @@ object FrmConsRemessaRacao: TFrmConsRemessaRacao
       Width = 211
       Height = 42
       Align = alCustom
-      Color = clWindow
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = 15

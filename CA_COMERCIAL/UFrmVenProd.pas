@@ -120,6 +120,7 @@ end;
 procedure TFrmVenProd.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
+  FrmVenProd:=nil;
   FrmPrincipal.VEN071.Enabled:= True;
   Action:=caFree;
 end;

@@ -3,9 +3,9 @@ object frmVendasDiaria: TfrmVendasDiaria
   Top = 259
   ActiveControl = pgcVendasDiaria
   Caption = 'Comercial Dacar - Relat'#243'rio de Vendas Di'#225'ria'
-  ClientHeight = 499
-  ClientWidth = 812
-  Color = clWindow
+  ClientHeight = 497
+  ClientWidth = 804
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
   Font.Height = 5
@@ -495,8 +495,8 @@ object frmVendasDiaria: TfrmVendasDiaria
   object pgcVendasDiaria: TPageControl
     Left = 0
     Top = 0
-    Width = 812
-    Height = 499
+    Width = 804
+    Height = 497
     ActivePage = tbsFiltro
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -507,8 +507,6 @@ object frmVendasDiaria: TfrmVendasDiaria
     Font.Style = []
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 808
-    ExplicitHeight = 498
     object tbsFiltro: TTabSheet
       Caption = 'Op'#231#245'es de Filtro'
       object lblDataFim: TLabel

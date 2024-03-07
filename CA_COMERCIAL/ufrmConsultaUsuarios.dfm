@@ -3,7 +3,7 @@ inherited frmConsultaUsuarios: TfrmConsultaUsuarios
   Height = 400
   BorderIcons = [biSystemMenu]
   Caption = 'Comercial Dacar - Consulta de Usu'#225'rios'
-  Color = clWindow
+  Color = clBtnFace
   Icon.Data = {
     000001000300101000000100200068040000360000002020000001002000A810
     00009E0400003030000001002000A82500004615000028000000100000002000
@@ -483,8 +483,8 @@ inherited frmConsultaUsuarios: TfrmConsultaUsuarios
   ExplicitHeight = 400
   TextHeight = 10
   inherited DBGrid1: TDBGrid
-    Width = 588
-    Height = 192
+    Width = 584
+    Height = 191
     DataSource = dtsUsuarioSistema
     OnTitleClick = DBGrid1TitleClick
     Columns = <
@@ -504,7 +504,7 @@ inherited frmConsultaUsuarios: TfrmConsultaUsuarios
       end>
   end
   inherited pnlBotoes: TPanel
-    Width = 588
+    Width = 584
     ExplicitWidth = 584
     inherited BitBtn1: TBitBtn
       OnClick = BitBtn1Click
@@ -514,7 +514,7 @@ inherited frmConsultaUsuarios: TfrmConsultaUsuarios
     end
   end
   inherited pnlFiltros: TPanel
-    Width = 588
+    Width = 584
     ExplicitWidth = 584
     inherited EdExpre: TEdit
       OnKeyPress = EdExpreKeyPress

@@ -6,7 +6,7 @@ object FrmCadVendedor: TFrmCadVendedor
   VertScrollBar.Range = 45
   BorderStyle = bsSingle
   Caption = 'Comercial Dacar - Cadastro de Vendedor'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -22,8 +22,8 @@ object FrmCadVendedor: TFrmCadVendedor
   object PageControl: TPageControl
     Left = 0
     Top = 45
-    Width = 1014
-    Height = 526
+    Width = 1010
+    Height = 525
     ActivePage = TabDetalhes
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -35,8 +35,6 @@ object FrmCadVendedor: TFrmCadVendedor
     ParentFont = False
     TabOrder = 0
     OnChange = PageControlChange
-    ExplicitWidth = 1010
-    ExplicitHeight = 525
     object TabCriterio: TTabSheet
       Caption = ' Crit'#233'rios '
       object Lbl_Filtro: TLabel
@@ -551,13 +549,11 @@ object FrmCadVendedor: TFrmCadVendedor
       object Panel3: TPanel
         Left = 0
         Top = 0
-        Width = 1006
-        Height = 496
+        Width = 1002
+        Height = 495
         Align = alClient
-        Color = clWindow
         ParentBackground = False
         TabOrder = 0
-        ExplicitLeft = 1
         object Label15: TLabel
           Left = 10
           Top = 130
@@ -1500,12 +1496,6 @@ object FrmCadVendedor: TFrmCadVendedor
           item
             Expanded = False
             FieldName = 'ID_CLIENTE'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Height = 15
-            Font.Name = 'Arial'
-            Font.Pitch = fpVariable
-            Font.Style = []
             Title.Caption = 'C'#243'd'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
@@ -1519,12 +1509,6 @@ object FrmCadVendedor: TFrmCadVendedor
           item
             Expanded = False
             FieldName = 'CLIENTE'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Height = 15
-            Font.Name = 'Arial'
-            Font.Pitch = fpVariable
-            Font.Style = []
             Title.Caption = 'Raz'#227'o Social'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
@@ -1538,12 +1522,6 @@ object FrmCadVendedor: TFrmCadVendedor
           item
             Expanded = False
             FieldName = 'VENDEDORPADRAO'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Height = 15
-            Font.Name = 'Arial'
-            Font.Pitch = fpVariable
-            Font.Style = []
             Title.Caption = 'Vendedor Padr'#227'o'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
@@ -1557,12 +1535,6 @@ object FrmCadVendedor: TFrmCadVendedor
           item
             Expanded = False
             FieldName = 'COMISSIONADO'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Height = 15
-            Font.Name = 'Arial'
-            Font.Pitch = fpVariable
-            Font.Style = []
             Title.Caption = 'Comissionado'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
@@ -1576,12 +1548,6 @@ object FrmCadVendedor: TFrmCadVendedor
           item
             Expanded = False
             FieldName = 'COMISSAO'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Height = 15
-            Font.Name = 'Arial'
-            Font.Pitch = fpVariable
-            Font.Style = []
             Title.Caption = '% Comiss'#227'o'
             Title.Font.Charset = DEFAULT_CHARSET
             Title.Font.Color = clBlack
@@ -1598,10 +1564,9 @@ object FrmCadVendedor: TFrmCadVendedor
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 1014
+    Width = 1010
     Height = 45
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -1610,7 +1575,6 @@ object FrmCadVendedor: TFrmCadVendedor
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 1010
     object SB_ULTIMO: TSpeedButton
       Left = 110
       Top = 5

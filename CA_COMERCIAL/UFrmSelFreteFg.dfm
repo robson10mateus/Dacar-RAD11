@@ -6,7 +6,7 @@ object FrmSelFreteFg: TFrmSelFreteFg
   VertScrollBar.Range = 40
   BorderIcons = [biSystemMenu]
   Caption = 'Comercial Dacar - Relat'#243'rio de Frete Frango Abatido'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
   Font.Height = 11
@@ -494,11 +494,10 @@ object FrmSelFreteFg: TFrmSelFreteFg
   object pnlFiltros: TPanel
     Left = 0
     Top = 40
-    Width = 530
-    Height = 202
+    Width = 526
+    Height = 201
     Align = alClient
     BevelWidth = 3
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = 15
@@ -508,8 +507,6 @@ object FrmSelFreteFg: TFrmSelFreteFg
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 526
-    ExplicitHeight = 201
     object Label3: TLabel
       Left = 15
       Top = 140
@@ -737,10 +734,9 @@ object FrmSelFreteFg: TFrmSelFreteFg
   object pnlBotoes: TPanel
     Left = 0
     Top = 0
-    Width = 530
+    Width = 526
     Height = 40
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = 15
@@ -750,7 +746,6 @@ object FrmSelFreteFg: TFrmSelFreteFg
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 526
     object SB_Relatorio: TSpeedButton
       Left = 5
       Top = 2

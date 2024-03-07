@@ -6,7 +6,7 @@ object FrmClientes: TFrmClientes
   VertScrollBar.Range = 172
   ActiveControl = PageControl2
   Caption = 'Comercial Dacar - Cadastro de Clientes'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
   Font.Height = 11
@@ -499,9 +499,9 @@ object FrmClientes: TFrmClientes
   object PageControl2: TPageControl
     Left = 0
     Top = 172
-    Width = 1341
-    Height = 755
-    ActivePage = TabCriterio
+    Width = 1337
+    Height = 754
+    ActivePage = TabComplemento
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
@@ -512,8 +512,6 @@ object FrmClientes: TFrmClientes
     ParentFont = False
     TabOrder = 0
     OnChange = PageControl2Change
-    ExplicitWidth = 1337
-    ExplicitHeight = 754
     object TabCriterio: TTabSheet
       Caption = ' Filtros '
       OnShow = TabCriterioShow
@@ -816,15 +814,12 @@ object FrmClientes: TFrmClientes
       end
       object Panel1: TPanel
         Left = 0
-        Top = 706
-        Width = 1333
+        Top = 705
+        Width = 1329
         Height = 19
         Align = alBottom
-        Color = clWindow
         ParentBackground = False
         TabOrder = 8
-        ExplicitTop = 705
-        ExplicitWidth = 1329
         object LRodape: TLabel
           Left = 80
           Top = 2
@@ -921,7 +916,6 @@ object FrmClientes: TFrmClientes
         Width = 1333
         Height = 13
         Align = alBottom
-        Color = clWindow
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = 15
@@ -938,7 +932,6 @@ object FrmClientes: TFrmClientes
         Width = 1333
         Height = 13
         Align = alBottom
-        Color = clWindow
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = 15
@@ -3206,28 +3199,28 @@ object FrmClientes: TFrmClientes
       object pnlDivisor02: TPanel
         Left = 0
         Top = 80
-        Width = 1333
+        Width = 1329
         Height = 5
         Align = alTop
         BevelOuter = bvNone
-        Color = clWindow
         ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 1333
       end
       object pnlClassificacoes: TPanel
         Left = 0
         Top = 5
-        Width = 1333
+        Width = 1329
         Height = 75
         Align = alTop
         BevelOuter = bvNone
-        Color = clWindow
         ParentBackground = False
         TabOrder = 1
+        ExplicitWidth = 1333
         object Grp_Class: TGroupBox
           Left = 0
           Top = 0
-          Width = 1333
+          Width = 1329
           Height = 75
           Align = alTop
           Caption = ' Classifica'#231#245'es '
@@ -3241,6 +3234,7 @@ object FrmClientes: TFrmClientes
           ParentColor = False
           ParentFont = False
           TabOrder = 0
+          ExplicitWidth = 1333
           object Label2: TLabel
             Left = 460
             Top = 20
@@ -3386,28 +3380,28 @@ object FrmClientes: TFrmClientes
       object pnlDivisor01: TPanel
         Left = 0
         Top = 0
-        Width = 1333
+        Width = 1329
         Height = 5
         Align = alTop
         BevelOuter = bvNone
-        Color = clWindow
         ParentBackground = False
         TabOrder = 2
+        ExplicitWidth = 1333
       end
       object Panel7: TPanel
         Left = 0
         Top = 85
-        Width = 1333
+        Width = 1329
         Height = 125
         Align = alTop
         BevelOuter = bvNone
-        Color = clWindow
         ParentBackground = False
         TabOrder = 3
+        ExplicitWidth = 1333
         object Grp_Pad: TGroupBox
           Left = 0
           Top = 0
-          Width = 1333
+          Width = 1329
           Height = 125
           Align = alTop
           Caption = ' Dados de Cobran'#231'a Padr'#227'o '
@@ -3419,6 +3413,7 @@ object FrmClientes: TFrmClientes
           Font.Style = []
           ParentFont = False
           TabOrder = 0
+          ExplicitWidth = 1333
           object Label24: TLabel
             Left = 10
             Top = 20
@@ -3592,22 +3587,21 @@ object FrmClientes: TFrmClientes
       object Panel3: TPanel
         Left = 0
         Top = 210
-        Width = 1333
+        Width = 1329
         Height = 5
         Align = alTop
         BevelOuter = bvNone
-        Color = clWindow
         ParentBackground = False
         TabOrder = 4
+        ExplicitWidth = 1333
       end
       object Panel5: TPanel
         Left = 0
         Top = 215
-        Width = 1333
+        Width = 1329
         Height = 140
         Align = alTop
         BevelOuter = bvNone
-        Color = clWindow
         ParentBackground = False
         TabOrder = 5
         object Lbl_Rur: TLabel
@@ -4088,24 +4082,24 @@ object FrmClientes: TFrmClientes
       object Panel6: TPanel
         Left = 0
         Top = 355
-        Width = 1333
+        Width = 1329
         Height = 5
         Align = alTop
         BevelOuter = bvNone
-        Color = clWindow
         ParentBackground = False
         TabOrder = 6
+        ExplicitWidth = 1333
       end
       object Panel8: TPanel
         Left = 0
         Top = 360
-        Width = 1333
+        Width = 1329
         Height = 125
         Align = alTop
         BevelOuter = bvNone
-        Color = clWindow
         ParentBackground = False
         TabOrder = 7
+        ExplicitWidth = 1333
         object Grp_ComMens: TGroupBox
           Left = 1
           Top = 1
@@ -4176,7 +4170,7 @@ object FrmClientes: TFrmClientes
       object DBGrdCon: TDBGrid
         Left = 0
         Top = 350
-        Width = 1333
+        Width = 1329
         Height = 189
         Align = alTop
         Color = clWhite
@@ -4224,24 +4218,24 @@ object FrmClientes: TFrmClientes
       object Panel9: TPanel
         Left = 0
         Top = 0
-        Width = 1333
+        Width = 1329
         Height = 5
         Align = alTop
         BevelOuter = bvNone
-        Color = clWindow
         ParentBackground = False
         TabOrder = 1
+        ExplicitWidth = 1333
       end
       object Panel10: TPanel
         Left = 0
         Top = 5
-        Width = 1333
+        Width = 1329
         Height = 55
         Align = alTop
         BevelOuter = bvNone
-        Color = clWindow
         ParentBackground = False
         TabOrder = 2
+        ExplicitWidth = 1333
         object Lbl_ConCod: TLabel
           Left = 10
           Top = 5
@@ -4386,24 +4380,24 @@ object FrmClientes: TFrmClientes
       object Panel11: TPanel
         Left = 0
         Top = 60
-        Width = 1333
+        Width = 1329
         Height = 5
         Align = alTop
         BevelOuter = bvNone
-        Color = clWindow
         ParentBackground = False
         TabOrder = 3
+        ExplicitWidth = 1333
       end
       object Panel12: TPanel
         Left = 0
         Top = 65
-        Width = 1333
+        Width = 1329
         Height = 285
         Align = alTop
         BevelOuter = bvNone
-        Color = clWindow
         ParentBackground = False
         TabOrder = 4
+        ExplicitWidth = 1333
         object Lbl_ConTra: TLabel
           Left = 830
           Top = 5
@@ -5074,7 +5068,7 @@ object FrmClientes: TFrmClientes
       object DBGrid2: TDBGrid
         Left = 0
         Top = 295
-        Width = 1333
+        Width = 1329
         Height = 175
         Align = alTop
         Color = clWhite
@@ -5141,24 +5135,24 @@ object FrmClientes: TFrmClientes
       object Panel13: TPanel
         Left = 0
         Top = 0
-        Width = 1333
+        Width = 1329
         Height = 5
         Align = alTop
         BevelOuter = bvNone
-        Color = clWindow
         ParentBackground = False
         TabOrder = 1
+        ExplicitWidth = 1333
       end
       object Panel14: TPanel
         Left = 0
         Top = 5
-        Width = 1333
+        Width = 1329
         Height = 55
         Align = alTop
         BevelOuter = bvNone
-        Color = clWindow
         ParentBackground = False
         TabOrder = 2
+        ExplicitWidth = 1333
         object Label45: TLabel
           Left = 10
           Top = 5
@@ -5303,24 +5297,24 @@ object FrmClientes: TFrmClientes
       object Panel15: TPanel
         Left = 0
         Top = 60
-        Width = 1333
+        Width = 1329
         Height = 5
         Align = alTop
         BevelOuter = bvNone
-        Color = clWindow
         ParentBackground = False
         TabOrder = 3
+        ExplicitWidth = 1333
       end
       object Panel16: TPanel
         Left = 0
         Top = 65
-        Width = 1333
+        Width = 1329
         Height = 230
         Align = alTop
         BevelOuter = bvNone
-        Color = clWindow
         ParentBackground = False
         TabOrder = 4
+        ExplicitWidth = 1333
         object Label46: TLabel
           Left = 10
           Top = 5
@@ -5943,24 +5937,24 @@ object FrmClientes: TFrmClientes
       object Panel17: TPanel
         Left = 0
         Top = 0
-        Width = 1333
+        Width = 1329
         Height = 5
         Align = alTop
         BevelOuter = bvNone
-        Color = clWindow
         ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 1333
       end
       object Panel18: TPanel
         Left = 0
         Top = 5
-        Width = 1333
+        Width = 1329
         Height = 287
         Align = alTop
         BevelOuter = bvNone
-        Color = clWindow
         ParentBackground = False
         TabOrder = 1
+        ExplicitWidth = 1333
         object Label39: TLabel
           Left = 10
           Top = 5
@@ -6352,7 +6346,6 @@ object FrmClientes: TFrmClientes
         Height = 5
         Align = alTop
         BevelOuter = bvNone
-        Color = clWindow
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = 15
@@ -6370,7 +6363,6 @@ object FrmClientes: TFrmClientes
         Height = 50
         Align = alTop
         BevelOuter = bvNone
-        Color = clWindow
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = 15
@@ -6527,7 +6519,6 @@ object FrmClientes: TFrmClientes
         Width = 1333
         Height = 120
         Align = alTop
-        Color = clWindow
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = 15
@@ -6861,7 +6852,7 @@ object FrmClientes: TFrmClientes
       object DBGrid3: TDBGrid
         Left = 0
         Top = 155
-        Width = 1333
+        Width = 1329
         Height = 305
         Align = alTop
         DataSource = DtSrcClieBloq
@@ -6910,13 +6901,13 @@ object FrmClientes: TFrmClientes
       object Panel22: TPanel
         Left = 0
         Top = 60
-        Width = 1333
+        Width = 1329
         Height = 95
         Align = alTop
         BevelOuter = bvNone
-        Color = clWindow
         ParentBackground = False
         TabOrder = 1
+        ExplicitWidth = 1333
         object GroupBox8: TGroupBox
           Left = 8
           Top = 5
@@ -7037,13 +7028,13 @@ object FrmClientes: TFrmClientes
       object Panel23: TPanel
         Left = 0
         Top = 5
-        Width = 1333
+        Width = 1329
         Height = 55
         Align = alTop
         BevelOuter = bvNone
-        Color = clWindow
         ParentBackground = False
         TabOrder = 2
+        ExplicitWidth = 1333
         object Label29: TLabel
           Left = 10
           Top = 5
@@ -7188,23 +7179,22 @@ object FrmClientes: TFrmClientes
       object Panel24: TPanel
         Left = 0
         Top = 0
-        Width = 1333
+        Width = 1329
         Height = 5
         Align = alTop
         BevelOuter = bvNone
-        Color = clWindow
         ParentBackground = False
         TabOrder = 3
+        ExplicitWidth = 1333
       end
     end
   end
   object pnlBotoes: TPanel
     Left = 0
     Top = 127
-    Width = 1341
+    Width = 1337
     Height = 45
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = 15
@@ -7214,7 +7204,6 @@ object FrmClientes: TFrmClientes
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 1337
     object SB_ULTIMO: TSpeedButton
       Left = 110
       Top = 5
@@ -8664,10 +8653,9 @@ object FrmClientes: TFrmClientes
   object Panel26: TPanel
     Left = 0
     Top = 0
-    Width = 1341
+    Width = 1337
     Height = 127
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = 15
@@ -8678,7 +8666,6 @@ object FrmClientes: TFrmClientes
     ParentFont = False
     TabOrder = 2
     Visible = False
-    ExplicitWidth = 1337
   end
   object ODtS_Clie: TOraDataSource
     DataSet = OQry_Clie

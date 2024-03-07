@@ -160,8 +160,9 @@ uses Principal, Global, UFrmSeldata, UFrmPesquisaCargas, UFrmPesCaminhao, uFrmRe
 procedure TFrmControleEntregaCargas.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-  FrmPrincipal.VEN062.Enabled := True;
-  Action := Cafree;
+  FrmRelControleEntregaCargas:=nil;
+  FrmPrincipal.VEN062.Enabled:= True;
+  Action:=caFree;
 end;
 
 procedure TFrmControleEntregaCargas.FormShow(Sender: TObject);

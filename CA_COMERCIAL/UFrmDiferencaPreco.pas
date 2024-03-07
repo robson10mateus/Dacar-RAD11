@@ -93,8 +93,9 @@ uses Principal,Global,UFrmSeldata, UFrmPesqVend, DateUtils,
 procedure TFrmDiferencaPreco.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-     FrmPrincipal.VEN053.Enabled:= True;
-     Action:=caFree;
+  FrmDiferencaPreco:=nil;
+  FrmPrincipal.VEN053.Enabled:= True;
+  Action:=caFree;
 end;
 
 procedure TFrmDiferencaPreco.FormShow(Sender: TObject);

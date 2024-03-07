@@ -5,8 +5,9 @@ object frmVendasVendedorCliente: TfrmVendasVendedorCliente
   Height = 676
   VertScrollBar.Range = 45
   ActiveControl = PageControl1
+  BorderStyle = bsSingle
   Caption = 'Comercial Dacar - Relat'#243'rio Vendas de Vendedor por Clientes'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -25,7 +26,6 @@ object frmVendasVendedorCliente: TfrmVendasVendedorCliente
     Width = 1278
     Height = 45
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -223,14 +223,11 @@ object frmVendasVendedorCliente: TfrmVendasVendedorCliente
       object pnlFiltros: TPanel
         Left = 0
         Top = 0
-        Width = 1270
-        Height = 563
+        Width = 1266
+        Height = 562
         Align = alClient
-        Color = clWindow
         ParentBackground = False
         TabOrder = 0
-        ExplicitWidth = 1266
-        ExplicitHeight = 562
         object Label2: TLabel
           Left = 270
           Top = 100
@@ -591,9 +588,9 @@ object frmVendasVendedorCliente: TfrmVendasVendedorCliente
         Width = 300
         Height = 563
         Align = alLeft
-        Color = clWindow
         ParentBackground = False
         TabOrder = 0
+        ExplicitHeight = 562
         object tvVendasClienteVendedor: TTreeView
           Left = 1
           Top = 1
@@ -607,6 +604,7 @@ object frmVendasVendedorCliente: TfrmVendasVendedorCliente
           Items.NodeData = {
             0301000000200000000000000000000000FFFFFFFFFFFFFFFF00000000000000
             000000000001013100}
+          ExplicitHeight = 560
         end
       end
       object Panel2: TPanel
@@ -617,7 +615,6 @@ object frmVendasVendedorCliente: TfrmVendasVendedorCliente
         Align = alClient
         Alignment = taLeftJustify
         Caption = 'Panel2'
-        Color = clWindow
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = 15
@@ -627,15 +624,17 @@ object frmVendasVendedorCliente: TfrmVendasVendedorCliente
         ParentBackground = False
         ParentFont = False
         TabOrder = 1
+        ExplicitWidth = 966
+        ExplicitHeight = 562
         object Panel3: TPanel
           Left = 1
           Top = 1
           Width = 968
           Height = 30
           Align = alTop
-          Color = clWindow
           ParentBackground = False
           TabOrder = 0
+          ExplicitWidth = 964
         end
         object DBGrid1: TDBGrid
           Left = 1

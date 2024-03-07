@@ -8,7 +8,7 @@ object FrmTranspChaveNFe: TFrmTranspChaveNFe
   BorderIcons = []
   BorderStyle = bsDialog
   Caption = 'Transportador Chave NFe'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -24,7 +24,6 @@ object FrmTranspChaveNFe: TFrmTranspChaveNFe
     Width = 892
     Height = 69
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -687,7 +686,6 @@ object FrmTranspChaveNFe: TFrmTranspChaveNFe
     Width = 892
     Height = 41
     Align = alBottom
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15

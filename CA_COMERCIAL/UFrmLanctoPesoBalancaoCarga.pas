@@ -113,6 +113,7 @@ end;
 procedure TfrmLanctoPesoBalancaoCarga.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
+  frmLanctoPesoBalancaoCarga:=nil;
   FrmPrincipal.VEN057.Enabled:= True;
   Action:=caFree;
 end;

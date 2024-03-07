@@ -809,7 +809,6 @@ object FrmItemCarLibCar: TFrmItemCarLibCar
     Width = 1173
     Height = 21
     Align = alBottom
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15

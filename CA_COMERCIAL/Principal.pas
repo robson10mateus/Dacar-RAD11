@@ -9,7 +9,7 @@ Uses
   OraSQLMonitor, Vcl.WinXCtrls, Vcl.CategoryButtons, Vcl.ButtonGroup,
   Vcl.ControlList, JvExExtCtrls, JvSplitter, System.Actions, Vcl.ActnList,
   System.ImageList, Vcl.ImgList, Vcl.Imaging.pngimage, System.StrUtils,
-  JvExStdCtrls, JvButton, JvCtrls, System.Math;
+  JvExStdCtrls, JvButton, JvCtrls, System.Math, JvMenus;
 Type
   TFrmPrincipal = class(TForm)
     MainMenu1: TMainMenu;
@@ -220,9 +220,6 @@ Type
     BtnManutencao: TSpeedButton;
     BtnLogistica: TSpeedButton;
     BtnAjuda: TSpeedButton;
-    ScrollBox1: TScrollBox;
-    BtnLogarNovamente: TSpeedButton;
-    BtnSair: TSpeedButton;
     ScrollBox2: TScrollBox;
     BtnVEN004: TSpeedButton;
     BtnVEN017: TSpeedButton;
@@ -298,11 +295,6 @@ Type
     ACVEN072: TAction;
     ACVEN073: TAction;
     ACVoltar: TAction;
-    BtnVoltarArquivo: TSpeedButton;
-    BtnVoltarLogistica: TSpeedButton;
-    BtnVoltarManutencao: TSpeedButton;
-    BtnVoltarTransporte: TSpeedButton;
-    BtnVoltarVendas: TSpeedButton;
     ImgVEN017: TImage;
     ImgVEN029: TImage;
     ImgVEN030: TImage;
@@ -364,6 +356,13 @@ Type
     BtnControleCaixas: TSpeedButton;
     ImgVEN054: TImage;
     BtnVoltarImpressao: TSpeedButton;
+    BtnVoltarVendas: TSpeedButton;
+    BtnLogarNovamente: TSpeedButton;
+    BtnSair: TSpeedButton;
+    BtnVoltarArquivo: TSpeedButton;
+    BtnVoltarTransporte: TSpeedButton;
+    BtnVoltarManutencao: TSpeedButton;
+    BtnVoltarLogistica: TSpeedButton;
     procedure Trataerros(Sender: TObject; E: Exception);
     procedure FormCreate(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
@@ -558,6 +557,33 @@ Type
     procedure ACVEN073Update(Sender: TObject);
     procedure ACVEN074Update(Sender: TObject);
     procedure ACVEN075Update(Sender: TObject);
+    procedure ACCadRegLogUpdate(Sender: TObject);
+    procedure ACCadSubRegLogUpdate(Sender: TObject);
+    procedure ACCadTipoLogradouroUpdate(Sender: TObject);
+    procedure ACCadRegSubRegLogUpdate(Sender: TObject);
+    procedure ACCadBairrosUpdate(Sender: TObject);
+    procedure ACCadCidadesUpdate(Sender: TObject);
+    procedure ACCadEstadosUpdate(Sender: TObject);
+    procedure ACCadPaisesUpdate(Sender: TObject);
+    procedure ACCadRegGeoUpdate(Sender: TObject);
+    procedure ACCadRegInterUpdate(Sender: TObject);
+    procedure ACCadTipoTransporteUpdate(Sender: TObject);
+    procedure ACCadTipoVeiculoUpdate(Sender: TObject);
+    procedure ACCadTipoTransportadoresUpdate(Sender: TObject);
+    procedure ACCadRegiaoUpdate(Sender: TObject);
+    procedure ACVEN015aUpdate(Sender: TObject);
+    procedure ACVEN015bUpdate(Sender: TObject);
+    procedure ACLancamentosUpdate(Sender: TObject);
+    procedure ACRelSaldoUpdate(Sender: TObject);
+    procedure ACControleCaixasUpdate(Sender: TObject);
+    procedure ScrollBox6MouseWheel(Sender: TObject; Shift: TShiftState;
+      WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
+    procedure ScrollBox5MouseWheel(Sender: TObject; Shift: TShiftState;
+      WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
+    procedure ScrollBox3MouseWheel(Sender: TObject; Shift: TShiftState;
+      WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
+    procedure ScrollBox2MouseWheel(Sender: TObject; Shift: TShiftState;
+      WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
   private
     Senha : String;
     dataHoraServidor :  TDateTime;
@@ -731,6 +757,32 @@ begin
   Close;
 end;
 
+procedure TFrmPrincipal.ScrollBox2MouseWheel(Sender: TObject;
+  Shift: TShiftState; WheelDelta: Integer; MousePos: TPoint;
+  var Handled: Boolean);
+var
+  aPos: SmallInt;
+begin
+  aPos:= ScrollBox2.VertScrollBar.Position - WheelDelta div 10;
+  aPos:= Max(aPos, 0);
+  aPos:= Min(aPos, ScrollBox2.VertScrollBar.Range);
+  ScrollBox2.VertScrollBar.Position := aPos;
+  Handled := True;
+end;
+
+procedure TFrmPrincipal.ScrollBox3MouseWheel(Sender: TObject;
+  Shift: TShiftState; WheelDelta: Integer; MousePos: TPoint;
+  var Handled: Boolean);
+var
+  aPos: SmallInt;
+begin
+  aPos:= ScrollBox3.VertScrollBar.Position - WheelDelta div 10;
+  aPos:= Max(aPos, 0);
+  aPos:= Min(aPos, ScrollBox3.VertScrollBar.Range);
+  ScrollBox3.VertScrollBar.Position := aPos;
+  Handled := True;
+end;
+
 procedure TFrmPrincipal.ScrollBox4MouseWheel(Sender: TObject;
   Shift: TShiftState; WheelDelta: Integer; MousePos: TPoint;
   var Handled: Boolean);
@@ -744,6 +796,31 @@ begin
   Handled := True;
 end;
 
+
+procedure TFrmPrincipal.ScrollBox5MouseWheel(Sender: TObject;
+  Shift: TShiftState; WheelDelta: Integer; MousePos: TPoint;
+  var Handled: Boolean);
+var
+  aPos: SmallInt;
+begin
+  aPos:= ScrollBox5.VertScrollBar.Position - WheelDelta div 10;
+  aPos:= Max(aPos, 0);
+  aPos:= Min(aPos, ScrollBox5.VertScrollBar.Range);
+  ScrollBox5.VertScrollBar.Position := aPos;
+  Handled := True;
+end;
+procedure TFrmPrincipal.ScrollBox6MouseWheel(Sender: TObject;
+  Shift: TShiftState; WheelDelta: Integer; MousePos: TPoint;
+  var Handled: Boolean);
+var
+  aPos: SmallInt;
+begin
+  aPos:= ScrollBox6.VertScrollBar.Position - WheelDelta div 10;
+  aPos:= Max(aPos, 0);
+  aPos:= Min(aPos, ScrollBox6.VertScrollBar.Range);
+  ScrollBox6.VertScrollBar.Position := aPos;
+  Handled := True;
+end;
 
 procedure TFrmPrincipal.Sobre1Click(Sender: TObject);
 begin
@@ -767,7 +844,7 @@ begin
 
   FrmPrincipal.Show;
   EfetuarLogin;
-  AtualizaMenuLateral('SplitMenuPrincipal');
+//  AtualizaMenuLateral('SplitMenuPrincipal');
 end;
 
 procedure TFrmPrincipal.Timer2Timer(Sender: TObject);
@@ -1153,6 +1230,81 @@ begin
   AtualizaImagem('SplitSubMenuArquivo');
 end;
 
+procedure TFrmPrincipal.ACCadBairrosUpdate(Sender: TObject);
+begin
+  BtnCadBairros.Enabled := not Assigned(FrmCadBairro);
+end;
+
+procedure TFrmPrincipal.ACCadCidadesUpdate(Sender: TObject);
+begin
+  BtnCadCidades.Enabled := not Assigned(FrmCadCidade);
+end;
+
+procedure TFrmPrincipal.ACCadEstadosUpdate(Sender: TObject);
+begin
+  BtnCadEstados.Enabled := not Assigned(FrmCadEstado);
+end;
+
+procedure TFrmPrincipal.ACCadPaisesUpdate(Sender: TObject);
+begin
+  BtnCadPaises.Enabled := not Assigned(FrmCadPais);
+end;
+
+procedure TFrmPrincipal.ACCadRegGeoUpdate(Sender: TObject);
+begin
+  BtnCadRegGeo.Enabled := not Assigned(FrmCadRegGeog);
+end;
+
+procedure TFrmPrincipal.ACCadRegiaoUpdate(Sender: TObject);
+begin
+  BtnCadRegiao.Enabled := not Assigned(FrmCadRegiao);
+end;
+
+procedure TFrmPrincipal.ACCadRegInterUpdate(Sender: TObject);
+begin
+  BtnCadRegInter.Enabled := not Assigned(FrmCadRegInt);
+end;
+
+procedure TFrmPrincipal.ACCadRegLogUpdate(Sender: TObject);
+begin
+  BtnCadRegLog.Enabled := not Assigned(FrmCadRegLog);
+end;
+
+procedure TFrmPrincipal.ACCadRegSubRegLogUpdate(Sender: TObject);
+begin
+  BtnCadRegSubRegLog.Enabled := not Assigned(FrmCadRegeSubLog);
+end;
+
+procedure TFrmPrincipal.ACCadSubRegLogUpdate(Sender: TObject);
+begin
+  BtnCadSubRegLog.Enabled := not Assigned(FrmCadSubLog);
+end;
+
+procedure TFrmPrincipal.ACCadTipoLogradouroUpdate(Sender: TObject);
+begin
+  BtnCadTipoLogradouro.Enabled := not Assigned(FrmCadTpLogr);
+end;
+
+procedure TFrmPrincipal.ACCadTipoTransportadoresUpdate(Sender: TObject);
+begin
+  BtnCadTipoTransportadores.Enabled := not Assigned(FrmCadTransport);
+end;
+
+procedure TFrmPrincipal.ACCadTipoTransporteUpdate(Sender: TObject);
+begin
+  BtnCadTipoTransporte.Enabled := not Assigned(FrmCadTransTipo);
+end;
+
+procedure TFrmPrincipal.ACCadTipoVeiculoUpdate(Sender: TObject);
+begin
+  BtnCadTipoVeiculo.Enabled := not Assigned(FrmCadTipoVeic);
+end;
+
+procedure TFrmPrincipal.ACControleCaixasUpdate(Sender: TObject);
+begin
+  BtnControleCaixas.Enabled := not Assigned(FrmEntradaSaidaCaixas);
+end;
+
 procedure TFrmPrincipal.ACVEN004Update(Sender: TObject);
 begin
   BtnVEN004.Enabled := not Assigned(FrmPedVenda);
@@ -1206,6 +1358,16 @@ end;
 procedure TFrmPrincipal.ACVEN014Update(Sender: TObject);
 begin
   BtnVEN014.Enabled := not Assigned(FrmSelSintCarga);
+end;
+
+procedure TFrmPrincipal.ACVEN015aUpdate(Sender: TObject);
+begin
+  BtnVEN015a.Enabled := not Assigned(frmVendasVendedorCliente);
+end;
+
+procedure TFrmPrincipal.ACVEN015bUpdate(Sender: TObject);
+begin
+  BtnVEN015b.Enabled := not Assigned(FrmSelProdVend);
 end;
 
 procedure TFrmPrincipal.ACVEN015Execute(Sender: TObject);
@@ -1726,6 +1888,11 @@ begin
   AtualizaImagem('SplitMenuPrincipal')
 end;
 
+procedure TFrmPrincipal.ACRelSaldoUpdate(Sender: TObject);
+begin
+  BtnRelSaldo.Enabled := not Assigned(FrmSaldoCaixas);
+end;
+
 procedure TFrmPrincipal.ACManutencaoExecute(Sender: TObject);
 begin
   AtualizaMenuLateral('SplitSubMenuManutencao');
@@ -1734,6 +1901,11 @@ end;
 procedure TFrmPrincipal.ACManutencaoUpdate(Sender: TObject);
 begin
   AtualizaImagem('SplitSubMenuManutencao');
+end;
+
+procedure TFrmPrincipal.ACLancamentosUpdate(Sender: TObject);
+begin
+  BtnLancamentos.Enabled := not Assigned(FrmControleCaixas);
 end;
 
 procedure TFrmPrincipal.ACLogisticaExecute(Sender: TObject);
@@ -2364,7 +2536,7 @@ begin
     CadastrodeCidades1.Enabled:= False;
     FrmCadCidade:=TFrmCadCidade.Create(Self);
     FrmCadCidade.Show;
-    VerificaFormAberto
+    VerificaFormAberto;
   Except;
     CadastrodeCidades1.Enabled:= True;
     FrmCadCidade.Free;
@@ -2380,7 +2552,7 @@ begin
     CadastrodeEstados1.Enabled:= False;
     FrmCadEstado:=TFrmCadEstado.Create(Self);
     FrmCadEstado.Show;
-    VerificaFormAberto
+    VerificaFormAberto;
   Except;
     CadastrodeEstados1.Enabled:= True;
     FrmCadEstado.Free;
@@ -2734,20 +2906,26 @@ end;
 
 procedure TFrmPrincipal.HabilitarMenuLateral(habilitar: Boolean);
 var
-  i, j :Integer;
+  i, j, K :Integer;
 begin
-  for I := 0 to FrmPrincipal.ComponentCount-1 do
+  for I := 0 to ActionSubMenus.ActionCount - 1 do
   begin
-    if FrmPrincipal.Components[i] is TSpeedButton then
+    ActionSubMenus.Actions[i].Enabled := habilitar;
+  end;
+
+
+  for J := 0 to FrmPrincipal.ComponentCount-1 do
+  begin
+    if FrmPrincipal.Components[J] is TSpeedButton then
     begin
-      if (TSpeedButton(FrmPrincipal.Components[i]).Action <> ACMenu) and (TSpeedButton(FrmPrincipal.Components[i]).Action <> ACArquivo) and
-      (TSpeedButton(FrmPrincipal.Components[i]).Action <> ACVendas) and (TSpeedButton(FrmPrincipal.Components[i]).Action <> ACTransporte) and
-      (TSpeedButton(FrmPrincipal.Components[i]).Action <> ACImpressão) and (TSpeedButton(FrmPrincipal.Components[i]).Action <> ACManutencao) and
-      (TSpeedButton(FrmPrincipal.Components[i]).Action <> ACLogistica) and (TSpeedButton(FrmPrincipal.Components[i]).Action <> ACAjuda) and
-      (TSpeedButton(FrmPrincipal.Components[i]).Action <> ACVoltar) and (TSpeedButton(FrmPrincipal.Components[i]).Action <> ACSair) and
-      (TSpeedButton(FrmPrincipal.Components[i]).Name <> 'BtnLogarNovamente') and (TSpeedButton(FrmPrincipal.Components[i]).Name <> 'BtnSobre') then
+      if (TSpeedButton(FrmPrincipal.Components[J]).Action <> ACMenu) and (TSpeedButton(FrmPrincipal.Components[J]).Action <> ACArquivo) and
+      (TSpeedButton(FrmPrincipal.Components[J]).Action <> ACVendas) and (TSpeedButton(FrmPrincipal.Components[J]).Action <> ACTransporte) and
+      (TSpeedButton(FrmPrincipal.Components[J]).Action <> ACImpressão) and (TSpeedButton(FrmPrincipal.Components[J]).Action <> ACManutencao) and
+      (TSpeedButton(FrmPrincipal.Components[J]).Action <> ACLogistica) and (TSpeedButton(FrmPrincipal.Components[J]).Action <> ACAjuda) and
+      (TSpeedButton(FrmPrincipal.Components[J]).Action <> ACVoltar) and (TSpeedButton(FrmPrincipal.Components[J]).Action <> ACSair) and
+      (TSpeedButton(FrmPrincipal.Components[J]).Name <> 'BtnLogarNovamente') and (TSpeedButton(FrmPrincipal.Components[J]).Name <> 'BtnSobre') then
       begin
-        TSpeedButton(FrmPrincipal.Components[i]).Enabled := habilitar;
+        TSpeedButton(FrmPrincipal.Components[J]).Enabled := habilitar;
       end;
     end;
   end;
@@ -2775,8 +2953,6 @@ var
 begin
   HabilitarModulos(false);
   HabilitarMenuLateral(false);
-
-  FrmPrincipal.Menu := nil;
 
   qryConsulta := ConsultarAcessos(idModulo, idUsuario);
 
@@ -2863,75 +3039,75 @@ begin
   while not qryConsulta.Eof do
   begin
     case qryConsulta.FieldByName ('ID_JANELA').AsInteger of
-      4:  FrmPrincipal.BtnVEN004.Enabled:= True;
-      5:  FrmPrincipal.BtnVEN005.Enabled:= True;
-      6:  FrmPrincipal.BtnVEN006.Enabled:= True;
-      7:  FrmPrincipal.BtnVEN007.Enabled:= True;
-      8:  FrmPrincipal.BtnVEN008.Enabled:= True;
-      9:  FrmPrincipal.BtnVEN009.Enabled:= True;
-      10:  FrmPrincipal.BtnVEN010.Enabled:= True;
-      11:  FrmPrincipal.BtnVEN011.Enabled:= True;
-      12:  FrmPrincipal.BtnVEN012.Enabled:= True;
-      13:  FrmPrincipal.BtnVEN013.Enabled:= True;
-      14:  FrmPrincipal.BtnVEN014.Enabled:= True;
-      15:  FrmPrincipal.BtnVEN015.Enabled:= True;
-      16:  FrmPrincipal.BtnVEN016.Enabled:= True;
-      17:  FrmPrincipal.BtnVEN017.Enabled:= True;
-      18:  FrmPrincipal.BtnVEN018.Enabled:= True;
-      19:  FrmPrincipal.BtnVEN019.Enabled:= True;
-      20:  FrmPrincipal.BtnVEN020.Enabled:= True;
-      21:  FrmPrincipal.BtnVEN021.Enabled:= True;
-      22:  FrmPrincipal.BtnVEN022.Enabled:= True;
-      23:  FrmPrincipal.BtnVEN023.Enabled:= True;
-      24:  FrmPrincipal.BtnVEN024.Enabled:= True;
-      25:  FrmPrincipal.BtnVEN025.Enabled:= True;
-      26:  FrmPrincipal.BtnVEN026.Enabled:= True;
-      27:  FrmPrincipal.BtnVEN027.Enabled:= True;
-      28:  FrmPrincipal.BtnVEN028.Enabled:= True;
-      29:  FrmPrincipal.BtnVEN029.Enabled:= True;
-      30:  FrmPrincipal.BtnVEN030.Enabled:= True;
-      31:  FrmPrincipal.BtnVEN031.Enabled:= True;
-      32:  FrmPrincipal.BtnVEN032.Enabled:= True;
-      33:  FrmPrincipal.BtnVEN033.Enabled:= True;
-      34:  FrmPrincipal.BtnVEN034.Enabled:= True;
-      35:  FrmPrincipal.BtnVEN035.Enabled:= True;
-      36:  FrmPrincipal.BtnVEN036.Enabled:= True;
-      37:  FrmPrincipal.BtnVEN037.Enabled:= True;
-      38:  FrmPrincipal.BtnVEN038.Enabled:= True;
-      39:  FrmPrincipal.BtnVEN039.Enabled:= True;
-      40:  FrmPrincipal.BtnVEN040.Enabled:= True;
-      41:  FrmPrincipal.BtnVEN041.Enabled:= True;
-      42:  FrmPrincipal.BtnVEN042.Enabled:= True;
-      43:  FrmPrincipal.BtnVEN043.Enabled:= True;
-      44:  FrmPrincipal.BtnVEN044.Enabled:= True;
-      45:  FrmPrincipal.BtnVEN045.Enabled:= True;
-      46:  FrmPrincipal.BtnVEN046.Enabled:= True;
-      47:  FrmPrincipal.BtnVEN047.Enabled:= True;
-      48:  FrmPrincipal.BtnVEN048.Enabled:= True;
-      49:  FrmPrincipal.BtnVEN049.Enabled:= True;
-      50:  FrmPrincipal.BtnVEN050.Enabled:= True;
-      51:  FrmPrincipal.BtnVEN051.Enabled:= True;
-      52:  FrmPrincipal.BtnVEN052.Enabled:= True;
-      53:  FrmPrincipal.BtnVEN053.Enabled:= True;
-      54:  FrmPrincipal.BtnVEN054.Enabled:= True;
-      55:  FrmPrincipal.BtnVEN055.Enabled:= True;
-      56:  FrmPrincipal.BtnVEN056.Enabled:= True;
-      57:  FrmPrincipal.BtnVEN057.Enabled:= True;
-      58:  FrmPrincipal.BtnVEN058.Enabled:= True;
-      59:  FrmPrincipal.BtnVEN059.Enabled:= True;
-      61:  FrmPrincipal.BtnVEN061.Enabled:= True;
-      62:  FrmPrincipal.BtnVEN062.Enabled:= True;
-      63:  FrmPrincipal.BtnVEN063.Enabled:= True;
-      64:  FrmPrincipal.BtnVEN064.Enabled:= True;
-      65:  FrmPrincipal.BtnVEN065.Enabled:= True;
-      66:  FrmPrincipal.BtnVEN066.Enabled:= True;
+      4:   ACVEN004.Enabled:= True;
+      5:   ACVEN005.Enabled:= True;
+      6:   ACVEN006.Enabled:= True;
+      7:   ACVEN007.Enabled:= True;
+      8:   ACVEN008.Enabled:= True;
+      9:   ACVEN009.Enabled:= True;
+      10:  ACVEN010.Enabled:= True;
+      11:  ACVEN011.Enabled:= True;
+      12:  ACVEN012.Enabled:= True;
+      13:  ACVEN013.Enabled:= True;
+      14:  ACVEN014.Enabled:= True;
+      15:  ACVEN015.Enabled:= True;
+      16:  ACVEN016.Enabled:= True;
+      17:  ACVEN017.Enabled:= True;
+      18:  ACVEN018.Enabled:= True;
+      19:  ACVEN019.Enabled:= True;
+      20:  ACVEN020.Enabled:= True;
+      21:  ACVEN021.Enabled:= True;
+      22:  ACVEN022.Enabled:= True;
+      23:  ACVEN023.Enabled:= True;
+      24:  ACVEN024.Enabled:= True;
+      25:  ACVEN025.Enabled:= True;
+      26:  ACVEN026.Enabled:= True;
+      27:  ACVEN027.Enabled:= True;
+      28:  ACVEN028.Enabled:= True;
+      29:  ACVEN029.Enabled:= True;
+      30:  ACVEN030.Enabled:= True;
+      31:  ACVEN031.Enabled:= True;
+      32:  ACVEN032.Enabled:= True;
+      33:  ACVEN033.Enabled:= True;
+      34:  ACVEN034.Enabled:= True;
+      35:  ACVEN035.Enabled:= True;
+      36:  ACVEN036.Enabled:= True;
+      37:  ACVEN037.Enabled:= True;
+      38:  ACVEN038.Enabled:= True;
+      39:  ACVEN039.Enabled:= True;
+      40:  ACVEN040.Enabled:= True;
+      41:  ACVEN041.Enabled:= True;
+      42:  ACVEN042.Enabled:= True;
+      43:  ACVEN043.Enabled:= True;
+      44:  ACVEN044.Enabled:= True;
+      45:  ACVEN045.Enabled:= True;
+      46:  ACVEN046.Enabled:= True;
+      47:  ACVEN047.Enabled:= True;
+      48:  ACVEN048.Enabled:= True;
+      49:  ACVEN049.Enabled:= True;
+      50:  ACVEN050.Enabled:= True;
+      51:  ACVEN051.Enabled:= True;
+      52:  ACVEN052.Enabled:= True;
+      53:  ACVEN053.Enabled:= True;
+      54:  ACVEN054.Enabled:= True;
+      55:  ACVEN055.Enabled:= True;
+      56:  ACVEN056.Enabled:= True;
+      57:  ACVEN057.Enabled:= True;
+      58:  ACVEN058.Enabled:= True;
+      59:  ACVEN059.Enabled:= True;
+      61:  ACVEN061.Enabled:= True;
+      62:  ACVEN062.Enabled:= True;
+      63:  ACVEN063.Enabled:= True;
+      64:  ACVEN064.Enabled:= True;
+      65:  ACVEN065.Enabled:= True;
+      66:  ACVEN066.Enabled:= True;
 //      67:  FrmPrincipal.BtnVEN067.Enabled:= True;
-      68:  FrmPrincipal.BtnVEN068.Enabled:= True;
-      71:  FrmPrincipal.BtnVEN071.Enabled:= True;
-      72:  FrmPrincipal.BtnVEN072.Enabled:= True;
-      73:  FrmPrincipal.BtnVEN073.Enabled:= True;
-      74:  FrmPrincipal.BtnVEN074.Enabled:= True;
-      75:  FrmPrincipal.BtnVEN075.Enabled:= True;
+      68:  ACVEN068.Enabled:= True;
+      71:  ACVEN071.Enabled:= True;
+      72:  ACVEN072.Enabled:= True;
+      73:  ACVEN073.Enabled:= True;
+      74:  ACVEN074.Enabled:= True;
+      75:  ACVEN075.Enabled:= True;
 //      76:  FrmPrincipal.BtnControleCaixas.Enabled:= True;
     end;
 
@@ -3100,7 +3276,7 @@ var
 begin
   Try
     Try
-      GlbVersao := '1.24.03';
+      GlbVersao := '1.24.04';
       IPLocal := GetIP ;
       frmSenha := TfrmSenha.Create(Self, 9, GlbVersao);
       frmSenha.LogUsua := gs_LogUsua;
@@ -3685,7 +3861,7 @@ begin
     VEN076.Enabled:= False;
     FrmEntradaSaidaCaixas := TFrmEntradaSaidaCaixas.Create(Self);
     FrmEntradaSaidaCaixas.Show;
-    VerificaFormAberto
+    VerificaFormAberto;
   except
     VEN076.Enabled:= True;
     FrmEntradaSaidaCaixas.Free;
@@ -3700,6 +3876,15 @@ begin
   begin
     if (Screen.Forms[i].Name <> 'Fenha') and (Screen.Forms[i].Name <> 'FrmPrincipal') then
     begin
+      (Screen.Forms[i] as TForm).FormStyle := fsMDIChild;
+      (Screen.Forms[i] as TForm).BorderStyle := bsSingle;
+//      (Screen.Forms[i] as TForm).Position := poScreenCenter;
+
+//      if (Screen.Forms[i] as TForm).WindowState = wsNormal then
+//        (Screen.Forms[i] as TForm).BorderIcons := [biSystemMenu,biMinimize]
+//      else
+        (Screen.Forms[i] as TForm).BorderIcons := [biSystemMenu,biMinimize,biMaximize];
+
       for j := 0 to (FrmPrincipal.ComponentCount -1) do
         if (FrmPrincipal.Components[j].ClassName) = 'TSplitView' then
           if TSplitView(FrmPrincipal.Components[j]).Opened = True then

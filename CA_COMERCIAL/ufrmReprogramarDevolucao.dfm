@@ -6,7 +6,7 @@ object frmReprogramarDevolucao: TfrmReprogramarDevolucao
   VertScrollBar.Range = 45
   BorderStyle = bsSingle
   Caption = 'Comercial Dacar - Reprograma'#231#227'o das Devolu'#231#245'es'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
   Font.Height = 11
@@ -25,8 +25,8 @@ object frmReprogramarDevolucao: TfrmReprogramarDevolucao
   object PageControl1: TPageControl
     Left = 0
     Top = 45
-    Width = 1401
-    Height = 602
+    Width = 1397
+    Height = 601
     ActivePage = Lista
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -39,8 +39,6 @@ object frmReprogramarDevolucao: TfrmReprogramarDevolucao
     ParentShowHint = False
     ShowHint = False
     TabOrder = 0
-    ExplicitWidth = 1397
-    ExplicitHeight = 601
     object Lista: TTabSheet
       Caption = 'Lista'
       Font.Charset = DEFAULT_CHARSET
@@ -58,7 +56,6 @@ object frmReprogramarDevolucao: TfrmReprogramarDevolucao
         Height = 572
         Align = alClient
         Caption = 'Panel3'
-        Color = clWindow
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = 15
@@ -167,7 +164,6 @@ object frmReprogramarDevolucao: TfrmReprogramarDevolucao
         Height = 371
         Align = alClient
         Caption = 'Panel1'
-        Color = clWindow
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = 15
@@ -241,7 +237,6 @@ object frmReprogramarDevolucao: TfrmReprogramarDevolucao
         Width = 1389
         Height = 200
         Align = alTop
-        Color = clWindow
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = 15
@@ -508,10 +503,9 @@ object frmReprogramarDevolucao: TfrmReprogramarDevolucao
   object pnlBotoes: TPanel
     Left = 0
     Top = 0
-    Width = 1401
+    Width = 1397
     Height = 45
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = 15
@@ -521,7 +515,6 @@ object frmReprogramarDevolucao: TfrmReprogramarDevolucao
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 1397
     object SB_CONFIRMA: TSpeedButton
       Left = 75
       Top = 5

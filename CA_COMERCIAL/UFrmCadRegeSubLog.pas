@@ -632,7 +632,9 @@ end;
 procedure TFrmCadRegeSubLog.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
+  FrmCadRegeSubLog:=nil;
   FrmPrincipal.CadastrodeRegiesXSubregiesLogstica1.Enabled:= True;
+  Action:=caFree;
 end;
 
 procedure TFrmCadRegeSubLog.DBGrid1TitleClick(Column: TColumn);

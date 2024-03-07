@@ -79,13 +79,18 @@ Uses Global,Principal ;
 
 procedure TFrmParametrosIntegrado.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
-     FrmPrincipal.VEN048.Enabled   := True;
+//     FrmPrincipal.VEN048.Enabled   := True;
      Qr_Drogas.Close;
      Qr_RacaoTipo.Close;
      Qr_RacaoSem.Close;
      Qr_Bonus.Close;
      Qr_FatorPagto.Close;
-     Action := caFree;
+//     Action := caFree;
+
+  FrmParametrosIntegrado:=nil;
+  FrmPrincipal.VEN048.Enabled:= True;
+  Action:=caFree;
+
 end;
 
 procedure TFrmParametrosIntegrado.FormShow(Sender: TObject);

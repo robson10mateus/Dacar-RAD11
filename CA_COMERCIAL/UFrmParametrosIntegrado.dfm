@@ -33,22 +33,22 @@ object FrmParametrosIntegrado: TFrmParametrosIntegrado
     Font.Style = []
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 888
     object Nav_Drogas: TDBNavigator
       Left = 2
-      Top = 13
-      Width = 884
+      Top = 17
+      Width = 872
       Height = 27
       DataSource = Ds_Drogas
       VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbEdit, nbPost, nbCancel, nbRefresh]
       Align = alTop
       TabOrder = 0
+      ExplicitWidth = 868
     end
     object dbg_Drogas: TDBGrid
       Left = 2
-      Top = 40
-      Width = 884
-      Height = 81
+      Top = 44
+      Width = 872
+      Height = 77
       Align = alClient
       DataSource = Ds_Drogas
       Font.Charset = DEFAULT_CHARSET
@@ -84,7 +84,6 @@ object FrmParametrosIntegrado: TFrmParametrosIntegrado
     Width = 872
     Height = 222
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -93,11 +92,10 @@ object FrmParametrosIntegrado: TFrmParametrosIntegrado
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 888
     object GroupBox2: TGroupBox
       Left = 422
       Top = 1
-      Width = 465
+      Width = 453
       Height = 220
       Align = alClient
       Caption = 'Consumo de Ra'#231#227'o Semanal'
@@ -108,21 +106,23 @@ object FrmParametrosIntegrado: TFrmParametrosIntegrado
       Font.Style = []
       ParentFont = False
       TabOrder = 0
+      ExplicitWidth = 449
       object Nav_RacaoSem: TDBNavigator
         Left = 2
-        Top = 13
-        Width = 461
+        Top = 17
+        Width = 449
         Height = 27
         DataSource = Ds_RacaoSem
         VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbEdit, nbPost, nbCancel, nbRefresh]
         Align = alTop
         TabOrder = 0
+        ExplicitWidth = 445
       end
       object Dbg_RacaoSem: TDBGrid
         Left = 2
-        Top = 40
-        Width = 461
-        Height = 178
+        Top = 44
+        Width = 449
+        Height = 174
         Align = alClient
         DataSource = Ds_RacaoSem
         Font.Charset = DEFAULT_CHARSET
@@ -174,7 +174,7 @@ object FrmParametrosIntegrado: TFrmParametrosIntegrado
       TabOrder = 1
       object Nav_RacaoTipo: TDBNavigator
         Left = 2
-        Top = 13
+        Top = 17
         Width = 417
         Height = 27
         DataSource = Ds_RacaoTipo
@@ -184,9 +184,9 @@ object FrmParametrosIntegrado: TFrmParametrosIntegrado
       end
       object Dbg_RacaoTipo: TDBGrid
         Left = 2
-        Top = 40
+        Top = 44
         Width = 417
-        Height = 178
+        Height = 174
         Align = alClient
         DataSource = Ds_RacaoTipo
         Font.Charset = DEFAULT_CHARSET
@@ -230,7 +230,6 @@ object FrmParametrosIntegrado: TFrmParametrosIntegrado
     Width = 872
     Height = 191
     Align = alClient
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -239,13 +238,11 @@ object FrmParametrosIntegrado: TFrmParametrosIntegrado
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
-    ExplicitWidth = 888
-    ExplicitHeight = 230
     object GroupBox4: TGroupBox
       Left = 527
       Top = 1
-      Width = 360
-      Height = 228
+      Width = 348
+      Height = 190
       Align = alClient
       Caption = 'Pagamento por Fator'
       Font.Charset = DEFAULT_CHARSET
@@ -255,21 +252,24 @@ object FrmParametrosIntegrado: TFrmParametrosIntegrado
       Font.Style = []
       ParentFont = False
       TabOrder = 0
+      ExplicitWidth = 344
+      ExplicitHeight = 189
       object DBNavigator1: TDBNavigator
         Left = 2
-        Top = 13
-        Width = 356
+        Top = 17
+        Width = 344
         Height = 27
         DataSource = Ds_FatorPagto
         VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbEdit, nbPost, nbCancel, nbRefresh]
         Align = alTop
         TabOrder = 0
+        ExplicitWidth = 340
       end
       object Dbg_FatorPagto: TDBGrid
         Left = 2
-        Top = 40
-        Width = 356
-        Height = 186
+        Top = 44
+        Width = 344
+        Height = 144
         Align = alClient
         DataSource = Ds_FatorPagto
         Font.Charset = DEFAULT_CHARSET
@@ -337,7 +337,7 @@ object FrmParametrosIntegrado: TFrmParametrosIntegrado
       Left = 1
       Top = 1
       Width = 526
-      Height = 228
+      Height = 190
       Align = alLeft
       Caption = 'Bonus Pagamento'
       Font.Charset = DEFAULT_CHARSET
@@ -347,9 +347,10 @@ object FrmParametrosIntegrado: TFrmParametrosIntegrado
       Font.Style = []
       ParentFont = False
       TabOrder = 1
+      ExplicitHeight = 189
       object Nav_Bonus: TDBNavigator
         Left = 2
-        Top = 13
+        Top = 17
         Width = 522
         Height = 27
         DataSource = Ds_Bonus
@@ -359,9 +360,9 @@ object FrmParametrosIntegrado: TFrmParametrosIntegrado
       end
       object Dbg_Bonus: TDBGrid
         Left = 2
-        Top = 40
+        Top = 44
         Width = 522
-        Height = 186
+        Height = 144
         Align = alClient
         DataSource = Ds_Bonus
         Font.Charset = DEFAULT_CHARSET

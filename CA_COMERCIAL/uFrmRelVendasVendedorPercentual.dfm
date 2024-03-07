@@ -24,7 +24,6 @@ object frmRelVendasVendedorPercentual: TfrmRelVendasVendedorPercentual
     Width = 470
     Height = 45
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -304,7 +303,6 @@ object frmRelVendasVendedorPercentual: TfrmRelVendasVendedorPercentual
     Width = 470
     Height = 128
     Align = alClient
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15

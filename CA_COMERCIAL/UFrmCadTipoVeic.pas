@@ -586,7 +586,9 @@ end;
 procedure TFrmCadTipoVeic.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
+  FrmCadTipoVeic:=nil;
   FrmPrincipal.CadastroTipodeVeculo1.Enabled:= True;
+  Action:=caFree;
 end;
 
 end.

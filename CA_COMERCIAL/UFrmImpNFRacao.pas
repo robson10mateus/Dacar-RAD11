@@ -432,6 +432,7 @@ end;
 procedure TFrmImpNFRacao.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
+  FrmImpNFRacao:=Nil;
   FrmPrincipal.VEN021.Enabled:= True;
   Action:=caFree;
 end;

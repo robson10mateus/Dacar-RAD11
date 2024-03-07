@@ -8,7 +8,7 @@ inherited frmConsultaProdutos: TfrmConsultaProdutos
   ExplicitWidth = 968
   TextHeight = 10
   inherited DBGrid1: TDBGrid
-    Width = 956
+    Width = 952
     DataSource = dtsConsultaProdutos
     OnTitleClick = DBGrid1TitleClick
     Columns = <
@@ -98,7 +98,7 @@ inherited frmConsultaProdutos: TfrmConsultaProdutos
       end>
   end
   inherited pnlBotoes: TPanel
-    Width = 956
+    Width = 952
     ExplicitWidth = 952
     inherited BitBtn1: TBitBtn
       OnClick = BitBtn1Click
@@ -108,7 +108,7 @@ inherited frmConsultaProdutos: TfrmConsultaProdutos
     end
   end
   inherited pnlFiltros: TPanel
-    Width = 956
+    Width = 952
     ExplicitWidth = 952
     inherited ComboBox1: TComboBox
       ItemIndex = 3

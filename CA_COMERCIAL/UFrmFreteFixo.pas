@@ -150,6 +150,8 @@ end;
 procedure TFrmFreteFixo.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
+  FrmFreteFixo:=nil;
+  FrmPrincipal.VEN025.Enabled:= True;
   Action:=caFree;
 end;
 

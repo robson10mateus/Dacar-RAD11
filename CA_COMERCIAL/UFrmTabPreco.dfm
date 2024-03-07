@@ -6,7 +6,7 @@ object FrmTabPreco: TFrmTabPreco
   VertScrollBar.Range = 45
   ActiveControl = PageControl1
   Caption = 'Comercial Dacar - Cadastro Tabela de Pre'#231'os'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -500,7 +500,6 @@ object FrmTabPreco: TFrmTabPreco
     Width = 1216
     Height = 545
     Align = alClient
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -896,7 +895,6 @@ object FrmTabPreco: TFrmTabPreco
           Width = 1206
           Height = 122
           Align = alTop
-          Color = clWindow
           ParentBackground = False
           TabOrder = 0
           ExplicitWidth = 1210
@@ -1079,7 +1077,6 @@ object FrmTabPreco: TFrmTabPreco
           Height = 202
           Align = alTop
           BevelOuter = bvNone
-          Color = clWindow
           ParentBackground = False
           TabOrder = 0
           ExplicitWidth = 1210
@@ -1840,7 +1837,6 @@ object FrmTabPreco: TFrmTabPreco
             Height = 5
             Align = alTop
             BevelOuter = bvNone
-            Color = clWindow
             ParentBackground = False
             TabOrder = 2
             ExplicitWidth = 1210
@@ -1851,7 +1847,6 @@ object FrmTabPreco: TFrmTabPreco
             Width = 1206
             Height = 60
             Align = alTop
-            Color = clWindow
             ParentBackground = False
             TabOrder = 3
             ExplicitWidth = 1210
@@ -2506,7 +2501,6 @@ object FrmTabPreco: TFrmTabPreco
     Width = 1216
     Height = 45
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15

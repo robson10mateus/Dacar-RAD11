@@ -5,9 +5,9 @@ object frmEmissorNFe: TfrmEmissorNFe
   BorderIcons = [biSystemMenu, biMaximize]
   BorderStyle = bsDialog
   Caption = 'Comercial Dacar - Emiss'#227'o de Nota Fiscal Eletr'#244'nica'
-  ClientHeight = 660
-  ClientWidth = 1322
-  Color = clWindow
+  ClientHeight = 658
+  ClientWidth = 1314
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
   Font.Height = 11
@@ -25,8 +25,8 @@ object frmEmissorNFe: TfrmEmissorNFe
   object pgc_EmissorNFE: TPageControl
     Left = 0
     Top = 40
-    Width = 1322
-    Height = 620
+    Width = 1314
+    Height = 618
     ActivePage = TabSheet2
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -53,8 +53,8 @@ object frmEmissorNFe: TfrmEmissorNFe
       object dbg_Notas: TDBGrid
         Left = 0
         Top = 111
-        Width = 1314
-        Height = 329
+        Width = 1310
+        Height = 328
         Align = alClient
         DataSource = DSPediVe
         Font.Charset = DEFAULT_CHARSET
@@ -93,56 +93,48 @@ object frmEmissorNFe: TfrmEmissorNFe
             Expanded = False
             FieldName = 'DT_CARGEXPE'
             Title.Caption = 'Data Carga'
-            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'FL_STATCARGEXPE'
             Title.Caption = 'Status'
-            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'ID_CLIENTE'
             Title.Caption = 'C'#243'd Cli'
-            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'NM_CLIENTE'
             Title.Caption = 'Nome do Cliente'
-            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'NR_NOTAFISC'
             Title.Caption = 'Documento'
-            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'FL_CANCNOTAFISC'
             Title.Caption = 'Canc.'
-            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'CANCELADA'
             Title.Caption = 'Canc. Sefaz'
-            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'INUTILIZADA'
             Title.Caption = 'Inutilizada'
-            Width = 64
             Visible = True
           end
           item
@@ -154,53 +146,46 @@ object frmEmissorNFe: TfrmEmissorNFe
           item
             Expanded = False
             FieldName = 'NFE_CHAVE'
-            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'NFE_PROTOCOLO'
-            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'NM_TIPOPEDIVEND'
             Title.Caption = 'Tipo Pedido'
-            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'NM_FORMPAGA'
             Title.Caption = 'Forma Pagto'
-            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'ID_FORMPAGA'
             Title.Caption = 'C'#243'd Forma Pagto'
-            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'NM_NATUOPERNOTAFISC'
             Title.Caption = 'Nat. Opera'#231#227'o'
-            Width = 64
             Visible = True
           end>
       end
       object pnlBotoes: TPanel
         Left = 0
         Top = 41
-        Width = 1314
+        Width = 1310
         Height = 70
         Align = alTop
         BevelInner = bvRaised
         BevelOuter = bvLowered
-        Color = clWindow
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = 15
@@ -210,7 +195,6 @@ object frmEmissorNFe: TfrmEmissorNFe
         ParentBackground = False
         ParentFont = False
         TabOrder = 1
-        ExplicitWidth = 1310
         object btnVisualizarNfe: TSpeedButton
           Left = 5
           Top = 5
@@ -2152,13 +2136,12 @@ object frmEmissorNFe: TfrmEmissorNFe
       end
       object pnl_Mensagem: TPanel
         Left = 0
-        Top = 440
-        Width = 1314
+        Top = 439
+        Width = 1310
         Height = 150
         Align = alBottom
         BevelInner = bvRaised
         BevelOuter = bvLowered
-        Color = clWindow
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = 15
@@ -2168,8 +2151,6 @@ object frmEmissorNFe: TfrmEmissorNFe
         ParentBackground = False
         ParentFont = False
         TabOrder = 2
-        ExplicitTop = 439
-        ExplicitWidth = 1310
         object Panel5: TPanel
           Left = 2
           Top = 2
@@ -2177,7 +2158,6 @@ object frmEmissorNFe: TfrmEmissorNFe
           Height = 146
           Align = alClient
           Caption = 'Panel5'
-          Color = clWindow
           ParentBackground = False
           TabOrder = 0
           ExplicitWidth = 806
@@ -2223,7 +2203,6 @@ object frmEmissorNFe: TfrmEmissorNFe
               Height = 3
               Align = alTop
               BevelOuter = bvNone
-              Color = clWindow
               ParentBackground = False
               TabOrder = 1
               ExplicitWidth = 800
@@ -2236,7 +2215,6 @@ object frmEmissorNFe: TfrmEmissorNFe
           Width = 500
           Height = 146
           Align = alRight
-          Color = clWindow
           ParentBackground = False
           TabOrder = 1
           ExplicitLeft = 808
@@ -2279,7 +2257,6 @@ object frmEmissorNFe: TfrmEmissorNFe
               Height = 3
               Align = alTop
               BevelOuter = bvNone
-              Color = clWindow
               ParentBackground = False
               TabOrder = 1
             end
@@ -2291,7 +2268,6 @@ object frmEmissorNFe: TfrmEmissorNFe
         Top = 150
         Width = 800
         Height = 300
-        Color = clWindow
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = 15
@@ -2368,7 +2344,6 @@ object frmEmissorNFe: TfrmEmissorNFe
             Height = 10
             Align = alTop
             BevelOuter = bvNone
-            Color = clWindow
             ParentBackground = False
             TabOrder = 1
           end
@@ -2380,7 +2355,6 @@ object frmEmissorNFe: TfrmEmissorNFe
           Height = 10
           Align = alTop
           BevelOuter = bvNone
-          Color = clWindow
           ParentBackground = False
           TabOrder = 0
         end
@@ -2391,7 +2365,6 @@ object frmEmissorNFe: TfrmEmissorNFe
           Height = 45
           Align = alBottom
           BevelOuter = bvNone
-          Color = clWindow
           ParentBackground = False
           TabOrder = 1
           object btnConfirmaCC: TSpeedButton
@@ -2666,7 +2639,6 @@ object frmEmissorNFe: TfrmEmissorNFe
         Top = 221
         Width = 361
         Height = 153
-        Color = clWindow
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = 15
@@ -2714,7 +2686,6 @@ object frmEmissorNFe: TfrmEmissorNFe
         Top = 180
         Width = 353
         Height = 225
-        Color = clWindow
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = 15
@@ -2867,11 +2838,10 @@ object frmEmissorNFe: TfrmEmissorNFe
       object Panel8: TPanel
         Left = 0
         Top = 0
-        Width = 1314
+        Width = 1310
         Height = 41
         Align = alTop
         Caption = 'Panel8'
-        Color = clWindow
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = 15
@@ -2882,7 +2852,6 @@ object frmEmissorNFe: TfrmEmissorNFe
         ParentFont = False
         TabOrder = 6
         Visible = False
-        ExplicitWidth = 1310
         object btn_Preview: TButton
           Left = 5
           Top = 5
@@ -3292,7 +3261,6 @@ object frmEmissorNFe: TfrmEmissorNFe
         Top = 160
         Width = 414
         Height = 289
-        Color = clWindow
         ParentBackground = False
         TabOrder = 7
         Visible = False
@@ -3470,10 +3438,9 @@ object frmEmissorNFe: TfrmEmissorNFe
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 1322
+    Width = 1314
     Height = 40
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = 15

@@ -6,7 +6,7 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
   VertScrollBar.Range = 45
   ActiveControl = edtDataEntrega
   Caption = 'Comercial Dacar - NF-e: Impress'#227'o dos Documentos'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
   Font.Height = 11
@@ -23,10 +23,9 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
   object pnlBotoes: TPanel
     Left = 0
     Top = 0
-    Width = 1087
+    Width = 1083
     Height = 45
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = 15
@@ -36,7 +35,6 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 1083
     object btnConsultar: TSpeedButton
       Left = 5
       Top = 5
@@ -424,8 +422,8 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
   object PageControl1: TPageControl
     Left = 0
     Top = 45
-    Width = 1087
-    Height = 490
+    Width = 1083
+    Height = 489
     ActivePage = tbsFiltros
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -437,8 +435,6 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
     ParentFont = False
     TabOrder = 1
     OnChange = PageControl1Change
-    ExplicitWidth = 1083
-    ExplicitHeight = 489
     object tbsFiltros: TTabSheet
       Caption = ' Filtros '
       object pnlFiltros: TPanel
@@ -447,7 +443,6 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
         Width = 1079
         Height = 110
         Align = alTop
-        Color = clWindow
         ParentBackground = False
         TabOrder = 0
         ExplicitWidth = 1075
@@ -857,7 +852,6 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
         Width = 1079
         Height = 110
         Align = alTop
-        Color = clWindow
         ParentBackground = False
         TabOrder = 1
         object GroupBox1: TGroupBox
@@ -929,7 +923,6 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
           Height = 5
           Align = alTop
           BevelOuter = bvNone
-          Color = clWindow
           ParentBackground = False
           TabOrder = 1
         end

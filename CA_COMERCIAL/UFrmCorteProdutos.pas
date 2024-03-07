@@ -77,8 +77,9 @@ uses Principal,Global,UFrmPesqCid, UFrmPesqVend, UPesquiCliente,
 procedure TFrmCorteProdutos.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-     FrmPrincipal.VEN058.Enabled:= True;
-     Action:=caFree;
+  FrmCorteProdutos:=nil;
+  FrmPrincipal.VEN058.Enabled:= True;
+  Action:=caFree;
 end;
 
 procedure TFrmCorteProdutos.FormShow(Sender: TObject);

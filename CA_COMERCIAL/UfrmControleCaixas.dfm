@@ -5,8 +5,9 @@ object FrmControleCaixas: TFrmControleCaixas
   Height = 594
   VertScrollBar.Range = 50
   ActiveControl = PageControl1
+  BorderStyle = bsSingle
   Caption = 'Controle Caixa'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -2998,7 +2999,6 @@ object FrmControleCaixas: TFrmControleCaixas
       Width = 275
       Height = 47
       Align = alCustom
-      Color = clWindow
       Enabled = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText

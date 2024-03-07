@@ -17,6 +17,7 @@ type
     BitBtn2: TBitBtn;
     procedure BitBtn1Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -28,7 +29,7 @@ var
 
 implementation
 
-uses UFrmRelPedagio,global, uDadosCadastraisFilial;
+uses UFrmRelPedagio,global, uDadosCadastraisFilial, Principal;
 
 {$R *.dfm}
 
@@ -67,6 +68,13 @@ begin
   Screen.Cursor := crDefault;
   FrmRelPedagio.RLReport1.Preview(nil);
 
+end;
+
+procedure TFrmSelPedagio.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  FrmRelPedagio:=nil;
+  FrmPrincipal.VEN026.Enabled:= True;
+  Action:=caFree;
 end;
 
 procedure TFrmSelPedagio.FormShow(Sender: TObject);

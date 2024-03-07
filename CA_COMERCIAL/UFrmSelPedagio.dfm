@@ -3,23 +3,23 @@ object FrmSelPedagio: TFrmSelPedagio
   Top = 107
   ActiveControl = MEdIni
   Caption = 'Relat'#243'rio Pra'#231'as de Ped'#225'gio'
-  ClientHeight = 268
-  ClientWidth = 340
+  ClientHeight = 265
+  ClientWidth = 328
   Color = clBackground
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  OnClose = FormClose
   OnShow = FormShow
   TextHeight = 15
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 340
-    Height = 268
+    Width = 328
+    Height = 265
     Align = alClient
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -28,8 +28,8 @@ object FrmSelPedagio: TFrmSelPedagio
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 368
-    ExplicitHeight = 309
+    ExplicitWidth = 336
+    ExplicitHeight = 267
     object Label1: TLabel
       Left = 61
       Top = 73
@@ -62,7 +62,7 @@ object FrmSelPedagio: TFrmSelPedagio
       Left = 240
       Top = 68
       Width = 73
-      Height = 24
+      Height = 17
       EditMask = '!99/99/0000;1;_'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
@@ -79,7 +79,7 @@ object FrmSelPedagio: TFrmSelPedagio
       Left = 240
       Top = 120
       Width = 73
-      Height = 24
+      Height = 17
       EditMask = '!99/99/0000;1;_'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack

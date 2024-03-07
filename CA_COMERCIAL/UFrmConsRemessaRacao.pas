@@ -60,8 +60,9 @@ uses Principal,Global, UFrmSeldata, UFrmRelRemessaRacao;
 procedure TFrmConsRemessaRacao.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-     FrmPrincipal.VEN049.Enabled:= True;
-     Action:=caFree;
+  FrmConsRemessaRacao:=nil;
+  FrmPrincipal.VEN049.Enabled:= True;
+  Action:=caFree;
 end;
 
 procedure TFrmConsRemessaRacao.bt_PesqDTIClick(Sender: TObject);

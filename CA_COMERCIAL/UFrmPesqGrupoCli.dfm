@@ -9,7 +9,7 @@ object FrmPesqGrupoCli: TFrmPesqGrupoCli
   BorderIcons = [biHelp]
   BorderStyle = bsSingle
   Caption = 'Pesquisa Grupo de Clientes'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
   Font.Height = 11

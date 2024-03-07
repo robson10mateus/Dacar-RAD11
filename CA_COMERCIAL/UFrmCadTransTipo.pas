@@ -574,7 +574,9 @@ end;
 procedure TFrmCadTransTipo.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
+  FrmCadTransTipo:=nil;
   FrmPrincipal.CadastrodeTiposdeTransporte1.Enabled:= True;
+  Action:=caFree;
 end;
 
 end.

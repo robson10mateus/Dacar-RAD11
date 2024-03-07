@@ -7,7 +7,7 @@ object FrmPesqCaminhao: TFrmPesqCaminhao
   ActiveControl = DBGrid1
   BorderStyle = bsSingle
   Caption = 'Comercial Dacar - Consulta de Ve'#237'culos'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
   Font.Height = 11
@@ -496,10 +496,9 @@ object FrmPesqCaminhao: TFrmPesqCaminhao
   object pnlFiltros: TPanel
     Left = 0
     Top = 45
-    Width = 800
+    Width = 796
     Height = 125
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = 15
@@ -509,7 +508,6 @@ object FrmPesqCaminhao: TFrmPesqCaminhao
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
-    ExplicitWidth = 796
     object Label2: TLabel
       Left = 10
       Top = 15
@@ -611,10 +609,9 @@ object FrmPesqCaminhao: TFrmPesqCaminhao
   object pnlBotoes: TPanel
     Left = 0
     Top = 0
-    Width = 800
+    Width = 796
     Height = 45
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = 15
@@ -624,7 +621,6 @@ object FrmPesqCaminhao: TFrmPesqCaminhao
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 796
     object BitBtn1: TBitBtn
       Left = 5
       Top = 5
@@ -1065,8 +1061,8 @@ object FrmPesqCaminhao: TFrmPesqCaminhao
   object DBGrid1: TDBGrid
     Left = 0
     Top = 170
-    Width = 800
-    Height = 242
+    Width = 796
+    Height = 241
     Align = alClient
     DataSource = DSCam
     Font.Charset = DEFAULT_CHARSET

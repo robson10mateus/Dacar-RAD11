@@ -25,8 +25,8 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
   object PageControl1: TPageControl
     Left = 0
     Top = 41
-    Width = 969
-    Height = 505
+    Width = 965
+    Height = 504
     ActivePage = TabCriterio
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -38,8 +38,6 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
     ParentFont = False
     TabOrder = 0
     OnChange = PageControl1Change
-    ExplicitWidth = 965
-    ExplicitHeight = 504
     object TabCriterio: TTabSheet
       Caption = 'Crit'#233'rio'
       object Label6: TLabel
@@ -452,7 +450,6 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
         Width = 957
         Height = 49
         Align = alTop
-        Color = clWindow
         ParentBackground = False
         TabOrder = 0
         object Label1: TLabel
@@ -788,7 +785,6 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
         Width = 957
         Height = 198
         Align = alTop
-        Color = clWindow
         ParentBackground = False
         TabOrder = 1
         object dbg_Fornecedor: TDBGrid
@@ -915,7 +911,6 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
           Width = 955
           Height = 41
           Align = alTop
-          Color = clWindow
           ParentBackground = False
           TabOrder = 1
           object btn_PesqNF: TSpeedButton
@@ -1343,7 +1338,6 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
           Width = 955
           Height = 35
           Align = alTop
-          Color = clWindow
           ParentBackground = False
           TabOrder = 2
           ExplicitWidth = 971
@@ -2371,7 +2365,6 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
         Width = 957
         Height = 227
         Align = alClient
-        Color = clWindow
         ParentBackground = False
         TabOrder = 2
         object Pnl_EdtGAlpao: TPanel
@@ -2380,7 +2373,6 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
           Width = 955
           Height = 43
           Align = alTop
-          Color = clWindow
           ParentBackground = False
           TabOrder = 0
           object btn_IncGalpao: TSpeedButton
@@ -3468,8 +3460,8 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
         object dbg_Galpao: TDBGrid
           Left = 1
           Top = 44
-          Width = 959
-          Height = 183
+          Width = 955
+          Height = 182
           Align = alClient
           DataSource = Ds_LoteGalpao
           Font.Charset = DEFAULT_CHARSET
@@ -3626,7 +3618,6 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
         Width = 973
         Height = 21
         Align = alBottom
-        Color = clWindow
         ParentBackground = False
         TabOrder = 1
         object DBText3: TDBText
@@ -3792,7 +3783,6 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
         Width = 973
         Height = 236
         Align = alTop
-        Color = clWindow
         ParentBackground = False
         TabOrder = 1
         object btn_IncluirNota: TSpeedButton
@@ -4054,7 +4044,6 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
         Width = 973
         Height = 239
         Align = alTop
-        Color = clWindow
         ParentBackground = False
         TabOrder = 0
         object btn_RelPagamento: TSpeedButton
@@ -4925,7 +4914,6 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
         Width = 973
         Height = 34
         Align = alTop
-        Color = clWindow
         ParentBackground = False
         TabOrder = 1
         object btn_incLanc: TSpeedButton
@@ -5969,7 +5957,7 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 969
+    Width = 965
     Height = 41
     Anchors = []
     ButtonHeight = 37
@@ -5984,7 +5972,6 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
     ParentFont = False
     TabOrder = 1
     OnMouseMove = ToolBar1MouseMove
-    ExplicitWidth = 965
     object SB_PRIMEIRO: TSpeedButton
       Left = 0
       Top = 0
@@ -8215,11 +8202,10 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
   end
   object Panel1: TPanel
     Left = 0
-    Top = 546
-    Width = 969
+    Top = 545
+    Width = 965
     Height = 17
     Align = alBottom
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -8229,8 +8215,6 @@ object FrmLoteIntegrado: TFrmLoteIntegrado
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
-    ExplicitTop = 545
-    ExplicitWidth = 965
   end
   object Ds: TOraDataSource
     DataSet = Qr

@@ -8,7 +8,7 @@ object FrmUltVend: TFrmUltVend
   BorderIcons = [biSystemMenu, biMinimize, biMaximize, biHelp]
   BorderStyle = bsSingle
   Caption = #218'ltima Venda'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -19,7 +19,7 @@ object FrmUltVend: TFrmUltVend
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 507
+    Width = 503
     Height = 41
     Anchors = []
     ButtonHeight = 37
@@ -33,6 +33,7 @@ object FrmUltVend: TFrmUltVend
     Font.Style = []
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 507
     object Sb_Sair: TSpeedButton
       Left = 0
       Top = 0
@@ -236,8 +237,8 @@ object FrmUltVend: TFrmUltVend
   object PageControl1: TPageControl
     Left = 0
     Top = 41
-    Width = 507
-    Height = 374
+    Width = 503
+    Height = 373
     ActivePage = TabSheet1
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -248,8 +249,6 @@ object FrmUltVend: TFrmUltVend
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 503
-    ExplicitHeight = 373
     object TabSheet1: TTabSheet
       Caption = 'Detalhe'
       Font.Charset = DEFAULT_CHARSET
@@ -322,7 +321,6 @@ object FrmUltVend: TFrmUltVend
         Width = 499
         Height = 177
         Align = alTop
-        Color = clWindow
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = 15

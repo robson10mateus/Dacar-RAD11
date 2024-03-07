@@ -70,7 +70,6 @@ object FrmPedVendaConta: TFrmPedVendaConta
     Width = 525
     Height = 45
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15
@@ -465,7 +464,6 @@ object FrmPedVendaConta: TFrmPedVendaConta
     Width = 525
     Height = 40
     Align = alTop
-    Color = clWindow
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 15

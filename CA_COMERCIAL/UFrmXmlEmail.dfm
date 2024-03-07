@@ -3,8 +3,8 @@ object FrmXmlEmail: TFrmXmlEmail
   Top = 35
   ActiveControl = PageControl1
   Caption = 'Enviar e Receber XML - 1.0.1.20 - 19/01/2013'
-  ClientHeight = 660
-  ClientWidth = 1068
+  ClientHeight = 658
+  ClientWidth = 1060
   Color = clBackground
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -32,8 +32,8 @@ object FrmXmlEmail: TFrmXmlEmail
   object PageControl1: TPageControl
     Left = 0
     Top = 0
-    Width = 1068
-    Height = 660
+    Width = 1060
+    Height = 658
     ActivePage = PgTsEnviar
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -49,16 +49,15 @@ object FrmXmlEmail: TFrmXmlEmail
       object PnTopo: TPanel
         Left = 0
         Top = 0
-        Width = 1060
+        Width = 1052
         Height = 227
         Align = alTop
-        Color = clWindow
         ParentBackground = False
         TabOrder = 0
         object ScrollBox5: TScrollBox
           Left = 480
           Top = 1
-          Width = 579
+          Width = 571
           Height = 225
           HorzScrollBar.Range = 361
           VertScrollBar.Range = 225
@@ -255,7 +254,7 @@ object FrmXmlEmail: TFrmXmlEmail
           object mmMensagem: TMemo
             Left = 0
             Top = 176
-            Width = 579
+            Width = 571
             Height = 49
             Align = alBottom
             Color = 14024703
@@ -267,7 +266,7 @@ object FrmXmlEmail: TFrmXmlEmail
             Font.Style = [fsBold, fsItalic]
             ParentFont = False
             TabOrder = 8
-            ExplicitWidth = 361
+            ExplicitWidth = 575
           end
           object edtDe: TEdit
             Left = 0
@@ -760,15 +759,14 @@ object FrmXmlEmail: TFrmXmlEmail
       end
       object Panel1: TPanel
         Left = 0
-        Top = 561
-        Width = 1060
+        Top = 559
+        Width = 1052
         Height = 69
         Align = alBottom
-        Color = clWindow
         ParentBackground = False
         TabOrder = 1
-        ExplicitTop = 555
-        ExplicitWidth = 108
+        ExplicitTop = 560
+        ExplicitWidth = 1056
         object lblCodigo: TLabel
           Left = 544
           Top = 8
@@ -920,8 +918,8 @@ object FrmXmlEmail: TFrmXmlEmail
       object ScrollBox1: TScrollBox
         Left = 0
         Top = 227
-        Width = 1060
-        Height = 334
+        Width = 1052
+        Height = 332
         HorzScrollBar.Range = 481
         Align = alClient
         AutoScroll = False
@@ -930,8 +928,8 @@ object FrmXmlEmail: TFrmXmlEmail
         object ScrollBox2: TScrollBox
           Left = 481
           Top = 0
-          Width = 579
-          Height = 334
+          Width = 571
+          Height = 332
           VertScrollBar.Range = 93
           Align = alClient
           AutoScroll = False
@@ -940,11 +938,10 @@ object FrmXmlEmail: TFrmXmlEmail
           object Panel2: TPanel
             Left = 0
             Top = 0
-            Width = 579
+            Width = 571
             Height = 15
             Align = alTop
             Caption = 'XML Anexado para envio'
-            Color = clWindow
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
             Font.Height = 15
@@ -954,13 +951,13 @@ object FrmXmlEmail: TFrmXmlEmail
             ParentBackground = False
             ParentFont = False
             TabOrder = 0
-            ExplicitWidth = 0
+            ExplicitWidth = 575
           end
           object lbxAnexo: TListBox
             Left = 0
             Top = 15
-            Width = 579
-            Height = 241
+            Width = 571
+            Height = 239
             Align = alClient
             BorderStyle = bsNone
             Color = 14024703
@@ -976,16 +973,15 @@ object FrmXmlEmail: TFrmXmlEmail
           end
           object PnlLogin: TPanel
             Left = 0
-            Top = 256
-            Width = 579
+            Top = 254
+            Width = 571
             Height = 78
             Align = alBottom
             BevelOuter = bvNone
-            Color = clWindow
             ParentBackground = False
             TabOrder = 2
-            ExplicitTop = 233
-            ExplicitWidth = 0
+            ExplicitTop = 255
+            ExplicitWidth = 575
             object Label6: TLabel
               Left = 7
               Top = 25
@@ -1058,11 +1054,10 @@ object FrmXmlEmail: TFrmXmlEmail
             object Panel4: TPanel
               Left = 0
               Top = 0
-              Width = 591
+              Width = 579
               Height = 15
               Align = alTop
               Caption = 'Digite o Nome de Usu'#225'rio e Senha do seu Email:'
-              Color = clWindow
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
               Font.Height = 15
@@ -1072,7 +1067,7 @@ object FrmXmlEmail: TFrmXmlEmail
               ParentBackground = False
               ParentFont = False
               TabOrder = 2
-              ExplicitWidth = 0
+              ExplicitWidth = 575
             end
           end
         end
@@ -1080,7 +1075,7 @@ object FrmXmlEmail: TFrmXmlEmail
           Left = 0
           Top = 0
           Width = 355
-          Height = 334
+          Height = 332
           VertScrollBar.Range = 149
           Align = alLeft
           AutoScroll = False
@@ -1088,12 +1083,11 @@ object FrmXmlEmail: TFrmXmlEmail
           TabOrder = 1
           object Panel3: TPanel
             Left = 0
-            Top = 203
+            Top = 201
             Width = 355
             Height = 18
             Align = alBottom
             Caption = 'XML referente ao Nr.Nota'
-            Color = clWindow
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
             Font.Height = 15
@@ -1103,13 +1097,13 @@ object FrmXmlEmail: TFrmXmlEmail
             ParentBackground = False
             ParentFont = False
             TabOrder = 0
-            ExplicitTop = 180
+            ExplicitTop = 202
           end
           object lbxEnviar: TListBox
             Left = 0
             Top = 18
             Width = 355
-            Height = 185
+            Height = 183
             Align = alClient
             BorderStyle = bsNone
             Color = clBackground
@@ -1130,7 +1124,6 @@ object FrmXmlEmail: TFrmXmlEmail
             Height = 18
             Align = alTop
             Caption = 'XML referente ao CNPJ'
-            Color = clWindow
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
             Font.Height = 15
@@ -1143,7 +1136,7 @@ object FrmXmlEmail: TFrmXmlEmail
           end
           object lbxNota: TListBox
             Left = 0
-            Top = 221
+            Top = 219
             Width = 355
             Height = 113
             Align = alBottom
@@ -1163,7 +1156,7 @@ object FrmXmlEmail: TFrmXmlEmail
           Left = 355
           Top = 0
           Width = 126
-          Height = 334
+          Height = 332
           HorzScrollBar.Range = 119
           VertScrollBar.Range = 27
           Align = alLeft
@@ -1172,10 +1165,10 @@ object FrmXmlEmail: TFrmXmlEmail
           TabOrder = 2
           DesignSize = (
             126
-            334)
+            332)
           object btnAnexarUm: TBitBtn
             Left = 4
-            Top = 226
+            Top = 224
             Width = 115
             Height = 25
             Anchors = [akLeft, akBottom]
@@ -1204,7 +1197,7 @@ object FrmXmlEmail: TFrmXmlEmail
             ParentFont = False
             TabOrder = 0
             OnClick = Anexar_um_xml
-            ExplicitTop = 203
+            ExplicitTop = 225
           end
           object btnEnviarArquivo: TBitBtn
             Left = 4
@@ -1239,7 +1232,7 @@ object FrmXmlEmail: TFrmXmlEmail
           end
           object btnAnexarTodos: TBitBtn
             Left = 4
-            Top = 252
+            Top = 250
             Width = 115
             Height = 25
             Anchors = [akLeft, akBottom]
@@ -1268,11 +1261,11 @@ object FrmXmlEmail: TFrmXmlEmail
             ParentFont = False
             TabOrder = 2
             OnClick = Anexar_todos_xml
-            ExplicitTop = 229
+            ExplicitTop = 251
           end
           object btnNEnviarEste: TBitBtn
             Left = 4
-            Top = 278
+            Top = 276
             Width = 115
             Height = 25
             Anchors = [akLeft, akBottom]
@@ -1300,11 +1293,11 @@ object FrmXmlEmail: TFrmXmlEmail
             ParentFont = False
             TabOrder = 3
             OnClick = Nao_enviar_esse_xml
-            ExplicitTop = 255
+            ExplicitTop = 277
           end
           object btnNEnviarTodos: TBitBtn
             Left = 4
-            Top = 304
+            Top = 302
             Width = 115
             Height = 25
             Anchors = [akLeft, akBottom]
@@ -1332,7 +1325,7 @@ object FrmXmlEmail: TFrmXmlEmail
             ParentFont = False
             TabOrder = 4
             OnClick = Nao_enviar_todos_xml
-            ExplicitTop = 281
+            ExplicitTop = 303
           end
         end
       end
@@ -1342,7 +1335,6 @@ object FrmXmlEmail: TFrmXmlEmail
         Width = 666
         Height = 323
         BevelWidth = 3
-        Color = clWindow
         ParentBackground = False
         TabOrder = 2
         Visible = False
@@ -1772,8 +1764,8 @@ object FrmXmlEmail: TFrmXmlEmail
       ImageIndex = 1
       object GroupBox1: TGroupBox
         Left = 0
-        Top = 559
-        Width = 1060
+        Top = 557
+        Width = 1052
         Height = 71
         Align = alBottom
         Caption = '  Importar XML Recebidos para o Banco de Dados XML:  '
@@ -1828,7 +1820,7 @@ object FrmXmlEmail: TFrmXmlEmail
       object GroupBox2: TGroupBox
         Left = 0
         Top = 0
-        Width = 1060
+        Width = 1052
         Height = 102
         Align = alTop
         Caption = '  Dados da Conta do Email:  '
@@ -2045,8 +2037,8 @@ object FrmXmlEmail: TFrmXmlEmail
       end
       object GroupBox3: TGroupBox
         Left = 0
-        Top = 488
-        Width = 1060
+        Top = 486
+        Width = 1052
         Height = 71
         Align = alBottom
         Caption = '  Local aonde os XMLs ser'#227'o Armazenados:  '
@@ -2148,8 +2140,8 @@ object FrmXmlEmail: TFrmXmlEmail
       object GroupBox5: TGroupBox
         Left = 239
         Top = 102
-        Width = 821
-        Height = 386
+        Width = 813
+        Height = 384
         Align = alClient
         Caption = 'Emails encontrados:'
         Font.Charset = DEFAULT_CHARSET
@@ -2185,8 +2177,8 @@ object FrmXmlEmail: TFrmXmlEmail
         object ScrollBox7: TScrollBox
           Left = 2
           Top = 228
-          Width = 817
-          Height = 156
+          Width = 809
+          Height = 154
           HorzScrollBar.Range = 380
           Align = alClient
           AutoScroll = False
@@ -2196,7 +2188,7 @@ object FrmXmlEmail: TFrmXmlEmail
             Left = 0
             Top = 0
             Width = 380
-            Height = 156
+            Height = 154
             VertScrollBar.Range = 15
             Align = alLeft
             AutoScroll = False
@@ -2209,7 +2201,6 @@ object FrmXmlEmail: TFrmXmlEmail
               Height = 15
               Align = alTop
               Caption = 'Mensagem'
-              Color = clWindow
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
               Font.Height = 15
@@ -2224,7 +2215,7 @@ object FrmXmlEmail: TFrmXmlEmail
               Left = 0
               Top = 15
               Width = 380
-              Height = 141
+              Height = 139
               Align = alClient
               BorderStyle = bsNone
               Font.Charset = DEFAULT_CHARSET
@@ -2241,8 +2232,8 @@ object FrmXmlEmail: TFrmXmlEmail
           object ScrollBox10: TScrollBox
             Left = 380
             Top = 0
-            Width = 437
-            Height = 156
+            Width = 429
+            Height = 154
             VertScrollBar.Range = 15
             Align = alClient
             AutoScroll = False
@@ -2251,11 +2242,10 @@ object FrmXmlEmail: TFrmXmlEmail
             object Panel10: TPanel
               Left = 0
               Top = 0
-              Width = 437
+              Width = 429
               Height = 15
               Align = alTop
               Caption = 'Anexos'
-              Color = clWindow
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
               Font.Height = 15
@@ -2270,8 +2260,8 @@ object FrmXmlEmail: TFrmXmlEmail
             object EmailAnexo: TListBox
               Left = 0
               Top = 15
-              Width = 437
-              Height = 141
+              Width = 429
+              Height = 139
               Align = alClient
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
@@ -2288,7 +2278,7 @@ object FrmXmlEmail: TFrmXmlEmail
         object ScrollBox8: TScrollBox
           Left = 2
           Top = 17
-          Width = 817
+          Width = 809
           Height = 211
           HorzScrollBar.Range = 471
           Align = alTop
@@ -2312,7 +2302,6 @@ object FrmXmlEmail: TFrmXmlEmail
               Height = 15
               Align = alTop
               Caption = 'Assunto'
-              Color = clWindow
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
               Font.Height = 15
@@ -2344,7 +2333,7 @@ object FrmXmlEmail: TFrmXmlEmail
           object scbDe: TScrollBox
             Left = 380
             Top = 0
-            Width = 346
+            Width = 338
             Height = 211
             VertScrollBar.Range = 15
             Align = alClient
@@ -2354,11 +2343,10 @@ object FrmXmlEmail: TFrmXmlEmail
             object Panel7: TPanel
               Left = 0
               Top = 0
-              Width = 346
+              Width = 338
               Height = 15
               Align = alTop
               Caption = 'De'
-              Color = clWindow
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
               Font.Height = 15
@@ -2373,7 +2361,7 @@ object FrmXmlEmail: TFrmXmlEmail
             object EmailDe: TListBox
               Left = 0
               Top = 15
-              Width = 346
+              Width = 338
               Height = 196
               Align = alClient
               Font.Charset = DEFAULT_CHARSET
@@ -2388,7 +2376,7 @@ object FrmXmlEmail: TFrmXmlEmail
             end
           end
           object scbData: TScrollBox
-            Left = 726
+            Left = 718
             Top = 0
             Width = 91
             Height = 211
@@ -2404,7 +2392,6 @@ object FrmXmlEmail: TFrmXmlEmail
               Height = 15
               Align = alTop
               Caption = 'Data'
-              Color = clWindow
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
               Font.Height = 15
@@ -2439,7 +2426,7 @@ object FrmXmlEmail: TFrmXmlEmail
         Left = 0
         Top = 102
         Width = 239
-        Height = 386
+        Height = 384
         Align = alLeft
         Caption = '  Pastas do Email - Selecione a pasta '
         Font.Charset = DEFAULT_CHARSET
@@ -2476,7 +2463,7 @@ object FrmXmlEmail: TFrmXmlEmail
           Left = 2
           Top = 17
           Width = 235
-          Height = 367
+          Height = 365
           Align = alClient
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack

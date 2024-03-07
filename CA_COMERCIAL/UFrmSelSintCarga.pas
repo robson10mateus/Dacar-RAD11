@@ -96,6 +96,7 @@ end;
 procedure TFrmSelSintCarga.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
+  FrmSelSintCarga:=Nil;
   FrmPrincipal.VEN014.Enabled:= True;
   Action:=caFree;
 end;
