@@ -22,7 +22,7 @@ object FrmDesativaPesquisa: TFrmDesativaPesquisa
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 753
+    Width = 757
     Height = 40
     Align = alTop
     BevelOuter = bvNone
@@ -34,6 +34,7 @@ object FrmDesativaPesquisa: TFrmDesativaPesquisa
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 753
     object Label1: TLabel
       Left = 21
       Top = 26
@@ -101,8 +102,8 @@ object FrmDesativaPesquisa: TFrmDesativaPesquisa
   end
   object Panel2: TPanel
     Left = 0
-    Top = 505
-    Width = 753
+    Top = 506
+    Width = 757
     Height = 55
     Align = alBottom
     BevelOuter = bvNone
@@ -114,6 +115,8 @@ object FrmDesativaPesquisa: TFrmDesativaPesquisa
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
+    ExplicitTop = 505
+    ExplicitWidth = 753
     object Label2: TLabel
       Left = 21
       Top = 14
@@ -148,7 +151,7 @@ object FrmDesativaPesquisa: TFrmDesativaPesquisa
     Left = 18
     Top = 40
     Width = 334
-    Height = 465
+    Height = 466
     Align = alLeft
     BevelOuter = bvNone
     Font.Charset = DEFAULT_CHARSET
@@ -159,6 +162,7 @@ object FrmDesativaPesquisa: TFrmDesativaPesquisa
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
+    ExplicitHeight = 465
     object DBGrid1: TDBGrid
       Left = 0
       Top = 0
@@ -201,7 +205,7 @@ object FrmDesativaPesquisa: TFrmDesativaPesquisa
     Left = 352
     Top = 40
     Width = 167
-    Height = 465
+    Height = 466
     Align = alLeft
     BevelOuter = bvNone
     Font.Charset = DEFAULT_CHARSET
@@ -212,6 +216,7 @@ object FrmDesativaPesquisa: TFrmDesativaPesquisa
     ParentBackground = False
     ParentFont = False
     TabOrder = 3
+    ExplicitHeight = 465
     object btnAnexarUm: TBitBtn
       Left = 8
       Top = 35
@@ -414,7 +419,7 @@ object FrmDesativaPesquisa: TFrmDesativaPesquisa
     Left = 519
     Top = 40
     Width = 232
-    Height = 465
+    Height = 466
     Align = alLeft
     BevelOuter = bvNone
     Font.Charset = DEFAULT_CHARSET
@@ -425,11 +430,12 @@ object FrmDesativaPesquisa: TFrmDesativaPesquisa
     ParentBackground = False
     ParentFont = False
     TabOrder = 4
+    ExplicitHeight = 465
     object lbxAnexo: TListBox
       Left = 0
       Top = 0
       Width = 232
-      Height = 465
+      Height = 466
       Align = alClient
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
@@ -439,13 +445,14 @@ object FrmDesativaPesquisa: TFrmDesativaPesquisa
       ItemHeight = 15
       ParentFont = False
       TabOrder = 0
+      ExplicitHeight = 465
     end
   end
   object Panel6: TPanel
     Left = 0
     Top = 40
     Width = 18
-    Height = 465
+    Height = 466
     Align = alLeft
     BevelOuter = bvNone
     Font.Charset = DEFAULT_CHARSET
@@ -456,6 +463,7 @@ object FrmDesativaPesquisa: TFrmDesativaPesquisa
     ParentBackground = False
     ParentFont = False
     TabOrder = 5
+    ExplicitHeight = 465
   end
   object DtsPesquisa: TDataSource
     DataSet = QryPesquisa

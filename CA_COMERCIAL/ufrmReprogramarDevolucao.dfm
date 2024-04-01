@@ -25,8 +25,8 @@ object frmReprogramarDevolucao: TfrmReprogramarDevolucao
   object PageControl1: TPageControl
     Left = 0
     Top = 45
-    Width = 1397
-    Height = 601
+    Width = 1401
+    Height = 602
     ActivePage = Lista
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -39,6 +39,8 @@ object frmReprogramarDevolucao: TfrmReprogramarDevolucao
     ParentShowHint = False
     ShowHint = False
     TabOrder = 0
+    ExplicitWidth = 1397
+    ExplicitHeight = 601
     object Lista: TTabSheet
       Caption = 'Lista'
       Font.Charset = DEFAULT_CHARSET
@@ -503,7 +505,7 @@ object frmReprogramarDevolucao: TfrmReprogramarDevolucao
   object pnlBotoes: TPanel
     Left = 0
     Top = 0
-    Width = 1397
+    Width = 1401
     Height = 45
     Align = alTop
     Font.Charset = DEFAULT_CHARSET
@@ -515,6 +517,7 @@ object frmReprogramarDevolucao: TfrmReprogramarDevolucao
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 1397
     object SB_CONFIRMA: TSpeedButton
       Left = 75
       Top = 5

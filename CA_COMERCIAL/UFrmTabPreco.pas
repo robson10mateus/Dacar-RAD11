@@ -1073,7 +1073,8 @@ procedure TFrmTabPreco.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmTabPreco:=Nil;
-  FrmPrincipal.VEN028.Enabled:= True;
+//  FrmPrincipal.VEN028.Enabled:= True;
+  FrmPrincipal.ACVEN028.Enabled:= True;
   Action:=caFree;
 end;
 

@@ -26,8 +26,8 @@ object FrmPedagio: TFrmPedagio
   object PageControl1: TPageControl
     Left = 0
     Top = 41
-    Width = 776
-    Height = 435
+    Width = 780
+    Height = 436
     ActivePage = TabDetalhe
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -38,6 +38,8 @@ object FrmPedagio: TFrmPedagio
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 776
+    ExplicitHeight = 435
     object TabCriterio: TTabSheet
       Caption = 'Crit'#233'rio'
       OnShow = TabCriterioShow
@@ -635,7 +637,7 @@ object FrmPedagio: TFrmPedagio
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 776
+    Width = 780
     Height = 41
     Anchors = []
     ButtonHeight = 33
@@ -649,6 +651,7 @@ object FrmPedagio: TFrmPedagio
     Font.Style = []
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 776
     object SB_PRIMEIRO: TSpeedButton
       Left = 0
       Top = 0
@@ -2797,8 +2800,8 @@ object FrmPedagio: TFrmPedagio
   end
   object Panel1: TPanel
     Left = 0
-    Top = 476
-    Width = 776
+    Top = 477
+    Width = 780
     Height = 17
     Align = alBottom
     Font.Charset = DEFAULT_CHARSET
@@ -2810,6 +2813,8 @@ object FrmPedagio: TFrmPedagio
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
+    ExplicitTop = 476
+    ExplicitWidth = 776
   end
   object DS: TDataSource
     DataSet = Qr

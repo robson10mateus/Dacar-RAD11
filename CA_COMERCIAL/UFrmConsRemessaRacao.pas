@@ -61,7 +61,8 @@ procedure TFrmConsRemessaRacao.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmConsRemessaRacao:=nil;
-  FrmPrincipal.VEN049.Enabled:= True;
+//  FrmPrincipal.VEN049.Enabled:= True;
+  FrmPrincipal.ACVEN049.Enabled:= True;
   Action:=caFree;
 end;
 

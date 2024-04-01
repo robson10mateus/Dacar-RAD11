@@ -4,10 +4,9 @@ object FrmItensPedido: TFrmItensPedido
   Width = 700
   Height = 400
   VertScrollBar.Range = 45
-  ActiveControl = PageControl1
   BorderStyle = bsDialog
   Caption = 'Comercial Dacar/ Montagem de Carga - Itens do Pedido de Venda'
-  Color = clBackground
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = 11
@@ -15,7 +14,6 @@ object FrmItensPedido: TFrmItensPedido
   Font.Pitch = fpVariable
   Font.Style = []
   Position = poDesktopCenter
-  Visible = True
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
@@ -23,8 +21,8 @@ object FrmItensPedido: TFrmItensPedido
   object PageControl1: TPageControl
     Left = 0
     Top = 45
-    Width = 684
-    Height = 316
+    Width = 688
+    Height = 317
     ActivePage = TabSheet1
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -35,8 +33,8 @@ object FrmItensPedido: TFrmItensPedido
     Font.Style = []
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 700
-    ExplicitHeight = 355
+    ExplicitWidth = 684
+    ExplicitHeight = 316
     object TabSheet1: TTabSheet
       Caption = ' Itens do Pedido de Venda '
       Font.Charset = DEFAULT_CHARSET
@@ -49,8 +47,8 @@ object FrmItensPedido: TFrmItensPedido
       object DBGrid1: TDBGrid
         Left = 0
         Top = 0
-        Width = 692
-        Height = 325
+        Width = 680
+        Height = 287
         Align = alClient
         Color = clWhite
         DataSource = DSForm
@@ -107,7 +105,7 @@ object FrmItensPedido: TFrmItensPedido
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 684
+    Width = 688
     Height = 45
     Align = alTop
     Font.Charset = DEFAULT_CHARSET
@@ -119,7 +117,7 @@ object FrmItensPedido: TFrmItensPedido
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 700
+    ExplicitWidth = 684
     object SB_PRIMEIRO: TSpeedButton
       Left = 5
       Top = 5

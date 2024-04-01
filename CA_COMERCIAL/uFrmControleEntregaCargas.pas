@@ -161,7 +161,8 @@ procedure TFrmControleEntregaCargas.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmRelControleEntregaCargas:=nil;
-  FrmPrincipal.VEN062.Enabled:= True;
+//  FrmPrincipal.VEN062.Enabled:= True;
+  FrmPrincipal.ACVEN062.Enabled:= True;
   Action:=caFree;
 end;
 

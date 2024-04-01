@@ -726,7 +726,8 @@ procedure TFrmCadVendedor.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmCadVendedor:=nil;
-  FrmPrincipal.VEN040.Enabled:= True;
+//  FrmPrincipal.VEN040.Enabled:= True;
+  FrmPrincipal.ACVEN040.Enabled:= True;
   Action:=caFree;
 end;
 
@@ -920,10 +921,9 @@ procedure TFrmCadVendedor.btnExcelClick(Sender: TObject);
 var Arquivo: TextFile;
 begin
   try
-
+    dlgSaveArquivo.FileName := 'LISTAGEM_VENDEDORES_PERCENTUAL.csv';
     if dlgSaveArquivo.Execute then
     begin
-      dlgSaveArquivo.FileName := 'LISTAGEM_VENDEDORES_PERCENTUAL.csv';
       AssignFile(Arquivo, dlgSaveArquivo.FileName);
       Rewrite(Arquivo);
 

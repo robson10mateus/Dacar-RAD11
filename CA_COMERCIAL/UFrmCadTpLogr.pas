@@ -578,7 +578,8 @@ procedure TFrmCadTpLogr.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmCadTpLogr:=nil;
-  FrmPrincipal.CadastroTipodeLogradouro1.Enabled:= True;
+//  FrmPrincipal.CadastroTipodeLogradouro1.Enabled:= True;
+  FrmPrincipal.ACCadTipoLogradouro.Enabled:= True;
   Action:=caFree;
 end;
 

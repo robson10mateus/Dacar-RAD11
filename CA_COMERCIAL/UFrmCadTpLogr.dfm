@@ -12,7 +12,9 @@ object FrmCadTpLogr: TFrmCadTpLogr
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  FormStyle = fsMDIChild
   Position = poScreenCenter
+  Visible = True
   OnClose = FormClose
   OnShow = FormShow
   TextHeight = 15
@@ -30,8 +32,8 @@ object FrmCadTpLogr: TFrmCadTpLogr
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 639
-    ExplicitHeight = 386
+    ExplicitWidth = 664
+    ExplicitHeight = 382
     object PageControl1: TPageControl
       Left = 1
       Top = 41
@@ -46,8 +48,8 @@ object FrmCadTpLogr: TFrmCadTpLogr
       Font.Style = []
       ParentFont = False
       TabOrder = 0
-      ExplicitWidth = 637
-      ExplicitHeight = 344
+      ExplicitWidth = 662
+      ExplicitHeight = 340
       object TabCriterio: TTabSheet
         Caption = 'Criterios'
         OnShow = TabCriterioShow
@@ -569,7 +571,7 @@ object FrmCadTpLogr: TFrmCadTpLogr
       Font.Style = []
       ParentFont = False
       TabOrder = 1
-      ExplicitWidth = 637
+      ExplicitWidth = 662
       object SB_PRIMEIRO: TSpeedButton
         Left = 0
         Top = 0

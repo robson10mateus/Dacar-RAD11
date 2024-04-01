@@ -224,7 +224,8 @@ procedure TFrmManuComis.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmManuComis:=nil;
-  FrmPrincipal.VEN010.Enabled:= True;
+//  FrmPrincipal.VEN010.Enabled:= True;
+  FrmPrincipal.ACVEN010.Enabled:= True;
   Action:=caFree;
 end;
 

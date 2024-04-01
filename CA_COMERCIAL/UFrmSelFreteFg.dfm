@@ -4,7 +4,7 @@ object FrmSelFreteFg: TFrmSelFreteFg
   Width = 542
   Height = 280
   VertScrollBar.Range = 40
-  BorderIcons = [biSystemMenu]
+  BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'Comercial Dacar - Relat'#243'rio de Frete Frango Abatido'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -13,6 +13,7 @@ object FrmSelFreteFg: TFrmSelFreteFg
   Font.Name = 'Arial'
   Font.Pitch = fpVariable
   Font.Style = []
+  FormStyle = fsMDIChild
   Icon.Data = {
     000001000300101000000100200068040000360000002020000001002000A810
     00009E0400003030000001002000A82500004615000028000000100000002000
@@ -488,14 +489,15 @@ object FrmSelFreteFg: TFrmSelFreteFg
     0000000000000000000000000000}
   KeyPreview = True
   Position = poDesktopCenter
+  Visible = True
   OnClose = FormClose
   OnCreate = FormCreate
   TextHeight = 10
   object pnlFiltros: TPanel
     Left = 0
     Top = 40
-    Width = 526
-    Height = 201
+    Width = 530
+    Height = 202
     Align = alClient
     BevelWidth = 3
     Font.Charset = DEFAULT_CHARSET
@@ -507,6 +509,8 @@ object FrmSelFreteFg: TFrmSelFreteFg
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 526
+    ExplicitHeight = 201
     object Label3: TLabel
       Left = 15
       Top = 140
@@ -628,7 +632,7 @@ object FrmSelFreteFg: TFrmSelFreteFg
       Font.Style = []
       HeaderFont.Charset = DEFAULT_CHARSET
       HeaderFont.Color = clBlack
-      HeaderFont.Height = 13
+      HeaderFont.Height = 15
       HeaderFont.Name = 'Arial'
       HeaderFont.Pitch = fpVariable
       HeaderFont.Style = []
@@ -734,7 +738,7 @@ object FrmSelFreteFg: TFrmSelFreteFg
   object pnlBotoes: TPanel
     Left = 0
     Top = 0
-    Width = 526
+    Width = 530
     Height = 40
     Align = alTop
     Font.Charset = DEFAULT_CHARSET
@@ -746,6 +750,7 @@ object FrmSelFreteFg: TFrmSelFreteFg
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 526
     object SB_Relatorio: TSpeedButton
       Left = 5
       Top = 2

@@ -7,13 +7,15 @@ object FrmCadRegInt: TFrmCadRegInt
   Caption = 'Cadastro de Regi'#227'o Internacional'
   ClientHeight = 392
   ClientWidth = 668
-  Color = clBackground
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  FormStyle = fsMDIChild
   Position = poScreenCenter
+  Visible = True
   OnClose = FormClose
   OnShow = FormShow
   TextHeight = 15
@@ -31,8 +33,8 @@ object FrmCadRegInt: TFrmCadRegInt
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 660
-    ExplicitHeight = 360
+    ExplicitWidth = 664
+    ExplicitHeight = 391
     object ToolBar1: TToolBar
       Left = 1
       Top = 1
@@ -49,7 +51,7 @@ object FrmCadRegInt: TFrmCadRegInt
       Font.Style = []
       ParentFont = False
       TabOrder = 0
-      ExplicitWidth = 659
+      ExplicitWidth = 662
       object SB_PRIMEIRO: TSpeedButton
         Left = 0
         Top = 0
@@ -1382,10 +1384,8 @@ object FrmCadRegInt: TFrmCadRegInt
       Font.Style = []
       ParentFont = False
       TabOrder = 1
-      ExplicitLeft = -3
-      ExplicitTop = 34
-      ExplicitWidth = 664
-      ExplicitHeight = 329
+      ExplicitWidth = 662
+      ExplicitHeight = 344
       object TabCriterio: TTabSheet
         Caption = 'Criterios'
         OnShow = TabCriterioShow

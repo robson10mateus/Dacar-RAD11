@@ -1025,7 +1025,8 @@ procedure TfrmImpDocPed.FormClose(Sender: TObject;
  var Action: TCloseAction);
 begin
   FrmImpDocPed:=Nil;
-  FrmPrincipal.VEN005.Enabled:= True;
+//  FrmPrincipal.VEN005.Enabled:= True;
+  FrmPrincipal.ACVEN005.Enabled := True;
   Action:=caFree;
 end;
 
@@ -1674,6 +1675,7 @@ begin
   SB_ULTIMO.Enabled:=false;
   SBDiversos.Enabled:=false;
   btnNFE.Enabled := False;
+
 //  PageControl1.Pages[1].TabVisible:=false;
 end;
 
@@ -12122,10 +12124,10 @@ end;
 procedure TfrmImpDocPed.PageControl1Change(Sender: TObject);
 begin
   lblTotalNotas.Visible := TsLista.Showing;
+
+  if PageControl1.ActivePage = TabSheet1 then
+    PageControl1.Pages[1].TabVisible := False;
 end;
 
 end.
-
-
-
 

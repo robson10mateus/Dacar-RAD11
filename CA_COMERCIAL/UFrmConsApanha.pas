@@ -84,7 +84,8 @@ procedure TFrmConsApanha.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmConsApanha:=nil;
-  FrmPrincipal.VEN046.Enabled:= True;
+//  FrmPrincipal.VEN046.Enabled:= True;
+  FrmPrincipal.ACVEN046.Enabled:= True;
   Action:=caFree;
 end;
 

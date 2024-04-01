@@ -615,7 +615,8 @@ procedure TFrmCadBairro.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmCadBairro:=nil;
-  FrmPrincipal.CadastrodeBairro1.Enabled:= True;
+//  FrmPrincipal.CadastrodeBairro1.Enabled:= True;
+  FrmPrincipal.ACCadBairros.Enabled:= True;
   Action:=caFree;
 end;
 

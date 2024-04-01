@@ -120,7 +120,8 @@ procedure TFrmOcorrencias.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmOcorrencias:=nil;
-  FrmPrincipal.VEN059.Enabled:= True;
+//  FrmPrincipal.VEN059.Enabled:= True;
+  FrmPrincipal.ACVEN059.Enabled:= True;
   Action:=caFree;
 end;
 

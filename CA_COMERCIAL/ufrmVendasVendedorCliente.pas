@@ -242,7 +242,8 @@ procedure TfrmVendasVendedorCliente.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   frmVendasVendedorCliente:=nil;
-  FrmPrincipal.VEN015a.Enabled:= True;
+//  FrmPrincipal.VEN015a.Enabled:= True;
+  FrmPrincipal.ACVEN015a.Enabled := True;
   Action:=caFree;
 end;
 
@@ -626,9 +627,9 @@ begin
   end;
 
   try
+    dlgSaveArquivo.FileName := 'VENDAS_VENDEDOR_CLIENTE_' + ReplaceStr(DTini.Text,'/','') + '_' + ReplaceStr(DTini.Text,'/','') + '.csv';
     if dlgSaveArquivo.Execute then
     begin
-      dlgSaveArquivo.FileName := 'VENDAS_VENDEDOR_CLIENTE_' + ReplaceStr(DTini.Text,'/','') + '_' + ReplaceStr(DTini.Text,'/','') + '.csv';
       AssignFile(Arquivo, dlgSaveArquivo.FileName);
       Rewrite(Arquivo);
 

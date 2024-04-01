@@ -23,7 +23,7 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
   object pnlBotoes: TPanel
     Left = 0
     Top = 0
-    Width = 1083
+    Width = 1087
     Height = 45
     Align = alTop
     Font.Charset = DEFAULT_CHARSET
@@ -35,6 +35,7 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 1083
     object btnConsultar: TSpeedButton
       Left = 5
       Top = 5
@@ -422,8 +423,8 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
   object PageControl1: TPageControl
     Left = 0
     Top = 45
-    Width = 1083
-    Height = 489
+    Width = 1087
+    Height = 490
     ActivePage = tbsFiltros
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -435,6 +436,8 @@ object frmDocumentacaoNFE: TfrmDocumentacaoNFE
     ParentFont = False
     TabOrder = 1
     OnChange = PageControl1Change
+    ExplicitWidth = 1083
+    ExplicitHeight = 489
     object tbsFiltros: TTabSheet
       Caption = ' Filtros '
       object pnlFiltros: TPanel

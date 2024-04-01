@@ -601,7 +601,8 @@ end;
 procedure TFrmCadPais.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   FrmCadPais:=nil;
-  FrmPrincipal.CadastrodePases1.Enabled:= True;
+//  FrmPrincipal.CadastrodePases1.Enabled:= True;
+  FrmPrincipal.ACCadPaises.Enabled:= True;
   Action:=caFree;
 end;
 

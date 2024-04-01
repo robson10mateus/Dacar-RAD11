@@ -764,7 +764,8 @@ procedure TFrmLoteIntegrado.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmLoteIntegrado:=nil;
-  FrmPrincipal.VEN043.Enabled:= True;
+//  FrmPrincipal.VEN043.Enabled:= True;
+  FrmPrincipal.ACVEN043.Enabled:= True;
   Action:=caFree;
 end;
 

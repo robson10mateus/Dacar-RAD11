@@ -32,6 +32,8 @@ object FrmDiferencaPreco: TFrmDiferencaPreco
     Font.Style = []
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 884
+    ExplicitHeight = 435
     object Tab_Criterio: TTabSheet
       Caption = 'Crit'#233'rio'
       object Label6: TLabel
@@ -426,7 +428,7 @@ object FrmDiferencaPreco: TFrmDiferencaPreco
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 888
+        Width = 880
         Height = 41
         Anchors = []
         ButtonHeight = 37
@@ -440,7 +442,7 @@ object FrmDiferencaPreco: TFrmDiferencaPreco
         Font.Style = []
         ParentFont = False
         TabOrder = 0
-        ExplicitWidth = 884
+        ExplicitWidth = 876
         object SB_ATUAL: TSpeedButton
           Left = 0
           Top = 0
@@ -866,8 +868,8 @@ object FrmDiferencaPreco: TFrmDiferencaPreco
       object DBGrid1: TDBGrid
         Left = 0
         Top = 41
-        Width = 888
-        Height = 367
+        Width = 880
+        Height = 365
         Align = alClient
         Color = clWhite
         DataSource = Ds

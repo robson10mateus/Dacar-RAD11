@@ -680,7 +680,8 @@ procedure TFrmCadForPag.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmCadForPag:=nil;
-  FrmPrincipal.VEN032.Enabled:= True;
+//  FrmPrincipal.VEN032.Enabled:= True;
+  FrmPrincipal.ACVEN032.Enabled:= True;
   Action:=caFree;
 end;
 

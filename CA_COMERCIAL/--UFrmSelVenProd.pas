@@ -2,11 +2,15 @@ unit UFrmSelVenProd;
 
 interface
 
+//uses Vcl.Dialogs, Data.DB, DBAccess, Ora, MemDS, Vcl.StdCtrls, Vcl.Buttons,
+//  Vcl.ExtCtrls, Vcl.Controls, System.Classes;
+
 uses
-  DB, MemDS, DBAccess, Ora, ExtCtrls, StdCtrls, ComCtrls,
+
   Controls, Buttons, DBCtrls, Mask, Grids, TYPES, DBGrids,
   Classes, SysUtils, Variants, Graphics, Forms,
-  Dialogs, toolWin, OraSmart, OraError;
+  Dialogs, toolWin, OraSmart, OraError, Data.DB, DBAccess, Ora, MemDS,
+  Vcl.StdCtrls, Vcl.ExtCtrls;
 
 type
   TFrmSelVenProd = class(TForm)
@@ -69,7 +73,6 @@ type
     MResulT: TMemo;
     chkRes: TCheckBox;
     chkQtdeNaoAtendida: TCheckBox;
-    QrVL_UNIT_EXP: TFloatField;
     procedure Sb_SairClick(Sender: TObject);
     procedure SB_PRIMEIROClick(Sender: TObject);
     procedure SB_ANTERIORClick(Sender: TObject);
@@ -142,7 +145,9 @@ end;
 procedure TFrmSelVenProd.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-  FrmPrincipal.VEN013.Enabled:= True;
+  FrmSelVenProd:=nil;
+//  FrmPrincipal.VEN013.Enabled:= True;
+  FrmPrincipal.ACVEN013.Enabled:= True;
   Action:=caFree;
 end;
 
@@ -178,7 +183,7 @@ end;
 
 procedure TFrmSelVenProd.FormActivate(Sender: TObject);
 begin
-IF LCAMPOS.Items.Count=0 THEN
+IF LCAMPOS.Items.Count=0 then
  BEGIN
   With LCampos.Items do
    begin
@@ -317,7 +322,7 @@ begin
 
     Vre:=Vre+')';
 
-    MResul.Lines.Add(Vre);
+    MResul.Lines.add(Vre);
 
     if (LCampos.ItemIndex in [3,4,5,8,16]) then
     begin
@@ -480,28 +485,28 @@ begin
   CASE SELPE OF
     1:BEGIN
         FrmPesqTPV:=TFrmPesqTPV.Create(Self);
-        FrmPesqTPV.Show;
+        FrmPesqTPV.ShowModal;
       END;
     2:BEGIN
         FrmPesqVend:=TFrmPesqVend.Create(Self);
-        FrmPesqVend.Show;
+        FrmPesqVend.ShowModal;
       END;
     3:BEGIN
         FrmPesqCliente:=TFrmPesqCliente.Create(Self);
-        FrmPesqCliente.Show;
+        FrmPesqCliente.ShowModal;
       END;
     8:BEGIN
         FrmPesqGrupo:=TFrmPesqGrupo.Create(Self);
-        FrmPesqGrupo.Show;
+        FrmPesqGrupo.ShowModal;
       END;
     9:BEGIN
         FrmPesqGrupoCli:=TFrmPesqGrupoCli.Create(Self);
-        FrmPesqGrupoCli.Show;
+        FrmPesqGrupoCli.ShowModal;
       END;
    10:BEGIN
         FrmPesqCaminhao:=TFrmPesqCaminhao.Create(Self);
         FrmPesqCaminhao.VORIGEM:=14;
-        FrmPesqCaminhao.Show;
+        FrmPesqCaminhao.ShowModal;
       END;
    11:BEGIN
         Cria_FrmPesqCid(VCid, NCid, NEst, NPais, NReg);
@@ -520,7 +525,7 @@ begin
       END;
    14:BEGIN
         frmConsultaUsuarios:=TfrmConsultaUsuarios.Create(Self);
-        frmConsultaUsuarios.Show;
+        frmConsultaUsuarios.ShowModal;
       END;
   end;
   
@@ -553,14 +558,11 @@ begin
     Add('  MATERIAL_EMBALAGEM.NM_PRODMATEEMBA, ');
     Add('  Sum(Nvl(PEDIDO_VENDA_ITEM.qn_embaitempedivend,0)) as Cx_Ped, ');
     Add('  Sum(Nvl(PEDIDO_VENDA_ITEM.qn_pesoitempedivend,0)) as Kg_Ped, ');
-    Add('  SUM(PEDIDO_VENDA_ITEM.qn_pesoitempedivend*PEDIDO_VENDA_ITEM.VL_UNITITEMPEDIVEND)/(CASE WHEN Sum(Nvl(PEDIDO_VENDA_ITEM.qn_pesoitempedivend,0))=0 THEN 1 ELSE Sum(Nvl(PEDIDO_VENDA_ITEM.qn_pesoitempedivend,0)) END) AS Vl_Unit, ');
+    Add('  SUM(PEDIDO_VENDA_ITEM.qn_pesoitempedivend*PEDIDO_VENDA_ITEM.VL_UNITITEMPEDIVEND)/(CASE WHEN Sum(Nvl(PEDIDO_VENDA_ITEM.qn_pesoitempedivend,0))=0 then 1 ELSE Sum(Nvl(PEDIDO_VENDA_ITEM.qn_pesoitempedivend,0)) END) AS Vl_Unit, ');
     Add('  SUM(PEDIDO_VENDA_ITEM.qn_pesoitempedivend*PEDIDO_VENDA_ITEM.VL_UNITITEMPEDIVEND) AS Vl_Total, ');
     Add('  Sum(Nvl(PEDIDO_VENDA_ITEM.qn_embaexpeitempedivend,0)) as Cx_Exped,     ');
     Add('  Sum(Nvl(PEDIDO_VENDA_ITEM.QN_PESOPADREXPEITEMPEDIVEND,0)) as Kg_Exped, ');
-    Add('  Sum(PEDIDO_VENDA_ITEM.Qn_Pesopadrexpeitempedivend*PEDIDO_VENDA_ITEM.VL_UNITITEMPEDIVEND) AS Vl_Faturado, ');
-    Add('  CASE WHEN Sum(PEDIDO_VENDA_ITEM.Qn_Pesopadrexpeitempedivend*PEDIDO_VENDA_ITEM.VL_UNITITEMPEDIVEND) <> 0 THEN ');
-    Add('   Sum(PEDIDO_VENDA_ITEM.Qn_Pesopadrexpeitempedivend*PEDIDO_VENDA_ITEM.VL_UNITITEMPEDIVEND)/Sum(Nvl(PEDIDO_VENDA_ITEM.QN_PESOPADREXPEITEMPEDIVEND,0)) ');
-    Add(' ELSE 0 END AS Vl_Unit_Exp ');
+    Add('  Sum(PEDIDO_VENDA_ITEM.Qn_Pesopadrexpeitempedivend*PEDIDO_VENDA_ITEM.VL_UNITITEMPEDIVEND) AS Vl_Faturado ');
     Add(' FROM                 ');
     Add('  PEDIDO_VENDA_ITEM,  ');
     Add('  PEDIDO_VENDA,       ');

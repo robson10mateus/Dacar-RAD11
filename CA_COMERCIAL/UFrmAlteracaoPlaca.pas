@@ -167,7 +167,8 @@ procedure TFrmAlteracaoPlaca.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmAlteracaoPlaca:=nil;
-  FrmPrincipal.VEN042.Enabled:= True;
+  FrmPrincipal.ACVEN042.Enabled:= True;
+//  FrmPrincipal.VEN042.Enabled:= True;
   Action:=caFree;
 end;
 

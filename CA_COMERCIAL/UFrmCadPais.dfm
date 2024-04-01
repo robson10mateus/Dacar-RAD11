@@ -1355,7 +1355,7 @@ object FrmCadPais: TFrmCadPais
     ParentFont = False
     TabOrder = 1
     ExplicitWidth = 664
-    ExplicitHeight = 296
+    ExplicitHeight = 346
     object TabCriterio: TTabSheet
       Caption = 'Criterios'
       OnShow = TabCriterioShow
@@ -1788,6 +1788,8 @@ object FrmCadPais: TFrmCadPais
         Align = alClient
         ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 656
+        ExplicitHeight = 316
         object Label14: TLabel
           Left = 24
           Top = 64

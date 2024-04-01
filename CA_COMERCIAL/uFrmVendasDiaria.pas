@@ -28,10 +28,6 @@ type
     memExpressao: TMemo;
     bt_PesqDTI: TBitBtn;
     BitBtn1: TBitBtn;
-    ToolBar1: TToolBar;
-    btnAtualizaDados: TSpeedButton;
-    btnRelVendaDiaria: TSpeedButton;
-    btnSair: TSpeedButton;
     grdVendaDiaria: TDBGrid;
     dtsVendaDiaria: TOraDataSource;
     qryVendaDiaria: TOraQuery;
@@ -47,11 +43,15 @@ type
     btnPesquisa: TBitBtn;
     qryVendaDiariaID_VENDEDOR: TFloatField;
     qryVendaDiariaID_MATEEMBA: TFloatField;
-    btnExcel: TSpeedButton;
     dlgSaveArquivo: TSaveDialog;
     qryVendaDiariaDATA_ENTREGA: TDateTimeField;
     qryVendaDiariaID_PRODMATEEMBA: TStringField;
     qryVendaDiariaGN_OBSEEXPEPEDIVEND: TStringField;
+    ToolBar1: TToolBar;
+    btnAtualizaDados: TSpeedButton;
+    btnRelVendaDiaria: TSpeedButton;
+    btnExcel: TSpeedButton;
+    btnSair: TSpeedButton;
     procedure FormShow(Sender: TObject);
     procedure btnLimparClick(Sender: TObject);
     procedure bt_PesqDTIClick(Sender: TObject);
@@ -327,7 +327,8 @@ procedure TfrmVendasDiaria.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   frmVendasDiaria:=nil;
-  FrmPrincipal.VEN056.Enabled:= True;
+//  FrmPrincipal.VEN056.Enabled:= True;
+  FrmPrincipal.ACVEN056.Enabled := True;
   Action:=caFree;
 end;
 
@@ -337,9 +338,9 @@ begin
   try
     qryVendaDiaria.Open;
 
+    dlgSaveArquivo.FileName := 'VENDA_DIARIA_' + ReplaceStr(edtDataIni.Text,'/', '_') + ReplaceStr(edtDataFim.Text,'/', '_') + '.csv';
     if dlgSaveArquivo.Execute then
     begin
-      dlgSaveArquivo.FileName := 'VENDA_DIARIA_' + ReplaceStr(edtDataIni.Text,'/', '_') + ReplaceStr(edtDataFim.Text,'/', '_') + '.csv';
       AssignFile(Arquivo, PChar(dlgSaveArquivo.FileName));
       Rewrite(Arquivo);
 

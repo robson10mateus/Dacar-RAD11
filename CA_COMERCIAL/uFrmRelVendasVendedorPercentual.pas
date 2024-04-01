@@ -156,7 +156,8 @@ procedure TfrmRelVendasVendedorPercentual.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   frmRelVendasVendedorPercentual:=Nil;
-  FrmPrincipal.VEN067.Enabled:= True;
+//  FrmPrincipal.VEN067.Enabled:= True;
+  FrmPrincipal.ACVEN067.Enabled:= True;
   Action:=caFree;
 end;
 

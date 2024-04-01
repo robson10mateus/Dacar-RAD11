@@ -496,8 +496,8 @@ object FrmOcorrencias: TFrmOcorrencias
   object PageControl1: TPageControl
     Left = 0
     Top = 45
-    Width = 1024
-    Height = 566
+    Width = 1028
+    Height = 567
     ActivePage = Tab_Detalhe
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -508,6 +508,8 @@ object FrmOcorrencias: TFrmOcorrencias
     Font.Style = []
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 1024
+    ExplicitHeight = 566
     object Tab_Criterio: TTabSheet
       Caption = ' Crit'#233'rio '
       Font.Charset = DEFAULT_CHARSET
@@ -1142,7 +1144,7 @@ object FrmOcorrencias: TFrmOcorrencias
   object pnlBotoes: TPanel
     Left = 0
     Top = 0
-    Width = 1024
+    Width = 1028
     Height = 45
     Align = alTop
     Font.Charset = DEFAULT_CHARSET
@@ -1153,6 +1155,7 @@ object FrmOcorrencias: TFrmOcorrencias
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 1024
     object SB_ANTERIOR: TSpeedButton
       Left = 5
       Top = 4

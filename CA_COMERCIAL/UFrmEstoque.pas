@@ -151,7 +151,8 @@ end;
 procedure TFrmEstoque.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   FrmEstoque:=nil;
-  FrmPrincipal.VEN074.Enabled:= True;
+//  FrmPrincipal.VEN074.Enabled:= True;
+  FrmPrincipal.ACVEN074.Enabled:= True;
   Action:=caFree;
 end;
 

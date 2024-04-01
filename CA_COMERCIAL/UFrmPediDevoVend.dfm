@@ -501,9 +501,9 @@ object FrmPediDevoVend: TFrmPediDevoVend
   object PageControl1: TPageControl
     Left = 0
     Top = 45
-    Width = 1397
-    Height = 713
-    ActivePage = TabCriterio
+    Width = 1401
+    Height = 714
+    ActivePage = TabDetalhe
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
@@ -513,6 +513,8 @@ object FrmPediDevoVend: TFrmPediDevoVend
     Font.Style = []
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 1397
+    ExplicitHeight = 713
     object TabCriterio: TTabSheet
       Caption = ' Crit'#233'rio '
       object Label6: TLabel
@@ -2007,12 +2009,12 @@ object FrmPediDevoVend: TFrmPediDevoVend
         Left = 636
         Top = 239
         Width = 110
-        Height = 20
+        Height = 23
         DataField = 'FL_STATPEDIDEVOVEND'
         DataSource = DS
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 12
+        Font.Height = 15
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
@@ -3175,7 +3177,7 @@ object FrmPediDevoVend: TFrmPediDevoVend
   object Panel6: TPanel
     Left = 0
     Top = 0
-    Width = 1397
+    Width = 1401
     Height = 45
     Align = alTop
     Font.Charset = DEFAULT_CHARSET
@@ -3187,6 +3189,7 @@ object FrmPediDevoVend: TFrmPediDevoVend
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 1397
     object SB_PRIMEIRO: TSpeedButton
       Left = 5
       Top = 5

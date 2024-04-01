@@ -319,7 +319,8 @@ procedure TFrmDesativaPesquisa.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmDesativaPesquisa:=nil;
-  FrmPrincipal.VEN035.Enabled:= True;
+//  FrmPrincipal.VEN035.Enabled:= True;
+  FrmPrincipal.ACVEN035.Enabled:= True;
   Action:=caFree;
 end;
 

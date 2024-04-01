@@ -24,11 +24,12 @@ object FrmEstoque: TFrmEstoque
   object Pfundo: TPanel
     Left = 0
     Top = 0
-    Width = 1309
+    Width = 1313
     Height = 60
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 1309
     object btnAtualizar: TSpeedButton
       Left = 141
       Top = 15
@@ -656,8 +657,8 @@ object FrmEstoque: TFrmEstoque
   object PageControl1: TPageControl
     Left = 0
     Top = 60
-    Width = 1309
-    Height = 584
+    Width = 1313
+    Height = 585
     ActivePage = tabEstoque
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -668,6 +669,8 @@ object FrmEstoque: TFrmEstoque
     Font.Style = []
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 1309
+    ExplicitHeight = 584
     object tabEstoque: TTabSheet
       Caption = 'Ajusta Estoque Inicial'
       object DBGrid1: TDBGrid

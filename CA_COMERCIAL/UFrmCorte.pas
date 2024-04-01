@@ -453,7 +453,8 @@ procedure TFrmCorte.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmCorte:=nil;
-  FrmPrincipal.VEN020.Enabled:= True;
+//  FrmPrincipal.VEN020.Enabled:= True;
+  FrmPrincipal.ACVEN020.Enabled:= True;
   Action:=caFree;
 end;
 

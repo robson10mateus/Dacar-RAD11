@@ -44,6 +44,8 @@ object FrmXmlEmail: TFrmXmlEmail
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 1056
+    ExplicitHeight = 657
     object PgTsEnviar: TTabSheet
       Caption = #160#160#160'Enviar Email'#160#160#160#160#160#160#160#160#160#160
       object PnTopo: TPanel
@@ -54,6 +56,7 @@ object FrmXmlEmail: TFrmXmlEmail
         Align = alTop
         ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 1048
         object ScrollBox5: TScrollBox
           Left = 480
           Top = 1
@@ -65,6 +68,7 @@ object FrmXmlEmail: TFrmXmlEmail
           AutoScroll = False
           BorderStyle = bsNone
           TabOrder = 0
+          ExplicitWidth = 567
           object Label14: TLabel
             Left = -2
             Top = 161
@@ -266,7 +270,7 @@ object FrmXmlEmail: TFrmXmlEmail
             Font.Style = [fsBold, fsItalic]
             ParentFont = False
             TabOrder = 8
-            ExplicitWidth = 575
+            ExplicitWidth = 567
           end
           object edtDe: TEdit
             Left = 0
@@ -765,8 +769,8 @@ object FrmXmlEmail: TFrmXmlEmail
         Align = alBottom
         ParentBackground = False
         TabOrder = 1
-        ExplicitTop = 560
-        ExplicitWidth = 1056
+        ExplicitTop = 558
+        ExplicitWidth = 1048
         object lblCodigo: TLabel
           Left = 544
           Top = 8
@@ -925,6 +929,8 @@ object FrmXmlEmail: TFrmXmlEmail
         AutoScroll = False
         BorderStyle = bsNone
         TabOrder = 3
+        ExplicitWidth = 1048
+        ExplicitHeight = 331
         object ScrollBox2: TScrollBox
           Left = 481
           Top = 0
@@ -935,6 +941,8 @@ object FrmXmlEmail: TFrmXmlEmail
           AutoScroll = False
           BorderStyle = bsNone
           TabOrder = 0
+          ExplicitWidth = 567
+          ExplicitHeight = 331
           object Panel2: TPanel
             Left = 0
             Top = 0
@@ -951,7 +959,7 @@ object FrmXmlEmail: TFrmXmlEmail
             ParentBackground = False
             ParentFont = False
             TabOrder = 0
-            ExplicitWidth = 575
+            ExplicitWidth = 567
           end
           object lbxAnexo: TListBox
             Left = 0
@@ -970,6 +978,8 @@ object FrmXmlEmail: TFrmXmlEmail
             ItemHeight = 15
             ParentFont = False
             TabOrder = 1
+            ExplicitWidth = 567
+            ExplicitHeight = 238
           end
           object PnlLogin: TPanel
             Left = 0
@@ -980,8 +990,8 @@ object FrmXmlEmail: TFrmXmlEmail
             BevelOuter = bvNone
             ParentBackground = False
             TabOrder = 2
-            ExplicitTop = 255
-            ExplicitWidth = 575
+            ExplicitTop = 253
+            ExplicitWidth = 567
             object Label6: TLabel
               Left = 7
               Top = 25
@@ -1054,7 +1064,7 @@ object FrmXmlEmail: TFrmXmlEmail
             object Panel4: TPanel
               Left = 0
               Top = 0
-              Width = 579
+              Width = 571
               Height = 15
               Align = alTop
               Caption = 'Digite o Nome de Usu'#225'rio e Senha do seu Email:'
@@ -1067,7 +1077,7 @@ object FrmXmlEmail: TFrmXmlEmail
               ParentBackground = False
               ParentFont = False
               TabOrder = 2
-              ExplicitWidth = 575
+              ExplicitWidth = 567
             end
           end
         end
@@ -1081,6 +1091,7 @@ object FrmXmlEmail: TFrmXmlEmail
           AutoScroll = False
           BorderStyle = bsNone
           TabOrder = 1
+          ExplicitHeight = 331
           object Panel3: TPanel
             Left = 0
             Top = 201
@@ -1097,7 +1108,7 @@ object FrmXmlEmail: TFrmXmlEmail
             ParentBackground = False
             ParentFont = False
             TabOrder = 0
-            ExplicitTop = 202
+            ExplicitTop = 200
           end
           object lbxEnviar: TListBox
             Left = 0
@@ -1116,6 +1127,7 @@ object FrmXmlEmail: TFrmXmlEmail
             ItemHeight = 15
             ParentFont = False
             TabOrder = 1
+            ExplicitHeight = 182
           end
           object Panel5: TPanel
             Left = 0
@@ -1150,6 +1162,7 @@ object FrmXmlEmail: TFrmXmlEmail
             ItemHeight = 15
             ParentFont = False
             TabOrder = 3
+            ExplicitTop = 218
           end
         end
         object ScrollBox4: TScrollBox
@@ -1163,6 +1176,7 @@ object FrmXmlEmail: TFrmXmlEmail
           AutoScroll = False
           BorderStyle = bsNone
           TabOrder = 2
+          ExplicitHeight = 331
           DesignSize = (
             126
             332)
@@ -1197,7 +1211,7 @@ object FrmXmlEmail: TFrmXmlEmail
             ParentFont = False
             TabOrder = 0
             OnClick = Anexar_um_xml
-            ExplicitTop = 225
+            ExplicitTop = 223
           end
           object btnEnviarArquivo: TBitBtn
             Left = 4
@@ -1261,7 +1275,7 @@ object FrmXmlEmail: TFrmXmlEmail
             ParentFont = False
             TabOrder = 2
             OnClick = Anexar_todos_xml
-            ExplicitTop = 251
+            ExplicitTop = 249
           end
           object btnNEnviarEste: TBitBtn
             Left = 4
@@ -1293,7 +1307,7 @@ object FrmXmlEmail: TFrmXmlEmail
             ParentFont = False
             TabOrder = 3
             OnClick = Nao_enviar_esse_xml
-            ExplicitTop = 277
+            ExplicitTop = 275
           end
           object btnNEnviarTodos: TBitBtn
             Left = 4
@@ -1325,7 +1339,7 @@ object FrmXmlEmail: TFrmXmlEmail
             ParentFont = False
             TabOrder = 4
             OnClick = Nao_enviar_todos_xml
-            ExplicitTop = 303
+            ExplicitTop = 301
           end
         end
       end

@@ -498,8 +498,8 @@ object FrmSelProdVend: TFrmSelProdVend
   object PageControl1: TPageControl
     Left = 0
     Top = 45
-    Width = 773
-    Height = 409
+    Width = 777
+    Height = 410
     ActivePage = TabCriterio
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -510,6 +510,8 @@ object FrmSelProdVend: TFrmSelProdVend
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 773
+    ExplicitHeight = 409
     object TabCriterio: TTabSheet
       Caption = 'Crit'#233'rio'
       object Label6: TLabel
@@ -851,8 +853,8 @@ object FrmSelProdVend: TFrmSelProdVend
   end
   object Panel1: TPanel
     Left = 0
-    Top = 454
-    Width = 773
+    Top = 455
+    Width = 777
     Height = 17
     Align = alBottom
     Font.Charset = DEFAULT_CHARSET
@@ -864,11 +866,13 @@ object FrmSelProdVend: TFrmSelProdVend
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
+    ExplicitTop = 454
+    ExplicitWidth = 773
   end
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 773
+    Width = 777
     Height = 45
     Align = alTop
     Font.Charset = DEFAULT_CHARSET
@@ -880,6 +884,7 @@ object FrmSelProdVend: TFrmSelProdVend
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
+    ExplicitWidth = 773
     object Sb_Sair: TSpeedButton
       Left = 5
       Top = 5

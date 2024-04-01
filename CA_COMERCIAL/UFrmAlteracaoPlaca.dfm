@@ -22,7 +22,7 @@ object FrmAlteracaoPlaca: TFrmAlteracaoPlaca
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 808
+    Width = 812
     Height = 41
     Anchors = []
     ButtonHeight = 37
@@ -36,6 +36,7 @@ object FrmAlteracaoPlaca: TFrmAlteracaoPlaca
     Font.Style = []
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 808
     object SB_ATIVA: TSpeedButton
       Left = 0
       Top = 0
@@ -396,8 +397,8 @@ object FrmAlteracaoPlaca: TFrmAlteracaoPlaca
   object PageControl1: TPageControl
     Left = 0
     Top = 41
-    Width = 808
-    Height = 388
+    Width = 812
+    Height = 389
     ActivePage = TabSheet2
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -408,6 +409,8 @@ object FrmAlteracaoPlaca: TFrmAlteracaoPlaca
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 808
+    ExplicitHeight = 388
     object TabSheet2: TTabSheet
       Caption = 'Detalhe'
       ImageIndex = 1

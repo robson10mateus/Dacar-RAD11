@@ -19,7 +19,7 @@ object FrmHistoricoPrecoTelevendas: TFrmHistoricoPrecoTelevendas
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 776
+    Width = 780
     Height = 41
     Anchors = []
     ButtonHeight = 36
@@ -33,6 +33,7 @@ object FrmHistoricoPrecoTelevendas: TFrmHistoricoPrecoTelevendas
     Font.Style = []
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 776
     object SB_PRIMEIRO: TSpeedButton
       Left = 0
       Top = 0
@@ -1973,8 +1974,8 @@ object FrmHistoricoPrecoTelevendas: TFrmHistoricoPrecoTelevendas
   object PageControl1: TPageControl
     Left = 0
     Top = 41
-    Width = 776
-    Height = 452
+    Width = 780
+    Height = 453
     ActivePage = TabCriterio
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -1984,6 +1985,8 @@ object FrmHistoricoPrecoTelevendas: TFrmHistoricoPrecoTelevendas
     Font.Style = []
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 776
+    ExplicitHeight = 452
     object TabCriterio: TTabSheet
       Caption = 'Criterios'
       object Lbl_Filtro: TLabel

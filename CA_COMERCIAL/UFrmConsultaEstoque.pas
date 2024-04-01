@@ -267,7 +267,8 @@ procedure TFrmConsultaEstoque.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmConsultaEstoque:=nil;
-  FrmPrincipal.VEN051.Enabled:= True;
+//  FrmPrincipal.VEN051.Enabled:= True;
+  FrmPrincipal.ACVEN051.Enabled:= True;
   Action:=caFree;
 end;
 

@@ -130,7 +130,8 @@ procedure TFrmSelRelConfVenda.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmSelRelConfVenda:=nil;
-  FrmPrincipal.VEN012.Enabled:= True;
+//  FrmPrincipal.VEN012.Enabled:= True;
+  FrmPrincipal.ACVEN012.Enabled := True;
   Action:=caFree;
 end;
 
@@ -440,9 +441,9 @@ begin
     Screen.Cursor := crSQLWait;
 
     try
+      dlgSaveArquivo.FileName := 'CONFERENCIA_VENDA_' + sTipoData + StringReplace(DTini.Text, '/', '.', [rfReplaceAll]) + '_' + StringReplace(DtFim.Text, '/', '.', [rfReplaceAll]) + '.csv';
       if dlgSaveArquivo.Execute then
       begin
-        dlgSaveArquivo.FileName := 'CONFERENCIA_VENDA_' + sTipoData + StringReplace(DTini.Text, '/', '.', [rfReplaceAll]) + '_' + StringReplace(DtFim.Text, '/', '.', [rfReplaceAll]) + '.csv';
         AssignFile(Arquivo, dlgSaveArquivo.FileName);
         Rewrite(Arquivo);
 

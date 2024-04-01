@@ -572,7 +572,8 @@ procedure TFrmCadRegCom.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmCadRegCom:=nil;
-  FrmPrincipal.VEN031.Enabled:= True;
+//  FrmPrincipal.VEN031.Enabled:= True;
+  FrmPrincipal.ACVEN031.Enabled:= True;
   Action:=caFree;
 end;
 

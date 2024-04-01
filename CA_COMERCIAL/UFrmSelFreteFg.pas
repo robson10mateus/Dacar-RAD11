@@ -85,7 +85,8 @@ procedure TFrmSelFreteFg.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmSelFreteFg:=nil;
-  FrmPrincipal.VEN011.Enabled:= True;
+//  FrmPrincipal.VEN011.Enabled:= True;
+  FrmPrincipal.ACVEN011.Enabled := True;
   Action := Cafree;
 end;
 

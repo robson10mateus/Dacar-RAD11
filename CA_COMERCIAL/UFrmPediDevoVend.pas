@@ -838,7 +838,8 @@ procedure TFrmPediDevoVend.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmPediDevoVend:=nil;
-  FrmPrincipal.VEN017.Enabled:= True;
+//  FrmPrincipal.VEN017.Enabled:= True;
+  FrmPrincipal.ACVEN072.Enabled:= True;
   Action:=caFree;
 end;
 

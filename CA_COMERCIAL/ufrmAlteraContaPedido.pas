@@ -159,7 +159,8 @@ procedure TfrmAlteraContaPedido.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   frmAlteraContaPedido:=Nil;
-  FrmPrincipal.VEN065.Enabled:= True;
+//  FrmPrincipal.VEN065.Enabled:= True;
+  FrmPrincipal.ACVEN065.Enabled:= True;
   Action:=caFree;
 end;
 

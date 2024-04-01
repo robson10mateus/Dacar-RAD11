@@ -88,7 +88,8 @@ begin
 //     Action := caFree;
 
   FrmParametrosIntegrado:=nil;
-  FrmPrincipal.VEN048.Enabled:= True;
+//  FrmPrincipal.VEN048.Enabled:= True;
+  FrmPrincipal.ACVEN048.Enabled := True;
   Action:=caFree;
 
 end;

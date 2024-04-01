@@ -192,7 +192,6 @@ Type
     ACVEN064: TAction;
     ACVEN066: TAction;
     ACVEN067: TAction;
-    ACVEN068: TAction;
     ACVEN075: TAction;
     SplitSubMenuArquivo: TSplitView;
     SplitSubMenuManutencao: TSplitView;
@@ -363,6 +362,7 @@ Type
     BtnVoltarTransporte: TSpeedButton;
     BtnVoltarManutencao: TSpeedButton;
     BtnVoltarLogistica: TSpeedButton;
+    ACVEN068: TAction;
     procedure Trataerros(Sender: TObject; E: Exception);
     procedure FormCreate(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
@@ -494,88 +494,8 @@ Type
     procedure ACManutencaoUpdate(Sender: TObject);
     procedure ACLogisticaUpdate(Sender: TObject);
     procedure ACAjudaUpdate(Sender: TObject);
-    procedure ACVEN004Update(Sender: TObject);
-    procedure ACVEN005Update(Sender: TObject);
-    procedure ACVEN006Update(Sender: TObject);
-    procedure ACVEN007Update(Sender: TObject);
-    procedure ACVEN008Update(Sender: TObject);
-    procedure ACVEN009Update(Sender: TObject);
-    procedure ACVEN010Update(Sender: TObject);
-    procedure ACVEN011Update(Sender: TObject);
-    procedure ACVEN012Update(Sender: TObject);
-    procedure ACVEN013Update(Sender: TObject);
-    procedure ACVEN014Update(Sender: TObject);
-    procedure ACVEN018Update(Sender: TObject);
-    procedure ACVEN019Update(Sender: TObject);
     procedure ScrollBox4MouseWheel(Sender: TObject; Shift: TShiftState;
       WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
-    procedure ACVEN020Update(Sender: TObject);
-    procedure ACVEN021Update(Sender: TObject);
-    procedure ACVEN022Update(Sender: TObject);
-    procedure ACVEN023Update(Sender: TObject);
-    procedure ACVEN024Update(Sender: TObject);
-    procedure ACVEN025Update(Sender: TObject);
-    procedure ACVEN026Update(Sender: TObject);
-    procedure ACVEN027Update(Sender: TObject);
-    procedure ACVEN028Update(Sender: TObject);
-    procedure ACVEN031Update(Sender: TObject);
-    procedure ACVEN032Update(Sender: TObject);
-    procedure ACVEN034Update(Sender: TObject);
-    procedure ACVEN035Update(Sender: TObject);
-    procedure ACVEN036Update(Sender: TObject);
-    procedure ACVEN037Update(Sender: TObject);
-    procedure ACVEN038Update(Sender: TObject);
-    procedure ACVEN039Update(Sender: TObject);
-    procedure ACVEN040Update(Sender: TObject);
-    procedure ACVEN041Update(Sender: TObject);
-    procedure ACVEN042Update(Sender: TObject);
-    procedure ACVEN043Update(Sender: TObject);
-    procedure ACVEN044Update(Sender: TObject);
-    procedure ACVEN045Update(Sender: TObject);
-    procedure ACVEN046Update(Sender: TObject);
-    procedure ACVEN047Update(Sender: TObject);
-    procedure ACVEN048Update(Sender: TObject);
-    procedure ACVEN049Update(Sender: TObject);
-    procedure ACVEN050Update(Sender: TObject);
-    procedure ACVEN051Update(Sender: TObject);
-    procedure ACVEN052Update(Sender: TObject);
-    procedure ACVEN053Update(Sender: TObject);
-    procedure ACVEN055Update(Sender: TObject);
-    procedure ACVEN056Update(Sender: TObject);
-    procedure ACVEN057Update(Sender: TObject);
-    procedure ACVEN058Update(Sender: TObject);
-    procedure ACVEN059Update(Sender: TObject);
-    procedure ACVEN061Update(Sender: TObject);
-    procedure ACVEN062Update(Sender: TObject);
-    procedure ACVEN063Update(Sender: TObject);
-    procedure ACVEN064Update(Sender: TObject);
-    procedure ACVEN065Update(Sender: TObject);
-    procedure ACVEN066Update(Sender: TObject);
-    procedure ACVEN067Update(Sender: TObject);
-    procedure ACVEN071Update(Sender: TObject);
-    procedure ACVEN072Update(Sender: TObject);
-    procedure ACVEN073Update(Sender: TObject);
-    procedure ACVEN074Update(Sender: TObject);
-    procedure ACVEN075Update(Sender: TObject);
-    procedure ACCadRegLogUpdate(Sender: TObject);
-    procedure ACCadSubRegLogUpdate(Sender: TObject);
-    procedure ACCadTipoLogradouroUpdate(Sender: TObject);
-    procedure ACCadRegSubRegLogUpdate(Sender: TObject);
-    procedure ACCadBairrosUpdate(Sender: TObject);
-    procedure ACCadCidadesUpdate(Sender: TObject);
-    procedure ACCadEstadosUpdate(Sender: TObject);
-    procedure ACCadPaisesUpdate(Sender: TObject);
-    procedure ACCadRegGeoUpdate(Sender: TObject);
-    procedure ACCadRegInterUpdate(Sender: TObject);
-    procedure ACCadTipoTransporteUpdate(Sender: TObject);
-    procedure ACCadTipoVeiculoUpdate(Sender: TObject);
-    procedure ACCadTipoTransportadoresUpdate(Sender: TObject);
-    procedure ACCadRegiaoUpdate(Sender: TObject);
-    procedure ACVEN015aUpdate(Sender: TObject);
-    procedure ACVEN015bUpdate(Sender: TObject);
-    procedure ACLancamentosUpdate(Sender: TObject);
-    procedure ACRelSaldoUpdate(Sender: TObject);
-    procedure ACControleCaixasUpdate(Sender: TObject);
     procedure ScrollBox6MouseWheel(Sender: TObject; Shift: TShiftState;
       WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
     procedure ScrollBox5MouseWheel(Sender: TObject; Shift: TShiftState;
@@ -891,12 +811,14 @@ end;
 procedure TFrmPrincipal.VEN004Click(Sender: TObject);
 begin
   try
-    VEN004.Enabled:= False;
+//    VEN004.Enabled:= False;
+    ACVEN004.Enabled:= False;
     FrmPedVenda:=TFrmPedVenda.Create(Self);
     FrmPedVenda.Show;
     VerificaFormAberto;
   except;
-    VEN004.Enabled:= True;
+//    VEN004.Enabled:= True;
+    ACVEN004.Enabled:= True;
     FrmPedVenda.Free;
   end;
 end;
@@ -951,12 +873,14 @@ procedure TFrmPrincipal.VEN005Click(
   Sender: TObject);
 begin
   Try
-    VEN005.Enabled:= False;
+//    VEN005.Enabled:= False;
+    ACVEN005.Enabled := False;
     FrmImpDocPed:=TfrmImpDocPed.Create(Self);
     FrmImpDocPed.Show;
     VerificaFormAberto;
   except;
-    VEN005.Enabled:= True;
+//    VEN005.Enabled:= True;
+    ACVEN005.Enabled := True;
     FrmImpDocPed.Free;
   end;
 end;
@@ -965,12 +889,14 @@ procedure TFrmPrincipal.VEN007Click(
   Sender: TObject);
 begin
   Try
-    VEN007.Enabled:= False;
+//    VEN007.Enabled:= False;
+    ACVEN007.Enabled := False;
     FrmFeCarManu:=TfrmFeCarManu.Create(Self);
     FrmFeCarManu.Show;
     VerificaFormAberto;
   Except;
-    VEN007.Enabled:= True;
+//    VEN007.Enabled:= True;
+    ACVEN007.Enabled := True;
     FrmFeCarManu.Free;
   End;
 end;
@@ -1025,12 +951,14 @@ try
         Exit;
       end;
    END;
-   VEN006.Enabled:= False;
+//   VEN006.Enabled:= False;
+   ACVEN006.Enabled:= False;
    FrmMontaCarga:=TFrmMontaCarga.Create(Self);
    FrmMontaCarga.Show;
    VerificaFormAberto;
 except;
-   VEN006.Enabled:= True;
+//   VEN006.Enabled:= True;
+   ACVEN006.Enabled:= True;
    FrmMontaCarga.Free;
 end;
 
@@ -1041,7 +969,7 @@ begin
  Try
    VEN008.Enabled:= False;
    FrmSelRelDoa:=TFrmSelRelDoa.Create(Self);
-   FrmSelRelDoa.ShowModal;
+   FrmSelRelDoa.Show;
    VerificaFormAberto;
  Except;
    VEN008.Enabled:= True;
@@ -1053,12 +981,14 @@ end;
 procedure TFrmPrincipal.VEN009Click(Sender: TObject);
 begin
   try
-    VEN009.Enabled:= False;
+//    VEN009.Enabled:= False;
+    ACVEN009.Enabled:= False;
     FrmLiberaCarga:=TFrmLiberaCarga.Create(Self);
     FrmLiberaCarga.Show;
     VerificaFormAberto;
   except;
-    VEN009.Enabled:= True;
+//    VEN009.Enabled:= True;
+    ACVEN009.Enabled:= True;
     FrmLiberaCarga.Free;
   end;
 end;
@@ -1066,12 +996,14 @@ end;
 procedure TFrmPrincipal.VEN010Click(Sender: TObject);
 begin
   try
-    VEN010.Enabled:= False;
+//    VEN010.Enabled:= False;
+    ACVEN010.Enabled:= False;
     FrmManuComis:=TFrmManuComis.Create(Self);
     FrmManuComis.Show;
     VerificaFormAberto;
   except;
-    VEN010.Enabled:= True;
+//    VEN010.Enabled:= True;
+    ACVEN010.Enabled:= true;
     FrmManuComis.Free;
   end;
 end;
@@ -1080,12 +1012,14 @@ procedure TFrmPrincipal.VEN011Click(
   Sender: TObject);
 begin
   Try
-    VEN011.Enabled:= False;
+//    VEN011.Enabled:= False;
+    ACVEN011.Enabled := False;
     FrmSelFreteFg:=TFrmSelFreteFg.Create(Self);
     FrmSelFreteFg.Show;
     VerificaFormAberto;
   Except;
-    VEN011.Enabled:= True;
+//    VEN011.Enabled:= True;
+    ACVEN011.Enabled := True;
     FrmSelFreteFg.Free;
   End;
 end;
@@ -1093,12 +1027,14 @@ end;
 procedure TFrmPrincipal.VEN012Click(Sender: TObject);
 begin
   Try
-    VEN012.Enabled:= False;
+//    VEN012.Enabled:= False;
+    ACVEN012.Enabled := False;
     FrmSelRelConfVenda:=TFrmSelRelConfVenda.Create(Self);
     FrmSelRelConfVenda.Show;
     VerificaFormAberto;
   Except;
-    VEN012.Enabled:= True;
+//    VEN012.Enabled:= True;
+    ACVEN012.Enabled := True;
     FrmSelRelConfVenda.Free;
   End;
 end;
@@ -1106,12 +1042,14 @@ end;
 procedure TFrmPrincipal.VEN013Click(Sender: TObject);
 begin
   Try
-    VEN013.Enabled:= False;
+//    VEN013.Enabled:= False;
+    ACVEN013.Enabled:= False;
     FrmSelVenProd:=TFrmSelVenProd.Create(Self);
     FrmSelVenProd.Show;
     VerificaFormAberto;
   Except;
-    VEN013.Enabled:= True;
+//    VEN013.Enabled:= True;
+    ACVEN013.Enabled:= True;
     FrmSelVenProd.Free;
   End;
 end;
@@ -1119,12 +1057,14 @@ end;
 procedure TFrmPrincipal.VEN014Click(Sender: TObject);
 begin
   try
-    VEN014.Enabled:= False;
+//    VEN014.Enabled:= False;
+    ACVEN014.Enabled:= False;
     FrmSelSintCarga:=TFrmSelSintCarga.Create(Self);
     FrmSelSintCarga.Show;
     VerificaFormAberto;
   except;
-    VEN014.Enabled:= True;
+//    VEN014.Enabled:= True;
+    ACVEN014.Enabled:= True;
     FrmSelSintCarga.Free;
   end;
 end;
@@ -1191,12 +1131,14 @@ end;
 procedure TFrmPrincipal.VEN072Click(Sender: TObject);
 begin
   try
-    VEN017.Enabled:= False;
+//    VEN017.Enabled:= False;
+    ACVEN072.Enabled:= False;
     FrmPediDevoVend:=TFrmPediDevoVend.Create(Self);
     FrmPediDevoVend.Show;
     VerificaFormAberto
   except;
-    VEN017.Enabled:= True;
+//    VEN017.Enabled:= True;
+    ACVEN072.Enabled:= True;
     FrmPediDevoVend.Free;
   end;
 end;
@@ -1204,12 +1146,14 @@ end;
 procedure TFrmPrincipal.VEN018Click(Sender: TObject);
 begin
   try
-    VEN018.Enabled:= False;
+//    VEN018.Enabled:= False;
+    ACVEN018.Enabled:= False;
     FrmAtualVersao:=TFrmAtualVersao.Create(Self);
     FrmAtualVersao.Show;
     VerificaFormAberto;
   except;
-    VEN018.Enabled:= True;
+//    VEN018.Enabled:= True;
+    ACVEN018.Enabled:= True;
     FrmAtualVersao.Free;
   end;
 end;
@@ -1228,146 +1172,6 @@ end;
 procedure TFrmPrincipal.ACArquivoUpdate(Sender: TObject);
 begin
   AtualizaImagem('SplitSubMenuArquivo');
-end;
-
-procedure TFrmPrincipal.ACCadBairrosUpdate(Sender: TObject);
-begin
-  BtnCadBairros.Enabled := not Assigned(FrmCadBairro);
-end;
-
-procedure TFrmPrincipal.ACCadCidadesUpdate(Sender: TObject);
-begin
-  BtnCadCidades.Enabled := not Assigned(FrmCadCidade);
-end;
-
-procedure TFrmPrincipal.ACCadEstadosUpdate(Sender: TObject);
-begin
-  BtnCadEstados.Enabled := not Assigned(FrmCadEstado);
-end;
-
-procedure TFrmPrincipal.ACCadPaisesUpdate(Sender: TObject);
-begin
-  BtnCadPaises.Enabled := not Assigned(FrmCadPais);
-end;
-
-procedure TFrmPrincipal.ACCadRegGeoUpdate(Sender: TObject);
-begin
-  BtnCadRegGeo.Enabled := not Assigned(FrmCadRegGeog);
-end;
-
-procedure TFrmPrincipal.ACCadRegiaoUpdate(Sender: TObject);
-begin
-  BtnCadRegiao.Enabled := not Assigned(FrmCadRegiao);
-end;
-
-procedure TFrmPrincipal.ACCadRegInterUpdate(Sender: TObject);
-begin
-  BtnCadRegInter.Enabled := not Assigned(FrmCadRegInt);
-end;
-
-procedure TFrmPrincipal.ACCadRegLogUpdate(Sender: TObject);
-begin
-  BtnCadRegLog.Enabled := not Assigned(FrmCadRegLog);
-end;
-
-procedure TFrmPrincipal.ACCadRegSubRegLogUpdate(Sender: TObject);
-begin
-  BtnCadRegSubRegLog.Enabled := not Assigned(FrmCadRegeSubLog);
-end;
-
-procedure TFrmPrincipal.ACCadSubRegLogUpdate(Sender: TObject);
-begin
-  BtnCadSubRegLog.Enabled := not Assigned(FrmCadSubLog);
-end;
-
-procedure TFrmPrincipal.ACCadTipoLogradouroUpdate(Sender: TObject);
-begin
-  BtnCadTipoLogradouro.Enabled := not Assigned(FrmCadTpLogr);
-end;
-
-procedure TFrmPrincipal.ACCadTipoTransportadoresUpdate(Sender: TObject);
-begin
-  BtnCadTipoTransportadores.Enabled := not Assigned(FrmCadTransport);
-end;
-
-procedure TFrmPrincipal.ACCadTipoTransporteUpdate(Sender: TObject);
-begin
-  BtnCadTipoTransporte.Enabled := not Assigned(FrmCadTransTipo);
-end;
-
-procedure TFrmPrincipal.ACCadTipoVeiculoUpdate(Sender: TObject);
-begin
-  BtnCadTipoVeiculo.Enabled := not Assigned(FrmCadTipoVeic);
-end;
-
-procedure TFrmPrincipal.ACControleCaixasUpdate(Sender: TObject);
-begin
-  BtnControleCaixas.Enabled := not Assigned(FrmEntradaSaidaCaixas);
-end;
-
-procedure TFrmPrincipal.ACVEN004Update(Sender: TObject);
-begin
-  BtnVEN004.Enabled := not Assigned(FrmPedVenda);
-end;
-
-procedure TFrmPrincipal.ACVEN005Update(Sender: TObject);
-begin
-  BtnVEN005.Enabled := not Assigned(FrmImpDocPed);
-end;
-
-procedure TFrmPrincipal.ACVEN006Update(Sender: TObject);
-begin
-  BtnVEN006.Enabled := not Assigned(FrmMontaCarga);
-end;
-
-procedure TFrmPrincipal.ACVEN007Update(Sender: TObject);
-begin
-  BtnVEN007.Enabled := not Assigned(FrmFeCarManu);
-end;
-
-procedure TFrmPrincipal.ACVEN008Update(Sender: TObject);
-begin
-  BtnVEN008.Enabled := not Assigned(FrmSelRelDoa);
-end;
-
-procedure TFrmPrincipal.ACVEN009Update(Sender: TObject);
-begin
-  BtnVEN009.Enabled := not Assigned(FrmLiberaCarga);
-end;
-
-procedure TFrmPrincipal.ACVEN010Update(Sender: TObject);
-begin
-  BtnVEN010.Enabled := not Assigned(FrmManuComis);
-end;
-
-procedure TFrmPrincipal.ACVEN011Update(Sender: TObject);
-begin
-  BtnVEN011.Enabled := not Assigned(FrmSelFreteFg);
-end;
-
-procedure TFrmPrincipal.ACVEN012Update(Sender: TObject);
-begin
-  BtnVEN012.Enabled := not Assigned(FrmSelRelConfVenda);
-end;
-
-procedure TFrmPrincipal.ACVEN013Update(Sender: TObject);
-begin
-  BtnVEN013.Enabled := not Assigned(FrmSelVenProd);
-end;
-
-procedure TFrmPrincipal.ACVEN014Update(Sender: TObject);
-begin
-  BtnVEN014.Enabled := not Assigned(FrmSelSintCarga);
-end;
-
-procedure TFrmPrincipal.ACVEN015aUpdate(Sender: TObject);
-begin
-  BtnVEN015a.Enabled := not Assigned(frmVendasVendedorCliente);
-end;
-
-procedure TFrmPrincipal.ACVEN015bUpdate(Sender: TObject);
-begin
-  BtnVEN015b.Enabled := not Assigned(FrmSelProdVend);
 end;
 
 procedure TFrmPrincipal.ACVEN015Execute(Sender: TObject);
@@ -1420,62 +1224,6 @@ begin
 
   if SplitSubMenuVendas.Opened = True then
     SplitSubMenuVendas.Opened := False;
-end;
-
-
-procedure TFrmPrincipal.ACVEN018Update(Sender: TObject);
-begin
-  BtnVEN018.Enabled := not Assigned(FrmAtualVersao);
-end;
-
-procedure TFrmPrincipal.ACVEN019Update(Sender: TObject);
-begin
-  BtnVEN019.Enabled := not Assigned(FrmParamComercial);
-end;
-
-procedure TFrmPrincipal.ACVEN020Update(Sender: TObject);
-begin
-  BtnVEN020.Enabled := not Assigned(FrmCorte);
-end;
-
-procedure TFrmPrincipal.ACVEN021Update(Sender: TObject);
-begin
-  BtnVEN021.Enabled := not Assigned(FrmImpNFRacao);
-end;
-
-procedure TFrmPrincipal.ACVEN022Update(Sender: TObject);
-begin
-  BtnVEN022.Enabled := not Assigned(FrmParametro);
-end;
-
-procedure TFrmPrincipal.ACVEN023Update(Sender: TObject);
-begin
-  BtnVEN023.Enabled := not Assigned(FrmPedagio);
-end;
-
-procedure TFrmPrincipal.ACVEN024Update(Sender: TObject);
-begin
-  BtnVEN024.Enabled := not Assigned(FrmSubRegiao);
-end;
-
-procedure TFrmPrincipal.ACVEN025Update(Sender: TObject);
-begin
-  BtnVEN025.Enabled := not Assigned(FrmFreteFixo);
-end;
-
-procedure TFrmPrincipal.ACVEN026Update(Sender: TObject);
-begin
-  BtnVEN026.Enabled := not Assigned(FrmSelPedagio);
-end;
-
-procedure TFrmPrincipal.ACVEN027Update(Sender: TObject);
-begin
-  BtnVEN027.Enabled := not Assigned(FrmClientes);
-end;
-
-procedure TFrmPrincipal.ACVEN028Update(Sender: TObject);
-begin
-  BtnVEN028.Enabled := not Assigned(FrmTabPreco);
 end;
 
 procedure TFrmPrincipal.ACVEN029Execute(Sender: TObject);
@@ -1531,16 +1279,6 @@ begin
     SplitSubMenuVendas.Opened := False;
 end;
 
-procedure TFrmPrincipal.ACVEN031Update(Sender: TObject);
-begin
-  BtnVEN031.Enabled := not Assigned(FrmCadRegCom);
-end;
-
-procedure TFrmPrincipal.ACVEN032Update(Sender: TObject);
-begin
-  BtnVEN032.Enabled := not Assigned(FrmCadForPag);
-end;
-
 procedure TFrmPrincipal.ACVEN033Execute(Sender: TObject);
 begin
   if SplitSubMenuCadTransporte.Opened = True then
@@ -1567,106 +1305,6 @@ begin
     SplitSubMenuVendas.Opened := False;
 end;
 
-procedure TFrmPrincipal.ACVEN034Update(Sender: TObject);
-begin
-  BtnVEN034.Enabled := not Assigned(FrmSelFreteDevo);
-end;
-
-procedure TFrmPrincipal.ACVEN035Update(Sender: TObject);
-begin
-  BtnVEN035.Enabled := not Assigned(FrmDesativaPesquisa);
-end;
-
-procedure TFrmPrincipal.ACVEN036Update(Sender: TObject);
-begin
-  BtnVEN036.Enabled := not Assigned(FrmXmlEmail);
-end;
-
-procedure TFrmPrincipal.ACVEN037Update(Sender: TObject);
-begin
-  BtnVEN037.Enabled := not Assigned(FrmPedVendaCorte);
-end;
-
-procedure TFrmPrincipal.ACVEN038Update(Sender: TObject);
-begin
-  BtnVEN038.Enabled := not Assigned(FrmCarregaNFe);
-end;
-
-procedure TFrmPrincipal.ACVEN039Update(Sender: TObject);
-begin
-  BtnVEN039.Enabled := not Assigned(FrmHistoricoPrecoTelevendas);
-end;
-
-procedure TFrmPrincipal.ACVEN040Update(Sender: TObject);
-begin
-  BtnVEN040.Enabled := not Assigned(FrmCadVendedor);
-end;
-
-procedure TFrmPrincipal.ACVEN041Update(Sender: TObject);
-begin
-  BtnVEN041.Enabled := not Assigned(FrmTranspChaveNFe);
-end;
-
-procedure TFrmPrincipal.ACVEN042Update(Sender: TObject);
-begin
-  BtnVEN042.Enabled := not Assigned(FrmAlteracaoPlaca);
-end;
-
-procedure TFrmPrincipal.ACVEN043Update(Sender: TObject);
-begin
-  BtnVEN043.Enabled := not Assigned(FrmLoteIntegrado);
-end;
-
-procedure TFrmPrincipal.ACVEN044Update(Sender: TObject);
-begin
-  BtnVEN044.Enabled := not Assigned(FrmProgRacao);
-end;
-
-procedure TFrmPrincipal.ACVEN045Update(Sender: TObject);
-begin
-  BtnVEN045.Enabled := not Assigned(FrmResultGranjeiro);
-end;
-
-procedure TFrmPrincipal.ACVEN046Update(Sender: TObject);
-begin
-  BtnVEN046.Enabled := not Assigned(FrmConsApanha);
-end;
-
-procedure TFrmPrincipal.ACVEN047Update(Sender: TObject);
-begin
-  BtnVEN047.Enabled := not Assigned(FrmConsVendaFrangoAbate);
-end;
-
-procedure TFrmPrincipal.ACVEN048Update(Sender: TObject);
-begin
-  BtnVEN048.Enabled := not Assigned(FrmParametrosIntegrado);
-end;
-
-procedure TFrmPrincipal.ACVEN049Update(Sender: TObject);
-begin
-  BtnVEN049.Enabled := not Assigned(FrmConsRemessaRacao);
-end;
-
-procedure TFrmPrincipal.ACVEN050Update(Sender: TObject);
-begin
-  BtnVEN050.Enabled := not Assigned(FrmVendedorCliente);
-end;
-
-procedure TFrmPrincipal.ACVEN051Update(Sender: TObject);
-begin
-  BtnVEN051.Enabled := not Assigned(FrmConsultaEstoque);
-end;
-
-procedure TFrmPrincipal.ACVEN052Update(Sender: TObject);
-begin
-  BtnVEN052.Enabled := not Assigned(FrmConferenciaCarga);
-end;
-
-procedure TFrmPrincipal.ACVEN053Update(Sender: TObject);
-begin
-  BtnVEN053.Enabled := not Assigned(FrmDiferencaPreco);
-end;
-
 procedure TFrmPrincipal.ACVEN054Execute(Sender: TObject);
 begin
   if SplitSubMenuControleCaixas.Opened = True then
@@ -1691,92 +1329,6 @@ begin
 
   if SplitSubMenuVendas.Opened = True then
     SplitSubMenuVendas.Opened := False;
-end;
-
-procedure TFrmPrincipal.ACVEN055Update(Sender: TObject);
-begin
-  BtnVEN055.Enabled := not Assigned(FrmSaldoCaixas);
-end;
-
-procedure TFrmPrincipal.ACVEN056Update(Sender: TObject);
-begin
-  BtnVEN056.Enabled := not Assigned(frmVendasDiaria);
-end;
-
-procedure TFrmPrincipal.ACVEN057Update(Sender: TObject);
-begin
-  BtnVEN057.Enabled := not Assigned(frmLanctoPesoBalancaoCarga);
-end;
-
-procedure TFrmPrincipal.ACVEN058Update(Sender: TObject);
-begin
-  BtnVEN058.Enabled := not Assigned(FrmCorteProdutos);
-end;
-
-procedure TFrmPrincipal.ACVEN059Update(Sender: TObject);
-begin
-  BtnVEN059.Enabled := not Assigned(FrmOcorrencias);
-end;
-
-procedure TFrmPrincipal.ACVEN061Update(Sender: TObject);
-begin
-  BtnVEN061.Enabled := not Assigned(FrmSelQuebr);
-end;
-
-procedure TFrmPrincipal.ACVEN062Update(Sender: TObject);
-begin
-  BtnVEN062.Enabled := not Assigned(FrmControleEntregaCargas);
-end;
-
-procedure TFrmPrincipal.ACVEN063Update(Sender: TObject);
-begin
-  BtnVEN063.Enabled := not Assigned(frmDocumentacaoNFE);
-end;
-
-procedure TFrmPrincipal.ACVEN064Update(Sender: TObject);
-begin
-  BtnVEN064.Enabled := not Assigned(frmPedidosPosHorario);
-end;
-
-procedure TFrmPrincipal.ACVEN065Update(Sender: TObject);
-begin
-  BtnVEN065.Enabled := not Assigned(frmAlteraContaPedido);
-end;
-
-procedure TFrmPrincipal.ACVEN066Update(Sender: TObject);
-begin
-  BtnVEN066.Enabled := not Assigned(frmPedidosAbaixoTabela);
-end;
-
-procedure TFrmPrincipal.ACVEN067Update(Sender: TObject);
-begin
-  BtnVEN067.Enabled := not Assigned(FrmRelVendasVendedorPercentual);
-end;
-
-
-procedure TFrmPrincipal.ACVEN071Update(Sender: TObject);
-begin
-  BtnVEN071.Enabled := not Assigned(FrmVenProd);
-end;
-
-procedure TFrmPrincipal.ACVEN072Update(Sender: TObject);
-begin
-  BtnVEN072.Enabled := not Assigned(FrmPediDevoVend);
-end;
-
-procedure TFrmPrincipal.ACVEN073Update(Sender: TObject);
-begin
-  BtnVEN073.Enabled := not Assigned(frmReprogramarDevolucao);
-end;
-
-procedure TFrmPrincipal.ACVEN074Update(Sender: TObject);
-begin
-  BtnVEN074.Enabled := not Assigned(frmEstoque);
-end;
-
-procedure TFrmPrincipal.ACVEN075Update(Sender: TObject);
-begin
-  BtnVEN075.Enabled := not Assigned(FrmRelVendaCliente);
 end;
 
 procedure TFrmPrincipal.ACVendasExecute(Sender: TObject);
@@ -1888,11 +1440,6 @@ begin
   AtualizaImagem('SplitMenuPrincipal')
 end;
 
-procedure TFrmPrincipal.ACRelSaldoUpdate(Sender: TObject);
-begin
-  BtnRelSaldo.Enabled := not Assigned(FrmSaldoCaixas);
-end;
-
 procedure TFrmPrincipal.ACManutencaoExecute(Sender: TObject);
 begin
   AtualizaMenuLateral('SplitSubMenuManutencao');
@@ -1901,11 +1448,6 @@ end;
 procedure TFrmPrincipal.ACManutencaoUpdate(Sender: TObject);
 begin
   AtualizaImagem('SplitSubMenuManutencao');
-end;
-
-procedure TFrmPrincipal.ACLancamentosUpdate(Sender: TObject);
-begin
-  BtnLancamentos.Enabled := not Assigned(FrmControleCaixas);
 end;
 
 procedure TFrmPrincipal.ACLogisticaExecute(Sender: TObject);
@@ -2279,12 +1821,14 @@ end;
 procedure TFrmPrincipal.VEN019Click(Sender: TObject);
 begin
   Try
-    VEN019.Enabled:= False;
+//    VEN019.Enabled:= False;
+    ACVEN019.Enabled:= False;
     FrmParamComercial:=TFrmParamComercial.Create(Self);
     FrmParamComercial.Show;
     VerificaFormAberto;
   Except;
-    VEN019.Enabled:= True;
+//    VEN019.Enabled:= True;
+    ACVEN019.Enabled:= True;
     FrmParamComercial.Free;
   End;
 end;
@@ -2292,12 +1836,14 @@ end;
 procedure TFrmPrincipal.VEN020Click(Sender: TObject);
 begin
  try
-   VEN020.Enabled:= False;
+//   VEN020.Enabled:= False;
+   ACVEN020.Enabled:= False;
    FrmCorte:=TFrmCorte.Create(Self);
    FrmCorte.Show;
    VerificaFormAberto;
  except;
-   VEN020.Enabled:= True;
+//   VEN020.Enabled:= True;
+   ACVEN020.Enabled:= True;
    FrmCorte.Free;
  end;
 
@@ -2306,12 +1852,14 @@ end;
 procedure TFrmPrincipal.VEN021Click(Sender: TObject);
 begin
   try
-    VEN021.Enabled:= False;
+//    VEN021.Enabled:= False;
+    ACVEN021.Enabled:= False;
     FrmImpNFRacao:=TFrmImpNFRacao.Create(Self);
     FrmImpNFRacao.Show;
     VerificaFormAberto;
   except;
-    VEN021.Enabled:= True;
+//    VEN021.Enabled:= True;
+    ACVEN021.Enabled:= True;
     FrmImpNFRacao.Free;
   end;
 end;
@@ -2319,12 +1867,14 @@ end;
 procedure TFrmPrincipal.VEN022Click(Sender: TObject);
 begin
   try
-    VEN022.Enabled:= False;
+//    VEN022.Enabled:= False;
+    ACVEN022.Enabled:= False;
     FrmParametro:=TFrmParametro.Create(Self);
     FrmParametro.Show;
     VerificaFormAberto;
   except
-    VEN022.Enabled:= True;
+//    VEN022.Enabled:= True;
+    ACVEN022.Enabled:= True;
     FrmParametro.Free;
   end;
 end;
@@ -2332,12 +1882,14 @@ end;
 procedure TFrmPrincipal.VEN023Click(Sender: TObject);
 begin
   Try
-    VEN023.Enabled:= False;
+//    VEN023.Enabled:= False;
+    ACVEN023.Enabled:= False;
     FrmPedagio:=TFrmPedagio.Create(Self);
     FrmPedagio.Show;
     VerificaFormAberto;
   Except;
-    VEN023.Enabled:= True;
+//    VEN023.Enabled:= True;
+    ACVEN023.Enabled:= True;
     FrmPedagio.Free;
   End;
 end;
@@ -2345,12 +1897,14 @@ end;
 procedure TFrmPrincipal.VEN024Click(Sender: TObject);
 begin
   Try
-    VEN024.Enabled:= False;
+//    VEN024.Enabled:= False;
+    ACVEN024.Enabled:= False;
     FrmSubRegiao:=TFrmSubRegiao.Create(Self);
     FrmSubRegiao.Show;
     VerificaFormAberto;
   Except;
-    VEN024.Enabled:= True;
+//    VEN024.Enabled:= True;
+    ACVEN024.Enabled:= True;
     FrmSubRegiao.Free;
   End;
 end;
@@ -2432,12 +1986,14 @@ procedure TFrmPrincipal.VEN025Click(Sender: TObject);
 begin
   Screen.Cursor := crSQLWait;
   Try
-    VEN025.Enabled:= False;
+//    VEN025.Enabled:= False;
+    ACVEN025.Enabled:= False;
     FrmFreteFixo:=TFrmFreteFixo.Create(Self);
     FrmFreteFixo.Show;
     VerificaFormAberto;
   Except;
-    VEN025.Enabled:= True;
+//    VEN025.Enabled:= True;
+    ACVEN025.Enabled:= True;
     FrmFreteFixo.Free;
   End;
   Screen.Cursor := crDefault;
@@ -2447,12 +2003,14 @@ procedure TFrmPrincipal.VEN026Click(Sender: TObject);
 begin
   Screen.Cursor := crSQLWait;
   Try
-    VEN026.Enabled:= False;
+//    VEN026.Enabled:= False;
+    ACVEN026.Enabled:=False;
     FrmSelPedagio:=TFrmSelPedagio.Create(Self);
-    FrmSelPedagio.ShowModal;
+    FrmSelPedagio.Show;
     VerificaFormAberto;
   Except;
-    VEN026.Enabled:= True;
+//    VEN026.Enabled:= True;
+    ACVEN026.Enabled:= True;
     FrmSelPedagio.Free;
   End;
   Screen.Cursor := crDefault;
@@ -2462,12 +2020,14 @@ procedure TFrmPrincipal.VEN027Click(Sender: TObject);
 begin
   Screen.Cursor := crSQLWait;
   Try
-    VEN027.Enabled:= False;
+//    VEN027.Enabled:= False;
+    ACVEN027.Enabled:= False;
     FrmClientes:=TFrmClientes.Create(Self);
     FrmClientes.Show;
     VerificaFormAberto;
   Except;
-    VEN027.Enabled:= True;
+//    VEN027.Enabled:= True;
+    ACVEN027.Enabled:= True;
     FrmClientes.Free;
   End;
   Screen.Cursor := crDefault;
@@ -2477,12 +2037,14 @@ procedure TFrmPrincipal.VEN028Click(Sender: TObject);
 begin
   Screen.Cursor := crSQLWait;
   Try
-    VEN028.Enabled:= False;
+//    VEN028.Enabled:= False;
+    ACVEN028.Enabled:= False;
     FrmTabPreco:=TFrmTabPreco.Create(Self);
     FrmTabPreco.Show;
     VerificaFormAberto;
   Except;
-    VEN028.Enabled:= True;
+//    VEN028.Enabled:= True;
+    ACVEN028.Enabled:= True;
     FrmTabPreco.Free;
   End;
   Screen.Cursor := crDefault;
@@ -2518,12 +2080,14 @@ procedure TFrmPrincipal.CadastrodeBairro1Click(Sender: TObject);
 begin
   Screen.Cursor := crSQLWait;
   Try
-    CadastrodeBairro1.Enabled:= False;
+//    CadastrodeBairro1.Enabled:= False;
+    ACCadBairros.Enabled:= False;
     FrmCadBairro:=TFrmCadBairro.Create(Self);
     FrmCadBairro.Show;
     VerificaFormAberto
   Except;
-    CadastrodeBairro1.Enabled:= True;
+//    CadastrodeBairro1.Enabled:= True;
+    ACCadBairros.Enabled:= True;
     FrmCadBairro.Free;
   End;
   Screen.Cursor := crDefault;
@@ -2533,12 +2097,14 @@ procedure TFrmPrincipal.CadastrodeCidades1Click(Sender: TObject);
 begin
   Screen.Cursor := crSQLWait;
   Try
-    CadastrodeCidades1.Enabled:= False;
+//    CadastrodeCidades1.Enabled:= False;
+    ACCadCidades.Enabled:= False;
     FrmCadCidade:=TFrmCadCidade.Create(Self);
     FrmCadCidade.Show;
     VerificaFormAberto;
   Except;
-    CadastrodeCidades1.Enabled:= True;
+//    CadastrodeCidades1.Enabled:= True;
+    ACCadCidades.Enabled:= True;
     FrmCadCidade.Free;
   End;
 
@@ -2549,12 +2115,14 @@ procedure TFrmPrincipal.CadastrodeEstados1Click(Sender: TObject);
 begin
   Screen.Cursor := crSQLWait;
   Try
-    CadastrodeEstados1.Enabled:= False;
+//    CadastrodeEstados1.Enabled:= False;
+    ACCadEstados.Enabled:= False;
     FrmCadEstado:=TFrmCadEstado.Create(Self);
     FrmCadEstado.Show;
     VerificaFormAberto;
   Except;
-    CadastrodeEstados1.Enabled:= True;
+//    CadastrodeEstados1.Enabled:= True;
+    ACCadEstados.Enabled:= True;
     FrmCadEstado.Free;
   End;
   Screen.Cursor := crDefault;
@@ -2564,12 +2132,14 @@ procedure TFrmPrincipal.CadastrodePases1Click(Sender: TObject);
 begin
   Screen.Cursor := crSQLWait;
   Try
-    CadastrodePases1.Enabled:= False;
+//    CadastrodePases1.Enabled:= False;
+    ACCadPaises.Enabled:= False;
     FrmCadPais:=TFrmCadPais.Create(Self);
     FrmCadPais.Show;
     VerificaFormAberto
   Except;
-    CadastrodePases1.Enabled:= True;
+//    CadastrodePases1.Enabled:= True;
+    ACCadPaises.Enabled:= True;
     FrmCadPais.Free;
   End;
   Screen.Cursor := crDefault;
@@ -2579,12 +2149,14 @@ procedure TFrmPrincipal.CadastrodeRegioGeogrfica1Click(Sender: TObject);
 begin
   Screen.Cursor := crSQLWait;
   Try
-    CadastrodeRegioGeogrfica1.Enabled:= False;
+//    CadastrodeRegioGeogrfica1.Enabled:= False;
+    ACCadRegGeo.Enabled := False;
     FrmCadRegGeog:=TFrmCadRegGeog.Create(Self);
     FrmCadRegGeog.Show;
     VerificaFormAberto
   Except;
-    CadastrodeRegioGeogrfica1.Enabled:= True;
+//    CadastrodeRegioGeogrfica1.Enabled:= True;
+    ACCadRegGeo.Enabled := True;
     FrmCadRegGeog.Free;
   End;
   Screen.Cursor := crDefault;
@@ -2595,12 +2167,14 @@ procedure TFrmPrincipal.CadastrodeRegioInternacional1Click(
 begin
   Screen.Cursor := crSQLWait;
   Try
-    CadastrodeRegioInternacional1.Enabled:= False;
+//    CadastrodeRegioInternacional1.Enabled:= False;
+    ACCadRegInter.Enabled := False;
     FrmCadRegInt:=TFrmCadRegInt.Create(Self);
     FrmCadRegInt.Show;
     VerificaFormAberto
   Except;
-    CadastrodeRegioInternacional1.Enabled:= True;
+//    CadastrodeRegioInternacional1.Enabled:= True;
+    ACCadRegInter.Enabled := True;
     FrmCadRegInt.Free;
   End;
   Screen.Cursor := crDefault;
@@ -2610,12 +2184,14 @@ procedure TFrmPrincipal.CadastrodeRegiesLogsticas1Click(Sender: TObject);
 begin
   Screen.Cursor := crSQLWait;
   Try
-    CadastrodeRegiesLogsticas1.Enabled:= False;
+//    CadastrodeRegiesLogsticas1.Enabled:= False;
+    ACCadRegLog.Enabled:= False;
     FrmCadRegLog:=TFrmCadRegLog.Create(Self);
     FrmCadRegLog.Show;
     VerificaFormAberto
   Except;
-    CadastrodeRegiesLogsticas1.Enabled:= True;
+//    CadastrodeRegiesLogsticas1.Enabled:= True;
+    ACCadRegLog.Enabled := True;
     FrmCadRegLog.Free;
   End;
   Screen.Cursor := crDefault;
@@ -2626,12 +2202,14 @@ procedure TFrmPrincipal.CadastrodeSubregiesLogsticas1Click(
 begin
   Screen.Cursor := crSQLWait;
   Try
-    CadastrodeSubregiesLogsticas1.Enabled:= False;
+//    CadastrodeSubregiesLogsticas1.Enabled:= False;
+    ACCadSubRegLog.Enabled:= False;
     FrmCadSubLog:=TFrmCadSubLog.Create(Self);
     FrmCadSubLog.Show;
     VerificaFormAberto
   Except;
-    CadastrodeSubregiesLogsticas1.Enabled:= True;
+//    CadastrodeSubregiesLogsticas1.Enabled:= True;
+    ACCadSubRegLog.Enabled:= True;
     FrmCadSubLog.Free;
   End;
   Screen.Cursor := crDefault;
@@ -2642,12 +2220,14 @@ procedure TFrmPrincipal.CadastrodeRegiesXSubregiesLogstica1Click(
 begin
   Screen.Cursor := crSQLWait;
   Try
-    CadastrodeRegiesXSubregiesLogstica1.Enabled:= False;
+//    CadastrodeRegiesXSubregiesLogstica1.Enabled:= False;
+    ACCadRegSubRegLog.Enabled:= False;
     FrmCadRegeSubLog:=TFrmCadRegeSubLog.Create(Self);
     FrmCadRegeSubLog.Show;
     VerificaFormAberto
   Except;
-    CadastrodeRegiesXSubregiesLogstica1.Enabled:= True;
+//    CadastrodeRegiesXSubregiesLogstica1.Enabled:= True;
+    ACCadRegSubRegLog.Enabled:= True;
     FrmCadRegeSubLog.Free;
   End;
   Screen.Cursor := crDefault;
@@ -2658,12 +2238,14 @@ procedure TFrmPrincipal.VEN031Click(
 begin
   Screen.Cursor := crSQLWait;
   Try
-    VEN031.Enabled:= False;
+//    VEN031.Enabled:= False;
+    ACVEN031.Enabled:= False;
     FrmCadRegCom:=TFrmCadRegCom.Create(Self);
     FrmCadRegCom.Show;
     VerificaFormAberto;
   Except;
-    VEN031.Enabled:= True;
+//    VEN031.Enabled:= True;
+    ACVEN031.Enabled:= False;
     FrmCadRegCom.Free;
   End;
   Screen.Cursor := crDefault;
@@ -2674,12 +2256,14 @@ procedure TFrmPrincipal.VEN032Click(
 begin
   Screen.Cursor := crSQLWait;
   Try
-    VEN032.Enabled:= False;
+//    VEN032.Enabled:= False;
+    ACVEN032.Enabled:= False;
     FrmCadForPag:=TFrmCadForPag.Create(Self);
     FrmCadForPag.Show;
     VerificaFormAberto;
   Except;
-    VEN032.Enabled:= True;
+//    VEN032.Enabled:= True;
+    ACVEN032.Enabled:= True;
     FrmCadForPag.Free;
   End;
   Screen.Cursor := crDefault;
@@ -2689,12 +2273,14 @@ procedure TFrmPrincipal.CadastroTipodeLogradouro1Click(Sender: TObject);
 begin
   Screen.Cursor := crSQLWait;
   Try
-    CadastroTipodeLogradouro1.Enabled:= False;
+//    CadastroTipodeLogradouro1.Enabled:= False;
+    ACCadTipoLogradouro.Enabled:= False;
     FrmCadTpLogr:=TFrmCadTpLogr.Create(Self);
     FrmCadTpLogr.Show;
     VerificaFormAberto
   Except;
-    CadastroTipodeLogradouro1.Enabled:= True;
+//    CadastroTipodeLogradouro1.Enabled:= True;
+    ACCadTipoLogradouro.Enabled:= True;
     FrmCadTpLogr.Free;
   End;
   Screen.Cursor := crDefault;
@@ -2704,12 +2290,14 @@ procedure TFrmPrincipal.CadastrodeTiposdeTransporte1Click(Sender: TObject);
 begin
   Screen.Cursor := crSQLWait;
   Try
-    CadastrodeTiposdeTransporte1.Enabled:= False;
+//    CadastrodeTiposdeTransporte1.Enabled:= False;
+    ACCadTipoTransporte.Enabled := False;
     FrmCadTransTipo:=TFrmCadTransTipo.Create(Self);
     FrmCadTransTipo.Show;
     VerificaFormAberto
   Except;
-    CadastrodeTiposdeTransporte1.Enabled:= True;
+//    CadastrodeTiposdeTransporte1.Enabled:= True;
+    ACCadTipoTransporte.Enabled := True;
     FrmCadTransTipo.Free;
   End;
   Screen.Cursor := crDefault;
@@ -2719,12 +2307,14 @@ procedure TFrmPrincipal.CadastroTipodeVeculo1Click(Sender: TObject);
 begin
   Screen.Cursor := crSQLWait;
   Try
-    CadastroTipodeVeculo1.Enabled:= False;
+//    CadastroTipodeVeculo1.Enabled:= False;
+    ACCadTipoVeiculo.Enabled := False;
     FrmCadTipoVeic:=TFrmCadTipoVeic.Create(Self);
     FrmCadTipoVeic.Show;
     VerificaFormAberto
   Except;
-    CadastroTipodeVeculo1.Enabled:= True;
+//    CadastroTipodeVeculo1.Enabled:= True;
+    ACCadTipoVeiculo.Enabled := True;
     FrmCadTipoVeic.Free;
   End;
   Screen.Cursor := crDefault;
@@ -2734,12 +2324,14 @@ procedure TFrmPrincipal.CadastrodeTransportadores1Click(Sender: TObject);
 begin
   Screen.Cursor := crSQLWait;
   Try
-    CadastrodeTransportadores1.Enabled:= False;
+//    CadastrodeTransportadores1.Enabled:= False;
+    ACCadTipoTransportadores.Enabled := False;
     FrmCadTransport:=TFrmCadTransport.Create(Self);
     FrmCadTransport.Show;
     VerificaFormAberto
   Except;
-    CadastrodeTransportadores1.Enabled:= True;
+//    CadastrodeTransportadores1.Enabled:= True;
+    ACCadTipoTransportadores.Enabled := True;
     FrmCadTransport.Free;
   End;
   Screen.Cursor := crDefault;
@@ -2748,14 +2340,16 @@ end;
 procedure TFrmPrincipal.VEN034Click(Sender: TObject);
 begin
   Try
-    VEN034.Enabled:= False;
+//    VEN034.Enabled:= False;
+    ACVEN034.Enabled:= False;
     Screen.Cursor := crSQLWait;
     FrmSelFreteDevo:=TFrmSelFreteDevo.Create(Self);
-    FrmSelFreteDevo.ShowModal;
+    FrmSelFreteDevo.Show;
     VerificaFormAberto;
   Except;
     Screen.Cursor := crDefault;
-    VEN034.Enabled:= True;
+//    VEN034.Enabled:= True;
+    ACVEN034.Enabled:= True;
     FrmSelFreteDevo.Free;
   End;
   Screen.Cursor := crDefault;
@@ -2766,12 +2360,14 @@ procedure TFrmPrincipal.VEN035Click(
 begin
   Screen.Cursor := crSQLWait;
   Try
-    VEN035.Enabled:= False;
+//    VEN035.Enabled:= False;
+    ACVEN035.Enabled:= False;
     FrmDesativaPesquisa :=TFrmDesativaPesquisa.Create(Self);
     FrmDesativaPesquisa.ShowModal;
     VerificaFormAberto;
   Except;
-    VEN035.Enabled:= True;
+//    VEN035.Enabled:= True;
+    ACVEN035.Enabled:= True;
     FrmDesativaPesquisa.Free;
   End;
   Screen.Cursor := crDefault;
@@ -2781,12 +2377,14 @@ procedure TFrmPrincipal.VEN036Click(Sender: TObject);
 begin
   Screen.Cursor := crSQLWait;
   Try
-    VEN036.Enabled:= False;
+//    VEN036.Enabled:= False;
+    ACVEN036.Enabled:= False;
     FrmXmlEmail :=TFrmXmlEmail.Create(Self);
     FrmXmlEmail.ShowModal;
     VerificaFormAberto;
   Except;
-    VEN036.Enabled:= True;
+//    VEN036.Enabled:= True;
+    ACVEN036.Enabled:= True;
     FrmXmlEmail.Free;
   End;
   Screen.Cursor := crDefault;
@@ -2796,13 +2394,15 @@ procedure TFrmPrincipal.VEN037Click(Sender: TObject);
 begin
   Try
     Screen.Cursor := crSQLWait;
-    VEN037.Enabled:= False;
+//    VEN037.Enabled:= False;
+    ACVEN037.Enabled:= False;
     FrmPedVendaCorte:=TFrmPedVendaCorte.Create(Self);
     FrmPedVendaCorte.ShowModal;
     VerificaFormAberto;
   Except;
     Screen.Cursor := crDefault;
-    VEN037.Enabled:= True;
+//    VEN037.Enabled:= True;
+    ACVEN037.Enabled:= True;
     FrmPedVendaCorte.Free;
   End;
   Screen.Cursor := crDefault;
@@ -2812,12 +2412,14 @@ procedure TFrmPrincipal.VEN038Click(Sender: TObject);
 begin
   Screen.Cursor := crSQLWait;
   Try
-    VEN038.Enabled:= False;
+//    VEN038.Enabled:= False;
+    ACVEN038.Enabled:= False;
     FrmCarregaNFe :=TFrmCarregaNFe.Create(Self);
-    FrmCarregaNFe.ShowModal;
+    FrmCarregaNFe.Show;
     VerificaFormAberto;
   Except;
-    VEN038.Enabled:= True;
+//    VEN038.Enabled:= True;
+    ACVEN038.Enabled:= True;
     FrmCarregaNFe.Free;
   End;
   Screen.Cursor := crDefault;
@@ -2827,12 +2429,14 @@ procedure TFrmPrincipal.VEN039Click(Sender: TObject);
 begin
   Screen.Cursor := crSQLWait;
   Try
-    VEN039.Enabled:= False;
+//    VEN039.Enabled:= False;
+    ACVEN039.Enabled:= False;
     FrmHistoricoPrecoTelevendas := TFrmHistoricoPrecoTelevendas.Create(Self);
     FrmHistoricoPrecoTelevendas.showmodal;
     VerificaFormAberto;
   Except;
-    VEN039.Enabled:= True;
+//    VEN039.Enabled:= True;
+    ACVEN039.Enabled:= True;
     FrmHistoricoPrecoTelevendas.Free;
   End;
   Screen.Cursor := crDefault;
@@ -2842,12 +2446,14 @@ procedure TFrmPrincipal.VEN040Click(Sender: TObject);
 begin
   Screen.Cursor := crSQLWait;
   Try
-    VEN040.Enabled:= False;
+//    VEN040.Enabled:= False;
+    ACVEN040.Enabled:= False;
     FrmCadVendedor :=TFrmCadVendedor.Create(Self);
     FrmCadVendedor.Show;
     VerificaFormAberto;
   Except;
-    VEN040.Enabled:= True;
+//    VEN040.Enabled:= True;
+    ACVEN040.Enabled:= True;
     FrmCadVendedor.Free;
   End;
   Screen.Cursor := crDefault;
@@ -2868,12 +2474,14 @@ procedure TFrmPrincipal.VEN041Click(
   Sender: TObject);
 begin
   Try
-    VEN041.Enabled:= False;
+//    VEN041.Enabled:= False;
+    ACVEN041.Enabled:= False;
     FrmTranspChaveNFe:=TFrmTranspChaveNFe.Create(Self);
     FrmTranspChaveNFe.ShowModal;
     VerificaFormAberto;
   Except;
-    VEN041.Enabled:= True;
+//    VEN041.Enabled:= True;
+    ACVEN041.Enabled:= True;
     FrmTranspChaveNFe.Free;
   End;
 end;
@@ -2881,12 +2489,14 @@ end;
 procedure TFrmPrincipal.VEN071Click(Sender: TObject);
 begin
   Try
-    VEN071.Enabled:= False;
+//    VEN071.Enabled:= False;
+    ACVEN071.Enabled := False;
     FrmVenProd:=TFrmVenProd.Create(Self);
     FrmVenProd.ShowModal;
     VerificaFormAberto;
   Except;
-    VEN071.Enabled:= True;
+//    VEN071.Enabled:= True;
+    ACVEN071.Enabled := True;
     FrmVenProd.Free;
   End;
 end;
@@ -2894,41 +2504,32 @@ end;
 procedure TFrmPrincipal.VEN042Click(Sender: TObject);
 begin
     try
-      VEN042.Enabled:= False;
+//      VEN042.Enabled:= False;
+      ACVEN042.Enabled:= False;
       FrmAlteracaoPlaca:=TFrmAlteracaoPlaca.Create(Self);
       FrmAlteracaoPlaca.Show;
       VerificaFormAberto;
     except;
-      VEN042.Enabled:= True;
+//      VEN042.Enabled:= True;
+      ACVEN042.Enabled:= True;
       FrmAlteracaoPlaca.Free;
     end;
 end;
 
 procedure TFrmPrincipal.HabilitarMenuLateral(habilitar: Boolean);
 var
-  i, j, K :Integer;
+  i, j :Integer;
 begin
   for I := 0 to ActionSubMenus.ActionCount - 1 do
   begin
     ActionSubMenus.Actions[i].Enabled := habilitar;
   end;
 
-
-  for J := 0 to FrmPrincipal.ComponentCount-1 do
+  for j := 0 to ActionSubMenus2.ActionCount - 1 do
   begin
-    if FrmPrincipal.Components[J] is TSpeedButton then
-    begin
-      if (TSpeedButton(FrmPrincipal.Components[J]).Action <> ACMenu) and (TSpeedButton(FrmPrincipal.Components[J]).Action <> ACArquivo) and
-      (TSpeedButton(FrmPrincipal.Components[J]).Action <> ACVendas) and (TSpeedButton(FrmPrincipal.Components[J]).Action <> ACTransporte) and
-      (TSpeedButton(FrmPrincipal.Components[J]).Action <> ACImpressão) and (TSpeedButton(FrmPrincipal.Components[J]).Action <> ACManutencao) and
-      (TSpeedButton(FrmPrincipal.Components[J]).Action <> ACLogistica) and (TSpeedButton(FrmPrincipal.Components[J]).Action <> ACAjuda) and
-      (TSpeedButton(FrmPrincipal.Components[J]).Action <> ACVoltar) and (TSpeedButton(FrmPrincipal.Components[J]).Action <> ACSair) and
-      (TSpeedButton(FrmPrincipal.Components[J]).Name <> 'BtnLogarNovamente') and (TSpeedButton(FrmPrincipal.Components[J]).Name <> 'BtnSobre') then
-      begin
-        TSpeedButton(FrmPrincipal.Components[J]).Enabled := habilitar;
-      end;
-    end;
+    ActionSubMenus.Actions[j].Enabled := habilitar;
   end;
+
 end;
 
 procedure TFrmPrincipal.HabilitarModulos(habilitar: Boolean);
@@ -2949,90 +2550,96 @@ var
   qryConsulta, qryJanelas: TOraQuery;
   sql: string;
   i :Integer;
-  Tag :string;
 begin
+
+  for I := 0 to ActionSubMenus.ActionCount - 1 do
+  begin
+    ActionSubMenus[i].OnUpdate := nil;
+  end;
+
+
   HabilitarModulos(false);
   HabilitarMenuLateral(false);
 
   qryConsulta := ConsultarAcessos(idModulo, idUsuario);
 
-  qryConsulta.First;
-
-  while not qryConsulta.Eof do
-  begin
-    case qryConsulta.FieldByName ('ID_JANELA').AsInteger of
-      4:  FrmPrincipal.VEN004.Enabled:= True;
-      5:  FrmPrincipal.VEN005.Enabled:= True;
-      6:  FrmPrincipal.VEN006.Enabled:= True;
-      7:  FrmPrincipal.VEN007.Enabled:= True;
-      8:  FrmPrincipal.VEN008.Enabled:= True;
-      9:  FrmPrincipal.VEN009.Enabled:= True;
-      10:  FrmPrincipal.VEN010.Enabled:= True;
-      11:  FrmPrincipal.VEN011.Enabled:= True;
-      12:  FrmPrincipal.VEN012.Enabled:= True;
-      13:  FrmPrincipal.VEN013.Enabled:= True;
-      14:  FrmPrincipal.VEN014.Enabled:= True;
-      15:  FrmPrincipal.VEN015.Enabled:= True;
-      16:  FrmPrincipal.VEN016.Enabled:= True;
-      17:  FrmPrincipal.VEN017.Enabled:= True;
-      18:  FrmPrincipal.VEN018.Enabled:= True;
-      19:  FrmPrincipal.VEN019.Enabled:= True;
-      20:  FrmPrincipal.VEN020.Enabled:= True;
-      21:  FrmPrincipal.VEN021.Enabled:= True;
-      22:  FrmPrincipal.VEN022.Enabled:= True;
-      23:  FrmPrincipal.VEN023.Enabled:= True;
-      24:  FrmPrincipal.VEN024.Enabled:= True;
-      25:  FrmPrincipal.VEN025.Enabled:= True;
-      26:  FrmPrincipal.VEN026.Enabled:= True;
-      27:  FrmPrincipal.VEN027.Enabled:= True;
-      28:  FrmPrincipal.VEN028.Enabled:= True;
-      29:  FrmPrincipal.VEN029.Enabled:= True;
-      30:  FrmPrincipal.VEN030.Enabled:= True;
-      31:  FrmPrincipal.VEN031.Enabled:= True;
-      32:  FrmPrincipal.VEN032.Enabled:= True;
-      33:  FrmPrincipal.VEN033.Enabled:= True;
-      34:  FrmPrincipal.VEN034.Enabled:= True;
-      35:  FrmPrincipal.VEN035.Enabled:= True;
-      36:  FrmPrincipal.VEN036.Enabled:= True;
-      37:  FrmPrincipal.VEN037.Enabled:= True;
-      38:  FrmPrincipal.VEN038.Enabled:= True;
-      39:  FrmPrincipal.VEN039.Enabled:= True;
-      40:  FrmPrincipal.VEN040.Enabled:= True;
-      41:  FrmPrincipal.VEN041.Enabled:= True;
-      42:  FrmPrincipal.VEN042.Enabled:= True;
-      43:  FrmPrincipal.VEN043.Enabled:= True;
-      44:  FrmPrincipal.VEN044.Enabled:= True;
-      45:  FrmPrincipal.VEN045.Enabled:= True;
-      46:  FrmPrincipal.VEN046.Enabled:= True;
-      47:  FrmPrincipal.VEN047.Enabled:= True;
-      48:  FrmPrincipal.VEN048.Enabled:= True;
-      49:  FrmPrincipal.VEN049.Enabled:= True;
-      50:  FrmPrincipal.VEN050.Enabled:= True;
-      51:  FrmPrincipal.VEN051.Enabled:= True;
-      52:  FrmPrincipal.VEN052.Enabled:= True;
-      53:  FrmPrincipal.VEN053.Enabled:= True;
-      54:  FrmPrincipal.VEN054.Enabled:= True;
-      55:  FrmPrincipal.VEN055.Enabled:= True;
-      56:  FrmPrincipal.VEN056.Enabled:= True;
-      57:  FrmPrincipal.VEN057.Enabled:= True;
-      58:  FrmPrincipal.VEN058.Enabled:= True;
-      59:  FrmPrincipal.VEN059.Enabled:= True;
-      61:  FrmPrincipal.VEN061.Enabled:= True;
-      62:  FrmPrincipal.VEN062.Enabled:= True;
-      63:  FrmPrincipal.VEN063.Enabled:= True;
-      64:  FrmPrincipal.VEN064.Enabled:= True;
-      65:  FrmPrincipal.VEN065.Enabled:= True;
-      66:  FrmPrincipal.VEN066.Enabled:= True;
-//      67:  FrmPrincipal.VEN067.Enabled:= True;
-      68:  FrmPrincipal.VEN068.Enabled:= True;
-      71:  FrmPrincipal.VEN071.Enabled:= True;
-      74:  FrmPrincipal.VEN074.Enabled:= True;
-      75:  FrmPrincipal.VEN075.Enabled:= True;
-      76:  FrmPrincipal.VEN076.Enabled:= True;
-    end;
-
-    qryConsulta.Next;
-  end;
+//  qryConsulta.First;
+//
+//  while not qryConsulta.Eof do
+//  begin
+//    case qryConsulta.FieldByName ('ID_JANELA').AsInteger of
+//      4:  FrmPrincipal.VEN004.Enabled:= True;
+//      5:  FrmPrincipal.VEN005.Enabled:= True;
+//      6:  FrmPrincipal.VEN006.Enabled:= True;
+//      7:  FrmPrincipal.VEN007.Enabled:= True;
+//      8:  FrmPrincipal.VEN008.Enabled:= True;
+//      9:  FrmPrincipal.VEN009.Enabled:= True;
+//      10:  FrmPrincipal.VEN010.Enabled:= True;
+//      11:  FrmPrincipal.VEN011.Enabled:= True;
+//      12:  FrmPrincipal.VEN012.Enabled:= True;
+//      13:  FrmPrincipal.VEN013.Enabled:= True;
+//      14:  FrmPrincipal.VEN014.Enabled:= True;
+//      15:  FrmPrincipal.VEN015.Enabled:= True;
+//      16:  FrmPrincipal.VEN016.Enabled:= True;
+//      17:  FrmPrincipal.VEN017.Enabled:= True;
+//      18:  FrmPrincipal.VEN018.Enabled:= True;
+//      19:  FrmPrincipal.VEN019.Enabled:= True;
+//      20:  FrmPrincipal.VEN020.Enabled:= True;
+//      21:  FrmPrincipal.VEN021.Enabled:= True;
+//      22:  FrmPrincipal.VEN022.Enabled:= True;
+//      23:  FrmPrincipal.VEN023.Enabled:= True;
+//      24:  FrmPrincipal.VEN024.Enabled:= True;
+//      25:  FrmPrincipal.VEN025.Enabled:= True;
+//      26:  FrmPrincipal.VEN026.Enabled:= True;
+//      27:  FrmPrincipal.VEN027.Enabled:= True;
+//      28:  FrmPrincipal.VEN028.Enabled:= True;
+//      29:  FrmPrincipal.VEN029.Enabled:= True;
+//      30:  FrmPrincipal.VEN030.Enabled:= True;
+//      31:  FrmPrincipal.VEN031.Enabled:= True;
+//      32:  FrmPrincipal.VEN032.Enabled:= True;
+//      33:  FrmPrincipal.VEN033.Enabled:= True;
+//      34:  FrmPrincipal.VEN034.Enabled:= True;
+//      35:  FrmPrincipal.VEN035.Enabled:= True;
+//      36:  FrmPrincipal.VEN036.Enabled:= True;
+//      37:  FrmPrincipal.VEN037.Enabled:= True;
+//      38:  FrmPrincipal.VEN038.Enabled:= True;
+//      39:  FrmPrincipal.VEN039.Enabled:= True;
+//      40:  FrmPrincipal.VEN040.Enabled:= True;
+//      41:  FrmPrincipal.VEN041.Enabled:= True;
+//      42:  FrmPrincipal.VEN042.Enabled:= True;
+//      43:  FrmPrincipal.VEN043.Enabled:= True;
+//      44:  FrmPrincipal.VEN044.Enabled:= True;
+//      45:  FrmPrincipal.VEN045.Enabled:= True;
+//      46:  FrmPrincipal.VEN046.Enabled:= True;
+//      47:  FrmPrincipal.VEN047.Enabled:= True;
+//      48:  FrmPrincipal.VEN048.Enabled:= True;
+//      49:  FrmPrincipal.VEN049.Enabled:= True;
+//      50:  FrmPrincipal.VEN050.Enabled:= True;
+//      51:  FrmPrincipal.VEN051.Enabled:= True;
+//      52:  FrmPrincipal.VEN052.Enabled:= True;
+//      53:  FrmPrincipal.VEN053.Enabled:= True;
+//      54:  FrmPrincipal.VEN054.Enabled:= True;
+//      55:  FrmPrincipal.VEN055.Enabled:= True;
+//      56:  FrmPrincipal.VEN056.Enabled:= True;
+//      57:  FrmPrincipal.VEN057.Enabled:= True;
+//      58:  FrmPrincipal.VEN058.Enabled:= True;
+//      59:  FrmPrincipal.VEN059.Enabled:= True;
+//      61:  FrmPrincipal.VEN061.Enabled:= True;
+//      62:  FrmPrincipal.VEN062.Enabled:= True;
+//      63:  FrmPrincipal.VEN063.Enabled:= True;
+//      64:  FrmPrincipal.VEN064.Enabled:= True;
+//      65:  FrmPrincipal.VEN065.Enabled:= True;
+//      66:  FrmPrincipal.VEN066.Enabled:= True;
+////      67:  FrmPrincipal.VEN067.Enabled:= True;
+//      68:  FrmPrincipal.VEN068.Enabled:= True;
+//      71:  FrmPrincipal.VEN071.Enabled:= True;
+//      74:  FrmPrincipal.VEN074.Enabled:= True;
+//      75:  FrmPrincipal.VEN075.Enabled:= True;
+//      76:  FrmPrincipal.VEN076.Enabled:= True;
+//    end;
+//
+//    qryConsulta.Next;
+//  end;
 
   qryConsulta.First;
 
@@ -3104,8 +2711,8 @@ begin
 //      67:  FrmPrincipal.BtnVEN067.Enabled:= True;
       68:  ACVEN068.Enabled:= True;
       71:  ACVEN071.Enabled:= True;
-      72:  ACVEN072.Enabled:= True;
-      73:  ACVEN073.Enabled:= True;
+//      72:  ACVEN072.Enabled:= True;
+//      73:  ACVEN073.Enabled:= True;
       74:  ACVEN074.Enabled:= True;
       75:  ACVEN075.Enabled:= True;
 //      76:  FrmPrincipal.BtnControleCaixas.Enabled:= True;
@@ -3114,15 +2721,23 @@ begin
     qryConsulta.Next;
   end;
 
-  if BtnVEN029.Enabled = True then
+  // SubMenu Pedido de Devolução
+  if ACVEN017.Enabled = True then
   begin
-    BtnCadCidades.Enabled        := True;
-    BtnCadEstados.Enabled        := True;
-    BtnCadPaises.Enabled         := True;
-    BtnCadBairros.Enabled        := True;
-    BtnCadRegGeo.Enabled         := True;
-    BtnCadRegInter.Enabled       := True;
-    BtnCadTipoLogradouro.Enabled := True;
+    ACVEN072.Enabled := True;
+    ACVEN073.Enabled := True;
+  end;
+
+  // SubMenu Cadastro de Localidades
+  if ACVEN029.Enabled = True then
+  begin
+    ACCadCidades.Enabled        := True;
+    ACCadEstados.Enabled        := True;
+    ACCadPaises.Enabled         := True;
+    ACCadBairros.Enabled        := True;
+    ACCadRegGeo.Enabled         := True;
+    ACCadRegInter.Enabled       := True;
+    ACCadTipoLogradouro.Enabled := True;
   end
   else
   begin
@@ -3130,11 +2745,12 @@ begin
     ImgVEN029.Visible := False;
   end;
 
-  if BtnVEN030.Enabled = True then
+  // SubMenu Cadastro de Logistica
+  if ACVEN030.Enabled = True then
   begin
-    BtnCadRegLog.Enabled       := True;
-    BtnCadSubRegLog.Enabled    := True;
-    BtnCadRegSubRegLog.Enabled := True;
+    ACCadRegLog.Enabled       := True;
+    ACCadSubRegLog.Enabled    := True;
+    ACCadRegSubRegLog.Enabled := True;
   end
   else
   begin
@@ -3142,12 +2758,13 @@ begin
     ImgVEN030.Visible := False;
   end;
 
-  if BtnVEN033.Enabled = True then
+    // SubMenu Cadastro de Transporte
+  if ACVEN033.Enabled = True then
   begin
-    BtnCadTipoTransporte.Enabled      := True;
-    BtnCadTipoVeiculo.Enabled         := True;
-    BtnCadTipoTransportadores.Enabled := True;
-    BtnCadRegiao.Enabled              := True;
+    ACCadTipoTransporte.Enabled      := True;
+    ACCadTipoVeiculo.Enabled         := True;
+    ACCadTipoTransportadores.Enabled := True;
+    ACCadRegiao.Enabled              := True;
   end
   else
   begin
@@ -3155,10 +2772,11 @@ begin
     ImgVEN033.Visible := False;
   end;
 
-  if BtnVEN015.Enabled = True then
+  // SubMenu Rel Vendas por Vendedor
+  if ACVEN015.Enabled = True then
   begin
-    BtnVEN015a.Enabled := True;
-    BtnVEN015b.Enabled := True;
+    ACVEN015a.Enabled := True;
+    ACVEN015b.Enabled := True;
   end
   else
   begin
@@ -3166,11 +2784,12 @@ begin
     ImgVEN015.Visible := False;
   end;
 
-  if BtnVEN054.Enabled = True then
+  // SubMenu Controle de Caixas
+  if ACVEN054.Enabled = True then
   begin
-    BtnLancamentos.Enabled    := True;
-    BtnRelSaldo.Enabled       := True;
-    BtnControleCaixas.Enabled := True;
+    ACLancamentos.Enabled    := True;
+    ACRelSaldo.Enabled       := True;
+    ACControleCaixas.Enabled := True;
   end
   else
   begin
@@ -3276,7 +2895,7 @@ var
 begin
   Try
     Try
-      GlbVersao := '1.24.04';
+      GlbVersao := '1.24.07';
       IPLocal := GetIP ;
       frmSenha := TfrmSenha.Create(Self, 9, GlbVersao);
       frmSenha.LogUsua := gs_LogUsua;
@@ -3378,12 +2997,14 @@ end;
 procedure TFrmPrincipal.VEN043Click(Sender: TObject);
 begin
   try
-    VEN043.Enabled   := False;
+//    VEN043.Enabled   := False;
+    ACVEN043.Enabled:= False;
     FrmLoteIntegrado := TFrmLoteIntegrado.Create(Self);
     FrmLoteIntegrado.Show;
     VerificaFormAberto;
   except;
-    VEN043.Enabled   := True;
+//    VEN043.Enabled   := True;
+    ACVEN043.Enabled:= True;
     FrmLoteIntegrado.Free;
   end;
 end;
@@ -3391,12 +3012,14 @@ end;
 procedure TFrmPrincipal.VEN044Click(Sender: TObject);
 begin
   try
-    VEN044.Enabled   := False;
+//    VEN044.Enabled   := False;
+    ACVEN044.Enabled:= False;
     FrmProgRacao := TFrmProgRacao.Create(Self);
     FrmProgRacao.Show;
     VerificaFormAberto;
   except;
-    VEN044.Enabled   := True;
+//    VEN044.Enabled   := True;
+    ACVEN044.Enabled:= True;
     FrmProgRacao.Free;
   end;
 end;
@@ -3404,12 +3027,14 @@ end;
 procedure TFrmPrincipal.VEN045Click(Sender: TObject);
 begin
   try
-    VEN045.Enabled   := False;
+//    VEN045.Enabled   := False;
+    ACVEN045.Enabled := False;
     FrmResultGranjeiro := TFrmResultGranjeiro.Create(Self);
     FrmResultGranjeiro.Show;
     VerificaFormAberto;
   except;
-    VEN045.Enabled   := True;
+//    VEN045.Enabled   := True;
+    ACVEN045.Enabled := True;
     FrmResultGranjeiro.Free;
   end;
 end;
@@ -3417,12 +3042,14 @@ end;
 procedure TFrmPrincipal.VEN046Click(Sender: TObject);
 begin
   try
-    VEN046.Enabled   := False;
+//    VEN046.Enabled   := False;
+    ACVEN046.Enabled:= True;
     FrmConsApanha := TFrmConsApanha.Create(Self);
     FrmConsApanha.Show;
     VerificaFormAberto;
   except;
-    VEN046.Enabled   := True;
+//    VEN046.Enabled   := True;
+    ACVEN046.Enabled:= True;
     FrmConsApanha.Free;
   end;
 end;
@@ -3430,12 +3057,14 @@ end;
 procedure TFrmPrincipal.VEN047Click(Sender: TObject);
 begin
   try
-    VEN047.Enabled   := False;
+//    VEN047.Enabled   := False;
+    ACVEN047.Enabled := False;
     FrmConsVendaFrangoAbate := TFrmConsVendaFrangoAbate.Create(Self);
     FrmConsVendaFrangoAbate.Show;
     VerificaFormAberto;
   except;
-    VEN047.Enabled   := True;
+//    VEN047.Enabled   := True;
+    ACVEN047.Enabled := True;
     FrmConsVendaFrangoAbate.Free;
   end;
 end;
@@ -3443,12 +3072,14 @@ end;
 procedure TFrmPrincipal.VEN048Click(Sender: TObject);
 begin
   try
-    VEN048.Enabled   := False;
+//    VEN048.Enabled   := False;
+    ACVEN048.Enabled := False;
     FrmParametrosIntegrado := TFrmParametrosIntegrado.Create(Self);
     FrmParametrosIntegrado.Show;
     VerificaFormAberto;
   except;
-    VEN048.Enabled   := True;
+//    VEN048.Enabled   := True;
+    ACVEN048.Enabled:= True;
     FrmParametrosIntegrado.Free;
   end
 end;
@@ -3456,12 +3087,14 @@ end;
 procedure TFrmPrincipal.VEN049Click(Sender: TObject);
 begin
   try
-    VEN049.Enabled   := False;
+//    VEN049.Enabled   := False;
+    ACVEN049.Enabled := False;
     FrmConsRemessaRacao := TFrmConsRemessaRacao.Create(Self);
     FrmConsRemessaRacao.Show;
     VerificaFormAberto;
   except;
-    VEN049.Enabled   := True;
+//    VEN049.Enabled   := True;
+    ACVEN049.Enabled := True;
     FrmConsRemessaRacao.Free;
   end
 end;
@@ -3469,12 +3102,14 @@ end;
 procedure TFrmPrincipal.VEN050Click(Sender: TObject);
 begin
     try
-      VEN050.Enabled   := False;
+//      VEN050.Enabled   := False;
+      ACVEN050.Enabled := False;
       FrmVendedorCliente := TFrmVendedorCliente.Create(Self);
       FrmVendedorCliente.Show;
       VerificaFormAberto;
     except;
-      VEN050.Enabled   := True;
+//      VEN050.Enabled   := True;
+      ACVEN050.Enabled := True;
       FrmVendedorCliente.Free;
     end;
 end;
@@ -3482,12 +3117,14 @@ end;
 procedure TFrmPrincipal.VEN051Click(Sender: TObject);
 begin
     try
-      VEN051.Enabled   := False;
+//      VEN051.Enabled   := False;
+      ACVEN051.Enabled := False;
       FrmConsultaEstoque := TFrmConsultaEstoque.Create(Self);
       FrmConsultaEstoque.Show;
       VerificaFormAberto;
     except;
-      VEN051.Enabled   := True;
+//      VEN051.Enabled   := True;
+      ACVEN051.Enabled := True;
       FrmConsultaEstoque.Free;
     end;
 end;
@@ -3495,12 +3132,14 @@ end;
 procedure TFrmPrincipal.VEN052Click(Sender: TObject);
 begin
     try
-      VEN052.Enabled   := False;
+//      VEN052.Enabled   := False;
+      ACVEN052.Enabled := False;
       FrmConferenciaCarga := TFrmConferenciaCarga.Create(Self);
       FrmConferenciaCarga.Show;
       VerificaFormAberto;
     except;
-      VEN052.Enabled   := True;
+//      VEN052.Enabled   := True;
+      ACVEN052.Enabled := True;
       FrmConferenciaCarga.Free;
     end;
 end;
@@ -3508,12 +3147,14 @@ end;
 procedure TFrmPrincipal.VEN053Click(Sender: TObject);
 begin
     try
-      VEN053.Enabled := False;
+//      VEN053.Enabled := False;
+      ACVEN053.Enabled := False;
       FrmDiferencaPreco := TFrmDiferencaPreco.Create(Self);
       FrmDiferencaPreco.Show;
       VerificaFormAberto;
     except;
-      VEN053.Enabled := True;
+//      VEN053.Enabled := True;
+      ACVEN053.Enabled := True;
       FrmDiferencaPreco.Free;
     end;
 
@@ -3590,12 +3231,14 @@ end;
 procedure TFrmPrincipal.VEN055Click(Sender: TObject);
 begin
     try
-      VEN055.Enabled   := False;
+//      VEN055.Enabled   := False;
+      ACVEN055.Enabled := False;
       FrmSaldoCaixas := TFrmSaldoCaixas.Create(Self);
       FrmSaldoCaixas.Show;
       VerificaFormAberto;
     except;
-      VEN055.Enabled   := True;
+//      VEN055.Enabled   := True;
+      ACVEN055.Enabled := True;
       FrmSaldoCaixas.Free;
     end
 end;
@@ -3604,12 +3247,14 @@ end;
 procedure TFrmPrincipal.VEN056Click(Sender: TObject);
 begin
   try
-    VEN056.Enabled   := False;
+//    VEN056.Enabled   := False;
+    ACVEN056.Enabled := False;
     frmVendasDiaria := TfrmVendasDiaria.Create(Self);
     frmVendasDiaria.Show;
     VerificaFormAberto;
   except;
-    VEN056.Enabled   := True;
+//    VEN056.Enabled   := True;
+    ACVEN056.Enabled := True;
     frmVendasDiaria.Free;
   end
 end;
@@ -3620,12 +3265,14 @@ end;
 procedure TFrmPrincipal.mnuLancamentoCaixaPlasticaClick(Sender: TObject);
 begin
   try
-    VEN054.Enabled   := False;
+//    VEN054.Enabled   := False;
+    ACLancamentos.Enabled := False;
     FrmControleCaixas := TFrmControleCaixas.Create(Self);
     FrmControleCaixas.Show;
     VerificaFormAberto;
   except;
-    VEN054.Enabled   := True;
+//    VEN054.Enabled   := True;
+    ACLancamentos.Enabled := True;
     FrmControleCaixas.Free;
   end
 end;
@@ -3634,12 +3281,14 @@ end;
 procedure TFrmPrincipal.mnuRelatorio_de_SaldoClick(Sender: TObject);
 begin
   try
-    VEN055.Enabled   := False;
+//    VEN055.Enabled   := False;
+    ACRelSaldo.Enabled:= False;
     FrmSaldoCaixas := TFrmSaldoCaixas.Create(Self);
     FrmSaldoCaixas.Show;
     VerificaFormAberto;
   except;
-    VEN055.Enabled   := True;
+//    VEN055.Enabled   := True;
+    ACRelSaldo.Enabled := True;
     FrmSaldoCaixas.Free;
   end
 end;
@@ -3647,12 +3296,14 @@ end;
 procedure TFrmPrincipal.VEN057Click(Sender: TObject);
 begin
   Try
-    VEN057.Enabled:= False;
+//    VEN057.Enabled:= False;
+    ACVEN057.Enabled := False;
     frmLanctoPesoBalancaoCarga:=TfrmLanctoPesoBalancaoCarga.Create(Self);
     frmLanctoPesoBalancaoCarga.Show;
     VerificaFormAberto;
   Except;
-    VEN057.Enabled:= True;
+//    VEN057.Enabled:= True;
+    ACVEN057.Enabled:= True;
     frmLanctoPesoBalancaoCarga.Free;
   End;
 end;
@@ -3660,12 +3311,14 @@ end;
 procedure TFrmPrincipal.VEN058Click(Sender: TObject);
 begin
   Try
-    VEN058.Enabled:= False;
+//    VEN058.Enabled:= False;
+    ACVEN058.Enabled:= False;
     FrmCorteProdutos:=TFrmCorteProdutos.Create(Self);
     FrmCorteProdutos.Show;
     VerificaFormAberto;
   Except;
-    VEN058.Enabled:= True;
+//    VEN058.Enabled:= True;
+    ACVEN058.Enabled:= True;
     FrmCorteProdutos.Free;
   End;
 end;
@@ -3673,12 +3326,14 @@ end;
 procedure TFrmPrincipal.VEN059Click(Sender: TObject);
 begin
  Try
-    VEN059.Enabled:= False;
+//    VEN059.Enabled:= False;
+    ACVEN059.Enabled:= False;
     FrmOcorrencias:=TFrmOcorrencias.Create(Self);
     FrmOcorrencias.Show;
     VerificaFormAberto;
  Except;
-    VEN059.Enabled:= True;
+//    VEN059.Enabled:= True;
+    ACVEN059.Enabled:= True;
     FrmOcorrencias.Free;
  End;
 end;
@@ -3686,12 +3341,14 @@ end;
 procedure TFrmPrincipal.VEN061Click(Sender: TObject);
 begin
  Try
-    VEN061.Enabled:= False;
+//    VEN061.Enabled:= False;
+    ACVEN061.Enabled:= False;
     FrmSelQuebr:=TFrmSelQuebr.Create(Self);
     FrmSelQuebr.Show;
     VerificaFormAberto;
  Except;
-    VEN061.Enabled:= True;
+//    VEN061.Enabled:= True;
+    ACVEN061.Enabled:= True;
     FrmSelQuebr.Free;
  End;
 end;
@@ -3699,12 +3356,14 @@ end;
 procedure TFrmPrincipal.VEN062Click(Sender: TObject);
 begin
   Try
-    VEN062.Enabled:= False;
+//    VEN062.Enabled:= False;
+    ACVEN062.Enabled:= False;
     FrmControleEntregaCargas:=TFrmControleEntregaCargas.Create(Self);
     FrmControleEntregaCargas.Show;
     VerificaFormAberto;
   Except;
-    VEN062.Enabled:= True;
+//    VEN062.Enabled:= True;
+    ACVEN062.Enabled:= True;
     FrmControleEntregaCargas.Free;
   End;
 end;
@@ -3712,12 +3371,14 @@ end;
 procedure TFrmPrincipal.VEN063Click(Sender: TObject);
 begin
   Try
-    VEN063.Enabled:= False;
+//    VEN063.Enabled:= False;
+    ACVEN063.Enabled := False;
     frmDocumentacaoNFE:=TfrmDocumentacaoNFE.Create(Self);
     frmDocumentacaoNFE.Show;
     VerificaFormAberto;
   Except;
-    VEN063.Enabled:= True;
+//    VEN063.Enabled:= True;
+    ACVEN063.Enabled:= True;
     frmDocumentacaoNFE.Free;
   End;
 end;
@@ -3725,12 +3386,14 @@ end;
 procedure TFrmPrincipal.VEN064Click(Sender: TObject);
 begin
   Try
-    VEN064.Enabled:= False;
+//    VEN064.Enabled:= False;
+    ACVEN064.Enabled:= False;
     frmPedidosPosHorario:=TfrmPedidosPosHorario.Create(Self);
     frmPedidosPosHorario.Show;
     VerificaFormAberto;
   Except;
-    VEN064.Enabled:= True;
+//    VEN064.Enabled:= True;
+    ACVEN064.Enabled:= True;
     frmPedidosPosHorario.Free;
   End;
 end;
@@ -3738,12 +3401,14 @@ end;
 procedure TFrmPrincipal.VEN065Click(Sender: TObject);
 begin
   Try
-    VEN065.Enabled:= False;
+//    VEN065.Enabled:= False;
+    ACVEN065.Enabled:= False;
     frmAlteraContaPedido:=TfrmAlteraContaPedido.Create(Self);
     frmAlteraContaPedido.Show;
     VerificaFormAberto;
   Except;
-    VEN065.Enabled:= True;
+//    VEN065.Enabled:= True;
+    ACVEN065.Enabled:= True;
     frmAlteraContaPedido.Free;
   End;
 end;
@@ -3751,12 +3416,14 @@ end;
 procedure TFrmPrincipal.VEN066Click(Sender: TObject);
 begin
   Try
-    VEN066.Enabled:= False;
+//    VEN066.Enabled:= False;
+    ACVEN066.Enabled:= False;
     frmPedidosAbaixoTabela:=TfrmPedidosAbaixoTabela.Create(Self);
     frmPedidosAbaixoTabela.Show;
     VerificaFormAberto;
   Except;
-    VEN066.Enabled:= True;
+//    VEN066.Enabled:= True;
+    ACVEN066.Enabled:= True;
     frmPedidosAbaixoTabela.Free;
   End;
 end;
@@ -3764,12 +3431,14 @@ end;
 procedure TFrmPrincipal.VEN067Click(Sender: TObject);
 begin
   Try
-    VEN067.Enabled:= False;
+//    VEN067.Enabled:= False;
+    ACVEN067.Enabled:= False;
     FrmRelVendasVendedorPercentual:=TFrmRelVendasVendedorPercentual.Create(Self);
     FrmRelVendasVendedorPercentual.Show;
     VerificaFormAberto;
   Except;
-    VEN067.Enabled:= True;
+//    VEN067.Enabled:= True;
+    ACVEN067.Enabled:= True;
     FrmRelVendasVendedorPercentual.Free;
   End;
 end;
@@ -3778,12 +3447,14 @@ procedure TFrmPrincipal.CadastrodeRegio1Click(Sender: TObject);
 begin
   Screen.Cursor := crSQLWait;
   Try
-    CadastrodeRegio1.Enabled:= False;
+//    CadastrodeRegio1.Enabled:= False;
+    ACCadRegiao.Enabled := False;
     FrmCadRegiao:=TFrmCadRegiao.Create(Self);
     FrmCadRegiao.Show;
     VerificaFormAberto
   Except;
-    CadastrodeRegio1.Enabled:= True;
+//    CadastrodeRegio1.Enabled:= True;
+    ACCadRegiao.Enabled := True;
     FrmCadRegiao.Free;
   End;
   Screen.Cursor := crDefault;
@@ -3792,12 +3463,14 @@ end;
 procedure TFrmPrincipal.VEN015bClick(Sender: TObject);
 begin
   try
-    VEN015b.Enabled:= False;
+//    VEN015b.Enabled:= False;
+    ACVEN015b.Enabled := False;
     FrmSelProdVend:=TFrmSelProdVend.Create(Self);
     FrmSelProdVend.Show;
     VerificaFormAberto;
   except;
-    VEN015b.Enabled:= True;
+//    VEN015b.Enabled:= True;
+    ACVEN015b.Enabled := True;
     FrmSelProdVend.Free;
   end;
 end;
@@ -3805,12 +3478,14 @@ end;
 procedure TFrmPrincipal.VEN015aClick(Sender: TObject);
 begin
   try
-    VEN015a.Enabled:= False;
+//    VEN015a.Enabled:= False;
+    ACVEN015a.Enabled := False;
     frmVendasVendedorCliente:=TfrmVendasVendedorCliente.Create(Self);
     frmVendasVendedorCliente.Show;
     VerificaFormAberto;
   except;
-    VEN015a.Enabled:= True;
+//    VEN015a.Enabled:= True;
+    ACVEN015a.Enabled := True;
     frmVendasVendedorCliente.Free;
   end;
 end;
@@ -3819,12 +3494,14 @@ end;
 procedure TFrmPrincipal.VEN073Click(Sender: TObject);
 begin
   try
-    VEN073.Enabled:= False;
+//    VEN073.Enabled:= False;
+    ACVEN073.Enabled:= False;
     frmReprogramarDevolucao:= TfrmReprogramarDevolucao.Create(Self);
     frmReprogramarDevolucao.Show;
     VerificaFormAberto
   except;
-    VEN073.Enabled:= True;
+//    VEN073.Enabled:= True;
+    ACVEN073.Enabled:= True;
     frmReprogramarDevolucao.Free;
   end;
 end;
@@ -3832,12 +3509,14 @@ end;
 procedure TFrmPrincipal.VEN074Click(Sender: TObject);
 begin
   try
-    VEN074.Enabled:= False;
+//    VEN074.Enabled:= False;
+    ACVEN074.Enabled:= False;
     frmEstoque:= TFrmEstoque.Create(Self);
     FrmEstoque.Show;
     VerificaFormAberto;
   except
-    VEN074.Enabled:= True;
+//    VEN074.Enabled:= True;
+    ACVEN074.Enabled:= True;
     FrmEstoque.Free;
   end;
 end;
@@ -3845,12 +3524,14 @@ end;
 procedure TFrmPrincipal.VEN075Click(Sender: TObject);
 begin
   try
-    VEN075.Enabled:= False;
+//    VEN075.Enabled:= False;
+    ACVEN075.Enabled:= False;
     FrmRelVendaCliente:= TFrmRelVendaCliente.Create(Self);
     FrmRelVendaCliente.Show;
     VerificaFormAberto;
   except
-    VEN075.Enabled:= True;
+//    VEN075.Enabled:= True;
+    ACVEN075.Enabled:= True;
     FrmRelVendaCliente.Free;
   end;
 end;
@@ -3858,12 +3539,14 @@ end;
 procedure TFrmPrincipal.VEN076Click(Sender: TObject);
 begin
   try
-    VEN076.Enabled:= False;
+//    VEN076.Enabled:= False;
+    ACControleCaixas.Enabled:= False;
     FrmEntradaSaidaCaixas := TFrmEntradaSaidaCaixas.Create(Self);
     FrmEntradaSaidaCaixas.Show;
     VerificaFormAberto;
   except
-    VEN076.Enabled:= True;
+//    VEN076.Enabled:= True;
+    ACControleCaixas.Enabled := True;
     FrmEntradaSaidaCaixas.Free;
   end;
 end;
@@ -3876,14 +3559,14 @@ begin
   begin
     if (Screen.Forms[i].Name <> 'Fenha') and (Screen.Forms[i].Name <> 'FrmPrincipal') then
     begin
-      (Screen.Forms[i] as TForm).FormStyle := fsMDIChild;
-      (Screen.Forms[i] as TForm).BorderStyle := bsSingle;
+//      (Screen.Forms[i] as TForm).FormStyle := fsMDIChild;
+//      (Screen.Forms[i] as TForm).BorderStyle := bsSingle;
 //      (Screen.Forms[i] as TForm).Position := poScreenCenter;
 
 //      if (Screen.Forms[i] as TForm).WindowState = wsNormal then
 //        (Screen.Forms[i] as TForm).BorderIcons := [biSystemMenu,biMinimize]
 //      else
-        (Screen.Forms[i] as TForm).BorderIcons := [biSystemMenu,biMinimize,biMaximize];
+//        (Screen.Forms[i] as TForm).BorderIcons := [biSystemMenu,biMinimize,biMaximize];
 
       for j := 0 to (FrmPrincipal.ComponentCount -1) do
         if (FrmPrincipal.Components[j].ClassName) = 'TSplitView' then

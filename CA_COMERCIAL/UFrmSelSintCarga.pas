@@ -97,7 +97,8 @@ procedure TFrmSelSintCarga.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmSelSintCarga:=Nil;
-  FrmPrincipal.VEN014.Enabled:= True;
+//  FrmPrincipal.VEN014.Enabled:= True;
+  FrmPrincipal.ACVEN014.Enabled := True;
   Action:=caFree;
 end;
 
@@ -385,9 +386,9 @@ begin
     Screen.Cursor := crSQLWait;
 
     try
+      dlgSaveArquivo.FileName := 'SINTETICO_DE_CARGA' + StringReplace(DTini.Text, '/', '.', [rfReplaceAll]) + '_' + StringReplace(DtFim.Text, '/', '.', [rfReplaceAll]) + '.csv';
       if dlgSaveArquivo.Execute then
       begin
-        dlgSaveArquivo.FileName := 'SINTETICO_DE_CARGA' + StringReplace(DTini.Text, '/', '.', [rfReplaceAll]) + '_' + StringReplace(DtFim.Text, '/', '.', [rfReplaceAll]) + '.csv';
         AssignFile(Arquivo, dlgSaveArquivo.FileName);
         Rewrite(Arquivo);
 

@@ -27,8 +27,8 @@ object FrmImpNFRacao: TFrmImpNFRacao
   object PageControl1: TPageControl
     Left = 0
     Top = 41
-    Width = 776
-    Height = 446
+    Width = 780
+    Height = 447
     ActivePage = TabCriterio
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -40,6 +40,8 @@ object FrmImpNFRacao: TFrmImpNFRacao
     ParentFont = False
     TabOrder = 0
     OnMouseMove = PageControl1MouseMove
+    ExplicitWidth = 776
+    ExplicitHeight = 446
     object TabCriterio: TTabSheet
       Caption = 'Crit'#233'rio'
       object Label6: TLabel
@@ -431,7 +433,7 @@ object FrmImpNFRacao: TFrmImpNFRacao
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 776
+    Width = 780
     Height = 41
     Anchors = []
     ButtonHeight = 35
@@ -446,6 +448,7 @@ object FrmImpNFRacao: TFrmImpNFRacao
     ParentFont = False
     TabOrder = 1
     OnMouseMove = ToolBar1MouseMove
+    ExplicitWidth = 776
     object SB_PRIMEIRO: TSpeedButton
       Left = 0
       Top = 0
@@ -1820,8 +1823,8 @@ object FrmImpNFRacao: TFrmImpNFRacao
   end
   object Panel1: TPanel
     Left = 0
-    Top = 487
-    Width = 776
+    Top = 488
+    Width = 780
     Height = 17
     Align = alBottom
     Font.Charset = DEFAULT_CHARSET
@@ -1833,6 +1836,8 @@ object FrmImpNFRacao: TFrmImpNFRacao
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
+    ExplicitTop = 487
+    ExplicitWidth = 776
   end
   object QrNF: TOraQuery
     Session = FrmPrincipal.DB

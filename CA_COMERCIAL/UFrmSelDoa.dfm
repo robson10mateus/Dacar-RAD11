@@ -1,8 +1,7 @@
 object FrmSelRelDoa: TFrmSelRelDoa
   Left = 452
   Top = 217
-  BorderIcons = []
-  BorderStyle = bsDialog
+  BorderStyle = bsSingle
   Caption = 'Relat'#243'rio de Doa'#231#227'o'
   ClientHeight = 377
   ClientWidth = 399
@@ -12,7 +11,9 @@ object FrmSelRelDoa: TFrmSelRelDoa
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  FormStyle = fsMDIChild
   Position = poScreenCenter
+  Visible = True
   OnClose = FormClose
   OnCreate = FormCreate
   TextHeight = 15
@@ -31,8 +32,8 @@ object FrmSelRelDoa: TFrmSelRelDoa
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 403
-    ExplicitHeight = 378
+    ExplicitWidth = 395
+    ExplicitHeight = 376
     object Label1: TLabel
       Left = 77
       Top = 44

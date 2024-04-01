@@ -22,7 +22,7 @@ object FrmProgRacao: TFrmProgRacao
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 923
+    Width = 927
     Height = 41
     Anchors = []
     ButtonHeight = 37
@@ -36,6 +36,7 @@ object FrmProgRacao: TFrmProgRacao
     Font.Style = []
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 923
     object SB_Relatorio: TSpeedButton
       Left = 0
       Top = 0
@@ -461,7 +462,7 @@ object FrmProgRacao: TFrmProgRacao
   object Panel1: TPanel
     Left = 0
     Top = 41
-    Width = 923
+    Width = 927
     Height = 54
     Align = alTop
     Font.Charset = DEFAULT_CHARSET
@@ -472,6 +473,7 @@ object FrmProgRacao: TFrmProgRacao
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 923
     object Label49: TLabel
       Left = 24
       Top = 9
@@ -599,8 +601,8 @@ object FrmProgRacao: TFrmProgRacao
   object DBGrid1: TDBGrid
     Left = 0
     Top = 95
-    Width = 923
-    Height = 403
+    Width = 927
+    Height = 404
     Align = alClient
     Color = clWhite
     DataSource = Ds

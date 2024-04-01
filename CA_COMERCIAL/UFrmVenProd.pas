@@ -121,7 +121,8 @@ procedure TFrmVenProd.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmVenProd:=nil;
-  FrmPrincipal.VEN071.Enabled:= True;
+//  FrmPrincipal.VEN071.Enabled:= True;
+  FrmPrincipal.ACVEN071.Enabled:= True;
   Action:=caFree;
 end;
 

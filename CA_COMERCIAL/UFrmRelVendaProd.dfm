@@ -7,14 +7,13 @@ object FrmRelVendaProd: TFrmRelVendaProd
   VertScrollBar.Position = 42
   VertScrollBar.Range = 1142
   Caption = 'Relat'#243'rio de Vendas por Produtos'
-  Color = clBackground
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
   WindowState = wsMaximized
-  PixelsPerInch = 96
   TextHeight = 15
   object RLReport1: TRLReport
     Left = 10
@@ -24,7 +23,7 @@ object FrmRelVendaProd: TFrmRelVendaProd
     DataSource = DSDoa
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
-    Font.Height = 11
+    Font.Height = 13
     Font.Name = 'Arial'
     Font.Pitch = fpVariable
     Font.Style = [fsUnderline]
@@ -43,7 +42,7 @@ object FrmRelVendaProd: TFrmRelVendaProd
         AutoSize = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 11
+        Font.Height = 13
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = [fsBold]
@@ -58,7 +57,7 @@ object FrmRelVendaProd: TFrmRelVendaProd
       BandType = btHeader
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
-      Font.Height = 11
+      Font.Height = 13
       Font.Name = 'Arial'
       Font.Pitch = fpVariable
       Font.Style = []
@@ -80,7 +79,7 @@ object FrmRelVendaProd: TFrmRelVendaProd
         Caption = 'C'#243'd.'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 12
+        Font.Height = 11
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = [fsBold]
@@ -89,117 +88,132 @@ object FrmRelVendaProd: TFrmRelVendaProd
       object RLLabel6: TRLLabel
         Left = 30
         Top = 5
-        Width = 48
-        Height = 15
+        Width = 47
+        Height = 14
         Caption = 'Produto'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 12
+        Font.Height = 11
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = [fsBold]
         ParentFont = False
       end
       object RLLabel8: TRLLabel
-        Left = 279
+        Left = 246
         Top = 5
-        Width = 46
-        Height = 15
+        Width = 44
+        Height = 14
         Alignment = taRightJustify
         Caption = 'Cx. Ped'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 12
+        Font.Height = 11
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = [fsBold]
         ParentFont = False
       end
       object RLLabel11: TRLLabel
-        Left = 349
+        Left = 311
         Top = 5
-        Width = 46
-        Height = 15
+        Width = 44
+        Height = 14
         Alignment = taRightJustify
         Caption = 'Kg. Ped'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 12
+        Font.Height = 11
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = [fsBold]
         ParentFont = False
       end
       object RLLabel12: TRLLabel
-        Left = 403
+        Left = 357
         Top = 5
-        Width = 42
-        Height = 15
+        Width = 48
+        Height = 14
         Alignment = taRightJustify
-        Caption = 'Unit Pv'
+        Caption = 'Unit Ped'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 12
+        Font.Height = 11
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = [fsBold]
         ParentFont = False
       end
       object RLLabel15: TRLLabel
-        Left = 461
+        Left = 417
         Top = 5
-        Width = 59
-        Height = 15
+        Width = 58
+        Height = 14
         Alignment = taRightJustify
         Caption = 'TT Pedido'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 12
+        Font.Height = 11
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = [fsBold]
         ParentFont = False
       end
       object RLLabel19: TRLLabel
-        Left = 525
+        Left = 483
         Top = 5
-        Width = 45
-        Height = 15
+        Width = 42
+        Height = 14
         Alignment = taRightJustify
         Caption = 'Cx. Exp'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 12
+        Font.Height = 11
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = [fsBold]
         ParentFont = False
       end
       object RLLabel20: TRLLabel
-        Left = 579
+        Left = 537
         Top = 5
-        Width = 56
-        Height = 15
+        Width = 53
+        Height = 14
         Alignment = taRightJustify
         Caption = 'Kg Exped'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 12
+        Font.Height = 11
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = [fsBold]
         ParentFont = False
       end
       object RLLabel5: TRLLabel
-        Left = 645
+        Left = 647
         Top = 5
-        Width = 70
-        Height = 15
+        Width = 68
+        Height = 14
         Alignment = taRightJustify
         Caption = 'Vl. Faturado'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 12
+        Font.Height = 11
+        Font.Name = 'Arial'
+        Font.Pitch = fpVariable
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object RLLabel14: TRLLabel
+        Left = 594
+        Top = 5
+        Width = 46
+        Height = 14
+        Alignment = taRightJustify
+        Caption = 'Unit Exp'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = 11
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = [fsBold]
@@ -214,7 +228,7 @@ object FrmRelVendaProd: TFrmRelVendaProd
       object RLDBText1: TRLDBText
         Left = 30
         Top = 1
-        Width = 245
+        Width = 210
         Height = 14
         AutoSize = False
         Color = clWhite
@@ -222,7 +236,7 @@ object FrmRelVendaProd: TFrmRelVendaProd
         DataSource = DSDoa
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 11
+        Font.Height = 10
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
@@ -232,9 +246,9 @@ object FrmRelVendaProd: TFrmRelVendaProd
         Transparent = False
       end
       object RLDBText5: TRLDBText
-        Left = 575
+        Left = 525
         Top = 1
-        Width = 60
+        Width = 65
         Height = 14
         Alignment = taRightJustify
         AutoSize = False
@@ -243,7 +257,7 @@ object FrmRelVendaProd: TFrmRelVendaProd
         DataSource = DSDoa
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 11
+        Font.Height = 10
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
@@ -253,7 +267,7 @@ object FrmRelVendaProd: TFrmRelVendaProd
         Transparent = False
       end
       object RLDBText6: TRLDBText
-        Left = 395
+        Left = 355
         Top = 1
         Width = 50
         Height = 14
@@ -264,7 +278,7 @@ object FrmRelVendaProd: TFrmRelVendaProd
         DataSource = DSDoa
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 11
+        Font.Height = 10
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
@@ -274,7 +288,7 @@ object FrmRelVendaProd: TFrmRelVendaProd
         Transparent = False
       end
       object RLDBText7: TRLDBText
-        Left = 450
+        Left = 405
         Top = 1
         Width = 70
         Height = 14
@@ -285,7 +299,7 @@ object FrmRelVendaProd: TFrmRelVendaProd
         DataSource = DSDoa
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 11
+        Font.Height = 10
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
@@ -305,7 +319,7 @@ object FrmRelVendaProd: TFrmRelVendaProd
         DataSource = DSDoa
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 11
+        Font.Height = 10
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
@@ -315,7 +329,7 @@ object FrmRelVendaProd: TFrmRelVendaProd
         Transparent = False
       end
       object RLDBText9: TRLDBText
-        Left = 275
+        Left = 240
         Top = 1
         Width = 50
         Height = 14
@@ -326,7 +340,7 @@ object FrmRelVendaProd: TFrmRelVendaProd
         DataSource = DSDoa
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 11
+        Font.Height = 10
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
@@ -336,7 +350,7 @@ object FrmRelVendaProd: TFrmRelVendaProd
         Transparent = False
       end
       object RLDBText10: TRLDBText
-        Left = 330
+        Left = 290
         Top = 1
         Width = 65
         Height = 14
@@ -347,7 +361,7 @@ object FrmRelVendaProd: TFrmRelVendaProd
         DataSource = DSDoa
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 11
+        Font.Height = 10
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
@@ -357,7 +371,7 @@ object FrmRelVendaProd: TFrmRelVendaProd
         Transparent = False
       end
       object RLDBText11: TRLDBText
-        Left = 520
+        Left = 475
         Top = 1
         Width = 50
         Height = 14
@@ -368,7 +382,7 @@ object FrmRelVendaProd: TFrmRelVendaProd
         DataSource = DSDoa
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 11
+        Font.Height = 10
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
@@ -389,7 +403,28 @@ object FrmRelVendaProd: TFrmRelVendaProd
         DataSource = DSDoa
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 11
+        Font.Height = 10
+        Font.Name = 'Arial'
+        Font.Pitch = fpVariable
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+        Text = ''
+        Transparent = False
+      end
+      object RLDBText3: TRLDBText
+        Left = 590
+        Top = 1
+        Width = 50
+        Height = 14
+        Alignment = taRightJustify
+        AutoSize = False
+        Color = clWhite
+        DataField = 'VL_UNIT_EXP'
+        DataSource = DSDoa
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = 10
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
@@ -467,6 +502,7 @@ object FrmRelVendaProd: TFrmRelVendaProd
         Width = 45
         Height = 16
         AutoSize = False
+        Caption = '{Qt}. Ped'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = 12
@@ -528,6 +564,7 @@ object FrmRelVendaProd: TFrmRelVendaProd
         Width = 45
         Height = 16
         AutoSize = False
+        Caption = '{Qt}. Ped'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = 12
@@ -631,7 +668,7 @@ object FrmRelVendaProd: TFrmRelVendaProd
         Caption = 'PEDIDOS LAN'#199'ADOS'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 11
+        Font.Height = 13
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = [fsBold]
@@ -648,7 +685,7 @@ object FrmRelVendaProd: TFrmRelVendaProd
         Caption = 'PEDIDOS FATURADOS'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 11
+        Font.Height = 13
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = [fsBold]
@@ -665,23 +702,15 @@ object FrmRelVendaProd: TFrmRelVendaProd
         Caption = 'RESUMO DE CONTAS'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 11
+        Font.Height = 13
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
       end
-      object RLDraw4: TRLDraw
-        Left = 0
-        Top = 0
-        Width = 718
-        Height = 6
-        Align = faTop
-        DrawKind = dkLine
-      end
       object RLLabel2: TRLLabel
-        Left = 235
+        Left = 195
         Top = 6
         Width = 40
         Height = 14
@@ -697,7 +726,7 @@ object FrmRelVendaProd: TFrmRelVendaProd
         Transparent = False
       end
       object RLDBResult1: TRLDBResult
-        Left = 275
+        Left = 240
         Top = 5
         Width = 50
         Height = 15
@@ -723,7 +752,7 @@ object FrmRelVendaProd: TFrmRelVendaProd
         Transparent = False
       end
       object RLDBResult4: TRLDBResult
-        Left = 330
+        Left = 290
         Top = 5
         Width = 65
         Height = 15
@@ -748,29 +777,8 @@ object FrmRelVendaProd: TFrmRelVendaProd
         Text = ''
         Transparent = False
       end
-      object RLLabel10: TRLLabel
-        Left = 386
-        Top = 5
-        Width = 59
-        Height = 16
-        Alignment = taRightJustify
-        Borders.Sides = sdCustom
-        Borders.DrawLeft = False
-        Borders.DrawTop = True
-        Borders.DrawRight = False
-        Borders.DrawBottom = False
-        Borders.FixedTop = True
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Height = 11
-        Font.Name = 'Arial'
-        Font.Pitch = fpVariable
-        Font.Style = [fsBold]
-        ParentFont = False
-        Transparent = False
-      end
       object RLDBResult7: TRLDBResult
-        Left = 450
+        Left = 405
         Top = 5
         Width = 70
         Height = 15
@@ -796,7 +804,7 @@ object FrmRelVendaProd: TFrmRelVendaProd
         Transparent = False
       end
       object RLDBResult10: TRLDBResult
-        Left = 522
+        Left = 475
         Top = 5
         Width = 48
         Height = 15
@@ -822,9 +830,9 @@ object FrmRelVendaProd: TFrmRelVendaProd
         Transparent = False
       end
       object RLDBResult11: TRLDBResult
-        Left = 575
+        Left = 525
         Top = 5
-        Width = 60
+        Width = 65
         Height = 15
         Alignment = taRightJustify
         AutoSize = False
@@ -885,6 +893,58 @@ object FrmRelVendaProd: TFrmRelVendaProd
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
+        Transparent = False
+      end
+      object RLDBResult15: TRLDBResult
+        Left = 355
+        Top = 5
+        Width = 50
+        Height = 15
+        Alignment = taRightJustify
+        AutoSize = False
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = False
+        Borders.DrawTop = True
+        Borders.DrawRight = False
+        Borders.DrawBottom = False
+        Borders.FixedTop = True
+        DataField = 'VL_UNIT'
+        DataSource = DSDoa
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = 11
+        Font.Name = 'Arial'
+        Font.Pitch = fpVariable
+        Font.Style = [fsBold]
+        Info = riAverage
+        ParentFont = False
+        Text = ''
+        Transparent = False
+      end
+      object RLDBResult16: TRLDBResult
+        Left = 590
+        Top = 5
+        Width = 50
+        Height = 15
+        Alignment = taRightJustify
+        AutoSize = False
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = False
+        Borders.DrawTop = True
+        Borders.DrawRight = False
+        Borders.DrawBottom = False
+        Borders.FixedTop = True
+        DataField = 'VL_UNIT_EXP'
+        DataSource = DSDoa
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = 11
+        Font.Name = 'Arial'
+        Font.Pitch = fpVariable
+        Font.Style = [fsBold]
+        Info = riAverage
+        ParentFont = False
+        Text = ''
         Transparent = False
       end
     end
@@ -969,7 +1029,7 @@ object FrmRelVendaProd: TFrmRelVendaProd
         Caption = 'Per'#237'odo'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 11
+        Font.Height = 13
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = [fsBold]
@@ -1737,7 +1797,7 @@ object FrmRelVendaProd: TFrmRelVendaProd
         AutoSize = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 11
+        Font.Height = 13
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = [fsBold]
@@ -1759,7 +1819,7 @@ object FrmRelVendaProd: TFrmRelVendaProd
         AutoSize = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 11
+        Font.Height = 13
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = [fsBold]
@@ -1939,7 +1999,7 @@ object FrmRelVendaProd: TFrmRelVendaProd
         Caption = 'Resumo por Produto N'#227'o Expedido'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 11
+        Font.Height = 13
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = [fsBold]
@@ -1966,7 +2026,7 @@ object FrmRelVendaProd: TFrmRelVendaProd
       ParentColor = False
       Transparent = False
       object RLDBResult2: TRLDBResult
-        Left = 450
+        Left = 405
         Top = 5
         Width = 70
         Height = 15
@@ -1992,7 +2052,7 @@ object FrmRelVendaProd: TFrmRelVendaProd
         Transparent = False
       end
       object RLLabel7: TRLLabel
-        Left = 235
+        Left = 195
         Top = 6
         Width = 40
         Height = 14
@@ -2008,9 +2068,9 @@ object FrmRelVendaProd: TFrmRelVendaProd
         Transparent = False
       end
       object RLDBResult3: TRLDBResult
-        Left = 575
+        Left = 525
         Top = 5
-        Width = 60
+        Width = 65
         Height = 15
         Alignment = taRightJustify
         AutoSize = False
@@ -2034,7 +2094,7 @@ object FrmRelVendaProd: TFrmRelVendaProd
         Transparent = False
       end
       object RLDBResult5: TRLDBResult
-        Left = 275
+        Left = 240
         Top = 5
         Width = 50
         Height = 15
@@ -2060,7 +2120,7 @@ object FrmRelVendaProd: TFrmRelVendaProd
         Transparent = False
       end
       object RLDBResult6: TRLDBResult
-        Left = 330
+        Left = 290
         Top = 5
         Width = 65
         Height = 15
@@ -2086,7 +2146,7 @@ object FrmRelVendaProd: TFrmRelVendaProd
         Transparent = False
       end
       object RLDBResult8: TRLDBResult
-        Left = 522
+        Left = 475
         Top = 5
         Width = 48
         Height = 15
@@ -2109,27 +2169,6 @@ object FrmRelVendaProd: TFrmRelVendaProd
         Info = riSum
         ParentFont = False
         Text = ''
-        Transparent = False
-      end
-      object RLLabel9: TRLLabel
-        Left = 392
-        Top = 5
-        Width = 53
-        Height = 16
-        Alignment = taRightJustify
-        Borders.Sides = sdCustom
-        Borders.DrawLeft = False
-        Borders.DrawTop = True
-        Borders.DrawRight = False
-        Borders.DrawBottom = False
-        Borders.FixedTop = True
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Height = 11
-        Font.Name = 'Arial'
-        Font.Pitch = fpVariable
-        Font.Style = [fsBold]
-        ParentFont = False
         Transparent = False
       end
       object RLDBResult9: TRLDBResult
@@ -2158,13 +2197,56 @@ object FrmRelVendaProd: TFrmRelVendaProd
         Text = ''
         Transparent = False
       end
-      object RLDraw10: TRLDraw
-        Left = 0
-        Top = 0
-        Width = 718
-        Height = 6
-        Align = faTop
-        DrawKind = dkLine
+      object RLDBResult13: TRLDBResult
+        Left = 590
+        Top = 5
+        Width = 50
+        Height = 15
+        Alignment = taRightJustify
+        AutoSize = False
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = False
+        Borders.DrawTop = True
+        Borders.DrawRight = False
+        Borders.DrawBottom = False
+        Borders.FixedTop = True
+        DataField = 'VL_UNIT_EXP'
+        DataSource = DSDoa
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = 11
+        Font.Name = 'Arial'
+        Font.Pitch = fpVariable
+        Font.Style = [fsBold]
+        Info = riAverage
+        ParentFont = False
+        Text = ''
+        Transparent = False
+      end
+      object RLDBResult14: TRLDBResult
+        Left = 355
+        Top = 5
+        Width = 50
+        Height = 15
+        Alignment = taRightJustify
+        AutoSize = False
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = False
+        Borders.DrawTop = True
+        Borders.DrawRight = False
+        Borders.DrawBottom = False
+        Borders.FixedTop = True
+        DataField = 'VL_UNIT'
+        DataSource = DSDoa
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = 11
+        Font.Name = 'Arial'
+        Font.Pitch = fpVariable
+        Font.Style = [fsBold]
+        Info = riAverage
+        ParentFont = False
+        Text = ''
         Transparent = False
       end
     end

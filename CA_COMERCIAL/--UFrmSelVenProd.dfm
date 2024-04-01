@@ -11,7 +11,7 @@ object FrmSelVenProd: TFrmSelVenProd
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = 11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'helvetica'
   Font.Pitch = fpVariable
   Font.Style = []
   FormStyle = fsMDIChild
@@ -22,13 +22,21 @@ object FrmSelVenProd: TFrmSelVenProd
   OnClose = FormClose
   OnDestroy = FormDestroy
   OnShow = FormShow
-  TextHeight = 13
+  TextHeight = 10
   object Panel1: TPanel
     Left = 0
     Top = 0
     Width = 770
     Height = 45
     Align = alTop
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = 15
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Style = []
+    ParentBackground = False
+    ParentFont = False
     TabOrder = 0
     ExplicitWidth = 766
     object btnExcel: TSpeedButton
@@ -261,6 +269,14 @@ object FrmSelVenProd: TFrmSelVenProd
     Width = 770
     Height = 424
     Align = alClient
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = 15
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Style = []
+    ParentBackground = False
+    ParentFont = False
     TabOrder = 1
     ExplicitWidth = 766
     ExplicitHeight = 423
@@ -313,7 +329,7 @@ object FrmSelVenProd: TFrmSelVenProd
       Width = 260
       Height = 15
       Caption = '* N'#195'O INFLUENCIAM NOS TOTAIS POR CONTA'
-      Color = clBtnFace
+      Color = clBackground
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = 15
@@ -401,7 +417,7 @@ object FrmSelVenProd: TFrmSelVenProd
       Columns = 2
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
-      Font.Height = 15
+      Font.Height = 13
       Font.Name = 'Arial'
       Font.Pitch = fpVariable
       Font.Style = [fsBold]
@@ -552,10 +568,10 @@ object FrmSelVenProd: TFrmSelVenProd
       OnClick = BtAtivarClick
     end
     object BPESQ: TBitBtn
-      Left = 615
-      Top = 57
+      Left = 616
+      Top = 56
       Width = 23
-      Height = 20
+      Height = 23
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = 16
@@ -612,10 +628,11 @@ object FrmSelVenProd: TFrmSelVenProd
       Height = 70
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 13
+      Font.Height = 15
       Font.Name = 'Arial'
       Font.Pitch = fpVariable
       Font.Style = []
+      ParentBackground = False
       ParentFont = False
       TabOrder = 13
       object Lcli: TLabel
@@ -746,7 +763,7 @@ object FrmSelVenProd: TFrmSelVenProd
       Checked = True
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 13
+      Font.Height = 15
       Font.Name = 'Arial'
       Font.Pitch = fpVariable
       Font.Style = []
@@ -762,7 +779,7 @@ object FrmSelVenProd: TFrmSelVenProd
       Caption = 'Exibir Qtde n'#227'o Expedidas'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 13
+      Font.Height = 15
       Font.Name = 'Arial'
       Font.Pitch = fpVariable
       Font.Style = []
@@ -793,15 +810,7 @@ object FrmSelVenProd: TFrmSelVenProd
         'g_Exped,'
       
         '  Sum(PEDIDO_VENDA_ITEM.Qn_Pesopadrexpeitempedivend*PEDIDO_VENDA' +
-        '_ITEM.VL_UNITITEMPEDIVEND) AS Vl_Faturado,'
-      
-        '  CASE WHEN Sum(PEDIDO_VENDA_ITEM.Qn_Pesopadrexpeitempedivend*PE' +
-        'DIDO_VENDA_ITEM.VL_UNITITEMPEDIVEND) <> 0 THEN '
-      
-        '    Sum(PEDIDO_VENDA_ITEM.Qn_Pesopadrexpeitempedivend*PEDIDO_VEN' +
-        'DA_ITEM.VL_UNITITEMPEDIVEND)/Sum(Nvl(PEDIDO_VENDA_ITEM.QN_PESOPA' +
-        'DREXPEITEMPEDIVEND,0))'
-      '  ELSE 0 END AS Vl_Unit_Exp'
+        '_ITEM.VL_UNITITEMPEDIVEND) AS Vl_Faturado'
       'FROM'
       '  PEDIDO_VENDA_ITEM,'
       '  PEDIDO_VENDA,'
@@ -885,10 +894,6 @@ object FrmSelVenProd: TFrmSelVenProd
     end
     object QrVL_FATURADO: TFloatField
       FieldName = 'VL_FATURADO'
-      DisplayFormat = '#,##0.00'
-    end
-    object QrVL_UNIT_EXP: TFloatField
-      FieldName = 'VL_UNIT_EXP'
       DisplayFormat = '#,##0.00'
     end
   end

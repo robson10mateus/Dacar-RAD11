@@ -2,6 +2,8 @@ object FrmSelPedagio: TFrmSelPedagio
   Left = 192
   Top = 107
   ActiveControl = MEdIni
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
   Caption = 'Relat'#243'rio Pra'#231'as de Ped'#225'gio'
   ClientHeight = 265
   ClientWidth = 328
@@ -11,6 +13,8 @@ object FrmSelPedagio: TFrmSelPedagio
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  FormStyle = fsMDIChild
+  Visible = True
   OnClose = FormClose
   OnShow = FormShow
   TextHeight = 15
@@ -28,8 +32,8 @@ object FrmSelPedagio: TFrmSelPedagio
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 336
-    ExplicitHeight = 267
+    ExplicitWidth = 324
+    ExplicitHeight = 264
     object Label1: TLabel
       Left = 61
       Top = 73
@@ -62,11 +66,11 @@ object FrmSelPedagio: TFrmSelPedagio
       Left = 240
       Top = 68
       Width = 73
-      Height = 17
+      Height = 21
       EditMask = '!99/99/0000;1;_'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
-      Font.Height = 11
+      Font.Height = 14
       Font.Name = 'Microsoft Sans Serif'
       Font.Pitch = fpVariable
       Font.Style = []
@@ -79,11 +83,11 @@ object FrmSelPedagio: TFrmSelPedagio
       Left = 240
       Top = 120
       Width = 73
-      Height = 17
+      Height = 21
       EditMask = '!99/99/0000;1;_'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
-      Font.Height = 11
+      Font.Height = 14
       Font.Name = 'Microsoft Sans Serif'
       Font.Pitch = fpVariable
       Font.Style = []

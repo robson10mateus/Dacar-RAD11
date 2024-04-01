@@ -622,7 +622,8 @@ procedure TFrmCadRegGeog.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmCadRegGeog:=nil;
-  FrmPrincipal.CadastrodeRegioGeogrfica1.Enabled:= True;
+//  FrmPrincipal.CadastrodeRegioGeogrfica1.Enabled:= True;
+  FrmPrincipal.ACCadRegGeo.Enabled:= True;
   Action:=caFree;
 end;
 

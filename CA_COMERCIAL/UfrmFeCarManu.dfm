@@ -14,8 +14,9 @@ object frmFeCarManu: TfrmFeCarManu
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
-  FormStyle = fsStayOnTop
+  FormStyle = fsMDIChild
   Position = poDefault
+  Visible = True
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
@@ -23,7 +24,7 @@ object frmFeCarManu: TfrmFeCarManu
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 627
+    Width = 631
     Height = 41
     Anchors = []
     ButtonHeight = 37
@@ -37,6 +38,7 @@ object frmFeCarManu: TfrmFeCarManu
     Font.Style = []
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 627
     object Sb_Sair: TSpeedButton
       Left = 0
       Top = 0
@@ -240,8 +242,8 @@ object frmFeCarManu: TfrmFeCarManu
   object Panel1: TPanel
     Left = 0
     Top = 41
-    Width = 627
-    Height = 232
+    Width = 631
+    Height = 233
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -251,6 +253,8 @@ object frmFeCarManu: TfrmFeCarManu
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 627
+    ExplicitHeight = 232
     object DBGrid1: TDBGrid
       Left = 1
       Top = 1
@@ -323,8 +327,8 @@ object frmFeCarManu: TfrmFeCarManu
   end
   object Panel2: TPanel
     Left = 0
-    Top = 273
-    Width = 627
+    Top = 274
+    Width = 631
     Height = 41
     Align = alBottom
     Font.Charset = DEFAULT_CHARSET
@@ -335,6 +339,8 @@ object frmFeCarManu: TfrmFeCarManu
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
+    ExplicitTop = 273
+    ExplicitWidth = 627
     object Label1: TLabel
       Left = 30
       Top = 13

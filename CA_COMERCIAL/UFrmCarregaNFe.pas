@@ -2131,7 +2131,8 @@ begin
   Qry_NFEXML.Close;
 
   FrmCarregaNFe:=nil;
-  FrmPrincipal.VEN038.Enabled:= True;
+//  FrmPrincipal.VEN038.Enabled:= True;
+  FrmPrincipal.ACVEN038.Enabled:= True;
   Action:=caFree;
 end;
 

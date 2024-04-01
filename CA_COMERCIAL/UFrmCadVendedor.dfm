@@ -22,8 +22,8 @@ object FrmCadVendedor: TFrmCadVendedor
   object PageControl: TPageControl
     Left = 0
     Top = 45
-    Width = 1010
-    Height = 525
+    Width = 1014
+    Height = 526
     ActivePage = TabDetalhes
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -35,6 +35,8 @@ object FrmCadVendedor: TFrmCadVendedor
     ParentFont = False
     TabOrder = 0
     OnChange = PageControlChange
+    ExplicitWidth = 1010
+    ExplicitHeight = 525
     object TabCriterio: TTabSheet
       Caption = ' Crit'#233'rios '
       object Lbl_Filtro: TLabel
@@ -549,11 +551,13 @@ object FrmCadVendedor: TFrmCadVendedor
       object Panel3: TPanel
         Left = 0
         Top = 0
-        Width = 1002
-        Height = 495
+        Width = 1006
+        Height = 496
         Align = alClient
         ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 1002
+        ExplicitHeight = 495
         object Label15: TLabel
           Left = 10
           Top = 130
@@ -1564,7 +1568,7 @@ object FrmCadVendedor: TFrmCadVendedor
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 1010
+    Width = 1014
     Height = 45
     Align = alTop
     Font.Charset = DEFAULT_CHARSET
@@ -1575,6 +1579,7 @@ object FrmCadVendedor: TFrmCadVendedor
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 1010
     object SB_ULTIMO: TSpeedButton
       Left = 110
       Top = 5

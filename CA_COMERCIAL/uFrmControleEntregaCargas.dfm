@@ -24,7 +24,7 @@ object FrmControleEntregaCargas: TFrmControleEntregaCargas
   object pnlBotoes: TPanel
     Left = 0
     Top = 0
-    Width = 1153
+    Width = 1157
     Height = 40
     Align = alTop
     Font.Charset = DEFAULT_CHARSET
@@ -35,6 +35,7 @@ object FrmControleEntregaCargas: TFrmControleEntregaCargas
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 1153
     object btnPrimeiro: TSpeedButton
       Left = 5
       Top = 2
@@ -1299,8 +1300,8 @@ object FrmControleEntregaCargas: TFrmControleEntregaCargas
   object PageControl1: TPageControl
     Left = 0
     Top = 40
-    Width = 1153
-    Height = 580
+    Width = 1157
+    Height = 581
     ActivePage = tbsFiltros
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -1312,6 +1313,8 @@ object FrmControleEntregaCargas: TFrmControleEntregaCargas
     ParentFont = False
     TabOrder = 1
     OnChange = PageControl1Change
+    ExplicitWidth = 1153
+    ExplicitHeight = 580
     object tbsFiltros: TTabSheet
       Caption = ' Filtros '
       object pnlFiltros: TPanel

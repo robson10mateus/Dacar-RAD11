@@ -316,6 +316,7 @@ procedure TFrmParamComercial.FormClose(Sender: TObject;
   var Action: TCloseAction);
 Begin
   FrmParamComercial:=nil;
+//  FrmPrincipal.VEN019.Enabled:= True;
   FrmPrincipal.VEN019.Enabled:= True;
   Action:=caFree;
 End;

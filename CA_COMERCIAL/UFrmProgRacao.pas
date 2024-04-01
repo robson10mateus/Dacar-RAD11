@@ -76,7 +76,8 @@ procedure TFrmProgRacao.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmProgRacao:=nil;
-  FrmPrincipal.VEN044.Enabled:= True;
+//  FrmPrincipal.VEN044.Enabled:= True;
+  FrmPrincipal.ACVEN044.Enabled:= True;
   Action:=caFree;
 end;
 

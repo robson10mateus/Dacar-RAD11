@@ -138,7 +138,8 @@ procedure TfrmPedidosAbaixoTabela.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   frmPedidosAbaixoTabela:=Nil;
-  FrmPrincipal.VEN066.Enabled:= True;
+//  FrmPrincipal.VEN066.Enabled:= True;
+  FrmPrincipal.ACVEN066.Enabled:= True;
   Action:=caFree;
 end;
 

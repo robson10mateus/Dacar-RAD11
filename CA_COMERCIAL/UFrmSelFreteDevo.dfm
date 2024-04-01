@@ -2,17 +2,18 @@ object FrmSelFreteDevo: TFrmSelFreteDevo
   Left = 225
   Top = 120
   ActiveControl = DTIni
-  BorderIcons = []
-  BorderStyle = bsDialog
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
   Caption = 'Relat'#243'rio de Frete das Devolu'#231#245'es'
-  ClientHeight = 315
+  ClientHeight = 334
   ClientWidth = 399
-  Color = clBackground
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  FormStyle = fsMDIChild
   Position = poScreenCenter
   Visible = True
   OnClose = FormClose
@@ -22,7 +23,7 @@ object FrmSelFreteDevo: TFrmSelFreteDevo
     Left = 0
     Top = 0
     Width = 399
-    Height = 315
+    Height = 334
     Align = alClient
     BevelWidth = 3
     Font.Charset = DEFAULT_CHARSET
@@ -33,8 +34,8 @@ object FrmSelFreteDevo: TFrmSelFreteDevo
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 403
-    ExplicitHeight = 316
+    ExplicitWidth = 395
+    ExplicitHeight = 314
     object Label1: TLabel
       Left = 38
       Top = 56

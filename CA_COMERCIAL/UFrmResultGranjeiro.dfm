@@ -32,6 +32,8 @@ object FrmResultGranjeiro: TFrmResultGranjeiro
     Font.Style = []
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 1028
+    ExplicitHeight = 488
     object Tab_Criterio: TTabSheet
       Caption = 'Crit'#233'rio'
       object Label6: TLabel

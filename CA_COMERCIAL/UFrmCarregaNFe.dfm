@@ -6,6 +6,7 @@ object FrmCarregaNFe: TFrmCarregaNFe
   HorzScrollBar.Range = 521
   VertScrollBar.Range = 15
   ActiveControl = XmlSaida
+  BorderStyle = bsSingle
   Caption = 'Importa'#231#227'o do XML NFE Entrada / Saida - 1.0.2.29 - 30/10/2013'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -13,7 +14,9 @@ object FrmCarregaNFe: TFrmCarregaNFe
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Position = poScreenCenter
+  FormStyle = fsMDIChild
+  Position = poDefault
+  Visible = True
   WindowState = wsMaximized
   OnClose = FormClose
   OnShow = FormShow
@@ -22,7 +25,7 @@ object FrmCarregaNFe: TFrmCarregaNFe
     Left = 15
     Top = 0
     Width = 476
-    Height = 621
+    Height = 622
     Align = alLeft
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -32,6 +35,7 @@ object FrmCarregaNFe: TFrmCarregaNFe
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitHeight = 621
     object Panel2: TPanel
       Left = 1
       Top = 1
@@ -432,7 +436,7 @@ object FrmCarregaNFe: TFrmCarregaNFe
       Left = 1
       Top = 196
       Width = 474
-      Height = 208
+      Height = 209
       Align = alClient
       BorderStyle = bsNone
       DataSource = Dts_Notas
@@ -512,13 +516,14 @@ object FrmCarregaNFe: TFrmCarregaNFe
     end
     object Panel14: TPanel
       Left = 1
-      Top = 404
+      Top = 405
       Width = 474
       Height = 36
       Align = alBottom
       BevelInner = bvLowered
       ParentBackground = False
       TabOrder = 3
+      ExplicitTop = 404
       object spbLocalizaDestino: TSpeedButton
         Left = 445
         Top = 8
@@ -574,7 +579,7 @@ object FrmCarregaNFe: TFrmCarregaNFe
     end
     object ListaXML: TListBox
       Left = 1
-      Top = 440
+      Top = 441
       Width = 474
       Height = 144
       Align = alBottom
@@ -586,16 +591,18 @@ object FrmCarregaNFe: TFrmCarregaNFe
       ItemHeight = 15
       ParentFont = False
       TabOrder = 4
+      ExplicitTop = 440
     end
     object Panel15: TPanel
       Left = 1
-      Top = 584
+      Top = 585
       Width = 474
       Height = 36
       Align = alBottom
       BevelInner = bvLowered
       ParentBackground = False
       TabOrder = 5
+      ExplicitTop = 584
       object SpeedButton1: TSpeedButton
         Left = 445
         Top = 8
@@ -653,8 +660,8 @@ object FrmCarregaNFe: TFrmCarregaNFe
   object Panel4: TPanel
     Left = 506
     Top = 0
-    Width = 735
-    Height = 621
+    Width = 739
+    Height = 622
     Align = alClient
     BevelOuter = bvNone
     Font.Charset = DEFAULT_CHARSET
@@ -665,6 +672,8 @@ object FrmCarregaNFe: TFrmCarregaNFe
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 735
+    ExplicitHeight = 621
     object Panel6: TPanel
       Left = 0
       Top = 0
@@ -1341,7 +1350,7 @@ object FrmCarregaNFe: TFrmCarregaNFe
     Left = 491
     Top = 0
     Width = 15
-    Height = 621
+    Height = 622
     Align = alLeft
     BevelOuter = bvNone
     Font.Charset = DEFAULT_CHARSET
@@ -1352,12 +1361,13 @@ object FrmCarregaNFe: TFrmCarregaNFe
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
+    ExplicitHeight = 621
   end
   object Panel5: TPanel
-    Left = 1241
+    Left = 1245
     Top = 0
     Width = 15
-    Height = 621
+    Height = 622
     Align = alRight
     BevelOuter = bvNone
     Font.Charset = DEFAULT_CHARSET
@@ -1368,11 +1378,13 @@ object FrmCarregaNFe: TFrmCarregaNFe
     ParentBackground = False
     ParentFont = False
     TabOrder = 3
+    ExplicitLeft = 1241
+    ExplicitHeight = 621
   end
   object pnlStatus: TPanel
     Left = 0
-    Top = 621
-    Width = 1256
+    Top = 622
+    Width = 1260
     Height = 15
     Align = alBottom
     BevelOuter = bvNone
@@ -1384,12 +1396,14 @@ object FrmCarregaNFe: TFrmCarregaNFe
     ParentBackground = False
     ParentFont = False
     TabOrder = 4
+    ExplicitTop = 621
+    ExplicitWidth = 1256
   end
   object Panel13: TPanel
     Left = 0
     Top = 0
     Width = 15
-    Height = 621
+    Height = 622
     Align = alLeft
     BevelOuter = bvNone
     Font.Charset = DEFAULT_CHARSET
@@ -1400,6 +1414,7 @@ object FrmCarregaNFe: TFrmCarregaNFe
     ParentBackground = False
     ParentFont = False
     TabOrder = 5
+    ExplicitHeight = 621
   end
   object XMLDoc: TXMLDocument
     Left = 360

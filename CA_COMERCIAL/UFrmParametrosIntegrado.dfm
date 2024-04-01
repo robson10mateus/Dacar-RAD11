@@ -22,7 +22,7 @@ object FrmParametrosIntegrado: TFrmParametrosIntegrado
   object GroupBox1: TGroupBox
     Left = 0
     Top = 0
-    Width = 872
+    Width = 876
     Height = 123
     Align = alTop
     Caption = 'Drogas - Boletim Sanit'#225'rio'
@@ -33,6 +33,7 @@ object FrmParametrosIntegrado: TFrmParametrosIntegrado
     Font.Style = []
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 872
     object Nav_Drogas: TDBNavigator
       Left = 2
       Top = 17
@@ -81,7 +82,7 @@ object FrmParametrosIntegrado: TFrmParametrosIntegrado
   object Panel1: TPanel
     Left = 0
     Top = 123
-    Width = 872
+    Width = 876
     Height = 222
     Align = alTop
     Font.Charset = DEFAULT_CHARSET
@@ -92,6 +93,7 @@ object FrmParametrosIntegrado: TFrmParametrosIntegrado
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 872
     object GroupBox2: TGroupBox
       Left = 422
       Top = 1
@@ -227,8 +229,8 @@ object FrmParametrosIntegrado: TFrmParametrosIntegrado
   object Panel2: TPanel
     Left = 0
     Top = 345
-    Width = 872
-    Height = 191
+    Width = 876
+    Height = 192
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -238,6 +240,8 @@ object FrmParametrosIntegrado: TFrmParametrosIntegrado
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
+    ExplicitWidth = 872
+    ExplicitHeight = 191
     object GroupBox4: TGroupBox
       Left = 527
       Top = 1

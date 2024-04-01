@@ -101,7 +101,8 @@ procedure TFrmResultGranjeiro.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmResultGranjeiro:=nil;
-  FrmPrincipal.VEN045.Enabled:= True;
+//  FrmPrincipal.VEN045.Enabled:= True;
+  FrmPrincipal.ACVEN045.Enabled:= True;
   Action:=caFree;
 end;
 

@@ -424,7 +424,8 @@ procedure TFrmPedVendaCorte.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmPedVendaCorte:=nil;
-  FrmPrincipal.VEN037.Enabled:= True;
+//  FrmPrincipal.VEN037.Enabled:= True;
+  FrmPrincipal.ACVEN037.Enabled:= True;
   Action:=caFree;
 end;
 

@@ -72,7 +72,8 @@ procedure TFrmTranspChaveNFe.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmTranspChaveNFe:=nil;
-  FrmPrincipal.VEN041.Enabled:= True;
+//  FrmPrincipal.VEN041.Enabled:= True;
+  FrmPrincipal.ACVEN041.Enabled:= True;
   Action:=caFree;
 end;
 

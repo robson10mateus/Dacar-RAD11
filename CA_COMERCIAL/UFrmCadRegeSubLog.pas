@@ -633,7 +633,8 @@ procedure TFrmCadRegeSubLog.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmCadRegeSubLog:=nil;
-  FrmPrincipal.CadastrodeRegiesXSubregiesLogstica1.Enabled:= True;
+//  FrmPrincipal.CadastrodeRegiesXSubregiesLogstica1.Enabled:= True;
+  FrmPrincipal.ACCadRegSubRegLog.Enabled:= True;
   Action:=caFree;
 end;
 

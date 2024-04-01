@@ -392,7 +392,8 @@ begin
   QrAcesso.ApplyUpdates;
 
   FrmMontaCarga:=nil;
-  FrmPrincipal.VEN006.Enabled:= True;
+//  FrmPrincipal.VEN006.Enabled:= True;
+  FrmPrincipal.ACVEN006.Enabled:= True;
   Action:=caFree;
 end;
 

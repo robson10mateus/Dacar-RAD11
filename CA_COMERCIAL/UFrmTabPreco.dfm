@@ -497,8 +497,8 @@ object FrmTabPreco: TFrmTabPreco
   object Panel1: TPanel
     Left = 0
     Top = 45
-    Width = 1216
-    Height = 545
+    Width = 1220
+    Height = 546
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -508,11 +508,13 @@ object FrmTabPreco: TFrmTabPreco
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 1216
+    ExplicitHeight = 545
     object PageControl1: TPageControl
       Left = 1
       Top = 1
-      Width = 1214
-      Height = 543
+      Width = 1218
+      Height = 544
       ActivePage = TabLista
       Align = alClient
       Font.Charset = DEFAULT_CHARSET
@@ -523,6 +525,8 @@ object FrmTabPreco: TFrmTabPreco
       Font.Style = []
       ParentFont = False
       TabOrder = 0
+      ExplicitWidth = 1214
+      ExplicitHeight = 543
       object TabCriterio: TTabSheet
         Caption = ' Criterios '
         object Lbl_Filtro: TLabel
@@ -2498,7 +2502,7 @@ object FrmTabPreco: TFrmTabPreco
   object pnlBotoes: TPanel
     Left = 0
     Top = 0
-    Width = 1216
+    Width = 1220
     Height = 45
     Align = alTop
     Font.Charset = DEFAULT_CHARSET
@@ -2509,6 +2513,7 @@ object FrmTabPreco: TFrmTabPreco
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 1216
     object SB_PRIMEIRO: TSpeedButton
       Left = 1
       Top = 5

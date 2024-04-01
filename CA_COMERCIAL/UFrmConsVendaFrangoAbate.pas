@@ -82,7 +82,8 @@ procedure TFrmConsVendaFrangoAbate.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmConsVendaFrangoAbate:=nil;
-  FrmPrincipal.VEN047.Enabled:= True;
+//  FrmPrincipal.VEN047.Enabled:= True;
+  FrmPrincipal.ACVEN047.Enabled:= True;
   Action:=caFree;
 end;
 

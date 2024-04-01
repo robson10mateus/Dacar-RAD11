@@ -102,7 +102,8 @@ procedure TFrmCadRegiao.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmCadRegiao:=nil;
-  FrmPrincipal.CadastrodeRegio1.Enabled:= True;
+//  FrmPrincipal.CadastrodeRegio1.Enabled:= True;
+  FrmPrincipal.ACCadRegiao.Enabled := True;
   Action:=caFree;
 end;
 

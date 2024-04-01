@@ -22,6 +22,7 @@ type
     procedure FormActivate(Sender: TObject);
     procedure EdExpreKeyPress(Sender: TObject; var Key: Char);
     procedure FormCreate(Sender: TObject);
+    procedure BitBtn3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -92,6 +93,12 @@ begin
   END;
 
    close;   
+end;
+
+procedure TfrmConsultaMotorista.BitBtn3Click(Sender: TObject);
+begin
+  inherited;
+  Close;
 end;
 
 procedure TfrmConsultaMotorista.DBGrid1TitleClick(Column: TColumn);

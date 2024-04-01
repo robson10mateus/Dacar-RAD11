@@ -5,6 +5,7 @@ object frmAlteraContaPedido: TfrmAlteraContaPedido
   Height = 534
   VertScrollBar.Range = 250
   ActiveControl = RadioGroup1
+  BorderStyle = bsSingle
   Caption = 'Comercial Dacar - Altera'#231#227'o de Contas'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -495,7 +496,7 @@ object frmAlteraContaPedido: TfrmAlteraContaPedido
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 755
+    Width = 759
     Height = 250
     Align = alTop
     Font.Charset = DEFAULT_CHARSET
@@ -506,6 +507,7 @@ object frmAlteraContaPedido: TfrmAlteraContaPedido
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 755
     object grpFiltro: TGroupBox
       Left = 1
       Top = 46
@@ -572,7 +574,7 @@ object frmAlteraContaPedido: TfrmAlteraContaPedido
         Caption = ' Data '
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = 13
+        Font.Height = 15
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Style = []
@@ -1238,8 +1240,8 @@ object frmAlteraContaPedido: TfrmAlteraContaPedido
   object GroupBox2: TGroupBox
     Left = 0
     Top = 250
-    Width = 755
-    Height = 245
+    Width = 759
+    Height = 246
     Align = alClient
     Caption = ' Listagem '
     Font.Charset = DEFAULT_CHARSET
@@ -1250,6 +1252,8 @@ object frmAlteraContaPedido: TfrmAlteraContaPedido
     Font.Style = []
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 755
+    ExplicitHeight = 245
     object Panel2: TPanel
       Left = 2
       Top = 17

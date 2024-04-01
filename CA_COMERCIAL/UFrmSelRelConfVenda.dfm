@@ -498,7 +498,7 @@ object FrmSelRelConfVenda: TFrmSelRelConfVenda
   object pnlBotoes: TPanel
     Left = 0
     Top = 0
-    Width = 1112
+    Width = 1116
     Height = 45
     Align = alTop
     Font.Charset = DEFAULT_CHARSET
@@ -510,6 +510,7 @@ object FrmSelRelConfVenda: TFrmSelRelConfVenda
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 1112
     object Sb_Sair: TSpeedButton
       Left = 40
       Top = 5
@@ -682,8 +683,8 @@ object FrmSelRelConfVenda: TFrmSelRelConfVenda
   object PageControl1: TPageControl
     Left = 0
     Top = 45
-    Width = 1112
-    Height = 379
+    Width = 1116
+    Height = 380
     ActivePage = TabSheet1
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -694,6 +695,8 @@ object FrmSelRelConfVenda: TFrmSelRelConfVenda
     Font.Style = []
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 1112
+    ExplicitHeight = 379
     object TabSheet1: TTabSheet
       Caption = ' Op'#231#245'es de Filtro '
       object Label7: TLabel

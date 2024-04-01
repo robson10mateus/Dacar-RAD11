@@ -208,7 +208,8 @@ procedure TFrmSelFreteDevo.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmSelFreteDevo:=nil;
-  FrmPrincipal.VEN034.Enabled:= True;
+//  FrmPrincipal.VEN034.Enabled:= True;
+  FrmPrincipal.ACVEN034.Enabled:= True;
   Action:=caFree;
 end;
 

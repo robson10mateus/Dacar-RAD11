@@ -148,7 +148,8 @@ procedure TfrmDocumentacaoNFE.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   frmDocumentacaoNFE:=nil;
-  FrmPrincipal.VEN063.Enabled:= True;
+//  FrmPrincipal.VEN063.Enabled:= True;
+  FrmPrincipal.ACVEN063.Enabled:= True;
   Action:=caFree;
 end;
 

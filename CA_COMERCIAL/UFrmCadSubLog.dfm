@@ -32,8 +32,8 @@ object FrmCadSubLog: TFrmCadSubLog
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 635
-    ExplicitHeight = 385
+    ExplicitWidth = 664
+    ExplicitHeight = 381
     object ToolBar1: TToolBar
       Left = 1
       Top = 1
@@ -50,7 +50,7 @@ object FrmCadSubLog: TFrmCadSubLog
       Font.Style = []
       ParentFont = False
       TabOrder = 0
-      ExplicitWidth = 633
+      ExplicitWidth = 662
       object SB_PRIMEIRO: TSpeedButton
         Left = 0
         Top = 0
@@ -1383,8 +1383,8 @@ object FrmCadSubLog: TFrmCadSubLog
       Font.Style = []
       ParentFont = False
       TabOrder = 1
-      ExplicitWidth = 633
-      ExplicitHeight = 343
+      ExplicitWidth = 662
+      ExplicitHeight = 339
       object TabCriterio: TTabSheet
         Caption = 'Criterios'
         OnShow = TabCriterioShow
@@ -1799,10 +1799,8 @@ object FrmCadSubLog: TFrmCadSubLog
           Align = alClient
           ParentBackground = False
           TabOrder = 0
-          ExplicitLeft = 16
-          ExplicitTop = 8
-          ExplicitWidth = 625
-          ExplicitHeight = 265
+          ExplicitWidth = 654
+          ExplicitHeight = 309
           object Label14: TLabel
             Left = 24
             Top = 64

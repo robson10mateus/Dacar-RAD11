@@ -14,14 +14,16 @@ object FrmTranspChaveNFe: TFrmTranspChaveNFe
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  FormStyle = fsMDIChild
   Position = poDesktopCenter
+  Visible = True
   OnClose = FormClose
   OnCreate = FormCreate
   TextHeight = 15
   object pnlCab: TPanel
     Left = 0
     Top = 0
-    Width = 892
+    Width = 896
     Height = 69
     Align = alTop
     Font.Charset = DEFAULT_CHARSET
@@ -32,6 +34,7 @@ object FrmTranspChaveNFe: TFrmTranspChaveNFe
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 892
     object Sb_Sair: TSpeedButton
       Left = 859
       Top = 16
@@ -628,8 +631,8 @@ object FrmTranspChaveNFe: TFrmTranspChaveNFe
   object DBGrid1: TDBGrid
     Left = 0
     Top = 69
-    Width = 892
-    Height = 331
+    Width = 896
+    Height = 332
     Align = alClient
     DataSource = dtsPesq
     Font.Charset = DEFAULT_CHARSET
@@ -682,8 +685,8 @@ object FrmTranspChaveNFe: TFrmTranspChaveNFe
   end
   object pnlRod: TPanel
     Left = 0
-    Top = 400
-    Width = 892
+    Top = 401
+    Width = 896
     Height = 41
     Align = alBottom
     Font.Charset = DEFAULT_CHARSET
@@ -694,6 +697,8 @@ object FrmTranspChaveNFe: TFrmTranspChaveNFe
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
+    ExplicitTop = 400
+    ExplicitWidth = 892
     object SpeedButton1: TSpeedButton
       Left = 348
       Top = 7

@@ -656,7 +656,8 @@ procedure TFrmCadCidade.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmCadCidade:=nil;
-  FrmPrincipal.CadastrodeCidades1.Enabled:= True;
+//  FrmPrincipal.CadastrodeCidades1.Enabled:= True;
+  FrmPrincipal.ACCadCidades.Enabled:= True;
   Action:=caFree;
 end;
 

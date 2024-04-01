@@ -386,7 +386,8 @@ procedure TfrmReprogramarDevolucao.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   frmReprogramarDevolucao:=nil;
-  FrmPrincipal.VEN073.Enabled:= True;
+//  FrmPrincipal.VEN073.Enabled:= True;
+  FrmPrincipal.ACVEN073.Enabled:= True;
   Action:=caFree;
 end;
 

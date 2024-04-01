@@ -70,7 +70,8 @@ procedure TFrmConferenciaCarga.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmConferenciaCarga:=nil;
-  FrmPrincipal.VEN052.Enabled:= True;
+//  FrmPrincipal.VEN052.Enabled:= True;
+  FrmPrincipal.ACVEN052.Enabled := True;
   Action:=caFree;
 end;
 

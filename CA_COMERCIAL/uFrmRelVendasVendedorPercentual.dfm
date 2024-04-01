@@ -5,8 +5,9 @@ object frmRelVendasVendedorPercentual: TfrmRelVendasVendedorPercentual
   Height = 212
   VertScrollBar.Range = 127
   ActiveControl = BtLimpar
+  BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'Comercial Dacar - Relat'#243'rio % Vendas por Vendedor'
-  Color = clBackground
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -21,7 +22,7 @@ object frmRelVendasVendedorPercentual: TfrmRelVendasVendedorPercentual
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 470
+    Width = 474
     Height = 45
     Align = alTop
     Font.Charset = DEFAULT_CHARSET
@@ -32,7 +33,7 @@ object frmRelVendasVendedorPercentual: TfrmRelVendasVendedorPercentual
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 441
+    ExplicitWidth = 470
     object btnSair: TSpeedButton
       Left = 40
       Top = 5
@@ -270,9 +271,9 @@ object frmRelVendasVendedorPercentual: TfrmRelVendasVendedorPercentual
       OnClick = SB_RelatorioClick
     end
     object BtLimpar: TBitBtn
-      Left = 75
+      Left = 83
       Top = 5
-      Width = 95
+      Width = 110
       Height = 35
       Caption = 'Limpar Filtros'
       Font.Charset = DEFAULT_CHARSET
@@ -300,8 +301,8 @@ object frmRelVendasVendedorPercentual: TfrmRelVendasVendedorPercentual
   object Panel2: TPanel
     Left = 0
     Top = 45
-    Width = 470
-    Height = 128
+    Width = 474
+    Height = 129
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -311,8 +312,8 @@ object frmRelVendasVendedorPercentual: TfrmRelVendasVendedorPercentual
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 441
-    ExplicitHeight = 86
+    ExplicitWidth = 470
+    ExplicitHeight = 128
     object Label3: TLabel
       Left = 10
       Top = 15
@@ -491,6 +492,7 @@ object frmRelVendasVendedorPercentual: TfrmRelVendasVendedorPercentual
     Top = 63
     Width = 1
     Height = 64
+    Transparent = False
   end
   object SP_RANKING_VENDEDOR: TOraSQL
     Session = FrmPrincipal.DB
@@ -505,7 +507,7 @@ object frmRelVendasVendedorPercentual: TfrmRelVendasVendedorPercentual
       '  SP_RANKING_VENDEDOR( P_DTINI, P_DTFIM) ;'
       ''
       'END;')
-    Left = 249
+    Left = 393
     Top = 9
     ParamData = <
       item
@@ -521,14 +523,14 @@ object frmRelVendasVendedorPercentual: TfrmRelVendasVendedorPercentual
   end
   object dtsMovimento: TOraDataSource
     DataSet = qryMovimento
-    Left = 279
+    Left = 423
     Top = 9
   end
   object qryMovimento: TOraQuery
     Session = FrmPrincipal.DB
     SQL.Strings = (
       'SELECT * FROM REL_RANKING_VENDEDOR')
-    Left = 190
+    Left = 334
     Top = 10
     object qryMovimentoNM_VENDEDOR: TStringField
       FieldName = 'NM_VENDEDOR'

@@ -5,6 +5,7 @@ object frmLanctoPesoBalancaoCarga: TfrmLanctoPesoBalancaoCarga
   Height = 430
   VertScrollBar.Range = 45
   ActiveControl = btnConfimar
+  BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'Comercial Dacar - Lan'#231'amento de Peso Balan'#231#227'o da Carga'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -12,13 +13,15 @@ object frmLanctoPesoBalancaoCarga: TfrmLanctoPesoBalancaoCarga
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  FormStyle = fsMDIChild
+  Visible = True
   OnClose = FormClose
   OnShow = FormShow
   TextHeight = 15
   object pnlBotoes: TPanel
     Left = 0
     Top = 0
-    Width = 659
+    Width = 663
     Height = 45
     Align = alTop
     Font.Charset = DEFAULT_CHARSET
@@ -29,6 +32,7 @@ object frmLanctoPesoBalancaoCarga: TfrmLanctoPesoBalancaoCarga
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 659
     object btnConfimar: TBitBtn
       Left = 5
       Top = 5
@@ -451,8 +455,8 @@ object frmLanctoPesoBalancaoCarga: TfrmLanctoPesoBalancaoCarga
   object pnlCentral: TPanel
     Left = 0
     Top = 45
-    Width = 659
-    Height = 346
+    Width = 663
+    Height = 347
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -462,6 +466,8 @@ object frmLanctoPesoBalancaoCarga: TfrmLanctoPesoBalancaoCarga
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 659
+    ExplicitHeight = 346
     object lblNumCarga: TLabel
       Left = 10
       Top = 20

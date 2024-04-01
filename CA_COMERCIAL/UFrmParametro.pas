@@ -91,7 +91,8 @@ procedure TFrmParametro.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmParametro:=nil;
-  FrmPrincipal.VEN022.Enabled:= True;
+//  FrmPrincipal.VEN022.Enabled:= True;
+  FrmPrincipal.ACVEN022.Enabled:= True;
   Action:=caFree;
 end;
 

@@ -24,7 +24,7 @@ object FrmVenProd: TFrmVenProd
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 638
+    Width = 642
     Height = 41
     Anchors = []
     ButtonHeight = 37
@@ -38,6 +38,7 @@ object FrmVenProd: TFrmVenProd
     Font.Style = []
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 638
     object Sb_Sair: TSpeedButton
       Left = 0
       Top = 0
@@ -241,8 +242,8 @@ object FrmVenProd: TFrmVenProd
   object Panel1: TPanel
     Left = 0
     Top = 41
-    Width = 638
-    Height = 66
+    Width = 642
+    Height = 67
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -253,6 +254,8 @@ object FrmVenProd: TFrmVenProd
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 638
+    ExplicitHeight = 66
     object Label1: TLabel
       Left = 15
       Top = 34
@@ -270,7 +273,7 @@ object FrmVenProd: TFrmVenProd
     object lbDtCorte: TLabel
       Left = 1
       Top = 51
-      Width = 3
+      Width = 640
       Height = 15
       Align = alBottom
       Alignment = taCenter
@@ -281,6 +284,7 @@ object FrmVenProd: TFrmVenProd
       Font.Pitch = fpVariable
       Font.Style = [fsBold]
       ParentFont = False
+      ExplicitWidth = 3
     end
     object Label2: TLabel
       Left = 265

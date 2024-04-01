@@ -500,8 +500,8 @@ object FrmPedVenda: TFrmPedVenda
   object PageControl1: TPageControl
     Left = 0
     Top = 187
-    Width = 1751
-    Height = 709
+    Width = 1755
+    Height = 710
     ActivePage = TabSheet1
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -514,6 +514,8 @@ object FrmPedVenda: TFrmPedVenda
     ParentFont = False
     TabOrder = 0
     OnChange = PageControl1Change
+    ExplicitWidth = 1751
+    ExplicitHeight = 709
     object TabSheet1: TTabSheet
       Caption = ' Crit'#233'rio '
       ImageIndex = 2
@@ -6119,7 +6121,7 @@ object FrmPedVenda: TFrmPedVenda
   object pnlBotoes: TPanel
     Left = 0
     Top = 142
-    Width = 1751
+    Width = 1755
     Height = 45
     Align = alTop
     Font.Charset = DEFAULT_CHARSET
@@ -6131,6 +6133,7 @@ object FrmPedVenda: TFrmPedVenda
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 1751
     object SBSalva: TSpeedButton
       Left = 250
       Top = 5
@@ -8400,7 +8403,7 @@ object FrmPedVenda: TFrmPedVenda
   object Panel9: TPanel
     Left = 0
     Top = 0
-    Width = 1751
+    Width = 1755
     Height = 142
     Align = alTop
     Font.Charset = DEFAULT_CHARSET
@@ -8413,6 +8416,7 @@ object FrmPedVenda: TFrmPedVenda
     ParentFont = False
     TabOrder = 2
     Visible = False
+    ExplicitWidth = 1751
   end
   object DSPediVe: TOraDataSource
     DataSet = QPediVe

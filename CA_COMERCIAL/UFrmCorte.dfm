@@ -26,8 +26,8 @@ object FrmCorte: TFrmCorte
   object PageControl1: TPageControl
     Left = 0
     Top = 41
-    Width = 784
-    Height = 454
+    Width = 788
+    Height = 455
     ActivePage = TabCriterio
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -39,6 +39,8 @@ object FrmCorte: TFrmCorte
     ParentFont = False
     TabOrder = 0
     OnMouseMove = PageControl1MouseMove
+    ExplicitWidth = 784
+    ExplicitHeight = 454
     object TabCriterio: TTabSheet
       Caption = 'Crit'#233'rio'
       object Label6: TLabel
@@ -323,11 +325,12 @@ object FrmCorte: TFrmCorte
       object Panel2: TPanel
         Left = 0
         Top = 0
-        Width = 776
+        Width = 780
         Height = 44
         Align = alTop
         ParentBackground = False
         TabOrder = 8
+        ExplicitWidth = 776
         object Label1: TLabel
           Left = 319
           Top = 14
@@ -1195,7 +1198,7 @@ object FrmCorte: TFrmCorte
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 784
+    Width = 788
     Height = 41
     Anchors = []
     ButtonHeight = 37
@@ -1210,6 +1213,7 @@ object FrmCorte: TFrmCorte
     ParentFont = False
     TabOrder = 1
     OnMouseMove = ToolBar1MouseMove
+    ExplicitWidth = 784
     object SB_PRIMEIRO: TSpeedButton
       Left = 0
       Top = 0
@@ -2679,8 +2683,8 @@ object FrmCorte: TFrmCorte
   end
   object Panel1: TPanel
     Left = 0
-    Top = 495
-    Width = 784
+    Top = 496
+    Width = 788
     Height = 17
     Align = alBottom
     Font.Charset = DEFAULT_CHARSET
@@ -2692,6 +2696,8 @@ object FrmCorte: TFrmCorte
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
+    ExplicitTop = 495
+    ExplicitWidth = 784
   end
   object DS: TOraDataSource
     DataSet = Qr

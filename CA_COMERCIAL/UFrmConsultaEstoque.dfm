@@ -509,18 +509,20 @@ object FrmConsultaEstoque: TFrmConsultaEstoque
     ParentFont = False
     TabOrder = 0
     OnChange = PageControl1Change
+    ExplicitWidth = 1390
+    ExplicitHeight = 669
     object Tab_Processa: TTabSheet
       Caption = ' Consulta Estoque '
       ImageIndex = 2
       object Panel1: TPanel
         Left = 0
         Top = 0
-        Width = 1394
+        Width = 1386
         Height = 110
         Align = alTop
         ParentBackground = False
         TabOrder = 0
-        ExplicitWidth = 1390
+        ExplicitWidth = 1382
         object SB_Relatorio: TSpeedButton
           Left = 465
           Top = 15
@@ -1190,19 +1192,19 @@ object FrmConsultaEstoque: TFrmConsultaEstoque
       object Panel4: TPanel
         Left = 0
         Top = 110
-        Width = 1394
-        Height = 532
+        Width = 1386
+        Height = 530
         Align = alClient
         Caption = 'Panel4'
         ParentBackground = False
         TabOrder = 1
-        ExplicitWidth = 1390
-        ExplicitHeight = 531
+        ExplicitWidth = 1382
+        ExplicitHeight = 529
         object DBGrid2: TDBGrid
           Left = 1
           Top = 1
-          Width = 1392
-          Height = 530
+          Width = 1384
+          Height = 528
           Align = alClient
           DataSource = Ds_Estoque
           Font.Charset = DEFAULT_CHARSET

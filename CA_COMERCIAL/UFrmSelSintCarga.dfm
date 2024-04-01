@@ -498,8 +498,8 @@ object FrmSelSintCarga: TFrmSelSintCarga
   object PageControl1: TPageControl
     Left = 0
     Top = 45
-    Width = 750
-    Height = 355
+    Width = 754
+    Height = 356
     ActivePage = TabCriterio
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -510,6 +510,8 @@ object FrmSelSintCarga: TFrmSelSintCarga
     Font.Style = []
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 750
+    ExplicitHeight = 355
     object TabCriterio: TTabSheet
       Caption = 'Filtros'
       Font.Charset = DEFAULT_CHARSET
@@ -1095,7 +1097,7 @@ object FrmSelSintCarga: TFrmSelSintCarga
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 750
+    Width = 754
     Height = 45
     Align = alTop
     Font.Charset = DEFAULT_CHARSET
@@ -1107,6 +1109,7 @@ object FrmSelSintCarga: TFrmSelSintCarga
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 750
     object Sb_Sair: TSpeedButton
       Left = 5
       Top = 5

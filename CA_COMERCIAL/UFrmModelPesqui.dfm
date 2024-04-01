@@ -17,13 +17,14 @@ object FrmModelPesqui: TFrmModelPesqui
   Font.Style = []
   KeyPreview = True
   Position = poScreenCenter
+  OnClose = FormClose
   OnShow = FormShow
   TextHeight = 10
   object DBGrid1: TDBGrid
     Left = 0
     Top = 170
-    Width = 684
-    Height = 241
+    Width = 688
+    Height = 242
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
@@ -45,7 +46,7 @@ object FrmModelPesqui: TFrmModelPesqui
   object pnlBotoes: TPanel
     Left = 0
     Top = 0
-    Width = 684
+    Width = 688
     Height = 45
     Align = alTop
     Font.Charset = DEFAULT_CHARSET
@@ -57,7 +58,7 @@ object FrmModelPesqui: TFrmModelPesqui
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
-    ExplicitWidth = 700
+    ExplicitWidth = 684
     object BitBtn1: TBitBtn
       Left = 5
       Top = 5
@@ -494,7 +495,7 @@ object FrmModelPesqui: TFrmModelPesqui
   object pnlFiltros: TPanel
     Left = 0
     Top = 45
-    Width = 684
+    Width = 688
     Height = 125
     Align = alTop
     Font.Charset = DEFAULT_CHARSET
@@ -506,6 +507,7 @@ object FrmModelPesqui: TFrmModelPesqui
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 684
     object Label1: TLabel
       Left = 10
       Top = 70

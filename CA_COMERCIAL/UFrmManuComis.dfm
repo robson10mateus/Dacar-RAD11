@@ -26,8 +26,8 @@ object FrmManuComis: TFrmManuComis
   object PageControl1: TPageControl
     Left = 0
     Top = 41
-    Width = 1003
-    Height = 391
+    Width = 1007
+    Height = 392
     ActivePage = TabCriterio
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -38,6 +38,8 @@ object FrmManuComis: TFrmManuComis
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 1003
+    ExplicitHeight = 391
     object TabCriterio: TTabSheet
       Caption = 'Crit'#233'rio'
       object Label6: TLabel
@@ -457,7 +459,7 @@ object FrmManuComis: TFrmManuComis
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 1003
+    Width = 1007
     Height = 41
     Anchors = []
     ButtonHeight = 37
@@ -471,6 +473,7 @@ object FrmManuComis: TFrmManuComis
     Font.Style = []
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 1003
     object SB_PRIMEIRO: TSpeedButton
       Left = 0
       Top = 0
@@ -1832,8 +1835,8 @@ object FrmManuComis: TFrmManuComis
   end
   object Panel1: TPanel
     Left = 0
-    Top = 432
-    Width = 1003
+    Top = 433
+    Width = 1007
     Height = 17
     Align = alBottom
     Font.Charset = DEFAULT_CHARSET
@@ -1845,6 +1848,8 @@ object FrmManuComis: TFrmManuComis
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
+    ExplicitTop = 432
+    ExplicitWidth = 1003
   end
   object Qr: TOraQuery
     SQLInsert.Strings = (

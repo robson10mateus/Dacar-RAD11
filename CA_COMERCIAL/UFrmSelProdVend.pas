@@ -87,7 +87,8 @@ procedure TFrmSelProdVend.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmSelProdVend:=nil;
-  FrmPrincipal.VEN015b.Enabled:= True;
+//  FrmPrincipal.VEN015b.Enabled:= True;
+  FrmPrincipal.ACVEN015b.Enabled := True;
   Action:=caFree;
 end;
 

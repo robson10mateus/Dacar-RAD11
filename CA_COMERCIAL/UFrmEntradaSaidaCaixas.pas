@@ -129,7 +129,8 @@ begin
   QrSaidaSucata.Close;
 
   FrmEntradaSaidaCaixas:=nil;
-  FrmPrincipal.VEN076.Enabled:= True;
+//  FrmPrincipal.VEN076.Enabled:= True;
+  FrmPrincipal.ACControleCaixas.Enabled := True;
   Action:=caFree;
 end;
 

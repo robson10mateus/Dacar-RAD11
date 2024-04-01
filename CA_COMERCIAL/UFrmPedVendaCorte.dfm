@@ -14,7 +14,9 @@ object FrmPedVendaCorte: TFrmPedVendaCorte
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  FormStyle = fsMDIChild
   Position = poScreenCenter
+  Visible = True
   OnClose = FormClose
   OnCreate = FormCreate
   TextHeight = 15
@@ -129,7 +131,7 @@ object FrmPedVendaCorte: TFrmPedVendaCorte
     Font.Style = []
     ParentFont = False
     TabOrder = 3
-    ExplicitWidth = 811
+    ExplicitWidth = 884
     object Sb_Sair: TSpeedButton
       Left = 0
       Top = 0
@@ -447,8 +449,8 @@ object FrmPedVendaCorte: TFrmPedVendaCorte
     ParentBackground = False
     ParentFont = False
     TabOrder = 6
-    ExplicitTop = 334
-    ExplicitWidth = 811
+    ExplicitTop = 335
+    ExplicitWidth = 884
     object Label2: TLabel
       Left = 595
       Top = 10

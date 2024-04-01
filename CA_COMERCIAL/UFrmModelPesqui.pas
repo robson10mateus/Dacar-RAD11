@@ -26,6 +26,7 @@ type
       DataCol: Integer; Column: TColumn; State: TGridDrawState);
     procedure FormShortCut(Key: Integer; Shift: TShiftState;
       var Handled: Boolean);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -70,6 +71,12 @@ begin
     TDBGrid(Sender).Canvas.Brush.Color:= TColor($00CEE7FF);
 
   DBGrid1.DefaultDrawColumnCell(rect,DataCol,column,state);
+end;
+
+procedure TFrmModelPesqui.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  FrmModelPesqui:=Nil;
+  Action:=caFree;
 end;
 
 procedure TFrmModelPesqui.FormShortCut(Key: Integer; Shift: TShiftState;

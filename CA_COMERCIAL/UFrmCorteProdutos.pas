@@ -23,12 +23,6 @@ type
     BtAtivar: TBitBtn;
     BPESQ: TBitBtn;
     Tab_Lista: TTabSheet;
-    ToolBar1: TToolBar;
-    SB_Relatorio: TSpeedButton;
-    Sb_Sair: TSpeedButton;
-    SB_ATUAL: TSpeedButton;
-    ToolButton2: TToolButton;
-    ToolButton3: TToolButton;
     DBGrid1: TDBGrid;
     Qr: TOraQuery;
     Ds: TOraDataSource;
@@ -43,6 +37,12 @@ type
     QrPMEDIO: TFloatField;
     QrID_VENDEDOR: TFloatField;
     QrNM_VENDEDOR: TStringField;
+    ToolBar1: TToolBar;
+    SB_ATUAL: TSpeedButton;
+    SB_Relatorio: TSpeedButton;
+    ToolButton2: TToolButton;
+    ToolButton3: TToolButton;
+    Sb_Sair: TSpeedButton;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormShow(Sender: TObject);
     procedure Sb_SairClick(Sender: TObject);
@@ -78,7 +78,8 @@ procedure TFrmCorteProdutos.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmCorteProdutos:=nil;
-  FrmPrincipal.VEN058.Enabled:= True;
+//  FrmPrincipal.VEN058.Enabled:= True;
+  FrmPrincipal.ACVEN058.Enabled:= True;
   Action:=caFree;
 end;
 

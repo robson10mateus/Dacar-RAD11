@@ -94,7 +94,8 @@ procedure TFrmDiferencaPreco.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmDiferencaPreco:=nil;
-  FrmPrincipal.VEN053.Enabled:= True;
+//  FrmPrincipal.VEN053.Enabled:= True;
+  FrmPrincipal.ACVEN053.Enabled := True;
   Action:=caFree;
 end;
 

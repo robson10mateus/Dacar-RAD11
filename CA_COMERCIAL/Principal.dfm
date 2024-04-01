@@ -7566,67 +7566,56 @@
       AutoCheck = True
       Caption = 'VEN004 - Pedido de Venda'
       OnExecute = VEN004Click
-      OnUpdate = ACVEN004Update
     end
     object ACVEN005: TAction
       AutoCheck = True
       Caption = 'VEN005 - Impress'#227'o de Documentos do Pedido'
       OnExecute = VEN005Click
-      OnUpdate = ACVEN005Update
     end
     object ACVEN006: TAction
       AutoCheck = True
       Caption = 'VEN006 - Montagem de Cargas'
       OnExecute = VEN006Click
-      OnUpdate = ACVEN006Update
     end
     object ACVEN007: TAction
       AutoCheck = True
       Caption = 'VEN007 - Fechamento de Carga Manual'
       OnExecute = VEN007Click
-      OnUpdate = ACVEN007Update
     end
     object ACVEN008: TAction
       AutoCheck = True
       Caption = 'VEN008 - Relat'#243'rio de Doa'#231#227'o'
       OnExecute = VEN008Click
-      OnUpdate = ACVEN008Update
     end
     object ACVEN009: TAction
       AutoCheck = True
       Caption = 'VEN009 - Libera'#231#227'o de Cargas'
       OnExecute = VEN009Click
-      OnUpdate = ACVEN009Update
     end
     object ACVEN010: TAction
       AutoCheck = True
       Caption = 'VEN010 - Manuten'#231#227'o de Comiss'#245'es'
       OnExecute = VEN010Click
-      OnUpdate = ACVEN010Update
     end
     object ACVEN011: TAction
       AutoCheck = True
       Caption = 'VEN011 - confer'#234'ncia de Peso e Frete do Frango Abatido'
       OnExecute = VEN011Click
-      OnUpdate = ACVEN011Update
     end
     object ACVEN012: TAction
       AutoCheck = True
       Caption = 'VEN012 - Confer'#234'ncia de Venda'
       OnExecute = VEN012Click
-      OnUpdate = ACVEN012Update
     end
     object ACVEN013: TAction
       AutoCheck = True
       Caption = 'VEN013 - Vendas por Produto'
       OnExecute = VEN013Click
-      OnUpdate = ACVEN013Update
     end
     object ACVEN014: TAction
       AutoCheck = True
       Caption = 'VEN014 - Sint'#233'tico de Cargas'
       OnExecute = VEN014Click
-      OnUpdate = ACVEN014Update
     end
     object ACVEN015: TAction
       AutoCheck = True
@@ -7647,67 +7636,56 @@
       AutoCheck = True
       Caption = 'VEN018 - Controle de Vers'#227'o'
       OnExecute = VEN018Click
-      OnUpdate = ACVEN018Update
     end
     object ACVEN019: TAction
       AutoCheck = True
       Caption = 'VEN019 - Par'#226'metros Comerciais'
       OnExecute = VEN019Click
-      OnUpdate = ACVEN019Update
     end
     object ACVEN020: TAction
       AutoCheck = True
       Caption = 'VEN020 - Controle de Corte'
       OnExecute = VEN020Click
-      OnUpdate = ACVEN020Update
     end
     object ACVEN021: TAction
       AutoCheck = True
       Caption = 'VEN021 - N.F. F'#225'brica de Ra'#231#227'o'
       OnExecute = VEN021Click
-      OnUpdate = ACVEN021Update
     end
     object ACVEN022: TAction
       AutoCheck = True
       Caption = 'VEN022 - Par'#226'metros do Sistema'
       OnExecute = VEN022Click
-      OnUpdate = ACVEN022Update
     end
     object ACVEN023: TAction
       AutoCheck = True
       Caption = 'VEN023 - Pra'#231'as de Pedagio'
       OnExecute = VEN023Click
-      OnUpdate = ACVEN023Update
     end
     object ACVEN024: TAction
       AutoCheck = True
       Caption = 'VEN024 - Sub-Regi'#227'o Log'#237'stica'
       OnExecute = VEN024Click
-      OnUpdate = ACVEN024Update
     end
     object ACVEN025: TAction
       AutoCheck = True
       Caption = 'VEN025 - Frete Fixo Cliente'
       OnExecute = VEN025Click
-      OnUpdate = ACVEN025Update
     end
     object ACVEN026: TAction
       AutoCheck = True
       Caption = 'VEN026 - Vale Ped'#225'gio'
       OnExecute = VEN026Click
-      OnUpdate = ACVEN026Update
     end
     object ACVEN027: TAction
       AutoCheck = True
       Caption = 'VEN027 - Cadastro de Clientes'
       OnExecute = VEN027Click
-      OnUpdate = ACVEN027Update
     end
     object ACVEN028: TAction
       AutoCheck = True
       Caption = 'VEN028 - Cadastro de Tabela de Pre'#231'os'
       OnExecute = VEN028Click
-      OnUpdate = ACVEN028Update
     end
     object ACVEN029: TAction
       AutoCheck = True
@@ -7723,13 +7701,11 @@
       AutoCheck = True
       Caption = 'VEN031 - Cadastro de Regi'#227'o Comercial'
       OnExecute = VEN031Click
-      OnUpdate = ACVEN031Update
     end
     object ACVEN032: TAction
       AutoCheck = True
       Caption = 'VEN032 - Cadastro Forma de Pagameto'
       OnExecute = VEN032Click
-      OnUpdate = ACVEN032Update
     end
     object ACVEN033: TAction
       AutoCheck = True
@@ -7740,121 +7716,101 @@
       AutoCheck = True
       Caption = 'VEN034 - Frete de Devolu'#231#227'o'
       OnExecute = VEN034Click
-      OnUpdate = ACVEN034Update
     end
     object ACVEN035: TAction
       AutoCheck = True
       Caption = 'VEN035 - Ativar / Desativar Sintegra'
       OnExecute = VEN035Click
-      OnUpdate = ACVEN035Update
     end
     object ACVEN036: TAction
       AutoCheck = True
       Caption = 'VEN036 - Enviar XML para o Cliente'
       OnExecute = VEN036Click
-      OnUpdate = ACVEN036Update
     end
     object ACVEN037: TAction
       AutoCheck = True
       Caption = 'VEN037 - Pedido de Venda Corte'
       OnExecute = VEN037Click
-      OnUpdate = ACVEN037Update
     end
     object ACVEN038: TAction
       AutoCheck = True
       Caption = 'VEN038 - Carregar XML no B.Dados'
       OnExecute = VEN038Click
-      OnUpdate = ACVEN038Update
     end
     object ACVEN039: TAction
       AutoCheck = True
       Caption = 'VEN039 - Hist'#243'rico de pre'#231'os do Televendas'
       OnExecute = VEN039Click
-      OnUpdate = ACVEN039Update
     end
     object ACVEN040: TAction
       AutoCheck = True
       Caption = 'VEN040 - Cadastro de Vendedores'
       OnExecute = VEN040Click
-      OnUpdate = ACVEN040Update
     end
     object ACVEN041: TAction
       AutoCheck = True
       Caption = 'VEN041 - Chave NFe Transportador'
       OnExecute = VEN041Click
-      OnUpdate = ACVEN041Update
     end
     object ACVEN042: TAction
       AutoCheck = True
       Caption = 'VEN042 - Altera'#231#227'o de Placa'
       OnExecute = VEN042Click
-      OnUpdate = ACVEN042Update
     end
     object ACVEN043: TAction
       AutoCheck = True
       Caption = 'VEN043 - Lote Integrado'
       OnExecute = VEN043Click
-      OnUpdate = ACVEN043Update
     end
     object ACVEN044: TAction
       AutoCheck = True
       Caption = 'VEN044 - Programa'#231#227'o de Ra'#231#227'o'
       OnExecute = VEN044Click
-      OnUpdate = ACVEN044Update
     end
     object ACVEN045: TAction
       AutoCheck = True
       Caption = 'VEN045 - Resultados Por Granjeiro'
       OnExecute = VEN045Click
-      OnUpdate = ACVEN045Update
     end
     object ACVEN046: TAction
       AutoCheck = True
       Caption = 'VEN046 - Apanhas de Frango'
       OnExecute = VEN046Click
-      OnUpdate = ACVEN046Update
     end
     object ACVEN047: TAction
       AutoCheck = True
       Caption = 'VEN047 - Vendas Frango p/ Abate'
       OnExecute = VEN047Click
-      OnUpdate = ACVEN047Update
     end
     object ACVEN048: TAction
       AutoCheck = True
       Caption = 'VEN048 - Par'#226'metros Integrado'
       OnExecute = VEN048Click
-      OnUpdate = ACVEN048Update
     end
     object ACVEN049: TAction
       AutoCheck = True
       Caption = 'VEN049 - Remessa de Ra'#231#227'o'
       OnExecute = VEN049Click
-      OnUpdate = ACVEN049Update
     end
     object ACVEN050: TAction
       AutoCheck = True
       Caption = 'VEN050 - Relat'#243'rio de Cliente X Vendedor'
       OnExecute = VEN050Click
-      OnUpdate = ACVEN050Update
     end
     object ACVEN051: TAction
       AutoCheck = True
       Caption = 'VEN051 - Relat'#243'rio Produ'#231#227'o / Estoque'
       OnExecute = VEN051Click
-      OnUpdate = ACVEN051Update
     end
     object ACVEN052: TAction
       AutoCheck = True
       Caption = 'VEN052 - Conferencia Carga'
       OnExecute = VEN052Click
-      OnUpdate = ACVEN052Update
     end
     object ACVEN053: TAction
       AutoCheck = True
       Caption = 'VEN053 - Diferen'#231'a de Pre'#231'o'
       OnExecute = VEN053Click
-      OnUpdate = ACVEN053Update
     end
     object ACVEN054: TAction
       AutoCheck = True
@@ -7865,107 +7821,89 @@
       AutoCheck = True
       Caption = 'VEN055 - Saldo Caixas'
       OnExecute = VEN055Click
-      OnUpdate = ACVEN055Update
     end
     object ACVEN056: TAction
       AutoCheck = True
       Caption = 'VEN056 - Relat'#243'rio de Vendas Di'#225'ria'
       OnExecute = VEN056Click
-      OnUpdate = ACVEN056Update
     end
     object ACVEN057: TAction
       AutoCheck = True
       Caption = 'VEN057 - Lan'#231'amento do Peso do Balan'#231#227'o / Carga'
       OnExecute = VEN057Click
-      OnUpdate = ACVEN057Update
     end
     object ACVEN058: TAction
       AutoCheck = True
       Caption = 'VEN058 - Corte de Produtos'
       OnExecute = VEN058Click
-      OnUpdate = ACVEN058Update
     end
     object ACVEN059: TAction
       AutoCheck = True
       Caption = 'VEN059 - Ocorrencias / Chamados'
       OnExecute = VEN059Click
-      OnUpdate = ACVEN059Update
     end
     object ACVEN061: TAction
       AutoCheck = True
       Caption = 'VEN061 - Relat'#243'rio de Quebra'
       OnExecute = VEN061Click
-      OnUpdate = ACVEN061Update
     end
     object ACVEN062: TAction
       AutoCheck = True
       Caption = 'VEN062 - Controle de Entregas por Carga'
       OnExecute = VEN062Click
-      OnUpdate = ACVEN062Update
     end
     object ACVEN063: TAction
       AutoCheck = True
       Caption = 'VEN063 - NF-e: Impress'#227'o dos Documentos'
       OnExecute = VEN063Click
-      OnUpdate = ACVEN063Update
     end
     object ACVEN064: TAction
       AutoCheck = True
       Caption = 'VEN064 - Rela'#231#227'o Pedidos Dig. Ap'#243's Hor'#225'rio'
       OnExecute = VEN064Click
-      OnUpdate = ACVEN064Update
     end
     object ACVEN065: TAction
       AutoCheck = True
       Caption = 'VEN065 - Altera'#231#227'o de Contas Pedido Venda'
       OnExecute = VEN065Click
-      OnUpdate = ACVEN065Update
     end
     object ACVEN066: TAction
       AutoCheck = True
       Caption = 'VEN066 - Rela'#231#227'o dos Pedidos Pre'#231'o Abaixo Tabela'
       OnExecute = VEN066Click
-      OnUpdate = ACVEN066Update
     end
     object ACVEN067: TAction
       AutoCheck = True
       Caption = 'VEN067 - Relat'#243'rio % Vendas por Vendedor'
       OnExecute = VEN067Click
-      OnUpdate = ACVEN067Update
     end
     object ACVEN068: TAction
-      AutoCheck = True
       Caption = 'VEN068 - Exporta'#231#227'o XML NF-e'
     end
     object ACVEN071: TAction
       AutoCheck = True
       Caption = 'VEN071 - Resumo de Vendas'
       OnExecute = VEN071Click
-      OnUpdate = ACVEN071Update
     end
     object ACVEN072: TAction
       AutoCheck = True
       Caption = 'Pedido Devolu'#231#227'o/ Quebra Venda'
       OnExecute = VEN072Click
-      OnUpdate = ACVEN072Update
     end
     object ACVEN073: TAction
       AutoCheck = True
       Caption = 'Reprogramar Devolu'#231#245'es'
       OnExecute = VEN073Click
-      OnUpdate = ACVEN073Update
     end
     object ACVEN074: TAction
       AutoCheck = True
       Caption = 'VEN074 - Ajuste Estoque Inicial'
       OnExecute = VEN074Click
-      OnUpdate = ACVEN074Update
     end
     object ACVEN075: TAction
       AutoCheck = True
       Caption = 'VEN075 - Relat'#243'rio de Venda por Clientes'
       OnExecute = VEN075Click
-      OnUpdate = ACVEN075Update
     end
   end
   object ActionSubMenus2: TActionList
@@ -7975,115 +7913,97 @@
       AutoCheck = True
       Caption = 'Cadastro de Regi'#245'es Log'#237'sticas'
       OnExecute = CadastrodeRegiesLogsticas1Click
-      OnUpdate = ACCadRegLogUpdate
     end
     object ACCadSubRegLog: TAction
       AutoCheck = True
       Caption = 'Cadastro de Subregi'#245'es Log'#237'sticas'
       OnExecute = CadastrodeSubregiesLogsticas1Click
-      OnUpdate = ACCadSubRegLogUpdate
     end
     object ACCadRegSubRegLog: TAction
       AutoCheck = True
       Caption = 'Cadastro de Regi'#245'es X Subregi'#245'es Log'#237'sticas'
       OnExecute = CadastrodeRegiesXSubregiesLogstica1Click
-      OnUpdate = ACCadRegSubRegLogUpdate
     end
     object ACCadTipoLogradouro: TAction
       AutoCheck = True
       Caption = 'Cadastro Tipo de Logradouro'
       OnExecute = CadastroTipodeLogradouro1Click
-      OnUpdate = ACCadTipoLogradouroUpdate
     end
     object ACCadBairros: TAction
       AutoCheck = True
       Caption = 'Cadastro de Bairros'
       OnExecute = CadastrodeBairro1Click
-      OnUpdate = ACCadBairrosUpdate
     end
     object ACCadCidades: TAction
       AutoCheck = True
       Caption = 'Cadastro de Cidades'
       OnExecute = CadastrodeCidades1Click
-      OnUpdate = ACCadCidadesUpdate
     end
     object ACCadEstados: TAction
       AutoCheck = True
       Caption = 'Cadastro de Estados'
       OnExecute = CadastrodeEstados1Click
-      OnUpdate = ACCadEstadosUpdate
     end
     object ACCadPaises: TAction
       AutoCheck = True
       Caption = 'Cadastro de Pa'#237'ses'
       OnExecute = CadastrodePases1Click
-      OnUpdate = ACCadPaisesUpdate
     end
     object ACCadRegGeo: TAction
       AutoCheck = True
       Caption = 'Cadastro de Regi'#227'o Geogr'#225'fica'
       OnExecute = CadastrodeRegioGeogrfica1Click
-      OnUpdate = ACCadRegGeoUpdate
     end
     object ACCadRegInter: TAction
       AutoCheck = True
       Caption = 'Cadastro de Regi'#227'o Internacional'
       OnExecute = CadastrodeRegioInternacional1Click
-      OnUpdate = ACCadRegInterUpdate
     end
     object ACCadTipoTransporte: TAction
       AutoCheck = True
       Caption = 'Cadastro de Tipos de Transporte'
       OnExecute = CadastrodeTiposdeTransporte1Click
-      OnUpdate = ACCadTipoTransporteUpdate
     end
     object ACCadTipoVeiculo: TAction
       AutoCheck = True
       Caption = 'Cadastro Tipo de Ve'#237'culo'
       OnExecute = CadastroTipodeVeculo1Click
-      OnUpdate = ACCadTipoVeiculoUpdate
     end
     object ACCadTipoTransportadores: TAction
       AutoCheck = True
       Caption = 'Cadastro de Transportadores'
       OnExecute = CadastrodeTransportadores1Click
-      OnUpdate = ACCadTipoTransportadoresUpdate
     end
     object ACCadRegiao: TAction
       AutoCheck = True
       Caption = 'Cadastro de Regi'#227'o'
       OnExecute = CadastrodeRegio1Click
-      OnUpdate = ACCadRegiaoUpdate
     end
     object ACVEN015a: TAction
       AutoCheck = True
       Caption = 'VEN015a - Por Cliente'
+      Enabled = False
       OnExecute = VEN015aClick
-      OnUpdate = ACVEN015aUpdate
     end
     object ACVEN015b: TAction
       AutoCheck = True
       Caption = 'VEN015b - Por Produtos'
       OnExecute = VEN015bClick
-      OnUpdate = ACVEN015bUpdate
     end
     object ACLancamentos: TAction
       AutoCheck = True
       Caption = 'Lan'#231'amentos'
       OnExecute = mnuLancamentoCaixaPlasticaClick
-      OnUpdate = ACLancamentosUpdate
     end
     object ACRelSaldo: TAction
       AutoCheck = True
       Caption = 'Relat'#243'rio de Saldo'
       OnExecute = mnuRelatorio_de_SaldoClick
-      OnUpdate = ACRelSaldoUpdate
     end
     object ACControleCaixas: TAction
       AutoCheck = True
       Caption = 'Controle de Caixas'
       OnExecute = VEN076Click
-      OnUpdate = ACControleCaixasUpdate
     end
   end
 end

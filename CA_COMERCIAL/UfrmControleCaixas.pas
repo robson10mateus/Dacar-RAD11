@@ -202,7 +202,8 @@ procedure TFrmControleCaixas.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmControleCaixas:=nil;
-  FrmPrincipal.VEN054.Enabled := True;
+//  FrmPrincipal.VEN054.Enabled := True;
+  FrmPrincipal.ACLancamentos.Enabled := True;
   Action := Cafree;
 end;
 

@@ -26,8 +26,8 @@ object FrmSubRegiao: TFrmSubRegiao
   object PageControl1: TPageControl
     Left = 0
     Top = 41
-    Width = 784
-    Height = 443
+    Width = 788
+    Height = 444
     ActivePage = TabDetalhe
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -38,6 +38,8 @@ object FrmSubRegiao: TFrmSubRegiao
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 784
+    ExplicitHeight = 443
     object TabCriterio: TTabSheet
       Caption = 'Crit'#233'rio'
       OnShow = TabCriterioShow
@@ -1122,7 +1124,7 @@ object FrmSubRegiao: TFrmSubRegiao
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 784
+    Width = 788
     Height = 41
     Anchors = []
     ButtonHeight = 33
@@ -1136,6 +1138,7 @@ object FrmSubRegiao: TFrmSubRegiao
     Font.Style = []
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 784
     object SB_PRIMEIRO: TSpeedButton
       Left = 0
       Top = 0
@@ -3284,8 +3287,8 @@ object FrmSubRegiao: TFrmSubRegiao
   end
   object Panel1: TPanel
     Left = 0
-    Top = 484
-    Width = 784
+    Top = 485
+    Width = 788
     Height = 17
     Align = alBottom
     Font.Charset = DEFAULT_CHARSET
@@ -3297,6 +3300,8 @@ object FrmSubRegiao: TFrmSubRegiao
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
+    ExplicitTop = 484
+    ExplicitWidth = 784
   end
   object DS: TDataSource
     DataSet = Qr

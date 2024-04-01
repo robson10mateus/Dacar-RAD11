@@ -4,12 +4,11 @@ object FrmCargObsPedi: TFrmCargObsPedi
   Width = 650
   Height = 300
   VertScrollBar.Range = 45
-  ActiveControl = PageControl1
   BorderStyle = bsDialog
   Caption = 
     'Comercial Dacar/ Montagem de Carga - Observa'#231#227'o do Pedido de Ven' +
     'da'
-  Color = clBackground
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = 11
@@ -490,7 +489,6 @@ object FrmCargObsPedi: TFrmCargObsPedi
     0000000000000000000000000000000000000000000000000000000000000000
     0000000000000000000000000000}
   Position = poDesktopCenter
-  Visible = True
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
@@ -498,8 +496,8 @@ object FrmCargObsPedi: TFrmCargObsPedi
   object PageControl1: TPageControl
     Left = 0
     Top = 45
-    Width = 634
-    Height = 216
+    Width = 638
+    Height = 217
     ActivePage = TabSheet2
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -510,16 +508,16 @@ object FrmCargObsPedi: TFrmCargObsPedi
     Font.Style = []
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 650
-    ExplicitHeight = 255
+    ExplicitWidth = 634
+    ExplicitHeight = 216
     object TabSheet2: TTabSheet
       Caption = ' Observa'#231#227'o '
       ImageIndex = 1
       object grpObservacao: TGroupBox
         Left = 0
         Top = 0
-        Width = 642
-        Height = 225
+        Width = 630
+        Height = 187
         Align = alClient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
@@ -529,11 +527,13 @@ object FrmCargObsPedi: TFrmCargObsPedi
         Font.Style = []
         ParentFont = False
         TabOrder = 0
+        ExplicitWidth = 626
+        ExplicitHeight = 186
         object DBMemo1: TDBMemo
           Left = 2
-          Top = 2
-          Width = 638
-          Height = 221
+          Top = 17
+          Width = 626
+          Height = 168
           Align = alClient
           DataField = 'GN_OBSEPEDIVEND'
           DataSource = DsForm
@@ -545,6 +545,8 @@ object FrmCargObsPedi: TFrmCargObsPedi
           Font.Style = []
           ParentFont = False
           TabOrder = 0
+          ExplicitWidth = 622
+          ExplicitHeight = 167
         end
       end
     end
@@ -552,7 +554,7 @@ object FrmCargObsPedi: TFrmCargObsPedi
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 634
+    Width = 638
     Height = 45
     Align = alTop
     Font.Charset = DEFAULT_CHARSET
@@ -564,7 +566,7 @@ object FrmCargObsPedi: TFrmCargObsPedi
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 650
+    ExplicitWidth = 634
     object Sb_Sair: TSpeedButton
       Left = 5
       Top = 4

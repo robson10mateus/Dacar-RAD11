@@ -85,7 +85,8 @@ procedure TFrmVendedorCliente.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmVendedorCliente:=nil;
-  FrmPrincipal.VEN050.Enabled:= True;
+//  FrmPrincipal.VEN050.Enabled:= True;
+  FrmPrincipal.ACVEN050.Enabled := True;
   Action:=caFree;
 end;
 
@@ -294,10 +295,10 @@ var Arquivo: TextFile;
 begin
   try
     Qr.Open;
+    dlgSaveArquivo.FileName := 'CLIENTES_VENDEDOR_' + QrNM_VENDEDOR.AsString;
 
     if dlgSaveArquivo.Execute then
     begin
-      dlgSaveArquivo.FileName := 'CLIENTES_VENDEDOR_' + QrNM_VENDEDOR.AsString + '.csv';
       AssignFile(Arquivo, dlgSaveArquivo.FileName);
       Rewrite(Arquivo);
 

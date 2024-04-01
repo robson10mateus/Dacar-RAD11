@@ -270,7 +270,8 @@ procedure TFrmSubRegiao.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   FrmSubRegiao:=nil;
-  FrmPrincipal.VEN024.Enabled:= True;
+//  FrmPrincipal.VEN024.Enabled:= True;
+  FrmPrincipal.ACVEN024.Enabled:= True;
   Action:=caFree;
 end;
 

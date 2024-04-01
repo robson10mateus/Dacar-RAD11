@@ -6,7 +6,7 @@ object FrmCadRegGeog: TFrmCadRegGeog
   Caption = 'Cadastro Regi'#227'o Geografica'
   ClientHeight = 392
   ClientWidth = 668
-  Color = clBackground
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -32,8 +32,8 @@ object FrmCadRegGeog: TFrmCadRegGeog
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 639
-    ExplicitHeight = 386
+    ExplicitWidth = 664
+    ExplicitHeight = 391
     object ToolBar1: TToolBar
       Left = 1
       Top = 1
@@ -50,7 +50,7 @@ object FrmCadRegGeog: TFrmCadRegGeog
       Font.Style = []
       ParentFont = False
       TabOrder = 0
-      ExplicitWidth = 637
+      ExplicitWidth = 662
       object SB_PRIMEIRO: TSpeedButton
         Left = 0
         Top = 0
@@ -1383,8 +1383,8 @@ object FrmCadRegGeog: TFrmCadRegGeog
       Font.Style = []
       ParentFont = False
       TabOrder = 1
-      ExplicitWidth = 637
-      ExplicitHeight = 344
+      ExplicitWidth = 662
+      ExplicitHeight = 349
       object TabCriterio: TTabSheet
         Caption = 'Criterios'
         OnShow = TabCriterioShow

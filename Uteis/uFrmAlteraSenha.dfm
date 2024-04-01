@@ -1,13 +1,13 @@
 object FrmAlteraSenha: TFrmAlteraSenha
   Left = 631
   Top = 406
-  Width = 521
-  Height = 208
+  Width = 522
+  Height = 241
   HorzScrollBar.Range = 380
   VertScrollBar.Range = 194
   ActiveControl = EdSenhaAnterior
   Caption = 'Av'#237'cola Dacar Ltda - Acesso Sistema - Altera'#231#227'o de Senha'
-  Color = clBackground
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -347,7 +347,7 @@ object FrmAlteraSenha: TFrmAlteraSenha
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 488
+    Width = 510
     Height = 41
     Align = alTop
     Caption = 
@@ -362,7 +362,7 @@ object FrmAlteraSenha: TFrmAlteraSenha
     ParentBackground = False
     ParentFont = False
     TabOrder = 4
-    ExplicitWidth = 521
+    ExplicitWidth = 488
   end
   object qryTemp: TOraQuery
     Session = DBSenha

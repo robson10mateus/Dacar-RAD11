@@ -64,7 +64,6 @@ type
     rlPed: TRLLabel;
     rlFat: TRLLabel;
     RLLabel3: TRLLabel;
-    RLDraw4: TRLDraw;
     imgLogoTipo: TRLImage;
     RES_PROD_NAO_EXP: TRLBand;
     memQtdePedido: TRLMemo;
@@ -85,13 +84,10 @@ type
     RLDBResult5: TRLDBResult;
     RLDBResult6: TRLDBResult;
     RLDBResult8: TRLDBResult;
-    RLLabel9: TRLLabel;
     RLDBResult9: TRLDBResult;
-    RLDraw10: TRLDraw;
     RLLabel2: TRLLabel;
     RLDBResult1: TRLDBResult;
     RLDBResult4: TRLDBResult;
-    RLLabel10: TRLLabel;
     RLDBResult7: TRLDBResult;
     RLDBResult10: TRLDBResult;
     RLDBResult11: TRLDBResult;
@@ -100,6 +96,12 @@ type
     FOOTER_2: TRLBand;
     RLSystemInfo2: TRLSystemInfo;
     lblUsuario: TRLLabel;
+    RLLabel14: TRLLabel;
+    RLDBText3: TRLDBText;
+    RLDBResult13: TRLDBResult;
+    RLDBResult14: TRLDBResult;
+    RLDBResult15: TRLDBResult;
+    RLDBResult16: TRLDBResult;
     procedure RESUMO_CONTASBeforePrint(Sender: TObject; var PrintIt: Boolean);
     procedure RES_PROD_NAO_EXPBeforePrint(Sender: TObject; var PrintIt: Boolean);
   private

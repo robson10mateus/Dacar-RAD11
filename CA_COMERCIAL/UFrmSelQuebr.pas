@@ -30,12 +30,6 @@ type
     Ds: TOraDataSource;
     TabSheet1: TTabSheet;
     DBGrid1: TDBGrid;
-    ToolBar1: TToolBar;
-    SB_Relatorio: TSpeedButton;
-    Sb_Sair: TSpeedButton;
-    SB_ATUAL: TSpeedButton;
-    ToolButton2: TToolButton;
-    ToolButton3: TToolButton;
     QrDT_ENTRPEDIVEND: TDateTimeField;
     QrID_CARGEXPE: TFloatField;
     QrNM_FORNECEDOR: TStringField;
@@ -45,6 +39,12 @@ type
     QrQN_PERCQUEB: TFloatField;
     QrGN_PLACVEICTRAN: TStringField;
     QrPESO_ENTR: TFloatField;
+    ToolBar1: TToolBar;
+    SB_ATUAL: TSpeedButton;
+    SB_Relatorio: TSpeedButton;
+    ToolButton2: TToolButton;
+    ToolButton3: TToolButton;
+    Sb_Sair: TSpeedButton;
     procedure FormActivate(Sender: TObject);
     procedure EdExpreChange(Sender: TObject);
     procedure BtIncluirClick(Sender: TObject);
@@ -74,7 +74,8 @@ uses Principal,Global, UFrmSelRelQuebr, UFrmPesCaminhao;
 procedure TFrmSelQuebr.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   FrmSelQuebr:=nil;
-  FrmPrincipal.VEN061.Enabled:= True;
+//  FrmPrincipal.VEN061.Enabled:= True;
+  FrmPrincipal.ACVEN061.Enabled:= True;
   Action:=caFree;
 end;
 

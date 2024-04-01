@@ -22,7 +22,7 @@ object FrmConsRemessaRacao: TFrmConsRemessaRacao
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 912
+    Width = 916
     Height = 46
     Anchors = []
     ButtonHeight = 42
@@ -36,6 +36,7 @@ object FrmConsRemessaRacao: TFrmConsRemessaRacao
     Font.Style = []
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 912
     object SB_Relatorio: TSpeedButton
       Left = 0
       Top = 0
@@ -569,8 +570,8 @@ object FrmConsRemessaRacao: TFrmConsRemessaRacao
   object DBGrid1: TDBGrid
     Left = 0
     Top = 46
-    Width = 912
-    Height = 395
+    Width = 916
+    Height = 396
     Hint = 'CTRL + C para copiar dados'
     Align = alClient
     Color = clWhite

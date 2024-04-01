@@ -6,7 +6,7 @@ object FrmRelVendaCliente: TFrmRelVendaCliente
   VertScrollBar.Range = 45
   ActiveControl = PageControl1
   Caption = 'Comercial Dacar - Relat'#243'rio de Venda por Cliente'
-  Color = clWindow
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12

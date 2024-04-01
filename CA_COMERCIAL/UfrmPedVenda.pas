@@ -1035,7 +1035,8 @@ begin
   end;
 
   FrmPedVenda:=Nil;
-  FrmPrincipal.VEN004.Enabled:= True;
+//  FrmPrincipal.VEN004.Enabled:= True;
+  FrmPrincipal.ACVEN004.Enabled:= True;
   Action:=caFree;
 
 end;
